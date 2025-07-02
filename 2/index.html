@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art of Seduction</title>
+    <link rel="icon" href="a.png" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: radial-gradient(#8d909e 1px, transparent 1px);
+            background-size: 20px 20px;            
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll;
+            scrollbar-width: none;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        body.modal-open {
+            overflow: hidden;
+        }
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+            border-bottom: 2px solid black;
+            text-align: center;
+        }
+        h1 {
+            color: #000000;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .search-filter {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        @media (min-width: 768px) {
+            .search-filter {
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        @media (min-width: 1024px) {
+            .container {
+                padding: 3rem 4rem;
+            }
+        }
+        .filters {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            font-weight: 550;
+            font-family: 'Poppins', sans-serif;
+        }
+        .filter-btn.active {
+            background-color: #000000;
+            border: 2px solid black;
+            color: #ffffff;
+        }
+        .filter-btn:not(.active) {
+            background-color: #ffffff;
+            border: 2px solid black;
+            color: #000000;
+        }
+        #lawsGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        /* Card container */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            #lawsGrid {
+                grid-template-columns: 1fr; /* Single column on mobile */
+                gap: 10px;
+            }
+            
+            .domain-card {
+                margin: 0 auto;
+                max-width: 95%; /* Slight margin on sides */
+            }
+        }
+        .domain-card {
+            background: white;
+            box-sizing: border-box;
+            border-radius: 8px;
+            overflow: hidden;
+            border-left: 4px solid black;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .domain-card:hover {
+            transform: translateY();
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .domain-header {
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.030);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .domain-id {
+            background: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .domain-name {
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            flex-shrink: 1; /* Allows text to shrink */
+            min-width: 0; /* Needed for truncation */
+            font-size: 1.1rem;
+            flex: 1;
+            margin-left: 15px;
+        }
+
+        .domain-category {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: black;
+            width: fit-content;
+            background: rgba(0, 0, 0, 0.030);
+
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        .domain-content {
+            padding: 15px;
+        }
+
+        .domain-drill {
+            font-size: 0.95rem;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 50;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #ffffff;
+            padding: 2rem; /* Reduced padding for full-screen */
+            border-radius: 0;
+            width: 100%;
+            height: 100%;
+            max-height: 100vh;
+            overflow-y: auto;
+            position: relative;
+            scrollbar-width: none;
+        }
+        .modal-content::-webkit-scrollbar {
+            display: none;
+        }
+        .close-btn {
+            position: absolute;
+            top: 1.5rem;
+            right: 1rem;
+            font-size: 2rem;
+            opacity: 0;
+            cursor: pointer;
+            color: #000000;
+        }
+        @media (min-width: 768px) {
+            .modal-content {
+                padding: 10rem 10rem; /* Increased left/right padding for tablets */
+            }
+        }
+        @media (min-width: 1024px) {
+            .modal-content {
+                padding: 10rem 10rem; /* Increased left/right padding for desktops */
+            }
+        }
+        .nav-arrows {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            display: flex;
+            gap: 1rem;
+            opacity: 0;
+        }
+        .nav-arrows i {
+            font-size: 1.5rem; /* Increased size for visibility */
+            cursor: pointer;
+            color: #000000;
+        }
+        .nav-arrows i.disabled {
+            color: #cccccc;
+            cursor: not-allowed;
+        }
+        #modalTitle {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 1.5rem 0;
+        }
+        #modalContent {
+            font-size: 0.9rem;
+            color: #000000;
+            font-weight: 520;
+        }
+        #modalContent strong {
+            color: #000000;
+            background: rgba(0, 6, 32, 0.050);
+            border-radius: 3px;
+            padding: 0.2rem 0.3rem;
+            font-weight: 650;
+            margin-bottom: 5rem;
+        }
+        #modalContent p {
+            margin-bottom: 0.75rem;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .bold{
+            font-weight: 650; 
+            display: inline-block;
+        }
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #181818;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            transition: opacity 0.5s ease;
+        }
+        #preloader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .bn{
+            font-family: "Hind Siliguri", sans-serif;
+        }
+        .spinner {
+            width: 20px;
+            height: 20px;
+            border: 3px solid #000000;
+            border-top: 3px solid #ffffff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* --- New/Updated CSS for Table-like displays in Modal --- */
+        .data-grid-container {
+            margin-bottom: 1.5rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden; /* Ensures rounded corners apply to content */
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .data-grid-header {
+            display: contents; /* Allows header cells to align with grid columns */
+        }
+
+        .data-grid-header-cell {
+            font-weight: 700;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+            color: #333;
+        }
+
+        .data-grid-row {
+            display: contents; /* Crucial for grid layout in rows */
+        }
+
+        .data-grid-cell {
+            padding: 10px;
+            border-bottom: 1px solid #eee; /* Separator for rows */
+            word-wrap: break-word; /* Prevent overflow */
+        }
+        
+        .data-grid-cell:last-child {
+            border-bottom: none; /* No border for the last cell in a row */
+        }
+
+        /* Specific grid column definitions */
+        .prey-types-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr 0.5fr 1.5fr; /* Type, Description, SDR, Archetype */
+        }
+
+        .weakness-matrix-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr; /* Victim Void, Tactical Exploit */
+        }
+
+        .tactical-scripts-grid {
+            display: grid;
+            grid-template-columns: 0.5fr 1fr 2fr; /* Phase, Purpose, Script */
+        }
+
+        .tiered-tactic-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 0.5fr 2fr; /* Tactic, Level, Used For */
+        }
+
+        /* Responsive adjustments for grids */
+        @media (max-width: 768px) {
+            .prey-types-grid,
+            .weakness-matrix-grid,
+            .tactical-scripts-grid,
+            .tiered-tactic-grid {
+                grid-template-columns: 1fr; /* Stack columns on small screens */
+            }
+            .data-grid-header-cell {
+                display: none; /* Hide header cells on mobile when stacking */
+            }
+            .data-grid-cell {
+                border-bottom: 1px dashed #eee; /* Softer separator for stacked items */
+            }
+            .data-grid-container {
+                padding: 0;
+            }
+        }
+        
+        /* Styling for historical ghost files */
+        .ghost-file-entry {
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .ghost-file-entry h4 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            color: #333;
+        }
+        .ghost-file-entry p {
+            margin-bottom: 0.5rem;
+        }
+        .ghost-file-entry .bold {
+            margin-right: 0.3em; /* Small space after bold labels */
+        }
+    </style>
+</head>
+<body>
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <header>
+        <h1><p style="display: inline-block; color: red;">ART</p> OF SEDUCTION</h1>
+    </header>
+
+    <div class="container">
+        <div class="search-filter">
+            <div class="filters">
+                <button class="filter-btn active" data-category="all"></button>
+                <button class="filter-btn" data-category="💠 Archetype"></button>
+                <button class="filter-btn" data-category="🎯 Maneuver"></button>
+            </div>
+        </div>
+
+        <div id="lawsGrid"></div>
+    </div>
+
+    <div id="lawModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">×</span>
+            <div class="nav-arrows">
+                <i class="fas fa-chevron-left" id="prevLaw"></i>
+                <i class="fas fa-chevron-right" id="nextLaw"></i>
+            </div>
+            <h2 id="modalTitle"></h2>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const preloader = document.getElementById('preloader');
+
+            // Function to fetch JSON data
+            async function fetchJsonData(url) {
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status} from ${url}`);
+                    }
+                    return await response.json();
+                } catch (error) {
+                    console.error(`Error fetching data from ${url}:`, error);
+                    return { archetypes: [], maneuvers: [] }; // Return empty arrays on error
+                }
+            }
+
+            // Combine fetching both JSON files
+async function loadAllData() {
+    const [archetypeData, maneuverData] = await Promise.all([
+        fetchJsonData('data.json'), // Your Archetypes data
+        fetchJsonData('maneuver.json') // Your Maneuvers data
+    ]);
+
+    const combined = [];
+    if (Array.isArray(archetypeData.archetypes)) {
+        combined.push(...archetypeData.archetypes.map(item => ({ ...item, category: '💠 Archetype' })));
+    }
+    if (Array.isArray(maneuverData.maneuver)) { // Changed from 'maneuvers' to 'maneuver'
+        combined.push(...maneuverData.maneuver.map(item => ({ ...item, category: '🎯 Maneuver' })));
+    }
+    
+    // Sort combined array by serial_number for consistent navigation
+    combined.sort((a, b) => a.serial_number - b.serial_number);
+    
+    return combined;
+}
+
+            // Main logic after loading all archetypes
+            loadAllData().then(combinedItems => {
+                let currentItemIndex = 0; 
+                let filteredItems = combinedItems; 
+
+                // Hide preloader after data is loaded
+                preloader.classList.add('hidden');
+
+                // Calculate category counts based on combined data
+                const categoryCounts = combinedItems.reduce((acc, item) => {
+                    acc[item.category] = (acc[item.category] || 0) + 1;
+                    return acc;
+                }, {});
+                categoryCounts['all'] = combinedItems.length;
+
+                // Update filter button text with counts
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    const category = btn.dataset.category;
+                    const count = categoryCounts[category] || 0;
+                    let baseText = category; 
+
+                    if (category === 'all') {
+                        baseText = 'All';
+                    } else if (category === '💠 Archetype') {
+                        baseText = '💠 Archetype'; 
+                    } else if (category === '🎯 Maneuver') {
+                        baseText = '🎯 Maneuver'; 
+                    }
+
+                    btn.textContent = `${baseText} (${count})`; 
+                });
+
+                // Render items
+                function renderItems(itemsToRender) { 
+                    const grid = document.getElementById('lawsGrid');
+                    grid.innerHTML = '';
+                    itemsToRender.forEach((item, index) => {
+                        const card = document.createElement('div');
+                        card.dataset.index = index; 
+                        card.innerHTML = `
+                            <div class="domain-card" data-id="${item.archetype_id || item.maneuver_id}" data-category="${item.category}">
+                                <div class="domain-header">
+                                    <div class="domain-id">${item.serial_number}</div>
+                                    <div class="domain-name">${item.name}</div>
+                                </div>
+                                <div class="domain-content">
+                                    <div class="domain-category">${item.category}</div>
+                                </div>
+                            </div>
+                        `;
+                        card.addEventListener('click', () => {
+                            const clickedItemGlobalIndex = combinedItems.findIndex(
+                                l => l.serial_number === item.serial_number && l.name === item.name && l.category === item.category
+                            );
+                            if (clickedItemGlobalIndex !== -1) {
+                                currentItemIndex = clickedItemGlobalIndex;
+                                openModal(combinedItems[currentItemIndex]);
+                                window.history.pushState({ modal: true, itemIndex: currentItemIndex }, document.title);
+                            }
+                        });
+                        grid.appendChild(card);
+                    });
+                }
+
+                // Open modal
+                function openModal(item) {
+                    const modal = document.getElementById('lawModal');
+                    const modalTitle = document.getElementById('modalTitle');
+                    const modalContent = document.getElementById('modalContent');
+                    const prevLawBtn = document.getElementById('prevLaw');
+                    const nextLawBtn = document.getElementById('nextLaw');
+
+                    modalTitle.textContent = `${item.category.replace('💠 ', '').replace('🎯 ', '')} ${item.serial_number}: ${item.name || 'N/A'}`;
+
+                    let contentHtml = '';
+
+                    if (item.category === '💠 Archetype') {
+                        contentHtml = `
+                            <div class="modal-section">
+                                <strong>${item.category} ${item.serial_number}</strong>
+                                ${item.introduction && item.introduction.english ? `<p><strong>🌐 English Introduction:</strong><br><ul><li>${item.introduction.english}</li></ul></p>` : ''}
+                                ${item.introduction && item.introduction.bangla ? `<p><strong>🗣️ Bangla Introduction:</strong><br><ul><li><div class="bn">${item.introduction.bangla}</div></li></ul></p>` : ''}
+                                ${item.core_fantasy ? `<p><strong>💭 Core Fantasy:</strong><br><ul><li>${item.core_fantasy}</li></ul></p>` : ''}
+                                ${item.why_it_works && item.why_it_works.psychology && item.why_it_works.psychology.length > 0 ? `
+                                    <p><strong>🧠 Why It Works? (Psychology):</strong><br>
+                                    <ul class="modal-list">
+                                        ${item.why_it_works.psychology.map(point => `<li>${point}</li>`).join('')}
+                                    </ul></p>
+                                ` : ''}
+                                ${item.historical_case_studies && item.historical_case_studies.length > 0 ? `
+                                    <p><strong>📜 Historical Case Studies:</strong><br>
+                                    <ul class="modal-list">
+                                        ${item.historical_case_studies.map(study => `
+                                            <li>
+                                                <h4>${study.name}</h4>
+                                                <p>${study.description}</p>
+                                                <p><strong>Lesson:</strong> ${study.lesson}</p>
+                                            </li>
+                                        `).join('')}
+                                    </ul></p>
+                                ` : ''}
+                                ${item.keys_to_the_archetype && item.keys_to_the_archetype.length > 0 ? `
+                                    <p><strong>🔑 Keys to the Archetype:</strong><br>
+                                    <ul class="modal-list">
+                                        ${item.keys_to_the_archetype.map(key => `
+                                            <li>
+                                                <p><strong>${key.name}</strong></p>
+                                                <ul>
+                                                    <p><div class="bold">Description:</div> ${key.description}</p>
+                                                    <p><div class="bold">Example:</div> ${key.example}</p>
+                                                    <p><div class="bold">Why it Works:</div> ${key.why_it_works}</p>
+                                                    <p><div class="bold">Drill:</div> ${key.drill}</p>
+                                                </ul>
+                                            </li>
+                                        `).join('')}
+                                    </ul></p>
+                                ` : ''}
+                                ${item.dangers_and_solutions && item.dangers_and_solutions.length > 0 ? `
+                                    <p><strong>⚠️ Dangers:</strong><br>
+                                    <ul class="modal-list">
+                                        ${item.dangers_and_solutions.map(ds => `
+                                            <li>
+                                                <p>${ds.danger}</p>
+                                                <p><strong>Solution:</strong> ${ds.solution}</p>
+                                            </li>
+                                        `).join('')}
+                                    </ul></p>
+                                ` : ''}
+                                ${item.tips_to_channel && item.tips_to_channel.length > 0 ? `
+                                    <p><strong>💡 Tips to Channel this Archetype:</strong><br>
+                                    <ul class="modal-list">
+                                        ${item.tips_to_channel.map(tip => `<li>${tip}</li>`).join('')}
+                                    </ul></p>
+                                ` : ''}
+                                ${item.quotes_to_live_by && item.quotes_to_live_by.length > 0 ? `
+                                    <p><strong>💬 Quotes to Live By:</strong><br>
+                                    <ul class="modal-list">
+                                        ${item.quotes_to_live_by.map(quote => `<li>${quote}</li>`).join('')}
+                                    </ul></p>
+                                ` : ''}
+                                ${item.daily_drills && item.daily_drills.length > 0 ? `
+                                    <p><strong>🛠️ Daily Drills:</strong><br>
+                                    <ul class="modal-list">
+                                        ${item.daily_drills.map(drill => `<li>${drill}</li>`).join('')}
+                                    </ul></p>
+                                ` : ''}
+                                ${item.final_lesson ? `<p><strong>🎓 Final Lesson:</strong><br><ul><li>${item.final_lesson}</li></ul></p>` : ''}
+                            </div>
+                        `;
+                    } else if (item.category === '🎯 Maneuver') {
+                        contentHtml = `
+                            <div class="modal-section">
+                                <strong>${item.category} ${item.serial_number}</strong>
+                                ${item.introduction && item.introduction.english ? `<p><strong>🌐 English Introduction:</strong><br><ul><li>${item.introduction.english}</li></ul></p>` : ''}
+                                ${item.introduction && item.introduction.bangla ? `<p><strong>🗣️ Bangla Introduction:</strong><br><ul><li><div class="bn">${item.introduction.bangla}</div></li></ul></p>` : ''}
+
+                                ${item.core_mission_objective ? `
+                                    <p><strong>🎯 Core Mission Objective:</strong></p>
+                                    <ul>
+                                        ${item.core_mission_objective.psychological_leverage_statement ? `<li><div class="bold">Psychological Leverage Statement:</div> <br><ul><li>${item.core_mission_objective.psychological_leverage_statement}</li></ul>` : ''}
+                                        ${item.core_mission_objective.behavioral_checklist && item.core_mission_objective.behavioral_checklist.length > 0 ? `
+                                            <li><div class="bold">Behavioral Checklist:</div>
+                                                <ul class="modal-list">
+                                                    ${item.core_mission_objective.behavioral_checklist.map(check => `<li>${check}</li>`).join('')}
+                                                </ul>
+                                            </li>
+                                        ` : ''}
+                                        ${item.core_mission_objective.emotional_targeting_rules && item.core_mission_objective.emotional_targeting_rules.length > 0 ? `
+                                            <li><div class="bold">Emotional Targeting Rules:</div>
+                                                <ul class="modal-list">
+                                                    ${item.core_mission_objective.emotional_targeting_rules.map(rule => `<li>${rule}</li>`).join('')}
+                                                </ul>
+                                            </li>
+                                        ` : ''}
+                                    </ul>
+                                ` : ''}
+
+                                ${item.target_intelligence_classification ? `
+                                    <p><strong>🕵️ Target Intelligence Classification:</strong></p>
+                                    <ul>
+                                        ${item.target_intelligence_classification.vulnerable_prey_types && item.target_intelligence_classification.vulnerable_prey_types.length > 0 ? `
+                                            <li><div class="bold">Vulnerable Prey Types:</div>
+                                                <div class="data-grid-container prey-types-grid">
+                                                    <div class="data-grid-header-cell">Type</div>
+                                                    <div class="data-grid-header-cell">Description</div>
+                                                    <div class="data-grid-header-cell">SDR</div>
+                                                    <div class="data-grid-header-cell">Archetype</div>
+                                                    ${item.target_intelligence_classification.vulnerable_prey_types.map(prey => `
+                                                        <div class="data-grid-row">
+                                                            <div class="data-grid-cell">${prey.type}</div>
+                                                            <div class="data-grid-cell">${prey.description}</div>
+                                                            <div class="data-grid-cell">${prey.sdr}</div>
+                                                            <div class="data-grid-cell">${prey.archetype}</div>
+                                                        </div>
+                                                    `).join('')}
+                                                </div>
+                                            </li>
+                                        ` : ''}
+                                        ${item.target_intelligence_classification.weakness_trigger_matrix && item.target_intelligence_classification.weakness_trigger_matrix.length > 0 ? `
+                                            <li><div class="bold">Weakness Trigger Matrix:</div>
+                                                <div class="data-grid-container weakness-matrix-grid">
+                                                    <div class="data-grid-header-cell">Victim Void</div>
+                                                    <div class="data-grid-header-cell">Tactical Exploit</div>
+                                                    ${item.target_intelligence_classification.weakness_trigger_matrix.map(matrix => `
+                                                        <div class="data-grid-row">
+                                                            <div class="data-grid-cell">${matrix.victim_void}</div>
+                                                            <div class="data-grid-cell">${matrix.tactical_exploit}</div>
+                                                        </div>
+                                                    `).join('')}
+                                                </div>
+                                            </li>
+                                        ` : ''}
+                                    </ul>
+                                ` : ''}
+
+                                ${item.historical_ghost_files && item.historical_ghost_files.length > 0 ? `
+                                    <p><strong>👻 Historical Ghost Files:</strong></p>
+                                    <div class="modal-list">
+                                        ${item.historical_ghost_files.map(file => `\
+                                            <div class="ghost-file-entry">
+                                                <h4>${file.name}</h4>
+                                                <p><div class="bold">Brief:</div> ${file.brief}</p>
+                                                <p><div class="bold">Questions:</div> ${file.questions}</p>
+                                                <p><div class="bold">Field Notes:</div> ${file.field_notes}</p>
+                                            </div>
+                                        `).join('')}
+                                    </div>
+                                ` : ''}
+
+                                ${item.practical_field_modules ? `
+                                    <p><strong>🛠️ Practical Field Modules:</strong></p>
+                                    <ul>
+                                        ${item.practical_field_modules.tactical_scripts && item.practical_field_modules.tactical_scripts.length > 0 ? `
+                                            <li><div class="bold">Tactical Scripts:</div>
+                                                <div class="data-grid-container tactical-scripts-grid">
+                                                    <div class="data-grid-header-cell">Phase</div>
+                                                    <div class="data-grid-header-cell">Purpose</div>
+                                                    <div class="data-grid-header-cell">Script</div>
+                                                    ${item.practical_field_modules.tactical_scripts.map(script => `
+                                                        <div class="data-grid-row">
+                                                            <div class="data-grid-cell">${script.phase}</div>
+                                                            <div class="data-grid-cell">${script.purpose}</div>
+                                                            <div class="data-grid-cell">${script.script}</div>
+                                                        </div>
+                                                    `).join('')}
+                                                </div>
+                                            </li>
+                                        ` : ''}
+                                        ${item.practical_field_modules.psychological_tests && item.practical_field_modules.psychological_tests.length > 0 ? `
+                                            <li><div class="bold">Psychological Tests:</div>
+                                                <ul class="modal-list">
+                                                    ${item.practical_field_modules.psychological_tests.map(test => `<li>${test}</li>`).join('')}
+                                                </ul>
+                                            </li>
+                                        ` : ''}
+                                        ${item.practical_field_modules.vulnerability_sensor_training && item.practical_field_modules.vulnerability_sensor_training.length > 0 ? `
+                                            <li><div class="bold">Vulnerability Sensor Training:</div>
+                                                <ul class="modal-list">
+                                                    ${item.practical_field_modules.vulnerability_sensor_training.map(training => `<li>${training}</li>`).join('')}
+                                                </ul>
+                                            </li>
+                                        ` : ''}
+                                        ${item.practical_field_modules.tiered_tactic_table && item.practical_field_modules.tiered_tactic_table.length > 0 ? `
+                                            <li><div class="bold">Tiered Tactic Table:</div>
+                                                <div class="data-grid-container tiered-tactic-grid">
+                                                    <div class="data-grid-header-cell">Tactic</div>
+                                                    <div class="data-grid-header-cell">Level</div>
+                                                    <div class="data-grid-header-cell">Used For</div>
+                                                    ${item.practical_field_modules.tiered_tactic_table.map(tactic => `
+                                                        <div class="data-grid-row">
+                                                            <div class="data-grid-cell">${tactic.tactic}</div>
+                                                            <div class="data-grid-cell">${tactic.level}</div>
+                                                            <div class="data-grid-cell">${tactic.used_for}</div>
+                                                        </div>
+                                                    `).join('')}
+                                                </div>
+                                            </li>
+                                        ` : ''}
+                                    </ul>
+                                ` : ''}
+
+                                ${item.seducers_mental_gym ? `
+                                    <p><strong>🧠 Seducer's Mental Gym:</strong></p>
+                                    <ul>
+                                        ${item.seducers_mental_gym.drills_for_calibrating_prey_selection && item.seducers_mental_gym.drills_for_calibrating_prey_selection.length > 0 ? `
+                                            <li><div class="bold">Drills for Calibrating Prey Selection:</div>
+                                                <ul class="modal-list">
+                                                    ${item.seducers_mental_gym.drills_for_calibrating_prey_selection.map(drill => `<li>${drill}</li>`).join('')}
+                                                </ul>
+                                            </li>
+                                        ` : ''}
+                                        ${item.seducers_mental_gym.self_audit_to_detect_emotional_blindness && item.seducers_mental_gym.self_audit_to_detect_emotional_blindness.length > 0 ? `
+                                            <li><div class="bold">Self-Audit to Detect Emotional Blindness:</div>
+                                                <ul class="modal-list">
+                                                    ${item.seducers_mental_gym.self_audit_to_detect_emotional_blindness.map(audit => `<li>${audit}</li>`).join('')}
+                                                </ul>
+                                            </li>
+                                        ` : ''}
+                                        ${item.seducers_mental_gym.daily_prey_analysis_checklist && item.seducers_mental_gym.daily_prey_analysis_checklist.length > 0 ? `
+                                            <li><div class="bold">Daily Prey Analysis Checklist:</div>
+                                                <ul class="modal-list">
+                                                    ${item.seducers_mental_gym.daily_prey_analysis_checklist.map(checklist => `<li>${checklist}</li>`).join('')}
+                                                </ul>
+                                            </li>
+                                        ` : ''}
+                                    </ul>
+                                ` : ''}
+
+                                ${item.mission_warnings_ghost_flags ? `
+                                    <p><strong>🚨 Mission Warnings & Ghost Flags:</strong></p>
+                                    <ul>
+                                        ${item.mission_warnings_ghost_flags.red_flags_from_historical_mistakes && item.mission_warnings_ghost_flags.red_flags_from_historical_mistakes.length > 0 ? `
+                                            <li><div class="bold">Red Flags from Historical Mistakes:</div>
+                                                <ul class="modal-list">
+                                                    ${item.mission_warnings_ghost_flags.red_flags_from_historical_mistakes.map(flag => `<li>${flag}</li>`).join('')}
+                                                </ul>
+                                            </li>
+                                        ` : ''}
+                                        ${item.mission_warnings_ghost_flags.victim_toxicity_index && item.mission_warnings_ghost_flags.victim_toxicity_index.length > 0 ? `
+                                            <li><div class="bold">Victim Toxicity Index:</div>
+                                                <ul class="modal-list">
+                                                    ${item.mission_warnings_ghost_flags.victim_toxicity_index.map(index => `<li>${index}</li>`).join('')}
+                                                </ul>
+                                            </li>
+                                        ` : ''}
+                                        ${item.mission_warnings_ghost_flags.signs_youre_falling_for_your_own_bait && item.mission_warnings_ghost_flags.signs_youre_falling_for_your_own_bait.length > 0 ? `
+                                            <li><div class="bold">Signs You're Falling for Your Own Bait:</div>
+                                                <ul class="modal-list">
+                                                    ${item.mission_warnings_ghost_flags.signs_youre_falling_for_your_own_bait.map(sign => `<li>${sign}</li>`).join('')}
+                                                </ul>
+                                            </li>
+                                        ` : ''}
+                                        ${item.mission_warnings_ghost_flags.exit_strategies_if_prey_turns_predator && item.mission_warnings_ghost_flags.exit_strategies_if_prey_turns_predator.length > 0 ? `
+                                            <li><div class="bold">Exit Strategies if Prey Turns Predator:</div>
+                                                <ul class="modal-list">
+                                                    ${item.mission_warnings_ghost_flags.exit_strategies_if_prey_turns_predator.map(strategy => `<li>${strategy}</li>`).join('')}
+                                                </ul>
+                                            </li>
+                                        ` : ''}
+                                    </ul>
+                                ` : ''}
+
+                                ${item.symbol ? `<p><strong>🔣 Symbol:</strong><ul><li>${item.symbol}</li></ul></p>` : ''}
+                                ${item.quote ? `<p><strong>💬 Quote:</strong><ul><li>${item.quote}</li></ul></p>` : ''}
+                                ${item.target_acquisition_protocol ? `<p><strong>📝 Target Acquisition Protocol:</strong> <ul><li>${item.target_acquisition_protocol}</li></ul></p>` : ''}
+                            </div>
+                        `;
+                    }
+
+                    modalContent.innerHTML = contentHtml;
+
+                    // Disable/enable navigation buttons based on current item index
+                    prevLawBtn.classList.toggle('disabled', currentItemIndex === 0);
+                    nextLawBtn.classList.toggle('disabled', currentItemIndex === combinedItems.length - 1);
+
+                    document.body.classList.add('modal-open');
+                    modal.style.display = 'flex';
+                }
+
+                // Close modal
+                function closeModal() {
+                    const modal = document.getElementById('lawModal');
+                    modal.style.display = 'none';
+                    document.body.classList.remove('modal-open');
+                }
+
+                document.querySelector('.close-btn').addEventListener('click', closeModal);
+
+                // Navigation for previous and next items
+                document.getElementById('prevLaw').addEventListener('click', () => {
+                    if (currentItemIndex > 0) {
+                        currentItemIndex--;
+                        openModal(combinedItems[currentItemIndex]);
+                        window.history.replaceState({ modal: true, itemIndex: currentItemIndex }, document.title);
+                    }
+                });
+
+                document.getElementById('nextLaw').addEventListener('click', () => {
+                    if (currentItemIndex < combinedItems.length - 1) {
+                        currentItemIndex++;
+                        openModal(combinedItems[currentItemIndex]);
+                        window.history.replaceState({ modal: true, itemIndex: currentItemIndex }, document.title);
+                    }
+                });
+
+                // Keyboard controls
+                document.addEventListener('keydown', (e) => {
+                    if (document.getElementById('lawModal').style.display === 'flex') {
+                        if (e.key === 'ArrowLeft' && currentItemIndex > 0) {
+                            currentItemIndex--;
+                            openModal(combinedItems[currentItemIndex]);
+                            window.history.replaceState({ modal: true, itemIndex: currentItemIndex }, document.title);
+                        } else if (e.key === 'ArrowRight' && currentItemIndex < combinedItems.length - 1) {
+                            currentItemIndex++;
+                            openModal(combinedItems[currentItemIndex]);
+                            window.history.replaceState({ modal: true, itemIndex: currentItemIndex }, document.title);
+                        } else if (e.key === 'Escape') {
+                            closeModal();
+                            window.history.back(); // Go back in history to close modal state
+                        }
+                    }
+                });
+
+                // Handle browser back/forward button for modal state
+                window.addEventListener('popstate', (event) => {
+                    const modal = document.getElementById('lawModal');
+                    if (event.state && event.state.modal) {
+                        // If navigating back to a modal state, reopen it
+                        currentItemIndex = event.state.itemIndex;
+                        openModal(combinedItems[currentItemIndex]);
+                    } else if (modal.style.display === 'flex') {
+                        // If navigating back from a modal state, close it
+                        closeModal();
+                    }
+                });
+
+                // Filter functionality
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        document.querySelectorAll('.filter-btn').forEach(b => {
+                            b.classList.remove('active');
+                        });
+                        btn.classList.add('active');
+
+                        const category = btn.dataset.category;
+                        filteredItems = category === 'all'
+                            ? combinedItems
+                            : combinedItems.filter(item => item.category === category);
+                        renderItems(filteredItems);
+                    });
+                });
+
+                // Initial render of all combined items
+                renderItems(combinedItems);
+            }).catch(error => {
+                console.error('Failed to load all items:', error);
+                preloader.classList.add('hidden'); // Ensure preloader hides even on error
+                // Display a user-friendly error message if needed
+                document.getElementById('lawsGrid').innerHTML = '<p class="text-center text-red-500 text-lg">Failed to load items. Please try again later.</p>';
+            });
+        });
+    </script>
+</body>
+</html>

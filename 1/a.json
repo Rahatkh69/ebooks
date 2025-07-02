@@ -1,0 +1,2050 @@
+{
+  "laws": [
+    {
+      "number": 1,
+      "title": "NEVER OUTSHINE THE MASTER",
+      "category": "🧠 Deception",
+      "bilingual_power_pill": {
+        "BN": "সর্বদা বড় শক্তির ছায়ায় থাকো",
+        "EN": "Always stay in the shadow of greater powers"
+      },
+      "why_it_works": "The master must feel superior; outshining them triggers insecurity, threatening your position.",
+      "things_to_do": [
+        "✅ Make your wins seem like their guidance.",
+        "✅ Praise their ideas before adding yours.",
+        "✅ Use phrases like \"This worked because of your advice.\"",
+        "✅ Dress slightly worse than the master.",
+        "✅ Let them take credit for your best moves.",
+        "✅ Ask for their input, even if you don’t need it.",
+        "✅ Show gratitude publicly for their mentorship."
+      ],
+      "things_to_never_do": [
+        "❌ Show off intelligence unasked.",
+        "❌ Correct them publicly.",
+        "❌ Wear flashier clothes than the boss.",
+        "❌ Laugh louder, speak more—steal their spotlight.",
+        "❌ Assume they won’t notice your rise.",
+        "❌ Boast about your achievements without crediting them."
+      ],
+      "trigger_drill": {
+        "default": "Next meeting, say \"Your strategy helped me solve X.\"",
+        "status_flip": "\"Accidentally\" mess up a small task—let them \"save\" you."
+      },
+      "cheat_code_example": "I just followed your method—guess I got lucky!",
+      "psychological_root": "Feeds their ego while hiding your ambition.",
+      "snap_warning": "🚨 ABORT signal: You feel the urge to prove you’re smarter. (STOP. Swallow pride.)",
+      "leverage_point": {
+        "tactic": "Let them believe they control you.",
+        "blood_price": "Their arrogance blinds them to your rise."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Daily: Let the boss take credit at least once.",
+        "penalty": "💀 Penalty: If failed, write 10 times: \"I am not the sun.\""
+      }
+    },
+    {
+      "number": 2,
+      "title": "NEVER PUT TOO MUCH TRUST IN FRIENDS, LEARN TO USE ENEMIES",
+      "category": "🎭 Manipulation",
+      "bilingual_power_pill": {
+        "BN": "শত্রুকে কাজে লাগাও, বন্ধুর উপর ভরসা কোরো না",
+        "EN": "Use enemies, never overtrust friends"
+      },
+      "why_it_works": "Friends expect loyalty, which can breed complacency; enemies work harder to prove themselves.",
+      "things_to_do": [
+        "✅ Hire former rivals—they’ll hustle to impress.",
+        "✅ Keep friends at arm’s length in business.",
+        "✅ Reward competence over loyalty.",
+        "✅ Let enemies think they’re winning.",
+        "✅ Play both sides but never commit.",
+        "✅ Study enemies’ strengths for your gain.",
+        "✅ Offer small favors to rivals to gain trust."
+      ],
+      "things_to_never_do": [
+        "❌ Confide deep secrets in friends.",
+        "❌ Reject a skilled enemy out of pride.",
+        "❌ Believe \"friendship over business.\"",
+        "❌ Let allies get too comfortable.",
+        "❌ Show who you really hate.",
+        "❌ Assume friends won’t betray under pressure."
+      ],
+      "trigger_drill": {
+        "default": "Compliment a rival’s strength to their face.",
+        "status_flip": "\"Leak\" a fake weakness—watch them overcorrect."
+      },
+      "cheat_code_example": "I respect how you handle X—wish I could do that.",
+      "psychological_root": "Triggers their need to validate your \"admiration.\"",
+      "snap_warning": "🚨 ABORT signal: You’re about to vent to a \"trusted\" friend. (STOP. Write it & burn it.)",
+      "leverage_point": {
+        "tactic": "Give an enemy a small win—they’ll expose their strategy.",
+        "blood_price": "Their greed makes them predictable."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Test a rival with a fake opportunity.",
+        "penalty": "💀 Penalty: If failed, donate $10 to someone you hate."
+      }
+    },
+    {
+      "number": 3,
+      "title": "CONCEAL YOUR INTENTIONS",
+      "category": "🧠 Deception",
+      "bilingual_power_pill": {
+        "BN": "মতলব গোপন রাখো, শত্রুকে বিভ্রান্ত করো",
+        "EN": "Hide motives, misdirect enemies"
+      },
+      "why_it_works": "People can’t counter what they don’t see coming, keeping you unpredictable.",
+      "things_to_do": [
+        "✅ Practice vague responses (\"Interesting take\").",
+        "✅ Use decoy goals to distract.",
+        "✅ Let others think they figured you out.",
+        "✅ Ask questions instead of revealing.",
+        "✅ Smile when accused—never explain.",
+        "✅ Drop false hints about your plans.",
+        "✅ Maintain a neutral tone in conflicts."
+      ],
+      "things_to_never_do": [
+        "❌ Reveal your next move prematurely.",
+        "❌ Justify yourself when challenged.",
+        "❌ Trust \"confidential\" conversations.",
+        "❌ React emotionally to provocations.",
+        "❌ Assume no one is watching.",
+        "❌ Overshare in casual chats."
+      ],
+      "trigger_drill": {
+        "default": "When asked your opinion, say \"I’m still learning—what’s yours?\"",
+        "status_flip": "\"Slip\" a fake plan—\"Actually, I’m thinking of quitting.\""
+      },
+      "cheat_code_example": "You’re probably right. (Then do the opposite.)",
+      "psychological_root": "Exploits their confirmation bias.",
+      "snap_warning": "🚨 ABORT signal: You feel itching to correct a lie about you. (STOP. Let them believe it.)",
+      "leverage_point": {
+        "tactic": "Let enemies \"discover\" false evidence.",
+        "blood_price": "They stake their reputation on your deception."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Daily: Have 3 conversations revealing nothing true.",
+        "penalty": "💀 Penalty: If failed, listen to 1 hour of baby crying sounds."
+      }
+    },
+    {
+      "number": 4,
+      "title": "ALWAYS SAY LESS THAN NECESSARY",
+      "category": "🔮 Psychology",
+      "bilingual_power_pill": {
+        "BN": "প্রয়োজনের চেয়ে কম বলো",
+        "EN": "Say less than needed"
+      },
+      "why_it_works": "Silence creates mystery, reduces errors, and keeps others guessing.",
+      "things_to_do": [
+        "✅ Speak only when it serves your goal.",
+        "✅ Use short, vague answers to probes.",
+        "✅ Nod and smile instead of elaborating.",
+        "✅ Let others fill the silence.",
+        "✅ Practice pausing before responding.",
+        "✅ Redirect questions back to the asker.",
+        "✅ Keep written communication brief."
+      ],
+      "things_to_never_do": [
+        "❌ Overshare personal details.",
+        "❌ Fill awkward silences with chatter.",
+        "❌ Answer unasked questions.",
+        "❌ Boast about plans or achievements.",
+        "❌ Explain your reasoning unless forced.",
+        "❌ Gossip about others’ secrets."
+      ],
+      "trigger_drill": {
+        "default": "In a meeting, answer with one sentence, then pause.",
+        "status_flip": "Say, \"I’ll need to think more—your thoughts?\""
+      },
+      "cheat_code_example": "That’s an interesting point. (Say nothing else.)",
+      "psychological_root": "Silence triggers others’ insecurity, making them reveal more.",
+      "snap_warning": "🚨 ABORT signal: You’re about to explain yourself. (STOP. Count to 5 silently.)",
+      "leverage_point": {
+        "tactic": "Stay quiet—they’ll overexplain.",
+        "blood_price": "Their words expose their weaknesses."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Daily: Answer 3 questions with 5 words or fewer.",
+        "penalty": "💀 Penalty: If failed, write 20 times: \"Silence is my shield.\""
+      }
+    },
+    {
+      "number": 5,
+      "title": "SO MUCH DEPENDS ON REPUTATION – GUARD IT WITH YOUR LIFE",
+      "category": "🐍 Positioning",
+      "bilingual_power_pill": {
+        "BN": "সুনাম রক্ষা করো জীবন দিয়ে",
+        "EN": "Guard reputation with your life"
+      },
+      "why_it_works": "Reputation shapes how others perceive and treat you; one slip can ruin years of trust.",
+      "things_to_do": [
+        "✅ Build a consistent public image.",
+        "✅ Deliver on promises, no matter how small.",
+        "✅ Address rumors calmly and indirectly.",
+        "✅ Align with respected figures publicly.",
+        "✅ Showcase strengths subtly through actions.",
+        "✅ Control your online presence tightly.",
+        "✅ Apologize quickly for minor errors."
+      ],
+      "things_to_never_do": [
+        "❌ Ignore gossip about you.",
+        "❌ Act inconsistently with your image.",
+        "❌ Engage in public feuds.",
+        "❌ Share controversial opinions carelessly.",
+        "❌ Let others define your narrative.",
+        "❌ Neglect your appearance or manners."
+      ],
+      "trigger_drill": {
+        "default": "Post a subtle success story tied to your image.",
+        "status_flip": "Respond with, \"I appreciate the feedback,\" then redirect."
+      },
+      "cheat_code_example": "My work speaks for itself.",
+      "psychological_root": "Reinforces your image while deflecting scrutiny.",
+      "snap_warning": "🚨 ABORT signal: You’re tempted to argue online. (STOP. Log off for 24 hours.)",
+      "leverage_point": {
+        "tactic": "Let others defend your reputation.",
+        "blood_price": "Their loyalty ties them to you."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Reinforce your image with one public act.",
+        "penalty": "💀 Penalty: If failed, delete one social media post you like."
+      }
+    },
+    {
+      "number": 6,
+      "title": "COURT ATTENTION AT ALL COSTS",
+      "category": "🐍 Positioning",
+      "bilingual_power_pill": {
+        "BN": "সবসময় দৃষ্টি আকর্ষণ করো",
+        "EN": "Court attention always"
+      },
+      "why_it_works": "Visibility equals power; being ignored is death in the game of influence.",
+      "things_to_do": [
+        "✅ Create a memorable personal brand.",
+        "✅ Use bold but calculated gestures.",
+        "✅ Speak or act when others are quiet.",
+        "✅ Leverage trends to stay relevant.",
+        "✅ Tell stories that stick in minds.",
+        "✅ Dress distinctively but strategically.",
+        "✅ Stage small controversies for attention."
+      ],
+      "things_to_never_do": [
+        "❌ Fade into the background.",
+        "❌ Copy others’ style blindly.",
+        "❌ Seek attention without a plan.",
+        "❌ Alienate key allies with stunts.",
+        "❌ Overstay your welcome in the spotlight.",
+        "❌ Ignore the audience’s values."
+      ],
+      "trigger_drill": {
+        "default": "Share a bold idea in a group setting.",
+        "status_flip": "Double down with a striking question."
+      },
+      "cheat_code_example": "I have an unconventional idea…",
+      "psychological_root": "Novelty grabs attention and memory.",
+      "snap_warning": "🚨 ABORT signal: You’re about to overdo a stunt. (STOP. Scale back 50%.)",
+      "leverage_point": {
+        "tactic": "Create a spectacle—they’ll talk.",
+        "blood_price": "Their focus traps them in your narrative."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Get noticed by 3 new people.",
+        "penalty": "💀 Penalty: If failed, wear plain clothes for a day."
+      }
+    },
+    {
+      "number": 7,
+      "title": "GET OTHERS TO DO THE WORK FOR YOU, BUT ALWAYS TAKE THE CREDIT",
+      "category": "🎭 Manipulation",
+      "bilingual_power_pill": {
+        "BN": "অন্যকে দিয়ে কাজ করাও, কৃতিত্ব নিজে নাও",
+        "EN": "Let others work, take credit"
+      },
+      "why_it_works": "Leveraging others’ efforts maximizes your gain with minimal cost.",
+      "things_to_do": [
+        "✅ Delegate tasks to skilled allies.",
+        "✅ Praise contributors privately, claim publicly.",
+        "✅ Position yourself as the project’s face.",
+        "✅ Reward workers just enough to keep them.",
+        "✅ Frame their work as your vision.",
+        "✅ Stay involved to seem essential.",
+        "✅ Use \"we\" in public, \"I\" in results."
+      ],
+      "things_to_never_do": [
+        "❌ Do all the work yourself.",
+        "❌ Give full credit to others.",
+        "❌ Ignore the team’s resentment.",
+        "❌ Delegate without oversight.",
+        "❌ Let others claim your spotlight.",
+        "❌ Underpay or undervalue workers."
+      ],
+      "trigger_drill": {
+        "default": "Assign a task, say, \"This fits your skills perfectly.\"",
+        "status_flip": "Offer a small incentive to seal loyalty."
+      },
+      "cheat_code_example": "Our team’s success reflects my leadership.",
+      "psychological_root": "People crave recognition, so they’ll work for it.",
+      "snap_warning": "🚨 ABORT signal: You’re about to overwork yourself. (STOP. Delegate one task.)",
+      "leverage_point": {
+        "tactic": "Let others toil—they’ll assume you’re vital.",
+        "blood_price": "Their effort builds your empire."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Delegate 2 tasks, claim 1 win.",
+        "penalty": "💀 Penalty: If failed, do someone else’s work for free."
+      }
+    },
+    {
+      "number": 8,
+      "title": "MAKE OTHER PEOPLE COME TO YOU – USE BAIT IF NECESSARY",
+      "category": "⚔️ Strategy",
+      "bilingual_power_pill": {
+        "BN": "অন্যকে তোমার কাছে আসতে বাধ্য করো",
+        "EN": "Make others come to you"
+      },
+      "why_it_works": "Forcing others to approach gives you control over the dynamic.",
+      "things_to_do": [
+        "✅ Create scarcity around your time.",
+        "✅ Offer subtle incentives to draw them.",
+        "✅ Stay calm while others chase.",
+        "✅ Position yourself as a resource.",
+        "✅ Use silence to pull them in.",
+        "✅ Hint at exclusive knowledge.",
+        "✅ Control the meeting’s location."
+      ],
+      "things_to_never_do": [
+        "❌ Chase others for favors.",
+        "❌ Beg for attention or approval.",
+        "❌ Overpromise to lure them.",
+        "❌ Reveal your desperation.",
+        "❌ Meet on their terms.",
+        "❌ Respond too quickly to requests."
+      ],
+      "trigger_drill": {
+        "default": "Delay a response by 24 hours.",
+        "status_flip": "Drop a hint: \"I found something you’d like.\""
+      },
+      "cheat_code_example": "Let’s discuss when you’re free.",
+      "psychological_root": "Scarcity drives demand and curiosity.",
+      "snap_warning": "🚨 ABORT signal: You’re about to chase someone. (STOP. Wait 48 hours.)",
+      "leverage_point": {
+        "tactic": "Offer a small bait—they’ll pursue.",
+        "blood_price": "Their pursuit locks them into your game."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Make 2 people approach you first.",
+        "penalty": "💀 Penalty: If failed, skip a meal."
+      }
+    },
+    {
+      "number": 9,
+      "title": "WIN THROUGH YOUR ACTIONS, NEVER THROUGH ARGUMENT",
+      "category": "🔮 Psychology",
+      "bilingual_power_pill": {
+        "BN": "কথায় নয়, কাজে জয় করো",
+        "EN": "Win with actions, not arguments"
+      },
+      "why_it_works": "Actions prove strength; arguments expose weaknesses.",
+      "things_to_do": [
+        "✅ Demonstrate results quietly.",
+        "✅ Let your work silence critics.",
+        "✅ Act decisively in crises.",
+        "✅ Show, don’t tell, your value.",
+        "✅ Ignore verbal attacks—respond with deeds.",
+        "✅ Build tangible proof of success.",
+        "✅ Stay calm during disputes."
+      ],
+      "things_to_never_do": [
+        "❌ Engage in petty debates.",
+        "❌ Defend yourself with words.",
+        "❌ React to insults emotionally.",
+        "❌ Promise without delivering.",
+        "❌ Waste energy on skeptics.",
+        "❌ Boast before acting."
+      ],
+      "trigger_drill": {
+        "default": "Complete a task before debating it.",
+        "status_flip": "Say, \"I’ll show you soon,\" then deliver."
+      },
+      "cheat_code_example": "Watch what I do next.",
+      "psychological_root": "Actions anchor trust; words fuel doubt.",
+      "snap_warning": "🚨 ABORT signal: You’re about to argue back. (STOP. Walk away.)",
+      "leverage_point": {
+        "tactic": "Act while they talk—they’ll follow.",
+        "blood_price": "Their words waste their energy."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Daily: Replace one argument with an action.",
+        "penalty": "💀 Penalty: If failed, do 20 push-ups."
+      }
+    },
+    {
+      "number": 10,
+      "title": "INFECTION: AVOID THE UNHAPPY AND UNLUCKY",
+      "category": "🔮 Psychology",
+      "bilingual_power_pill": {
+        "BN": "দুঃখী ও দুর্ভাগাদের এড়াও",
+        "EN": "Avoid the unhappy and unlucky"
+      },
+      "why_it_works": "Negative people drain energy and attract failure.",
+      "things_to_do": [
+        "✅ Surround yourself with optimists.",
+        "✅ Cut contact with chronic complainers.",
+        "✅ Seek allies with proven success.",
+        "✅ Politely distance from toxic vibes.",
+        "✅ Focus on your own momentum.",
+        "✅ Observe others’ patterns before engaging.",
+        "✅ Protect your mental space."
+      ],
+      "things_to_never_do": [
+        "❌ Pity-bond with losers.",
+        "❌ Ignore red flags in people.",
+        "❌ Try to \"fix\" broken souls.",
+        "❌ Stay in toxic groups.",
+        "❌ Absorb others’ negativity.",
+        "❌ Trust sob stories blindly."
+      ],
+      "trigger_drill": {
+        "default": "Decline one invite from a negative person.",
+        "status_flip": "Say, \"I’m swamped, let’s connect later.\""
+      },
+      "cheat_code_example": "I’m focusing on positive projects now.",
+      "psychological_root": "Negativity is contagious; distance preserves power.",
+      "snap_warning": "🚨 ABORT signal: You’re about to comfort a chronic victim. (STOP. Redirect energy.)",
+      "leverage_point": {
+        "tactic": "Avoid their drama—they’ll self-destruct.",
+        "blood_price": "Their misery isolates them."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Cut one negative contact.",
+        "penalty": "💀 Penalty: If failed, meditate in silence for 30 minutes."
+      }
+    },
+    {
+      "number": 11,
+      "title": "LEARN TO KEEP PEOPLE DEPENDENT ON YOU",
+      "category": "🎭 Manipulation",
+      "bilingual_power_pill": {
+        "BN": "মানুষকে তোমার উপর নির্ভরশীল করো",
+        "EN": "Make people dependent on you"
+      },
+      "why_it_works": "Dependency ensures loyalty and control over others’ actions.",
+      "things_to_do": [
+        "✅ Be indispensable in your role.",
+        "✅ Offer unique skills or resources.",
+        "✅ Solve problems others can’t.",
+        "✅ Create systems that rely on you.",
+        "✅ Share just enough to keep them hooked.",
+        "✅ Build trust through reliability.",
+        "✅ Anticipate their needs early."
+      ],
+      "things_to_never_do": [
+        "❌ Let others bypass your value.",
+        "❌ Teach everything you know.",
+        "❌ Be replaceable in your role.",
+        "❌ Ignore shifts in their needs.",
+        "❌ Give away your edge.",
+        "❌ Let them feel self-sufficient."
+      ],
+      "trigger_drill": {
+        "default": "Offer a unique solution to a team problem.",
+        "status_flip": "Hint at a rare skill: \"I’ve handled this before.\""
+      },
+      "cheat_code_example": "I can take care of that for you.",
+      "psychological_root": "Dependency breeds reliance and gratitude.",
+      "snap_warning": "🚨 ABORT signal: You’re about to share your full playbook. (STOP. Hold back 50%.)",
+      "leverage_point": {
+        "tactic": "Be their only solution.",
+        "blood_price": "Their reliance locks them to you."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Make one person need your input.",
+        "penalty": "💀 Penalty: If failed, skip a favorite activity."
+      }
+    },
+    {
+      "number": 12,
+      "title": "USE SELECTIVE HONESTY AND GENEROSITY TO DISARM YOUR VICTIM",
+      "category": "🧠 Deception",
+      "bilingual_power_pill": {
+        "BN": "নির্বাচিত সততা ও উদারতা ব্যবহার করো",
+        "EN": "Use selective honesty and generosity"
+      },
+      "why_it_works": "Small acts of sincerity lower defenses, creating trust for manipulation.",
+      "things_to_do": [
+        "✅ Share a harmless truth to build trust.",
+        "✅ Offer small, calculated favors.",
+        "✅ Admit minor flaws to seem human.",
+        "✅ Time generosity for maximum impact.",
+        "✅ Mirror their values in gifts.",
+        "✅ Act selfless without overdoing it.",
+        "✅ Keep promises selectively."
+      ],
+      "things_to_never_do": [
+        "❌ Be fully transparent.",
+        "❌ Give without expecting return.",
+        "❌ Overpromise on favors.",
+        "❌ Reveal critical weaknesses.",
+        "❌ Let them see your ulterior motive.",
+        "❌ Be generous to everyone."
+      ],
+      "trigger_drill": {
+        "default": "Offer a small favor: \"I’ll handle this for you.\"",
+        "status_flip": "Admit a minor mistake: \"I messed up once too.\""
+      },
+      "cheat_code_example": "I owe you one—name it.",
+      "psychological_root": "Reciprocity compels them to owe you.",
+      "snap_warning": "🚨 ABORT signal: You’re about to overshare. (STOP. Pivot to a question.)",
+      "leverage_point": {
+        "tactic": "A small gift binds them.",
+        "blood_price": "Their gratitude becomes obligation."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Disarm one person with a favor.",
+        "penalty": "💀 Penalty: If failed, give a dollar to a stranger."
+      }
+    },
+    {
+      "number": 13,
+      "title": "WHEN ASKING FOR HELP, APPEAL TO PEOPLE’S SELF-INTEREST",
+      "category": "🎭 Manipulation",
+      "bilingual_power_pill": {
+        "BN": "সাহায্য চাওয়ার সময় স্বার্থে আঘাত করো",
+        "EN": "Appeal to self-interest when asking"
+      },
+      "why_it_works": "People act for their own gain, not your needs.",
+      "things_to_do": [
+        "✅ Frame requests as their benefit.",
+        "✅ Research their desires first.",
+        "✅ Offer mutual wins in deals.",
+        "✅ Use flattery tied to their goals.",
+        "✅ Show how helping you helps them.",
+        "✅ Be specific in your ask.",
+        "✅ Follow through on promised benefits."
+      ],
+      "things_to_never_do": [
+        "❌ Beg or appeal to pity.",
+        "❌ Ignore their motivations.",
+        "❌ Make vague requests.",
+        "❌ Expect altruism to work.",
+        "❌ Ask without offering value.",
+        "❌ Overpromise rewards you can’t deliver."
+      ],
+      "trigger_drill": {
+        "default": "Pitch a request: \"This could boost your project.\"",
+        "status_flip": "Sweeten with, \"It’ll save you time.\""
+      },
+      "cheat_code_example": "This move could make you shine.",
+      "psychological_root": "Self-interest drives action over empathy.",
+      "snap_warning": "🚨 ABORT signal: You’re about to plead. (STOP. Reframe as their gain.)",
+      "leverage_point": {
+        "tactic": "Tie your need to their greed.",
+        "blood_price": "Their help commits them to you."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Get help by appealing to self-interest once.",
+        "penalty": "💀 Penalty: If failed, do a favor for free."
+      }
+    },
+    {
+      "number": 14,
+      "title": "POSE AS A FRIEND, WORK AS A SPY",
+      "category": "🧠 Deception",
+      "bilingual_power_pill": {
+        "BN": "বন্ধুর ভান করো, গুপ্তচরের মতো কাজ করো",
+        "EN": "Pose as a friend, act as a spy"
+      },
+      "why_it_works": "Trust opens doors to secrets; information is power.",
+      "things_to_do": [
+        "✅ Build rapport to lower defenses.",
+        "✅ Ask open-ended questions casually.",
+        "✅ Observe behavior patterns closely.",
+        "✅ Note who they trust or dislike.",
+        "✅ Use small talk to gather intel.",
+        "✅ Keep your findings private.",
+        "✅ Act sympathetic to draw confessions."
+      ],
+      "things_to_never_do": [
+        "❌ Reveal what you’ve learned.",
+        "❌ Act suspicious or overly curious.",
+        "❌ Break their trust openly.",
+        "❌ Share your own secrets.",
+        "❌ Push for info too quickly.",
+        "❌ Let them know you’re watching."
+      ],
+      "trigger_drill": {
+        "default": "Ask a casual question: \"How’s your project going?\"",
+        "status_flip": "Share a fake anecdote to open them up."
+      },
+      "cheat_code_example": "I heard X—any truth to it?",
+      "psychological_root": "Trust makes them careless with secrets.",
+      "snap_warning": "🚨 ABORT signal: You’re about to reveal your intel. (STOP. Stay silent.)",
+      "leverage_point": {
+        "tactic": "Gain trust, gather secrets.",
+        "blood_price": "Their openness becomes your weapon."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Learn one useful secret.",
+        "penalty": "💀 Penalty: If failed, share a harmless truth with a rival."
+      }
+    },
+    {
+      "number": 15,
+      "title": "CRUSH YOUR ENEMY TOTALLY",
+      "category": "🔪 Elimination",
+      "bilingual_power_pill": {
+        "BN": "শত্রুকে সম্পূর্ণরূপে ধ্বংস করো",
+        "EN": "Crush your enemy totally"
+      },
+      "why_it_works": "Partial victories leave enemies capable of revenge.",
+      "things_to_do": [
+        "✅ Strike when they’re weakest.",
+        "✅ Cut off their resources quietly.",
+        "✅ Isolate them from allies.",
+        "✅ Plan your attack in secret.",
+        "✅ Use their mistakes against them.",
+        "✅ Stay relentless until they’re powerless.",
+        "✅ Ensure they can’t recover."
+      ],
+      "things_to_never_do": [
+        "❌ Show mercy to a threat.",
+        "❌ Leave loose ends after victory.",
+        "❌ Underestimate their comeback potential.",
+        "❌ Gloat before they’re defeated.",
+        "❌ Let them regroup or ally.",
+        "❌ Act without a full plan."
+      ],
+      "trigger_drill": {
+        "default": "Identify one enemy’s weakness today.",
+        "status_flip": "Spread a subtle rumor to isolate them."
+      },
+      "cheat_code_example": "I heard they’re struggling with X.",
+      "psychological_root": "Fear of total loss paralyzes them.",
+      "snap_warning": "🚨 ABORT signal: You’re about to spare them. (STOP. Plan their end.)",
+      "leverage_point": {
+        "tactic": "Destroy their foundation—they’ll crumble.",
+        "blood_price": "Their defeat secures your dominance."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Monthly: Neutralize one threat’s influence.",
+        "penalty": "💀 Penalty: If failed, study a rival’s moves for a day."
+      }
+    },
+    {
+      "number": 16,
+      "title": "USE ABSENCE TO INCREASE RESPECT AND HONOR",
+      "category": "🔮 Psychology",
+      "bilingual_power_pill": {
+        "BN": "অনুপস্থিতি দিয়ে সম্মান বাড়াও",
+        "EN": "Use absence to gain respect"
+      },
+      "why_it_works": "Scarcity creates value; being too available cheapens you.",
+      "things_to_do": [
+        "✅ Limit your availability strategically.",
+        "✅ Leave when you’re at your peak.",
+        "✅ Let others miss your presence.",
+        "✅ Return with stronger impact.",
+        "✅ Decline low-value invitations.",
+        "✅ Cultivate an aura of mystery.",
+        "✅ Time your exits for maximum effect."
+      ],
+      "things_to_never_do": [
+        "❌ Overstay in social settings.",
+        "❌ Be always reachable.",
+        "❌ Return too soon after leaving.",
+        "❌ Explain your absences.",
+        "❌ Seek constant validation.",
+        "❌ Cling to fading attention."
+      ],
+      "trigger_drill": {
+        "default": "Skip one non-essential event.",
+        "status_flip": "Reappear with a bold move or gift."
+      },
+      "cheat_code_example": "I’ve been tied up—big project.",
+      "psychological_root": "Absence fuels desire and curiosity.",
+      "snap_warning": "🚨 ABORT signal: You’re about to overstay. (STOP. Leave early.)",
+      "leverage_point": {
+        "tactic": "Disappear—they’ll chase your return.",
+        "blood_price": "Their longing elevates your status."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Be absent from one key moment.",
+        "penalty": "💀 Penalty: If failed, avoid social media for a day."
+      }
+    },
+    {
+      "number": 17,
+      "title": "KEEP OTHERS IN SUSPENDED TERROR: CULTIVATE AN AIR OF UNPREDICTABILITY",
+      "category": "🔮 Psychology",
+      "bilingual_power_pill": {
+        "BN": "অন্যদের ভয়ে রাখো, অপ্রত্যাশিত হও",
+        "EN": "Keep others in fear, be unpredictable"
+      },
+      "why_it_works": "Unpredictability keeps others off-balance, fearing your next move.",
+      "things_to_do": [
+        "✅ Vary your routines and responses.",
+        "✅ Act calm during chaos.",
+        "✅ Surprise with unexpected decisions.",
+        "✅ Keep your true emotions hidden.",
+        "✅ Shift strategies without warning.",
+        "✅ Use silence as a weapon.",
+        "✅ Drop cryptic hints occasionally."
+      ],
+      "things_to_never_do": [
+        "❌ Be fully predictable.",
+        "❌ Reveal your full strategy.",
+        "❌ React the same way twice.",
+        "❌ Explain sudden changes.",
+        "❌ Let them feel safe around you.",
+        "❌ Stick to one persona."
+      ],
+      "trigger_drill": {
+        "default": "Change one routine this week.",
+        "status_flip": "Make an unexpected bold move."
+      },
+      "cheat_code_example": "I might shake things up soon.",
+      "psychological_root": "Uncertainty triggers fear and compliance.",
+      "snap_warning": "🚨 ABORT signal: You’re about to repeat a pattern. (STOP. Switch it up.)",
+      "leverage_point": {
+        "tactic": "Keep them guessing—they’ll hesitate.",
+        "blood_price": "Their fear paralyzes their counterplay."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Surprise one person with a new approach.",
+        "penalty": "💀 Penalty: If failed, wear mismatched socks for a day."
+      }
+    },
+    {
+      "number": 18,
+      "title": "DO NOT BUILD FORTRESSES TO PROTECT YOURSELF – ISOLATION IS DANGEROUS",
+      "category": "⚔️ Strategy",
+      "bilingual_power_pill": {
+        "BN": "নিজেকে বিচ্ছিন্ন করো না",
+        "EN": "Don’t isolate yourself"
+      },
+      "why_it_works": "Isolation cuts you off from allies and information, weakening you.",
+      "things_to_do": [
+        "✅ Build a network of allies.",
+        "✅ Stay visible in key circles.",
+        "✅ Share small risks with others.",
+        "✅ Attend strategic social events.",
+        "✅ Listen to gossip for intel.",
+        "✅ Collaborate on visible projects.",
+        "✅ Maintain loose ties with rivals."
+      ],
+      "things_to_never_do": [
+        "❌ Hide from social interactions.",
+        "❌ Trust only yourself.",
+        "❌ Ignore group dynamics.",
+        "❌ Burn bridges unnecessarily.",
+        "❌ Stay out of key conversations.",
+        "❌ Avoid alliances for pride."
+      ],
+      "trigger_drill": {
+        "default": "Join one group discussion this week.",
+        "status_flip": "Offer a small favor to re-enter."
+      },
+      "cheat_code_example": "Let’s work on this together.",
+      "psychological_root": "Connection builds influence and safety.",
+      "snap_warning": "🚨 ABORT signal: You’re about to retreat alone. (STOP. Reach out to one ally.)",
+      "leverage_point": {
+        "tactic": "Stay connected—they’ll protect you.",
+        "blood_price": "Their loyalty shields your weaknesses."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Strengthen one alliance.",
+        "penalty": "💀 Penalty: If failed, call someone you dislike."
+      }
+    },
+    {
+      "number": 19,
+      "title": "KNOW WHO YOU’RE DEALING WITH – DO NOT OFFEND THE WRONG PERSON",
+      "category": "🔮 Psychology",
+      "bilingual_power_pill": {
+        "BN": "জানো কার সাথে কাজ করছো",
+        "EN": "Know who you’re dealing with"
+      },
+      "why_it_works": "Misjudging someone’s power or influence can provoke dangerous retaliation.",
+      "things_to_do": [
+        "✅ Research their connections and influence.",
+        "✅ Observe their reactions before acting.",
+        "✅ Adapt your approach to their personality.",
+        "✅ Avoid provoking those with hidden power.",
+        "✅ Flatter those with fragile egos.",
+        "✅ Respect their boundaries subtly.",
+        "✅ Test their influence with small gestures.",
+        "✅ Study their past for clues.",
+        "✅ Align with their interests cautiously."
+      ],
+      "things_to_never_do": [
+        "❌ Insult someone without knowing their reach.",
+        "❌ Assume they lack influence.",
+        "❌ Provoke without a clear plan.",
+        "❌ Ignore their allies or network.",
+        "❌ Underestimate their ability to retaliate.",
+        "❌ Act recklessly around unknowns."
+      ],
+      "trigger_drill": {
+        "default": "Ask casually, “What’s your role here?”",
+        "status_flip": "Back off with, “Just curious, no offense meant.”"
+      },
+      "cheat_code_example": "I value your perspective.",
+      "psychological_root": "Respect disarms and reveals their true status.",
+      "snap_warning": "🚨 ABORT signal: You’re about to offend someone unknown. (STOP. Reassess their power.)",
+      "leverage_point": {
+        "tactic": "Study their network—they’ll expose their strength.",
+        "blood_price": "Their overconfidence reveals their vulnerabilities."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Research one person’s background or influence.",
+        "penalty": "💀 Penalty: If failed, apologize unnecessarily to someone."
+      }
+    },
+    {
+      "number": 20,
+      "title": "DO NOT COMMIT TO ANYONE",
+      "category": "⚔️ Strategy",
+      "bilingual_power_pill": {
+        "BN": "কারো প্রতি অঙ্গীকার করো না",
+        "EN": "Don’t commit to anyone"
+      },
+      "why_it_works": "Staying uncommitted preserves your freedom and maximizes strategic options.",
+      "things_to_do": [
+        "✅ Keep alliances loose and flexible.",
+        "✅ Promise vaguely, deliver selectively.",
+        "✅ Balance multiple factions without choosing.",
+        "✅ Avoid binding agreements early.",
+        "✅ Pursue independent goals quietly.",
+        "✅ Shift loyalties based on advantage.",
+        "✅ Appear loyal without locking in.",
+        "✅ Cultivate options in every scenario."
+      ],
+      "things_to_never_do": [
+        "❌ Pledge full loyalty publicly.",
+        "❌ Sign deals without escape clauses.",
+        "❌ Tie yourself to one side.",
+        "❌ Trust others’ loyalty promises.",
+        "❌ Ignore new opportunities for alliances.",
+        "❌ Let emotions dictate commitments."
+      ],
+      "trigger_drill": {
+        "default": "Respond neutrally, “I’m open to all ideas.”",
+        "status_flip": "Hint, “I’m exploring multiple options.”"
+      },
+      "cheat_code_example": "I’ll consider it carefully.",
+      "psychological_root": "Ambiguity keeps you in control while others compete.",
+      "snap_warning": "🚨 ABORT signal: You’re about to fully commit. (STOP. Delay 24 hours.)",
+      "leverage_point": {
+        "tactic": "Play all sides—they’ll vie for you.",
+        "blood_price": "Their rivalry strengthens your position."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Avoid one firm commitment.",
+        "penalty": "💀 Penalty: If failed, cancel a personal plan."
+      }
+    },
+    {
+      "number": 21,
+      "title": "PLAY A SUCKER TO CATCH A SUCKER – SEEM DUMBER THAN YOUR MARK",
+      "category": "🧠 Deception",
+      "bilingual_power_pill": {
+        "BN": "বোকার ভান করো, বোকাকে ধরো",
+        "EN": "Act dumber to catch suckers"
+      },
+      "why_it_works": "Underestimation lures others into revealing their plans or overreaching.",
+      "things_to_do": [
+        "✅ Ask basic questions to seem naive.",
+        "✅ Let them overexplain unnecessarily.",
+        "✅ Hide your expertise subtly.",
+        "✅ Encourage their overconfidence.",
+        "✅ Play confused to extract information.",
+        "✅ Admit minor errors to seem harmless.",
+        "✅ Mirror their pace to blend in.",
+        "✅ Observe their reactions closely."
+      ],
+      "things_to_never_do": [
+        "❌ Show off your knowledge early.",
+        "❌ Correct their mistakes publicly.",
+        "❌ Act superior or smug.",
+        "❌ Reveal your true intelligence.",
+        "❌ Let them suspect your act.",
+        "❌ Overplay the fool role."
+      ],
+      "trigger_drill": {
+        "default": "Ask, “Can you explain that simply?”",
+        "status_flip": "Say, “I’m new to this—guide me.”"
+      },
+      "cheat_code_example": "Wow, you know so much!",
+      "psychological_root": "Their ego blinds them to your cunning.",
+      "snap_warning": "🚨 ABORT signal: You’re about to show your smarts. (STOP. Play dumb.)",
+      "leverage_point": {
+        "tactic": "Seem weak—they’ll overextend.",
+        "blood_price": "Their arrogance exposes their strategy."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Fool one person into overexplaining.",
+        "penalty": "💀 Penalty: If failed, read a beginner’s guide to any topic."
+      }
+    },
+    {
+      "number": 22,
+      "title": "USE THE SURRENDER TACTIC: TRANSFORM WEAKNESS INTO POWER",
+      "category": "⚔️ Strategy",
+      "bilingual_power_pill": {
+        "BN": "আত্মসমর্পণের কৌশল ব্যবহার করো",
+        "EN": "Use surrender to gain power"
+      },
+      "why_it_works": "Apparent submission disarms opponents, creating opportunities for counterattacks.",
+      "things_to_do": [
+        "✅ Yield publicly, plan privately.",
+        "✅ Seem submissive to lower their guard.",
+        "✅ Apologize to build trust.",
+        "✅ Let them feel superior temporarily.",
+        "✅ Use retreat to regroup stronger.",
+        "✅ Study them during “defeat.”",
+        "✅ Strike when they’re complacent.",
+        "✅ Keep your true strength hidden."
+      ],
+      "things_to_never_do": [
+        "❌ Fight unwinnable battles.",
+        "❌ Show pride in defeat.",
+        "❌ Reveal your comeback strategy.",
+        "❌ Surrender without a plan.",
+        "❌ Expose your hidden strength.",
+        "❌ Give up critical resources."
+      ],
+      "trigger_drill": {
+        "default": "Say, “You’re right, I’ll rethink.”",
+        "status_flip": "Offer a small concession, then pivot."
+      },
+      "cheat_code_example": "I see your point—my mistake.",
+      "psychological_root": "Submission lulls them into overconfidence.",
+      "snap_warning": "🚨 ABORT signal: You’re fighting back too soon. (STOP. Wait a day.)",
+      "leverage_point": {
+        "tactic": "Yield to strike later.",
+        "blood_price": "Their victory blinds them to your rise."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Surrender strategically once.",
+        "penalty": "💀 Penalty: If failed, admit fault publicly."
+      }
+    },
+    {
+      "number": 23,
+      "title": "CONCENTRATE YOUR FORCES",
+      "category": "⚔️ Strategy",
+      "bilingual_power_pill": {
+        "BN": "শক্তিকে একত্রিত করো",
+        "EN": "Concentrate your forces"
+      },
+      "why_it_works": "Focused effort overwhelms scattered opposition.",
+      "things_to_do": [
+        "✅ Focus on one key objective.",
+        "✅ Pool resources for maximum impact.",
+        "✅ Prioritize high-value targets.",
+        "✅ Eliminate distractions ruthlessly.",
+        "✅ Unite allies for a single strike.",
+        "✅ Plan meticulously before acting.",
+        "✅ Channel energy into one goal.",
+        "✅ Avoid spreading efforts thin."
+      ],
+      "things_to_never_do": [
+        "❌ Chase multiple goals simultaneously.",
+        "❌ Waste resources on minor tasks.",
+        "❌ Act without full focus.",
+        "❌ Divide your team’s efforts.",
+        "❌ Ignore your core strengths.",
+        "❌ Multitask during critical moments."
+      ],
+      "trigger_drill": {
+        "default": "Drop one minor task to focus.",
+        "status_flip": "Say, “This is my priority now.”"
+      },
+      "cheat_code_example": "I’m all in on this.",
+      "psychological_root": "Focus intimidates with clarity and strength.",
+      "snap_warning": "🚨 ABORT signal: You’re multitasking excessively. (STOP. Pick one goal.)",
+      "leverage_point": {
+        "tactic": "Hit one target hard—they’ll fold.",
+        "blood_price": "Their scattered efforts collapse."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Focus on one major task.",
+        "penalty": "💀 Penalty: If failed, skip a hobby for a day."
+      }
+    },
+    {
+      "number": 24,
+      "title": "PLAY THE PERFECT COURTIER",
+      "category": "🐍 Positioning",
+      "bilingual_power_pill": {
+        "BN": "নিখুঁত দরবারী হও",
+        "EN": "Be the perfect courtier"
+      },
+      "why_it_works": "Subtle charm and flattery win favor without threatening egos.",
+      "things_to_do": [
+        "✅ Flatter without seeming insincere.",
+        "✅ Adapt to the group’s mood.",
+        "✅ Respect power hierarchies subtly.",
+        "✅ Offer useful advice discreetly.",
+        "✅ Blend charm with competence.",
+        "✅ Anticipate the powerful’s needs.",
+        "✅ Maintain polished manners always.",
+        "✅ Build trust through small gestures."
+      ],
+      "things_to_never_do": [
+        "❌ Outshine the leader publicly.",
+        "❌ Ignore social cues or norms.",
+        "❌ Criticize the powerful directly.",
+        "❌ Act overly eager for favor.",
+        "❌ Neglect your appearance or etiquette.",
+        "❌ Flatter too blatantly."
+      ],
+      "trigger_drill": {
+        "default": "Compliment a leader’s decision subtly.",
+        "status_flip": "Offer a small, useful suggestion."
+      },
+      "cheat_code_example": "Your approach really inspired me.",
+      "psychological_root": "Charm builds trust and access.",
+      "snap_warning": "🚨 ABORT signal: You’re about to criticize openly. (STOP. Smile instead.)",
+      "leverage_point": {
+        "tactic": "Charm them into trust.",
+        "blood_price": "Their favor grants you influence."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Charm one influential person.",
+        "penalty": "💀 Penalty: If failed, dress plainly for a day."
+      }
+    },
+    {
+      "number": 25,
+      "title": "RE-CREATE YOURSELF",
+      "category": "🐍 Positioning",
+      "bilingual_power_pill": {
+        "BN": "নিজেকে নতুন করে গড়ো",
+        "EN": "Re-create yourself"
+      },
+      "why_it_works": "A crafted identity shapes how others perceive and treat you.",
+      "things_to_do": [
+        "✅ Design a unique personal brand.",
+        "✅ Adapt your image to your goals.",
+        "✅ Highlight strengths, conceal flaws.",
+        "✅ Reinvent after setbacks.",
+        "✅ Study successful role models.",
+        "✅ Use symbols to signal power.",
+        "✅ Evolve with changing trends.",
+        "✅ Test new personas privately."
+      ],
+      "things_to_never_do": [
+        "❌ Cling to an outdated image.",
+        "❌ Let others define your identity.",
+        "❌ Ignore cultural or social shifts.",
+        "❌ Stay static after failure.",
+        "❌ Copy others’ styles exactly.",
+        "❌ Reveal your reinvention process."
+      ],
+      "trigger_drill": {
+        "default": "Change one aspect of your style or behavior.",
+        "status_flip": "Announce a new goal subtly."
+      },
+      "cheat_code_example": "I’m trying a new approach.",
+      "psychological_root": "A fresh image resets expectations and perceptions.",
+      "snap_warning": "🚨 ABORT signal: You’re stuck in old habits. (STOP. Change one routine.)",
+      "leverage_point": {
+        "tactic": "Redefine yourself—they’ll follow.",
+        "blood_price": "Their trust in your old self fades."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Monthly: Alter one public trait or style.",
+        "penalty": "💀 Penalty: If failed, wear old clothes for a day."
+      }
+    },
+    {
+      "number": 26,
+      "title": "KEEP YOUR HANDS CLEAN",
+      "category": "🎭 Manipulation",
+      "bilingual_power_pill": {
+        "BN": "হাত পরিষ্কার রাখো",
+        "EN": "Keep your hands clean"
+      },
+      "why_it_works": "Avoiding blame preserves your reputation and power.",
+      "things_to_do": [
+        "✅ Delegate risky or dirty tasks.",
+        "✅ Maintain a spotless public image.",
+        "✅ Use proxies for controversial moves.",
+        "✅ Apologize vaguely if implicated.",
+        "✅ Frame mistakes as others’ faults.",
+        "✅ Stay calm under scrutiny.",
+        "✅ Plan deniability from the start.",
+        "✅ Distance yourself from failures."
+      ],
+      "things_to_never_do": [
+        "❌ Take direct blame for failures.",
+        "❌ Act without a scapegoat.",
+        "❌ Admit fault in public.",
+        "❌ Leave evidence of involvement.",
+        "❌ Panic when accused.",
+        "❌ Trust others to stay silent."
+      ],
+      "trigger_drill": {
+        "default": "Let someone else handle a risky task.",
+        "status_flip": "Say, “I trusted their judgment.”"
+      },
+      "cheat_code_example": "That wasn’t my call.",
+      "psychological_root": "A clean image maintains trust and authority.",
+      "snap_warning": "🚨 ABORT signal: You’re about to confess involvement. (STOP. Deflect blame.)",
+      "leverage_point": {
+        "tactic": "Use proxies—they take the fall.",
+        "blood_price": "Their ruin protects your image."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Avoid one blame situation.",
+        "penalty": "💀 Penalty: If failed, clean something dirty by hand."
+      }
+    },
+    {
+      "number": 27,
+      "title": "PLAY ON PEOPLE’S NEED TO BELIEVE TO CREATE A CULTLIKE FOLLOWING",
+      "category": "🔮 Psychology",
+      "bilingual_power_pill": {
+        "BN": "বিশ্বাসের প্রয়োজন ব্যবহার করো",
+        "EN": "Exploit the need to believe"
+      },
+      "why_it_works": "People crave meaning; offering it builds intense loyalty.",
+      "things_to_do": [
+        "✅ Offer a compelling, shared vision.",
+        "✅ Use symbols to inspire devotion.",
+        "✅ Create rituals for group unity.",
+        "✅ Speak with unwavering conviction.",
+        "✅ Promise transformation or purpose.",
+        "✅ Foster an “us vs. them” mentality.",
+        "✅ Reward loyal followers subtly.",
+        "✅ Keep the vision slightly vague."
+      ],
+      "things_to_never_do": [
+        "❌ Doubt your own narrative.",
+        "❌ Ignore followers’ emotional needs.",
+        "❌ Break the group’s trust.",
+        "❌ Be too accessible or ordinary.",
+        "❌ Let skeptics disrupt unity.",
+        "❌ Neglect the group’s identity."
+      ],
+      "trigger_drill": {
+        "default": "Share an inspiring idea or vision.",
+        "status_flip": "Reinforce with a symbolic group act."
+      },
+      "cheat_code_example": "We’re building something bigger.",
+      "psychological_root": "Belief creates unwavering devotion.",
+      "snap_warning": "🚨 ABORT signal: You’re seeming uncertain. (STOP. Double down on vision.)",
+      "leverage_point": {
+        "tactic": "Inspire faith—they’ll follow blindly.",
+        "blood_price": "Their devotion binds them to you."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Monthly: Inspire one group action or belief.",
+        "penalty": "💀 Penalty: If failed, read a cult leader’s biography."
+      }
+    },
+    {
+      "number": 28,
+      "title": "ENTER ACTION WITH BOLDNESS",
+      "category": "⚔️ Strategy",
+      "bilingual_power_pill": {
+        "BN": "সাহসের সাথে কাজ করো",
+        "EN": "Act with boldness"
+      },
+      "why_it_works": "Hesitation signals weakness; bold action commands respect and fear.",
+      "things_to_do": [
+        "✅ Act decisively in critical moments.",
+        "✅ Project unshakable confidence.",
+        "✅ Take calculated risks publicly.",
+        "✅ Speak with authority and clarity.",
+        "✅ Move first in uncertain situations.",
+        "✅ Own mistakes with boldness.",
+        "✅ Inspire others with fearless action.",
+        "✅ Seize opportunities swiftly."
+      ],
+      "things_to_never_do": [
+        "❌ Hesitate under pressure.",
+        "❌ Apologize weakly or excessively.",
+        "❌ Wait for perfect conditions.",
+        "❌ Act timidly in public.",
+        "❌ Doubt your own decisions.",
+        "❌ Avoid bold opportunities."
+      ],
+      "trigger_drill": {
+        "default": "Make one bold decision today.",
+        "status_flip": "Say, “I’m confident this will work.”"
+      },
+      "cheat_code_example": "Let’s do this now.",
+      "psychological_root": "Boldness intimidates and attracts followers.",
+      "snap_warning": "🚨 ABORT signal: You’re hesitating publicly. (STOP. Act immediately.)",
+      "leverage_point": {
+        "tactic": "Act first—they’ll follow.",
+        "blood_price": "Their caution leaves them behind."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Take one bold action.",
+        "penalty": "💀 Penalty: If failed, do something mildly scary."
+      }
+    },
+    {
+      "number": 29,
+      "title": "PLAN ALL THE WAY TO THE END",
+      "category": "⚔️ Strategy",
+      "bilingual_power_pill": {
+        "BN": "শেষ পর্যন্ত পরিকল্পনা করো",
+        "EN": "Plan to the end"
+      },
+      "why_it_works": "Comprehensive planning prevents surprises and ensures success.",
+      "things_to_do": [
+        "✅ Map out every step to your goal.",
+        "✅ Anticipate others’ reactions.",
+        "✅ Plan for worst-case scenarios.",
+        "✅ Set clear, achievable end goals.",
+        "✅ Adjust plans based on new data.",
+        "✅ Study past outcomes for lessons.",
+        "✅ Keep backup plans ready.",
+        "✅ Account for long-term consequences."
+      ],
+      "things_to_never_do": [
+        "❌ Act without a full plan.",
+        "❌ Ignore long-term risks.",
+        "❌ Assume success is certain.",
+        "❌ Skip contingency planning.",
+        "❌ Trust luck over strategy.",
+        "❌ Rush into action blindly."
+      ],
+      "trigger_drill": {
+        "default": "Write a plan with three possible outcomes.",
+        "status_flip": "Ask, “What’s the worst that could happen?”"
+      },
+      "cheat_code_example": "I’ve planned for every scenario.",
+      "psychological_root": "Preparation breeds confidence and control.",
+      "snap_warning": "🚨 ABORT signal: You’re acting without a plan. (STOP. Write one now.)",
+      "leverage_point": {
+        "tactic": "Plan thoroughly—they’ll falter.",
+        "blood_price": "Their chaos becomes your victory."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Create one detailed plan.",
+        "penalty": "💀 Penalty: If failed, redo a failed task."
+      }
+    },
+    {
+      "number": 30,
+      "title": "MAKE YOUR ACCOMPLISHMENTS SEEM EFFORTLESS",
+      "category": "⚔️ Strategy",
+      "bilingual_power_pill": {
+        "BN": "কৃতিত্বকে সহজ মনে করাও",
+        "EN": "Make accomplishments seem effortless"
+      },
+      "why_it_works": "Effortless success intimidates and enhances your mystique.",
+      "things_to_do": [
+        "✅ Hide the effort behind your work.",
+        "✅ Present results casually.",
+        "✅ Practice skills in private.",
+        "✅ Smile through visible challenges.",
+        "✅ Downplay your hard work.",
+        "✅ Let others marvel at your ease.",
+        "✅ Prepare to seem spontaneous.",
+        "✅ Perfect your craft secretly."
+      ],
+      "things_to_never_do": [
+        "❌ Boast about your struggles.",
+        "❌ Show visible strain or stress.",
+        "❌ Reveal your training process.",
+        "❌ Complain about effort required.",
+        "❌ Act surprised by your success.",
+        "❌ Let them see you sweat."
+      ],
+      "trigger_drill": {
+        "default": "Say, “It just came together.”",
+        "status_flip": "Shrug, “I got lucky, I guess.”"
+      },
+      "cheat_code_example": "Oh, it wasn’t a big deal.",
+      "psychological_root": "Ease creates awe and intimidation.",
+      "snap_warning": "🚨 ABORT signal: You’re about to brag effort. (STOP. Act casual.)",
+      "leverage_point": {
+        "tactic": "Seem effortless—they’ll overestimate you.",
+        "blood_price": "Their awe fuels your legend."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Downplay one success.",
+        "penalty": "💀 Penalty: If failed, work out visibly for 30 minutes."
+      }
+    },
+    {
+      "number": 31,
+      "title": "CONTROL THE OPTIONS: GET OTHERS TO PLAY WITH THE CARDS YOU DEAL",
+      "category": "🛠️ Control",
+      "bilingual_power_pill": {
+        "BN": "বিকল্প নিয়ন্ত্রণ করো",
+        "EN": "Control the options"
+      },
+      "why_it_works": "Limiting others’ choices forces them to follow your path.",
+      "things_to_do": [
+        "✅ Offer two options, both benefiting you.",
+        "✅ Frame choices as inevitable.",
+        "✅ Present options with confidence.",
+        "✅ Hide undesirable alternatives.",
+        "✅ Anticipate their preferences.",
+        "✅ Use ultimatums sparingly.",
+        "✅ Make your choice seem optimal.",
+        "✅ Guide them subtly to your pick."
+      ],
+      "things_to_never_do": [
+        "❌ Let them set the terms.",
+        "❌ Offer too many choices.",
+        "❌ Seem unsure of your options.",
+        "❌ Allow complete freedom.",
+        "❌ Ignore their desires entirely.",
+        "❌ Force bad choices openly."
+      ],
+      "trigger_drill": {
+        "default": "Offer two beneficial options today.",
+        "status_flip": "Say, “These are the best paths.”"
+      },
+      "cheat_code_example": "It’s either A or B.",
+      "psychological_root": "Limited choices create an illusion of control.",
+      "snap_warning": "🚨 ABORT signal: They’re setting the terms. (STOP. Redefine options.)",
+      "leverage_point": {
+        "tactic": "Rig the choices—they’ll pick your way.",
+        "blood_price": "Their decision becomes your victory."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Control one person’s decision.",
+        "penalty": "💀 Penalty: If failed, let someone choose for you."
+      }
+    },
+    {
+      "number": 32,
+      "title": "PLAY TO PEOPLE’S FANTASIES",
+      "category": "💋 Seduction",
+      "bilingual_power_pill": {
+        "BN": "মানুষের কল্পনার সাথে খেলো",
+        "EN": "Play to people’s fantasies"
+      },
+      "why_it_works": "Tapping into dreams creates emotional loyalty and influence.",
+      "things_to_do": [
+        "✅ Appeal to their deepest dreams.",
+        "✅ Promise grandeur subtly.",
+        "✅ Craft a heroic group narrative.",
+        "✅ Use vivid, inspiring imagery.",
+        "✅ Align with their hopes.",
+        "✅ Inspire with big, bold ideas.",
+        "✅ Deliver just enough to tease.",
+        "✅ Keep the fantasy alive."
+      ],
+      "things_to_never_do": [
+        "❌ Shatter their illusions.",
+        "❌ Ignore their desires.",
+        "❌ Promise impossible dreams.",
+        "❌ Be overly realistic or dull.",
+        "❌ Mock their fantasies.",
+        "❌ Underestimate their imagination."
+      ],
+      "trigger_drill": {
+        "default": "Share an idea tied to their dreams.",
+        "status_flip": "Tell a story of success."
+      },
+      "cheat_code_example": "Imagine what we could achieve.",
+      "psychological_root": "Fantasies fuel loyalty and devotion.",
+      "snap_warning": "🚨 ABORT signal: You’re being too practical. (STOP. Dream bigger.)",
+      "leverage_point": {
+        "tactic": "Feed their dreams—they’ll follow.",
+        "blood_price": "Their hope blinds them to your control."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Inspire one person’s fantasy.",
+        "penalty": "💀 Penalty: If failed, read a fantasy novel chapter."
+      }
+    },
+    {
+      "number": 33,
+      "title": "DISCOVER EACH MAN’S THUMBSCREW",
+      "category": "🔮 Psychology",
+      "bilingual_power_pill": {
+        "BN": "প্রত্যেকের দুর্বলতা খুঁজে বের করো",
+        "EN": "Find everyone’s thumbscrew"
+      },
+      "why_it_works": "Knowing weaknesses gives you leverage to influence or control.",
+      "things_to_do": [
+        "✅ Observe their emotional triggers.",
+        "✅ Ask probing questions casually.",
+        "✅ Note their insecurities or fears.",
+        "✅ Test reactions with small gestures.",
+        "✅ Use their weaknesses strategically.",
+        "✅ Build trust to uncover flaws.",
+        "✅ Keep their weaknesses secret.",
+        "✅ Exploit fears subtly."
+      ],
+      "things_to_never_do": [
+        "❌ Ignore their vulnerabilities.",
+        "❌ Expose their weaknesses publicly.",
+        "❌ Assume they have no flaws.",
+        "❌ Push too hard too soon.",
+        "❌ Reveal your own thumbscrew.",
+        "❌ Trust their outward facade."
+      ],
+      "trigger_drill": {
+        "default": "Ask, “What worries you most?”",
+        "status_flip": "Share a fake flaw to open them up."
+      },
+      "cheat_code_example": "I get nervous about X too.",
+      "psychological_root": "Weaknesses reveal control points.",
+      "snap_warning": "🚨 ABORT signal: You’re about to expose a flaw. (STOP. Keep it secret.)",
+      "leverage_point": {
+        "tactic": "Press their weakness gently—they’ll bend.",
+        "blood_price": "Their fear hands you power."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Identify one person’s weakness.",
+        "penalty": "💀 Penalty: If failed, confess a minor flaw."
+      }
+    },
+    {
+      "number": 34,
+      "title": "BE ROYAL IN YOUR OWN FASHION: ACT LIKE A KING TO BE TREATED LIKE ONE",
+      "category": "🐍 Positioning",
+      "bilingual_power_pill": {
+        "BN": "রাজার মতো আচরণ করো",
+        "EN": "Act like a king"
+      },
+      "why_it_works": "Regal behavior commands respect and authority.",
+      "things_to_do": [
+        "✅ Carry yourself with dignity.",
+        "✅ Speak with calm authority.",
+        "✅ Dress above your current station.",
+        "✅ Act decisively in public settings.",
+        "✅ Surround yourself with quality.",
+        "✅ Demand respect subtly.",
+        "✅ Project unshakable confidence.",
+        "✅ Inspire loyalty with poise."
+      ],
+      "things_to_never_do": [
+        "❌ Act small or petty.",
+        "❌ Beg for approval or attention.",
+        "❌ Dress below your role.",
+        "❌ Hesitate in key moments.",
+        "❌ Tolerate disrespect publicly.",
+        "❌ Show insecurity or doubt."
+      ],
+      "trigger_drill": {
+        "default": "Walk into a room with confidence.",
+        "status_flip": "Make a bold, respectful demand."
+      },
+      "cheat_code_example": "I expect this done properly.",
+      "psychological_root": "Authority breeds obedience and respect.",
+      "snap_warning": "🚨 ABORT signal: You’re acting inferior. (STOP. Stand taller.)",
+      "leverage_point": {
+        "tactic": "Act royal—they’ll bow.",
+        "blood_price": "Their respect elevates your status."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Demand respect subtly once.",
+        "penalty": "💀 Penalty: If failed, bow to someone figuratively."
+      }
+    },
+    {
+      "number": 35,
+      "title": "MASTER THE ART OF TIMING",
+      "category": "⚔️ Strategy",
+      "bilingual_power_pill": {
+        "BN": "সময়ের শিল্পে দক্ষ হও",
+        "EN": "Master the art of timing"
+      },
+      "why_it_works": "Perfect timing maximizes impact and minimizes resistance.",
+      "things_to_do": [
+        "✅ Wait for the optimal moment.",
+        "✅ Study others’ rhythms and moods.",
+        "✅ Strike during their weakness.",
+        "✅ Delay for strategic advantage.",
+        "✅ Act swiftly in opportunities.",
+        "✅ Plan around external events.",
+        "✅ Sense shifts in group dynamics.",
+        "✅ Time actions for maximum effect."
+      ],
+      "things_to_never_do": [
+        "❌ Act impulsively or prematurely.",
+        "❌ Ignore the broader context.",
+        "❌ Miss critical timing windows.",
+        "❌ Rush into action blindly.",
+        "❌ Trust luck over strategy."
+      ],
+      "trigger_drill": {
+        "default": "Write a plan with three possible outcomes.",
+        "status_flip": "Ask, “What’s the worst that could happen?”"
+      },
+      "cheat_code_example": "I’ve planned for every scenario.",
+      "psychological_root": "Preparation breeds confidence and control.",
+      "snap_warning": "🚨 ABORT signal: You’re acting without a plan. (STOP. Write one now.)",
+      "leverage_point": {
+        "tactic": "Plan thoroughly—they’ll falter.",
+        "blood_price": "Their chaos becomes your victory."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Create one detailed plan.",
+        "penalty": "💀 Penalty: If failed, redo a failed task."
+      }
+    },
+    {
+      "number": 36,
+      "title": "DISDAIN THINGS YOU CANNOT HAVE: IGNORING THEM IS THE BEST REVENGE",
+      "category": "🔮 Psychology",
+      "bilingual_power_pill": {
+        "BN": "যা পাওয়া যায় না, তা অগ্রাহ্য করো",
+        "EN": "Disdain what you can’t have"
+      },
+      "why_it_works": "Ignoring unattainable goals shifts focus to what you can control, unsettling those who deny you.",
+      "things_to_do": [
+        "✅ Redirect energy to achievable targets.",
+        "✅ Act indifferent to lost opportunities.",
+        "✅ Focus on your own growth.",
+        "✅ Use subtle disdain to unsettle others.",
+        "✅ Celebrate what you already possess.",
+        "✅ Avoid chasing impossible validations.",
+        "✅ Turn away with confidence.",
+        "✅ Build alternatives to replace the lost."
+      ],
+      "things_to_never_do": [
+        "❌ Obsess over what’s out of reach.",
+        "❌ Show desperation or envy.",
+        "❌ Waste time on futile pursuits.",
+        "❌ Let rejection define your worth.",
+        "❌ Beg or plead for access.",
+        "❌ Dwell on past denials."
+      ],
+      "trigger_drill": {
+        "default": "Walk away from one denied request.",
+        "status_flip": "Say, “I’ve got better options anyway.”"
+      },
+      "cheat_code_example": "That’s fine, I’m moving on.",
+      "psychological_root": "Indifference weakens their hold over you.",
+      "snap_warning": "🚨 ABORT signal: You’re fixating on a loss. (STOP. List three wins instead.)",
+      "leverage_point": {
+        "tactic": "Ignore them—they’ll question their value.",
+        "blood_price": "Their insecurity fuels your rise."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Disdain one unattainable goal.",
+        "penalty": "💀 Penalty: If failed, write 10 reasons you don’t need it."
+      }
+    },
+    {
+      "number": 37,
+      "title": "CREATE COMPELLING SPECTACLES",
+      "category": "💋 Seduction",
+      "bilingual_power_pill": {
+        "BN": "আকর্ষণীয় দৃশ্য সৃষ্টি করো",
+        "EN": "Create compelling spectacles"
+      },
+      "why_it_works": "Grand displays capture attention and cement your image in minds.",
+      "things_to_do": [
+        "✅ Stage bold, memorable events.",
+        "✅ Use dramatic visuals or actions.",
+        "✅ Time spectacles for maximum impact.",
+        "✅ Involve the audience emotionally.",
+        "✅ Blend surprise with tradition.",
+        "✅ Control the narrative around it.",
+        "✅ Invest in quality production.",
+        "✅ Leave them talking afterward."
+      ],
+      "things_to_never_do": [
+        "❌ Underwhelm with small gestures.",
+        "❌ Ignore the audience’s mood.",
+        "❌ Rush the preparation.",
+        "❌ Let others steal the spotlight.",
+        "❌ Fail to follow up.",
+        "❌ Overexplain the intent."
+      ],
+      "trigger_drill": {
+        "default": "Plan a small dramatic act for a group.",
+        "status_flip": "Add a surprise twist to a routine event."
+      },
+      "cheat_code_example": "Watch this—it’ll blow your mind.",
+      "psychological_root": "Awe binds people to your image.",
+      "snap_warning": "🚨 ABORT signal: You’re cutting corners. (STOP. Add one bold element.)",
+      "leverage_point": {
+        "tactic": "Stun them—they’ll follow.",
+        "blood_price": "Their admiration locks them in."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Monthly: Create one spectacle.",
+        "penalty": "💀 Penalty: If failed, watch a dramatic movie scene."
+      }
+    },
+    {
+      "number": 38,
+      "title": "THINK AS YOU LIKE BUT BEHAVE LIKE OTHERS",
+      "category": "🧠 Deception",
+      "bilingual_power_pill": {
+        "BN": "মনে চিন্তা করো, কিন্তু সবার মতো আচরণ করো",
+        "EN": "Think freely, act like others"
+      },
+      "why_it_works": "Conformity hides your true intentions while preserving social acceptance.",
+      "things_to_do": [
+        "✅ Mirror group norms publicly.",
+        "✅ Keep radical thoughts private.",
+        "✅ Adapt behavior to fit in.",
+        "✅ Use conformity to gain trust.",
+        "✅ Observe and mimic key figures.",
+        "✅ Blend in during tense moments.",
+        "✅ Reveal your edge only when safe.",
+        "✅ Stay unpredictable in thought."
+      ],
+      "things_to_never_do": [
+        "❌ Stand out too early.",
+        "❌ Share controversial ideas openly.",
+        "❌ Ignore social cues or rules.",
+        "❌ Act against the group’s values.",
+        "❌ Let your mask slip carelessly.",
+        "❌ Assume conformity is weakness."
+      ],
+      "trigger_drill": {
+        "default": "Follow a group trend for a day.",
+        "status_flip": "Echo a popular opinion subtly."
+      },
+      "cheat_code_example": "I agree, that’s a solid plan.",
+      "psychological_root": "Conformity disarms suspicion.",
+      "snap_warning": "🚨 ABORT signal: You’re about to rebel publicly. (STOP. Blend in.)",
+      "leverage_point": {
+        "tactic": "Fit in—they’ll lower their guard.",
+        "blood_price": "Their trust exposes their flaws."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Conform once strategically.",
+        "penalty": "💀 Penalty: If failed, explain your stance privately."
+      }
+    },
+    {
+      "number": 39,
+      "title": "STIR UP WATERS TO CATCH FISH",
+      "category": "🎭 Manipulation",
+      "bilingual_power_pill": {
+        "BN": "জল নাড়াও, মাছ ধরো",
+        "EN": "Stir waters to catch fish"
+      },
+      "why_it_works": "Chaos reveals opportunities and exposes others’ weaknesses.",
+      "things_to_do": [
+        "✅ Create subtle disruptions intentionally.",
+        "✅ Watch reactions to identify threats.",
+        "✅ Use rumors to unsettle rivals.",
+        "✅ Act calm amid the chaos.",
+        "✅ Exploit confusion for your gain.",
+        "✅ Plant seeds of doubt quietly.",
+        "✅ Strike when others are distracted.",
+        "✅ Maintain control of the narrative."
+      ],
+      "things_to_never_do": [
+        "❌ Cause chaos without a plan.",
+        "❌ Lose control of the situation.",
+        "❌ Get caught stirring trouble.",
+        "❌ Overreact to your own disruption.",
+        "❌ Ignore the fallout.",
+        "❌ Target the wrong people."
+      ],
+      "trigger_drill": {
+        "default": "Spread a harmless rumor today.",
+        "status_flip": "Ask a provocative question casually."
+      },
+      "cheat_code_example": "Did you hear about X?",
+      "psychological_root": "Chaos forces mistakes and reveals intent.",
+      "snap_warning": "🚨 ABORT signal: You’re losing grip on the mess. (STOP. Retreat and reassess.)",
+      "leverage_point": {
+        "tactic": "Stir the pot—they’ll slip up.",
+        "blood_price": "Their errors become your advantage."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Create one controlled disruption.",
+        "penalty": "💀 Penalty: If failed, meditate in silence for 20 minutes."
+      }
+    },
+    {
+      "number": 40,
+      "title": "DESPISE THE FREE LUNCH",
+      "category": "⚔️ Strategy",
+      "bilingual_power_pill": {
+        "BN": "বিনামূল্যের খাবার অবজ্ঞা করো",
+        "EN": "Despise the free lunch"
+      },
+      "why_it_works": "Avoiding handouts preserves independence and avoids hidden obligations.",
+      "things_to_do": [
+        "✅ Earn your rewards through effort.",
+        "✅ Reject gifts with strings attached.",
+        "✅ Build your own resources.",
+        "✅ Value self-reliance over charity.",
+        "✅ Negotiate fair trades instead.",
+        "✅ Turn down easy favors.",
+        "✅ Prove your worth independently.",
+        "✅ Seek opportunities, not handouts."
+      ],
+      "things_to_never_do": [
+        "❌ Accept gifts without scrutiny.",
+        "❌ Rely on others’ generosity.",
+        "❌ Owe favors you can’t repay.",
+        "❌ Assume free means safe.",
+        "❌ Let pride blind you to value.",
+        "❌ Depend on unreliable sources."
+      ],
+      "trigger_drill": {
+        "default": "Decline one free offer today.",
+        "status_flip": "Say, “I’d rather earn it.”"
+      },
+      "cheat_code_example": "No thanks, I’ll handle it.",
+      "psychological_root": "Self-reliance strengthens your position.",
+      "snap_warning": "🚨 ABORT signal: You’re tempted by a freebie. (STOP. Walk away.)",
+      "leverage_point": {
+        "tactic": "Reject their bait—they’ll respect you.",
+        "blood_price": "Their obligation fades, freeing you."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Refuse one free offer.",
+        "penalty": "💀 Penalty: If failed, donate $5 to a cause."
+      }
+    },
+    {
+      "number": 41,
+      "title": "AVOID STEPPING INTO A GREAT MAN’S SHOES",
+      "category": "🐍 Positioning",
+      "bilingual_power_pill": {
+        "BN": "মহান মানুষের জুতো পরিও না",
+        "EN": "Avoid great men’s shoes"
+      },
+      "why_it_works": "Following a legend invites unfair comparisons and limits your own path.",
+      "things_to_do": [
+        "✅ Carve your own unique niche.",
+        "✅ Distance yourself from their legacy.",
+        "✅ Build a fresh reputation.",
+        "✅ Highlight your distinct strengths.",
+        "✅ Avoid mimicking their style.",
+        "✅ Create new opportunities, not inherit.",
+        "✅ Let their shadow fade naturally.",
+        "✅ Focus on future, not past."
+      ],
+      "things_to_never_do": [
+        "❌ Try to outdo them directly.",
+        "❌ Lean on their fame.",
+        "❌ Copy their exact methods.",
+        "❌ Accept their unfinished projects.",
+        "❌ Compete in their arena.",
+        "❌ Let their name define you."
+      ],
+      "trigger_drill": {
+        "default": "Start one original project today.",
+        "status_flip": "Say, “I’m doing this my way.”"
+      },
+      "cheat_code_example": "I’m forging a new path.",
+      "psychological_root": "Originality frees you from their weight.",
+      "snap_warning": "🚨 ABORT signal: You’re comparing yourself to them. (STOP. Focus on your goal.)",
+      "leverage_point": {
+        "tactic": "Break away—they’ll notice your rise.",
+        "blood_price": "Their legacy weakens, yours grows."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Avoid one inherited role.",
+        "penalty": "💀 Penalty: If failed, study a new skill."
+      }
+    },
+    {
+      "number": 42,
+      "title": "STRIKE THE SHEPHERD AND THE SHEEP WILL SCATTER",
+      "category": "🔪 Elimination",
+      "bilingual_power_pill": {
+        "BN": "চারণকর্তাকে আঘাত করো, ভেড়া ছড়িয়ে পড়বে",
+        "EN": "Strike the shepherd"
+      },
+      "why_it_works": "Removing the leader collapses the group’s cohesion.",
+      "things_to_do": [
+        "✅ Identify the key leader first.",
+        "✅ Neutralize them subtly or directly.",
+        "✅ Exploit the resulting confusion.",
+        "✅ Target their influence points.",
+        "✅ Act when their guard is down.",
+        "✅ Divide the group post-strike.",
+        "✅ Maintain your own unity.",
+        "✅ Strike decisively and quickly."
+      ],
+      "things_to_never_do": [
+        "❌ Attack the group as a whole.",
+        "❌ Miss the true leader.",
+        "❌ Leave them time to regroup.",
+        "❌ Reveal your intent early.",
+        "❌ Underestimate their loyalty.",
+        "❌ Act without a follow-up plan."
+      ],
+      "trigger_drill": {
+        "default": "Spot the leader in a group today.",
+        "status_flip": "Create a small distraction targeting them."
+      },
+      "cheat_code_example": "Let’s focus on the top dog.",
+      "psychological_root": "Leadership loss breeds panic.",
+      "snap_warning": "🚨 ABORT signal: You’re targeting the wrong person. (STOP. Reassess.)",
+      "leverage_point": {
+        "tactic": "Take out the head—they’ll fall.",
+        "blood_price": "Their collapse secures your win."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Monthly: Neutralize one leader’s influence.",
+        "penalty": "💀 Penalty: If failed, analyze a failed strike."
+      }
+    },
+    {
+      "number": 43,
+      "title": "WORK ON THE HEARTS AND MINDS OF OTHERS",
+      "category": "🔮 Psychology",
+      "bilingual_power_pill": {
+        "BN": "অন্যের হৃদয় ও মন জয় করো",
+        "EN": "Win hearts and minds"
+      },
+      "why_it_works": "Emotional connection and persuasion secure lasting loyalty.",
+      "things_to_do": [
+        "✅ Appeal to their emotions first.",
+        "✅ Share relatable stories or struggles.",
+        "✅ Offer hope or inspiration.",
+        "✅ Listen to their deepest desires.",
+        "✅ Build trust through empathy.",
+        "✅ Use flattery tied to their values.",
+        "✅ Align your goals with theirs.",
+        "✅ Reward loyalty with attention."
+      ],
+      "things_to_never_do": [
+        "❌ Rely only on logic or force.",
+        "❌ Ignore their emotional needs.",
+        "❌ Push too hard too soon.",
+        "❌ Dismiss their feelings.",
+        "❌ Break trust once gained.",
+        "❌ Assume loyalty is automatic."
+      ],
+      "trigger_drill": {
+        "default": "Compliment someone’s passion today.",
+        "status_flip": "Share a personal story to connect."
+      },
+      "cheat_code_example": "I feel your drive—it’s inspiring.",
+      "psychological_root": "Emotion binds stronger than reason.",
+      "snap_warning": "🚨 ABORT signal: You’re being too cold. (STOP. Show warmth.)",
+      "leverage_point": {
+        "tactic": "Touch their heart—they’ll follow.",
+        "blood_price": "Their devotion becomes your strength."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Win over one person emotionally.",
+        "penalty": "💀 Penalty: If failed, write a heartfelt note."
+      }
+    },
+    {
+      "number": 44,
+      "title": "DISARM AND INFURIATE WITH THE MIRROR EFFECT",
+      "category": "🧠 Deception",
+      "bilingual_power_pill": {
+        "BN": "আয়নার প্রভাবে অস্ত্র ফেলে দাও",
+        "EN": "Mirror to disarm and infuriate"
+      },
+      "why_it_works": "Reflecting their actions confuses and angers, exposing flaws.",
+      "things_to_do": [
+        "✅ Mimic their tone and behavior.",
+        "✅ Reflect their words back subtly.",
+        "✅ Stay calm while mirroring.",
+        "✅ Use it to provoke reactions.",
+        "✅ Adapt to their emotional state.",
+        "✅ Break the mirror to confuse.",
+        "✅ Watch for their overreaction.",
+        "✅ Maintain control throughout."
+      ],
+      "things_to_never_do": [
+        "❌ Mirror too obviously or mockingly.",
+        "❌ Lose your composure.",
+        "❌ Overuse the tactic.",
+        "❌ Ignore their breaking point.",
+        "❌ Let them turn it back.",
+        "❌ Act without a goal."
+      ],
+      "trigger_drill": {
+        "default": "Repeat their last phrase softly.",
+        "status_flip": "Match their energy, then pause."
+      },
+      "cheat_code_example": "So you think that’s best?",
+      "psychological_root": "Mirroring triggers self-awareness and frustration.",
+      "snap_warning": "🚨 ABORT signal: You’re escalating too far. (STOP. Shift focus.)",
+      "leverage_point": {
+        "tactic": "Mirror them—they’ll unravel.",
+        "blood_price": "Their anger reveals their weakness."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Use mirroring once.",
+        "penalty": "💀 Penalty: If failed, practice empathy instead."
+      }
+    },
+    {
+      "number": 45,
+      "title": "PREACH THE NEED FOR CHANGE, BUT NEVER REFORM TOO MUCH AT ONCE",
+      "category": "🎭 Manipulation",
+      "bilingual_power_pill": {
+        "BN": "পরিবর্তনের প্রয়োজনীয়তা প্রচার করো",
+        "EN": "Preach change, reform slowly"
+      },
+      "why_it_works": "Gradual change gains acceptance while maintaining control.",
+      "things_to_do": [
+        "✅ Advocate for a bold vision.",
+        "✅ Introduce changes step by step.",
+        "✅ Build consensus before acting.",
+        "✅ Frame reforms as improvements.",
+        "✅ Test small changes first.",
+        "✅ Use successes to push further.",
+        "✅ Keep the end goal hidden.",
+        "✅ Soothe resistance with patience."
+      ],
+      "things_to_never_do": [
+        "❌ Force rapid, radical shifts.",
+        "❌ Ignore group resistance.",
+        "❌ Reveal the full plan early.",
+        "❌ Overpromise on quick fixes.",
+        "❌ Abandon the vision midway.",
+        "❌ Act without preparation."
+      ],
+      "trigger_drill": {
+        "default": "Suggest one small improvement today.",
+        "status_flip": "Say, “Let’s try this first.”"
+      },
+      "cheat_code_example": "We can start with this step.",
+      "psychological_root": "Gradual shifts reduce fear and build trust.",
+      "snap_warning": "🚨 ABORT signal: You’re pushing too fast. (STOP. Scale back.)",
+      "leverage_point": {
+        "tactic": "Preach and ease in—they’ll adapt.",
+        "blood_price": "Their acceptance secures your lead."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Implement one small change.",
+        "penalty": "💀 Penalty: If failed, review your pace."
+      }
+    },
+    {
+      "number": 46,
+      "title": "NEVER APPEAR TOO PERFECT",
+      "category": "🐍 Positioning",
+      "bilingual_power_pill": {
+        "BN": "অত্যন্ত নিখুঁত মনে হও না",
+        "EN": "Avoid seeming too perfect"
+      },
+      "why_it_works": "Flaws make you relatable and reduce envy or suspicion.",
+      "things_to_do": [
+        "✅ Admit minor, harmless flaws.",
+        "✅ Share relatable struggles.",
+        "✅ Show vulnerability strategically.",
+        "✅ Balance success with humility.",
+        "✅ Let others feel superior sometimes.",
+        "✅ Avoid constant perfectionism.",
+        "✅ Use imperfections to connect.",
+        "✅ Keep your edge hidden."
+      ],
+      "things_to_never_do": [
+        "❌ Act infallible or superior.",
+        "❌ Hide all weaknesses.",
+        "❌ Boast about every win.",
+        "❌ Let envy build unchecked.",
+        "❌ Overcorrect minor mistakes.",
+        "❌ Pretend you’re flawless."
+      ],
+      "trigger_drill": {
+        "default": "Share a small mistake today.",
+        "status_flip": "Say, “I’m still learning that.”"
+      },
+      "cheat_code_example": "I messed that up once too.",
+      "psychological_root": "Relatability disarms resentment.",
+      "snap_warning": "🚨 ABORT signal: You’re showing off too much. (STOP. Humble yourself.)",
+      "leverage_point": {
+        "tactic": "Show a flaw—they’ll trust you.",
+        "blood_price": "Their guard drops, exposing them."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Reveal one imperfection.",
+        "penalty": "💀 Penalty: If failed, apologize publicly."
+      }
+    },
+    {
+      "number": 47,
+      "title": "DO NOT GO PAST THE MARK YOU AIMED FOR; IN VICTORY, LEARN WHEN TO STOP",
+      "category": "⚔️ Strategy",
+      "bilingual_power_pill": {
+        "BN": "লক্ষ্য অতিক্রম করো না",
+        "EN": "Don’t overreach in victory"
+      },
+      "why_it_works": "Knowing when to stop preserves gains and avoids backlash.",
+      "things_to_do": [
+        "✅ Set clear victory conditions.",
+        "✅ Stop when goals are met.",
+        "✅ Avoid pushing beyond necessity.",
+        "✅ Celebrate wins modestly.",
+        "✅ Assess risks of further moves.",
+        "✅ Leave room for future gains.",
+        "✅ Withdraw before overexposure.",
+        "✅ Respect the opponent’s limits."
+      ],
+      "things_to_never_do": [
+        "❌ Overextend after success.",
+        "❌ Gloat or provoke retaliation.",
+        "❌ Ignore warning signs of excess.",
+        "❌ Pursue diminishing returns.",
+        "❌ Undermine your own victory.",
+        "❌ Act recklessly post-win."
+      ],
+      "trigger_drill": {
+        "default": "Pause after one win today.",
+        "status_flip": "Say, “That’s enough for now.”"
+      },
+      "cheat_code_example": "We’ve won—let’s hold here.",
+      "psychological_root": "Moderation sustains power.",
+      "snap_warning": "🚨 ABORT signal: You’re pushing too far. (STOP. Retreat slightly.)",
+      "leverage_point": {
+        "tactic": "Stop at the mark—they’ll respect you.",
+        "blood_price": "Their resentment fades, securing your win."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Stop at one goal.",
+        "penalty": "💀 Penalty: If failed, give up a small gain."
+      }
+    },
+    {
+      "number": 48,
+      "title": "ASSUME FORMLESSNESS",
+      "category": "⚔️ Strategy",
+      "bilingual_power_pill": {
+        "BN": "অমূর্ত হও",
+        "EN": "Assume formlessness"
+      },
+      "why_it_works": "Being unpredictable and adaptable makes you untouchable.",
+      "things_to_do": [
+        "✅ Avoid fixed patterns or habits.",
+        "✅ Adapt to changing circumstances.",
+        "✅ Keep your plans fluid.",
+        "✅ Stay elusive and mysterious.",
+        "✅ Shift strategies as needed.",
+        "✅ Use others’ expectations against them.",
+        "✅ Blend into any environment.",
+        "✅ Never reveal your full intent."
+      ],
+      "things_to_never_do": [
+        "❌ Stick to one approach.",
+        "❌ Let others predict you.",
+        "❌ Commit to rigid roles.",
+        "❌ Ignore shifts in the game.",
+        "❌ Show all your cards.",
+        "❌ Depend on a single tactic."
+      ],
+      "trigger_drill": {
+        "default": "Change one routine today.",
+        "status_flip": "Respond differently to a request."
+      },
+      "cheat_code_example": "I’ll figure it out my way.",
+      "psychological_root": "Formlessness confounds and disarms.",
+      "snap_warning": "🚨 ABORT signal: You’re becoming predictable. (STOP. Switch it up.)",
+      "leverage_point": {
+        "tactic": "Stay fluid—they’ll lose track.",
+        "blood_price": "Their confusion hands you control."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Avoid one pattern.",
+        "penalty": "💀 Penalty: If failed, try a new approach."
+      }
+    }
+  ]
+}

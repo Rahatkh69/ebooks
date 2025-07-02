@@ -1,0 +1,1840 @@
+{
+  "laws": [
+    {
+      "lawNumber": 1,
+      "lawTitle": "Master Your Emotional Self – The Law of Irrationality",
+      "category": "🚦 Emotional Drivers",
+      "introduction": {
+        "english": "You’re not as rational as you think. You’re a rationalizing creature, driven by emotions that hijack your decisions before reason kicks in. To master this law from The Laws of Human Nature, you must control these impulses to gain power over yourself and others. This guide, rooted in Robert Greene’s insights and enhanced with Stoic wisdom, neuroscience, and practical hacks, will make you understand and apply Law 1 better than someone who’s just read the book. You’ll answer questions with depth and execute its principles like a pro.",
+        "bangla": "আপনি যতটা মনে করেন ততটা যুক্তিবাদী নন। আপনি একজন যুক্তিবাদী প্রাণী, যিনি আবেগ দ্বারা পরিচালিত হন, যা আপনার সিদ্ধান্তগুলোকে যুক্তির আগেই হাইজ্যাক করে। রবার্ট গ্রিনের দ্য লজ অফ হিউম্যান নেচার-এর এই প্রথম আইনটি আয়ত্ত করতে, আপনাকে এই আবেগপ্রবণ স্পন্দনগুলো নিয়ন্ত্রণ করতে হবে যাতে নিজের এবং অন্যদের উপর ক্ষমতা অর্জন করা যায়। এই গাইড, গ্রিনের অন্তর্দৃষ্টির সাথে স্টোইক জ্ঞান, নিউরোসায়েন্স এবং ব্যবহারিক কৌশলের সমন্বয়ে, আপনাকে আইন ১ বুঝতে এবং প্রয়োগ করতে সাহায্য করবে বই পড়া কারও চেয়ে ভালোভাবে। আপনি গভীরভাবে প্রশ্নের উত্তর দেবেন এবং এর নীতিগুলো প্রো-এর মতো কার্যকর করবেন।"
+      },
+      "whyThisLawApplies": {
+        "title": "Why You’re Irrational",
+        "description": "As Greene states, “We like to think of ourselves as rational, but in truth we are governed by our emotions” (The Laws of Human Nature). Your brain evolved to prioritize emotions over logic, a survival tool that now sabotages you in modern life.",
+        "points": [
+          "Emotional Hijack: Your amygdala reacts 300 milliseconds faster than your prefrontal cortex, per neuroscience studies. This is why you lash out at criticism before assessing its validity.",
+          "Dopamine’s Pull: Dopamine drives you to seek instant rewards—impulse buys or social media scrolling—despite long-term costs. Research shows dopamine clouds judgment in gamblers, and it’s why you chase fleeting pleasures.",
+          "Biases Blind You: The halo effect makes you overestimate a charming person’s competence, while confirmation bias locks you into bad decisions. Greene notes, “Our emotions distort reality, making us see what we want to see.”"
+        ]
+      },
+      "historicalExamples": {
+        "title": "Historical Examples: Pericles vs. Athenian Folly",
+        "examples": [
+          {
+            "name": "Pericles’ Calm",
+            "description": "During the Peloponnesian War, Athenians demanded reckless attacks when Spartans ravaged their lands. Greene writes, “Pericles’ ability to remain calm and rational saved Athens from impulsive ruin” (The Laws of Human Nature). His restraint preserved their strength."
+          },
+          {
+            "name": "Athenian Disaster",
+            "description": "After Pericles’ death, Athens succumbed to emotional chaos. Seduced by Alcibiades’ charisma, they launched the Sicilian Expedition, driven by greed. The result? Their fleet was destroyed, and Athens lost the war."
+          }
+        ],
+        "otherExamples": "Abraham Lincoln wrote unsent “hot letters” to cool his anger, while Napoleon’s rage-fueled Russian invasion cost 400,000 lives. Restraint wins; impulsivity destroys."
+      },
+      "howOthersExploitYou": {
+        "title": "How Others Exploit You",
+        "description": "Greene warns, “People will manipulate your emotions to gain the upper hand” (The Laws of Human Nature). Here’s how to counter them.",
+        "points": [
+          "Narcissistic Triggers: Charismatic types use flattery or guilt to provoke reactions, like a colleague who praises you for favors. Pause and question their motives.",
+          "Group Contagion: Crowds amplify irrationality, as seen in French Revolution mobs. Distance yourself to stay clear-headed.",
+          "Modern Traps: Media outrage sparks clicks—ask, “Who profits from my reaction?” Gaslighters provoke self-doubt; respond with silence or “I’ll consider that.”"
+        ]
+      },
+      "howToMaster": {
+        "title": "How to Master Your Emotions",
+        "description": "Greene’s strategies, combined with Stoic tactics and science, help you outsmart irrationality.",
+        "points": [
+          "Pause Before Acting: Greene advises, “Create a space between stimulus and response” (The Laws of Human Nature). Count to 10 for small triggers or wait 24 hours for big decisions.",
+          "Analyze Emotions: Journal to uncover emotional roots, like fear behind anger. Greene suggests observing feelings objectively to weaken their grip.",
+          "Stoic Tools: Visualize problems from a cosmic perspective—will this matter in five years? Mentally rehearse worst-case scenarios to reduce fear, as Steve Jobs did.",
+          "Neuro-Hack: Meditation strengthens prefrontal cortex control, enhancing foresight."
+        ]
+      },
+      "dailyPlaybook": {
+        "dos": [
+          "10-Second Rule: Pause 10 seconds before reacting. Ask, “Is this worth my energy?”",
+          "Emotion Labeling: Say, “This is anger,” to reduce its intensity.",
+          "Red Alert Mantra: Repeat, “Emotions cloud judgment.”",
+          "Dollar Test: Ask, “Would I bet $1,000 this decision is rational?”",
+          "Cold Shower: Take a 30-second cold shower to build discomfort tolerance.",
+          "Power Posture: Stand tall for 2 minutes to lower stress.",
+          "5 Whys: Ask “Why?” five times to uncover emotional roots.",
+          "Pre-Scripted Replies: Use “I’ll reflect on that” for triggers.",
+          "No Yes Today: Delay requests with, “I’ll get back to you.”",
+          "Stoic Notebook: Write: “One emotional mistake | One fix.”",
+          "Anger Push-Ups: Do 20 push-ups to burn adrenaline.",
+          "Third-Person View: Ask, “What would Pericles do?”",
+          "Delay Pleasures: Wait 1 hour for snacks or purchases.",
+          "No Complaining: Go 24 hours without whining.",
+          "Emotional Scorecard: Rate anger/fear (1-10) daily; keep below 5."
+        ],
+        "donTs": [
+          "Don’t Vent: It fuels anger, per studies.",
+          "Don’t Say “Just This Once”: Exceptions build bad habits.",
+          "Don’t Check Notifications Instantly: Pings train impulsivity.",
+          "Don’t Argue Online: Trolls feed on reactions.",
+          "Don’t Procrastinate: “Tomorrow” is a lie.",
+          "Don’t Trust Your Gut: It’s biased by trauma.",
+          "Don’t Multitask Stressed: It worsens decisions.",
+          "Don’t Watch News Before Bed: Fear clouds judgment.",
+          "Don’t Shop Hungry: Hunger sparks impulses.",
+          "Don’t Seek Revenge: It backfires.",
+          "Don’t Skip Protein: Low protein raises stress.",
+          "Don’t Over-Explain: Defensiveness shows weakness.",
+          "Don’t Use “Honesty” as Cover: It’s often venting.",
+          "Don’t Cry: It amplifies chaos.",
+          "Don’t Think “This Time Is Different”: You’re rationalizing."
+        ]
+      },
+      "emergencyHacks": [
+        "Chew Gum: Lowers stress fast.",
+        "Look at the Sky: Resets perspective.",
+        "Whisper “Enough”: Treats anger like an experiment."
+      ],
+      "dailyRoutine": {
+        "morning": "Morning (5 min): Imagine worst-case scenarios. Repeat, “Emotions cloud judgment.” Stand tall for 2 minutes.",
+        "midday": "Midday: Pause 10-24 seconds for decisions. Use “5 Whys” for emotional spikes. Delay requests with, “I’ll get back to you.”",
+        "evening": "Evening (5 min): Journal: “What emotion drove me? How could I be calmer?” Rate emotions (1-10). Note one mistake, one fix."
+      },
+      "greeneWarningAndYourEdge": {
+        "warning": "Greene warns, “If you think you are rational, you are the most vulnerable to emotional manipulation” (The Laws of Human Nature).",
+        "edge": "Mastery requires vigilance. This system lets you act with Pericles’ clarity while others flail. You’ll live Law 1, not just read it."
+      },
+      "finalChallenge": "For 3 days, pick 3 DOs and 3 DON’Ts. Track in your Stoic Notebook: “DO: 10-Second Rule, 5 Whys, Third-Person View. DON’T: Vent, Argue Online, Trust Gut.” Score success (1-10) nightly and note one lesson. By day 4, you’ll be sharper and calmer."
+    },
+    {
+      "lawNumber": 2,
+      "lawTitle": "Transform Self-Love into Empathy – The Law of Narcissism",
+      "category": "🚦 Emotional Drivers",
+      "introduction": {
+        "english": "We’re all narcissists to some degree, but unchecked self-love blinds you to others’ needs, making you selfish or manipulative. To master Law 2, you must transform narcissism into empathy, building deeper connections and influence. This guide, rooted in Robert Greene’s insights, Stoic wisdom, neuroscience, and practical strategies, will help you apply Law 2 better than a book reader, answering questions with depth and executing its principles like a pro.",
+        "bangla": "আমরা সবাই কিছুটা নার্সিসিস্ট, তবে অনিয়ন্ত্রিত আত্ম-প্রেম আপনাকে অন্যদের প্রয়োজনের প্রতি অন্ধ করে দেয়, আপনাকে স্বার্থপর বা কারসাজিকারী করে তোলে। আইন ২ আয়ত্ত করতে, আপনাকে নার্সিসিজমকে সহানুভূতিতে রূপান্তর করতে হবে, যা গভীর সম্পর্ক এবং প্রভাব তৈরি করে। এই গাইড, রবার্ট গ্রিনের অন্তর্দৃষ্টি, স্টোইক জ্ঞান, নিউরোসায়েন্স এবং ব্যবহারিক কৌশলের সমন্বয়ে, আপনাকে আইন ২ বই পযে কারও চেয়ে ভালোভাবে প্রয়োগ করতে সহায়তা করবে, গভীরভাবে প্রশ্নের উত্তর দেবে এবং এর নীতিগুলো প্রো-এর মতো কার্যকর করবে।"
+      },
+      "whyThisLawApplies": {
+        "title": "Why You’re Narcissistic",
+        "description": "Greene states, “We are all narcissists, some deeper on the spectrum than others” (The Laws of Human Nature).",
+        "points": [
+          "Ego’s Grip: The brain’s default mode network (DMN) amplifies self-focused thoughts. Studies show overactive DMNs in narcissists make you prioritize your needs, like dismissing others’ ideas.",
+          "Empathy Gaps: Stress suppresses mirror neurons, reducing your ability to feel others’ emotions. Greene notes, “Our natural tendency is to see the world through our own needs.”",
+          "Confirmation Bias: You seek validation, ignoring flaws. This is why you might overestimate your skills, as Greene warns, “Narcissism distorts our perception of reality.”"
+        ]
+      },
+      "historicalExamples": {
+        "title": "Historical Examples",
+        "examples": [
+          {
+            "name": "Alcibiades’ Downfall",
+            "description": "Alcibiades’ need for glory led to the Sicilian Expedition’s failure. Greene writes, “His narcissism seduced Athens but cost them the war” (The Laws of Human Nature)."
+          },
+          {
+            "name": "Socrates’ Empathy",
+            "description": "Socrates listened deeply, using questions to understand others. Greene notes, “Socrates turned self-love into connection.”"
+          }
+        ],
+        "otherExamples": "Cleopatra’s empathy charmed allies like Caesar, while Napoleon’s narcissism alienated his generals, leading to exile."
+      },
+      "howOthersExploitYou": {
+        "title": "How Others Exploit You",
+        "description": "Greene warns, “People exploit your self-absorption to control you” (The Laws of Human Nature).",
+        "points": [
+          "Flattery Traps: Narcissists praise you to lower defenses, e.g., a boss seeking overtime. Question their intent.",
+          "Validation Hooks: Social media likes feed your ego. Limit exposure to dopamine-driven platforms.",
+          "Guilt Plays: Manipulators say, “You’re selfish,” to control you. Respond calmly, “Let’s discuss this.”"
+        ]
+      },
+      "howToMaster": {
+        "title": "How to Transform Self-Love into Empathy",
+        "description": null,
+        "points": [
+          "Step Into Their Shoes: Greene advises, “See the world through others’ eyes” (The Laws of Human Nature). Imagine others’ emotions daily.",
+          "Active Listening: Reflect others’ words, like, “So you felt ignored?”",
+          "Stoic Detachment: Ask, “What’s their pain?” to shrink ego.",
+          "Neuro-Hack: Boost oxytocin through kindness to reduce self-focus."
+        ]
+      },
+      "dailyPlaybook": {
+        "dos": [
+          "Empathy Pause: Ask, “What’s their perspective?”",
+          "Mirror Back: Paraphrase others’ words.",
+          "Kindness Habit: Do one kind act daily.",
+          "Question Ego: Ask, “Am I seeking validation?”",
+          "Eye Contact: Connect without dominating.",
+          "Gratitude Note: Write one appreciation daily.",
+          "Stoic Reflection: Ask, “What would Marcus Aurelius say?”",
+          "No Interruptions: Let others finish speaking.",
+          "Empathy Journal: Note one person’s emotion.",
+          "Compliment Sincerely: Praise others’ efforts.",
+          "Delay Bragging: Wait 24 hours to share achievements.",
+          "Ask Questions: Ask three open-ended questions.",
+          "Body Scan: Read others’ body language.",
+          "Volunteer Time: Help 10 minutes weekly.",
+          "Empathy Score: Rate empathy (1-10) nightly; aim for 7+."
+        ],
+        "donTs": [
+          "Don’t Seek Praise: Avoid fishing for compliments.",
+          "Don’t Dominate Talks: Stop steering to yourself.",
+          "Don’t Dismiss Feelings: Never say, “You’re overreacting.”",
+          "Don’t Post for Likes: Avoid validation-driven posts.",
+          "Don’t Judge Fast: Don’t assume motives.",
+          "Don’t One-Up: Stop topping stories.",
+          "Don’t Ignore Cues: Notice body language.",
+          "Don’t Monopolize: Keep talking under 50%.",
+          "Don’t Fake Empathy: Avoid crocodile tears.",
+          "Don’t Compare Struggles: Avoid “I’ve had it worse.”",
+          "Don’t Multitask Listening: Put phone down.",
+          "Don’t Defend Ego: Don’t justify selfishness.",
+          "Don’t Rush Fixes: Understand before solving.",
+          "Don’t Gossip: It fuels judgment.",
+          "Don’t Assume Superiority: You’re not always the smartest."
+        ]
+      },
+      "emergencyHacks": [
+        "Ear On, Ego Off: Listen fully for 30 seconds.",
+        "Smile Softly: Signals openness.",
+        "Breathe Deep: Five breaths to calm self-focus."
+      ],
+      "dailyRoutine": {
+        "morning": "Morning (5 min): Visualize someone’s struggle, repeat, “Their world matters,” write, a gratitude note.",
+        "midday": "Midday: Pause, ask, “What’s their perspective?” Use active listening.",
+        "evening": "Evening (5 min): Journal, rate, empathy, note one-up selfish moment, and empathic fix."
+      },
+      "greeneWarningAndYourEdge": {
+        "warning": "Greene warns, “The more trapped in your perspective, the less you see of reality” (The Laws of).",
+        "edge": "Empathy opens your mind. You’ll, read people like Cleopatra, while others falter like Alcibiades’."
+      },
+      "finalChallenge": "For 3 days, pick 3 DOs and 3 DON’Ts. Track in: notebook: “DO: Empathy Pause, Mirror Back, Kindness Habit. DON’T: Seek Praise, Dominate Talks, Judge Fast.” Score nightly (1-10) and note one lesson. By Day 4, you’ll be more connected."
+    },
+    {
+      "lawNumber": 3,
+      "lawTitle": "See Through People’s Masks – The Law of Role-Playing",
+      "category": "🎭 Social Manipulation",
+      "introduction": {
+        "english": "People hide their true selves behind masks of charm, confidence, or humility to manipulate or protect themselves. To master Law 3, you must see through these facades to understand others’ real motives and gain control. This guide, rooted in Robert Greene’s insights, Stoic wisdom, neuroscience, and practical hacks, will help you apply Law 3 better than a book reader, answering questions with depth and executing its principles like a pro.",
+        "bangla": "মানুষ তাদের প্রকৃত স্বরূপকে কবজ, আত্মবিশ্বাস বা নম্রতার মুখোশের আড়ালে লুকিয়ে রাখে যাতে কারসাজি করে বা নিজেদের রক্ষা করে। আইন ৩ আয়ত্ত করতে, আপনাকে এই মুখোশের মাধ্যমে তাদের প্রকৃত উদ্দেশ্য বুঝতে হবে এবং নিয়ন্ত্রণ অর্জন করতে হবে। এই গাইড, রবার্ট গ্রিনের অন্তর্দৃষ্টি, স্টোইক জ্ঞান, নিউরোসায়েন্স এবং ব্যবহারিক কৌশলের সমন্বয়ে, আপনাকে আইন ৩ বই পড়া কারও চেয়ে ভালোভাবে প্রয়োগ করতে সহায়তা করবে, গভীরভাবে প্রশ্নের উত্তর দেবে এবং এর নীতিগুলো প্রো-এর মতো কার্যকর করবে।"
+      },
+      "whyThisLawApplies": {
+        "title": "Why You Miss the Masks",
+        "description": "Greene states, “People present themselves as they wish to be seen, not as they are” (The Laws of Human Nature). Your brain’s social biases make you vulnerable to deception.",
+        "points": [
+          "Social Mirroring: Mirror neurons make you mimic others’ emotions, blinding you to their true intent. You trust a smile, missing the scheming eyes.",
+          "Halo Effect: You assume a polished appearance equals virtue. Studies show attractive people are judged as more trustworthy, even when manipulative.",
+          "Cognitive Load: Your brain struggles to process subtle cues under stress, missing inconsistencies in others’ behavior."
+        ]
+      },
+      "historicalExamples": {
+        "title": "Historical Examples",
+        "examples": [
+          {
+            "name": "Talleyrand’s Deception",
+            "description": "French diplomat Talleyrand wore a mask of loyalty to survive multiple regimes. Greene notes, “He adapted his persona to each leader, concealing his true motives” (The Laws of Human Nature). His mask ensured power."
+          },
+          {
+            "name": "Lincoln’s Insight",
+            "description": "Abraham Lincoln saw through others’ facades by observing their actions, not words. His quiet scrutiny exposed allies’ betrayals, saving his presidency."
+          }
+        ],
+        "otherExamples": "Machiavelli masked his ambition to advise princes, while Hitler’s charismatic persona hid his destructive intent, fooling millions."
+      },
+      "howOthersExploitYou": {
+        "title": "How Others Exploit You",
+        "description": "Greene warns, “People use masks to control how you perceive them” (The Laws of Human Nature).",
+        "points": [
+          "False Humility: Manipulators feign modesty to gain trust, like a coworker downplaying skills to undermine you. Watch for mismatched actions.",
+          "Charm Overload: Excessive warmth hides agendas, like a salesperson pushing a bad deal. Delay decisions to see past the act.",
+          "Victim Plays: Some fake weakness to guilt you into helping. Respond with, “I’ll think about how to assist.”"
+        ]
+      },
+      "howToMaster": {
+        "title": "How to See Through Masks",
+        "description": null,
+        "points": [
+          "Observe Actions, Not Words: Greene advises, “Judge people by what they do, not what they say” (The Laws of Human Nature). Track inconsistencies over time.",
+          "Read Nonverbals: Study body language—crossed arms or fleeting smirks betray true feelings.",
+          "Stoic Clarity: Ask, “What’s their incentive?” to cut through charm. Epictetus said, “Focus on what’s in your control—your judgment.”",
+          "Neuro-Hack: Slow your breathing to sharpen focus on subtle cues."
+        ]
+      },
+      "dailyPlaybook": {
+        "dos": [
+          "Action Check: Ask, “Do their actions match their words?”",
+          "Nonverbal Scan: Note eyes, gestures, or tone shifts.",
+          "Incentive Question: Ask, “What do they gain from this?”",
+          "Delay Response: Wait 24 hours for big requests.",
+          "Neutral Face: Keep your expression blank to avoid mirroring.",
+          "Stoic Pause: Ask, “What would Epictetus judge here?”",
+          "Pattern Track: Log behaviors in a notebook for trends.",
+          "Question Charm: Ask, “Is this too good to be true?”",
+          "Slow Breathing: Take 5 deep breaths to focus.",
+          "Third-Party View: Ask, “What would a skeptic see?”",
+          "Test Intent: Ask clarifying questions to expose motives.",
+          "Limit Trust: Assume good intentions but verify.",
+          "Observe Silence: Watch how they act when not speaking.",
+          "Daily Review: Note one mask you spotted.",
+          "Suspicion Score: Rate trust (1-10) nightly; keep below 7."
+        ],
+        "donTs": [
+          "Don’t Trust Smiles: They hide agendas.",
+          "Don’t Rush Judgments: First impressions mislead.",
+          "Don’t Mirror Emotions: Avoid mimicking their energy.",
+          "Don’t Ignore Red Flags: Small lies signal bigger ones.",
+          "Don’t Fall for Flattery: It’s a trap.",
+          "Don’t Share Too Soon: Revealing weakens you.",
+          "Don’t Ignore Tone: Sarcasm betrays intent.",
+          "Don’t Assume Honesty: Even good people wear masks.",
+          "Don’t Multitask Observing: Focus on one person at a time.",
+          "Don’t Buy Victim Stories: Verify before helping.",
+          "Don’t Overreact: Emotional responses cloud judgment.",
+          "Don’t Trust Crowds: Groups amplify fake personas.",
+          "Don’t Skip Details: Small cues reveal truths.",
+          "Don’t Gossip: It distracts from observation.",
+          "Don’t Project Your Values: Others don’t share them."
+        ]
+      },
+      "emergencyHacks": [
+        "Eye Lock: Focus on their eyes for 5 seconds to spot discomfort.",
+        "Silent Count: Count to 10 to avoid snap judgments.",
+        "Neutral Nod: Nod without agreeing to stay detached."
+      ],
+      "dailyRoutine": {
+        "morning": "Morning (5 min): Visualize someone’s possible motives; repeat, “Actions reveal truth”; note one person to observe.",
+        "midday": "Midday: Scan nonverbals in one interaction; ask, “What’s their incentive?”",
+        "evening": "Evening (5 min): Journal: “What mask did I see? How can I sharpen my eye?” Rate suspicion (1-10); note one lesson."
+      },
+      "greeneWarningAndYourEdge": {
+        "warning": "Greene warns, “If you cannot see through masks, you are at the mercy of others’ manipulations” (The Laws of Human Nature).",
+        "edge": "This system makes you a human lie detector, like Lincoln, while others fall for charm. You’ll live Law 3."
+      },
+      "finalChallenge": "For 3 days, pick 3 DOs and 3 DON’Ts. Track in notebook: “DO: Action Check, Nonverbal Scan, Incentive Question. DON’T: Trust Smiles, Rush Judgments, Fall for Flattery.” Score success (1-10) nightly; note one lesson. By day 4, you’ll spot masks effortlessly."
+    },
+    {
+      "lawNumber": 4,
+      "lawTitle": "Determine the Strength of People’s Character – The Law of Compulsiveness",
+      "category": "🛠️ Self-Destructive Patterns",
+      "introduction": {
+        "english": "People’s character drives their actions, often compulsively, revealing their true nature. To master Law 4, you must assess character to predict behavior and protect yourself. This guide, rooted in Greene’s insights, Stoic wisdom, neuroscience, and practical strategies, will help you apply Law 4 better than a book reader, mastering its principles like a pro.",
+        "bangla": "মানুষের চরিত্র তাদের ক্রিয়াকলাপকে পরিচালিত করে, প্রায়শই বাধ্যতামূলকভাবে, তাদের প্রকৃত স্বভাব প্রকাশ করে। আইন ৪ আয়ত্ত করতে, আপনাকে চরিত্র মূল্যায়ন করে তাদের আচরণের পূর্বাভাস করতে হবে এবং নিজেকে রক্ষা করতে হবে। এই গাইড, গ্রিনের অন্তর্দৃষ্টি, স্টোইক জ্ঞান, নিউরোসায়েন্স এবং ব্যবহারিক কৌশলের সমন্বয়ে, আপnাকে আইন ৪ বই পড়া কারও চেয়ে ভালোভাবে প্রয়োগ করতে সহায়তা করবে, এর নীতিগুলো প্রো-এর মতো আয়ত্ত করবে।"
+      },
+      "whyThisLawApplies": {
+        "title": "Why Character Drives Compulsion",
+        "description": "Greene states, “People are slaves to their character, repeating patterns they cannot control” (The Laws of Human Nature).",
+        "points": [
+          "Neural Pathways: Compulsive behaviors stem from ingrained neural habits, like addiction to praise or anger. Studies show habits form in the basal ganglia, making change hard.",
+          "Emotional Triggers: Weak characters act on impulse, like lashing out under stress. Neuroscience links low prefrontal control to compulsive decisions.",
+          "Self-Deception: People justify compulsive acts, believing they’re rational. Greene notes, “Character flaws are hidden in repeated actions.”"
+        ]
+      },
+      "historicalExamples": {
+        "title": "Historical Examples",
+        "examples": [
+          {
+            "name": "Caesar’s Ambition",
+            "description": "Julius Caesar’s compulsive need for power led to risky conquests. Greene writes, “His character drove him to overreach, inviting betrayal” (The Laws of Human Nature)."
+          },
+          {
+            "name": "Washington’s Restraint",
+            "description": "George Washington’s disciplined character resisted power grabs, stepping down after two terms. His strength ensured stability."
+          }
+        ],
+        "otherExamples": "Cleopatra’s calculated charm showed strong character, while Nero’s compulsive cruelty destabilized Rome."
+      },
+      "howOthersExploitYou": {
+        "title": "How Others Exploit You",
+        "description": "Greene warns, “Weak characters exploit your trust to indulge their compulsions” (The Laws of Human Nature).",
+        "points": [
+          "Addictive Promises: Compulsive types overpromise, like a colleague who always misses deadlines. Verify their track record.",
+          "Emotional Blackmail: They use guilt or charm to hook you. Respond with, “I’ll review this later.”",
+          "Unreliable Allies: Weak characters flake under pressure. Test reliability with small tasks first."
+        ]
+      },
+      "howToMaster": {
+        "title": "How to Assess Character",
+        "description": null,
+        "points": [
+          "Track Patterns: Greene advises, “Look for repeated behaviors over time” (The Laws of Human Nature). Log actions to spot compulsions.",
+          "Test Under Stress: Observe how people act in crises—strong characters stay calm, weak ones unravel.",
+          "Stoic Judgment: Ask, “Would Seneca trust this person?” Focus on evidence, not charm.",
+          "Neuro-Hack: Journaling reduces bias, sharpening your character assessments."
+        ]
+      },
+      "dailyPlaybook": {
+        "dos": [
+          "Pattern Log: Note one person’s repeated behavior daily.",
+          "Stress Test: Observe their reaction in tense moments.",
+          "Character Question: Ask, “Is this a pattern or a one-off?”",
+          "Small Task: Test reliability with a minor request.",
+          "Stoic Lens: Ask, “What would Seneca judge here?”",
+          "Delay Trust: Wait 3 interactions before trusting.",
+          "Action Focus: Judge based on deeds, not words.",
+          "Consistency Check: Ask, “Do they follow through?”",
+          "Journal Trends: Write one character insight nightly.",
+          "Neutral Response: Say, “I’ll consider it,” to promises.",
+          "Observe Silence: Watch how they act when unwatched.",
+          "Question Excuses: Ask, “Is this a habit?”",
+          "Verify Claims: Check their history before agreeing.",
+          "Character Score: Rate their reliability (1-10) daily.",
+          "Reflect Past: Recall their last 3 actions for patterns."
+        ],
+        "donTs": [
+          "Don’t Trust Promises: Words hide weak character.",
+          "Don’t Ignore Flakes: Missed deadlines reveal habits.",
+          "Don’t Fall for Charm: It masks compulsions.",
+          "Don’t Rush Alliances: Test character first.",
+          "Don’t Excuse Patterns: Repeated flaws aren’t accidents.",
+          "Don’t Trust First Impressions: They’re deceptive.",
+          "Don’t Ignore Gut: It signals inconsistency.",
+          "Don’t Overlook Stress: Crises expose character.",
+          "Don’t Accept Guilt: It’s a manipulation tactic.",
+          "Don’t Skip Verification: Check their history.",
+          "Don’t Trust Crowds: Groups hide weak characters.",
+          "Don’t Overcommit: Weak allies drag you down.",
+          "Don’t Ignore Silence: Quiet moments reveal truth.",
+          "Don’t Buy Sob Stories: Verify before sympathizing.",
+          "Don’t Project Strength: Assume weakness until proven."
+        ]
+      },
+      "emergencyHacks": [
+        "Pause and Watch: Observe for 10 seconds before responding.",
+        "Ask Why: Question their motive aloud.",
+        "Step Back: Physically distance to assess calmly."
+      ],
+      "dailyRoutine": {
+        "morning": "Morning (5 min): Visualize someone’s past actions; repeat, “Patterns reveal character”; note one person to assess.",
+        "midday": "Midday: Test one person’s reliability with a small task; ask, “Is this a pattern?”",
+        "evening": "Evening (5 min): Journal: “What character did I spot? How can I judge better?” Rate reliability (1-10); note one lesson."
+      },
+      "greeneWarningAndYourEdge": {
+        "warning": "Greene warns, “If you cannot see character, you’ll be blindsided by others’ compulsions” (The Laws of Human Nature).",
+        "edge": "This system makes you a character expert, like Washington, while others trust blindly. You’ll wield Law 4."
+      },
+      "finalChallenge": "For 3 days, pick 3 DOs and 3 DON’Ts. Track in notebook: “DO: Pattern Log, Stress Test, Character Question. DON’T: Trust Promises, Ignore Flakes, Fall for Charm.” Score success (1-10) nightly; note one lesson. By day 4, you’ll predict behavior with precision."
+    },
+    {
+      "lawNumber": 5,
+      "lawTitle": "Become an Elusive Object of Desire – The Law of Covetousness",
+      "category": "🚦 Emotional Drivers",
+      "introduction": {
+        "english": "People crave what seems unattainable, driving their desires and actions. To master Law 5, you must become elusive, sparking others’ longing to gain influence. This guide, rooted in Greene’s insights, Stoic wisdom, neuroscience, and practical strategies, will help you apply Law 5 better than a book reader, mastering its principles like a pro.",
+        "bangla": "মানুষ অপ্রাপ্য বলে মনে হয় তা কামনা করে, যা তাদের ইচ্ছা ও ক্রিয়াকলাপকে পরিচালিত করে। আইন ৫ আয়ত্ত করতে, আপনাকে অধরা হতে হবে, অন্যদের আকাঙ্ক্ষা জাগিয়ে প্রভাব অর্জন করতে হবে। এই গাইড, গ্রিনের অন্তর্দৃষ্টি, স্টোইক জ্ঞান, নিউরোসায়েন্স এবং ব্যবহারিক কৌশলের সমন্বয়ে, আপনাকে আইন ৫ বই পড়া কারও চেয়ে ভালোভাবে প্রয়োগ করতে সহায়তা করবে, এর নীতিগুলো প্রো-এর মতো আয়ত্ত করবে।"
+      },
+      "whyThisLawApplies": {
+        "title": "Why People Covet",
+        "description": "Greene states, “The more distant you appear, the more people want you” (The Laws of Human Nature).",
+        "points": [
+          "Dopamine Chase: The brain’s reward system craves the unavailable, like chasing a rare collectible. Studies show uncertainty spikes dopamine, fueling obsession.",
+          "Scarcity Bias: People value what’s rare, overestimating its worth. You chase a “limited edition” item, ignoring its flaws.",
+          "Social Proof: Others’ desire amplifies your own, creating a frenzy. Greene notes, “Covetousness drives people to irrational pursuits.”"
+        ]
+      },
+      "historicalExamples": {
+        "title": "Historical Examples",
+        "examples": [
+          {
+            "name": "Cleopatra’s Allure",
+            "description": "Cleopatra kept Caesar and Antony enthralled by alternating presence and absence. Greene writes, “Her elusiveness made her irresistible” (The Laws of Human Nature)."
+          },
+          {
+            "name": "Sparta’s Mystique",
+            "description": "Sparta’s secretive culture made them legendary, drawing allies. Their scarcity bred desire."
+          }
+        ],
+        "otherExamples": "Marilyn Monroe’s aloof charm captivated audiences, while Louis XIV’s exclusive court made nobles vie for access."
+      },
+      "howOthersExploitYou": {
+        "title": "How Others Exploit You",
+        "description": "Greene warns, “People manipulate your desire for the unattainable” (The Laws of Human Nature).",
+        "points": [
+          "Scarcity Tricks: Marketers use “limited stock” to rush purchases. Pause and research before buying.",
+          "Emotional Teases: Some dangle affection then withdraw, like a flaky partner. Respond with, “I’ll focus on my priorities.”",
+          "Status Games: Others flaunt exclusivity to make you feel inferior. Ignore and build your own value."
+        ]
+      },
+      "howToMaster": {
+        "title": "How to Be Elusive",
+        "description": null,
+        "points": [
+          "Cultivate Mystery: Greene advises, “Reveal less than necessary” (The Laws of Human Nature). Share sparingly to spark curiosity.",
+          "Alternate Presence: Be warm, then distant, to keep others guessing.",
+          "Stoic Reserve: Seneca said, “Control your accessibility.” Limit availability to increase value.",
+          "Neuro-Hack: Dopamine dips when you’re too available; space out interactions."
+        ]
+      },
+      "dailyPlaybook": {
+        "dos": [
+          "Mystery Pause: Share one less detail than usual.",
+          "Warm-Distant Cycle: Be engaging, then withdraw briefly.",
+          "Value Question: Ask, “Am I too available?”",
+          "Delay Replies: Wait 1 hour before responding to non-urgent messages.",
+          "Stoic Mantra: Repeat, “Less is more.”",
+          "Unique Trait: Highlight one distinct quality daily.",
+          "Exit Early: Leave conversations at their peak.",
+          "Scarcity Signal: Politely decline one request daily.",
+          "Mystery Journal: Note one way you stayed elusive.",
+          "Confidence Pose: Stand tall to project allure.",
+          "Limit Social Media: Post once weekly to stay rare.",
+          "Intrigue Question: Ask, “What makes me unique?”",
+          "Selective Presence: Attend only high-value events.",
+          "Desire Score: Rate your elusiveness (1-10) nightly.",
+          "Observe Reactions: Note how others respond to your distance."
+        ],
+        "donTs": [
+          "Don’t Overshare: Too much info kills mystery.",
+          "Don’t Be Always On: Constant availability lowers value.",
+          "Don’t Chase Approval: Seeking likes reduces allure.",
+          "Don’t Stay Too Long: Overstaying dilutes impact.",
+          "Don’t Beg for Attention: It screams desperation.",
+          "Don’t Copy Others: Imitation kills uniqueness.",
+          "Don’t React Fast: Instant replies signal neediness.",
+          "Don’t Accept All Invites: Be selective.",
+          "Don’t Explain Too Much: Mystery thrives on silence.",
+          "Don’t Cling: Neediness repels desire.",
+          "Don’t Post Daily: Overexposure kills intrigue.",
+          "Don’t Follow Trends: Stand out, don’t blend in.",
+          "Don’t Seek Validation: It undermines elusiveness.",
+          "Don’t Overpromise: Empty promises cheapen you.",
+          "Don’t Fear Absence: Distance fuels desire."
+        ]
+      },
+      "emergencyHacks": [
+        "Silent Exit: Leave a conversation abruptly to spark curiosity.",
+        "Mystery Smile: Smile subtly without explaining.",
+        "Slow Walk: Move deliberately to project calm allure."
+      ],
+      "dailyRoutine": {
+        "morning": "Morning (5 min): Visualize being elusive; repeat, “Less is more”; note one way to stay mysterious.",
+        "midday": "Midday: Delay one reply; highlight a unique trait.",
+        "evening": "Evening (5 min): Journal: “How did I spark desire? How can I be rarer?” Rate elusiveness (1-10); note one lesson."
+      },
+      "greeneWarningAndYourEdge": {
+        "warning": "Greene warns, “If you’re too available, you lose all power” (The Laws of Human Nature).",
+        "edge": "This system makes you irresistible, like Cleopatra, while others chase vainly. You’ll wield Law 5."
+      },
+      "finalChallenge": "For 3 days, pick 3 DOs and 3 DON’Ts. Track in notebook: “DO: Mystery Pause, Warm-Distant Cycle, Value Question. DON’T: Overshare, Be Always On, Chase Approval.” Score success (1-10) nightly; note one lesson. By day 4, you’ll radiate allure."
+    },
+    {
+      "lawNumber": 6,
+      "lawTitle": "Elevate Your Perspective – The Law of Shortsightedness",
+      "category": "🎯 Temporal Blindness",
+      "introduction": {
+        "english": "People are trapped in the moment, reacting impulsively to short-term gains. To master Law 6, you must see the bigger picture, planning strategically for long-term success. This guide, rooted in Greene’s insights, Stoic wisdom, neuroscience, and practical strategies, will help you apply Law 6 better than a book reader, mastering its principles like a pro.",
+        "bangla": "মানুষ বর্তমান মুহূর্তে আটকে থাকে, স্বল্পমেয়াদী লাভের জন্য আবেগপ্রবণভাবে প্রতিক্রিয়া করে। আইন ৬ আয়ত্ত করতে, আপনাকে বৃহত্তর চিত্র দেখতে হবে, দীর্ঘমেয়াদী সাফল্যের জন্য কৌশলগতভাবে পরিকল্পনা করতে হবে। এই গাইড, গ্রিনের অন্তর্দৃষ্টি, স্টোইক জ্ঞান, নিউরোসায়েন্স এবং ব্যবহারিক কৌশলের সমন্বয়ে, আপনাকে আইন ৬ বই পড়া কারও চেয়ে ভালোভাবে প্রয়োগ করতে সহায়তা করবে, এর নীতিগুলো প্রো-এর মতো আয়ত্ত করবে।"
+      },
+      "whyThisLawApplies": {
+        "title": "Why You’re Shortsighted",
+        "description": "Greene states, “The present moment hypnotizes us, blinding us to consequences” (The Laws of Human Nature).",
+        "points": [
+          "Amygdala Hijack: The amygdala prioritizes immediate threats, ignoring future risks. Studies show stress narrows focus to now.",
+          "Dopamine Trap: Seeking quick rewards, like social media likes, overrides long-term planning.",
+          "Cognitive Bias: Hyperbolic discounting makes you value instant gains over future benefits, like spending instead of saving."
+        ]
+      },
+      "historicalExamples": {
+        "title": "Historical Examples",
+        "examples": [
+          {
+            "name": "Pericles’ Foresight",
+            "description": "Pericles planned Athens’ defense years ahead, avoiding rash battles. Greene writes, “His long-term vision saved Athens” (The Laws of Human Nature)."
+          },
+          {
+            "name": "Xerxes’ Blunder",
+            "description": "Xerxes’ impulsive invasion of Greece ignored logistics, leading to defeat. His shortsightedness cost Persia."
+          }
+        ],
+        "otherExamples": "Benjamin Franklin’s daily planning built his empire, while Napoleon’s hasty Russian campaign ignored winter’s toll."
+      },
+      "howOthersExploitYou": {
+        "title": "How Others Exploit You",
+        "description": "Greene warns, “People exploit your focus on the present to distract you” (The Laws of Human Nature).",
+        "points": [
+          "Urgency Scams: Marketers push “act now” deals to rush you. Pause and research.",
+          "Emotional Bait: Others provoke fear or excitement to cloud your judgment. Respond with, “I’ll evaluate this later.”",
+          "Distraction Tactics: Colleagues overload you with urgent tasks to derail your goals. Prioritize your long-term plan."
+        ]
+      },
+      "howToMaster": {
+        "title": "How to Elevate Perspective",
+        "description": null,
+        "points": [
+          "Think Long-Term: Greene advises, “Always consider the consequences of your actions” (The Laws of Human Nature). Visualize 5-year outcomes.",
+          "Plan Backward: Start with your end goal and work back to today.",
+          "Stoic Zoom-Out: Marcus Aurelius said, “See things from above.” Imagine your life from a cosmic view.",
+          "Neuro-Hack: Meditation strengthens prefrontal cortex control, enhancing foresight."
+        ]
+      },
+      "dailyPlaybook": {
+        "dos": [
+          "5-Year Vision: Ask, “Will this matter in 5 years?”",
+          "Backward Plan: Outline one goal from end to start.",
+          "Stoic Zoom: Visualize life from space daily.",
+          "Pause for Impact: Delay decisions 24 hours.",
+          "Meditate 2 Min: Clear mind for perspective.",
+          "Priority Check: Ask, “Does this align with my goal?”",
+          "Future Journal: Write one long-term outcome daily.",
+          "Consequence Map: List 3 outcomes for each choice.",
+          "Stoic Mantra: Repeat, “See the bigger picture.”",
+          "Delay Gratification: Wait 1 hour for rewards.",
+          "Goal Review: Check progress on one goal daily.",
+          "Ask Why: Question short-term urges.",
+          "Visualize Success: Picture your goal achieved.",
+          "Foresight Score: Rate perspective (1-10) nightly.",
+          "Learn from Past: Note one past shortsighted mistake."
+        ],
+        "donTs": [
+          "Don’t React Instantly: Urgency clouds judgment.",
+          "Don’t Chase Quick Wins: They derail long-term plans.",
+          "Don’t Ignore Consequences: Every choice has a ripple.",
+          "Don’t Multitask Goals: Focus on one priority.",
+          "Don’t Fall for Urgency: “Now” is a trap.",
+          "Don’t Skip Planning: Spontaneity breeds failure.",
+          "Don’t Trust Impulses: They’re shortsighted.",
+          "Don’t Overload Schedule: Leave room for strategy.",
+          "Don’t Ignore History: Past mistakes predict future ones.",
+          "Don’t Seek Instant Likes: Social media traps you in now.",
+          "Don’t Neglect Rest: Fatigue narrows focus.",
+          "Don’t Follow Crowds: They’re present-obsessed.",
+          "Don’t Skip Reviews: Unchecked plans drift.",
+          "Don’t Fear Delay: Patience builds clarity.",
+          "Don’t Obsess Over Now: It blinds you to tomorrow."
+        ]
+      },
+      "emergencyHacks": [
+        "Cosmic View: Look at the sky to shrink problems.",
+        "Future Breath: Breathe deeply, visualize 5 years ahead.",
+        "Pause Mantra: Whisper, “What’s the long game?”"
+      ],
+      "dailyRoutine": {
+        "morning": "Morning (5 min): Visualize 5-year goals; repeat, “See the bigger picture”; outline one backward plan.",
+        "midday": "Midday: Pause for one decision; ask, “Will this matter in 5 years?”",
+        "evening": "Evening (5 min): Journal: “What shortsighted choice did I avoid? How can I see further?” Rate perspective (1-10); note one lesson."
+      },
+      "greeneWarningAndYourEdge": {
+        "warning": "Greene warns, “Shortsightedness enslaves you to the moment” (The Laws of Human Nature).",
+        "edge": "This system makes you a strategist, like Pericles, while others stumble like Xerxes. You’ll wield Law 6."
+      },
+      "finalChallenge": "For 3 days, pick 3 DOs and 3 DON’Ts. Track in notebook: “DO: 5-Year Vision, Backward Plan, Stoic Zoom. DON’T: React Instantly, Chase Quick Wins, Ignore Consequences.” Score success (1-10) nightly; note one lesson. By day 4, you’ll plan like a master."
+    },
+    {
+      "lawNumber": 7,
+      "lawTitle": "Soften People’s Resistance by Confirming Their Self-Opinion – The Law of Defensiveness",
+      "category": "🛠️ Self-Destructive Patterns",
+      "introduction": {
+        "english": "People cling to their self-image, resisting anything that challenges it. To master Law 7, you must affirm their beliefs to lower defenses and gain influence. This guide, rooted in Greene’s insights, Stoic wisdom, neuroscience, and practical strategies, will help you apply Law 7 better than a book reader, mastering its principles like a pro.",
+        "bangla": "মানুষ তাদের আত্ম-চিত্রের প্রতি আঁকড়ে থাকে, যা তাদের চ্যালেঞ্জ করে তা প্রতিরোধ করে। আইন ৭ আয়ত্ত করতে, আপনাকে তাদের বিশ্বাস নিশ্চিত করে তাদের প্রতিরোধ নরম করতে হবে এবং প্রভাব অর্জন করতে হবে। এই গাইড, গ্রিনের অন্তর্দৃষ্টি, স্টোইক জ্ঞান, নিউরোসায়েন্স এবং ব্যবহারিক কৌশলের সমন্বয়ে, আপনাকে আইন ৭ বই পড়া কারও চেয়ে ভালোভাবে প্রয়োগ করতে সহায়তা করবে, এর নীতিগুলো প্রো-এর মতো আয়ত্ত করবে।"
+      },
+      "whyThisLawApplies": {
+        "title": "Why People Are Defensive",
+        "description": "Greene states, “People will fight to protect their self-opinion, even if it’s flawed” (The Laws of Human Nature).",
+        "points": [
+          "Ego Protection: The amygdala triggers defensiveness when beliefs are challenged, per neuroscience. This is why criticism sparks anger.",
+          "Confirmation Bias: People seek evidence supporting their self-image, ignoring contradictions.",
+          "Social Identity: Group belonging reinforces defensiveness, like rejecting outsider ideas to stay loyal."
+        ]
+      },
+      "historicalExamples": {
+        "title": "Historical Examples",
+        "examples": [
+          {
+            "name": "Franklin’s Charm",
+            "description": "Benjamin Franklin won rivals over by asking for small favors, affirming their expertise. Greene writes, “He softened resistance by validating others” (The Laws of Human Nature)."
+          },
+          {
+            "name": "Alcibiades’ Failure",
+            "description": "Alcibiades’ arrogance alienated allies, as he dismissed their views. His defensiveness cost Athens."
+          }
+        ],
+        "otherExamples": "Gandhi’s humble approach disarmed British resistance, while Hitler’s rigid self-image fueled disastrous decisions."
+      },
+      "howOthersExploitYou": {
+        "title": "How Others Exploit You",
+        "description": "Greene warns, “People exploit your defensiveness to shut you out” (The Laws of Human Nature).",
+        "points": [
+          "Ego Attacks: Critics provoke you to derail discussions. Stay calm and agree partially.",
+          "Flattery Traps: False praise lowers your guard, then they push agendas. Question their sincerity.",
+          "Group Pressure: Peers shame you into conforming. Respond with, “I’ll consider all perspectives.”"
+        ]
+      },
+      "howToMaster": {
+        "title": "How to Soften Resistance",
+        "description": null,
+        "points": [
+          "Affirm Beliefs: Greene advises, “Validate their self-opinion before persuading” (The Laws of Human Nature). Find common ground.",
+          "Ask for Help: Small requests make others feel valued, lowering defenses.",
+          "Stoic Humility: Epictetus said, “Admit your limits to gain trust.” Show openness.",
+          "Neuro-Hack: Mirror their tone to build rapport, reducing amygdala triggers."
+        ]
+      },
+      "dailyPlaybook": {
+        "dos": [
+          "Validate First: Agree with one point before disagreeing.",
+          "Ask for Advice: Request input to affirm their ego.",
+          "Common Ground: Find one shared belief daily.",
+          "Mirror Tone: Match their energy to build rapport.",
+          "Stoic Humility: Say, “I could be wrong, let’s explore.”",
+          "Pause Conflict: Wait 10 seconds before countering.",
+          "Compliment Sincerely: Praise one specific trait.",
+          "Listen Fully: Let them speak without interrupting.",
+          "Defuse Journal: Note one way you lowered defenses.",
+          "Neutral Reply: Say, “I see your point,” to calm tensions.",
+          "Ask Questions: Use “Why do you think that?” to engage.",
+          "Stay Calm: Keep voice steady in arguments.",
+          "Acknowledge Feelings: Say, “I understand your frustration.”",
+          "Resistance Score: Rate your softening skill (1-10) nightly.",
+          "Observe Reactions: Note how affirmation shifts their mood."
+        ],
+        "donTs": [
+          "Don’t Criticize Directly: It hardens defenses.",
+          "Don’t Interrupt: Cutting in sparks resistance.",
+          "Don’t Show Arrogance: It alienates others.",
+          "Don’t Force Opinions: Pushing breeds defiance.",
+          "Don’t Mock Beliefs: Ridicule shuts doors.",
+          "Don’t Get Emotional: Anger escalates conflicts.",
+          "Don’t Ignore Feelings: Unacknowledged emotions fester.",
+          "Don’t Rush Persuasion: Patience softens resistance.",
+          "Don’t Fake Praise: Insincerity backfires.",
+          "Don’t Dominate Talks: Let them feel heard.",
+          "Don’t Assume Motives: Ask, don’t judge.",
+          "Don’t Escalate: Avoid tit-for-tat arguments.",
+          "Don’t Neglect Tone: Harsh tones trigger defenses.",
+          "Don’t Dismiss Ideas: Even bad ones deserve a nod.",
+          "Don’t Project Superiority: It fuels resentment."
+        ]
+      },
+      "emergencyHacks": [
+        "Soft Nod: Nod gently to signal openness.",
+        "Agree First: Say, “You’re right about that part.”",
+        "Calm Breath: Breathe deeply to stay composed."
+      ],
+      "dailyRoutine": {
+        "morning": "Morning (5 min): Visualize affirming someone; repeat, “Validate to persuade”; note one person to soften.",
+        "midday": "Midday: Use one validation tactic; ask for advice in a conversation.",
+        "evening": "Evening (5 min): Journal: “How did I lower defenses? How can I improve?” Rate softening skill (1-10); note one lesson."
+      },
+      "greeneWarningAndYourEdge": {
+        "warning": "Greene warns, “Defensiveness blocks influence; affirmation opens doors” (The Laws of Human Nature).",
+        "edge": "This system makes you a persuader, like Franklin, while others clash like Alcibiades. You’ll wield Law 7."
+      },
+      "finalChallenge": "For 3 days, pick 3 DOs and 3 DON’Ts. Track in notebook: “DO: Validate First, Ask for Advice, Common Ground. DON’T: Criticize Directly, Interrupt, Show Arrogance.” Score success (1-10) nightly; note one lesson. By day 4, you’ll influence effortlessly."
+    },
+    {
+      "lawNumber": 8,
+      "lawTitle": "Change Your Circumstances by Changing Your Attitude – The Law of Self-Sabotage",
+      "category": "🛠️ Self-Destructive Patterns",
+      "introduction": {
+        "english": "Your mindset shapes your reality, often leading to self-sabotage through negativity or rigidity. To master Law 8, you must adopt a flexible, positive attitude to transform your circumstances. This guide, rooted in Greene’s insights, Stoic wisdom, neuroscience, and practical strategies, will help you apply Law 8 better than a book reader, mastering its principles like a pro.",
+        "bangla": "আপনার মানসিকতা আপনার বাস্তবতাকে গঠন করে, প্রায়শই নেতিবাচকতা বা অনড়তার মাধ্যমে আত্ম-ধ্বংসের দিকে নিয়ে যায়। আইন ৮ আয়ত্ত করতে, আপনাকে নমনীয়, ইতিবাচক মনোভাব গ্রহণ করতে হবে যাতে আপনার পরিস্থিতি পরিবর্তন হয়। এই গাইড, গ্রিনের অন্তর্দৃষ্টি, স্টোইক জ্ঞান, নিউরোসায়েন্স এবং ব্যবহারিক কৌশলের সমন্বয়ে, আপনাকে আইন ৮ বই পড়া কারও চেয়ে ভালোভাবে প্রয়োগ করতে সহায়তা করবে, এর নীতিগুলো প্রো-এর মতো আয়ত্ত করবে।"
+      },
+      "whyThisLawApplies": {
+        "title": "Why You Self-Sabotage",
+        "description": "Greene states, “Your attitude creates a self-fulfilling prophecy” (The Laws of Human Nature).",
+        "points": [
+          "Negativity Bias: The brain amplifies negative events, per neuroscience, making you dwell on failures.",
+          "Fixed Mindset: Believing abilities are static traps you in fear of failure, avoiding risks.",
+          "Cortisol Trap: Chronic stress from pessimism impairs decision-making, per studies, leading to poor outcomes."
+        ]
+      },
+      "historicalExamples": {
+        "title": "Historical Examples",
+        "examples": [
+          {
+            "name": "Edison’s Optimism",
+            "description": "Thomas Edison saw failures as lessons, iterating thousands of times to invent the lightbulb. Greene writes, “His attitude turned setbacks into success” (The Laws of Human Nature)."
+          },
+          {
+            "name": "Nero’s Collapse",
+            "description": "Nero’s negative mindset blamed others for failures, leading to paranoia and ruin."
+          }
+        ],
+        "otherExamples": "Churchill’s resilience rallied Britain in WWII, while Marie Antoinette’s denial fueled her downfall."
+      },
+      "howOthersExploitYou": {
+        "title": "How Others Exploit You",
+        "description": "Greene warns, “Your negative attitude makes you an easy target” (The Laws of Human Nature).",
+        "points": [
+          "Pessimism Bait: Critics amplify your doubts to paralyze you. Counter with, “I’ll focus on solutions.”",
+          "Blame Games: Others shift fault to your negativity. Reframe setbacks as learning.",
+          "Dependency Traps: Negative people lean on you, draining energy. Set boundaries with, “I need space.”"
+        ]
+      },
+      "howToMaster": {
+        "title": "How to Change Your Attitude",
+        "description": null,
+        "points": [
+          "Reframe Setbacks: Greene advises, “See obstacles as opportunities” (The Laws of Human Nature). Treat failures as feedback.",
+          "Growth Mindset: Embrace challenges as growth, like learning from criticism.",
+          "Stoic Acceptance: Marcus Aurelius said, “You control your perspective.” Accept what you can’t change, focus on what you can.",
+          "Neuro-Hack: Gratitude journaling rewires the brain for positivity, reducing cortisol."
+        ]
+      },
+      "dailyPlaybook": {
+        "dos": [
+          "Reframe Failure: Ask, “What did I learn?” after setbacks.",
+          "Gratitude Note: Write 3 things you’re thankful for daily.",
+          "Growth Question: Ask, “How can this make me better?”",
+          "Positive Mantra: Repeat, “I shape my reality.”",
+          "Stoic Acceptance: Say, “This is my challenge to grow.”",
+          "Smile Practice: Smile for 10 seconds to boost mood.",
+          "Solution Focus: List one solution per problem.",
+          "Mindset Journal: Note one positive attitude shift daily.",
+          "Learn from Others: Study one resilient person’s approach.",
+          "Break Routine: Try one new activity weekly.",
+          "Visualize Success: Picture overcoming a challenge.",
+          "Limit Complaints: Cap whining at 1 minute daily.",
+          "Breathe Deep: 5 breaths to reset negativity.",
+          "Attitude Score: Rate positivity (1-10) nightly.",
+          "Celebrate Wins: Note one small victory daily."
+        ],
+        "donTs": [
+          "Don’t Dwell on Failure: Obsessing breeds despair.",
+          "Don’t Blame Others: It traps you in negativity.",
+          "Don’t Say “I Can’t”: It limits growth.",
+          "Don’t Fear Criticism: It’s a chance to learn.",
+          "Don’t Stay Static: Routine kills adaptability.",
+          "Don’t Feed Pessimism: Avoid negative news loops.",
+          "Don’t Cling to Comfort: Growth requires discomfort.",
+          "Don’t Overthink Losses: Move to solutions.",
+          "Don’t Ignore Wins: Small victories fuel momentum.",
+          "Don’t Vent Excessively: It amplifies negativity.",
+          "Don’t Avoid Risks: Playing safe sabotages growth.",
+          "Don’t Compare Down: Focus on your progress.",
+          "Don’t Skip Rest: Fatigue fuels pessimism.",
+          "Don’t Deny Flaws: Admit them to grow.",
+          "Don’t Expect Perfection: It blocks progress."
+        ]
+      },
+      "emergencyHacks": [
+        "Gratitude Pause: List one thing you’re thankful for.",
+        "Reframe Whisper: Say, “This is my chance to grow.”",
+        "Smile Reset: Force a smile to shift mood."
+      ],
+      "dailyRoutine": {
+        "morning": "Morning (5 min): Visualize overcoming a setback; repeat, “I shape my reality”; write 3 gratitudes.",
+        "midday": "Midday: Reframe one challenge; ask, “How can this make me better?”",
+        "evening": "Evening (5 min): Journal: “What negative thought did I shift? How can I stay positive?” Rate positivity (1-10); note one lesson."
+      },
+      "greeneWarningAndYourEdge": {
+        "warning": "Greene warns, “A negative attitude creates a negative life” (The Laws of Human Nature).",
+        "edge": "This system makes you resilient, like Edison, while others spiral like Nero. You’ll wield Law 8."
+      },
+      "finalChallenge": "For 3 days, pick 3 DOs and 3 DON’Ts. Track in notebook: “DO: Reframe Failure, Gratitude Note, Growth Question. DON’T: Dwell on Failure, Blame Others, Say ‘I Can’t’.” Score success (1-10) nightly; note one lesson. By day 4, you’ll transform your reality."
+    },
+    {
+      "lawNumber": 9,
+      "lawTitle": "Confront Your Dark Side – The Law of Repression",
+      "category": "🛠️ Self-Destructive Patterns",
+      "introduction": {
+        "english": "Your hidden flaws and desires, when repressed, control you unconsciously. To master Law 9, you must face your dark side to gain self-control and authenticity. This guide, rooted in Greene’s insights, Stoic wisdom, neuroscience, and practical strategies, will help you apply Law 9 better than a book reader, mastering its principles like a pro.",
+        "bangla": "আপনার লুকানো ত্রুটি এবং ইচ্ছাগুলো, যখন দমন করা হয়, অবচেতনভাবে আপনাকে নিয়ন্ত্রণ করে। আইন ৯ আয়ত্ত করতে, আপনাকে আপনার অন্ধকার দিকের মুখোমুখি হতে হবে যাতে আত্ম-নিয়ন্ত্রণ এবং সত্যতা অর্জন করা যায়। এই গাইড, গ্রিনের অন্তর্দৃষ্টি, স্টোইক জ্ঞান, নিউরোসায়েন্স এবং ব্যবহারিক কৌশলের সমন্বয়ে, আপনাকে আইন ৯ বই পড়া কারও চেয়ে ভালোভাবে প্রয়োগ করতে সহায়তা করবে, এর নীতিগুলো প্রো-এর মতো আয়ত্ত করবে।"
+      },
+      "whyThisLawApplies": {
+        "title": "Why You Repress",
+        "description": "Greene states, “What you repress gains power over you” (The Laws of Human Nature).",
+        "points": [
+          "Amygdala Conflict: Repressed emotions trigger unconscious stress responses, per neuroscience, causing irrational outbursts.",
+          "Shadow Self: Carl Jung’s concept explains how suppressed desires manifest as envy or anger, like resenting a rival’s success.",
+          "Cognitive Dissonance: Denying flaws creates inner conflict, leading to self-destructive acts."
+        ]
+      },
+      "historicalExamples": {
+        "title": "Historical Examples",
+        "examples": [
+          {
+            "name": "Freud’s Insight",
+            "description": "Sigmund Freud faced his own flaws, using self-analysis to understand human drives. Greene writes, “His confrontation with the dark side revolutionized psychology” (The Laws of Human Nature)."
+          },
+          {
+            "name": "Richard III’s Denial",
+            "description": "Shakespeare’s Richard III repressed his insecurities, fueling ruthless ambition and his downfall."
+          }
+        ],
+        "otherExamples": "Gandhi faced his anger to become a peaceful leader, while Nixon’s repressed paranoia led to Watergate."
+      },
+      "howOthersExploitYou": {
+        "title": "How Others Exploit You",
+        "description": "Greene warns, “Your repressed traits make you predictable and controllable” (The Laws of Human Nature).",
+        "points": [
+          "Trigger Bait: Others provoke your hidden flaws, like a rival exposing your envy. Stay calm and reflect.",
+          "Projection Traps: People project their flaws onto you, accusing you of their vices. Respond with, “Let’s discuss facts.”",
+          "Guilt Hooks: Manipulators exploit your shame. Acknowledge flaws privately to disarm them."
+        ]
+      },
+      "howToMaster": {
+        "title": "How to Confront Your Dark Side",
+        "description": null,
+        "points": [
+          "Self-Reflection: Greene advises, “Face your shadow to master it” (The Laws of Human Nature). Journal your flaws honestly.",
+          "Own Your Flaws: Admit weaknesses, like envy, to reduce their power.",
+          "Stoic Courage: Seneca said, “Face what you fear.” List your darkest impulses without judgment.",
+          "Neuro-Hack: Meditation reduces amygdala reactivity, helping you face repressed emotions."
+        ]
+      },
+      "dailyPlaybook": {
+        "dos": [
+          "Shadow Journal: Write one flaw or dark impulse daily.",
+          "Own Weakness: Admit one fault to yourself.",
+          "Fear Question: Ask, “What am I avoiding?”",
+          "Meditate 2 Min: Reflect on a hidden emotion.",
+          "Stoic Courage: Repeat, “I face my shadow.”",
+          "Trigger Check: Note one irrational reaction daily.",
+          "Honest Pause: Pause 10 seconds when defensive.",
+          "Ask Why: Dig into one dark feeling’s root.",
+          "Forgive Self: Say, “I’m human, I’m learning.”",
+          "Shadow Score: Rate self-honesty (1-10) nightly.",
+          "Observe Envy: Note one envious thought and why.",
+          "Neutral Response: Say, “I’ll reflect on that.”",
+          "Learn from Flaws: List one lesson from a fault.",
+          "Breathe Deep: 5 breaths to face tough emotions.",
+          "Visualize Truth: Picture accepting your dark side."
+        ],
+        "donTs": [
+          "Don’t Deny Flaws: Repression strengthens them.",
+          "Don’t Blame Others: It hides your shadow.",
+          "Don’t Avoid Truth: Facing flaws builds strength.",
+          "Don’t Judge Self: Harshness blocks growth.",
+          "Don’t Hide Emotions: Suppressing fuels outbursts.",
+          "Don’t Ignore Triggers: They reveal your shadow.",
+          "Don’t Project Flaws: Own them, don’t accuse.",
+          "Don’t Fear Shame: It’s part of being human.",
+          "Don’t Rush Reflection: Take time to dig deep.",
+          "Don’t Fake Perfection: It alienates others.",
+          "Don’t Dwell on Guilt: Learn and move on.",
+          "Don’t Avoid Conflict: It exposes your dark side.",
+          "Don’t Suppress Envy: Acknowledge it to grow.",
+          "Don’t Lie to Self: Honesty frees you.",
+          "Don’t Fear Exposure: Truth builds authenticity."
+        ]
+      },
+      "emergencyHacks": [
+        "Flaw Pause: Whisper, “I accept this flaw.”",
+        "Truth Breath: Breathe deeply to face a tough emotion.",
+        "Mirror Look: Look in a mirror and say, “I’m enough.”"
+      ],
+      "dailyRoutine": {
+        "morning": "Morning (5 min): Visualize facing a flaw; repeat, “I face my shadow”; write one dark impulse.",
+        "midday": "Midday: Note one trigger; ask, “What am I avoiding?”",
+        "evening": "Evening (5 min): Journal: “What flaw did I face? How can I be honest?” Rate self-honesty (1-10); note one lesson."
+      },
+      "greeneWarningAndYourEdge": {
+        "warning": "Greene warns, “Repression of your dark side enslaves you” (The Laws of Human Nature).",
+        "edge": "This system makes you authentic, like Freud, while others crumble like Richard III. You’ll wield Law 9."
+      },
+      "finalChallenge": "For 3 days, pick 3 DOs and 3 DON’Ts. Track in notebook: “DO: Shadow Journal, Own Weakness, Fear Question. DON’T: Deny Flaws, Blame Others, Avoid Truth.” Score success (1-10) nightly; note one lesson. By day 4, you’ll control your shadow."
+    },
+    {
+      "lawNumber": 10,
+      "lawTitle": "Beware the Fragile Ego – The Law of Envy",
+      "category": "🚦 Emotional Drivers",
+      "introduction": {
+        "english": "Envy drives people to undermine those they perceive as better. To master Law 10, you must spot envy in others and yourself to protect your success. This guide, rooted in Greene’s insights, Stoic wisdom, neuroscience, and practical strategies, will help you apply Law 10 better than a book reader, mastering its principles like a pro.",
+        "bangla": "ঈর্ষা মানুষকে তাদের চেয়ে ভালো মনে হয় তাদের ক্ষতি করতে প্ররোচিত করে। আইন ১০ আয়ত্ত করতে, আপনাকে অন্যদের এবং নিজের মধ্যে ঈর্ষা চিহ্নিত করতে হবে যাতে আপনার সাফল্য রক্ষা করা যায়। এই গাইড, গ্রিনের অন্তর্দৃষ্টি, স্টোইক জ্ঞান, নিউরোসায়েন্স এবং ব্যবহারিক কৌশলের সমন্বয়ে, আপনাকে আইন ১০ বই পড়া কারও চেয়ে ভালোভাবে প্রয়োগ করতে সহায়তা করবে, এর নীতিগুলো প্রো-এর মতো আয়ত্ত করবে।"
+      },
+      "whyThisLawApplies": {
+        "title": "Why Envy Persists",
+        "description": "Greene states, “Envy is a hidden force that poisons relationships” (The Laws of Human Nature).",
+        "points": [
+          "Social Comparison: The brain compares you to others, triggering envy when you feel inferior, per neuroscience.",
+          "Dopamine Imbalance: Seeing others’ success spikes dopamine, fueling resentment if you feel lacking.",
+          "Insecurity Trigger: Envy stems from low self-worth, making you sabotage others or yourself."
+        ]
+      },
+      "historicalExamples": {
+        "title": "Historical Examples",
+        "examples": [
+          {
+            "name": "Mozart and Salieri",
+            "description": "Salieri’s envy of Mozart’s genius led to sabotage attempts. Greene writes, “Envy drove Salieri to ruin Mozart’s career” (The Laws of Human Nature)."
+          },
+          {
+            "name": "Lincoln’s Grace",
+            "description": "Lincoln ignored envious rivals, focusing on his mission, preserving his leadership."
+          }
+        ],
+        "otherExamples": "Einstein’s humility deflected envy, while Caesar’s flaunting provoked betrayal."
+      },
+      "howOthersExploitYou": {
+        "title": "How Others Exploit You",
+        "description": "Greene warns, “Envy makes others attack your success” (The Laws of Human Nature).",
+        "points": [
+          "Backhanded Compliments: Envious people praise faintly to undermine, like, “Nice work, but…” Ignore and stay focused.",
+          "Gossip Traps: They spread rumors to diminish you. Respond with silence or facts.",
+          "Sabotage Moves: Colleagues may steal credit. Protect your work discreetly."
+        ]
+      },
+      "howToMaster": {
+        "title": "How to Master Envy",
+        "description": null,
+        "points": [
+          "Spot Envy: Greene advises, “Look for subtle signs of resentment” (The Laws of Human Nature). Watch for forced smiles or passive aggression.",
+          "Own Your Envy: Admit jealous thoughts to neutralize them.",
+          "Stoic Gratitude: Marcus Aurelius said, “Focus on your own path.” Be content with what you have.",
+          "Neuro-Hack: Gratitude journaling reduces envy by rewiring comparison tendencies."
+        ]
+      },
+      "dailyPlaybook": {
+        "dos": [
+          "Envy Check: Note one envious thought daily.",
+          "Gratitude List: Write 3 things you’re thankful for.",
+          "Spot Signs: Watch for one envious cue in others.",
+          "Stoic Focus: Repeat, “My path is enough.”",
+          "Compliment Others: Praise one person’s success sincerely.",
+          "Neutral Response: Say, “Congrats!” to deflect envy.",
+          "Protect Work: Document your contributions daily.",
+          "Self-Worth Pause: Ask, “Am I enough?”",
+          "Envy Journal: Log one envy trigger and lesson.",
+          "Breathe Calm: 5 breaths to ease jealous pangs.",
+          "Focus on You: Compare only to your past self.",
+          "Celebrate Others: Cheer one person’s win daily.",
+          "Limit Exposure: Avoid envy-triggering social media.",
+          "Envy Score: Rate your envy control (1-10) nightly.",
+          "Reflect Success: Note one personal win daily."
+        ],
+        "donTs": [
+          "Don’t Compare Up: It fuels envy.",
+          "Don’t Gossip: It amplifies resentment.",
+          "Don’t Flaunt Success: It provokes envy.",
+          "Don’t React to Slights: Ignore backhanded remarks.",
+          "Don’t Seek Revenge: It escalates envy.",
+          "Don’t Dwell on Lack: Focus on abundance.",
+          "Don’t Trust Enviers: They’ll sabotage you.",
+          "Don’t Ignore Signs: Subtle cues reveal envy.",
+          "Don’t Boast: Humility deflects attacks.",
+          "Don’t Feed Insecurity: Avoid self-pity.",
+          "Don’t Engage Rumors: Silence starves them.",
+          "Don’t Overexpose: Limit success displays.",
+          "Don’t Neglect Wins: Celebrate quietly.",
+          "Don’t Judge Fast: Envy clouds perception.",
+          "Don’t Compete Vainly: Focus on your goals."
+        ]
+      },
+      "emergencyHacks": [
+        "Gratitude Snap: List one thing you’re thankful for.",
+        "Humility Pause: Whisper, “My path is enough.”",
+        "Smile Deflect: Smile at an envious slight."
+      ],
+      "dailyRoutine": {
+        "morning": "Morning (5 min): Visualize ignoring envy; repeat, “My path is enough”; write 3 gratitudes.",
+        "midday": "Midday: Spot one envy sign; praise someone’s success.",
+        "evening": "Evening (5 min): Journal: “What envy did I face? How can I stay grateful?” Rate envy control (1-10); note one lesson."
+      },
+      "greeneWarningAndYourEdge": {
+        "warning": "Greene warns, “Envy destroys from within and without” (The Laws of Human Nature).",
+        "edge": "This system makes you resilient, like Lincoln, while others falter like Salieri. You’ll wield Law 10."
+      },
+      "finalChallenge": "For 3 days, pick 3 DOs and 3 DON’Ts. Track in notebook: “DO: Envy Check, Gratitude List, Spot Signs. DON’T: Compare Up, Gossip, Flaunt Success.” Score success (1-10) nightly; note one lesson. By day 4, you’ll neutralize envy."
+    },
+    {
+      "lawNumber": 11,
+      "lawTitle": "Know Your Limits – The Law of Grandiosity",
+      "category": "🛠️ Self-Destructive Patterns",
+      "introduction": {
+        "english": "Grandiosity makes people overestimate their abilities, leading to reckless decisions. To master Law 11, you must recognize your limits to stay grounded and effective. This guide, rooted in Greene’s insights, Stoic wisdom, neuroscience, and practical strategies, will help you apply Law 11 better than a book reader, mastering its principles like a pro.",
+        "bangla": "অতি-মহত্ত্ব মানুষকে তাদের ক্ষমতাকে অতিরঞ্জিত করতে প্ররোচিত করে, যা বেপরোয়া সিদ্ধান্তের দিকে নিয়ে যায়। আইন ১১ আয়ত্ত করতে, আপনাকে আপনার সীমাবদ্ধতা চিনতে হবে যাতে ভিত্তিশীল ও কার্যকর থাকা যায়। এই গাইড, গ্রিনের অন্তর্দৃষ্টি, স্টোইক জ্ঞান, নিউরোসায়েন্স এবং ব্যবহারিক কৌশলের সমন্বয়ে, আপনাকে আইন ১১ বই পড়া কারও চেয়ে ভালোভাবে প্রয়োগ করতে সহায়তা করবে, এর নীতিগুলো প্রো-এর মতো আয়ত্ত করবে।"
+      },
+      "whyThisLawApplies": {
+        "title": "Why You’re Grandiose",
+        "description": "Greene states, “Grandiosity blinds you to your weaknesses” (The Laws of Human Nature).",
+        "points": [
+          "Dopamine Overload: Success spikes dopamine, inflating self-perception, per neuroscience.",
+          "Dunning-Kruger Effect: Low competence breeds overconfidence, like amateurs assuming mastery.",
+          "Ego Bias: You overestimate your control, ignoring luck or others’ contributions."
+        ]
+      },
+      "historicalExamples": {
+        "title": "Historical Examples",
+        "examples": [
+          {
+            "name": "Icarus’ Fall",
+            "description": "The mythical Icarus flew too high, ignoring limits, and crashed. Greene writes, “Grandiosity leads to inevitable falls” (The Laws of Human Nature)."
+          },
+          {
+            "name": "Washington’s Humility",
+            "description": "George Washington admitted his military limits, relying on advisors to win the Revolution."
+          }
+        ],
+        "otherExamples": "Steve Jobs’ overconfidence led to early failures, while Einstein’s humility fueled his breakthroughs."
+      },
+      "howOthersExploitYou": {
+        "title": "How Others Exploit You",
+        "description": "Greene warns, “Your grandiosity makes you a target for manipulation” (The Laws of Human Nature).",
+        "points": [
+          "Flattery Traps: Others inflate your ego to push risky moves. Question praise.",
+          "Overreach Bait: Colleagues encourage bold plans to watch you fail. Test ideas small first.",
+          "Dependency Hooks: Grandiose types rely on you to clean up messes. Set boundaries."
+        ]
+      },
+      "howToMaster": {
+        "title": "How to Know Your Limits",
+        "description": null,
+        "points": [
+          "Admit Weaknesses: Greene advises, “Acknowledge what you cannot do” (The Laws of Human Nature). List your flaws.",
+          "Seek Feedback: Ask trusted peers for honest input.",
+          "Stoic Humility: Epictetus said, “Know what you control.” Focus on effort, not outcomes.",
+          "Neuro-Hack: Journaling reduces overconfidence by grounding thoughts."
+        ]
+      },
+      "dailyPlaybook": {
+        "dos": [
+          "Limit Check: List one weakness daily.",
+          "Ask Feedback: Seek one honest opinion weekly.",
+          "Humility Pause: Ask, “What can’t I do here?”",
+          "Stoic Mantra: Repeat, “I control effort, not results.”",
+          "Small Test: Try one idea small before scaling.",
+          "Journal Flaws: Write one limit and how to work with it.",
+          "Delegate Smart: Assign tasks you’re weak at.",
+          "Reality Check: Ask, “Am I overestimating?”",
+          "Learn from Failure: Note one past overreach lesson.",
+          "Breathe Grounded: 5 breaths to stay humble.",
+          "Team Input: Listen to one team suggestion daily.",
+          "Limit Score: Rate humility (1-10) nightly.",
+          "Avoid Boasting: Share successes quietly.",
+          "Study Limits: Read about one humble leader.",
+          "Reflect Luck: Note one success due to chance."
+        ],
+        "donTs": [
+          "Don’t Overestimate: Assume you’re average until proven.",
+          "Don’t Ignore Feedback: It reveals blind spots.",
+          "Don’t Boast: It invites scrutiny.",
+          "Don’t Rush Big Moves: Test small first.",
+          "Don’t Deny Flaws: They limit you if ignored.",
+          "Don’t Solo Everything: Delegate weaknesses.",
+          "Don’t Trust Ego: It clouds judgment.",
+          "Don’t Seek Flattery: It fuels grandiosity.",
+          "Don’t Ignore Luck: Success isn’t all you.",
+          "Don’t Overcommit: Know your capacity.",
+          "Don’t Dismiss Critics: They expose limits.",
+          "Don’t Chase Glory: Focus on results.",
+          "Don’t Neglect Rest: Fatigue breeds overconfidence.",
+          "Don’t Assume Control: Life is unpredictable.",
+          "Don’t Fear Humility: It’s your strength."
+        ]
+      },
+      "emergencyHacks": [
+        "Flaw Pause: Whisper, “I have limits.”",
+        "Feedback Snap: Ask, “What’s my blind spot?”",
+        "Ground Breath: Breathe to reset ego."
+      ],
+      "dailyRoutine": {
+        "morning": "Morning (5 min): Visualize admitting a limit; repeat, “I control effort”; list one weakness.",
+        "midday": "Midday: Seek one feedback; ask, “What can’t I do?”",
+        "evening": "Evening (5 min): Journal: “What limit did I face? How can I stay humble?” Rate humility (1-10); note one lesson."
+      },
+      "greeneWarningAndYourEdge": {
+        "warning": "Greene warns, “Grandiosity leads to spectacular crashes” (The Laws of Human Nature).",
+        "edge": "This system keeps you grounded, like Washington, while others fall like Icarus. You’ll wield Law 11."
+      },
+      "finalChallenge": "For 3 days, pick 3 DOs and 3 DON’Ts. Track in notebook: “DO: Limit Check, Ask Feedback, Humility Pause. DON’T: Overestimate, Ignore Feedback, Boast.” Score success (1-10) nightly; note one lesson. By day 4, you’ll stay grounded."
+    },
+    {
+      "lawNumber": 12,
+      "lawTitle": "Reconnect to the Masculine or Feminine Within – The Law of Gender Rigidity",
+      "category": "🔭 Identity and Conformity",
+      "introduction": {
+        "english": "Society forces rigid gender roles, disconnecting you from your full potential. To master Law 12, you must embrace both masculine and feminine traits for balance and power. This guide, rooted in Greene’s insights, Stoic wisdom, neuroscience, and practical strategies, will help you apply Law 12 better than a book reader, mastering its principles like a pro.",
+        "bangla": "সমাজ কঠোর লিঙ্গ ভূমিকা চাপিয়ে দেয়, আপনাকে আপনার পূর্ণ সম্ভাবনা থেকে বিচ্ছিন্ন করে। আইন ১২ আয়ত্ত করতে, আপনাকে পুরুষালি এবং নারীসুলভ বৈশিষ্ট্য উভয় গ্রহণ করতে হবে যাতে ভারসাম্য এবং ক্ষমতা অর্জন করা যায়। এই গাইড, গ্রিনের অন্তর্দৃষ্টি, স্টোইক জ্ঞান, নিউরোসায়েন্স এবং ব্যবহারিক কৌশলের সমন্বয়ে, আপনাকে আইন ১২ বই পড়া কারও চেয়ে ভালোভাবে প্রয়োগ করতে সহায়তা করবে, এর নীতিগুলো প্রো-এর মতো আয়ত্ত করবে।"
+      },
+      "whyThisLawApplies": {
+        "title": "Why Gender Rigidity Limits You",
+        "description": "Greene states, “Clinging to one gender role cuts you off from half your potential” (The Laws of Human Nature).",
+        "points": [
+          "Social Conditioning: The brain adapts to societal norms, suppressing traits like empathy in men or assertiveness in women.",
+          "Hormonal Influence: Testosterone drives aggression, oxytocin fosters nurturing, but both exist in everyone, per neuroscience.",
+          "Cultural Bias: Stereotypes limit flexibility, like men avoiding vulnerability or women shying from leadership."
+        ]
+      },
+      "historicalExamples": {
+        "title": "Historical Examples",
+        "examples": [
+          {
+            "name": "Elizabeth I’s Balance",
+            "description": "Queen Elizabeth blended masculine decisiveness with feminine charm to rule England. Greene writes, “Her fluidity made her unstoppable” (The Laws of Human Nature)."
+          },
+          {
+            "name": "Napoleon’s Rigidity",
+            "description": "Napoleon’s hyper-masculine aggression ignored diplomacy, leading to defeat."
+          }
+        ],
+        "otherExamples": "Joan of Arc’s blend of courage and compassion inspired France, while Louis XIV’s rigid masculinity alienated allies."
+      },
+      "howOthersExploitYou": {
+        "title": "How Others Exploit You",
+        "description": "Greene warns, “Rigid gender roles make you predictable and weak” (The Laws of Human Nature).",
+        "points": [
+          "Stereotype Traps: Others push you into roles, like expecting women to be passive. Break norms deliberately.",
+          "Manipulation Plays: People exploit suppressed traits, like shaming men for sensitivity. Embrace all traits openly.",
+          "Conformity Pressure: Groups enforce gender norms. Defy with, “I’ll act as I see fit.”"
+        ]
+      },
+      "howToMaster": {
+        "title": "How to Reconnect",
+        "description": null,
+        "points": [
+          "Embrace Both Sides: Greene advises, “Tap into your full range of traits” (The Laws of Human Nature). Men, show empathy; women, assert dominance.",
+          "Challenge Norms: Practice “opposite” traits, like men nurturing or women leading.",
+          "Stoic Balance: Marcus Aurelius said, “Be whole, not partial.” Blend strength and softness.",
+          "Neuro-Hack: Role-playing different traits rewires neural pathways for flexibility."
+        ]
+      },
+      "dailyPlaybook": {
+        "dos": [
+          "Trait Switch: Practice one “opposite” trait daily.",
+          "Empathy Act: Show one nurturing gesture.",
+          "Assertive Move: Make one bold decision.",
+          "Stoic Balance: Repeat, “I am whole.”",
+          "Role-Play: Act out a trait you suppress.",
+          "Balance Journal: Note one blended trait daily.",
+          "Defy Norms: Break one gender stereotype daily.",
+          "Observe Others: Study one balanced leader.",
+          "Breathe Free: 5 breaths to embrace fluidity.",
+          "Ask Feedback: Seek input on your balance.",
+          "Mix Strengths: Use empathy and assertiveness in one talk.",
+          "Challenge Bias: Question one gender assumption.",
+          "Flex Score: Rate your fluidity (1-10) nightly.",
+          "Learn History: Read about one fluid figure.",
+          "Reflect Traits: Note one suppressed trait to embrace."
+        ],
+        "donTs": [
+          "Don’t Conform: Avoid rigid gender roles.",
+          "Don’t Suppress Traits: Hiding empathy or strength weakens you.",
+          "Don’t Fear Judgment: Others’ norms don’t define you.",
+          "Don’t Stick to One Role: Fluidity is power.",
+          "Don’t Avoid Vulnerability: It builds connection.",
+          "Don’t Shun Leadership: Assertiveness isn’t just male.",
+          "Don’t Follow Stereotypes: They limit potential.",
+          "Don’t Ignore Balance: One-sidedness breeds weakness.",
+          "Don’t Fear Experimenting: Try new traits.",
+          "Don’t Bow to Pressure: Defy group expectations.",
+          "Don’t Hide Emotions: Authenticity strengthens you.",
+          "Don’t Judge Others: Let them be fluid too.",
+          "Don’t Cling to Comfort: Growth requires stretching.",
+          "Don’t Deny Weakness: Admit suppressed traits.",
+          "Don’t Limit Yourself: You’re more than one role."
+        ]
+      },
+      "emergencyHacks": [
+        "Trait Swap: Act opposite for 10 seconds.",
+        "Balance Pause: Whisper, “I am whole.”",
+        "Fluid Breath: Breathe to embrace all traits."
+      ],
+      "dailyRoutine": {
+        "morning": "Morning (5 min): Visualize blending traits; repeat, “I am whole”; note one trait to practice.",
+        "midday": "Midday: Try one “opposite” trait; defy one norm.",
+        "evening": "Evening (5 min): Journal: “How did I balance traits? How can I be fluid?” Rate fluidity (1-10); note one lesson."
+      },
+      "greeneWarningAndYourEdge": {
+        "warning": "Greene warns, “Gender rigidity limits your power” (The Laws of Human Nature).",
+        "edge": "This system makes you versatile, like Elizabeth I, while others stagnate like Napoleon. You’ll wield Law 12."
+      },
+      "finalChallenge": "For 3 days, pick 3 DOs and 3 DON’Ts. Track in notebook: “DO: Trait Switch, Empathy Act, Assertive Move. DON’T: Conform, Suppress Traits, Fear Judgment.” Score success (1-10) nightly; note one lesson. By day 4, you’ll embody balance."
+    },
+    {
+      "lawNumber": 13,
+      "lawTitle": "Advance with a Sense of Purpose – The Law of Aimlessness",
+      "category": "🎯 Temporal Blindness",
+      "introduction": {
+        "english": "Without a clear purpose, you drift, vulnerable to others’ agendas and distractions. To master Law 13, you must define a guiding mission to focus your actions and gain power. This guide, rooted in Robert Greene’s insights, Stoic wisdom, neuroscience, and practical strategies, will help you apply Law 13 better than a book reader, answering questions with depth and executing its principles like a pro.",
+        "bangla": "স্পষ্ট উদ্দেশ্য ছাড়া, আপনি ভেসে বেড়ান, অন্যদের এজেন্ডা এবং বিভ্রান্তির কাছে দুর্বল হয়ে পড়েন। আইন ১৩ আয়ত্ত করতে, আপনাকে আপনার ক্রিয়াকলাপকে কেন্দ্রীভূত করতে এবং ক্ষমতা অর্জন করতে একটি পথনির্দেশক মিশন নির্ধারণ করতে হবে। এই গাইড, রবার্ট গ্রিনের অন্তর্দৃষ্টি, স্টোইক জ্ঞান, নিউরোসায়েন্স এবং ব্যবহারিক কৌশলের সমন্বয়ে, আপনাকে আইন ১৩ বই পড়া কারও চেয়ে ভালোভাবে প্রয়োগ করতে সহায়তা করবে, গভীরভাবে প্রশ্নের উত্তর দেবে এবং এর নীতিগুলো প্রো-এর মতো কার্যকর করবে।"
+      },
+      "whyThisLawApplies": {
+        "title": "Why You’re Aimless",
+        "description": "Greene states, “Human beings cannot stand the feeling of having no purpose, no mission in life” (The Laws of Human Nature).",
+        "points": [
+          "Prefrontal Weakness: Lack of goals impairs the prefrontal cortex, reducing focus, per neuroscience. This leads to indecision or chasing fleeting pleasures.",
+          "Dopamine Drift: Seeking instant rewards, like social media validation, distracts from meaningful aims. Studies show dopamine spikes from short-term wins derail long-term plans.",
+          "Social Pressure: Others’ expectations or societal trends pull you off course, like pursuing a career for status over passion."
+        ]
+      },
+      "historicalExamples": {
+        "title": "Historical Examples",
+        "examples": [
+          {
+            "name": "Martin Luther King Jr.’s Mission",
+            "description": "King’s clear purpose in civil rights unified millions. Greene writes, “His sense of purpose gave him the strength to endure and inspire” (The Laws of Human Nature)."
+          },
+          {
+            "name": "Nero’s Drift",
+            "description": "Roman Emperor Nero’s aimlessness led to erratic decisions, destabilizing Rome. His lack of focus invited chaos."
+          }
+        ],
+        "otherExamples": "Elon Musk’s vision for space exploration drives SpaceX, while Louis XVI’s indecision fueled the French Revolution."
+      },
+      "howOthersExploitYou": {
+        "title": "How Others Exploit You",
+        "description": "Greene warns, “Without a purpose, you become a tool for others’ ambitions” (The Laws of Human Nature).",
+        "points": [
+          "Agenda Traps: People impose their goals, like a boss overloading you with irrelevant tasks. Clarify your priorities to resist.",
+          "Distraction Bait: Peers push trendy pursuits to derail you. Respond with, “I’m focused on my path.”",
+          "Dependency Hooks: Aimless individuals lean on you, draining energy. Set boundaries with, “I need to prioritize my goals.”"
+        ]
+      },
+      "howToMaster": {
+        "title": "How to Find Purpose",
+        "description": null,
+        "points": [
+          "Discover Your Why: Greene advises, “You must find a purpose that resonates with your deepest inclinations” (The Laws of Human Nature). Reflect on what excites you long-term.",
+          "Set Incremental Goals: Break your purpose into daily steps to build momentum.",
+          "Stoic Alignment: Marcus Aurelius said, “Focus on what you’re destined to do.” Visualize your legacy to stay driven.",
+          "Neuro-Hack: Goal-setting boosts dopamine for sustained focus, countering short-term distractions."
+        ]
+      },
+      "dailyPlaybook": {
+        "dos": [
+          "Why Question: Ask, “What’s my purpose?” daily.",
+          "Small Goal: Set one daily step toward your mission.",
+          "Purpose Mantra: Repeat, “I have a path.”",
+          "Visualize Legacy: Picture your impact in 10 years.",
+          "Stoic Focus: Ask, “What would Marcus Aurelius do?”",
+          "Purpose Journal: Write one reason you’re driven daily.",
+          "Say No: Decline one off-purpose task daily.",
+          "Track Progress: Note one goal achieved daily.",
+          "Inspire Study: Read about one purposeful figure weekly.",
+          "Breathe Focus: Take 5 deep breaths to center on purpose.",
+          "Avoid Distractions: Limit social media to 30 minutes daily.",
+          "Align Actions: Ask, “Does this fit my mission?”",
+          "Purpose Score: Rate your focus (1-10) nightly.",
+          "Reflect Passion: Note one thing you love doing daily.",
+          "Plan Tomorrow: Outline one purpose-driven task."
+        ],
+        "donTs": [
+          "Don’t Drift: Aimlessness invites others’ control.",
+          "Don’t Follow Trends: They derail your mission.",
+          "Don’t Seek Instant Wins: Quick rewards distract.",
+          "Don’t Say Yes to All: Protect your focus.",
+          "Don’t Ignore Passion: It fuels purpose.",
+          "Don’t Multitask Goals: Focus on one mission.",
+          "Don’t Fear Solitude: Reflection builds clarity.",
+          "Don’t Chase Approval: Others’ validation misleads.",
+          "Don’t Neglect Planning: Spontaneity breeds drift.",
+          "Don’t Dwell on Failure: Learn and refocus.",
+          "Don’t Overcommit: It scatters energy.",
+          "Don’t Ignore Fatigue: Rest sharpens purpose.",
+          "Don’t Follow Crowds: They lack your vision.",
+          "Don’t Skip Reflection: Daily check-ins ground you.",
+          "Don’t Doubt Your Why: Trust your inner drive."
+        ]
+      },
+      "emergencyHacks": [
+        "Purpose Pause: Whisper, “I have a mission.”",
+        "Legacy Snap: Visualize your 10-year impact.",
+        "Focus Breath: Breathe deeply to recenter on goals."
+      ],
+      "dailyRoutine": {
+        "morning": "Morning (5 min): Visualize your legacy; repeat, “I have a path”; note one purpose-driven task.",
+        "midday": "Midday: Set one small goal; say no to one distraction.",
+        "evening": "Evening (5 min): Journal: “What advanced my purpose? How can I stay focused?” Rate focus (1-10); note one lesson."
+      },
+      "greeneWarningAndYourEdge": {
+        "warning": "Greene warns, “Without a sense of purpose, you will lose your way and become an instrument of others” (The Laws of Human Nature).",
+        "edge": "This system makes you driven, like King, while others drift like Nero. You’ll not only grasp Law 13—you’ll live it."
+      },
+      "finalChallenge": "For 3 days, pick 3 DOs and 3 DON’Ts. Track in your Stoic Notebook: “DO: Why Question, Small Goal, Purpose Mantra. DON’T: Drift, Follow Trends, Seek Instant Wins.” Score success (1-10) nightly; note one lesson. By day 4, you’ll move with unshakable purpose."
+    },
+    {
+      "lawNumber": 14,
+      "lawTitle": "Resist the Downward Pull of the Group – The Law of Conformity",
+      "category": "🔭 Identity and Conformity",
+      "introduction": {
+        "english": "Groups exert a powerful pull, making you conform and lose individuality. To master Law 14, you must resist groupthink to maintain your identity and strength. This guide, rooted in Robert Greene’s insights, Stoic wisdom, neuroscience, and practical strategies, will help you apply Law 14 better than a book reader, executing its principles like a pro.",
+        "bangla": "গোষ্ঠী একটি শক্তিশালী টান সৃষ্টি করে, যা আপনাকে সম্মতি দিতে এবং ব্যক্তিত্ব হারাতে বাধ্য করে। আইন ১৪ আয়ত্ত করতে, আপনাকে গোষ্ঠীচিন্তার প্রতিরোধ করে আপনার পরিচয় এবং শক্তি বজায় রাখতে হবে। এই গাইড, রবার্ট গ্রিনের অন্তর্দৃষ্টি, স্টোইক জ্ঞান, নিউরোসায়েন্স এবং ব্যবহারিক কৌশলের সমন্বয়ে, আপনাকে আইন ১৪ বই পড়া কারও চেয়ে ভালোভাবে প্রয়োগ করতে সহায়তা করবে, এর নীতিগুলো প্রো-এর মতো কার্যকর করবে।"
+      },
+      "whyThisLawApplies": {
+        "title": "Why You Conform",
+        "description": "Greene states, “The group has an almost magnetic pull on us, making us want to fit in” (The Laws of Human Nature).",
+        "points": [
+          "Social Brain: Mirror neurons make you mimic group behavior, per neuroscience, suppressing independent thought.",
+          "Fear of Exclusion: The amygdala triggers anxiety when you deviate, as humans evolved to seek group safety.",
+          "Cognitive Ease: Conformity requires less mental effort, leading to lazy agreement with group norms."
+        ]
+      },
+      "historicalExamples": {
+        "title": "Historical Examples",
+        "examples": [
+          {
+            "name": "Galileo’s Defiance",
+            "description": "Galileo resisted Church conformity, defending heliocentrism despite persecution. Greene writes, “His independence preserved his genius” (The Laws of Human Nature)."
+          },
+          {
+            "name": "Athenian Mob",
+            "description": "Athens’ conformity to Alcibiades’ charisma led to the disastrous Sicilian Expedition."
+          }
+        ],
+        "otherExamples": "Rosa Parks’ refusal to conform sparked civil rights change, while Nazi Germany’s groupthink enabled atrocities."
+      },
+      "howOthersExploitYou": {
+        "title": "How Others Exploit You",
+        "description": "Greene warns, “The group will manipulate you into submission if you let it” (The Laws of Human Nature).",
+        "points": [
+          "Peer Pressure: Colleagues shame you into agreeing, like pushing a bad project. Respond with, “I’ll evaluate independently.”",
+          "Group Flattery: Teams praise loyalty to trap you in conformity. Question their motives.",
+          "Exclusion Threats: Groups isolate non-conformists. Stand firm with, “I value my perspective.”"
+        ]
+      },
+      "howToMaster": {
+        "title": "How to Resist Conformity",
+        "description": null,
+        "points": [
+          "Cultivate Independence: Greene advises, “Develop an inner strength to stand apart” (The Laws of Human Nature). Trust your judgment over the crowd’s.",
+          "Question Norms: Challenge group assumptions with evidence.",
+          "Stoic Autonomy: Epictetus said, “You control your opinions.” Define your values to resist pressure.",
+          "Neuro-Hack: Solitude boosts prefrontal cortex clarity, reducing group influence."
+        ]
+      },
+      "dailyPlaybook": {
+        "dos": [
+          "Independence Pause: Ask, “Is this my view or the group’s?”",
+          "Question Norms: Challenge one group assumption daily.",
+          "Stoic Mantra: Repeat, “I control my mind.”",
+          "Solo Time: Spend 10 minutes alone daily.",
+          "Value Check: List one core belief daily.",
+          "Defy Pressure: Politely disagree once daily.",
+          "Evidence Seek: Base one opinion on facts, not groupthink.",
+          "Conformity Journal: Note one group pull resisted.",
+          "Breathe Free: Take 5 breaths to stay independent.",
+          "Study Rebels: Read about one non-conformist weekly.",
+          "Neutral Reply: Say, “I’ll think it over,” to group demands.",
+          "Observe Group: Note one conformist behavior in others.",
+          "Stand Firm: Hold one unique opinion daily.",
+          "Freedom Score: Rate independence (1-10) nightly.",
+          "Reflect Values: Note one way you stayed true to yourself."
+        ],
+        "donTs": [
+          "Don’t Follow Blindly: Groupthink clouds judgment.",
+          "Don’t Fear Exclusion: Solitude is strength.",
+          "Don’t Seek Approval: It traps you in conformity.",
+          "Don’t Mimic Others: Copying kills individuality.",
+          "Don’t Rush Agreement: Take time to think.",
+          "Don’t Ignore Doubt: It signals group pressure.",
+          "Don’t Bow to Shame: Guilt is a control tactic.",
+          "Don’t Trust Crowds: They amplify errors.",
+          "Don’t Suppress Opinions: Voice your truth calmly.",
+          "Don’t Fear Conflict: Disagreement sharpens thought.",
+          "Don’t Chase Belonging: Authenticity trumps fitting in.",
+          "Don’t Neglect Facts: Emotions sway groups.",
+          "Don’t Avoid Solitude: It builds clarity.",
+          "Don’t Conform for Ease: Effort builds character.",
+          "Don’t Lose Yourself: Groups erode identity."
+        ]
+      },
+      "emergencyHacks": [
+        "Independence Snap: Whisper, “I am my own.”",
+        "Solo Pause: Step away for 10 seconds.",
+        "Truth Breath: Breathe deeply to hold your ground."
+      ],
+      "dailyRoutine": {
+        "morning": "Morning (5 min): Visualize resisting group pressure; repeat, “I control my mind”; list one core value.",
+        "midday": "Midday: Challenge one group norm; spend 10 minutes alone.",
+        "evening": "Evening (5 min): Journal: “How did I stay independent? How can I strengthen my resolve?” Rate independence (1-10); note one lesson."
+      },
+      "greeneWarningAndYourEdge": {
+        "warning": "Greene warns, “Conformity makes you a shadow of yourself, controlled by the group” (The Laws of Human Nature).",
+        "edge": "This system makes you a rebel, like Galileo, while others conform like the Athenians. You’ll wield Law 14."
+      },
+      "finalChallenge": "For 3 days, pick 3 DOs and 3 DON’Ts. Track in your Stoic Notebook: “DO: Independence Pause, Question Norms, Stoic Mantra. DON’T: Follow Blindly, Fear Exclusion, Seek Approval.” Score success (1-10) nightly; note one lesson. By day 4, you’ll stand unshakably independent."
+    },
+    {
+      "lawNumber": 15,
+      "lawTitle": "Make Them Want to Follow You – The Law of Fickleness",
+      "category": "🎭 Social Manipulation",
+      "introduction": {
+        "english": "People are fickle, shifting loyalty based on emotions and self-interest. To master Law 15, you must inspire consistent followership through charisma and vision. This guide, rooted in Robert Greene’s insights, Stoic wisdom, neuroscience, and practical strategies, will help you apply Law 15 better than a book reader, executing its principles like a pro.",
+        "bangla": "মানুষ চঞ্চল, আবেগ এবং স্বার্থের উপর ভিত্তি করে তাদের আনুগত্য পরিবর্তন করে। আইন ১৫ আয়ত্ত করতে, আপনাকে ক্যারিশমা এবং দৃষ্টিভঙ্গির মাধ্যমে স্থির অনুসরণকারীদের অনুপ্রাণিত করতে হবে। এই গাইড, রবার্ট গ্রিনের অন্তর্দৃষ্টি, স্টোইক জ্ঞান, নিউরোসায়েন্স এবং ব্যবহারিক কৌশলের সমন্বয়ে, আপনাকে আইন ১৫ বই পড়া কারও চেয়ে ভালোভাবে প্রয়োগ করতে সহায়তা করবে, এর নীতিগুলো প্রো-এর মতো কার্যকর করবে।"
+      },
+      "whyThisLawApplies": {
+        "title": "Why People Are Fickle",
+        "description": "Greene states, “People are inherently fickle, ready to turn against you the moment their mood shifts” (The Laws of Human Nature).",
+        "points": [
+          "Emotional Volatility: The amygdala drives mood swings, making loyalty unstable, per neuroscience.",
+          "Self-Interest Bias: People prioritize personal gain, switching sides when benefits fade.",
+          "Social Influence: Group dynamics sway individuals, like fans abandoning a losing team."
+        ]
+      },
+      "historicalExamples": {
+        "title": "Historical Examples",
+        "examples": [
+          {
+            "name": "Cleopatra’s Charisma",
+            "description": "Cleopatra inspired loyalty in Caesar and Antony with her vision and charm. Greene writes, “She made others want to follow her, despite their fickleness” (The Laws of Human Nature)."
+          },
+          {
+            "name": "Robespierre’s Fall",
+            "description": "Robespierre’s rigid leadership lost the French Revolution’s crowd, leading to his execution."
+          }
+        ],
+        "otherExamples": "Churchill’s speeches rallied Britain through crises, while Nero’s erratic rule alienated followers."
+      },
+      "howOthersExploitYou": {
+        "title": "How Others Exploit You",
+        "description": "Greene warns, “Fickle people will abandon you unless you keep them engaged” (The Laws of Human Nature).",
+        "points": [
+          "Mood Manipulation: Others exploit emotional swings to sway you, like a colleague stirring drama. Stay steady with, “I’ll assess this calmly.”",
+          "Loyalty Tests: People demand constant validation to stay loyal. Set boundaries with, “I value mutual respect.”",
+          "Crowd Sway: Groups pull you into their fickle shifts. Anchor to your vision."
+        ]
+      },
+      "howToMaster": {
+        "title": "How to Inspire Followership",
+        "description": null,
+        "points": [
+          "Project Vision: Greene advises, “Give people something larger to believe in” (The Laws of Human Nature). Share a compelling goal.",
+          "Show Consistency: Be reliable to counter fickleness.",
+          "Stoic Magnetism: Seneca said, “Lead by example.” Model integrity to attract loyalty.",
+          "Neuro-Hack: Storytelling boosts oxytocin, fostering trust in followers."
+        ]
+      },
+      "dailyPlaybook": {
+        "dos": [
+          "Vision Share: Articulate one inspiring goal daily.",
+          "Consistent Act: Follow through on one promise daily.",
+          "Stoic Example: Repeat, “I lead by integrity.”",
+          "Story Tell: Share one vision-driven story weekly.",
+          "Engage Emotion: Connect with one person’s feelings daily.",
+          "Loyalty Journal: Note one way you inspired trust.",
+          "Show Gratitude: Thank one follower sincerely daily.",
+          "Calm Presence: Stay steady in one tense moment.",
+          "Breathe Charisma: Take 5 breaths to project confidence.",
+          "Ask Input: Seek one follower’s opinion daily.",
+          "Model Values: Act on one core value visibly.",
+          "Inspire Pause: Ask, “How can I motivate them?”",
+          "Build Trust: Do one reliable act daily.",
+          "Leadership Score: Rate your influence (1-10) nightly.",
+          "Reflect Impact: Note one way you led effectively."
+        ],
+        "donTs": [
+          "Don’t Be Erratic: Inconsistency loses followers.",
+          "Don’t Ignore Emotions: Fickle people need connection.",
+          "Don’t Demand Loyalty: It must be earned.",
+          "Don’t Lack Vision: Aimlessness repels followers.",
+          "Don’t Show Weakness: Hesitation fuels doubt.",
+          "Don’t Neglect Gratitude: Ungrateful leaders lose support.",
+          "Don’t React Rashly: Mood swings scare followers.",
+          "Don’t Ignore Input: Exclusion breeds disloyalty.",
+          "Don’t Lack Clarity: Vague goals confuse.",
+          "Don’t Be Arrogant: Pride alienates.",
+          "Don’t Break Promises: It erodes trust.",
+          "Don’t Follow Fickleness: Stay above mood swings.",
+          "Don’t Neglect Presence: Charisma requires effort.",
+          "Don’t Fear Rejection: Some won’t follow.",
+          "Don’t Lose Focus: Vision keeps you grounded."
+        ]
+      },
+      "emergencyHacks": [
+        "Vision Snap: State your goal aloud to refocus.",
+        "Calm Smile: Smile to steady followers’ nerves.",
+        "Trust Breath: Breathe deeply to project reliability."
+      ],
+      "dailyRoutine": {
+        "morning": "Morning (5 min): Visualize inspiring others; repeat, “I lead by integrity”; note one vision to share.",
+        "midday": "Midday: Share one goal story; thank one follower.",
+        "evening": "Evening (5 min): Journal: “How did I inspire? How can I lead better?” Rate influence (1-10); note one lesson."
+      },
+      "greeneWarningAndYourEdge": {
+        "warning": "Greene warns, “If you cannot inspire loyalty, fickle people will turn on you” (The Laws of Human Nature).",
+        "edge": "This system makes you magnetic, like Cleopatra, while others falter like Robespierre. You’ll wield Law 15."
+      },
+      "finalChallenge": "For 3 days, pick 3 DOs and 3 DON’Ts. Track in your Stoic Notebook: “DO: Vision Share, Consistent Act, Stoic Example. DON’T: Be Erratic, Ignore Emotions, Demand Loyalty.” Score success (1-10) nightly; note one lesson. By day 4, you’ll command loyalty effortlessly."
+    },
+    {
+      "lawNumber": 16,
+      "lawTitle": "See the Hostility Behind the Friendly Façade – The Law of Aggression",
+      "category": "🎭 Social Manipulation",
+      "introduction": {
+        "english": "Beneath friendly exteriors, people harbor aggression that can harm you if ignored. To master Law 16, you must detect and counter hidden hostility to protect yourself and gain control. This guide, rooted in Robert Greene’s insights, Stoic wisdom, neuroscience, and practical strategies, will help you apply Law 16 better than a book reader, executing its principles like a pro.",
+        "bangla": "freundly বাহ্যিকতার নীচে, মানুষ আগ্রাসন লুকিয়ে রাখে যা অগ্রাহ্য করলে আপনার ক্ষতি করতে পারে। আইন ১৬ আয়ত্ত করতে, আপনাকে লুকানো শত্রুতা শনাক্ত করতে এবং প্রতিহত করতে হবে যাতে নিজেকে রক্ষা করা এবং নিয়ন্ত্রণ অর্জন করা যায়। এই গাইড, রবার্ট গ্রিনের অন্তর্দৃষ্টি, স্টোইক জ্ঞান, নিউরোসায়েন্স এবং ব্যবহারিক কৌশলের সমন্বয়ে, আপনাকে আইন ১৬ বই পড়া কারও চেয়ে ভালোভাবে প্রয়োগ করতে সহায়তা করবে, এর নীতিগুলো প্রো-এর মতো কার্যকর করবে।"
+      },
+      "whyThisLawApplies": {
+        "title": "Why Aggression Hides",
+        "description": "Greene states, “Human aggression is often disguised as friendliness to catch you off guard” (The Laws of Human Nature).",
+        "points": [
+          "Amygdala Drive: Aggression stems from the amygdala’s fight response, masked by social norms, per neuroscience.",
+          "Passive Aggression: People express hostility indirectly, like sarcasm or sabotage, to avoid accountability.",
+          "Ego Protection: Aggression defends fragile egos, like resenting a rival’s success."
+        ]
+      },
+      "historicalExamples": {
+        "title": "Historical Examples",
+        "examples": [
+          {
+            "name": "Machiavelli’s Insight",
+            "description": "Machiavelli saw through allies’ smiles to their schemes, maintaining power. Greene writes, “He neutralized aggression by anticipating it” (The Laws of Human Nature)."
+          },
+          {
+            "name": "Sulla’s Blindness",
+            "description": "Roman general Sulla ignored rivals’ hidden hostility, leading to betrayals."
+          }
+        ],
+        "otherExamples": "Lincoln detected Southern aggression behind diplomacy, preparing for war, while Nero missed courtiers’ plots, leading to his downfall."
+      },
+      "howOthersExploitYou": {
+        "title": "How Others Exploit You",
+        "description": "Greene warns, “Hidden aggression will undermine you if you don’t see it” (The Laws of Human Nature).",
+        "points": [
+          "Subtle Jabs: Colleagues use sarcasm or backhanded compliments to unsettle you. Respond with, “Can you clarify?”",
+          "Sabotage Moves: Rivals block your progress covertly, like withholding information. Document interactions.",
+          "False Friendliness: Smiles hide agendas. Watch for mismatched body language."
+        ]
+      },
+      "howToMaster": {
+        "title": "How to Counter Aggression",
+        "description": null,
+        "points": [
+          "Spot Hostility: Greene advises, “Look for signs of aggression in subtle behaviors” (The Laws of Human Nature). Note tone shifts or forced smiles.",
+          "Stay Calm: Neutralize hostility with composure, not confrontation.",
+          "Stoic Detachment: Epictetus said, “Don’t let others’ hostility disturb you.” Focus on your response.",
+          "Neuro-Hack: Slow breathing reduces amygdala reactivity, sharpening your perception."
+        ]
+      },
+      "dailyPlaybook": {
+        "dos": [
+          "Hostility Scan: Note one subtle aggressive cue daily.",
+          "Calm Response: Stay composed during one jab.",
+          "Stoic Mantra: Repeat, “I control my peace.”",
+          "Body Language Check: Watch for mismatched smiles or gestures.",
+          "Clarify Intent: Ask, “What do you mean?” to expose hostility.",
+          "Aggression Journal: Log one hidden aggressive act daily.",
+          "Breathe Slow: Take 5 deep breaths to stay calm.",
+          "Document Moves: Record one interaction for evidence.",
+          "Neutral Reply: Say, “I’ll consider that,” to jabs.",
+          "Observe Silence: Note behavior when they think you’re not watching.",
+          "Stoic Pause: Ask, “What would Epictetus do?”",
+          "Deflect Sarcasm: Respond with a neutral question.",
+          "Protect Work: Secure one project from sabotage daily.",
+          "Hostility Score: Rate your detection (1-10) nightly.",
+          "Reflect Cues: Note one aggressive pattern learned."
+        ],
+        "donTs": [
+          "Don’t Trust Smiles: They hide hostility.",
+          "Don’t React Emotionally: It fuels aggression.",
+          "Don’t Ignore Jabs: Small slights signal bigger threats.",
+          "Don’t Confront Rashly: It escalates conflict.",
+          "Don’t Miss Body Language: Cues reveal truth.",
+          "Don’t Share Freely: Aggressors exploit openness.",
+          "Don’t Ignore Patterns: Repeated jabs aren’t random.",
+          "Don’t Trust Flattery: It masks agendas.",
+          "Don’t Neglect Evidence: Document interactions.",
+          "Don’t Escalate: Stay above their level.",
+          "Don’t Assume Goodwill: Verify intentions.",
+          "Don’t Expose Weakness: Stay guarded.",
+          "Don’t Ignore Gut: It senses hostility.",
+          "Don’t Overlook Silence: Quiet moments reveal intent.",
+          "Don’t Retaliate: It traps you in their game."
+        ]
+      },
+      "emergencyHacks": [
+        "Calm Pause: Count to 10 before responding.",
+        "Neutral Glance: Look past their jab calmly.",
+        "Steady Breath: Breathe deeply to stay composed."
+      ],
+      "dailyRoutine": {
+        "morning": "Morning (5 min): Visualize detecting hostility; repeat, “I control my peace”; note one person to watch.",
+        "midday": "Midday: Spot one aggressive cue; respond neutrally.",
+        "evening": "Evening (5 min): Journal: “What hostility did I see? How can I stay sharp?” Rate detection (1-10); note one lesson."
+      },
+      "greeneWarningAndYourEdge": {
+        "warning": "Greene warns, “If you cannot see the hostility behind the façade, you will be blindsided” (The Laws of Human Nature).",
+        "edge": "This system makes you perceptive, like Machiavelli, while others fall like Sulla. You’ll wield Law 16."
+      },
+      "finalChallenge": "For 3 days, pick 3 DOs and 3 DON’Ts. Track in your Stoic Notebook: “DO: Hostility Scan, Calm Response, Stoic Mantra. DON’T: Trust Smiles, React Emotionally, Ignore Jabs.” Score success (1-10) nightly; note one lesson. By day 4, you’ll neutralize aggression with ease."
+    },
+    {
+      "lawNumber": 17,
+      "lawTitle": "Seize the Historical Moment – The Law of Generational Myopia",
+      "category": "🎯 Temporal Blindness",
+      "introduction": {
+        "english": "Each generation is shaped by its time, blinding you to broader historical patterns. To master Law 17, you must see beyond your era’s biases to act strategically. This guide, rooted in Robert Greene’s insights, Stoic wisdom, neuroscience, and practical strategies, will help you apply Law 17 better than a book reader, executing its principles like a pro.",
+        "bangla": "প্রতিটি প্রজন্ম তার সময় দ্বারা গঠিত হয়, যা আপনাকে বিস্তৃত ঐতিহাসিক ধরণ থেকে অন্ধ করে দেয়। আইন ১৭ আয়ত্ত করতে, আপনাকে আপনার যুগের পক্ষপাতের বাইরে দেখতে হবে যাতে কৌশলগতভাবে কাজ করা যায়। এই গাইড, রবার্ট গ্রিনের অন্তর্দৃষ্টি, স্টোইক জ্ঞান, নিউরোসায়েন্স এবং ব্যবহারিক কৌশলের সমন্বয়ে, আপনাকে আইন ১৭ বই পড়া কারও চেয়ে ভালোভাবে প্রয়োগ করতে সহায়তা করবে, এর নীতিগুলো প্রো-এর মতো কার্যকর করবে।"
+      },
+      "whyThisLawApplies": {
+        "title": "Why You’re Myopic",
+        "description": "Greene states, “We are trapped in the illusions of our own generation” (The Laws of Human Nature).",
+        "points": [
+          "Cultural Wiring: The brain adapts to your era’s norms, limiting perspective, per neuroscience.",
+          "Recency Bias: You overvalue current trends, ignoring historical cycles, like assuming tech booms last forever.",
+          "Groupthink: Your generation’s shared beliefs reinforce blind spots, dismissing older wisdom."
+        ]
+      },
+      "historicalExamples": {
+        "title": "Historical Examples",
+        "examples": [
+          {
+            "name": "Roosevelt’s Vision",
+            "description": "Franklin D. Roosevelt saw beyond the Great Depression’s despair, using history to craft the New Deal. Greene writes, “He seized the moment by understanding the past” (The Laws of Human Nature)."
+          },
+          {
+            "name": "Versailles’ Blindness",
+            "description": "Post-WWI leaders ignored history’s lessons, crafting a treaty that fueled WWII."
+          }
+        ],
+        "otherExamples": "Machiavelli used historical patterns to advise princes, while 1920s investors’ myopia triggered the stock market crash."
+      },
+      "howOthersExploitYou": {
+        "title": "How Others Exploit You",
+        "description": "Greene warns, “Your generational blind spots make you predictable” (The Laws of Human Nature).",
+        "points": [
+          "Trend Traps: Marketers push “new” fads to exploit your recency bias. Research historical context before buying in.",
+          "Nostalgia Bait: Others romanticize the past to sway you. Question with, “What’s the evidence?”",
+          "Group Pressure: Peers enforce generational norms, like dismissing older strategies. Stay open-minded."
+        ]
+      },
+      "howToMaster": {
+        "title": "How to Seize the Moment",
+        "description": null,
+        "points": [
+          "Study History: Greene advises, “Learn the patterns of the past to navigate the present” (The Laws of Human Nature). Read historical accounts to spot cycles.",
+          "Broaden Perspective: Engage with other generations’ views.",
+          "Stoic Timelessness: Marcus Aurelius said, “See things as they are, across time.” Detach from current fads.",
+          "Neuro-Hack: Cross-generational conversations boost cognitive flexibility, reducing bias."
+        ]
+      },
+      "dailyPlaybook": {
+        "dos": [
+          "History Read: Study one historical event daily.",
+          "Cycle Question: Ask, “Is this a repeating pattern?”",
+          "Stoic Lens: Repeat, “I see beyond my time.”",
+          "Cross-Gen Talk: Chat with someone from another generation.",
+          "Trend Pause: Question one current fad daily.",
+          "History Journal: Note one past lesson applied today.",
+          "Broad View: Consider one older perspective daily.",
+          "Breathe Wide: Take 5 breaths to detach from now.",
+          "Learn Cycles: Study one historical figure’s strategy.",
+          "Context Check: Research one trend’s background.",
+          "Open Mind: Listen to one opposing era’s view.",
+          "Pattern Seek: Note one historical parallel daily.",
+          "Vision Score: Rate your perspective (1-10) nightly.",
+          "Reflect Past: Note one way history guided you.",
+          "Question Norms: Challenge one generational belief."
+        ],
+        "donTs": [
+          "Don’t Trust Trends: They’re often fleeting.",
+          "Don’t Ignore History: It predicts the future.",
+          "Don’t Cling to Now: Recency bias blinds you.",
+          "Don’t Dismiss Elders: Their wisdom grounds you.",
+          "Don’t Follow Fads: They obscure patterns.",
+          "Don’t Assume Newness: Most ideas repeat.",
+          "Don’t Neglect Context: Current events need history.",
+          "Don’t Stay Narrow: Engage beyond your era.",
+          "Don’t Fear Old Ideas: They often work best.",
+          "Don’t Rush Decisions: History rewards patience.",
+          "Don’t Ignore Cycles: Patterns shape outcomes.",
+          "Don’t Trust Groupthink: Generations err together.",
+          "Don’t Skip Study: Ignorance traps you in now.",
+          "Don’t Overvalue Tech: Tools change, patterns don’t.",
+          "Don’t Deny Patterns: History repeats if ignored."
+        ]
+      },
+      "emergencyHacks": [
+        "History Snap: Recall one past parallel.",
+        "Timeless Pause: Whisper, “I see the long view.”",
+        "Cycle Breath: Breathe to connect past and present."
+      ],
+      "dailyRoutine": {
+        "morning": "Morning (5 min): Visualize historical patterns; repeat, “I see beyond my time”; note one event to study.",
+        "midday": "Midday: Question one trend; talk with another generation.",
+        "evening": "Evening (5 min): Journal: “What pattern did I see? How can I broaden my view?” Rate perspective (1-10); note one lesson."
+      },
+      "greeneWarningAndYourEdge": {
+        "warning": "Greene warns, “Trapped in your generation’s myopia, you will miss the larger currents of history” (The Laws of Human Nature).",
+        "edge": "This system makes you a visionary, like Roosevelt, while others stumble like Versailles’ leaders. You’ll wield Law 17."
+      },
+      "finalChallenge": "For 3 days, pick 3 DOs and 3 DON’Ts. Track in your Stoic Notebook: “DO: History Read, Cycle Question, Stoic Lens. DON’T: Trust Trends, Ignore History, Cling to Now.” Score success (1-10) nightly; note one lesson. By day 4, you’ll seize the moment with clarity."
+    },
+    {
+      "lawNumber": 18,
+      "lawTitle": "Meditate on Our Common Mortality – The Law of Denial",
+      "category": "🎯 Temporal Blindness",
+      "introduction": {
+        "english": "Denying mortality makes you waste time and avoid life’s urgency. To master Law 18, you must embrace death’s reality to live fully and prioritize what matters. This guide, rooted in Robert Greene’s insights, Stoic wisdom, neuroscience, and practical strategies, will help you apply Law 18 better than a book reader, executing its principles like a pro.",
+        "bangla": " মৃত্যুকে অস্বীকার করা আপনাকে সময় নষ্ট করতে এবং জীবনের জরুরিতা এড়াতে বাধ্য করে। আইন ১৮ আয়ত্ত করতে, আপনাকে মৃত্যুর বাস্তবতাকে আলিঙ্গন করতে হবে যাতে পূর্ণভাবে বাঁচা যায় এবং গুরুত্বপূর্ণ বিষয়গুলোকে অগ্রাধিকার দেওয়া যায়। এই গাইড, রবার্ট গ্রিনের অন্তর্দৃষ্টি, স্টোইক জ্ঞান, নিউরোসায়েন্স এবং ব্যবহারিক কৌশলের সমন্বয়ে, আপনাকে আইন ১৮ বই পড়া কারও চেয়ে ভালোভাবে প্রয়োগ করতে সহায়তা করবে, এর নীতিগুলো প্রো-এর মতো কার্যকর করবে।"
+      },
+      "whyThisLawApplies": {
+        "title": "Why You Deny Death",
+        "description": "Greene states, “We live in denial of our mortality, squandering our time as if it were infinite” (The Laws of Human Nature).",
+        "points": [
+          "Fear Circuit: The amygdala suppresses thoughts of death to avoid anxiety, per neuroscience, leading to procrastination.",
+          "Optimism Bias: You assume you have endless time, delaying meaningful actions.",
+          "Cultural Distraction: Modern life buries mortality under entertainment and busyness, dulling urgency."
+        ]
+      },
+      "historicalExamples": {
+        "title": "Historical Examples",
+        "examples": [
+          {
+            "name": "Seneca’s Memento Mori",
+            "description": "Stoic philosopher Seneca meditated on death daily, prioritizing virtue. Greene writes, “His awareness of mortality sharpened his life’s purpose” (The Laws of Human Nature)."
+          },
+          {
+            "name": "Louis XV’s Denial",
+            "description": "French King Louis XV ignored mortality, indulging in excess, weakening France."
+          }
+        ],
+        "otherExamples": "Steve Jobs’ brush with death focused his innovation, while Cleopatra’s mortality awareness drove her bold legacy."
+      },
+      "howOthersExploitYou": {
+        "title": "How Others Exploit You",
+        "description": "Greene warns, “Your denial of death makes you waste your life on trivialities” (The Laws of Human Nature).",
+        "points": [
+          "Distraction Traps: Media and marketers push mindless consumption to keep you distracted. Limit exposure.",
+          "Urgency Scams: Others exploit your time with “act now” schemes. Pause and prioritize your goals.",
+          "Complacency Bait: Peers encourage laziness, saying, “There’s always tomorrow.” Act with, “Time is finite.”"
+        ]
+      },
+      "howToMaster": {
+        "title": "How to Embrace Mortality",
+        "description": null,
+        "points": [
+          "Meditate on Death: Greene advises, “Confronting mortality gives you urgency and clarity” (The Laws of Human Nature). Reflect daily on life’s brevity.",
+          "Prioritize Meaning: Focus on what aligns with your legacy.",
+          "Stoic Memento Mori: Seneca said, “Keep death in mind to live well.” Visualize your final day to sharpen focus.",
+          "Neuro-Hack: Gratitude journaling reduces death anxiety, boosting purposeful action."
+        ]
+      },
+      "dailyPlaybook": {
+        "dos": [
+          "Mortality Pause: Reflect on death for 1 minute daily.",
+          "Priority Check: Ask, “Is this worth my time?”",
+          "Stoic Mantra: Repeat, “Time is finite.”",
+          "Gratitude List: Write 3 things you cherish daily.",
+          "Legacy Goal: Set one meaningful task daily.",
+          "Memento Mori: Visualize your last day weekly.",
+          "Time Journal: Note one way you used time well.",
+          "Say No: Decline one trivial task daily.",
+          "Breathe Urgency: Take 5 breaths to focus on now.",
+          "Study Lives: Read about one mortal’s legacy weekly.",
+          "Act Now: Complete one delayed task daily.",
+          "Value Time: Treat each hour as irreplaceable.",
+          "Purpose Pause: Ask, “What’s my legacy?”",
+          "Mortality Score: Rate urgency (1-10) nightly.",
+          "Reflect End: Note one way you lived fully today."
+        ],
+        "donTs": [
+          "Don’t Waste Time: Trivialities steal your life.",
+          "Don’t Procrastinate: “Later” is a lie.",
+          "Don’t Ignore Death: Denial dulls purpose.",
+          "Don’t Chase Distractions: Media numbs urgency.",
+          "Don’t Say “Forever”: Time runs out.",
+          "Don’t Neglect Goals: They define your legacy.",
+          "Don’t Fear Mortality: It sharpens focus.",
+          "Don’t Overcommit: Protect your time.",
+          "Don’t Live for Others: Their priorities aren’t yours.",
+          "Don’t Skip Reflection: It grounds urgency.",
+          "Don’t Cling to Comfort: Growth requires action.",
+          "Don’t Ignore End: Death gives life meaning.",
+          "Don’t Multitask Life: Focus on what matters.",
+          "Don’t Deny Limits: Time is your constraint.",
+          "Don’t Lose Urgency: Live like today’s your last."
+        ]
+      },
+      "emergencyHacks": [
+        "Death Snap: Whisper, “This could be my last day.”",
+        "Urgency Pause: Prioritize one task instantly.",
+        "Grateful Breath: Breathe to cherish the moment."
+      ],
+      "dailyRoutine": {
+        "morning": "Morning (5 min): Visualize your final day; repeat, “Time is finite”; note one legacy task.",
+        "midday": "Midday: Reflect on mortality; complete one meaningful task.",
+        "evening": "Evening (5 min): Journal: “How did I live fully? How can I seize time?” Rate urgency (1-10); note one lesson."
+      },
+      "greeneWarningAndYourEdge": {
+        "warning": "Greene warns, “Denying death, you squander the only life you have” (The Laws of Human Nature).",
+        "edge": "This system makes you purposeful, like Seneca, while others waste time like Louis XV. You’ll wield Law 18."
+      },
+      "finalChallenge": "For 3 days, pick 3 DOs and 3 DON’Ts. Track in your Stoic Notebook: “DO: Mortality Pause, Priority Check, Stoic Mantra. DON’T: Waste Time, Procrastinate, Ignore Death.” Score success (1-10) nightly; note one lesson. By day 4, you’ll live with profound urgency."
+    }
+  ]
+}

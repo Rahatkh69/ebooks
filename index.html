@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power eBook Collection</title>
+    <link rel="icon" href="a.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            background-image: radial-gradient(#eeeeee 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 0.5rem;
+        }
+
+        p.subtitle {
+            font-size: 1.1rem;
+            color: #252525;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .books-container {
+            display: grid;
+            grid-template-columns: 1fr; /* Default for all phones (1 column) */
+            gap: 2rem;
+            width: 100%;
+            max-width: 1200px; /* Increased max-width to allow 4 columns on larger screens */
+        }
+
+        .book-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px); /* Added slight lift on hover */
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .book-card a {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .book-image {
+            height: 200px;
+            background-color: #f5f9ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .book-image::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0));
+        }
+
+        .book-image span {
+            font-size: 5rem;
+            font-weight: 700;
+            color: #e8f0fe;
+            position: absolute;
+        }
+
+        .book-info {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #000000;
+        }
+
+        .book-author {
+            font-size: 0.9rem;
+            font-weight: 550;
+            color: #1900ff;
+            margin-bottom: 1rem;
+        }
+
+        .book-desc {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #000000;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+            font-weight: 500;
+        }
+
+        .read-btn {
+            align-self: flex-start;
+            background: #000;
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .read-btn:hover {
+            background: #000;
+            box-shadow: 0 5px 15px rgba(26, 115, 232, 0.3);
+        }
+
+        .read-btn i {
+            margin-left: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            margin-top: 4rem;
+            text-align: center;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            } /* The .books-container rule for 1fr is now the default, so it's removed from here. */
+        }
+
+        /* Tablets and big phones: 2 columns */
+        @media (min-width: 768px) {
+            .books-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Large tablets: 3 columns */
+        @media (min-width: 992px) {
+            .books-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Desktop: 4 columns */
+        @media (min-width: 1200px) {
+            .books-container {
+                grid-template-columns: repeat(4, 1fr);
+                /* The max-width is already set on the base .books-container,
+                   so no need to repeat it here unless a different max-width is desired for desktop specifically. */
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>eBooks</h1>
+        <p class="subtitle"></p>
+    </header>
+
+    <div class="books-container">
+        <div class="book-card">
+            <a href="./1/">
+                <div class="book-image">
+                    <span>48</span>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">48 Laws of Power</h3>
+                    <p class="book-author">by Robert Greene</p>
+                    <p class="book-desc">Amoral, cunning, ruthless, and instructive, this multi-million-copy New York Times bestseller is the definitive manual for anyone interested in gaining, observing, or defending against ultimate control.</p>
+                    <button class="read-btn">Read Now <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </a>
+        </div>
+
+        <div class="book-card">
+            <a href="./2/">
+                <div class="book-image">
+                    <span>AOS</span>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">Art of Seduction</h3>
+                    <p class="book-author">by Robert Greene</p>
+                    <p class="book-desc">An indispensable primer on the essence of one of history's greatest weapons and the ultimate form of power. Which of the 10 types of seducer are you?</p>
+                    <button class="read-btn">Read Now <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </a>
+        </div>
+
+        <div class="book-card">
+            <a href="./3/">
+                <div class="book-image">
+                    <span>LHN</span>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">The Laws of Human Nature</h3>
+                    <p class="book-author">by Robert Greene</p>
+                    <p class="book-desc">Greene teaches you how to detach yourself from your own emotions and master self-control, how to develop the empathy that leads to insight, and how to look behind people's masks.</p>
+                    <button class="read-btn">Read Now <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </a>
+        </div>
+
+        <!-- NEW BOOK CARD FOR THE 17 LAWS OF VOICE -->
+        <div class="book-card">
+            <a href="./4/">
+                <div class="book-image">
+                    <span>17</span>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">The 17 Laws of Voice</h3>
+                    <p class="book-author">by DeepResearch</p>
+                    <p class="book-desc">This isn’t a book. This is an arsenal. You were born with a voice. But the world isn’t moved by sound—it bows to presence.</p>
+                    <button class="read-btn">Read Now <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

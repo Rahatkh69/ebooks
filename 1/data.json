@@ -1,0 +1,2805 @@
+{
+  "laws": [
+    {
+      "number": 1,
+      "title": "NEVER OUTSHINE THE MASTER",
+      "category": "🧠 Deception",
+      "bilingual_power_pill": {
+        "BN": "সর্বদা বড় শক্তির ছায়ায় থাকো",
+        "EN": "Always stay in the shadow of greater powers"
+      },
+      "why_it_works": "The master must feel superior; outshining them triggers insecurity, threatening your position.",
+      "historical_example": {
+        "story": "In 1661, Nicolas Fouquet was France’s finance minister under King Louis XIV, a young and ambitious ruler. Fouquet was smart, rich, and loved showing off. To impress the king, he built a stunning palace, Vaux-le-Vicomte, with beautiful gardens and art. He threw a grand party for Louis XIV, with fireworks, fancy food, and a play by a famous writer. The event was amazing, but it backfired. The palace was more impressive than the king’s castles, making Louis XIV jealous. He felt Fouquet was trying to seem more powerful. Rumors also said Fouquet used public money for his wealth. Weeks later, Louis XIV had Fouquet arrested for stealing. Fouquet’s trial was unfair, and he spent his life in prison. The king used ideas from Vaux-le-Vicomte to build his own palace, Versailles, a symbol of his power. Fouquet’s mistake was outshining his master, making Louis XIV feel small instead of praising him and staying humble.",
+        "lessons": [
+          "Stay humble around powerful people to avoid jealousy.",
+          "Give credit to your leader to make them feel secure.",
+          "Understand your role and don’t challenge the boss’s status.",
+          "Avoid actions that make a leader feel threatened."
+        ]
+      },
+      "things_to_do": [
+        "✅ Make your wins seem like their guidance.",
+        "✅ Praise their ideas before adding yours.",
+        "✅ Use phrases like \"This worked because of your advice.\"",
+        "✅ Dress slightly worse than the master.",
+        "✅ Let them take credit for your best moves.",
+        "✅ Ask for their input, even if you don’t need it.",
+        "✅ Show gratitude publicly for their mentorship."
+      ],
+      "things_to_never_do": [
+        "❌ Show off intelligence unasked.",
+        "❌ Correct them publicly.",
+        "❌ Wear flashier clothes than the boss.",
+        "❌ Laugh louder, speak more—steal their spotlight.",
+        "❌ Assume they won’t notice your rise.",
+        "❌ Boast about your achievements without crediting them."
+      ],
+      "trigger_drill": {
+        "default": "Next meeting, say \"Your strategy helped me solve X.\"",
+        "status_flip": "\"Accidentally\" mess up a small task—let them \"save\" you."
+      },
+      "cheat_code_example": "I just followed your method—guess I got lucky!",
+      "psychological_root": [
+        "Feeds their ego while hiding your ambition.",
+        "Exploits hierarchical sensitivity to maintain favor.",
+        "Leverages the halo effect to tie your success to them.",
+        "Reduces threat perception through submissive signals.",
+        "Taps into social comparison to keep their confidence high."
+      ],
+      "snap_warning": "🚨 ABORT signal: You feel the urge to prove you’re smarter. (STOP. Swallow pride.)",
+      "leverage_point": {
+        "tactic": "Let them believe they control you.",
+        "blood_price": "Their arrogance blinds them to your rise."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Daily: Let the boss take credit at least once.",
+        "penalty": "💀 Penalty: If failed, write 10 times: \"I am not the sun.\""
+      }
+    },
+    {
+      "number": 2,
+      "title": "NEVER PUT TOO MUCH TRUST IN FRIENDS, LEARN TO USE ENEMIES",
+      "category": "🎭 Manipulation",
+      "bilingual_power_pill": {
+        "BN": "শত্রুকে কাজে লাগাও, বন্ধুর উপর ভরসা কোরো না",
+        "EN": "Use enemies, never overtrust friends"
+      },
+      "why_it_works": "Friends expect loyalty, which can breed complacency; enemies work harder to prove themselves.",
+      "historical_example": {
+        "story": "In the 16th century, Queen Elizabeth I of England faced many enemies, including Catholic rivals who wanted her throne. One was Sir Francis Walsingham, a Protestant who once opposed her but later became her loyal spy master. Elizabeth didn’t trust her close friends too much, knowing they might get lazy or betray her for personal gain. Instead, she used Walsingham, a former enemy, to build a spy network. He worked hard to prove his loyalty, uncovering plots like the Babington Plot, which aimed to kill Elizabeth and put Mary, Queen of Scots, on the throne. Walsingham’s spies caught the plotters, and Elizabeth executed Mary, her cousin and friend-turned-rival. Elizabeth kept her friends at a distance, never sharing all her plans, but gave Walsingham power to act. By using a former enemy, she got better results than relying on friends who might expect favors. Walsingham’s hard work protected her rule, showing that enemies, eager to prove themselves, can be more useful than friends who feel entitled.",
+        "lessons": [
+          "Use enemies’ ambition to your advantage—they’ll work harder.",
+          "Don’t share secrets with friends; they may betray you.",
+          "Reward competence, not just loyalty, to get results.",
+          "Keep distance in friendships to avoid complacency."
+        ]
+      },
+      "things_to_do": [
+        "✅ Hire former rivals—they’ll hustle to impress.",
+        "✅ Keep friends at arm’s length in business.",
+        "✅ Reward competence over loyalty.",
+        "✅ Let enemies think they’re winning.",
+        "✅ Play both sides but never commit.",
+        "✅ Study enemies’ strengths for your gain.",
+        "✅ Offer small favors to rivals to gain trust."
+      ],
+      "things_to_never_do": [
+        "❌ Confide deep secrets in friends.",
+        "❌ Reject a skilled enemy out of pride.",
+        "❌ Believe \"friendship over business.\"",
+        "❌ Let allies get too comfortable.",
+        "❌ Show who you really hate.",
+        "❌ Assume friends won’t betray under pressure."
+      ],
+      "trigger_drill": {
+        "default": "Compliment a rival’s strength to their face.",
+        "status_flip": "\"Leak\" a fake weakness—watch them overcorrect."
+      },
+      "cheat_code_example": "I respect how you handle X—wish I could do that.",
+      "psychological_root": [
+        "Triggers their need to validate your \"admiration.\"",
+        "Exploits reciprocity to gain enemies’ trust.",
+        "Leverages cognitive dissonance to align rivals with you.",
+        "Uses social proof to make enemies seek your approval.",
+        "Taps into overcompensation for past opposition."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re about to vent to a \"trusted\" friend. (STOP. Write it & burn it.)",
+      "leverage_point": {
+        "tactic": "Give an enemy a small win—they’ll expose their strategy.",
+        "blood_price": "Their greed makes them predictable."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Test a rival with a fake opportunity.",
+        "penalty": "💀 Penalty: If failed, donate $10 to someone you hate."
+      }
+    },
+    {
+      "number": 3,
+      "title": "CONCEAL YOUR INTENTIONS",
+      "category": "🧠 Deception",
+      "bilingual_power_pill": {
+        "BN": "মতলব গোপন রাখো, শত্রুকে বিভ্রান্ত করো",
+        "EN": "Hide motives, misdirect enemies"
+      },
+      "why_it_works": "People can’t counter what they don’t see coming, keeping you unpredictable.",
+      "historical_example": {
+        "story": "In the 15th century, Lorenzo de’ Medici, ruler of Florence, was surrounded by rivals who wanted his power. To stay safe, Lorenzo never showed his true plans. When Venice and other cities planned to attack Florence, Lorenzo acted like he wanted peace. He sent diplomats to negotiate, making his enemies think he was weak and not preparing for war. Secretly, he built alliances with Milan and Naples, strengthened his army, and gathered money to fight. He also spread false rumors that he was sick, so his enemies relaxed their guard. When Venice attacked, Lorenzo surprised them with a strong defense and his new allies. The war ended with Florence stronger, and Lorenzo’s rivals were confused, unable to predict his moves. By hiding his intentions, Lorenzo kept control and avoided traps. His calm, vague words and fake weakness fooled everyone, letting him plan his victory in secret.",
+        "lessons": [
+          "Hide your plans to keep enemies guessing.",
+          "Use misdirection, like fake weakness, to gain advantage.",
+          "Stay calm and vague to avoid revealing intentions.",
+          "Build strength secretly while seeming harmless."
+        ]
+      },
+      "things_to_do": [
+        "✅ Practice vague responses (\"Interesting take\").",
+        "✅ Use decoy goals to distract.",
+        "✅ Let others think they figured you out.",
+        "✅ Ask questions instead of revealing.",
+        "✅ Smile when accused—never explain.",
+        "✅ Drop false hints about your plans.",
+        "✅ Maintain a neutral tone in conflicts."
+      ],
+      "things_to_never_do": [
+        "❌ Reveal your next move prematurely.",
+        "❌ Justify yourself when challenged.",
+        "❌ Trust \"confidential\" conversations.",
+        "❌ React emotionally to provocations.",
+        "❌ Assume no one is watching.",
+        "❌ Overshare in casual chats."
+      ],
+      "trigger_drill": {
+        "default": "When asked your opinion, say \"I’m still learning—what’s yours?\"",
+        "status_flip": "\"Slip\" a fake plan—\"Actually, I’m thinking of quitting.\""
+      },
+      "cheat_code_example": "You’re probably right. (Then do the opposite.)",
+      "psychological_root": [
+        "Exploits their confirmation bias.",
+        "Uses ambiguity to trigger overthinking in others.",
+        "Leverages the availability heuristic to misdirect focus.",
+        "Taps into projection, letting others assume your intent.",
+        "Reduces scrutiny by avoiding clear commitments."
+      ],
+      "snap_warning": "🚨 ABORT signal: You feel itching to correct a lie about you. (STOP. Let them believe it.)",
+      "leverage_point": {
+        "tactic": "Let enemies \"discover\" false evidence.",
+        "blood_price": "They stake their reputation on your deception."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Daily: Have 3 conversations revealing nothing true.",
+        "penalty": "💀 Penalty: If failed, listen to 1 hour of baby crying sounds."
+      }
+    },
+        {
+      "number": 4,
+      "title": "ALWAYS SAY LESS THAN NECESSARY",
+      "category": "🔮 Psychology",
+      "bilingual_power_pill": {
+        "BN": "সবসময় কম কথা বলো",
+        "EN": "Say less than needed"
+      },
+      "why_it_works": "Speaking less creates mystery and prevents you from revealing weaknesses.",
+      "historical_example": {
+        "story": "In the 1500s, Queen Elizabeth I of England ruled in a time of plots and rivals. Known for her sharp mind, she mastered saying less. In 1588, when Spain threatened to invade with the Armada, her advisors urged her to rally troops with bold promises. Instead, Elizabeth visited her army at Tilbury and gave a short speech, saying, 'I have the heart and stomach of a king,' then left. Her brief words inspired loyalty without giving away her fears or plans. At court, she often stayed silent during debates, letting others argue and reveal their motives. This silence made her seem wise and kept her enemies guessing. When rivals like Mary, Queen of Scots, wrote long letters to trap her, Elizabeth replied with vague, short notes, avoiding their schemes. Her Armada victory came partly because Spain misjudged her strength, confused by her quiet. If she had spoken more, she might have exposed doubts. Her restraint made her powerful, showing how less talk builds control.",
+        "lessons": [
+          "Speak less to hide your plans.",
+          "Let silence make you seem wise.",
+          "Avoid revealing fears or doubts.",
+          "Use short words to inspire action."
+        ]
+      },
+      "things_to_do": [
+        "✅ Pause before answering questions.",
+        "✅ Use short, vague responses.",
+        "✅ Let others fill the silence.",
+        "✅ Hide your true intentions.",
+        "✅ Practice active listening.",
+        "✅ Avoid oversharing emotions.",
+        "✅ Speak only when impact is sure."
+      ],
+      "things_to_never_do": [
+        "❌ Ramble in key moments.",
+        "❌ Reveal plans under pressure.",
+        "❌ Fill silence with nervous talk.",
+        "❌ Boast about your intentions.",
+        "❌ Share unasked details.",
+        "❌ Gossip about your moves."
+      ],
+      "trigger_drill": {
+        "default": "Stay silent in one convo today.",
+        "status_flip": "Answer with one sentence max."
+      },
+      "cheat_code_example": "I’ll keep that in mind.",
+      "psychological_root": [
+        "Silence creates perceived depth.",
+        "Exploits ambiguity to maintain control.",
+        "Taps into fear of uncertainty to intimidate.",
+        "Uses selective disclosure to shape perceptions.",
+        "Leverages cognitive bias for mystery.",
+        "Capitalizes on less-is-more heuristic."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re about to overshare. (STOP. Shut up.)",
+      "leverage_point": {
+        "tactic": "Stay quiet—they’ll project power onto you.",
+        "blood_price": "Their assumptions fuel your mystique."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Daily: Skip 1 chance to speak.",
+        "penalty": "💀 Penalty: If failed, overshare once."
+      }
+    },
+    {
+      "number": 5,
+      "title": "SO MUCH DEPENDS ON REPUTATION – GUARD IT WITH YOUR LIFE",
+      "category": "🐍 Positioning",
+      "bilingual_power_pill": {
+        "BN": "সুনাম রক্ষা করো জীবন দিয়ে",
+        "EN": "Guard reputation with your life"
+      },
+      "why_it_works": "Reputation shapes how others perceive and treat you; one slip can ruin years of trust.",
+      "historical_example": {
+        "story": "In ancient Rome, around 100 BCE, General Gaius Marius was a hero known for his military victories and loyalty to Rome. His reputation made him powerful, elected as consul seven times. But in his later years, Marius faced a rival, Sulla, who wanted control of Rome’s armies. During a political fight, Marius’s enemies spread rumors that he was too old and greedy for power. Instead of denying these claims calmly, Marius got angry and made public speeches defending himself. This made him seem weak and desperate, hurting his reputation more. Sulla used this to gain support, saying Marius was unfit to lead. Marius fled Rome, and Sulla took power. Later, Marius returned with an army, but his damaged reputation never fully recovered. People no longer saw him as the great hero, and he died soon after. If Marius had guarded his reputation by staying calm and letting his past victories speak for him, he might have kept his power. One mistake—reacting emotionally—cost him everything.",
+        "lessons": [
+          "Stay calm under attack to protect your reputation.",
+          "Let actions, not words, defend your image.",
+          "Address rumors quickly but subtly to avoid weakness.",
+          "Build a strong reputation early to withstand challenges."
+        ]
+      },
+      "things_to_do": [
+        "✅ Build a consistent public image.",
+        "✅ Deliver on promises, no matter how small.",
+        "✅ Address rumors calmly and indirectly.",
+        "✅ Align with respected figures publicly.",
+        "✅ Showcase strengths subtly through actions.",
+        "✅ Control your online presence tightly.",
+        "✅ Apologize quickly for minor errors."
+      ],
+      "things_to_never_do": [
+        "❌ Ignore gossip about you.",
+        "❌ Act inconsistently with your image.",
+        "❌ Engage in public feuds.",
+        "❌ Share controversial opinions carelessly.",
+        "❌ Let others define your narrative.",
+        "❌ Neglect your appearance or manners."
+      ],
+      "trigger_drill": {
+        "default": "Post a subtle success story tied to your image.",
+        "status_flip": "Respond with, \"I appreciate the feedback,\" then redirect."
+      },
+      "cheat_code_example": "My work speaks for itself.",
+      "psychological_root": [
+        "Reinforces your image while deflecting scrutiny.",
+        "Leverages social proof to build trust.",
+        "Taps into the halo effect to amplify positive traits.",
+        "Exploits confirmation bias to maintain perception.",
+        "Uses fear of social judgment to deter attacks.",
+        "Capitalizes on anchoring to set a strong first impression."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re tempted to argue online. (STOP. Log off for 24 hours.)",
+      "leverage_point": {
+        "tactic": "Let others defend your reputation.",
+        "blood_price": "Their loyalty ties them to you."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Reinforce your image with one public act.",
+        "penalty": "💀 Penalty: If failed, delete one social media post you like."
+      }
+    },
+    {
+      "number": 6,
+      "title": "COURT ATTENTION AT ALL COSTS",
+      "category": "🐍 Positioning",
+      "bilingual_power_pill": {
+        "BN": "সবসময় দৃষ্টি আকর্ষণ করো",
+        "EN": "Court attention always"
+      },
+      "why_it_works": "Visibility equals power; being ignored is death in the game of influence.",
+      "historical_example": {
+        "story": "In the 1920s, P.T. Barnum, an American showman, built a fortune by grabbing attention. He ran a circus called the ‘Greatest Show on Earth,’ but his success came from bold stunts. Once, Barnum paraded an elephant through New York City, stopping traffic and making headlines. He displayed unusual acts, like a bearded lady or Tom Thumb, a tiny man, and exaggerated their stories to spark curiosity. People debated if his shows were real, but they paid to see them anyway. Barnum didn’t care if people loved or hated him—he wanted their eyes on him. When critics called his shows fake, he invited them to debates, keeping his name in the news. His stunts made him famous and rich, while others who stayed quiet faded away. Barnum’s lesson was clear: attention, good or bad, keeps you relevant. By creating spectacles, he controlled the public’s focus and built a lasting brand.",
+        "lessons": [
+          "Use bold actions to stay visible and relevant.",
+          "Plan stunts carefully to avoid alienating allies.",
+          "Turn criticism into more attention for yourself.",
+          "Create a unique image to stand out from others."
+        ]
+      },
+      "things_to_do": [
+        "✅ Create a memorable personal brand.",
+        "✅ Use bold but calculated gestures.",
+        "✅ Speak or act when others are quiet.",
+        "✅ Leverage trends to stay relevant.",
+        "✅ Tell stories that stick in minds.",
+        "✅ Dress distinctively but strategically.",
+        "✅ Stage small controversies for attention."
+      ],
+      "things_to_never_do": [
+        "❌ Fade into the background.",
+        "❌ Copy others’ style blindly.",
+        "❌ Seek attention without a plan.",
+        "❌ Alienate key allies with stunts.",
+        "❌ Overstay your welcome in the spotlight.",
+        "❌ Ignore the audience’s values."
+      ],
+      "trigger_drill": {
+        "default": "Share a bold idea in a group setting.",
+        "status_flip": "Double down with a striking question."
+      },
+      "cheat_code_example": "I have an unconventional idea…",
+      "psychological_root": [
+        "Novelty grabs attention and memory.",
+        "Exploits the availability heuristic to stay top-of-mind.",
+        "Taps into social curiosity to drive engagement.",
+        "Uses the Zeigarnik effect to create lingering interest.",
+        "Leverages fear of missing out to draw focus.",
+        "Capitalizes on contrast effect to stand out."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re about to overdo a stunt. (STOP. Scale back 50%.)",
+      "leverage_point": {
+        "tactic": "Create a spectacle—they’ll talk.",
+        "blood_price": "Their focus traps them in your narrative."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Get noticed by 3 new people.",
+        "penalty": "💀 Penalty: If failed, wear plain clothes for a day."
+      }
+    },
+    {
+      "number": 7,
+      "title": "GET OTHERS TO DO THE WORK FOR YOU, BUT ALWAYS TAKE THE CREDIT",
+      "category": "🎭 Manipulation",
+      "bilingual_power_pill": {
+        "BN": "অন্যকে দিয়ে কাজ করাও, কৃতিত্ব নিজে নাও",
+        "EN": "Let others work, take credit"
+      },
+      "why_it_works": "Leveraging others’ efforts maximizes your gain with minimal cost.",
+      "historical_example": {
+        "story": "In the 1500s, Christopher Columbus convinced Spain’s King Ferdinand and Queen Isabella to fund his voyage to find a new route to Asia. Columbus wasn’t a great sailor himself, but he was a master at persuading others. He hired skilled navigators and crew to sail across the Atlantic in 1492. When they reached land (the Americas), Columbus didn’t do the hard work of sailing or mapping—he gave orders and let his team handle the dangers. Back in Spain, he presented the discovery as his own, taking full credit for finding a ‘new world.’ He wrote glowing reports to the king and queen, barely mentioning his crew’s efforts. This made him famous and rich, earning titles like Admiral. His crew got little recognition, and some later complained, but Columbus’s fame was set. By using others’ skills and claiming the glory, he built a legacy. His tactic worked because he positioned himself as the leader, ensuring the world saw him as the hero.",
+        "lessons": [
+          "Delegate hard tasks to skilled people to save effort.",
+          "Position yourself as the leader to claim rewards.",
+          "Praise workers privately but take credit publicly.",
+          "Stay involved to seem essential, even if others work."
+        ]
+      },
+      "things_to_do": [
+        "✅ Delegate tasks to skilled allies.",
+        "✅ Praise contributors privately, claim publicly.",
+        "✅ Position yourself as the project’s face.",
+        "✅ Reward workers just enough to keep them.",
+        "✅ Frame their work as your vision.",
+        "✅ Stay involved to seem essential.",
+        "✅ Use \"we\" in public, \"I\" in results."
+      ],
+      "things_to_never_do": [
+        "❌ Do all the work yourself.",
+        "❌ Give full credit to others.",
+        "❌ Ignore the team’s resentment.",
+        "❌ Delegate without oversight.",
+        "❌ Let others claim your spotlight.",
+        "❌ Underpay or undervalue workers."
+      ],
+      "trigger_drill": {
+        "default": "Assign a task, say, \"This fits your skills perfectly.\"",
+        "status_flip": "Offer a small incentive to seal loyalty."
+      },
+      "cheat_code_example": "Our team’s success reflects my leadership.",
+      "psychological_root": [
+        "People crave recognition, so they’ll work for it.",
+        "Exploits the fundamental attribution error to credit you.",
+        "Leverages reciprocity to keep workers loyal.",
+        "Taps into authority bias to reinforce your leadership.",
+        "Uses social loafing to minimize your effort.",
+        "Capitalizes on self-serving bias to justify your credit."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re about to overwork yourself. (STOP. Delegate one task.)",
+      "leverage_point": {
+        "tactic": "Let others toil—they’ll assume you’re vital.",
+        "blood_price": "Their effort builds your empire."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Delegate 2 tasks, claim 1 win.",
+        "penalty": "💀 Penalty: If failed, do someone else’s work for free."
+      }
+    },
+    {
+      "number": 8,
+      "title": "MAKE OTHER PEOPLE COME TO YOU – USE BAIT IF NECESSARY",
+      "category": "⚔️ Strategy",
+      "bilingual_power_pill": {
+        "BN": "অন্যকে তোমার কাছে আসতে দাও",
+        "EN": "Let others come to you"
+      },
+      "why_it_works": "Forcing others to approach you gives you control over the interaction’s terms.",
+      "historical_example": {
+        "story": "In the 1800s, Napoleon Bonaparte, the French military genius, often used bait to win battles. In 1805, during the Battle of Austerlitz, Napoleon faced a larger army of Austrian and Russian troops. Instead of attacking, he made them come to him. He spread false rumors that his army was weak and low on supplies, even abandoning a key hill to seem desperate. The enemy generals, eager to crush him, took the bait and moved their troops to attack Napoleon’s ‘weak’ position. But Napoleon had hidden his main forces nearby. When the enemy advanced, he struck hard, cutting their army in half and winning a huge victory. By making his enemies come to him, Napoleon controlled the battlefield and tricked them into a trap. His fake weakness was the perfect bait, showing how staying in control of the situation can turn the tables, even against a stronger opponent.",
+        "lessons": [
+          "Use bait to lure others into your control.",
+          "Stay patient to gain the upper hand.",
+          "Create illusions to make others act first.",
+          "Control the setting to dictate the outcome."
+        ]
+      },
+      "things_to_do": [
+        "✅ Offer small incentives to draw interest.",
+        "✅ Stay silent—let them initiate contact.",
+        "✅ Create scarcity to spark urgency.",
+        "✅ Position yourself as hard-to-reach.",
+        "✅ Use subtle hints to pull them in.",
+        "✅ Control the meeting’s time and place.",
+        "✅ Make your offer seem exclusive."
+      ],
+      "things_to_never_do": [
+        "❌ Chase others for attention.",
+        "❌ Respond too quickly to demands.",
+        "❌ Appear too eager or desperate.",
+        "❌ Meet on their terms without leverage.",
+        "❌ Reveal your need for them.",
+        "❌ Overpromise to lure them."
+      ],
+      "trigger_drill": {
+        "default": "Wait 24 hours before replying to a non-urgent request.",
+        "status_flip": "Drop a hint of a limited offer, then pause."
+      },
+      "cheat_code_example": "I’m tied up, but I might have a slot next week.",
+      "psychological_root": [
+        "Scarcity drives their urgency.",
+        "Exploits the endowment effect to value your time.",
+        "Taps into loss aversion to make them act.",
+        "Uses authority bias to elevate your status.",
+        "Leverages curiosity to draw them closer.",
+        "Capitalizes on the contrast effect to make you seem exclusive."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re about to beg for a reply. (STOP. Wait 48 hours.)",
+      "leverage_point": {
+        "tactic": "Make them think you’re their only option.",
+        "blood_price": "Their desperation locks them in."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Make 1 person reach out first.",
+        "penalty": "💀 Penalty: If failed, text someone you dislike first."
+      }
+    },
+    {
+      "number": 9,
+      "title": "WIN THROUGH YOUR ACTIONS, NEVER THROUGH ARGUMENT",
+      "category": "🔮 Psychology",
+      "bilingual_power_pill": {
+        "BN": "কাজে জয়ী হও, বিতর্কে নয়",
+        "EN": "Win with actions, not arguments"
+      },
+      "why_it_works": "Actions prove your point louder than words, avoiding pointless debates.",
+      "historical_example": {
+        "story": "In the 1700s, Benjamin Franklin, a young printer in Philadelphia, wanted to be respected by the city’s leaders. Instead of arguing to prove his worth, Franklin used actions. He started a lending library, the first in America, giving people access to books. He also formed a volunteer fire brigade to protect the city. These projects showed his value without him saying a word. When he published his newspaper, he avoided fights with critics, focusing on useful articles that won readers’ trust. Over time, his actions made him so popular that leaders sought his advice. By 1750, Franklin was a key figure in politics, helping shape America’s future. His rivals, who argued loudly but did little, were forgotten. Franklin’s quiet work proved his power, showing that actions build respect faster than words. He never wasted time debating when he could show results instead.",
+        "lessons": [
+          "Prove your worth through results, not words.",
+          "Focus on actions that benefit others to gain trust.",
+          "Avoid arguments that waste time and energy.",
+          "Let your success silence critics over time."
+        ]
+      },
+      "things_to_do": [
+        "✅ Deliver results before speaking.",
+        "✅ Solve problems quietly for others.",
+        "✅ Let your work spark conversations.",
+        "✅ Build tangible proof of your value.",
+        "✅ Stay calm when provoked to argue.",
+        "✅ Show competence in small tasks first.",
+        "✅ Document your wins for silent leverage."
+      ],
+      "things_to_never_do": [
+        "❌ Engage in heated debates online.",
+        "❌ Defend yourself with long explanations.",
+        "❌ Promise more than you can deliver.",
+        "❌ Waste time on unwinnable arguments.",
+        "❌ Let emotions drive your responses.",
+        "❌ Ignore results to focus on talk."
+      ],
+      "trigger_drill": {
+        "default": "Complete a task before joining a debate.",
+        "status_flip": "Say, \"I’ll show you,\" then deliver."
+      },
+      "cheat_code_example": "Let me prove it with results.",
+      "psychological_root": [
+        "Actions bypass verbal resistance.",
+        "Leverages the halo effect to build credibility.",
+        "Taps into cognitive ease to make your point stick.",
+        "Exploits social proof through visible results.",
+        "Uses commitment bias to reinforce your value.",
+        "Capitalizes on primacy effect to set a strong example."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re typing a long rebuttal. (STOP. Delete & do something tangible.)",
+      "leverage_point": {
+        "tactic": "Let results speak—they can’t argue with proof.",
+        "blood_price": "Their skepticism fuels your showcase."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Daily: Complete 1 task instead of arguing.",
+        "penalty": "💀 Penalty: If failed, write 100 words on why actions matter."
+      }
+    },
+    {
+      "number": 10,
+      "title": "INFECTION: AVOID THE UNHAPPY AND UNLUCKY",
+      "category": "🔮 Psychology",
+      "bilingual_power_pill": {
+        "BN": "দুঃখী ও অভাগাদের এড়াও",
+        "EN": "Avoid the unhappy and unlucky"
+      },
+      "why_it_works": "Negative people drain your energy and drag you into their failures.",
+      "historical_example": {
+        "story": "In the 1600s, English poet John Milton was a rising star in literature and politics. He worked with many scholars, but one friend, a man named Edward King, was known for his constant complaints and bad luck. King often failed in his projects and blamed others, bringing gloom to every meeting. Milton, ambitious and focused, noticed King’s negativity started affecting his own mood and work. Instead of trying to fix King, Milton distanced himself, politely refusing invitations and focusing on positive allies. Soon after, King’s ship sank in a storm, and his reputation faded. Milton, free from King’s influence, wrote his famous poem *Paradise Lost*, earning lasting fame. By avoiding King’s negativity, Milton protected his energy and career. If he had stayed close, King’s bad luck and complaints might have pulled Milton down, too. This shows how cutting ties with unhappy people can save your success.",
+        "lessons": [
+          "Distance yourself from negative people to stay focused.",
+          "Protect your energy by choosing positive allies.",
+          "Politely decline draining relationships without guilt.",
+          "Avoid fixing others’ problems at your own cost."
+        ]
+      },
+      "things_to_do": [
+        "✅ Surround yourself with optimists.",
+        "✅ Politely decline draining invites.",
+        "✅ Focus on your goals, not their drama.",
+        "✅ Limit contact with chronic complainers.",
+        "✅ Seek mentors with proven success.",
+        "✅ Build a circle of ambitious peers.",
+        "✅ Redirect negative talks to solutions."
+      ],
+      "things_to_never_do": [
+        "❌ Absorb others’ constant complaints.",
+        "❌ Try to fix their bad luck.",
+        "❌ Stay in toxic circles out of pity.",
+        "❌ Ignore your gut about bad vibes.",
+        "❌ Let their failures define your mood.",
+        "❌ Share your plans with pessimists."
+      ],
+      "trigger_drill": {
+        "default": "Decline one negative person’s invite this week.",
+        "status_flip": "Say, \"I’m swamped,\" then exit the chat."
+      },
+      "cheat_code_example": "I’m focusing on my goals right now.",
+      "psychological_root": [
+        "Negativity spreads through emotional contagion.",
+        "Exploits the availability heuristic to avoid bad outcomes.",
+        "Taps into self-preservation to protect energy.",
+        "Uses selective exposure to reinforce positivity.",
+        "Leverages social identity theory to align with winners.",
+        "Capitalizes on mood congruence to maintain focus."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re comforting a complainer. (STOP. Exit in 5 minutes.)",
+      "leverage_point": {
+        "tactic": "Cut ties—they’ll latch onto someone else.",
+        "blood_price": "Their misery isolates them further."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Avoid 1 negative interaction.",
+        "penalty": "💀 Penalty: If failed, spend 1 hour with an optimist."
+      }
+    },
+    {
+      "number": 11,
+      "title": "LEARN TO KEEP PEOPLE DEPENDENT ON YOU",
+      "category": "🎭 Manipulation",
+      "bilingual_power_pill": {
+        "BN": "মানুষকে তোমার উপর নির্ভরশীল করো",
+        "EN": "Make people depend on you"
+      },
+      "why_it_works": "Dependency ensures loyalty, as people fear losing your value.",
+      "historical_example": {
+        "story": "In the 1500s, Niccolò Machiavelli, an Italian advisor, worked for Florence’s rulers. He made himself vital by mastering diplomacy and strategy. When Florence faced threats from rival cities, Machiavelli organized a citizen army and negotiated key alliances. Leaders relied on his advice to survive political chaos. He never shared all his secrets, ensuring no one could replace him. Even when rivals tried to push him out, rulers kept him close because they needed his skills. Later, when Florence’s government changed, Machiavelli lost his job, but his reputation lived on, and he wrote *The Prince*, a guide on power. His ability to make others depend on him kept him influential for years. If Machiavelli had shared everything or made himself less essential, he would have been replaced easily. By controlling his value, he stayed powerful, showing how dependency creates lasting control.",
+        "lessons": [
+          "Become essential by mastering unique skills.",
+          "Don’t share all your knowledge to stay vital.",
+          "Solve problems others can’t to gain loyalty.",
+          "Stay reliable to keep people coming back."
+        ]
+      },
+      "things_to_do": [
+        "✅ Master a skill others need.",
+        "✅ Solve problems only you can fix.",
+        "✅ Keep some knowledge exclusive.",
+        "✅ Build trust through reliability.",
+        "✅ Offer help strategically to allies.",
+        "✅ Stay calm in crises to seem vital.",
+        "✅ Create systems that rely on you."
+      ],
+      "things_to_never_do": [
+        "❌ Share your full playbook.",
+        "❌ Let others take your role.",
+        "❌ Be replaceable in key tasks.",
+        "❌ Ignore allies’ needs entirely.",
+        "❌ Fail to deliver when trusted.",
+        "❌ Undermine your own value."
+      ],
+      "trigger_drill": {
+        "default": "Offer to solve one problem for a key ally.",
+        "status_flip": "Withhold a small tip—let them ask."
+      },
+      "cheat_code_example": "I’ve got a solution, but it’s tricky—trust me.",
+      "psychological_root": [
+        "Dependency creates power asymmetry.",
+        "Exploits reciprocity to ensure loyalty.",
+        "Taps into scarcity to elevate your value.",
+        "Uses commitment bias to lock in reliance.",
+        "Leverages fear of loss to maintain control.",
+        "Capitalizes on learned helplessness to keep them hooked."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re about to over-share a skill. (STOP. Teach half.)",
+      "leverage_point": {
+        "tactic": "Be their only solution—they’ll beg.",
+        "blood_price": "Their independence dies."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Make 1 person rely on you.",
+        "penalty": "💀 Penalty: If failed, give free help to a rival."
+      }
+    },
+    {
+      "number": 12,
+      "title": "USE SELECTIVE HONESTY AND GENEROSITY TO DISARM YOUR VICTIM",
+      "category": "🧠 Deception",
+      "bilingual_power_pill": {
+        "BN": "নির্বাচিত সততা ও উদারতা ব্যবহার করো",
+        "EN": "Use selective honesty and generosity"
+      },
+      "why_it_works": "Small acts of sincerity or kindness lower defenses, making manipulation easier.",
+      "historical_example": {
+        "story": "In the 1700s, Giacomo Casanova, an Italian adventurer, was famous for charming powerful people. Once, he met a rich noblewoman in Venice who distrusted him. Instead of lying about his past, Casanova admitted a small truth: he was a wanderer with few riches. This honesty surprised her, making her feel he was open. He then gave her a thoughtful gift—a rare book he ‘happened’ to have—without asking for anything. The noblewoman, disarmed by his honesty and generosity, invited him to her home. Over weeks, Casanova used this trust to gain her favor, eventually borrowing money and securing her support for his travels. His selective honesty made her drop her guard, and his gift created a debt she felt obliged to repay. If Casanova had been fully honest or too greedy, she might have rejected him. His careful mix of truth and kindness won her over, showing how small gestures can open big doors.",
+        "lessons": [
+          "Use small truths to build trust quickly.",
+          "Give thoughtful gifts to create obligations.",
+          "Mix honesty with strategy to lower defenses.",
+          "Avoid greed to keep trust alive."
+        ]
+      },
+      "things_to_do": [
+        "✅ Admit a harmless flaw to seem human.",
+        "✅ Offer small, thoughtful favors.",
+        "✅ Share a truth that builds trust.",
+        "✅ Give without asking for instant returns.",
+        "✅ Listen to their needs before acting.",
+        "✅ Time your generosity for max impact.",
+        "✅ Keep your motives hidden."
+      ],
+      "things_to_never_do": [
+        "❌ Lie when a truth would work better.",
+        "❌ Be overly generous—it looks fake.",
+        "❌ Expect immediate repayment.",
+        "❌ Reveal your full intentions.",
+        "❌ Ignore their suspicions.",
+        "❌ Overplay your sincerity."
+      ],
+      "trigger_drill": {
+        "default": "Gift something small to a skeptic this week.",
+        "status_flip": "Admit a minor mistake to gain trust."
+      },
+      "cheat_code_example": "I messed up once, but here’s something for you.",
+      "psychological_root": [
+        "Reciprocity compels them to repay kindness.",
+        "Exploits the halo effect to seem trustworthy.",
+        "Taps into cognitive dissonance to align their view of you.",
+        "Uses liking bias to lower their guard.",
+        "Leverages contrast effect to amplify small gestures.",
+        "Capitalizes on self-perception theory to make them feel obligated."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re about to oversell your kindness. (STOP. Pull back.)",
+      "leverage_point": {
+        "tactic": "Give a little—they’ll owe a lot.",
+        "blood_price": "Their guard drops permanently."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Disarm 1 person with a kind act.",
+        "penalty": "💀 Penalty: If failed, confess a fake flaw to a friend."
+      }
+    },
+    {
+      "number": 13,
+      "title": "WHEN ASKING FOR HELP, APPEAL TO PEOPLE’S SELF-INTEREST",
+      "category": "🎭 Manipulation",
+      "bilingual_power_pill": {
+        "BN": "সাহায্য চাওয়ার সময় স্বার্থের কথা বলো",
+        "EN": "Appeal to self-interest for help"
+      },
+      "why_it_works": "People act when they see personal gain, not out of pure kindness.",
+      "historical_example": {
+        "story": "In the 1770s, Benjamin Franklin needed support from a rival politician in Philadelphia’s assembly. The man disliked Franklin and often opposed him. Instead of begging for help, Franklin used a clever trick. He asked to borrow a rare book from the man’s library, saying it would help his work, which could benefit the city. The politician, flattered by the request and seeing a chance to look important, agreed. After returning the book with a thank-you note, Franklin asked for small favors, each tied to the man’s interests, like gaining public praise. Over time, the politician started supporting Franklin’s ideas, even becoming his ally. Franklin knew people help when they see a reward, like status or profit. By appealing to the man’s ego and interests, Franklin turned an enemy into a friend without force. This shows how framing help as a win for others gets results.",
+        "lessons": [
+          "Frame requests to benefit the other person.",
+          "Flatter their ego to make them eager to help.",
+          "Start with small favors to build trust.",
+          "Tie your needs to their goals for cooperation."
+        ]
+      },
+      "things_to_do": [
+        "✅ Frame requests as their opportunity.",
+        "✅ Highlight their gain in helping you.",
+        "✅ Start with small, easy favors.",
+        "✅ Flatter their skills or status.",
+        "✅ Show how their help boosts their image.",
+        "✅ Offer a mutual win subtly.",
+        "✅ Thank them publicly for their aid."
+      ],
+      "things_to_never_do": [
+        "❌ Beg or guilt-trip for help.",
+        "❌ Ignore their personal motives.",
+        "❌ Ask for big favors upfront.",
+        "❌ Expect help without a reward.",
+        "❌ Undervalue their contribution.",
+        "❌ Make it all about your needs."
+      ],
+      "trigger_drill": {
+        "default": "Ask for help, say, \"This could boost your rep.\"",
+        "status_flip": "Tie their skill to a small favor you need."
+      },
+      "cheat_code_example": "Your expertise could make us both shine.",
+      "psychological_root": [
+        "Self-interest drives decision-making.",
+        "Exploits reciprocity to create obligation.",
+        "Taps into ego to boost their willingness.",
+        "Uses social exchange theory to frame mutual gain.",
+        "Leverages flattery to enhance liking bias.",
+        "Capitalizes on self-enhancement bias to align with their goals."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re about to demand help. (STOP. Reframe as their win.)",
+      "leverage_point": {
+        "tactic": "Make them think they’re winning by helping.",
+        "blood_price": "Their ego binds them to you."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Get help by appealing to 1 person’s interest.",
+        "penalty": "💀 Penalty: If failed, do a favor with no return."
+      }
+    },
+    {
+      "number": 14,
+      "title": "POSE AS A FRIEND, WORK AS A SPY",
+      "category": "🧠 Deception",
+      "bilingual_power_pill": {
+        "BN": "বন্ধুর মতো থাকো, গুপ্তচরের মতো কাজ করো",
+        "EN": "Act like a friend, spy like an enemy"
+      },
+      "why_it_works": "Gaining trust as a friend lets you gather secrets without suspicion.",
+      "historical_example": {
+        "story": "In the 1500s, Catherine de’ Medici, Queen of France, faced rivals in her court who plotted against her. To stay ahead, she posed as a kind friend to everyone, hosting lavish parties and listening to nobles’ worries. At one event, she befriended a noblewoman linked to a rival family. Catherine asked about her family’s plans, acting concerned, and the woman shared details about a plot to weaken the queen. Catherine used this to arrest the plotters, strengthening her rule. She never let her ‘friends’ know she was watching them. By acting warm and loyal, she learned their secrets without raising alarms. Her spying, hidden behind smiles, kept her enemies off guard. If Catherine had been openly suspicious, her rivals would have hidden their plans. Her friendly mask let her spy effectively, showing how trust opens doors to secrets.",
+        "lessons": [
+          "Build trust to learn others’ secrets.",
+          "Act friendly to lower their defenses.",
+          "Listen carefully to casual conversations for clues.",
+          "Hide your spying behind kindness to avoid suspicion."
+        ]
+      },
+      "things_to_do": [
+        "✅ Build rapport with small talk.",
+        "✅ Ask open-ended questions casually.",
+        "✅ Remember details others share.",
+        "✅ Offer help to gain their trust.",
+        "✅ Act loyal to lower defenses.",
+        "✅ Observe their habits quietly.",
+        "✅ Keep your findings private."
+      ],
+      "things_to_never_do": [
+        "❌ Act overly curious or nosy.",
+        "❌ Betray their trust openly.",
+        "❌ Share what you learn carelessly.",
+        "❌ Push for secrets too fast.",
+        "❌ Let emotions cloud your spying.",
+        "❌ Reveal you’re watching them."
+      ],
+      "trigger_drill": {
+        "default": "Ask a colleague about their weekend plans.",
+        "status_flip": "Share a fake plan to prompt their reveal."
+      },
+      "cheat_code_example": "I’m here if you need to vent.",
+      "psychological_root": [
+        "Trust lowers cognitive defenses.",
+        "Exploits the liking bias to gain access.",
+        "Taps into self-disclosure to prompt sharing.",
+        "Uses social penetration theory to deepen trust.",
+        "Leverages mirroring to build rapport.",
+        "Capitalizes on overconfidence bias to make them overshare."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re about to probe too hard. (STOP. Back off & smile.)",
+      "leverage_point": {
+        "tactic": "Be their confidant—they’ll spill everything.",
+        "blood_price": "Their secrets become your weapons."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Learn 1 useful secret discreetly.",
+        "penalty": "💀 Penalty: If failed, share a harmless fact about yourself."
+      }
+    },
+    {
+      "number": 15,
+      "title": "CRUSH YOUR ENEMY TOTALLY",
+      "category": "🔪 Elimination",
+      "bilingual_power_pill": {
+        "BN": "শত্রুকে সম্পূর্ণরূপে ধ্বংস করো",
+        "EN": "Crush your enemy totally"
+      },
+      "why_it_works": "Half-measures leave enemies alive to seek revenge; total defeat ensures safety.",
+      "historical_example": {
+        "story": "In the 50s BCE, Julius Caesar, a Roman general, fought to conquer Gaul (modern France). The Gauls, led by Vercingetorix, united against Rome. In 52 BCE, at the Battle of Alesia, Caesar faced a huge Gaul army. He built walls around their town to trap them, then another wall to block their allies. Starved and trapped, Vercingetorix surrendered, hoping for mercy. Caesar knew a living enemy could spark rebellion, so he crushed Vercingetorix totally. He paraded him in Rome as a prisoner, showing his victory, then executed him. Caesar also seized Gaul’s resources and broke their tribes to prevent uprisings. Gaul became a Roman province, and Caesar’s power grew. If he had spared Vercingetorix, the Gauls might have fought again. By destroying his enemy completely, Caesar ensured no one dared challenge him, proving total victory eliminates future threats.",
+        "lessons": [
+          "Eliminate enemies fully to prevent revenge.",
+          "Seize their resources to weaken their base.",
+          "Show your victory to scare others.",
+          "Plan carefully for complete control."
+        ]
+      },
+      "things_to_do": [
+        "✅ Strike when enemies are weakest.",
+        "✅ Cut off their resources or allies.",
+        "✅ Plan for total victory, no mercy.",
+        "✅ Publicize your win to deter others.",
+        "✅ Isolate them before attacking.",
+        "✅ Study their weaknesses thoroughly.",
+        "✅ Stay relentless until they’re gone."
+      ],
+      "things_to_never_do": [
+        "❌ Show mercy to a defeated foe.",
+        "❌ Leave their allies intact.",
+        "❌ Underestimate their comeback potential.",
+        "❌ Fight without a clear endgame.",
+        "❌ Let emotions stop your strike.",
+        "❌ Ignore their hidden strengths."
+      ],
+      "trigger_drill": {
+        "default": "List a rival’s top 3 weaknesses today.",
+        "status_flip": "Cut contact with 1 of their allies."
+      },
+      "cheat_code_example": "They won’t recover if I strike now.",
+      "psychological_root": [
+        "Fear of retaliation drives total elimination.",
+        "Exploits zero-sum thinking to justify ruthlessness.",
+        "Taps into dominance hierarchy to assert control.",
+        "Uses loss aversion to ensure no comeback.",
+        "Leverages terror management to intimidate others.",
+        "Capitalizes on outgroup bias to dehumanize enemies."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re feeling pity for them. (STOP. Plan their end.)",
+      "leverage_point": {
+        "tactic": "Break their spirit—they’ll collapse.",
+        "blood_price": "Their defeat cements your dominance."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Daily: Study a rival’s moves for 1 hour.",
+        "penalty": "💀 Penalty: If failed, let them have a small win."
+      }
+    },
+    {
+      "number": 16,
+      "title": "USE ABSENCE TO INCREASE RESPECT AND HONOR",
+      "category": "🔮 Psychology",
+      "bilingual_power_pill": {
+        "BN": "অনুপস্থিতি দিয়ে সম্মান বাড়াও",
+        "EN": "Use absence to gain respect"
+      },
+      "why_it_works": "Scarcity makes your presence more valuable, boosting your perceived worth.",
+      "historical_example": {
+        "story": "In the 1930s, Greta Garbo, a Hollywood actress, was a massive star known for her beauty and talent. But by 1935, she started appearing less in public. Instead of attending every event, she skipped premieres and interviews, staying private. Fans and media grew curious, desperate for her next film or sighting. When she did appear, like in the movie *Camille*, crowds went wild, and critics praised her even more. Garbo’s absence made her seem mysterious and rare, increasing her value. Studios paid her huge sums to return, and her fans adored her more for being elusive. If she had been everywhere, people might have gotten bored. By limiting her presence, she kept the world chasing her. Her strategy worked because absence made people value her time and talent, showing how stepping back can make you more powerful and respected.",
+        "lessons": [
+          "Limit appearances to seem more valuable.",
+          "Stay mysterious to spark curiosity.",
+          "Time your presence for maximum impact.",
+          "Avoid overexposure to maintain respect."
+        ]
+      },
+      "things_to_do": [
+        "✅ Limit your availability strategically.",
+        "✅ Decline non-essential invitations.",
+        "✅ Leave conversations at their peak.",
+        "✅ Cultivate a mysterious aura.",
+        "✅ Return with impact after absence.",
+        "✅ Let others wonder about you.",
+        "✅ Focus on quality over quantity."
+      ],
+      "things_to_never_do": [
+        "❌ Be everywhere all the time.",
+        "❌ Overshare your daily life.",
+        "❌ Stay too long in social settings.",
+        "❌ Beg for attention during absence.",
+        "❌ Return without a strong move.",
+        "❌ Ignore timing of your comeback."
+      ],
+      "trigger_drill": {
+        "default": "Skip one social event this week.",
+        "status_flip": "Leave a chat early, say, ‘Got to run.’"
+      },
+      "cheat_code_example": "I’ll catch up soon—things are crazy.",
+      "psychological_root": [
+        "Scarcity increases perceived value.",
+        "Exploits the availability heuristic to stay memorable.",
+        "Taps into curiosity to drive interest.",
+        "Uses the halo effect to enhance mystique.",
+        "Leverages fear of missing out to boost allure.",
+        "Capitalizes on contrast effect to amplify impact."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re about to overstay. (STOP. Exit now.)",
+      "leverage_point": {
+        "tactic": "Disappear—they’ll beg for your return.",
+        "blood_price": "Their neediness elevates your status."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Skip 1 non-critical event.",
+        "penalty": "💀 Penalty: If failed, attend an extra event."
+      }
+    },
+    {
+      "number": 17,
+      "title": "KEEP OTHERS IN SUSPENDED TERROR: CULTIVATE AN AIR OF UNPREDICTABILITY",
+      "category": "🦁 Intimidation",
+      "bilingual_power_pill": {
+        "BN": "অপ্রত্যাশিত থাক, ভয় তৈরি করো",
+        "EN": "Be unpredictable, inspire fear"
+      },
+      "why_it_works": "Unpredictability keeps others guessing, making them cautious and submissive.",
+      "historical_example": {
+        "story": "In the 1500s, Ivan the Terrible, Tsar of Russia, ruled with fear. His nobles, called boyars, often plotted against him. To keep them in line, Ivan acted unpredictably. One day, he’d reward a noble with land; the next, he’d execute another for a small mistake. At a feast, he once poured hot soup on a boyar who displeased him, shocking everyone. No one knew what Ivan would do next, so they stayed obedient, afraid to cross him. When he suspected a plot in Novgorod, he attacked the city without warning, killing thousands. His random acts of kindness and violence made him impossible to predict. This kept his enemies too scared to rebel openly. If Ivan had been consistent, his nobles might have planned against him. His unpredictable terror ensured loyalty, showing how fear and chaos can control others.",
+        "lessons": [
+          "Act unpredictably to keep others off balance.",
+          "Mix kindness with sudden actions to create fear.",
+          "Use surprise to prevent others’ planning.",
+          "Maintain control through random rewards."
+        ]
+      },
+      "things_to_do": [
+        "✅ Change your behavior unexpectedly.",
+        "✅ Mix rewards with sudden silence.",
+        "✅ Keep plans vague to unsettle others.",
+        "✅ React differently to similar situations.",
+        "✅ Use silence as a weapon.",
+        "✅ Shift moods to keep them guessing.",
+        "✅ Drop unexpected praise or critique."
+      ],
+      "things_to_never_do": [
+        "❌ Be fully predictable in reactions.",
+        "❌ Share your next move openly.",
+        "❌ Stick to a rigid routine.",
+        "❌ Let others anticipate your mood.",
+        "❌ Overuse the same tactic.",
+        "❌ Explain your sudden shifts."
+      ],
+      "trigger_drill": {
+        "default": "Change your response style in one meeting.",
+        "status_flip": "Give unexpected praise, then go silent."
+      },
+      "cheat_code_example": "You never know what I’ll do next.",
+      "psychological_root": [
+        "Uncertainty triggers fear response.",
+        "Exploits cognitive dissonance to confuse.",
+        "Taps into loss aversion to make them cautious.",
+        "Uses authority bias to amplify unpredictability.",
+        "Leverages ambiguity effect to paralyze decisions.",
+        "Capitalizes on stress response to enforce submission."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re about to explain yourself. (STOP. Stay vague.)",
+      "leverage_point": {
+        "tactic": "Keep them guessing—they’ll freeze.",
+        "blood_price": "Their fear locks them in control."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Do 1 unexpected act to unsettle.",
+        "penalty": "💀 Penalty: If failed, act predictably for a day."
+      }
+    },
+    {
+      "number": 18,
+      "title": "DO NOT BUILD FORTRESSES TO PROTECT YOURSELF – ISOLATION IS DANGEROUS",
+      "category": "⚔️ Strategy",
+      "bilingual_power_pill": {
+        "BN": "নিজেকে বিচ্ছিন্ন করো না",
+        "EN": "Don’t isolate yourself"
+      },
+      "why_it_works": "Isolation cuts you off from allies and information, leaving you vulnerable.",
+      "historical_example": {
+        "story": "In the 1400s, King Louis XI of France was known for his clever rule. But early in his reign, he made a mistake by isolating himself. Fearing betrayal, Louis hid in a castle, avoiding nobles and advisors. He trusted only a few guards and stopped attending court. Without allies, he missed news of a rebellion led by his rival, Charles the Bold. Charles gained support from nobles Louis ignored, nearly taking the throne. Louis’s spies, cut off from court gossip, failed to warn him. When Louis realized his mistake, he left his fortress, rebuilt ties with nobles, and shared small favors to win them back. He then crushed Charles’s rebellion. If Louis had stayed isolated, he would have lost his crown. By reconnecting, he gained the allies and information needed to rule. This shows how isolation weakens you, while staying connected keeps you strong.",
+        "lessons": [
+          "Stay connected to allies to gain support.",
+          "Gather information by engaging with others.",
+          "Avoid hiding away, even when scared.",
+          "Build trust with small gestures to keep ties."
+        ]
+      },
+      "things_to_do": [
+        "✅ Stay active in key social circles.",
+        "✅ Share small favors to build alliances.",
+        "✅ Listen to gossip for useful intel.",
+        "✅ Attend events to stay visible.",
+        "✅ Keep open channels with allies.",
+        "✅ Seek diverse perspectives regularly.",
+        "✅ Balance privacy with engagement."
+      ],
+      "things_to_never_do": [
+        "❌ Hide away during crises.",
+        "❌ Cut off allies out of fear.",
+        "❌ Ignore social networks’ value.",
+        "❌ Rely only on a few voices.",
+        "❌ Neglect relationship maintenance.",
+        "❌ Assume you’re safe alone."
+      ],
+      "trigger_drill": {
+        "default": "Reach out to one ally this week.",
+        "status_flip": "Attend an event you’d normally skip."
+      },
+      "cheat_code_example": "I’m always open to connect.",
+      "psychological_root": [
+        "Connection fosters mutual reliance.",
+        "Exploits social exchange to build trust.",
+        "Taps into fear of exclusion to stay engaged.",
+        "Uses social proof to gain influence.",
+        "Leverages network effect for information flow.",
+        "Capitalizes on belongingness to strengthen ties."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re avoiding a key meeting. (STOP. Show up.)",
+      "leverage_point": {
+        "tactic": "Stay in the loop—they’ll need you.",
+        "blood_price": "Their loyalty keeps you informed."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Connect with 1 new person.",
+        "penalty": "💀 Penalty: If failed, call someone you’ve ignored."
+      }
+    },
+    {
+      "number": 19,
+      "title": "KNOW WHO YOU’RE DEALING WITH – DO NOT OFFEND THE WRONG PERSON",
+      "category": "🔮 Psychology",
+      "bilingual_power_pill": {
+        "BN": "জানো কার সাথে কাজ করছ",
+        "EN": "Know who you’re dealing with"
+      },
+      "why_it_works": "Misjudging someone’s power or influence can lead to costly retaliation.",
+      "historical_example": {
+        "story": "In the 1500s, Thomas Cromwell, advisor to King Henry VIII of England, was a master of power. But he made a fatal mistake. Cromwell arranged Henry’s marriage to Anne of Cleves to secure an alliance, but Henry hated Anne’s looks and blamed Cromwell. Cromwell didn’t realize how much Henry’s pride mattered. He also offended powerful nobles by pushing reforms they disliked, thinking his role protected him. These nobles, led by the Duke of Norfolk, waited for their chance. When Henry grew angry over the marriage, the nobles accused Cromwell of treason. Without allies, Cromwell couldn’t defend himself. In 1540, Henry had him executed. If Cromwell had studied Henry’s temper and the nobles’ influence, he might have avoided their wrath. His failure to know who he was dealing with cost him his life, showing how dangerous it is to offend the wrong person.",
+        "lessons": [
+          "Study people’s power before acting.",
+          "Avoid offending those with hidden influence.",
+          "Build allies to protect against retaliation.",
+          "Adapt to others’ egos to stay safe."
+        ]
+      },
+      "things_to_do": [
+        "✅ Research people’s backgrounds before deals.",
+        "✅ Watch for signs of hidden power.",
+        "✅ Flatter egos of key players.",
+        "✅ Build allies to buffer conflicts.",
+        "✅ Stay neutral in risky disputes.",
+        "✅ Ask questions to gauge influence.",
+        "✅ Track who supports whom."
+      ],
+      "things_to_never_do": [
+        "❌ Underestimate someone’s connections.",
+        "❌ Insult without knowing their reach.",
+        "❌ Act without researching players.",
+        "❌ Ignore subtle power cues.",
+        "❌ Burn bridges with unknowns.",
+        "❌ Assume you’re untouchable."
+      ],
+      "trigger_drill": {
+        "default": "Check a new contact’s network this week.",
+        "status_flip": "Ask a neutral question to test their power."
+      },
+      "cheat_code_example": "I respect your influence—let’s align.",
+      "psychological_root": [
+        "Misjudgment triggers costly errors.",
+        "Exploits social hierarchy awareness.",
+        "Taps into fear of retaliation to stay cautious.",
+        "Uses attribution bias to assess influence.",
+        "Leverages social intelligence to navigate power.",
+        "Capitalizes on risk aversion to avoid conflict."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re about to slight someone. (STOP. Research them.)",
+      "leverage_point": {
+        "tactic": "Know their power—they can’t surprise you.",
+        "blood_price": "Their influence becomes your shield."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Study 1 person’s background.",
+        "penalty": "💀 Penalty: If failed, apologize to someone you misjudged."
+      }
+    },
+    {
+      "number": 20,
+      "title": "DO NOT COMMIT TO ANYONE",
+      "category": "⚔️ Strategy",
+      "bilingual_power_pill": {
+        "BN": "কারো প্রতি প্রকাশ্যে প্রতিশ্রুতি দিও না",
+        "EN": "Don’t commit to anyone"
+      },
+      "why_it_works": "Staying uncommitted keeps you flexible and in control of your options.",
+      "historical_example": {
+        "story": "In the 1400s, Lorenzo de’ Medici ruled Florence, a city full of rival families and foreign powers. Lorenzo stayed powerful by never fully committing to any side. When Milan and Venice fought, both wanted Florence’s support. Instead of picking a side, Lorenzo sent vague promises to both, offering small aid but never troops. He hosted feasts for their leaders, acting friendly but signing no treaties. This kept both sides courting him, giving Florence leverage. When one side grew too strong, Lorenzo subtly helped the other, keeping the balance. By staying uncommitted, he avoided wars and made Florence indispensable. If he had allied with one side, the other might have attacked. His flexibility let him play both sides, ensuring peace and power. This shows how avoiding commitment keeps you free to act in your interest.",
+        "lessons": [
+          "Stay neutral to keep all options open.",
+          "Use vague promises to avoid binding ties.",
+          "Balance rival sides to gain leverage.",
+          "Act friendly without committing fully."
+        ]
+      },
+      "things_to_do": [
+        "✅ Stay vague about your loyalties.",
+        "✅ Offer small favors to all sides.",
+        "✅ Avoid signing binding agreements.",
+        "✅ Keep multiple options active.",
+        "✅ Act friendly to everyone.",
+        "✅ Shift support subtly as needed.",
+        "✅ Delay decisions to stay flexible."
+      ],
+      "things_to_never_do": [
+        "❌ Pick a side too early.",
+        "❌ Sign exclusive deals hastily.",
+        "❌ Burn bridges with any faction.",
+        "❌ Show clear favoritism.",
+        "❌ Lock yourself into promises.",
+        "❌ Ignore rival sides’ offers."
+      ],
+      "trigger_drill": {
+        "default": "Give a neutral reply to a commitment request.",
+        "status_flip": "Offer a small favor to both sides."
+      },
+      "cheat_code_example": "I’m open to all possibilities.",
+      "psychological_root": [
+        "Flexibility preserves strategic freedom.",
+        "Exploits ambiguity to maintain control.",
+        "Taps into scarcity to make you valuable.",
+        "Uses social exchange to keep options open.",
+        "Leverages hedging to avoid risk.",
+        "Capitalizes on indecision bias to delay commitment."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re about to pledge loyalty. (STOP. Stay vague.)",
+      "leverage_point": {
+        "tactic": "Play all sides—they’ll compete for you.",
+        "blood_price": "Their rivalry fuels your freedom."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Avoid 1 commitment.",
+        "penalty": "💀 Penalty: If failed, decline a favor you want."
+      }
+    },
+    {
+      "number": 21,
+      "title": "PLAY A SUCKER TO CATCH A SUCKER – SEEM DUMBER THAN YOUR MARK",
+      "category": "🧠 Deception",
+      "bilingual_power_pill": {
+        "BN": "বোকা সাজো, বোকাকে ধরো",
+        "EN": "Play dumb to catch the fooled"
+      },
+      "why_it_works": "Acting less intelligent disarms others, making them overconfident and easy to manipulate.",
+      "historical_example": {
+        "story": "In the 1800s, American businessman Cornelius Vanderbilt wanted to buy a rival railroad company. The owners, sharp and greedy, thought they could outsmart him. Vanderbilt played dumb, acting like a simple old man who didn’t understand business. At meetings, he asked basic questions and seemed confused by their complex terms. The owners, thinking he was easy prey, revealed their plans to inflate the railroad’s value and cheat him. But Vanderbilt was secretly tracking their moves and had spies in their company. When they set a high price, he used their own secrets to expose their tricks, forcing them to sell at a low price. By seeming dumber, Vanderbilt made them overconfident, letting him control the deal. If he had acted smart, they would have been cautious. His act of ignorance won him the railroad, showing how playing dumb catches the fooled.",
+        "lessons": [
+          "Act less smart to lower others’ guard.",
+          "Let others underestimate you to gain secrets.",
+          "Use their overconfidence against them.",
+          "Stay sharp behind the dumb act."
+        ]
+      },
+      "things_to_do": [
+        "✅ Ask simple questions to seem naive.",
+        "✅ Let others explain things arrogantly.",
+        "✅ Hide your knowledge strategically.",
+        "✅ Act confused to draw out secrets.",
+        "✅ Smile when they underestimate you.",
+        "✅ Use their arrogance to your gain.",
+        "✅ Keep your real skills hidden."
+      ],
+      "things_to_never_do": [
+        "❌ Reveal your full intelligence early.",
+        "❌ Correct their mistakes openly.",
+        "❌ Act smug when they’re fooled.",
+        "❌ Overplay the dumb act.",
+        "❌ Let them suspect your game.",
+        "❌ Forget to stay observant."
+      ],
+      "trigger_drill": {
+        "default": "Ask a basic question in a meeting.",
+        "status_flip": "Pretend confusion to prompt their boast."
+      },
+      "cheat_code_example": "Can you explain it like I’m new?",
+      "psychological_root": [
+        "Underestimation lowers their defenses.",
+        "Exploits overconfidence bias to gain leverage.",
+        "Taps into superiority complex to prompt errors.",
+        "Uses self-enhancement bias to make them careless.",
+        "Leverages attribution error to hide your skill.",
+        "Capitalizes on cognitive ease to disarm suspicion."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re about to show off. (STOP. Play dumb.)",
+      "leverage_point": {
+        "tactic": "Let them think they’re smarter—they’ll slip.",
+        "blood_price": "Their arrogance hands you victory."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Play dumb in 1 conversation.",
+        "penalty": "💀 Penalty: If failed, admit you’re wrong once."
+      }
+    },
+    {
+      "number": 22,
+      "title": "USE THE SURRENDER TACTIC: TRANSFORM WEAKNESS INTO POWER",
+      "category": "⚔️ Strategy",
+      "bilingual_power_pill": {
+        "BN": "আত্মসমর্পণের কৌশল ব্যবহার করো",
+        "EN": "Use surrender to gain power"
+      },
+      "why_it_works": "Surrendering disarms enemies, letting you regroup and strike later.",
+      "historical_example": {
+        "story": "In the 200s BCE, Chinese general Han Xin faced a stronger army led by Zhao’s king. Outnumbered, Han Xin knew he couldn’t win a direct fight. Instead, he pretended to surrender, sending a message offering peace and retreating to a narrow valley. Zhao’s army, thinking Han Xin was weak, chased him, eager to crush his forces. But Han Xin had set a trap. He had blocked the valley’s river, and when Zhao’s army entered, he released the water, flooding them. His hidden troops then attacked, wiping out the confused enemy. By faking surrender, Han Xin turned his weakness into power, luring Zhao into a trap. If he had fought openly, he would have lost. His false retreat gave him time to plan and win, showing how surrender can hide strength and lead to victory.",
+        "lessons": [
+          "Fake surrender to buy time and plan.",
+          "Use weakness to lure enemies into traps.",
+          "Stay calm under pressure to seem defeated.",
+          "Turn retreat into a strategic advantage."
+        ]
+      },
+      "things_to_do": [
+        "✅ Retreat strategically to regroup.",
+        "✅ Show weakness to lower their guard.",
+        "✅ Plan your comeback while ‘surrendering.’",
+        "✅ Use their aggression against them.",
+        "✅ Stay calm when seeming defeated.",
+        "✅ Set traps during your retreat.",
+        "✅ Return stronger after yielding."
+      ],
+      "things_to_never_do": [
+        "❌ Fight when clearly outmatched.",
+        "❌ Reveal your comeback plan.",
+        "❌ Surrender without a strategy.",
+        "❌ Let pride stop your retreat.",
+        "❌ Stay weak after yielding.",
+        "❌ Ignore the enemy’s moves."
+      ],
+      "trigger_drill": {
+        "default": "Back off in one small conflict today.",
+        "status_flip": "Concede a point, then plan a counter."
+      },
+      "cheat_code_example": "You’re right—I’ll step back for now.",
+      "psychological_root": [
+        "Surrender disarms aggressive instincts.",
+        "Exploits overconfidence to create openings.",
+        "Taps into loss aversion to make them careless.",
+        "Uses cognitive dissonance to confuse their strategy.",
+        "Leverages reactance to provoke their attack.",
+        "Capitalizes on contrast effect to amplify your comeback."
+      ],
+      "snap_warning": "🚨 ABORT signal: Pride’s pushing you to fight. (STOP. Yield tactically.)",
+      "leverage_point": {
+        "tactic": "Yield—they’ll expose their weakness.",
+        "blood_price": "Their victory blinds them to your trap."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Surrender tactically in 1 situation.",
+        "penalty": "💀 Penalty: If failed, fight a losing battle once."
+      }
+    },
+    {
+      "number": 23,
+      "title": "CONCENTRATE YOUR FORCES",
+      "category": "⚔️ Strategy",
+      "bilingual_power_pill": {
+        "BN": "শক্তি একত্রিত করো",
+        "EN": "Concentrate your forces"
+      },
+      "why_it_works": "Focusing resources on one goal maximizes impact and overwhelms opposition.",
+      "historical_example": {
+        "story": "In 1812, Napoleon Bonaparte invaded Russia with a massive army. But his rival, Russian general Mikhail Kutuzov, used a smarter strategy. Instead of spreading his smaller army across Russia, Kutuzov concentrated his forces at key points. When Napoleon advanced, Kutuzov avoided big battles, retreating to save his troops. He focused his army at Borodino, a critical battlefield, uniting all his soldiers for one strong fight. Though the battle was bloody, Kutuzov’s focused forces held Napoleon back, draining his army. After Borodino, Kutuzov kept his troops together, harassing Napoleon’s weakened men as winter hit. Napoleon’s army, spread thin across Russia, starved and froze, forcing him to retreat. Kutuzov’s concentrated forces turned a weaker army into a winning one. If he had split his troops, Napoleon would have crushed him. Focusing his strength won Russia the war.",
+        "lessons": [
+          "Focus all resources on one key goal.",
+          "Avoid spreading efforts too thin.",
+          "Choose battles where you can win big.",
+          "Unite your team for maximum impact."
+        ]
+      },
+      "things_to_do": [
+        "✅ Prioritize one goal at a time.",
+        "✅ Pool resources for key projects.",
+        "✅ Avoid multitasking on big tasks.",
+        "✅ Unite your team for one fight.",
+        "✅ Study where to strike hardest.",
+        "✅ Cut distractions to stay focused.",
+        "✅ Build momentum with small wins."
+      ],
+      "things_to_never_do": [
+        "❌ Spread efforts across too many goals.",
+        "❌ Divide resources during key fights.",
+        "❌ Chase minor wins over big ones.",
+        "❌ Ignore your team’s core strengths.",
+        "❌ Multitask during critical moments.",
+        "❌ Start new tasks before finishing."
+      ],
+      "trigger_drill": {
+        "default": "Drop one side project this week.",
+        "status_flip": "Focus all energy on one task today."
+      },
+      "cheat_code_example": "I’m all in on this one move.",
+      "psychological_root": [
+        "Focus amplifies perceived strength.",
+        "Exploits cognitive load to overwhelm opponents.",
+        "Taps into commitment bias to drive effort.",
+        "Uses scarcity to prioritize resources.",
+        "Leverages flow state to boost efficiency.",
+        "Capitalizes on momentum effect to sustain progress."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re juggling too much. (STOP. Pick one.)",
+      "leverage_point": {
+        "tactic": "Hit one target hard—they’ll crumble.",
+        "blood_price": "Their scattered efforts fail."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Daily: Work 1 hour on your top goal.",
+        "penalty": "💀 Penalty: If failed, start a new side task."
+      }
+    },
+    {
+      "number": 24,
+      "title": "PLAY THE PERFECT COURTIER",
+      "category": "🐍 Positioning",
+      "bilingual_power_pill": {
+        "BN": "নিখুঁত দরবারী হও",
+        "EN": "Be the perfect courtier"
+      },
+      "why_it_works": "Mastering charm and subtlety wins favor without threatening superiors.",
+      "historical_example": {
+        "story": "In the 1600s, Cardinal Richelieu, advisor to King Louis XIII of France, was a master courtier. He rose to power by charming the king and nobles while hiding his ambition. Richelieu flattered Louis, praising his wisdom in public, and offered clever advice without seeming to outshine him. At court, he listened to everyone, smiled at rivals, and gave small gifts to win allies. When nobles plotted against him, he didn’t fight openly but used gossip to turn others against them. Richelieu dressed elegantly, spoke softly, and stayed calm, making him seem trustworthy. By 1624, he was France’s top minister, controlling the court. If he had been too bold or rude, the king might have dismissed him. His perfect courtier act—charm, subtlety, and hidden strength—kept him in power. This shows how blending into the court while manipulating it wins influence.",
+        "lessons": [
+          "Flatter superiors to gain their trust.",
+          "Stay subtle to avoid seeming ambitious.",
+          "Use charm to win allies quietly.",
+          "Hide strength behind a polite mask."
+        ]
+      },
+      "things_to_do": [
+        "✅ Flatter without seeming fake.",
+        "✅ Listen more than you speak.",
+        "✅ Dress to fit the elite circle.",
+        "✅ Offer subtle, useful advice.",
+        "✅ Smile at rivals to disarm them.",
+        "✅ Give small gifts to build favor.",
+        "✅ Stay calm in tense situations."
+      ],
+      "things_to_never_do": [
+        "❌ Outshine your superiors openly.",
+        "❌ Act rude or overly bold.",
+        "❌ Ignore court politics.",
+        "❌ Show anger at slights.",
+        "❌ Overpromise your help.",
+        "❌ Neglect your appearance."
+      ],
+      "trigger_drill": {
+        "default": "Compliment a superior subtly today.",
+        "status_flip": "Stay silent in a heated court debate."
+      },
+      "cheat_code_example": "Your insight always guides us.",
+      "psychological_root": [
+        "Charm exploits liking bias.",
+        "Exploits reciprocity through small favors.",
+        "Taps into halo effect to seem trustworthy.",
+        "Uses social proof to blend with elites.",
+        "Leverages ingratiation to gain favor.",
+        "Capitalizes on emotional regulation to stay composed."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re about to challenge the boss. (STOP. Flatter instead.)",
+      "leverage_point": {
+        "tactic": "Charm them—they’ll open doors.",
+        "blood_price": "Their trust blinds them to your moves."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Win 1 favor with charm.",
+        "penalty": "💀 Penalty: If failed, skip a social event."
+      }
+    },
+      {
+    "number": 25,
+    "title": "RE-CREATE YOURSELF",
+    "category": "🐍 Positioning",
+    "bilingual_power_pill": {
+      "BN": "নিজেকে নতুন করে গড়ো",
+      "EN": "Re-create yourself"
+    },
+    "why_it_works": "Reinventing your identity lets you escape past limits and seize new opportunities.",
+    "historical_example": {
+      "story": "In the 1920s, a young man named Joseph Kennedy left his modest Boston roots to become a powerhouse. Born to Irish immigrants, he faced prejudice in elite circles. Kennedy re-created himself as a polished businessman. He studied at Harvard, learned elite manners, and dressed like old-money aristocrats. He entered banking and Hollywood, building wealth and a glamorous image. Kennedy hid his Irish accent and downplayed his roots, crafting a persona of confidence and charm. By the 1930s, he was a top financier and advisor to presidents, even becoming U.S. ambassador to Britain. If he had stayed tied to his old identity, elite doors would have stayed closed. His reinvention opened new worlds, letting him move from outsider to insider. This shows how re-creating yourself breaks barriers and builds a powerful new image.",
+      "lessons": [
+        "Craft a new image to escape limits.",
+        "Learn skills to fit your desired role.",
+        "Hide old weaknesses to gain respect.",
+        "Adapt boldly to new opportunities."
+      ]
+    },
+    "things_to_do": [
+      "✅ Craft a new public persona.",
+      "✅ Learn skills for your ideal role.",
+      "✅ Update your style and speech.",
+      "✅ Network with your target crowd.",
+      "✅ Share your new story boldly.",
+      "✅ Shed old habits that limit you.",
+      "✅ Study successful role models."
+    ],
+    "things_to_never_do": [
+      "❌ Cling to your old identity.",
+      "❌ Ignore new trends or norms.",
+      "❌ Half-commit to your reinvention.",
+      "❌ Reveal your past weaknesses.",
+      "❌ Copy others’ personas exactly.",
+      "❌ Stay in old circles forever."
+    ],
+    "trigger_drill": {
+      "default": "Change one part of your style this week.",
+      "status_flip": "Introduce yourself with a new title."
+    },
+    "cheat_code_example": "I’m exploring a bold new direction.",
+    "psychological_root": [
+      "Identity shift unlocks new social roles.",
+      "Exploits self-perception theory to reshape behavior.",
+      "Taps into social identity to gain acceptance.",
+      "Uses self-presentation to control perceptions.",
+      "Leverages cognitive flexibility to adapt.",
+      "Capitalizes on priming to align with new goals."
+    ],
+    "snap_warning": {
+      "🚨🚖 ABORT signal": "You’re slipping to old habits. (STOP. Try a new move.)"
+    },
+    "leverage_point": {
+      "tactic": "Redefine yourself—they’ll follow your lead.",
+      "blood_price": "Their old view of you dies."
+    },
+    "accountability_kpi": {
+      "daily": "📌 Weekly: Take 1 step to reinvent yourself.",
+      "penalty": "💀 Penalty: If failed, revisit an old habit for a day."
+    }
+  },
+  {
+    "number": 26,
+    "title": "KEEP YOUR HANDS CLEAN",
+    "category": "🎭 Manipulation",
+    "bilingual_power_pill": {
+      "BN": "নিজেকে পরিষ্কার রাখো",
+      "EN": "Keep your hands clean"
+    },
+    "why_it_works": "Avoiding dirty work preserves your reputation while others take the blame.",
+    "historical_example": {
+      "story": "In the 1600s, Cardinal Richelieu, France’s top minister, wanted to weaken rival nobles without being blamed. When a nobleman named Cinq-Mars plotted against King Louis XIII, Richelieu saw a chance. Instead of accusing Cinq-Mars himself, Richelieu leaked evidence to the king’s spies, letting them ‘discover’ the plot. He then acted shocked and urged Louis to punish the traitor. Cinq-Mars was executed in 1642, and his allies lost power, but Richelieu’s hands stayed clean. He also used others, like his agent Father Joseph, to bribe or threaten nobles, keeping his own name out of it. By using proxies, Richelieu avoided blame and kept his image as a loyal servant. If he had openly attacked Cinq-Mars, nobles might have united against him. His clean hands let him destroy rivals while staying trusted, showing how proxies keep you safe.",
+      "lessons": [
+        "Use others to do dirty work for you.",
+        "Act innocent to avoid suspicion.",
+        "Let proxies take risks on your behalf.",
+        "Stay distant from scandals to keep trust."
+      ]
+    },
+    "things_to_do": [
+      "✅ Use proxies for risky moves.",
+      "✅ Act surprised by others’ actions.",
+      "✅ Stay distant from scandals.",
+      "✅ Let others take public blame.",
+      "✅ Build loyal agents to act for you.",
+      "✅ Keep your name out of conflicts.",
+      "✅ Maintain a clean public image."
+    ],
+    "things_to_never_do": [
+      "❌ Get caught in dirty schemes.",
+      "❌ Take blame for others’ moves.",
+      "❌ Trust unreliable proxies.",
+      "❌ Act guilty when scandals hit.",
+      "❌ Handle risky tasks directly.",
+      "❌ Ignore your agents’ loyalty."
+    ],
+    "trigger_drill": {
+      "default": "Let someone else handle a small conflict.",
+      "status_flip": "Express shock at a rival’s misstep."
+    },
+    "cheat_code_example": "I had no idea they’d do that.",
+    "psychological_root": [
+      "Proxies shield from accountability.",
+      "Exploits diffusion to deflect blame.",
+      "Taps into innocence to maintain trust.",
+      "Uses social distance to avoid guilt.",
+      "Leverages plausible deniability to stay clean.",
+      "Capitalizes on bystander effect to shift responsibility."
+    ],
+    "snap_warning": {
+      "🚨🚖 ABORT signal": "You’re about to dive into drama. (STOP. Delegate.)"
+    },
+    "leverage_point": {
+      "tactic": "Let others fall—they’ll shield you.",
+      "blood_price": "Their ruin keeps you pure."
+    },
+    "accountability_kpi": {
+      "daily": "📌 Weekly: Avoid 1 risky direct action.",
+      "penalty": "💀 Penalty: If failed, own a small mistake publicly."
+    }
+  },
+  {
+    "number": 27,
+    "title": "PLAY ON PEOPLE’S NEED TO BELIEVE TO CREATE A CULTLIKE FOLLOWING",
+    "category": "🔮 Psychology",
+    "bilingual_power_pill": {
+      "BN": "বিশ্বাসের প্রয়োজনে খেলো",
+      "EN": "Play on people’s need to believe"
+    },
+    "why_it_works": "Tapping into people’s desire for meaning creates loyal followers.",
+    "historical_example": {
+      "story": "In the 1500s, Ignatius of Loyola, a Spanish soldier, founded the Jesuit Order. After a spiritual awakening, he preached a vision of serving God with discipline and purpose. He tapped into people’s need to believe in something greater, offering a clear mission to spread faith. Loyola wrote the *Spiritual Exercises*, a guide that promised inner peace through devotion. His passionate speeches and strict rules attracted young men seeking meaning, especially during Europe’s religious turmoil. By 1540, the Jesuits had thousands of followers, spreading across the world. Loyola’s vision gave people a cause, making them fiercely loyal. He avoided doubt by demanding total commitment, creating a cultlike following. If he had offered vague ideas, few would have joined. His clear, inspiring mission won hearts, showing how belief builds devotion.",
+      "lessons": [
+        "Offer a clear vision to inspire loyalty.",
+        "Tap into people’s search for meaning.",
+        "Demand commitment to strengthen belief.",
+        "Use passion to attract devoted followers."
+      ]
+    },
+    "things_to_do": [
+      "✅ Offer a compelling vision.",
+      "✅ Speak with passion and clarity.",
+      "✅ Create rituals for your group.",
+      "✅ Demand loyalty through shared goals.",
+      "✅ Address followers’ deepest needs.",
+      "✅ Simplify your message for impact.",
+      "✅ Build a sense of exclusive mission."
+    ],
+    "things_to_never_do": [
+      "❌ Offer vague or unclear goals.",
+      "❌ Ignore followers’ emotional needs.",
+      "❌ Allow doubt in your vision.",
+      "❌ Be too distant from your group.",
+      "❌ Undermine your own message.",
+      "❌ Permit rival beliefs to grow."
+    ],
+    "trigger_drill": {
+      "default": "Share one inspiring idea this week.",
+      "status_flip": "Create a small ritual for a group."
+    },
+    "cheat_code_example": "I have a vision you can join.",
+    "psychological_root": [
+      "Belief fulfills existential needs.",
+      "Exploits group identity for loyalty.",
+      "Taps into confirmation bias for devotion.",
+      "Uses emotional contagion to spread passion.",
+      "Leverages need for closure to unify.",
+      "Capitalizes on charisma effect to inspire."
+    ],
+    "snap_warning": {
+      "🚨🚖 ABORT signal": "You’re about to waver. (STOP. Reaffirm your vision.)"
+    },
+    "leverage_point": {
+      "tactic": "Give them purpose—they’ll follow blindly.",
+      "blood_price": "Their devotion traps them."
+    },
+    "accountability_kpi": {
+      "daily": "📌 Weekly: Inspire 1 person to join your cause.",
+      "penalty": "💀 Penalty: If failed, share a weak idea."
+    }
+  },
+  {
+    "number": 28,
+    "title": "ENTER ACTION WITH BOLDNESS",
+    "category": "⚔️ Strategy",
+    "bilingual_power_pill": {
+      "BN": "সাহসের সাথে কাজ করো",
+      "EN": "Act with boldness"
+    },
+    "why_it_works": "Boldness intimidates others, creating momentum and masking weaknesses.",
+    "historical_example": {
+      "story": "In 1519, Hernán Cortés landed in Mexico with 500 Spanish soldiers to conquer the Aztec Empire. Facing millions of Aztecs, Cortés acted boldly. He burned his ships so his men couldn’t retreat, forcing them to fight. He then marched to the Aztec capital, Tenochtitlán, and demanded an audience with Emperor Montezuma. His confidence stunned the Aztecs, who saw him as a fearless leader, possibly a god. Cortés allied with local tribes who hated the Aztecs, gaining thousands of warriors. In 1521, he attacked Tenochtitlán, using bold tactics to overwhelm the city. His daring moves hid his small army’s size, creating fear. If he had hesitated, the Aztecs might have crushed him early. His bold action—burning ships, marching forward—won him the empire, showing how fearless moves can overcome odds.",
+      "lessons": [
+        "Act boldly to intimidate and inspire.",
+        "Hide weaknesses with confident moves.",
+        "Seize momentum with decisive action.",
+        "Use boldness to attract allies."
+      ]
+    },
+    "things_to_do": [
+      "✅ Take decisive risks when ready.",
+      "✅ Act confident despite doubts.",
+      "✅ Move fast to seize opportunities.",
+      "✅ Speak loudly in key moments.",
+      "✅ Show strength in public actions.",
+      "✅ Commit fully to your plan.",
+      "✅ Ignore minor flaws for momentum."
+    ],
+    "things_to_never_do": [
+      "❌ Hesitate in critical moments.",
+      "❌ Show doubt in public.",
+      "❌ Wait for perfect conditions.",
+      "❌ Fear small mistakes.",
+      "❌ Act timid when leading.",
+      "❌ Delay big decisions."
+    ],
+    "trigger_drill": {
+      "default": "Take one bold step in a project today.",
+      "status_flip": "Speak up first in a group setting."
+    },
+    "cheat_code_example": "I’m going all in on this.",
+    "psychological_root": [
+      "Boldness triggers awe and fear.",
+      "Exploits halo effect to seem powerful.",
+      "Taps into momentum bias to drive success.",
+      "Uses overconfidence to intimidate.",
+      "Leverages primacy effect to set tone.",
+      "Capitalizes on action bias to gain traction."
+    ],
+    "snap_warning": {
+      "🚨🚖 ABORT signal": "You’re overthinking a move. (STOP. Act now.)"
+    },
+    "leverage_point": {
+      "tactic": "Shock them with daring—they’ll yield.",
+      "blood_price": "Their hesitation fuels your win."
+    },
+    "accountability_kpi": {
+      "daily": "📌 Daily: Do 1 bold action.",
+      "penalty": "💀 Penalty: If failed, skip a chance to lead."
+    }
+  },
+  {
+    "number": 29,
+    "title": "PLAN ALL THE WAY TO THE END",
+    "category": "⚔️ Strategy",
+    "bilingual_power_pill": {
+      "BN": "শেষ পর্যন্ত পরিকল্পনা করো",
+      "EN": "Plan to the end"
+    },
+    "why_it_works": "Long-term planning anticipates obstacles and secures lasting success.",
+    "historical_example": {
+      "story": "In the 1700s, Frederick the Great of Prussia, faced a war against Austria and its allies. Smaller than his enemies, Frederick planned meticulously. He studied their armies, resources, and alliances years before fighting. In 1740, he invaded Silesia, a rich Austrian land, but planned beyond the conquest. He built forts to hold it, trained his army for quick strikes, and saved money for a long war. When Austria counterattacked, his plans kept Prussia strong. He predicted allies’ moves and countered them, like splitting their armies at Leuthen in 1757, winning a key battle. Frederick also planned for peace, securing treaties to keep Silesia. By 1763, Prussia was a major power. If he hadn’t planned to the end, Austria would’ve crushed him. His foresight ensured victory, showing how planning secures the future.",
+      "lessons": [
+        "Plan for every step to the end.",
+        "Anticipate rivals’ counter moves.",
+        "Prepare resources for long-term goals.",
+        "Secure wins with backup plans."
+      ]
+    },
+    "things_to_do": [
+      "✅ Plan every step to your goal.",
+      "✅ Predict rivals’ reactions.",
+      "✅ Save resources for future needs.",
+      "✅ Create fallback options.",
+      "✅ Study long-term trends.",
+      "✅ Test your plan with scenarios.",
+      "✅ Adjust plans as new info comes."
+    ],
+    "things_to_never_do": [
+      "❌ Plan only for quick wins.",
+      "❌ Ignore future obstacles.",
+      "❌ Waste key resources.",
+      "❌ Skip backup strategies.",
+      "❌ Overlook rivals’ plans.",
+      "❌ Stick to outdated plans."
+    ],
+    "trigger_drill": {
+      "default": "Outline one long-term goal today.",
+      "status_flip": "List 1 obstacle and its fix."
+    },
+    "cheat_code_example": "I’ve planned every move to win.",
+    "psychological_root": [
+      "Foresight reduces uncertainty.",
+      "Exploits strategic thinking.",
+      "Taps into loss aversion for caution.",
+      "Uses mental simulation to prepare.",
+      "Leverages self-efficacy for confidence.",
+      "Capitalizes on future orientation."
+    ],
+    "snap_warning": {
+      "🚖 ABORT signal": "You’re rushing without a plan. (STOP. Map the end.)"
+    },
+    "leverage_point": {
+      "tactic": "See the end—they’ll stumble.",
+      "blood_price": "Their shortsight locks your win."
+    },
+    "accountability_kpi": {
+      "daily": "📌 Weekly: Plan 1 step for a goal.",
+      "penalty": "💖 Penalty: If failed, act without prep."
+    }
+  },
+  {
+    "number": 30,
+    "title": "MAKE YOUR ACCOMPLISHMENTS SEEM EFFORTLESS",
+    "category": "⚔️ Strategy",
+    "bilingual_power_pill": {
+      "BN": "সাফল্যকে সহজ দেখাও",
+      "EN": "Make wins seem effortless"
+    },
+    "why_it_works": "Effortless success creates awe, hiding the hard work and boosting mystique.",
+    "historical_example": {
+      "story": "In the 1500s, Baldassare Castiglione, an Italian courtier, wrote *The Book of the Courtier*, a guide to grace. At the court of Urbino, he was known for making his skills seem effortless. Castiglione danced, debated, and advised nobles with a calm, easy charm, never showing sweat or strain. When he helped negotiate treaties or wrote poetry, he acted like it was natural, not studied. This made nobles admire him, thinking his talents were divine. Behind the scenes, he practiced tirelessly, studying languages and politics, but hid his effort. His effortless air made rivals underestimate him, while dukes sought his advice. By 1528, his book spread his reputation across Europe. If he had bragged about his work, he’d seem ordinary. His effortless style made him a legend, showing how hiding struggle builds a powerful image.",
+      "lessons": [
+        "Hide effort to seem naturally gifted.",
+        "Practice hard to make skills smooth.",
+        "Act calm when you succeed big.",
+        "Let others marvel at your ease."
+      ]
+    },
+    "things_to_do": [
+      "✅ Practice skills in private.",
+      "✅ Act calm after big wins.",
+      "✅ Downplay your preparation.",
+      "✅ Deliver with smooth confidence.",
+      "✅ Simplify complex tasks.",
+      "✅ Smile lightly after success.",
+      "✅ Let others praise you."
+    ],
+    "things_to_never_do": [
+      "❌ Boast about your hard work.",
+      "❌ Show strain in public.",
+      "❌ Don’t reveal your practice.",
+      "❌ Act nervous after wins.",
+      "❌ Complicate your delivery.",
+      "❌ Seek praise too eagerly."
+    ],
+    "trigger_drill": {
+      "default": "Do a task well, act casual after.",
+      "status_flip": "Say, ‘It’s no big deal,’ post-win."
+    },
+    "cheat_code_example": "Just came naturally, I guess.",
+    "psychological_root": [
+      "Ease creates mystique.",
+      "Exploits halo effect for awe.",
+      "Taps into effort bias to impress.",
+      "Uses underestimation to disarm.",
+      "Leverages fluency effect for trust.",
+      "Capitalizes on charisma."
+    ],
+    "snap_warning": {
+      "🚖 ABORT signal": "You’re bragging effort. (STOP effort. Act cool.)"
+    },
+    "leverage_point": {
+      "tactic": "Seem gifted—they’ll worship.",
+      "blood_price": "Their awe builds your myth."
+    },
+    "accountability_kpi": {
+      "daily": "📌 Weekly: Make 1 win seem easy.",
+      "penalty": "💖 Penalty: If failed, admit effort once."
+    }
+  },
+  {
+    "number": 31,
+    "title": "CONTROL THE OPTIONS: GET OTHERS TO PLAY WITH THE CARDS YOU DEAL",
+    "category": "🛠️ Control",
+    "bilingual_power_pill": {
+      "BN": "বিকল্প নিয়ন্ত্রণ করো",
+      "EN": "Control the options"
+    },
+    "why_it_works": "Limiting choices creates the illusion of their control while you dictate terms.",
+    "historical_example": {
+      "story": "In the 1800s, Otto von Bismarck, Prussia’s chancellor, wanted to unify Germany under his rule. In 1870, he needed France to declare war to rally German states. Bismarck controlled the options by editing a telegram, the Ems Dispatch, from a meeting between France and Prussia. He made it seem like France insulted Prussia, knowing France’s leader, Napoleon III, would react. Bismarck gave France two choices: apologize publicly, which would shame Napoleon III, or fight a war. Feeling trapped, Napoleon III chose war, just as Bismarck planned. The Franco-Prussian War united German states against France, and Prussia won in 1871, creating the German Empire. If Bismarck had let France negotiate freely, he might have failed. By limiting their options to bad or worse, he forced France’s hand, showing how controlling choices secures power.",
+      "lessons": [
+        "Limit others’ choices to guide their actions.",
+        "Frame options to favor your goal.",
+        "Make their ‘freedom’ feel like a trap.",
+        "Plan outcomes to control decisions."
+      ]
+    },
+    "things_to_do": [
+      "✅ Offer two options, both your win.",
+      "✅ Frame choices to seem like their idea.",
+      "✅ Limit their time to decide.",
+      "✅ Present options with your endgame.",
+      "✅ Hide the full range of possibilities.",
+      "✅ Use urgency to push their pick.",
+      "✅ Make one option clearly worse."
+    ],
+    "things_to_never_do": [
+      "❌ Give too many open choices.",
+      "❌ Let them negotiate new terms.",
+      "❌ Reveal your preferred outcome.",
+      "❌ Allow delays in their decision.",
+      "❌ Offer equal-value options.",
+      "❌ Ignore their emotional triggers."
+    ],
+    "trigger_drill": {
+      "default": "Offer two choices in a deal today.",
+      "status_flip": "Push one option as ‘urgent’ subtly."
+    },
+    "cheat_code_example": "It’s either A or B—your call.",
+    "psychological_root": [
+      "Choice limitation creates control.",
+      "Exploits decision fatigue to steer outcomes.",
+      "Taps into reactance to make them pick fast.",
+      "Uses framing effect to shape perceptions.",
+      "Leverages illusion of control to reduce resistance.",
+      "Capitalizes on loss aversion to force a choice."
+    ],
+    "snap_warning": {
+      "🚨 ABORT signal": "They’re asking for more options. (STOP. Restrict further.)"
+    },
+    "leverage_point": {
+      "tactic": "Deal your cards—they’ll play your game.",
+      "blood_price": "Their ‘choice’ seals your win."
+    },
+    "accountability_kpi": {
+      "daily": "📌 Weekly: Control 1 person’s options.",
+      "penalty": "💀 Penalty: If failed, let someone pick freely."
+    }
+  },
+  {
+    "number": 32,
+    "title": "PLAY TO PEOPLE’S FANTASIES",
+    "category": "💋 Seduction",
+    "bilingual_power_pill": {
+      "BN": "মানুষের কল্পনায় খেলো",
+      "EN": "Play to people’s fantasies"
+    },
+    "why_it_works": "Fantasies bypass logic, making people eager to follow your vision.",
+    "historical_example": {
+      "story": "In the 1800s, P.T. Barnum, an American showman, built a fortune by tapping into people’s dreams. He created the ‘Greatest Show on Earth,’ a circus promising wonders like giants and mermaids. In 1842, Barnum displayed the ‘Feejee Mermaid,’ a fake creature he hyped as a magical discovery. People flocked to see it, not caring if it was real—they wanted to believe in magic. Barnum also promoted Tom Thumb, a small man, as a fairy-tale prince, thrilling audiences with stories of adventure. His shows fed people’s fantasies of escaping dull lives. By 1850, Barnum was rich and famous, drawing crowds worldwide. If he had stuck to facts, few would have cared. His exaggerated tales gave people joy, showing how fantasies create loyalty and profit.",
+      "lessons": [
+        "Offer dreams to spark excitement.",
+        "Exaggerate to feed their imagination.",
+        "Promise escape from boring reality.",
+        "Keep fantasies simple and vivid."
+      ]
+    },
+    "things_to_do": [
+      "✅ Promise big, inspiring dreams.",
+      "✅ Use vivid stories to captivate.",
+      "✅ Tap into their hidden desires.",
+      "✅ Offer hope for a better future.",
+      "✅ Simplify your vision for impact.",
+      "✅ Use symbols to spark imagination.",
+      "✅ Create a sense of wonder."
+    ],
+    "things_to_never_do": [
+      "❌ Stick only to boring facts.",
+      "❌ Ignore their emotional dreams.",
+      "❌ Offer complex or dull promises.",
+      "❌ Expose the fantasy’s flaws.",
+      "❌ Mock their hopes or wishes.",
+      "❌ Fail to deliver some magic."
+    ],
+    "trigger_drill": {
+      "default": "Share a dreamy idea with someone.",
+      "status_flip": "Paint a vivid ‘what if’ scenario."
+    },
+    "cheat_code_example": "Imagine what we could achieve!",
+    "psychological_root": [
+      "Fantasies fulfill emotional voids.",
+      "Exploits wishful thinking to inspire.",
+      "Taps into escapism to gain loyalty.",
+      "Uses vividness bias to captivate.",
+      "Leverages emotional priming to hook.",
+      "Capitalizes on narrative bias to persuade."
+    ],
+    "snap_warning": {
+      "🚨 ABORT signal": "You’re being too realistic. (STOP. Dream bigger.)"
+    },
+    "leverage_point": {
+      "tactic": "Feed their dreams—they’ll chase you.",
+      "blood_price": "Their hope binds them to you."
+    },
+    "accountability_kpi": {
+      "daily": "📌 Weekly: Inspire 1 fantasy in someone.",
+      "penalty": "💀 Penalty: If failed, share a dull fact."
+    }
+  },
+  {
+    "number": 33,
+    "title": "DISCOVER EACH MAN’S THUMBSCREW",
+    "category": "🔮 Psychology",
+    "bilingual_power_pill": {
+      "BN": "প্রত্যেকের দুর্বলতা খুঁজে বের করো",
+      "EN": "Find each person’s weakness"
+    },
+    "why_it_works": "Knowing weaknesses gives you leverage to control or influence others.",
+    "historical_example": {
+      "story": "In the 1500s, Queen Elizabeth I of England faced a powerful rival, Mary, Queen of Scots. Elizabeth’s advisors found Mary’s thumbscrew: her desire to claim England’s throne. Mary, a Catholic, believed she had divine right to rule over Protestant Elizabeth. Elizabeth’s spies watched Mary, learning she wrote secret letters to Catholic allies plotting rebellion. Instead of attacking Mary openly, Elizabeth used her weakness. In 1586, spies intercepted Mary’s letters, proving her role in the Babington Plot to kill Elizabeth. Elizabeth acted hurt, not angry, gaining sympathy. Mary was tried and executed in 1587, ending her threat. If Elizabeth had ignored Mary’s ambition, the plot might have succeeded. By finding and exploiting Mary’s thumbscrew—her thirst for power—Elizabeth stayed safe, showing how weaknesses give control.",
+      "lessons": [
+        "Study others to find their weaknesses.",
+        "Use their desires to guide their actions.",
+        "Stay subtle when exploiting flaws.",
+        "Turn weaknesses into your leverage."
+      ]
+    },
+    "things_to_do": [
+      "✅ Observe their emotional triggers.",
+      "✅ Ask questions to reveal desires.",
+      "✅ Note what they defend or hide.",
+      "✅ Use their flaws subtly for leverage.",
+      "✅ Watch for pride or insecurity.",
+      "✅ Test reactions to find soft spots.",
+      "✅ Keep their weaknesses secret."
+    ],
+    "things_to_never_do": [
+      "❌ Ignore their hidden motives.",
+      "❌ Expose their flaws publicly.",
+      "❌ Assume they have no weaknesses.",
+      "❌ Push their triggers too hard.",
+      "❌ Neglect their emotional cues.",
+      "❌ Share what you discover."
+    ],
+    "trigger_drill": {
+      "default": "Note one person’s trigger today.",
+      "status_flip": "Ask a question to test their flaw."
+    },
+    "cheat_code_example": "I see what drives you—let’s talk.",
+    "psychological_root": [
+      "Weaknesses expose control points.",
+      "Exploits vulnerability to gain power.",
+      "Taps into self-interest to manipulate.",
+      "Uses attribution bias to predict behavior.",
+      "Leverages emotional triggers to steer.",
+      "Capitalizes on overconfidence to expose flaws."
+    ],
+    "snap_warning": {
+      "🚨 ABORT signal": "You’re about to expose a flaw. (STOP. Use it quietly.)"
+    },
+    "leverage_point": {
+      "tactic": "Press their thumbscrew—they’ll bend.",
+      "blood_price": "Their weakness becomes your chain."
+    },
+    "accountability_kpi": {
+      "daily": "📌 Weekly: Find 1 person’s weakness.",
+      "penalty": "💀 Penalty: If failed, reveal a minor flaw."
+    }
+  },
+  {
+    "number": 34,
+    "title": "BE ROYAL IN YOUR OWN FASHION: ACT LIKE A KING TO BE TREATED LIKE ONE",
+    "category": "🐍 Positioning",
+    "bilingual_power_pill": {
+      "BN": "নিজের মতো রাজকীয় হও",
+      "EN": "Act like a king"
+    },
+    "why_it_works": "Acting with regal confidence commands respect and elevates your status.",
+    "historical_example": {
+      "story": "In the 1700s, Frederick the Great of Prussia was a young prince in a small kingdom. To be seen as a major power, he acted like a king long before he was strong. He built grand palaces, dressed in fine clothes, and hosted lavish feasts for foreign leaders. Frederick spoke with confidence, treating rivals as equals, even when Prussia was weak. In 1740, he boldly seized Silesia from Austria, acting like a king entitled to it. His regal air made allies, like France, support him, and enemies hesitate. By 1763, Prussia was a top European power. If Frederick had acted small, no one would have respected him. His kingly demeanor—grand gestures, bold moves—made others treat him as a great ruler, showing how acting royal shapes your status.",
+      "lessons": [
+        "Act confident to gain respect.",
+        "Use grand gestures to show power.",
+        "Treat yourself as important first.",
+        "Demand treatment fit for a king."
+      ]
+    },
+    "things_to_do": [
+      "✅ Carry yourself with confidence.",
+      "✅ Dress to command respect.",
+      "✅ Speak with calm authority.",
+      "✅ Create grand moments for impact.",
+      "✅ Expect others to treat you well.",
+      "✅ Surround yourself with quality.",
+      "✅ Act above petty disputes."
+    ],
+    "things_to_never_do": [
+      "❌ Act small or timid.",
+      "❌ Dress below your desired status.",
+      "❌ Beg for others’ approval.",
+      "❌ Engage in low-level fights.",
+      "❌ Show insecurity publicly.",
+      "❌ Accept poor treatment."
+    ],
+    "trigger_drill": {
+      "default": "Dress up for one event this week.",
+      "status_flip": "Speak with authority in a meeting."
+    },
+    "cheat_code_example": "I expect the best—don’t you?",
+    "psychological_root": [
+      "Confidence signals high status.",
+      "Exploits halo effect to gain admiration.",
+      "Taps into authority bias to command respect.",
+      "Uses self-fulfilling prophecy to shape treatment.",
+      "Leverages impression management to elevate.",
+      "Capitalizes on social hierarchy to assert dominance."
+    ],
+    "snap_warning": {
+      "🚨 ABORT signal": "You’re acting unsure. (STOP. Stand tall.)"
+    },
+    "leverage_point": {
+      "tactic": "Act royal—they’ll bow.",
+      "blood_price": "Their respect crowns you."
+    },
+    "accountability_kpi": {
+      "daily": "📌 Daily: Do 1 regal act.",
+      "penalty": "💀 Penalty: If failed, act humble once."
+    }
+  },
+    {
+      "number": 35,
+      "title": "MASTER THE ART OF TIMING",
+      "category": "⚔️ Strategy",
+      "bilingual_power_pill": {
+        "BN": "সময়ের শিল্পে দক্ষ হও",
+        "EN": "Master the art of timing"
+      },
+      "why_it_works": "Perfect timing maximizes impact and catches others off guard.",
+      "historical_example": {
+        "story": "In the 1700s, Benjamin Franklin, an American statesman, mastered timing to gain power. In 1757, he went to London to represent Pennsylvania’s interests. Britain was fighting France, and Franklin saw his chance. He waited until Britain needed American colonies’ support, then proposed a plan to unify colonial defenses, making Pennsylvania vital. His timing won Britain’s favor, boosting his influence. Later, in 1776, as America sought independence, Franklin delayed signing the Declaration until key leaders agreed, ensuring unity. In 1783, he negotiated peace with Britain at the perfect moment, when they were war-weary, securing favorable terms for America. If Franklin had acted too soon or late, his plans would have failed. His perfect timing—waiting for weakness or unity—made him a key figure, showing how timing turns small moves into big wins.",
+        "lessons": [
+          "Wait for the right moment to act.",
+          "Strike when others are weak or ready.",
+          "Delay for unity or better terms.",
+          "Study trends to time your moves."
+        ]
+      },
+      "things_to_do": [
+        "✅ Wait for optimal moments to act.",
+        "✅ Study trends before moving.",
+        "✅ Strike when others are distracted.",
+        "✅ Delay for better leverage.",
+        "✅ Plan actions around key events.",
+        "✅ Watch rivals’ timing for gaps.",
+        "✅ Stay patient for big wins."
+      ],
+      "things_to_never_do": [
+        "❌ Rush into action too soon.",
+        "❌ Ignore the bigger context.",
+        "❌ Act when others are strongest.",
+        "❌ Force moves without timing.",
+        "❌ Miss critical opportunities.",
+        "❌ Neglect rivals’ schedules."
+      ],
+      "trigger_drill": {
+        "default": "Pause one decision for better timing.",
+        "status_flip": "Act fast when a rival slips today."
+      },
+      "cheat_code_example": "The moment’s ripe—let’s move.",
+      "psychological_root": [
+        "Timing exploits situational leverage.",
+        "Exploits kairos for maximum impact.",
+        "Taps into opportunity cost to wait wisely.",
+        "Uses surprise to disrupt opponents.",
+        "Leverages temporal discounting to act smart.",
+        "Capitalizes on momentum to amplify success."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re rushing a move. (STOP. Wait for timing.)",
+      "leverage_point": {
+        "tactic": "Time it right—they’ll fall.",
+        "blood_price": "Their misstep seals your win."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Time 1 action perfectly.",
+        "penalty": "💀 Penalty: If failed, rush a small decision."
+      }
+    },
+    {
+      "number": 36,
+      "title": "DISDAIN THINGS YOU CANNOT HAVE: IGNORING THEM IS THE BEST REVENGE",
+      "category": "🔮 Psychology",
+      "bilingual_power_pill": {
+        "BN": "যা পাওয়া যায় না তা তুচ্ছ করো",
+        "EN": "Disdain what you can’t have"
+      },
+      "why_it_works": "Ignoring unattainable goals preserves dignity and frustrates others.",
+      "historical_example": {
+        "story": "In the 1600s, Spanish writer Miguel de Cervantes faced failure. His plays were ignored, and he was jailed for debt. He wanted fame as a playwright but couldn’t compete with popular rivals like Lope de Vega. Instead of chasing their success, Cervantes disdained the theater world, calling it shallow. He focused on a new goal: writing a novel, *Don Quixote*, published in 1605. By ignoring the stage he couldn’t conquer, he poured his energy into a masterpiece that mocked vain ambitions. The novel became a global success, outshining his rivals’ plays. If Cervantes had begged for theater fame, he might have stayed obscure. His disdain for what he couldn’t have freed him to create something greater, showing how ignoring unattainable goals can lead to bigger wins and quiet revenge.",
+        "lessons": [
+          "Ignore what you can’t achieve to stay strong.",
+          "Focus energy on new, reachable goals.",
+          "Disdain rivals’ wins to frustrate them.",
+          "Turn rejection into creative power."
+        ]
+      },
+      "things_to_do": [
+        "✅ Dismiss unattainable goals calmly.",
+        "✅ Focus on what you can control.",
+        "✅ Act unbothered by others’ wins.",
+        "✅ Channel energy into new plans.",
+        "✅ Smile when rivals gloat.",
+        "✅ Build success in your own way.",
+        "✅ Let go of past failures."
+      ],
+      "things_to_never_do": [
+        "❌ Obsess over what you can’t have.",
+        "❌ Show envy for others’ success.",
+        "❌ Beg for unreachable rewards.",
+        "❌ Waste energy on lost causes.",
+        "❌ React to rivals’ taunts.",
+        "❌ Cling to old rejections."
+      ],
+      "trigger_drill": {
+        "default": "Ignore one rival’s win this week.",
+        "status_flip": "Say, ‘Not my focus,’ to a lost goal."
+      },
+      "cheat_code_example": "That’s not worth my time.",
+      "psychological_root": [
+        "Disdain preserves self-esteem.",
+        "Exploits cognitive dissonance to stay calm.",
+        "Taps into sour grapes to reduce desire.",
+        "Uses self-regulation to redirect focus.",
+        "Leverages psychological distance to detach.",
+        "Capitalizes on reframing to empower."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re envying a rival. (STOP. Dismiss it.)",
+      "leverage_point": {
+        "tactic": "Ignore their wins—they’ll burn.",
+        "blood_price": "Their gloating fuels your rise."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Disdain 1 unattainable goal.",
+        "penalty": "💀 Penalty: If failed, chase a lost cause."
+      }
+    },
+    {
+      "number": 37,
+      "title": "CREATE COMPELLING SPECTACLES",
+      "category": "💋 Seduction",
+      "bilingual_power_pill": {
+        "BN": "আকর্ষণীয় দৃশ্য তৈরি করো",
+        "EN": "Create compelling spectacles"
+      },
+      "why_it_works": "Grand displays capture attention and cement your influence.",
+      "historical_example": {
+        "story": "In the 1600s, King Louis XIV of France, the Sun King, used spectacles to solidify power. After a rebellion by nobles, he built the Palace of Versailles, a massive, glittering castle. In 1661, he hosted a week-long festival with feasts, plays, and fireworks, inviting all nobles. The spectacle awed them, showing his wealth and control. Louis made Versailles his court, forcing nobles to live there, where he staged daily rituals, like his morning dressing, that they had to attend. These displays kept nobles focused on him, not plotting. By 1680, Louis was France’s absolute ruler, his spectacles uniting the court under his spell. If he had ruled quietly, nobles might have rebelled again. His grand shows made him untouchable, proving spectacles can control and inspire loyalty.",
+        "lessons": [
+          "Use grand events to grab attention.",
+          "Show power through bold displays.",
+          "Keep allies engaged with rituals.",
+          "Make spectacles unforgettable."
+        ]
+      },
+      "things_to_do": [
+        "✅ Stage bold events for impact.",
+        "✅ Use visuals to captivate crowds.",
+        "✅ Create rituals for your group.",
+        "✅ Show strength through grandeur.",
+        "✅ Plan spectacles with clear goals.",
+        "✅ Invite key players to watch.",
+        "✅ Make moments feel exclusive."
+      ],
+      "things_to_never_do": [
+        "❌ Host dull or cheap events.",
+        "❌ Ignore the audience’s values.",
+        "❌ Overdo repetitive spectacles.",
+        "❌ Forget to control the narrative.",
+        "❌ Exclude important allies.",
+        "❌ Waste resources on flops."
+      ],
+      "trigger_drill": {
+        "default": "Plan one bold event this week.",
+        "status_flip": "Add a visual to a small act."
+      },
+      "cheat_code_example": "Wait till you see what’s next!",
+      "psychological_root": [
+        "Spectacles trigger awe and loyalty.",
+        "Exploits vividness bias to captivate.",
+        "Taps into social proof to unite crowds.",
+        "Uses emotional contagion to inspire.",
+        "Leverages anchoring to set grandeur.",
+        "Capitalizes on attention bias to dominate."
+      ],
+      "snap_warning": "🚨 ABORT signal: Your event’s too plain. (STOP. Add flair.)",
+      "leverage_point": {
+        "tactic": "Dazzle them—they’ll follow.",
+        "blood_price": "Their awe traps them in your show."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Create 1 mini-spectacle.",
+        "penalty": "💀 Penalty: If failed, host a boring meet."
+      }
+    },
+    {
+      "number": 38,
+      "title": "THINK AS YOU LIKE BUT BEHAVE LIKE OTHERS",
+      "category": "🧠 Deception",
+      "bilingual_power_pill": {
+        "BN": "যেমন ইচ্ছা ভাবো, তেমন আচরণ করো",
+        "EN": "Think freely, act like others"
+      },
+      "why_it_works": "Blending in hides your true thoughts, avoiding conflict while you plan.",
+      "historical_example": {
+        "story": "In the 1500s, Erasmus of Rotterdam, a Dutch scholar, lived in a Europe torn by religious wars. As a thinker, he had bold ideas about reforming the Catholic Church but knew criticizing it openly could get him killed. Instead, Erasmus acted like others, attending church and praising rulers while writing books like *In Praise of Folly* in 1511. His writings hid his critiques in humor, blending with the era’s style. He dressed like scholars, spoke politely, and avoided public fights, keeping Catholic and Protestant leaders friendly. This let him spread his ideas safely, influencing the Reformation without being targeted. If Erasmus had openly defied the Church, he might have been executed like others. By behaving like others while thinking freely, he stayed safe and powerful, showing how conformity hides rebellion.",
+        "lessons": [
+          "Blend in to avoid drawing fire.",
+          "Hide bold thoughts behind normal acts.",
+          "Use subtle ways to share ideas.",
+          "Stay safe by matching others’ style."
+        ]
+      },
+      "things_to_do": [
+        "✅ Mimic group norms in public.",
+        "✅ Hide radical thoughts privately.",
+        "✅ Dress to match your crowd.",
+        "✅ Agree superficially to avoid fights.",
+        "✅ Use humor to mask critiques.",
+        "✅ Observe others’ behaviors closely.",
+        "✅ Stay polite in tense settings."
+      ],
+      "things_to_never_do": [
+        "❌ Share bold views openly.",
+        "❌ Stand out in risky groups.",
+        "❌ Defy norms without a plan.",
+        "❌ Ignore the crowd’s values.",
+        "❌ Act rebellious in public.",
+        "❌ Neglect social cues."
+      ],
+      "trigger_drill": {
+        "default": "Match one group norm today.",
+        "status_flip": "Nod at a view you dislike."
+      },
+      "cheat_code_example": "I’m just like you on this.",
+      "psychological_root": [
+        "Conformity reduces suspicion.",
+        "Exploits in-group bias to blend.",
+        "Taps into cognitive dissonance to hide intent.",
+        "Uses social camouflage to stay safe.",
+        "Leverages mirroring to gain trust.",
+        "Capitalizes on normative influence to avoid conflict."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re about to rebel openly. (STOP. Blend in.)",
+      "leverage_point": {
+        "tactic": "Act like them—they’ll trust you.",
+        "blood_price": "Their comfort hides your plans."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Blend in 1 group setting.",
+        "penalty": "💀 Penalty: If failed, stand out once."
+      }
+    },
+    {
+      "number": 39,
+      "title": "STIR UP WATERS TO CATCH FISH",
+      "category": "🎭 Manipulation",
+      "bilingual_power_pill": {
+        "BN": "পানি ঘোলা করে মাছ ধরো",
+        "EN": "Stir up waters to catch fish"
+      },
+      "why_it_works": "Creating chaos confuses others, letting you seize opportunities.",
+      "historical_example": {
+        "story": "In the 1400s, Vlad the Impaler, ruler of Wallachia, faced the mighty Ottoman Empire. Outnumbered, Vlad used chaos to win. In 1462, when Sultan Mehmed II invaded with a huge army, Vlad didn’t fight directly. He burned crops, poisoned wells, and launched night raids, spreading panic. He also impaled captured soldiers, horrifying the Ottomans. The chaos made Mehmed’s army tired and scared. Vlad then spread rumors of a bigger Wallachian force, causing confusion. In one night attack, Vlad nearly killed Mehmed, forcing the Ottomans to retreat. By stirring up waters—disrupting supplies and morale—Vlad caught his fish, saving Wallachia. If he had fought openly, he would have lost. His chaos tactics turned weakness into victory, showing how confusion creates openings.",
+        "lessons": [
+          "Create chaos to weaken opponents.",
+          "Use confusion to hide your moves.",
+          "Disrupt plans to gain advantage.",
+          "Strike fast in others’ panic."
+        ]
+      },
+      "things_to_do": [
+        "✅ Spread rumors to unsettle rivals.",
+        "✅ Disrupt their plans subtly.",
+        "✅ Act fast in others’ confusion.",
+        "✅ Create distractions for your gain.",
+        "✅ Use chaos to mask your intent.",
+        "✅ Stir emotions to cloud judgment.",
+        "✅ Stay calm while others panic."
+      ],
+      "things_to_never_do": [
+        "❌ Stir chaos without a plan.",
+        "❌ Get caught in your own mess.",
+        "❌ Disrupt allies by mistake.",
+        "❌ Overdo chaos and lose control.",
+        "❌ Ignore the fallout risks.",
+        "❌ Panic in the confusion."
+      ],
+      "trigger_drill": {
+        "default": "Spread a harmless rumor today.",
+        "status_flip": "Disrupt a rival’s focus subtly."
+      },
+      "cheat_code_example": "Let’s shake things up a bit.",
+      "psychological_root": [
+        "Chaos exploits cognitive overload.",
+        "Exploits disorientation to gain control.",
+        "Taps into fear response to disrupt.",
+        "Uses surprise to create openings.",
+        "Leverages stress to cloud judgment.",
+        "Capitalizes on ambiguity to manipulate."
+      ],
+      "snap_warning": "🚨 ABORT signal: Chaos is backfiring. (STOP. Regroup.)",
+      "leverage_point": {
+        "tactic": "Muddy the waters—they’ll sink.",
+        "blood_price": "Their panic hands you the win."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Create 1 controlled disruption.",
+        "penalty": "💀 Penalty: If failed, calm a chaotic situation."
+      }
+    },
+    {
+      "number": 40,
+      "title": "DESPISE THE FREE LUNCH",
+      "category": "⚔️ Strategy",
+      "bilingual_power_pill": {
+        "BN": "মুফতের খাবার তুচ্ছ করো",
+        "EN": "Despise the free lunch"
+      },
+      "why_it_works": "Free offers hide obligations, tying you to others’ control.",
+      "historical_example": {
+        "story": "In the 1700s, John Adams, an American lawyer, was rising in politics. In 1765, a British official offered him a free role as a colonial advocate, promising wealth and status. Adams suspected a trap: accepting would tie him to British rule, alienating his American allies. He refused, choosing independence over the ‘free lunch.’ Instead, he built his reputation defending colonial rights, like arguing against British taxes. His refusal paid off. By 1776, Adams was a leader in America’s independence movement, helping draft the Declaration. If he had taken the offer, he’d have been a British puppet, losing credibility. The British used free roles to control others, but Adams’s disdain kept him free. His choice showed how rejecting free offers preserves your power and avoids hidden debts.",
+        "lessons": [
+          "Reject free offers with hidden strings.",
+          "Stay independent to keep control.",
+          "Build your own path to success.",
+          "Suspect motives behind free gifts."
+        ]
+      },
+      "things_to_do": [
+        "✅ Decline suspicious free offers.",
+        "✅ Build your own resources.",
+        "✅ Question motives behind gifts.",
+        "✅ Stay free of others’ debts.",
+        "✅ Value your independence highly.",
+        "✅ Seek transparent deals only.",
+        "✅ Say no politely but firmly."
+      ],
+      "things_to_never_do": [
+        "❌ Accept gifts without checking.",
+        "❌ Feel obliged to repay favors.",
+        "❌ Trust ‘free’ deals blindly.",
+        "❌ Ignore hidden obligations.",
+        "❌ Trade freedom for quick gains.",
+        "❌ Fear saying no to offers."
+      ],
+      "trigger_drill": {
+        "default": "Say no to one free offer today.",
+        "status_flip": "Ask, ‘What’s the catch?’ once."
+      },
+      "cheat_code_example": "Thanks, but I’m good on my own.",
+      "psychological_root": [
+        "Freedom preserves autonomy.",
+        "Exploits reciprocity trap awareness.",
+        "Taps into skepticism to avoid control.",
+        "Uses self-reliance to stay strong.",
+        "Leverages loss aversion to protect independence.",
+        "Capitalizes on distrust to dodge manipulation."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re tempted by free. (STOP. Say no.)",
+      "leverage_point": {
+        "tactic": "Reject their bait—you stay free.",
+        "blood_price": "Their offer traps someone else."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Decline 1 free offer.",
+        "penalty": "💀 Penalty: If failed, accept a small favor."
+      }
+    },
+        {
+      "number": 41,
+      "title": "AVOID STEPPING INTO A GREAT MAN’S SHOES",
+      "category": "🐍 Positioning",
+      "bilingual_power_pill": {
+        "BN": "মহান ব্যক্তির জুতোয় পা দিও না",
+        "EN": "Avoid great men’s shoes"
+      },
+      "why_it_works": "Following a legend invites comparison, setting you up for failure.",
+      "historical_example": {
+        "story": "In the 1500s, Pope Julius II was a towering figure, known for building St. Peter’s Basilica and leading wars. When he died in 1513, his successor, Pope Leo X, tried to fill his shoes. Leo mimicked Julius’s grand projects, funding artists like Michelangelo and waging wars to show strength. But Leo lacked Julius’s charisma and decisiveness, and his efforts fell flat. The Church’s treasury drained, and critics compared him unfavorably to Julius, calling him wasteful. To match Julius’s glory, Leo sold indulgences, sparking outrage and fueling Martin Luther’s Reformation in 1517, which split Christianity. If Leo had forged his own path, focusing on diplomacy or reform, he might have avoided ruin. By stepping into Julius’s shoes, he faced impossible expectations and failed, showing how following a great man’s legacy can trap you in their shadow.",
+        "lessons": [
+          "Carve your own path to avoid comparison.",
+          "Focus on your unique strengths.",
+          "Don’t mimic a legend’s style blindly.",
+          "Build success on your own terms."
+        ]
+      },
+      "things_to_do": [
+        "✅ Highlight your unique skills.",
+        "✅ Create a distinct public image.",
+        "✅ Avoid copying predecessors’ moves.",
+        "✅ Focus on new, untried goals.",
+        "✅ Build allies who value you.",
+        "✅ Redefine success for your role.",
+        "✅ Stay humble about past legends."
+      ],
+      "things_to_never_do": [
+        "❌ Imitate a great predecessor.",
+        "❌ Chase their exact achievements.",
+        "❌ Ignore your own strengths.",
+        "❌ Compete with their legacy.",
+        "❌ Let others compare you.",
+        "❌ Neglect your own vision."
+      ],
+      "trigger_drill": {
+        "default": "Do one task your way today.",
+        "status_flip": "Reject a comparison to someone great."
+      },
+      "cheat_code_example": "I’m doing this my way.",
+      "psychological_root": [
+        "Comparison triggers inferiority.",
+        "Exploits distinctiveness to stand out.",
+        "Taps into self-comparison bias to avoid traps.",
+        "Uses self-efficacy to build confidence.",
+        "Leverages identity theory to redefine role.",
+        "Capitalizes on differentiation to escape shadows."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re mimicking a legend. (STOP. Be original.)",
+      "leverage_point": {
+        "tactic": "Be unique—they’ll forget the past.",
+        "blood_price": "Their nostalgia fuels your rise."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Do 1 unique action.",
+        "penalty": "💀 Penalty: If failed, copy someone once."
+      }
+    },
+    {
+      "number": 42,
+      "title": "STRIKE THE SHEPHERD AND THE SHEEP WILL SCATTER",
+      "category": "🔪 Elimination",
+      "bilingual_power_pill": {
+        "BN": "নেতাকে আঘাত করো, অনুসারীরা ছড়িয়ে পড়বে",
+        "EN": "Strike the shepherd, scatter sheep"
+      },
+      "why_it_works": "Removing the leader disrupts the group, weakening their unity.",
+      "historical_example": {
+        "story": "In the 1200s, Genghis Khan, leader of the Mongols, conquered vast lands. In 1219, he targeted the Khwarazmian Empire in Central Asia. Instead of fighting their large army, Khan struck the shepherd, Shah Muhammad. Khan sent spies to spread rumors that Muhammad was weak, causing his generals to doubt him. Then, in a bold raid, Khan’s forces attacked Muhammad’s capital, Samarkand, forcing him to flee. Without their leader, the empire’s cities and armies fell into chaos. Generals fought each other, and soldiers deserted. By 1221, Khan had crushed the empire, capturing its lands. If Khan had fought the entire army, it would have taken years. By targeting Muhammad, he scattered the sheep, showing how striking the leader can destroy a group’s strength quickly.",
+        "lessons": [
+          "Target the leader to disrupt unity.",
+          "Weaken their influence before striking.",
+          "Use chaos to break group loyalty.",
+          "Act fast to exploit their absence."
+        ]
+      },
+      "things_to_do": [
+        "✅ Identify the group’s key leader.",
+        "✅ Undermine their authority subtly.",
+        "✅ Strike when they’re isolated.",
+        "✅ Exploit chaos after their fall.",
+        "✅ Spread doubt about their power.",
+        "✅ Target their key alliances.",
+        "✅ Move quickly to seize control."
+      ],
+      "things_to_never_do": [
+        "❌ Attack the group without focus.",
+        "❌ Ignore the leader’s influence.",
+        "❌ Delay after weakening them.",
+        "❌ Underestimate their loyalists.",
+        "❌ Fight scattered groups first.",
+        "❌ Reveal your plan early."
+      ],
+      "trigger_drill": {
+        "default": "Spot a group’s leader today.",
+        "status_flip": "Spread a doubt about their power."
+      },
+      "cheat_code_example": "Take out the head, the rest fall.",
+      "psychological_root": [
+        "Leaders anchor group cohesion.",
+        "Exploits dependency on authority.",
+        "Taps into panic response to disrupt.",
+        "Uses social disarray to weaken.",
+        "Leverages hierarchy bias to target.",
+        "Capitalizes on leader attribution to destabilize."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re fighting the group. (STOP. Aim higher.)",
+      "leverage_point": {
+        "tactic": "Cut the head—they’ll collapse.",
+        "blood_price": "Their loyalty dies with their leader."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Identify 1 group’s leader.",
+        "penalty": "💀 Penalty: If failed, support a rival’s cause."
+      }
+    },
+    {
+      "number": 43,
+      "title": "WORK ON THE HEARTS AND MINDS OF OTHERS",
+      "category": "🔮 Psychology",
+      "bilingual_power_pill": {
+        "BN": "অন্যের হৃদয় ও মন জয় করো",
+        "EN": "Win hearts and minds"
+      },
+      "why_it_works": "Emotional loyalty creates lasting influence over logic alone.",
+      "historical_example": {
+        "story": "In the 1700s, George Washington led American colonists against Britain. Beyond military skill, he won hearts and minds. During the harsh winter of 1777 at Valley Forge, his army starved and froze. Instead of staying distant, Washington shared their hardships, eating simple food and visiting soldiers’ camps. He listened to their fears and praised their bravery, building trust. He also wrote letters to civilians, urging unity for freedom, stirring their emotions. By 1781, his emotional bond with soldiers and colonists kept them fighting despite losses. At Yorktown, this loyalty led to victory, securing independence in 1783. If Washington had relied on orders alone, his army might have deserted. His focus on hearts and minds built unbreakable support, showing how emotional bonds create lasting power.",
+        "lessons": [
+          "Build trust through shared struggles.",
+          "Stir emotions to inspire loyalty.",
+          "Listen to others’ hopes and fears.",
+          "Show care to win lasting support."
+        ]
+      },
+      "things_to_do": [
+        "✅ Show empathy to build trust.",
+        "✅ Share others’ struggles publicly.",
+        "✅ Inspire with emotional stories.",
+        "✅ Listen to their deepest needs.",
+        "✅ Praise their efforts sincerely.",
+        "✅ Create shared goals for unity.",
+        "✅ Act selflessly for their cause."
+      ],
+      "things_to_never_do": [
+        "❌ Ignore others’ emotional needs.",
+        "❌ Act cold or distant.",
+        "❌ Manipulate without sincerity.",
+        "❌ Dismiss their fears or hopes.",
+        "❌ Focus only on logic.",
+        "❌ Betray their trust."
+      ],
+      "trigger_drill": {
+        "default": "Praise someone’s effort today.",
+        "status_flip": "Share a struggle with a group."
+      },
+      "cheat_code_example": "I feel what you’re going through.",
+      "psychological_root": [
+        "Emotions drive loyalty.",
+        "Exploits empathy to build bonds.",
+        "Taps into social bonding for trust.",
+        "Uses emotional contagion to unite.",
+        "Leverages reciprocity to deepen ties.",
+        "Capitalizes on shared identity to inspire."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re being too cold. (STOP. Show care.)",
+      "leverage_point": {
+        "tactic": "Win their hearts—they’ll follow.",
+        "blood_price": "Their love locks them to you."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Win 1 person’s trust.",
+        "penalty": "💀 Penalty: If failed, act distant once."
+      }
+    },
+    {
+      "number": 44,
+      "title": "DISARM AND INFURIATE WITH THE MIRROR EFFECT",
+      "category": "🧠 Deception",
+      "bilingual_power_pill": {
+        "BN": "আয়নার প্রভাবে নিরস্ত্র ও ক্ষুব্ধ করো",
+        "EN": "Disarm with mirror effect"
+      },
+      "why_it_works": "Mimicking others lowers their guard or provokes them, giving you control.",
+      "historical_example": {
+        "story": "In the 1600s, Dutch diplomat Hugo Grotius faced tense talks with English rivals over trade routes. To gain an edge, Grotius used the mirror effect. He mimicked the English envoys’ formal speech, gestures, and even their love for quoting classics. At first, this disarmed them, making them trust him as ‘one of their own.’ But Grotius subtly exaggerated their pompous style, repeating their arguments back with slight mockery. This infuriated the English, who lost composure and argued poorly. By 1613, Grotius secured better trade terms for the Dutch. His mirroring made the English drop their guard, then provoked mistakes. If he had argued directly, they might have stayed sharp. The mirror effect—copying to disarm, twisting to enrage—gave him power, showing how mimicry manipulates.",
+        "lessons": [
+          "Mimic to build trust or provoke.",
+          "Exaggerate flaws to unsettle rivals.",
+          "Use mirroring to expose weaknesses.",
+          "Stay subtle to avoid detection."
+        ]
+      },
+      "things_to_do": [
+        "✅ Copy others’ style to blend in.",
+        "✅ Mirror their words to build trust.",
+        "✅ Exaggerate flaws to provoke errors.",
+        "✅ Stay subtle in your mimicry.",
+        "✅ Watch reactions to adjust mirroring.",
+        "✅ Use their habits against them.",
+        "✅ Keep your intent hidden."
+      ],
+      "things_to_never_do": [
+        "❌ Mock openly without subtlety.",
+        "❌ Mirror without a clear goal.",
+        "❌ Overdo mimicry to seem fake.",
+        "❌ Ignore their emotional cues.",
+        "❌ Copy allies too aggressively.",
+        "❌ Reveal you’re manipulating."
+      ],
+      "trigger_drill": {
+        "default": "Mimic one person’s gesture today.",
+        "status_flip": "Echo a rival’s phrase mockingly."
+      },
+      "cheat_code_example": "I see your point—exactly like you said.",
+      "psychological_root": [
+        "Mirroring builds rapport or tension.",
+        "Exploits similarity bias to disarm.",
+        "Taps into reactance to provoke errors.",
+        "Uses cognitive dissonance to unsettle.",
+        "Leverages mimicry effect to manipulate.",
+        "Capitalizes on self-awareness to expose flaws."
+      ],
+      "snap_warning": "🚨 ABORT signal: Your mimicry’s too obvious. (STOP. Tone down.)",
+      "leverage_point": {
+        "tactic": "Mirror them—they’ll trip.",
+        "blood_price": "Their flaws become your weapon."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Mirror 1 person strategically.",
+        "penalty": "💀 Penalty: If failed, argue directly once."
+      }
+    },
+    {
+      "number": 45,
+      "title": "PREACH THE NEED FOR CHANGE, BUT NEVER REFORM TOO MUCH AT ONCE",
+      "category": "🎭 Manipulation",
+      "bilingual_power_pill": {
+        "BN": "পরিবর্তনের প্রয়োজন প্রচার করো, কিন্তু ধীরে সংস্কার করো",
+        "EN": "Preach change, reform slowly"
+      },
+      "why_it_works": "Promising change inspires hope, but slow reform prevents resistance.",
+      "historical_example": {
+        "story": "In the 1800s, Tsar Alexander II of Russia faced a restless empire. Peasants demanded freedom from serfdom, and nobles feared rebellion. In 1856, Alexander preached change, promising to end serfdom to win support. But he knew sudden reform could spark chaos. Over five years, he planned carefully, freeing serfs in 1861 with gradual laws. Peasants got land, but nobles kept control, easing their fears. Alexander’s slow reforms avoided revolt while modernizing Russia. He continued small changes, like local councils, keeping hope alive without upsetting power. If he had reformed too fast, nobles might have overthrown him. By preaching change but moving slowly, he held power until 1881, showing how gradual reform keeps control while inspiring loyalty.",
+        "lessons": [
+          "Promise change to gain support.",
+          "Reform slowly to avoid resistance.",
+          "Balance old and new powers.",
+          "Keep hope alive with small steps."
+        ]
+      },
+      "things_to_do": [
+        "✅ Advocate for inspiring change.",
+        "✅ Reform in small, safe steps.",
+        "✅ Consult key players before acting.",
+        "✅ Maintain stability during change.",
+        "✅ Highlight benefits to all sides.",
+        "✅ Pace reforms to build trust.",
+        "✅ Keep promising future progress."
+      ],
+      "things_to_never_do": [
+        "❌ Push drastic change too fast.",
+        "❌ Ignore powerful groups’ fears.",
+        "❌ Stop preaching change abruptly.",
+        "❌ Reform without a clear plan.",
+        "❌ Alienate old power bases.",
+        "❌ Promise impossible fixes."
+      ],
+      "trigger_drill": {
+        "default": "Suggest one small change today.",
+        "status_flip": "Promise a big goal, act small."
+      },
+      "cheat_code_example": "Change is coming—step by step.",
+      "psychological_root": [
+        "Change inspires hope.",
+        "Exploits gradualism to reduce resistance.",
+        "Taps into status quo bias to ease reform.",
+        "Uses framing to sell progress.",
+        "Leverages trust to sustain change.",
+        "Capitalizes on expectation management."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re reforming too fast. (STOP. Slow down.)",
+      "leverage_point": {
+        "tactic": "Promise big, move small—they’ll stay.",
+        "blood_price": "Their patience locks your rule."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Push 1 small reform.",
+        "penalty": "💀 Penalty: If failed, suggest a drastic change."
+      }
+    },
+    {
+      "number": 46,
+      "title": "NEVER APPEAR TOO PERFECT",
+      "category": "🐍 Positioning",
+      "bilingual_power_pill": {
+        "BN": "কখনো অতিরিক্ত নিখুঁত হয়ো না",
+        "EN": "Never seem too perfect"
+      },
+      "why_it_works": "Flaws make you relatable, deflecting envy and building trust.",
+      "historical_example": {
+        "story": "In the 1700s, Benjamin Franklin was a leading figure in America, known for his wit and inventions. But he knew perfection breeds envy. To stay liked, Franklin never appeared flawless. In his *Autobiography*, he shared stories of youthful mistakes, like wasting money or arguing rashly. At public events, he dressed simply, not like a rich man, and joked about his baldness or appetite. These small flaws made him relatable to farmers and elites alike. When he proposed plans, like the Albany Plan in 1754, people trusted him because he seemed human, not arrogant. If Franklin had acted perfect, rivals might have attacked him. His admitted flaws deflected envy, making him beloved until his death in 1790, showing how imperfection builds loyalty and protects power.",
+        "lessons": [
+          "Show small flaws to seem human.",
+          "Avoid arrogance to deflect envy.",
+          "Share relatable mistakes humbly.",
+          "Build trust with modest style."
+        ]
+      },
+      "things_to_do": [
+        "✅ Admit minor flaws publicly.",
+        "✅ Dress humbly in key moments.",
+        "✅ Share a relatable struggle.",
+        "✅ Laugh at your small mistakes.",
+        "✅ Avoid boasting about perfection.",
+        "✅ Connect through human stories.",
+        "✅ Stay modest despite success."
+      ],
+      "things_to_never_do": [
+        "❌ Act flawless or arrogant.",
+        "❌ Hide all your mistakes.",
+        "❌ Show off wealth or skill.",
+        "❌ Ignore others’ envy risks.",
+        "❌ Dismiss relatable struggles.",
+        "❌ Seek constant admiration."
+      ],
+      "trigger_drill": {
+        "default": "Share one small flaw today.",
+        "status_flip": "Laugh off a minor error."
+      },
+      "cheat_code_example": "I mess up sometimes, just like you.",
+      "psychological_root": [
+        "Flaws reduce envy threats.",
+        "Exploits relatability to build trust.",
+        "Taps into liking bias to connect.",
+        "Uses humility to disarm critics.",
+        "Leverages self-deprecation to deflect.",
+        "Capitalizes on authenticity bias."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re acting flawless. (STOP. Show a flaw.)",
+      "leverage_point": {
+        "tactic": "Be human—they’ll love you.",
+        "blood_price": "Their envy turns to loyalty."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Show 1 human flaw.",
+        "penalty": "💀 Penalty: If failed, boast once."
+      }
+    },
+    {
+      "number": 47,
+      "title": "DO NOT GO PAST THE MARK YOU AIMED FOR; IN VICTORY, LEARN WHEN TO STOP",
+      "category": "⚔️ Strategy",
+      "bilingual_power_pill": {
+        "BN": "লক্ষ্যের বাইরে যেও না, জয়ে থামতে শেখো",
+        "EN": "Stop at victory’s mark"
+      },
+      "why_it_works": "Overreaching after a win risks reversal and alienates allies.",
+      "historical_example": {
+        "story": "In the 300s BCE, King Pyrrhus of Epirus fought Rome to expand his Greek kingdom. In 280 BCE, he won at Heraclea, defeating Rome’s army. His victory was costly, with heavy losses, but he pressed on, aiming for total conquest. In 279 BCE, he won again at Asculum, but his army was nearly destroyed—hence ‘Pyrrhic victory.’ Instead of stopping to negotiate peace, Pyrrhus chased more wins, invading Sicily and stretching his forces thin. By 275 BCE, Rome regrouped and defeated him at Beneventum. Exhausted, Pyrrhus returned to Epirus, losing his gains. If he had stopped after Heraclea, he could have secured a strong treaty. His overreach turned victory into ruin, showing how knowing when to stop preserves power.",
+        "lessons": [
+          "Stop after achieving your goal.",
+          "Avoid chasing endless wins.",
+          "Secure gains before pushing more.",
+          "Know when victory is enough."
+        ]
+      },
+      "things_to_do": [
+        "✅ Define clear victory goals.",
+        "✅ Stop when goals are met.",
+        "✅ Secure wins before expanding.",
+        "✅ Assess costs after success.",
+        "✅ Negotiate peace post-victory.",
+        "✅ Stay humble in triumph.",
+        "✅ Plan exit strategies early."
+      ],
+      "things_to_never_do": [
+        "❌ Chase more after a win.",
+        "❌ Ignore your losses’ cost.",
+        "❌ Overstay your victory’s peak.",
+        "❌ Push allies too far.",
+        "❌ Lack a clear end goal.",
+        "❌ Gloat after success."
+      ],
+      "trigger_drill": {
+        "default": "Set one clear goal today.",
+        "status_flip": "Stop after a small win."
+      },
+      "cheat_code_example": "We won—let’s lock it in.",
+      "psychological_root": [
+        "Restraint preserves gains.",
+        "Exploits sunk cost avoidance.",
+        "Taps into loss aversion to stop.",
+        "Uses self-control to prevent greed.",
+        "Leverages goal gradient to focus.",
+        "Capitalizes on satisficing to secure wins."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re pushing past a win. (STOP. Secure it.)",
+      "leverage_point": {
+        "tactic": "Stop at the peak—they’ll respect you.",
+        "blood_price": "Their overreach buries them."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Stop at 1 victory mark.",
+        "penalty": "💀 Penalty: If failed, chase a risky goal."
+      }
+    },
+    {
+      "number": 48,
+      "title": "ASSUME FORMLESSNESS",
+      "category": "⚔️ Strategy",
+      "bilingual_power_pill": {
+        "BN": "আকারহীন হয়ে থাকো",
+        "EN": "Assume formlessness"
+      },
+      "why_it_works": "Being adaptable and unpredictable makes you hard to attack or control.",
+      "historical_example": {
+        "story": "In the 200s BCE, Chinese general Liu Bang fought to overthrow the Qin dynasty. His rival, Xiang Yu, was stronger and led a rigid, predictable army. Liu Bang assumed formlessness, never sticking to one tactic. He used guerrilla raids, then switched to diplomacy, winning allies with promises. When Xiang Yu attacked, Liu retreated, avoiding direct fights. In 206 BCE, Liu spread false rumors to confuse Xiang’s troops, then struck unexpectedly. By 202 BCE, at the Battle of Gaixia, Liu combined tricks—songs to demoralize Xiang’s men, ambushes, and betrayal—to win. Xiang, tied to brute force, couldn’t adapt and lost. Liu became Emperor Han Gaozu, founding the Han dynasty. If Liu had fought rigidly, Xiang would have crushed him. His formlessness—shifting, adapting—made him untouchable, showing how flexibility wins power.",
+        "lessons": [
+          "Stay adaptable to avoid traps.",
+          "Shift tactics to confuse rivals.",
+          "Use unpredictability as a weapon.",
+          "Blend strategies for maximum impact."
+        ]
+      },
+      "things_to_do": [
+        "✅ Change tactics unexpectedly.",
+        "✅ Stay open to new strategies.",
+        "✅ Avoid predictable patterns.",
+        "✅ Blend multiple approaches.",
+        "✅ Study rivals’ rigid habits.",
+        "✅ Act fluidly in crises.",
+        "✅ Keep plans loose and flexible."
+      ],
+      "things_to_never_do": [
+        "❌ Stick to one rigid plan.",
+        "❌ Be predictable in moves.",
+        "❌ Ignore changing conditions.",
+        "❌ Overcommit to a single tactic.",
+        "❌ Let rivals read your pattern.",
+        "❌ Resist new opportunities."
+      ],
+      "trigger_drill": {
+        "default": "Try a new approach to a task today.",
+        "status_flip": "Shift strategy mid-plan once."
+      },
+      "cheat_code_example": "I’ll switch it up—stay guessing.",
+      "psychological_root": [
+        "Adaptability confounds control.",
+        "Exploits uncertainty to gain edge.",
+        "Taps into cognitive flexibility to shift.",
+        "Uses surprise to disrupt plans.",
+        "Leverages ambiguity tolerance to thrive.",
+        "Capitalizes on protean effect to elude."
+      ],
+      "snap_warning": "🚨 ABORT signal: You’re stuck in a pattern. (STOP. Change now.)",
+      "leverage_point": {
+        "tactic": "Be fluid—they can’t pin you.",
+        "blood_price": "Their rigidity buries them."
+      },
+      "accountability_kpi": {
+        "daily": "📌 Weekly: Try 1 new tactic.",
+        "penalty": "💀 Penalty: If failed, repeat an old move."
+      }
+    }
+  ]
+}

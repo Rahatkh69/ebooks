@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Training Program</title>
+    <link rel="icon" href="a.png" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6; /* Light background */
+            margin: 0;
+            padding: 20px; /* Overall page padding */
+            color: #333;
+            line-height: 1.6;
+            overflow-y: scroll;
+            scrollbar-width: none; /* For Firefox */
+        }
+        /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        /* Prevent scrolling when modal is open */
+        body.modal-open {
+            overflow: hidden;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+            border-bottom: 2px solid black;
+            text-align: center;
+        }
+        h1 {
+            color: #000000;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        h1 .voice-text { /* Specific style for "VOICE" */
+            display: inline-block;
+            color: red;
+        }
+        
+        /* New styles for sprint navigation in the header */
+        #sprintHeaderNav {
+            text-align: center;
+            margin-top: 1.5rem; /* Increased margin */
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        #sprintTitleDisplay {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #333;
+            min-width: 250px; /* Give it some space */
+            text-align: center;
+        }
+        
+        #sprintHeaderNav small {
+            display: block;
+            color: #555;
+            margin-top: 4px;
+            font-size: 0.85rem;
+        }
+
+
+        /* Container for main content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px; /* Adjust as needed */
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+        /* Responsive adjustments for container padding */
+        @media (min-width: 1024px) {
+            .container {
+                padding: 3rem 4rem;
+            }
+        }
+
+        /* Search and Filter Section */
+        .search-filter {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        /* Responsive adjustment for filter layout */
+        @media (min-width: 768px) {
+            .search-filter {
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        /* Filter Buttons */
+        .filters {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            font-weight: 550;
+            font-family: 'Poppins', sans-serif;
+            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+        }
+        .filter-btn.active {
+            background-color: #000000;
+            border: 2px solid black;
+            color: #ffffff;
+        }
+        .filter-btn:not(.active) {
+            background-color: #ffffff;
+            border: 2px solid black;
+            color: #000000;
+        }
+
+        /* Laws Grid Display */
+        #lawsGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+            max-width: 1200px; 
+            margin-left: auto;
+            margin-right: auto;
+            justify-items: center; 
+        }
+        .domain-card.non-interactive {
+            cursor: default;
+        }
+        .domain-card.non-interactive:hover {
+            transform: none; /* Disable hover lift */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Revert to base shadow */
+        }
+
+        /* Domain Card (Law Card) Styles */
+        .domain-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            border-left: 4px solid black;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Softer shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            width: 100%; /* Ensure card takes full width of its grid cell */
+            max-width: 400px; 
+        }
+        /* Specific max-width for sprint cards */
+        #singleSprintDisplay .domain-card {
+            max-width: 600px;
+            margin: 0 auto; /* Center the card in its container */
+        }
+
+        .domain-card:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .domain-header {
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.03);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .domain-id {
+            background: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            width: 35px; 
+            height: 35px; 
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1rem; 
+            flex-shrink: 0; 
+        }
+        .domain-name {
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            flex-shrink: 1; 
+            min-width: 0; 
+            font-size: 1.2rem; 
+            flex: 1;
+            margin-left: 15px;
+            color: #0c131a;
+        }
+        .domain-category {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: black;
+            width: fit-content;
+            background: rgba(0, 0, 0, 0.03);
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+        .domain-content {
+            padding: 15px;
+        }
+        .domain-content p {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            color: #000000;
+        }
+        .domain-content > ul { 
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+        .domain-content > ul li { 
+            background-color: #e8f0f2;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            color: #000000;
+        }
+        .drills-section {
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px dashed #e0e0e0;
+        }
+        .drills-section h4 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .drills-section ul {
+            list-style: none; 
+            padding-left: 0;
+            color: #000000;
+
+            margin-bottom: 10px;
+        }
+        .drills-section ul li {
+            background-color: transparent;
+            padding: 0;
+            border-radius: 0;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            color: #000000;
+        }
+        .drills-section ul li ul { 
+            list-style: disc; 
+            padding-left: 20px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .drills-section ul li ul li {
+            background-color: transparent;
+            padding: 0;
+            border-radius: 0;
+            font-size: 0.9rem;
+            color: #000000;
+        }
+
+        .timeframe, .goal {
+            font-size: 0.85rem;
+            color: #292929;
+            margin-top: 8px;
+            background-color: #f9f9f9;
+            padding: 5px 10px;
+            border-radius: 4px;
+            border: 1px dashed #e0e0e0;
+        }
+        .timeframe strong, .goal strong {
+            color: #161616;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 50;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #ffffff;
+            padding: 2rem; 
+            margin-bottom: 20px;
+            margin-top: 20px;
+            border-radius: 0; 
+            width: 100%;
+            height: 100%;
+            max-height: 100vh;
+            overflow-y: auto;
+            position: relative;
+            scrollbar-width: none; 
+        }
+        .modal-content::-webkit-scrollbar {
+            display: none;
+        }
+        @media (min-width: 768px) {
+            .modal-content {
+                padding: 5rem 8rem; 
+            }
+        }
+        @media (min-width: 1024px) {
+            .modal-content {
+                padding: 5rem 10rem; 
+            }
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 1.5rem;
+            right: 1rem;
+            font-size: 2rem;
+            opacity: 1; 
+            cursor: pointer;
+            color: #000000;
+            z-index: 60; 
+        }
+
+        .nav-arrows {
+            position: absolute;
+            top: 1.5rem;
+            left: 1rem;
+            display: flex;
+            gap: 1rem;
+            opacity: 1; 
+            z-index: 60; 
+        }
+        .nav-arrows i {
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #000000;
+        }
+        .nav-arrows i.disabled {
+            color: #cccccc;
+            cursor: not-allowed;
+        }
+
+        #modalTitle {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        #modalContent {
+            font-size: 0.9rem;
+            color: #000000;
+            font-weight: 520;
+            line-height: 1.6;
+        }
+        #modalContent strong {
+            color: #000000;
+            background: rgba(0, 6, 32, 0.050);
+            border-radius: 3px;
+            padding: 0.2rem 0.3rem;
+            font-weight: 650;
+        }
+        #modalContent p {
+            margin-bottom: 0.75rem;
+        }
+        .modal-list { 
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .modal-list li {
+            margin-bottom: 0.5rem;
+        }
+        .modal-section h3 { 
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #000000;
+        }
+        .modal-section h4 { 
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        .bold {
+            font-weight: 650;
+            display: inline-block;
+        }
+
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #181818; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            transition: opacity 0.5s ease;
+        }
+        #preloader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .bn {
+            font-family: "Hind Siliguri", sans-serif;
+        }
+        .spinner {
+            width: 20px;
+            height: 20px;
+            border: 3px solid #000000;
+            border-top: 3px solid #ffffff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .cross-sync-links span {
+            display: inline-block;
+            background: #e0e0e0;
+            border-radius: 4px;
+            padding: 3px 8px;
+            margin: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #333;
+            transition: background-color 0.2s ease;
+        }
+        .cross-sync-links span:hover {
+            background-color: #c0c0c0;
+        }
+
+        .audio-example-btn {
+            background-color: #28a745; 
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            margin-top: 10px;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+        }
+        .audio-example-btn:hover {
+            background-color: #218838;
+        }
+        .audio-example-btn i {
+            margin-right: 8px;
+        }
+
+        /* Power Sprints Section */
+        #powerSprintsContainer {
+            margin-top: 40px;
+            padding: 20px 0;
+            border-top: 1px solid #ddd;
+        }
+        #powerSprintsContainer h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .card-tags span {
+            display: inline-block;
+            background: #f0f0f0;
+            border-radius: 3px;
+            padding: 2px 6px;
+            margin: 0 5px 5px 0;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #555;
+        }
+
+        .final-commandment {
+            margin-top: 40px;
+            padding: 25px;
+            background-color: #000000; 
+            color: #ecf0f1; 
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 500;
+            line-height: 1.8;
+            border: 2px solid #34495e;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            white-space: pre-wrap; 
+        }
+        .final-commandment strong {
+            font-weight: 700;
+            color: #f1c40f; 
+        }
+
+        @media (max-width: 768px) {
+            .final-commandment {
+                font-size: 1rem;
+                padding: 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            .final-commandment {
+                font-size: 0.9rem;
+                padding: 15px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <header>
+        <h1>THE 17 LAWS OF <span class="voice-text">VOICE</span> </h1>
+    </header>
+
+    <div class="container">
+        <div class="search-filter">
+            <div class="filters" id="categoryFilters">
+            </div>
+        </div>
+
+        <div id="lawsGrid"></div>
+
+        <div id="powerSprintsContainer">
+            <h2>🔥 Power Sprints & Challenges 🔥</h2>
+            <!-- === CODE CHANGE START: Buttons removed === -->
+            <div id="sprintHeaderNav" style="display: none;">
+                <div>
+                    <span id="sprintTitleDisplay"></span>
+                    <small>Use ◀ and ▶ arrow keys to navigate</small>
+                </div>
+            </div>
+            <!-- === CODE CHANGE END === -->
+            <div id="singleSprintDisplay"></div>
+        </div>
+
+
+        <div id="finalCommandment" class="final-commandment">
+        </div>
+    </div>
+
+    <div id="lawModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" >&times;</span>
+            <div class="nav-arrows">
+                <i class="fas fa-chevron-left" id="prevLaw" style="opacity: 0;"></i>
+                <i class="fas fa-chevron-right" id="nextLaw" style="opacity: 0;"></i>
+            </div>
+            <h2 id="modalTitle"></h2>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const preloader = document.getElementById('preloader');
+            const categoryFiltersContainer = document.getElementById('categoryFilters');
+            const powerSprintsContainer = document.getElementById('powerSprintsContainer');
+            const finalCommandmentDiv = document.getElementById('finalCommandment'); 
+
+            let allLawsData = {}; 
+            let combinedLaws = []; 
+            let currentLawIndex = 0; 
+            let filteredLaws = []; 
+            
+            let allSprints = [];
+            let currentSprintIndex = 0;
+
+            async function fetchJsonData(url) {
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) {
+                        // For this example, we'll use the hardcoded data if fetch fails
+                        console.warn(`Could not fetch ${url}, falling back to provided data.`);
+                        return { "laws": [], "power_sprints": [{"num":"1","name":"4-Day Iron Foundation","laws_involved":["1","2","3","5"],"timeframe":"June 30 - July 3","description":"Absolute mastery of the physical instrument. No shortcuts.","drills":["Morning Protocol (20-30 minutes):","Warm-up (5 mins): Gentle hums on \"mm\", lip trills, jaw releases (yawn-sigh).","Law 1: DOMINATE BREATH OR BE DOMINATED","Exercise 1: Box Breath + Hiss: 5 rounds. Inhale (4s) → Hold (4s) → Exhale (8s \"SSSS\") → Hold (4s). Target 12-15s hiss with zero shake by Day 4. Place 1kg book on belly to ensure diaphragmatic surge.","Exercise 2: Breath-Strike Intervals: 15x. Inhale → Punch out “STOP.” Loud, sharp, from diaphragm, no throat tension.","Law 2: SEAL THE CHAMBER – CORD CONNECTION","Exercise 1: Humming Edge: 5 rounds, 45 seconds each. Close mouth, hum softly (like a bee, buzzy, not airy). Mental Cue: “Laser seal, feather breath.” Focus on vibration in lips and nose.","Law 3: CHEST RESONANCE – THE IRON AMPLIFIER","Exercise 1: Wall of Power: 5x, 15s hold. Stand against wall (heels, butt, shoulders, head touching). Hand on belly, hand on chest. Inhale: Only belly hand moves. Chest stays still. Hold 10s, exhale slowly.","Law 5: RESONANCE ENGINEERING – FREQUENCY DOMINATION","Exercise 1: Triad Humming: 5 rounds, 15s each. Hum “mm” (chest, sternum) → “ng” (nose, sinuses) → “ah” (mouth, lips). Cycle with no breaks. Mental Cue: “Chest is thunder, nose is lightning, mouth is storm.”","Evening Protocol (25-30 minutes):","Law 1: DOMINATE BREATH OR BE DOMINATED","Read a Long Paragraph (without gasping): Choose a dense paragraph (e.g., from a technical manual or classic literature) and aim to read it in one or two long phrases without \"air hunger.\" Record and audit.","Law 2: SEAL THE CHAMBER – CORD CONNECTION","Exercise 2: Whisper Kill: 5 rounds. Speak a line in full voice → whisper it → speak again. The third round must NOT be airy. Track the difference. Advanced Check: Can you hold a soft, unairy hum for 30s?","Law 3: CHEST RESONANCE – THE IRON AMPLIFIER","Exercise 2: Chest Knock: 5x. Stand tall, knock sternum lightly with fist. Speak “uhhh” while knocking—feel vibrations increase. Goal: Maximize chest rumble.","Recording Test: Record your voice. Does it sound smaller than it feels? Identify posture failures.","Law 5: RESONANCE ENGINEERING – FREQUENCY DOMINATION","Exercise 2: Resonance Tag: 15 cycles. Say “This is my voice” in: Chest only (bear growl) → Mouth only (news anchor crisp) → Nasal only (car alarm sharp). Focus on distinct, deliberate shifts.","Humming Test: Hum “mm-hmm.” Feel vibrations in chest, mouth, and nose? If not, you are flat.","Daily Optimization: Tape shoulders down for an hour to break chest-breathing habit. Record every drill and review against \"Mastery Cues.\" If Law 1 isn't locked, do not proceed to Phase 2."],"goal":"Day 4: Deliver 10 flawless breath-cord-posture-resonance chains. One tremor resets the day."}, {"num":"2","name":"7-Day Emotion - Morph","laws_involved":["4","10","11"],"timeframe":"July 4 - July 10","description":"Vocal agility, emotional control, and the ability to shift on a dime.","drills":["Morning Protocol (20-25 minutes):","Warm-up (5 mins): Lip trills, siren slides (low to high), gentle vocal glides.","Law 4: REGISTER EXPANSION – VOCAL SHAPESHIFTING","Exercise 1: Siren Scale: 7x. Start at lowest note (chest) → slide to highest (whistle, or highest comfortable note) → back down. Focus on seamless transitions, no cracks.","Law 10: MORPHING – VOCAL SHAPESHIFTING","Exercise 1: Emotional Whiplash: 15x. Say “That’s interesting” as: Curious → Angry → Seductive. Focus on distinct, instant shifts, no bleed. Feel the emotion as you speak.","Law 11: EMOTIONAL FRAMING – TONE HIJACKING","Exercise 1: Tone Flip: 15x. Say “mm-hmm” as: Agreement, Disbelief, Threat. Each should rewrite listener’s perception.","Evening Protocol (20-25 minutes):","Law 4: REGISTER EXPANSION – VOCAL SHAPESHIFTING","Exercise 2: Emotional Shift: 15x. Say “I know” in: Chest (commanding), Head (curious), Fry (threatening). Ensure each sounds natural, not strained.","Optimization: Record one sentence in all 6 registers daily (or as many as you can access). Spend 2x time on your weakest register.","Law 10: MORPHING – VOCAL SHAPESHIFTING","Exercise 2: Register Flick: 15x. Say “I am here” in chest → fry → head. Goal: No cracks, instant shifts.","Optimization: Morph mid-sentence. Example: “I [chest] will [fry] make [head] it [chest] happen.”","Law 11: EMOTIONAL FRAMING – TONE HIJACKING","Exercise 2: Emotional Anchor: 7x. Say “I understand” in 5 distinct emotions (e.g., empathy, sarcasm, anger, frustration, curiosity). Goal: Listeners feel the emotion, not just words.","Optimization: Record “I understand” in 5 emotions daily; compare impact. Test: Say “Trust me” in 3 tones—must control listener reaction.","Daily Application: In conversations, consciously attempt a subtle shift in tone or register to observe reactions. Record daily. If Law 4 isn't solid, Law 10 will struggle."],"goal":"Day 7: Perform 3min monologue with 5+ emotion shifts—listeners must correctly ID all."}, {"num":"3","name":"5-Day Battlefield Voice","laws_involved":["12","13"],"timeframe":"July 11 - July 15","description":"Projecting with effortless power and cutting through auditory chaos.","drills":["Morning Protocol (15-20 minutes):","Warm-up (5 mins): Diaphragmatic breathing, open-throat sighs.","Law 12: PROJECTION WITHOUT STRAIN – ROOM DAGGER","Exercise 1: Pillow Pierce: 5x. Recite alphabet (or short paragraph) through a thick pillow, focusing on no muffling, just pure projection. Goal: Clarity despite barrier.","Law 13: NOISE IMMUNITY – CHAOS CUTTER","Exercise 1: Noise Slayer: 5x. Play 80dB brown noise (or white noise) loudly. Recite poetry or a prepared speech. Goal: Every single word audible over the noise. Record and review.","Evening Protocol (20-25 minutes):","Law 12: PROJECTION WITHOUT STRAIN – ROOM DAGGER","Exercise 2: Clenched Teeth: 7x. Count backward from 20 through clenched teeth. Goal: Every number audible at 20ft without straining throat. This forces mask resonance.","Test: Project to a point 50ft away (e.g., across a large room or open space). Does it hurt your throat? Is your voice clear at that distance?","Law 13: NOISE IMMUNITY – CHAOS CUTTER","Exercise 2: Crowd Crusher: (Minimum 2x during this phase, ideally daily if possible). Speak a 1-min speech in a noisy café, public market, or busy park. Goal: No one asks you to repeat. Actively target 500-3000Hz frequencies.","Optimization: Record speech over noise; compare clarity. Test: Order coffee in a loud bar—barista hears perfectly.","Daily Application: Consciously \"beam\" your voice from your mask (forehead/cheekbones) when speaking. Practice speaking clearly in any noisy environment you encounter. If projection strains, Laws 1 & 2 need revisiting."],"goal":"Day 5: Order complex coffee in nightclub—barista must repeat order verbatim."}, {"num":"4","name":"7-Day Sonic Identity","laws_involved":["6","7","8","16","17"],"timeframe":"July 16 - July 22","description":"Crafting your unique, unforgettable vocal signature. Now you add the \"shadows\" and the \"song.\"","drills":["Morning Protocol (25-30 minutes):","Warm-up (5 mins): Hum with palate lift, tongue trills.","Law 6: SUBHARMONICS & OVERTONES – DEMON VOICE","Exercise 1: Subharmonic Growl: 7x, 45s each. Growl “uhhh” while pushing belly inward—feel sternum quake. Mental Cue: “I’m the rumble of a storm.”","Exercise 2: Overtone Ping: 7x, 45s each. Hum “ng” while smiling, raise soft palate—feel skull vibrate. Goal: Sound like a Tibetan monk’s chant.","Law 7: ARTICULATION BLADES – WORDS AS WEAPONS","Exercise 1: Pen Bite: 5 rounds. Bite pen sideways, recite “She sells seashells” 15x fast. Goal: Zero slurring.","Exercise 2: Whisper Snap: 7x. Whisper “The sixth sheik’s sixth sheep’s sick.” Full voice repeat—must match whisper clarity.","Law 8: PACING & SILENCE – TIME BOMB CONTROL","Exercise 1: Pause Torture: 5 rounds. Read a paragraph, pause 3-5s after every 2 sentences. Goal: Silence feels like a guillotine.","Evening Protocol (25-30 minutes):","Law 6: SUBHARMONICS & OVERTONES – DEMON VOICE","Vocal Layering: Say “I am here” with a conscious mix of subharmonics (deep rumble) and overtones (ringing brightness). Must feel mythic.","Law 7: ARTICULATION BLADES – WORDS AS WEAPONS","Optimization: Read legal fine print daily, focusing on crystal clear articulation of every word.","Law 8: PACING & SILENCE – TIME BOMB CONTROL","Exercise 2: Speed Surge: 15x. Say “I am unstoppable” at 120wpm, then 220wpm. Goal: Both clear, no slurring.","Optimization: Tell a 1-min story—must hypnotize listeners using varied pacing and strategic silence.","Law 16: MELODIC FLOW – VOICE AS SONG","Exercise 1: Shakespeare Rap: 5x. Recite a Shakespeare soliloquy like a rap verse. Goal: Hit minimum 3 tones per line.","Exercise 2: Chant Order: (Minimum 2x during this phase). Order fast food (or anything) in Gregorian chant style. Goal: Cashier feels entranced.","Law 17: SONIC DNA – THE UNFORGETTABLE VOICE","Exercise 1: Trait Theft: 15x. Pick 3 voices (e.g., villain, lover, prophet). Steal one distinct trait each (e.g., growl, warmth, unique cadence). Blend into your baseline—say “I am eternal.”","Exercise 2: Signature Sculpt: 15x. Say “This is me” with your unique tic (e.g., a specific pause, subtle fry, or rising inflection). Goal: Friends ID you from one phrase.","Daily Application: Actively listen to how others use sub/overtones, articulation, pacing, and melody. Consciously infuse your voice with these elements. Record everything. If words blur, Law 7 needs more relentless focus."],"goal":"Day 7: 5+ strangers ID your voice from 3 others in blind test."}, {"num":"5","name":"7-Day Total Trial & Integration","laws_involved":["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17"],"timeframe":"July 23 - July 29","description":"Seamless, effortless, and powerful application of all 17 Laws. This is where the \"unforgettable\" emerges.","drills":["Morning Integration (30-40 minutes):","The Master Routine: Select a single, challenging passage (e.g., a historical speech, a complex poem, a monologue). Read it aloud for 15-20 minutes, consciously applying every single law simultaneously:","Breath: Controlled, silent, deep.","Cords: Airtight, no airiness, even at whisper.","Chest: Open, resonant, amplified.","Registers: Deliberately shift for emotional contrast.","Resonance: Move sound from chest to mouth to nasal for 3D effect.","Sub/Overtones: Weave in subtle growls and ringing highs for hypnotic depth.","Articulation: Every consonant a \"blade,\" every vowel distinct.","Pacing & Silence: Strategic pauses, varied tempo for dramatic effect.","Dynamic Range (Law 9 Focus): Actively practice Whisper-to-Roar and Pitch Glides within sentences and paragraphs. Example: Start a sentence in a commanding shout, end it in a piercing whisper. Slide pitch for emphasis.","Morphing: Instantaneous emotional and register shifts.","Framing: Use tone to hijack emotion, overriding words.","Projection: Effortlessly fill the room without strain.","Noise Immunity: Practice over background noise if possible, maintaining clarity.","Eye-Voice Sync (Law 14 Focus): If practicing to a mirror or person, aim your voice with your gaze. Shift gaze to amplify vocal impact or emotional shift. Make your eyes lead the voice.","Body-Voice Fusion (Law 15, if known): If you have specific Law 15 drills, integrate them here. Otherwise, focus on full body engagement with your voice—posture, confident stance, gestures supporting your message.","Melodic Flow: Ensure a hypnotic, musical cadence.","Sonic DNA: Allow your unique signature to emerge naturally.","Targeted Weakness Drill: Pick 1-2 laws from previous phases that you found most challenging. Perform their specific drills (e.g., if Law 2 was tough, do Whisper Kill 10x; if Law 12, do Pillow Pierce 5x).","Evening Integration (30-35 minutes):","\"The Grand Performance\": Choose a single challenge to perform daily:","Day 24 (July 23): Recite Poe’s “The Raven.” Aim for full dynamic range, melodic flow, and terrifying subharmonics.","Day 25 (July 24): Tell a compelling 2-minute story, incorporating 3 significant emotional shifts, register changes, and dramatic pauses.","Day 26 (July 25): Record yourself giving a 3-minute impromptu speech on a topic you're passionate about, focusing on projecting to an imaginary audience, varying pace, and maintaining articulation.","Day 27 (July 26): Engage in a 10-minute conversation with someone, consciously applying Eye-Voice Sync, Melodic Flow, and Emotional Framing. Focus on their reaction.","Day 28 (July 27): Re-record the Gettysburg Address. Compare to Day 1. Goal: Zero gasps, no mumbling, commanding presence.","Day 29 (July 28): Test your Sonic DNA. Record yourself saying \"This is me\" with your perfected unique tic. Have friends or family (who haven't heard your progress) identify your voice from a single sound byte.","Day 30 (July 29): Perform a \"Freeform Masterpiece.\" Choose any text or topic and speak for 5 minutes, allowing all 17 Laws to flow effortlessly. Record this. This is your baseline for mastery."],"goal":"Day 30: Perform a \"Freeform Masterpiece\" for 5 minutes, effortlessly demonstrating all 17 Laws."}], "final_commandment": "" };
+                    }
+                    return await response.json();
+                } catch (error) {
+                    console.error(`Error fetching data:`, error);
+                    return { laws: [], power_sprints: [], final_commandment: "" }; 
+                }
+            }
+
+            async function loadAllData() {
+                allLawsData = await fetchJsonData('data.json'); 
+                combinedLaws = Array.isArray(allLawsData.laws) ? allLawsData.laws : [];
+                allSprints = Array.isArray(allLawsData.power_sprints) ? allLawsData.power_sprints : [];
+
+                combinedLaws = combinedLaws.map(law => ({
+                    ...law,
+                    lawNumber: law.law_number || law.lawNumber, 
+                    lawTitle: law.title || law.lawTitle 
+                }));
+                filteredLaws = combinedLaws; 
+            }
+
+            function renderList(items) {
+                if (!items || items.length === 0) return '';
+                return `<ul class="modal-list">${items.map(item => `<li>${item}</li>`).join('')}</ul>`;
+            }
+
+            function renderExercises(exercises) {
+                if (!exercises || exercises.length === 0) return '';
+                return exercises.map(exercise => `
+                    <h4>${exercise.name}</h4>
+                    ${renderList(exercise.steps)}
+                `).join('');
+            }
+
+            function formatDrills(drillsArray) {
+                let formattedDrillsHtml = '';
+                drillsArray.forEach(drillString => {
+                    const parts = drillString.split(': ', 2);
+                    if (parts.length < 2) {
+                        formattedDrillsHtml += `<li>${drillString}</li>`; 
+                        return;
+                    }
+                    const mainCategory = parts[0].trim(); 
+                    const content = parts[1].trim(); 
+                    formattedDrillsHtml += `<li><strong>${mainCategory}:</strong><ul>`;
+                    const lawMatches = [...content.matchAll(/Law \d+ \([^)]+\)/g)];
+                    let lastIndex = 0;
+                    if (lawMatches.length > 0 && lawMatches[0].index > 0) {
+                        let leadingGeneralPart = content.substring(0, lawMatches[0].index).trim();
+                        if (leadingGeneralPart.endsWith(',')) leadingGeneralPart = leadingGeneralPart.slice(0, -1); 
+                        const subDrills = leadingGeneralPart.split(';').map(s => s.trim()).filter(Boolean);
+                        subDrills.forEach(sub => {
+                            if (sub) formattedDrillsHtml += `<li>${sub}</li>`;
+                        });
+                        lastIndex = lawMatches[0].index;
+                    } else if (lawMatches.length === 0) {
+                        const subDrills = content.split(';').map(s => s.trim()).filter(Boolean);
+                        subDrills.forEach(sub => {
+                            if (sub) formattedDrillsHtml += `<li>${sub}</li>`;
+                        });
+                        lastIndex = content.length;
+                    }
+                    lawMatches.forEach((match, index) => {
+                        const lawDrill = match[0];
+                        formattedDrillsHtml += `<li>${lawDrill}</li>`; 
+                        lastIndex = match.index + lawDrill.length;
+                        if (index < lawMatches.length - 1) {
+                            const nextLawMatch = lawMatches[index + 1];
+                            let intermediatePart = content.substring(lastIndex, nextLawMatch.index).trim();
+                            intermediatePart = intermediatePart.replace(/^[,;]\s*/, ''); 
+                            const subDrills = intermediatePart.split(';').map(s => s.trim()).filter(Boolean);
+                            subDrills.forEach(sub => {
+                                if (sub) formattedDrillsHtml += `<li>${sub}</li>`;
+                            });
+                        } else if (lastIndex < content.length) {
+                            let trailingPart = content.substring(lastIndex).trim();
+                            trailingPart = trailingPart.replace(/^[,;]\s*/, ''); 
+                            if (trailingPart.endsWith('.')) trailingPart = trailingPart.slice(0, -1); 
+                            const subDrills = trailingPart.split(';').map(s => s.trim()).filter(Boolean);
+                            subDrills.forEach(sub => {
+                                if (sub) formattedDrillsHtml += `<li>${sub}</li>`;
+                            });
+                        }
+                    });
+                    formattedDrillsHtml += `</ul></li>`; 
+                });
+                return `<ul>${formattedDrillsHtml}</ul>`; 
+            }
+
+
+            loadAllData().then(() => {
+                preloader.classList.add('hidden');
+
+                function generateCategoryButtons() {
+                    categoryFiltersContainer.innerHTML = ''; 
+                    const categories = new Set();
+                    combinedLaws.forEach(law => {
+                        if (law.category) {
+                            categories.add(law.category);
+                        }
+                    });
+
+                    const allButton = document.createElement('button');
+                    allButton.className = 'filter-btn active';
+                    allButton.dataset.category = 'all';
+                    allButton.textContent = `All (${combinedLaws.length})`;
+                    categoryFiltersContainer.appendChild(allButton);
+
+                    categories.forEach(category => {
+                        const count = combinedLaws.filter(law => law.category === category).length;
+                        const button = document.createElement('button');
+                        button.className = 'filter-btn';
+                        button.dataset.category = category;
+                        button.textContent = `${category} (${count})`;
+                        categoryFiltersContainer.appendChild(button);
+                    });
+
+                    document.querySelectorAll('.filter-btn').forEach(btn => {
+                        btn.addEventListener('click', () => {
+                            document.querySelectorAll('.filter-btn').forEach(b => {
+                                b.classList.remove('active');
+                            });
+                            btn.classList.add('active');
+
+                            const category = btn.dataset.category;
+                            filteredLaws = category === 'all'
+                                ? combinedLaws
+                                : combinedLaws.filter(law => law.category === category);
+                            renderLaws(filteredLaws); 
+                        });
+                    });
+                }
+
+                function renderLaws(lawsToRender) {
+                    const grid = document.getElementById('lawsGrid');
+                    grid.innerHTML = ''; 
+                    lawsToRender.forEach((law) => {
+                        const card = document.createElement('div');
+                        card.className = 'domain-card';
+                        card.dataset.category = law.category;
+                        card.innerHTML = `
+                            <div class="domain-header">
+                                <div class="domain-id">${law.lawNumber}</div>
+                                <div class="domain-name">${law.lawTitle}</div>
+                            </div>
+                            <div class="domain-content">
+                                <div class="domain-category">${law.category}</div>
+                            </div>
+                        `;
+                        card.addEventListener('click', () => {
+                            const clickedLawGlobalIndex = combinedLaws.findIndex(
+                                l => l.lawNumber === law.lawNumber && l.lawTitle === law.lawTitle
+                            );
+                            if (clickedLawGlobalIndex !== -1) {
+                                currentLawIndex = clickedLawGlobalIndex; 
+                                openModal(combinedLaws[currentLawIndex]); 
+                                window.history.pushState({ modal: true, lawIndex: currentLawIndex }, document.title);
+                            }
+                        });
+                        grid.appendChild(card);
+                    });
+                }
+
+                function openModal(law) {
+                    const modal = document.getElementById('lawModal');
+                    const modalContentDiv = document.getElementById('modalContent');
+                    const prevLawBtn = document.getElementById('prevLaw');
+                    const nextLawBtn = document.getElementById('nextLaw');
+
+                    let contentHTML = `<div class="modal-section">`;
+
+                    if (law.lawNumber && law.lawTitle) {
+                        contentHTML += `<h2>Law ${law.lawNumber}: ${law.lawTitle}</h2>`;
+                    }
+                    if (law.category) {
+                        contentHTML += `<p><strong>Category:</strong> ${law.category}</p>`;
+                    }
+                    if (law.motto) {
+                        contentHTML += `<p><strong>Motto:</strong> ${law.motto}</p>`;
+                    }
+                    if (law.core_mechanics && law.core_mechanics.length > 0) {
+                        contentHTML += `<h3>Core Mechanics:</h3>${renderList(law.core_mechanics)}`;
+                    }
+                    if (law.why_non_negotiable && law.why_non_negotiable.length > 0) {
+                        contentHTML += `<h3>Why Non-Negotiable:</h3>${renderList(law.why_non_negotiable)}`;
+                    }
+                    if (law.how_to_spot_weakness && law.how_to_spot_weakness.length > 0) {
+                        contentHTML += `<h3>How to Spot Weakness:</h3>${renderList(law.how_to_spot_weakness)}`;
+                    }
+                    if (law.mastery_cues && law.mastery_cues.length > 0) {
+                        contentHTML += `<h3>Mastery Cues:</h3>${renderList(law.mastery_cues)}`;
+                    }
+
+                    if (law.drill_title) {
+                        contentHTML += `<h3>${law.drill_title}</h3>`;
+                    }
+                    if (law.drill_goal) {
+                        contentHTML += `<p><strong>Goal:</strong> ${law.drill_goal}</p>`;
+                    }
+                    if (law.exercises && law.exercises.length > 0) {
+                        contentHTML += `<h3>Exercises:</h3>${renderExercises(law.exercises)}`;
+                    }
+
+                    if (law.critical_checks && law.critical_checks.length > 0) {
+                        contentHTML += `<h3>Critical Checks:</h3>${renderList(law.critical_checks)}`;
+                    }
+                    if (law.voice_outcomes_timeline && law.voice_outcomes_timeline.length > 0) {
+                        contentHTML += `<h3>Voice Outcomes Timeline:</h3>${renderList(law.voice_outcomes_timeline)}`;
+                    }
+                    if (law.optimization_summary && law.optimization_summary.length > 0) {
+                        contentHTML += `<h3>Optimization Summary:</h3>${renderList(law.optimization_summary)}`;
+                    }
+                    if (law.god_mode_test) {
+                        contentHTML += `<h3>⚔️ GOD MODE TEST:</h3><p>${law.god_mode_test}</p>`;
+                    }
+                    if (law.pitfalls_and_sabotage && law.pitfalls_and_sabotage.length > 0) {
+                        contentHTML += `<h3>❗ PITFALLS & SABOTAGE:</h3>${renderList(law.pitfalls_and_sabotage)}`;
+                    }
+                    if (law.cross_sync_laws && law.cross_sync_laws.length > 0) {
+                        contentHTML += `<h3>🧠 CROSS-SYNC LAWS:</h3><div class="cross-sync-links">`;
+                        law.cross_sync_laws.forEach(linkedLawNumber => {
+                            const linkedLaw = combinedLaws.find(l => l.lawNumber === linkedLawNumber);
+                            if (linkedLaw) {
+                                contentHTML += `<span data-law-number="${linkedLawNumber}">${linkedLaw.lawNumber}: ${linkedLaw.lawTitle.replace(/<[^>]*>?/gm, '')}</span>`; 
+                            }
+                        });
+                        contentHTML += `</div>`;
+                    }
+
+
+                    contentHTML += `</div>`; 
+                    modalContentDiv.innerHTML = contentHTML;
+
+                    modalContentDiv.querySelectorAll('.cross-sync-links span').forEach(span => {
+                        span.addEventListener('click', (e) => {
+                            const targetLawNumber = e.target.dataset.lawNumber;
+                            const targetLawIndex = combinedLaws.findIndex(l => l.lawNumber === targetLawNumber);
+                            if (targetLawIndex !== -1) {
+                                currentLawIndex = targetLawIndex;
+                                openModal(combinedLaws[currentLawIndex]);
+                                window.history.replaceState({ modal: true, lawIndex: currentLawIndex }, document.title);
+                            }
+                        });
+                    });
+
+                    prevLawBtn.classList.toggle('disabled', currentLawIndex === 0);
+                    nextLawBtn.classList.toggle('disabled', currentLawIndex === combinedLaws.length - 1);
+
+                    document.body.classList.add('modal-open'); 
+                    modal.style.display = 'flex'; 
+                }
+
+                function closeModal() {
+                    const modal = document.getElementById('lawModal');
+                    modal.style.display = 'none'; 
+                    document.body.classList.remove('modal-open'); 
+                }
+
+                document.querySelector('.close-btn').addEventListener('click', closeModal);
+
+                document.getElementById('prevLaw').addEventListener('click', () => {
+                    if (currentLawIndex > 0) {
+                        currentLawIndex--;
+                        openModal(combinedLaws[currentLawIndex]);
+                        window.history.replaceState({ modal: true, lawIndex: currentLawIndex }, document.title);
+                    }
+                });
+
+                document.getElementById('nextLaw').addEventListener('click', () => {
+                    if (currentLawIndex < combinedLaws.length - 1) {
+                        currentLawIndex++;
+                        openModal(combinedLaws[currentLawIndex]);
+                        window.history.replaceState({ modal: true, lawIndex: currentLawIndex }, document.title);
+                    }
+                });
+
+                // === CODE CHANGE START: Combined keyboard event listener ===
+                document.addEventListener('keydown', (e) => {
+                    const modal = document.getElementById('lawModal');
+
+                    // If modal is open, handle law navigation
+                    if (modal.style.display === 'flex') { 
+                        if (e.key === 'ArrowLeft' && !document.getElementById('prevLaw').classList.contains('disabled')) {
+                            currentLawIndex--;
+                            openModal(combinedLaws[currentLawIndex]);
+                            window.history.replaceState({ modal: true, lawIndex: currentLawIndex }, document.title);
+                        } else if (e.key === 'ArrowRight' && !document.getElementById('nextLaw').classList.contains('disabled')) {
+                            currentLawIndex++;
+                            openModal(combinedLaws[currentLawIndex]);
+                            window.history.replaceState({ modal: true, lawIndex: currentLawIndex }, document.title);
+                        } else if (e.key === 'Escape') {
+                            closeModal();
+                            window.history.back(); 
+                        }
+                    } 
+                    // If modal is closed, handle sprint navigation
+                    else {
+                        if (e.key === 'ArrowLeft') {
+                            if (currentSprintIndex > 0) {
+                                currentSprintIndex--;
+                                renderCurrentSprint();
+                            }
+                        } else if (e.key === 'ArrowRight') {
+                            if (currentSprintIndex < allSprints.length - 1) {
+                                currentSprintIndex++;
+                                renderCurrentSprint();
+                            }
+                        }
+                    }
+                });
+                // === CODE CHANGE END ===
+
+                window.addEventListener('popstate', (event) => {
+                    const modal = document.getElementById('lawModal');
+                    if (event.state && event.state.modal) {
+                        currentLawIndex = event.state.lawIndex;
+                        openModal(combinedLaws[currentLawIndex]);
+                    } else if (modal.style.display === 'flex') {
+                        closeModal();
+                    }
+                });
+                
+                /**
+                 * Renders the currently selected Power Sprint.
+                 */
+                function renderCurrentSprint() {
+                    const sprintDisplay = document.getElementById('singleSprintDisplay');
+                    const sprintTitleDisplay = document.getElementById('sprintTitleDisplay');
+
+                    if (!allSprints || allSprints.length === 0) {
+                        powerSprintsContainer.style.display = 'none';
+                        document.getElementById('sprintHeaderNav').style.display = 'none';
+                        return;
+                    }
+
+                    const sprint = allSprints[currentSprintIndex];
+                    if (!sprint) {
+                        sprintDisplay.innerHTML = '<p>Sprint not found.</p>';
+                        return;
+                    }
+
+                    // Update the title in the header
+                    sprintTitleDisplay.textContent = `Sprint ${sprint.num}: ${sprint.name}`;
+                    
+                    const sprintCard = document.createElement('div');
+                    sprintCard.className = 'domain-card non-interactive'; 
+
+                    let lawsInvolvedHtml = '';
+                    if (sprint.laws_involved && sprint.laws_involved.length > 0) {
+                        lawsInvolvedHtml = `<div class="card-tags" style="margin-top: 15px;">`;
+                        sprint.laws_involved.forEach(lawNum => {
+                            lawsInvolvedHtml += `<span>Law ${lawNum}</span>`;
+                        });
+                        lawsInvolvedHtml += `</div>`;
+                    }
+
+                    const drillsHtml = sprint.drills && sprint.drills.length > 0 ?
+                        `<div class="drills-section"><h4>Drills:</h4>${formatDrills(sprint.drills)}</div>` : '';
+
+                    sprintCard.innerHTML = `
+                        <div class="domain-header">
+                            <div class="domain-id">${sprint.num}</div>
+                            <div class="domain-name">${sprint.name}</div>
+                        </div>
+                        <div class="domain-content">
+                            <p>${sprint.description}</p>
+                            ${lawsInvolvedHtml}
+                            ${drillsHtml}
+                            <div class="timeframe"><strong>Timeframe:</strong> ${sprint.timeframe}</div>
+                            <div class="goal"><strong>Goal:</strong> ${sprint.goal}</div>
+                        </div>
+                    `;
+                    
+                    sprintDisplay.innerHTML = ''; 
+                    sprintDisplay.appendChild(sprintCard);
+                }
+
+                /**
+                 * Initializes the Power Sprints section, determining the current sprint by date.
+                 */
+                function initializeSprints() {
+                    if (!allSprints || allSprints.length === 0) return;
+
+                    // Make navigation visible
+                    document.getElementById('sprintHeaderNav').style.display = 'flex';
+
+                    const today = new Date();
+                    today.setHours(0, 0, 0, 0); // Normalize to the start of the day for accurate comparison
+                    const year = today.getFullYear();
+                    
+                    let foundSprintIndex = -1;
+
+                    allSprints.forEach((sprint, index) => {
+                        if (!sprint.timeframe) return;
+                        
+                        try {
+                            const [startStr, endStr] = sprint.timeframe.split(' - ');
+                            const startDate = new Date(`${startStr}, ${year}`);
+                            const endDate = new Date(`${endStr}, ${year}`);
+                            
+                            startDate.setHours(0, 0, 0, 0);
+                            endDate.setHours(23, 59, 59, 999); // Set to end of the day
+
+                            if (today >= startDate && today <= endDate) {
+                                foundSprintIndex = index;
+                            }
+                        } catch(e) {
+                            console.error("Could not parse timeframe: ", sprint.timeframe, e);
+                        }
+                    });
+
+                    // Set current index or default to 0 if no sprint is active today
+                    currentSprintIndex = (foundSprintIndex !== -1) ? foundSprintIndex : 0;
+                    
+                    // === CODE CHANGE START: Removed button click listeners ===
+                    // The keyboard listener now handles this navigation
+                    // === CODE CHANGE END ===
+                    
+                    renderCurrentSprint();
+                }
+
+                // Initial setup:
+                generateCategoryButtons();
+                renderLaws(combinedLaws);
+                initializeSprints();
+
+                if (allLawsData.final_commandment) {
+                    finalCommandmentDiv.innerHTML = allLawsData.final_commandment;
+                }
+
+            }).catch(error => {
+                console.error('Failed to load initial data:', error);
+                preloader.classList.add('hidden'); 
+                document.getElementById('lawsGrid').innerHTML = '<p style="text-align: center; color: red; font-size: 1.2rem;">Failed to load program data. Please try again later.</p>';
+            });
+        });
+    </script>
+</body>
+</html>
