@@ -4,199 +4,192 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voice Launch Sprint: Week 1</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">    <style>
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #fff;
             color: #000;
             line-height: 1.6;
-            margin: 0;
+            margin: 20px;
             padding: 0;
+        }
+        *::-webkit-scrollbar{
+            opacity: 0;
+            width: 0px;
         }
         .container {
             max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
+            margin: 30px auto;
+            padding: 15px;
             background-color: #fff;
             border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
         }
         h1, h2, h3, h4 {
             font-weight: 700;
             color: #000;
         }
         h1 {
-            font-size: 2.5em;
-            text-align: center;
-            margin-bottom: 30px;
-            color: #000; /* Black for emphasis */
+            font-size: 1.5em; /* Slightly smaller for main header */
+            text-align: left; /* Aligned to left */
+            margin-bottom: 25px;
+            color: #000;
         }
         h2 {
-            font-size: 2em;
-            border-bottom: 2px solid #333; /* Darker line for contrast */
-            padding-bottom: 10px;
-            margin-top: 40px;
-            color: #000;
-        }
-        h3 {
-            font-size: 1.5em;
+            font-size: 1.3em;
+            border-bottom: 1px solid #333;
+            padding-bottom: 8px;
             margin-top: 30px;
             color: #000;
+            text-align: left; /* Ensure H2 is left-aligned */
+        }
+        h3 {
+            font-size: 1.2em;
+            margin-top: 25px;
+            color: #000;
+            text-align: left; /* Ensure H3 is left-aligned */
         }
         h4 {
-            font-size: 1.2em;
-            margin-top: 20px;
+            font-size: 1em;
+            margin-top: 18px;
             color: #000;
+            text-align: left; /* Ensure H4 is left-aligned */
+        }
+        p, ul, li {
+            font-size: 0.9em;
+            text-align: left; /* Align all paragraphs and list items to left */
         }
         .section-header {
             display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
+            align-items: baseline; /* Changed to baseline for better emoji alignment with text */
+            gap: 10px;
+            margin-bottom: 5px;
         }
-        .section-header h2 {
-            margin-bottom: 0;
-            border-bottom: none;
-            padding-bottom: 0;
+        .section-header h2, .section-header h4 { /* Target both h2 and h4 within section-header */
+            margin-top: 0; /* Reset margin-top to prevent misalignment */
+            margin-bottom: 0; /* Reset margin-bottom to prevent misalignment */
+            border-bottom: none; /* Ensure no border for these specific headings */
+            padding-bottom: 0; /* Ensure no padding for these specific headings */
         }
-        .icon {
-            font-size: 1.5em;
-            color: #000; /* Black icon */
+        .icon-emoji {
+            font-size: 1.2em;
+            /* Adjust vertical alignment if needed, e.g., vertical-align: middle; or margin-bottom */
+            line-height: 1; /* Helps with vertical alignment of emoji */
         }
         .phase {
-            background-color: #f9f9f9;
-            border-left: 5px solid #000; /* Black border */
-            padding: 20px;
-            margin-bottom: 30px;
+            background-color: #fcfcfc;
+            /* Removed border-left: 4px solid #000; */ /* Removed black margin */
+            padding: 8px;
+            margin-bottom: 25px;
             border-radius: 5px;
         }
         .phase h3 {
-            color: #000; /* Black for phase titles */
+            color: #000;
             margin-top: 0;
         }
         .drill-stack {
-            background-color: #f3f3f3;
-            padding: 15px;
+            background-color: #f6f6f6;
+            padding: 12px;
             border-radius: 5px;
-            margin-top: 20px;
+            margin-top: 18px;
         }
         .drill-stack h4 {
             color: #000;
             margin-top: 0;
         }
         .law {
-            margin-bottom: 30px;
-            padding: 15px;
+            margin-bottom: 25px;
+            padding: 12px;
             background-color: #ffffff;
-            border: 1px solid #ddd;
+            border: 1px solid #eee;
             border-radius: 5px;
         }
         .law h3 {
             color: #000;
-            border-bottom: 1px dashed #999; /* Slightly lighter dash */
-            padding-bottom: 5px;
-            margin-bottom: 15px;
+            border-bottom: 1px dashed #bbb;
+            padding-bottom: 4px;
+            margin-bottom: 12px;
         }
         .law p strong {
-            color: #000; /* Black for strong text */
+            color: #000;
         }
         .exercises {
-            margin-top: 15px;
+            margin-top: 12px;
             border-top: 1px dashed #eee;
-            padding-top: 15px;
+            padding-top: 12px;
         }
         .exercises h4 {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         .exercises ul {
             list-style-type: none;
             padding-left: 0;
         }
         .exercises ul li {
-            margin-bottom: 10px;
-            padding-left: 20px;
+            margin-bottom: 8px;
+            padding-left: 18px;
             position: relative;
         }
         .exercises ul li::before {
-            content: '•'; /* Bullet point character */
+            content: '•';
             position: absolute;
             left: 0;
-            font-size: 20px;
-            line-height: 1; /* Align bullet with text */
+            font-size: 18px;
+            line-height: 1;
         }
-        .critical-checks {
-            margin-top: 15px;
-            background-color: #f0f0f0; /* Light gray for subtle distinction */
-            border: 1px solid #999; /* Darker gray border */
-            padding: 10px;
+        .critical-checks, .pitfalls, .mastery-cues {
+            margin-top: 12px;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            padding: 8px;
             border-radius: 5px;
         }
-        .critical-checks h4 {
-            color: #000; /* Black for headings */
-            margin-top: 0;
-        }
-        .pitfalls {
-            margin-top: 15px;
-            background-color: #f0f0f0; /* Light gray */
-            border: 1px solid #999; /* Darker gray */
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .pitfalls h4 {
-            color: #000;
-            margin-top: 0;
-        }
-        .mastery-cues {
-            margin-top: 15px;
-            background-color: #f0f0f0; /* Light gray */
-            border: 1px solid #999; /* Darker gray */
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .mastery-cues h4 {
+        .critical-checks h4, .pitfalls h4, .mastery-cues h4 {
             color: #000;
             margin-top: 0;
         }
         .mission-objective {
-            background-color: #f0f0f0; /* Light gray */
-            border: 2px solid #000; /* Black border */
-            padding: 25px;
-            margin-top: 50px;
+            background-color: #fafbff;
+            border: 1px solid #a5a5a5;
+            padding: 20px;
+            margin-top: 40px;
             border-radius: 8px;
-            text-align: center;
+            text-align: left; /* Aligned to left */
         }
         .mission-objective h2 {
             color: #000;
+            font-size: 1em;
             border-bottom: none;
             margin-top: 0;
         }
         .mission-objective p {
-            font-size: 1.1em;
-            margin-bottom: 10px;
+            font-size: 0.8em;
+            margin-bottom: 8px;
         }
         .mission-objective .status {
             font-weight: 700;
-            font-size: 1.2em;
+            font-size: 0.8em;
+
         }
         .status.pass {
-            color: #000; /* Black for success */
+            color: #000;
         }
         .status.fail {
-            color: #000; /* Black for failure */
+            color: #000;
         }
         .footer-note {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 0.9em;
-            color: #555; /* Dark gray for subtle text */
+            text-align: left; /* Aligned to left */
+            margin-top: 40px;
+            font-size: 0.8em;
+            color: #777;
         }
         hr {
             border: 0;
             height: 1px;
-            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-            margin: 40px 0;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+            margin: 30px 0;
         }
 
         /* Toggle Button Styles */
@@ -223,32 +216,35 @@
         .hidden {
             display: none;
         }
+        li{
+            font-weight: 500;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>🎯 WEEK 1: GOD VOICE LAUNCH SPRINT (JULY 2–JULY 8)</h1>
-        <p class="general-section" style="text-align: center; font-size: 1.1em;"><strong>Target:</strong> Break into the top 5% of vocal control globally.</p>
-        <p class="general-section" style="text-align: center; font-size: 1.1em;"><strong>Method:</strong> Build the weapon, not the performance. Zero need to speak outside drills.</p>
+        <p style="text-align: left; font-size: 0.9em;"><strong>Target:</strong> Break into the top 5% of vocal control globally.</p>
+        <p style="text-align: left; font-size: 0.9em;"><strong>Method:</strong> Build the weapon, not the performance. Zero need to speak outside drills.</p>
 
-        <hr class="general-section">
+        <hr>
 
-        <div class="phase general-section">
+        <div class="phase">
             <div class="section-header">
-                <i class="fas fa-fire icon"></i><h2>PHASE 1: "Steel the Instrument" (July 2–JULY 4)</h2>
+                <span class="icon-emoji">🔥</span><h2>PHASE 1: "Steel the Instrument" (July 2–JULY 4)</h2>
             </div>
             <p>We attack the four non-negotiables: <strong>Breath. Cord Seal. Chest Resonance. Resonance Placement.</strong></p>
             <p>These are your lungs, strings, amplifier, and equalizer.</p>
 
-            <div class="drill-stack general-section">
+            <div class="drill-stack">
                 <div class="section-header">
-                    <i class="fas fa-cog icon"></i><h4>Daily Drill Stack (Morning + Evening)</h4>
+                    <span class="icon-emoji">⚙️</span><h4>Daily Drill Stack (Morning + Evening)</h4>
                 </div>
             </div>
 
             <div class="law">
                 <h3>🌬️ Law 1: DOMINATE BREATH OR BE DOMINATED</h3>
-                <p class="general-section"><strong>Motto:</strong> Control the breath, control the voice. Lose the breath, lose the war.</p>
+                <p><strong>Motto:</strong> Control the breath, control the voice. Lose the breath, lose the war.</p>
                 <h4 class="theory-section">Core Mechanics:</h4>
                 <ul class="theory-section">
                     <li><strong>Diaphragmatic Surge:</strong> Breathe from your belly, not your chest. Your hand placed below your navel should rise first.</li>
@@ -257,8 +253,8 @@
                     <li><strong>Breath Geometry:</strong> Inhale should expand your belly, then ribs, then back – a radial expansion, not vertical.</li>
                     <li><strong>No Shoulder Movement:</strong> If your shoulders rise, your dominance drops.</li>
                 </ul>
-                <h4 class="general-section">Why Non-Negotiable:</h4>
-                <ul class="general-section">
+                <h4>Why Non-Negotiable:</h4>
+                <ul>
                     <li>Deep voices consume more air; weak breath results in a dead tone.</li>
                     <li>Poor exhalation can muddy bass frequencies.</li>
                     <li>Bad breathing leads to throat tension under pressure, making you sound nervous.</li>
@@ -323,7 +319,7 @@
 
             <div class="law">
                 <h3>🔒 Law 2: SEAL THE CHAMBER – CORD CONNECTION</h3>
-                <p class="general-section"><strong>Motto:</strong> If your cords don’t seal, your bass bleeds out. Powerless. Whispery. Forgettable.</p>
+                <p><strong>Motto:</strong> If your cords don’t seal, your bass bleeds out. Powerless. Whispery. Forgettable.</p>
                 <h4 class="theory-section">Core Mechanics:</h4>
                 <ul class="theory-section">
                     <li><strong>Vocal Fold Closure:</strong> Vocal cords press together like airtight elevator doors, preventing air leaks.</li>
@@ -333,8 +329,8 @@
                     <li><strong>Leak Check:</strong> If your soft speech sounds airy, your cords aren't closing fully.</li>
                     <li><strong>Cord Balance:</strong> Cords should be laser-sealed, not too tight (strained) or too loose (breathy).</li>
                 </ul>
-                <h4 class="general-section">Why Non-Negotiable:</h4>
-                <ul class="general-section">
+                <h4>Why Non-Negotiable:</h4>
+                <ul>
                     <li>Weak closure results in a whispery tone and no depth.</li>
                     <li>Forced deepness without a proper seal breaks under pressure.</li>
                     <li>Poor cord control leads to overthinking delivery and a lack of trust in your voice.</li>
@@ -398,7 +394,7 @@
 
             <div class="law">
                 <h3>💪 Law 3: CHEST RESONANCE – THE IRON AMPLIFIER</h3>
-                <p class="general-section"><strong>Motto:</strong> Your chest is not a cage. It’s a cathedral of sound. Lock it open or die muffled.</p>
+                <p><strong>Motto:</strong> Your chest is not a cage. It’s a cathedral of sound. Lock it open or die muffled.</p>
                 <h4 class="theory-section">Core Mechanics:</h4>
                 <ul class="theory-section">
                     <li><strong>Ribcage Expansion:</strong> Sternum lifted, like a soldier at attention.</li>
@@ -407,8 +403,8 @@
                     <li><strong>Chest Openness:</strong> Ribcage wide, shoulders back for maximum resonance.</li>
                     <li><strong>Throat Freedom:</strong> No tension in the larynx—sound flows from the torso.</li>
                 </ul>
-                <h4 class="general-section">Why Non-Negotiable:</h4>
-                <ul class="general-section">
+                <h4>Why Non-Negotiable:</h4>
+                <ul>
                     <li>A closed chest chokes low frequencies, which are your biggest weapon.</li>
                     <li>Poor posture overworks throat muscles, leading to fatigue.</li>
                     <li>Hunched speakers sound unsure, even with deep voices.</li>
@@ -471,7 +467,7 @@
 
             <div class="law">
                 <h3>🎚️ Law 5: RESONANCE ENGINEERING – FREQUENCY DOMINATION</h3>
-                <p class="general-section"><strong>Motto:</strong> Your voice isn’t one note. It’s an equalizer. Tune it or stay flat.</p>
+                <p><strong>Motto:</strong> Your voice isn’t one note. It’s an equalizer. Tune it or stay flat.</p>
                 <h4 class="theory-section">Core Mechanics:</h4>
                 <ul class="theory-section">
                     <li><strong>Chest Resonance:</strong> Vibrations in the sternum (100-300Hz) for dark authority.</li>
@@ -481,8 +477,8 @@
                     <li><strong>No Throat Trap:</strong> Avoid larynx vibrations—sounds weak, feels strained.</li>
                     <li><strong>Dynamic Balance:</strong> Blend all three for a 3D voice.</li>
                 </ul>
-                <h4 class="general-section">Why Non-Negotiable:</h4>
-                <ul class="general-section">
+                <h4>Why Non-Negotiable:</h4>
+                <ul>
                     <li>Deep voices need mouth/nasal resonance to avoid mumbling.</li>
                     <li>Monotone resonance leads to listener fatigue.</li>
                     <li>Nasal resonance adds urgency, chest adds gravitas, and mouth adds logic for emotional precision.</li>
@@ -545,24 +541,24 @@
             </div>
         </div>
 
-        <hr class="general-section">
+        <hr>
 
-        <div class="phase general-section">
+        <div class="phase">
             <div class="section-header">
-                <i class="fas fa-fire icon"></i><h2>PHASE 2: "Emotion Morph Engine" (JULY 5–JULY 8)</h2>
+                <span class="icon-emoji">🔥</span><h2>PHASE 2: "Emotion Morph Engine" (JULY 5–JULY 8)</h2>
             </div>
             <p>Now that the instrument is clean—you add fire and flavor.</p>
             <p>We move into Law 4, Law 10, Law 11:<strong>Register Control, Vocal Morphing, Emotional Framing.</strong></p>
 
-            <div class="drill-stack general-section">
+            <div class="drill-stack">
                 <div class="section-header">
-                    <i class="fas fa-cog icon"></i><h4>Daily Drill Stack (Morning + Evening)</h4>
+                    <span class="icon-emoji">⚙️</span><h4>Daily Drill Stack (Morning + Evening)</h4>
                 </div>
             </div>
 
             <div class="law">
                 <h3>🎭 Law 4: REGISTER EXPANSION – VOCAL SHAPESHIFTING</h3>
-                <p class="general-section"><strong>Motto:</strong> One voice is a tool. Six voices are an arsenal.</p>
+                <p><strong>Motto:</strong> One voice is a tool. Six voices are an arsenal.</p>
                 <h4 class="theory-section">Core Mechanics:</h4>
                 <ul class="theory-section">
                     <li><strong>Chest Voice:</strong> Default power register (100Hz foundation).</li>
@@ -572,8 +568,8 @@
                     <li><strong>Fry:</strong> Crackling sub-bass growl for intensity.</li>
                     <li><strong>Whistle:</strong> Piercing highs—rare, deadly if mastered.</li>
                 </ul>
-                <h4 class="general-section">Why Non-Negotiable:</h4>
-                <ul class="general-section">
+                <h4>Why Non-Negotiable:</h4>
+                <ul>
                     <li>Each register impacts different listener emotions.</li>
                     <li>Prevents monotony in deep voices by providing contrast.</li>
                     <li>Register shifts create a surprise factor that hooks attention.</li>
@@ -635,7 +631,7 @@
 
             <div class="law">
                 <h3>🌀 Law 10: MORPHING – VOCAL SHAPESHIFTING</h3>
-                <p class="general-section"><strong>Motto:</strong> Change your voice mid-word. Break their reality.</p>
+                <p><strong>Motto:</strong> Change your voice mid-word. Break their reality.</p>
                 <h4 class="theory-section">Core Mechanics:</h4>
                 <ul class="theory-section">
                     <li><strong>Emotional Whiplash:</strong> Shift from calm to furious in one syllable.</li>
@@ -644,8 +640,8 @@
                     <li><strong>Breath Anchor:</strong> Morphing relies on diaphragmatic control (Law 1).</li>
                     <li><strong>Resonance Support:</strong> Shifts need precise frequency placement (Law 5).</li>
                 </ul>
-                <h4 class="general-section">Why Non-Negotiable:</h4>
-                <ul class="general-section">
+                <h4>Why Non-Negotiable:</h4>
+                <ul>
                     <li>Emotional shifts hypnotize listeners through cognitive dissonance.</li>
                     <li>Morphing makes narratives visceral, enhancing storytelling power.</li>
                     <li>Captivates attention by making your voice unpredictable.</li>
@@ -707,7 +703,7 @@
 
             <div class="law">
                 <h3>🗣️ Law 11: EMOTIONAL FRAMING – TONE HIJACKING</h3>
-                <p class="general-section"><strong>Motto:</strong> Same words. Different meaning. Total control.</p>
+                <p><strong>Motto:</strong> Same words. Different meaning. Total control.</p>
                 <h4 class="theory-section">Core Mechanics:</h4>
                 <ul class="theory-section">
                     <li><strong>Tone Overrides Words:</strong> “Good job” can convey praise, sarcasm, or threat based on tone.</li>
@@ -716,8 +712,8 @@
                     <li><strong>Resonance Support:</strong> Use chest/nasal resonance for effective tone shifts (Law 5).</li>
                     <li><strong>Dynamic Backup:</strong> Volume and pitch changes enhance framing (Law 9).</li>
                 </ul>
-                <h4 class="general-section">Why Non-Negotiable:</h4>
-                <ul class="general-section">
+                <h4>Why Non-Negotiable:</h4>
+                <ul>
                     <li>Tone influences emotions before words reach logic.</li>
                     <li>Framing enhances your persuasive power.</li>
                     <li>Prevents misinterpretation; the wrong tone conveys the wrong message.</li>
@@ -780,11 +776,11 @@
             </div>
         </div>
 
-        <hr class="general-section">
+        <hr>
 
-        <div class="strategic-edge general-section">
+        <div class="strategic-edge">
             <div class="section-header">
-                <i class="fas fa-brain icon"></i><h2>STRATEGIC EDGE:</h2>
+                <span class="icon-emoji">🧠</span><h2>STRATEGIC EDGE:</h2>
             </div>
             <ul>
                 <li>Don’t talk in real life unless it’s deliberate. You’re in <strong>Voice Monk Mode.</strong></li>
@@ -793,18 +789,18 @@
             </ul>
         </div>
 
-        <hr class="general-section">
+        <hr>
 
-        <div class="mission-objective general-section">
+        <div class="mission-objective">
             <div class="section-header">
-                <i class="fas fa-flag-checkered icon"></i><h2>WEEK 1 MISSION OBJECTIVE:</h2>
+                <span class="icon-emoji">🏁</span><h2>WEEK 1 MISSION OBJECTIVE:</h2>
             </div>
             <p>🔊 Read your own Foreword (from your Voice Laws doc) in one take.</p>
             <p class="status pass">✅ <strong>Deep, controlled, emotion-layered.</strong></p>
             <p class="status fail">❌ <strong>One gasp, one tone slip = reset.</strong></p>
         </div>
 
-        <p class="footer-note general-section">All rights reserved. For personal training use only.</p>
+        <p class="footer-note">All rights reserved. For personal training use only.</p>
     </div>
 
     <div class="toggle-button" id="toggleButton">

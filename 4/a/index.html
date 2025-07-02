@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Breathing Exercise</title>
+  <link rel="icon" href="./cropped_image (1).png" type="image/jpeg">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --c-inhale: #e70000;
+      --c-hold: #e6b000;
+      --c-exhale: #00c7ce;
+      --c-empty: #8a2be2;
+      --c-rest: #555;
+      --c-dark: #000000;
+      --c-light: #ffffff;
+      --c-gray: #f8f8ff;
+      --c-primary: #001aff;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--c-light);
+      color: var(--c-dark);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* --- Selection Screen --- */
+    #selection-screen {
+      width: 100%;
+      max-width:1000px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    #preset-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .preset-card {
+      background-color: var(--c-gray);
+      padding: 1.5rem;
+      border-radius: 10px;
+      border: 3px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .preset-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .preset-card.selected {
+      border-color: var(--c-primary);
+      background-color: var(--c-light);
+      box-shadow: 0 4px 20px rgba(0, 26, 255, 0.2);
+    }
+
+    .preset-card h3 {
+      margin-top: 0;
+      color: var(--c-primary);
+    }
+
+    .preset-card p {
+      margin: 0.25rem 0;
+      color: #333;
+    }
+
+    #start-btn {
+      margin-top: 1rem;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      background-color: var(--c-primary);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    #start-btn:hover {
+      background-color: #0014cc;
+    }
+    
+    /* --- Breathing App --- */
+    #breathing-app {
+        display: none; /* Hidden by default */
+    }
+
+    #container {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    #back-btn {
+      position: absolute;
+      top: 0px;
+      left: 10px;
+      background: none;
+      border: none;
+      font-size:1.5rem;
+      cursor: pointer;
+      color: #aaa;
+    }
+     #back-btn:hover {
+      color: #333;
+    }
+
+    #status {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      font-weight: bold;
+      min-height: 3.5rem;
+    }
+
+    #timer {
+      font-size: 5rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      transition: color 0.3s ease;
+    }
+
+    #counter {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      color: #1f1f1f;
+    }
+
+    #progress-container {
+      width: 100%;
+      height: 8px;
+      background-color: #eee;
+      border-radius: 4px;
+      margin-top: 2rem;
+      overflow: hidden;
+    }
+
+    #progress-bar {
+      height: 100%;
+      width: 0%;
+      background-color: var(--c-dark);
+      transition: width 0.1s linear;
+    }
+
+    #time-remaining {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      color: #666;
+    }
+
+    .inhale { color: var(--c-inhale) !important; }
+    .hold { color: var(--c-hold) !important; }
+    .exhale { color: var(--c-exhale) !important; }
+    .empty { color: var(--c-empty) !important; }
+    .rest-round, .rest-set { color: var(--c-rest) !important; }
+  </style>
+</head>
+<body>
+
+  <!-- Screen for selecting a preset -->
+  <div id="selection-screen">
+    <h1>Select a Breathing Preset</h1>
+    <div id="preset-cards"></div>
+    <button id="start-btn">Start Session</button>
+  </div>
+      <button id="back-btn">&larr;</button>
+
+  <!-- Main breathing exercise app -->
+  <div id="breathing-app">
+    <div id="container">
+        
+      <div id="status">Get Ready</div>
+      <div id="timer">--</div>
+      <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+      <div id="counter">Starting soon...</div>
+      <div id="time-remaining"></div>
+    </div>
+  </div>
+
+  <script>
+    // --- DOM Elements ---
+    const selectionScreen = document.getElementById("selection-screen");
+    const breathingApp = document.getElementById("breathing-app");
+    const presetCardsContainer = document.getElementById("preset-cards");
+    const startBtn = document.getElementById("start-btn");
+    const backBtn = document.getElementById("back-btn");
+
+    const statusEl = document.getElementById("status");
+    const timerEl = document.getElementById("timer");
+    const counterEl = document.getElementById("counter");
+    const timeRemainingEl = document.getElementById("time-remaining");
+    const progressBar = document.getElementById("progress-bar");
+
+    // --- State Variables ---
+    let sets, roundsPerSet, restBetweenRounds, restBetweenSets, breathingPattern;
+    let currentSet = 0;
+    let currentRound = 0;
+    let animationFrame = null;
+    let isRunning = false;
+    let startTime = 0;
+    let totalDuration = 0;
+    let selectedPreset = null;
+
+    // --- Presets Definition ---
+    const presets = [
+      {
+        name: "Box Breathing",
+        sets: 3,
+        reps: 3,
+        restRound: 0,
+        restSet: 15,
+        pattern: [4, 4, 4, 4],
+        description: "Calm and regulate."
+      },
+      {
+        name: "4-7-8 Relax",
+        sets: 3,
+        reps: 4,
+        restRound: 5,
+        restSet: 15,
+        pattern: [4, 7, 8, 8],
+        description: "Classic relaxation technique."
+      },
+      {
+        name: "Power Up",
+        sets: 1,
+        reps: 5,
+        restRound: 10,
+        restSet: 15,
+        pattern: [8, 16, 16, 20],
+        description: "For energy and focus."
+      },
+       {
+        name: "Quick Reset",
+        sets: 1,
+        reps: 1,
+        restRound: 0,
+        restSet: 15,
+        pattern: [16, 16, 16, 8],
+        description: "A single, deep cycle."
+      },
+       {
+        name: "Stamina Builder",
+        sets: 2,
+        reps: 4,
+        restRound: 10,
+        restSet: 20,
+        pattern: [6, 10, 12, 10],
+        description: "Increase lung capacity."
+      }
+    ];
+
+    // --- Core Functions ---
+
+    // Calculate total duration based on the selected preset
+    function calculateTotalDuration() {
+      const patternTime = breathingPattern.reduce((sum, val) => sum + val, 0);
+      const timeForRoundsInSet = (roundsPerSet * patternTime) + Math.max(0, roundsPerSet - 1) * restBetweenRounds;
+      const totalActiveTime = sets * timeForRoundsInSet;
+      const totalRestTime = Math.max(0, sets - 1) * restBetweenSets;
+      return totalActiveTime + totalRestTime + 3; // +3 for initial countdown
+    }
+
+    // Format seconds into MM:SS with leading zeros
+    function formatTime(seconds) {
+      const mins = Math.floor(seconds / 60);
+      const secs = Math.floor(seconds % 60);
+      return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+    }
+
+    // Update the "Time remaining: MM:SS" display
+    function updateTimeRemaining(elapsed) {
+      const remaining = Math.max(0, totalDuration - elapsed);
+      timeRemainingEl.textContent = `Time remaining: ${formatTime(remaining)}`;
+    }
+
+    function updateTimerDisplay(seconds) {
+      timerEl.textContent = Math.ceil(seconds);
+    }
+
+    function updateProgress(percentage) {
+      progressBar.style.width = `${percentage}%`;
+    }
+
+    function resetUI() {
+        statusEl.textContent = 'Get Ready';
+        timerEl.textContent = '--';
+        counterEl.textContent = 'Starting soon...';
+        timeRemainingEl.textContent = '';
+        updateProgress(0);
+    }
+
+    // Handles a single phase (inhale, hold, etc.)
+    async function startPhase(duration, phaseName, colorClass) {
+      return new Promise(resolve => {
+        if (!isRunning) return;
+        timerEl.className = colorClass;
+        statusEl.textContent = phaseName;
+        
+        const phaseStartTime = Date.now();
+        const endTime = phaseStartTime + duration * 1000;
+        
+        function update() {
+          if (!isRunning) {
+              cancelAnimationFrame(animationFrame);
+              return;
+          }
+          const now = Date.now();
+          const remaining = Math.max(0, endTime - now);
+          const elapsedInPhase = duration * 1000 - remaining;
+          const progress = elapsedInPhase / (duration * 1000);
+          
+          updateTimerDisplay(remaining / 1000);
+          updateProgress(progress * 100);
+          
+          const totalElapsed = (now - startTime) / 1000;
+          updateTimeRemaining(totalElapsed);
+          
+          if (remaining > 0) {
+            animationFrame = requestAnimationFrame(update);
+          } else {
+            updateTimerDisplay(0);
+            updateProgress(100);
+            resolve();
+          }
+        }
+        update();
+      });
+    }
+
+    // Executes one full breathing round based on the pattern
+    async function doRound() {
+      if (!isRunning) return;
+      await startPhase(breathingPattern[0], "INHALE", "inhale");
+      if (!isRunning) return;
+      await startPhase(breathingPattern[1], "HOLD", "hold");
+      if (!isRunning) return;
+      await startPhase(breathingPattern[2], "EXHALE", "exhale");
+      if (!isRunning) return;
+      await startPhase(breathingPattern[3], "EMPTY", "empty");
+    }
+
+    // Main function to start the entire breathing session
+    async function startBreathing() {
+      isRunning = true;
+      startTime = Date.now();
+      totalDuration = calculateTotalDuration();
+      
+      // Initial 3-second countdown
+      for (let i = 3; i > 0; i--) {
+          if (!isRunning) return;
+          statusEl.textContent = "Get Ready";
+          updateTimerDisplay(i);
+          await new Promise(resolve => setTimeout(resolve, 1000));
+      }
+      
+      for (currentSet = 1; currentSet <= sets; currentSet++) {
+        for (currentRound = 1; currentRound <= roundsPerSet; currentRound++) {
+          if (!isRunning) return;
+          counterEl.textContent = `Set ${currentSet} of ${sets} • Round ${currentRound} of ${roundsPerSet}`;
+          await doRound();
+
+          if (currentRound < roundsPerSet && restBetweenRounds > 0) {
+            if (!isRunning) return;
+            await startPhase(restBetweenRounds, "REST", "rest-round");
+          }
+        }
+
+        if (currentSet < sets && restBetweenSets > 0) {
+          if (!isRunning) return;
+          await startPhase(restBetweenSets, "SET REST", "rest-set");
+        }
+      }
+
+      if (isRunning) {
+        statusEl.textContent = "COMPLETE!";
+        timerEl.textContent = "✓";
+        counterEl.textContent = `Finished ${sets} sets of ${roundsPerSet} rounds.`;
+        timeRemainingEl.textContent = "";
+        isRunning = false;
+        backBtn.textContent = '.';
+      }
+    }
+    
+    // --- UI and Event Handlers ---
+    
+    function renderPresets() {
+        presetCardsContainer.innerHTML = '';
+        presets.forEach((preset, index) => {
+            const card = document.createElement('div');
+            card.className = 'preset-card';
+            card.dataset.index = index;
+            card.innerHTML = `
+                <h3>${preset.name}</h3>
+                <p><strong>Pattern:</strong> ${preset.pattern.join('-')}s</p>
+                <p><strong>Session:</strong> ${preset.sets} sets of ${preset.reps} reps</p>
+                <p><em>${preset.description}</em></p>
+            `;
+            card.addEventListener('click', () => selectPreset(card, preset));
+            presetCardsContainer.appendChild(card);
+        });
+        // Select the first preset by default
+        selectPreset(presetCardsContainer.firstChild, presets[0]);
+    }
+
+    function selectPreset(cardElement, preset) {
+        document.querySelectorAll('.preset-card').forEach(c => c.classList.remove('selected'));
+        cardElement.classList.add('selected');
+        selectedPreset = preset;
+    }
+
+    startBtn.addEventListener('click', () => {
+        if (!selectedPreset) {
+            alert("Please select a preset first!");
+            return;
+        }
+        
+        // Load settings from the selected preset
+        ({ sets, reps: roundsPerSet, restRound: restBetweenRounds, restSet: restBetweenSets, pattern: breathingPattern } = selectedPreset);
+
+        selectionScreen.style.display = 'none';
+        breathingApp.style.display = 'block';
+        backBtn.textContent = '←';
+        resetUI();
+        startBreathing();
+    });
+
+    backBtn.addEventListener('click', () => {
+        isRunning = false;
+        if (animationFrame) {
+            cancelAnimationFrame(animationFrame);
+            animationFrame = null;
+        }
+        breathingApp.style.display = 'none';
+        selectionScreen.style.display = 'block';
+        resetUI();
+    });
+
+    // --- Initial Load ---
+    document.addEventListener('DOMContentLoaded', renderPresets);
+
+  </script>
+</body>
+</html>
