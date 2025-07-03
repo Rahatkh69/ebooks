@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Visit to Saint Martin Island</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* --- Root Variables for Themes --- */
+        :root {
+            --text-color-light: #333;
+            --bg-color-light: #f4f4f4;
+            --text-color-dark: #eee;
+            --bg-color-dark: #1a1a1a;
+            --link-color-light: #007bff;
+            --link-color-dark: #87cefa;
+            --container-bg-light: #fff;
+            --container-bg-dark: #2a2a2a;
+            --highlight-bg-light: #ffe0b2; /* Light orange for highlighting */
+            --highlight-bg-dark: #4d3100; /* Darker orange for highlighting */
+            --button-bg-light: #007bff;
+            --button-bg-dark: #007bff; /* Keep blue for consistency */
+            --button-hover-bg-light: #0056b3;
+            --button-hover-bg-dark: #0056b3;
+            --stop-button-bg: #dc3545;
+            --stop-button-hover-bg: #c82333;
+            --play-icon-color-light: #007bff;
+            --play-icon-color-dark: #87cefa;
+            --tts-panel-bg-light: #e6f7ff; /* Lighter blue for TTS panel */
+            --tts-panel-bg-dark: #333;
+            --tts-panel-border-light: #a8d5ff;
+            --tts-panel-border-dark: #555;
+            --input-bg-light: #f0f8ff;
+            --input-bg-dark: #444;
+            --input-border-light: #b3e0ff;
+            --input-border-dark: #666;
+            --input-text-color-light: #333;
+            --input-text-color-dark: #eee;
+        }
+
+        /* --- Light Theme --- */
+        html[data-theme="light"] {
+            background-color: var(--bg-color-light);
+            color: var(--text-color-light);
+        }
+
+        html[data-theme="light"] a {
+            color: var(--link-color-light);
+        }
+        html[data-theme="light"] .container {
+            background-color: var(--container-bg-light);
+        }
+        html[data-theme="light"] .highlighted-paragraph {
+            background-color: var(--highlight-bg-light);
+        }
+        html[data-theme="light"] .section-number {
+            color: var(--play-icon-color-light);
+        }
+        html[data-theme="light"] .play-section-button {
+            background: none;
+            border: none;
+            color: var(--play-icon-color-light);
+        }
+        html[data-theme="light"] .tts-button,
+        html[data-theme="light"] .theme-toggle,
+        html[data-theme="light"] .font-size-toggle {
+            background-color: var(--button-bg-light);
+            color: white;
+        }
+        html[data-theme="light"] .tts-button:hover,
+        html[data-theme="light"] .theme-toggle:hover,
+        html[data-theme="light"] .font-size-toggle:hover {
+            background-color: var(--button-hover-bg-light);
+        }
+        html[data-theme="light"] #tts-settings-panel {
+            background-color: var(--tts-panel-bg-light);
+            border: 1px solid var(--tts-panel-border-light);
+        }
+        html[data-theme="light"] #tts-settings-panel select,
+        html[data-theme="light"] #tts-settings-panel input[type="range"] {
+            background-color: var(--input-bg-light);
+            border: 1px solid var(--input-border-light);
+            color: var(--input-text-color-light);
+        }
+
+        /* --- Dark Theme --- */
+        html[data-theme="dark"] {
+            background-color: var(--bg-color-dark);
+            color: var(--text-color-dark);
+        }
+
+        html[data-theme="dark"] a {
+            color: var(--link-color-dark);
+        }
+        html[data-theme="dark"] .container {
+            background-color: var(--container-bg-dark);
+        }
+        html[data-theme="dark"] .highlighted-paragraph {
+            background-color: var(--highlight-bg-dark);
+        }
+        html[data-theme="dark"] .section-number {
+            color: var(--play-icon-color-dark);
+        }
+        html[data-theme="dark"] .play-section-button {
+            background: none;
+            border: none;
+            color: var(--play-icon-color-dark);
+        }
+        html[data-theme="dark"] .tts-button,
+        html[data-theme="dark"] .theme-toggle,
+        html[data-theme="dark"] .font-size-toggle {
+            background-color: var(--button-bg-dark);
+            color: white;
+        }
+        html[data-theme="dark"] .tts-button:hover,
+        html[data-theme="dark"] .theme-toggle:hover,
+        html[data-theme="dark"] .font-size-toggle:hover {
+            background-color: var(--button-hover-bg-dark);
+        }
+        html[data-theme="dark"] #tts-settings-panel {
+            background-color: var(--tts-panel-bg-dark);
+            border: 1px solid var(--tts-panel-border-dark);
+        }
+        html[data-theme="dark"] #tts-settings-panel select,
+        html[data-theme="dark"] #tts-settings-panel input[type="range"] {
+            background-color: var(--input-bg-dark);
+            border: 1px solid var(--input-border-dark);
+            color: var(--input-text-color-dark);
+        }
+
+
+        /* --- General Body and Layout --- */
+        body {
+            font-family: 'Merriweather', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column; /* Stack TTS panel and container */
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+            gap: 20px; /* Space between panel and container */
+        }
+
+        .container {
+            width: 80%; /* Updated width */
+            max-width: 1000px; /* Optional: Set a max-width for very large screens */
+            padding: 40px; /* Increased padding */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+            transition: background-color 0.3s, color 0.3s;
+            border-radius: 8px;
+            box-sizing: border-box; /* Include padding in width */
+        }
+
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            margin-top: 1.5em; /* Reduced margin-top for tighter spacing */
+            margin-bottom: 0.5em;
+        }
+
+        h1 {
+            font-size: 2.8em; /* Slightly larger H1 */
+            text-align: center;
+            margin-top: 0.5em; /* Closer to the top of container */
+        }
+
+        h2 {
+            font-size: 2em; /* Slightly larger H2 */
+            display: inline; /* To align with play button */
+        }
+
+        p {
+            font-size: 1em;
+            font-weight: 400;
+            margin-bottom: 1em;
+            transition: background-color 0.2s ease-out; /* Smooth highlight transition */
+            padding: 2px 0; /* Small padding for highlight */
+        }
+
+        /* --- Section Styling (with numbers) --- */
+        .section {
+            margin-bottom: 2em;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center; /* Aligns number, heading, and button vertically */
+            margin-bottom: 0.5em;
+            gap: 15px; /* Space between elements */
+        }
+
+        .section-number {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 2.2em;
+            flex-shrink: 0;
+            line-height: 1; /* Align number better */
+        }
+
+        .section-content {
+            flex-grow: 1;
+        }
+
+        /* --- Sticky Buttons (Theme/Font Size) --- */
+        .sticky-buttons {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1001; /* Above TTS panel */
+        }
+
+        .theme-toggle, .font-size-toggle {
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background-color 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* --- Text-to-Speech Settings Panel --- */
+        #tts-settings-panel {
+            position: sticky;
+            top: 0; /* Sticks to the top of the viewport */
+            width: 80%; /* Match container width */
+            max-width: 1000px;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap */
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            z-index: 999; /* Below sticky-buttons, above main content */
+            box-sizing: border-box;
+            margin-bottom: 20px; /* Space below the panel */
+        }
+
+        .tts-control-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            flex: 1; /* Allow groups to take equal space */
+            min-width: 150px; /* Minimum width for control groups */
+        }
+
+        .tts-control-group label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+
+        #tts-settings-panel select,
+        #tts-settings-panel input[type="range"] {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            cursor: pointer;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            box-sizing: border-box;
+        }
+        #tts-settings-panel input[type="range"] {
+            padding: 0; /* Range inputs don't need vertical padding */
+        }
+
+        #tts-settings-panel span {
+            display: inline-block;
+            min-width: 30px;
+            text-align: right;
+            font-weight: bold;
+            margin-left: 5px;
+            font-size: 0.85em;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 0;
+        }
+        .radio-group label {
+            font-weight: normal;
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .radio-group input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+            padding: 0;
+            cursor: pointer;
+        }
+
+        .tts-buttons {
+            display: flex;
+            gap: 10px;
+            width: 100%; /* Take full width at the bottom of the panel */
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .tts-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .tts-button:disabled {
+            background-color: #cccccc !important;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .tts-button#stopAllButton {
+            background-color: var(--stop-button-bg);
+        }
+        .tts-button#stopAllButton:hover {
+            background-color: var(--stop-button-hover-bg);
+        }
+
+        .play-section-button {
+            cursor: pointer;
+            font-size: 1.5em; /* Size of the play icon */
+            margin-left: 10px;
+            vertical-align: middle;
+            transition: transform 0.2s ease;
+        }
+        .play-section-button:hover {
+            transform: scale(1.1);
+        }
+        .play-section-button:disabled {
+            color: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .play-section-button svg {
+            display: block; /* Remove extra space below SVG */
+        }
+
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 900px) {
+            .container, #tts-settings-panel {
+                width: 90%;
+            }
+            .tts-control-group {
+                min-width: 48%; /* Two columns on medium screens */
+            }
+            .tts-buttons {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            .container {
+                padding: 25px;
+            }
+            h1 {
+                font-size: 2.2em;
+            }
+            h2 {
+                font-size: 1.6em;
+            }
+            .sticky-buttons {
+                top: 10px;
+                right: 10px;
+                flex-direction: row;
+                gap: 5px;
+            }
+            .theme-toggle, .font-size-toggle {
+                padding: 8px 12px;
+                font-size: 0.8em;
+            }
+            .section-number {
+                font-size: 1.8em;
+                margin-right: 10px;
+            }
+            #tts-settings-panel {
+                padding: 15px 20px;
+                gap: 10px;
+                width: 95%; /* Wider on smaller screens */
+            }
+            .tts-control-group {
+                min-width: 100%; /* Stack controls on small screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            h2 {
+                font-size: 1.4em;
+            }
+            .section-number {
+                font-size: 1.5em;
+                margin-right: 8px;
+            }
+            .play-section-button {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sticky-buttons">
+        <button class="theme-toggle" id="themeToggle">Toggle Theme</button>
+        <button class="font-size-toggle" id="fontSizeToggle">Font Size</button>
+    </div>
+
+    <div id="tts-settings-panel">
+        <div class="tts-control-group">
+            <label for="voiceSelect">Select Voice:</label>
+            <select id="voiceSelect"></select>
+        </div>
+
+        <div class="tts-control-group">
+            <label>Voice Gender Filter:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="all" checked> All</label>
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+            </div>
+        </div>
+
+        <div class="tts-control-group">
+            <label for="rate">Speed (Rate):</label>
+            <div>
+                <input type="range" id="rate" min="0.1" max="3" value="1" step="0.1">
+                <span id="rateValue">1.0</span>
+            </div>
+        </div>
+
+        <div class="tts-control-group">
+            <label for="pitch">Pitch:</label>
+            <div>
+                <input type="range" id="pitch" min="0" max="2" value="1" step="0.1">
+                <span id="pitchValue">1.0</span>
+            </div>
+        </div>
+
+        <div class="tts-control-group">
+            <label for="volume">Volume:</label>
+            <div>
+                <input type="range" id="volume" min="0" max="1" value="1" step="0.05">
+                <span id="volumeValue">1.0</span>
+            </div>
+        </div>
+
+        <div class="tts-buttons">
+            <button class="tts-button" id="speakAllButton">Speak Entire Article</button>
+            <button class="tts-button" id="stopAllButton">Stop Speaking</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>A Visit to Saint Martin Island</h1>
+
+        <div class="section" data-section-id="1">
+            <div class="section-header">
+                <span class="section-number">1.</span>
+                <div class="section-content">
+                    <h2 class="section-title">Introduction to Bangladesh's Coral Gem</h2>
+                    <button class="play-section-button" data-section-id="1" aria-label="Play section 1">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5V19L19 12L8 5Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <p class="section-paragraph">Saint Martin Island is the only coral island of Bangladesh, a fascinating natural wonder in the Bay of Bengal. Far away from the mayhem of the mainland, this tiny island offers a serene haven, renowned for its virgin blue waters, vibrant coral beds, and serene atmosphere. A trip here is not merely a vacation; it is an experience into an ecosystem away from the country's mainland that offers relaxation as well as an intense appreciation for marine diversity. Its remoteness adds to its allure, inviting those who want an authentic experience with nature.</p>
+        </div>
+
+        <div class="section" data-section-id="2">
+            <div class="section-header">
+                <span class="section-number">2.</span>
+                <div class="section-content">
+                    <h2 class="section-title">The Journey to the Island</h2>
+                    <button class="play-section-button" data-section-id="2" aria-label="Play section 2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5V19L19 12L8 5Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <p class="section-paragraph">The trip to Saint Martin typically begins with a journey to Teknaf, a seashore town located on the southern tip of mainland Bangladesh. From Teknaf, one goes on a scenic ferry or boat ride across the cobalt blue waters of the Bay. The voyage itself is part and parcel of the experience, featuring sweeping vistas of the coastline, distant hills, and the endless sea. As the island appears on the horizon, a band of green against the enormous blue – expectation builds, the transition from daily routine to island paradise.</p>
+        </div>
+
+        <div class="section" data-section-id="3">
+            <div class="section-header">
+                <span class="section-number">3.</span>
+                <div class="section-content">
+                    <h2 class="section-title">Arrival and First Impressions</h2>
+                    <button class="play-section-button" data-section-id="3" aria-label="Play section 3">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5V19L19 12L8 5Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <p class="section-paragraph">Arrival is immediate and stunning, to the eye. The sea water near the beach is very transparent, and the sandy promenade out into the sea and occasional glints of sea creatures are visible. The atmosphere is fresh, with the scent of salt and the gentle hum of waves. Plain wooden jetties invite one in, and the sight of native fishing boats bobbing in the harbor adds to the earthiness of it all. The immediate sense of calm and the riotous color creates an overwhelming sense of having walked into a postcard.</p>
+        </div>
+
+        <div class="section" data-section-id="4">
+            <div class="section-header">
+                <span class="section-number">4.</span>
+                <div class="section-content">
+                    <h2 class="section-title">The Pristine Beaches and Coconut Groves</h2>
+                    <button class="play-section-button" data-section-id="4" aria-label="Play section 4">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5V19L19 12L8 5Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <p class="section-paragraph">The island features expanses of glorious white-sand beaches, generally edged by swaying coconut palms. Unlike most commercialized beaches, the shores of Saint Martin remain raw and unspoiled. One can walk for hours, gathering seashells, watching tiny crabs, or merely lounging in the sun. The soothing rhythm of the waves is a natural accompaniment to relaxation. These groves not only provide shade but also play a major role in the island's typical tropical look, rendering every scenery lovely.</p>
+        </div>
+
+        <div class="section" data-section-id="5">
+            <div class="section-header">
+                <span class="section-number">5.</span>
+                <div class="section-content">
+                    <h2 class="section-title">Experiencing the Coral Reefs and Sea Creatures</h2>
+                    <button class="play-section-button" data-section-id="5" aria-label="Play section 5">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5V19L19 12L8 5Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <p class="section-paragraph">The true gem of Saint Martin lies underwater – its lovely coral reefs. Though some of them have been damaged, every effort is being made towards their conservation. Snorkeling and glass-bottom boat cruises give wonderful opportunities to observe diverse hard and soft corals, and a mix of vibrant fish, sea urchins, and other interesting sea creatures. This underwater kingdom highlights the unique ecological significance of the island as well as the exquisite balance of its ecosystem. It's an eloquent reminder of nature's intricate craftsmanship.</p>
+        </div>
+
+        <div class="section" data-section-id="6">
+            <div class="section-header">
+                <span class="section-number">6.</span>
+                <div class="section-content">
+                    <h2 class="section-title">Local Life and Culture</h2>
+                    <button class="play-section-button" data-section-id="6" aria-label="Play section 6">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5V19L19 12L8 5Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <p class="section-paragraph">Despite being very touristy, Saint Martin retains a distinctive local character. The working population consists primarily of fishermen, whose profession is traditionally based on the ocean. Observing them mending nets, preparing for a fishing expedition, or packing up their catch gives an insight into an actual island lifestyle. The small local markets are bustling with activity, offering seafood, coconuts, and local handicrafts. Interactions with friendly locals reveal their directness, resilience, and deep identification with the island.</p>
+        </div>
+
+        <div class="section" data-section-id="7">
+            <div class="section-header">
+                <span class="section-number">7.</span>
+                <div class="section-content">
+                    <h2 class="section-title">The Charm of Chera Dwip (Island Apart)</h2>
+                    <button class="play-section-button" data-section-id="7" aria-label="Play section 7">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5V19L19 12L8 5Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <p class="section-paragraph">A short boat ride from the larger island seems to lead one to Chera Dwip, a tiny, unpopulated island accessible only at low tide. This "island apart" is famous for the unique rock formations and even more rugged natural scenery. The walk over the exposed coral path to Chera Dwip is an experience in itself, with opportunities to spot finer pieces of coral and tiny sea creatures in tidal pools. It's a photographer's paradise and a wonderful spot for more privacy.</p>
+        </div>
+
+        <div class="section" data-section-id="8">
+            <div class="section-header">
+                <span class="section-number">8.</span>
+                <div class="section-content">
+                    <h2 class="section-title">Sunset and Stargazing</h2>
+                    <button class="play-section-button" data-section-id="8" aria-label="Play section 8">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5V19L19 12L8 5Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <p class="section-paragraph">Sunsets on the Bay of Bengal from Saint Martin Island are simply majestic. The sky is colored with shades of oranges, purples, and reds of fire, and the sea glows with an enchanting light. As the sun sets, the absence of city lights presents unparalleled stargazing. The night sky becomes a canopy of twinkles, revealing a myriad of stars and constellations, a wonderful reminder of perspective and connectivity in the universe. It's a peaceful conclusion to any island day.</p>
+        </div>
+
+        <div class="section" data-section-id="9">
+            <div class="section-header">
+                <span class="section-number">9.</span>
+                <div class="section-content">
+                    <h2 class="section-title">Cuisine and Local Delights</h2>
+                    <button class="play-section-button" data-section-id="9" aria-label="Play section 9">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5V19L19 12L8 5Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <p class="section-paragraph">No visit to Saint Martin is complete without tasting its fresh seafood. Restaurants and sea huts around have plenty of freshly caught fish, lobsters, and crabs, and they are mostly grilled or curried to perfection. The least preparation makes the natural flavors of the sea come out. Paired with coconut water or island fruits, these are a delight, worthy of the island's natural bounty and a true taste of Bangladesh's seashore goodness.</p>
+        </div>
+
+        <div class="section" data-section-id="10">
+            <div class="section-header">
+                <span class="section-number">10.</span>
+                <div class="section-content">
+                    <h2 class="section-title">Environmental Awareness and Protection</h2>
+                    <button class="play-section-button" data-section-id="10" aria-label="Play section 10">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5V19L19 12L8 5Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <p class="section-paragraph">Saint Martin's attractiveness has its price. The number of tourists poses threats to its delicate ecosystem, especially the coral reefs and the dumping of rubbish. A visit to the island gives one a strong sense of environmental awareness that the practice of sustainable tourism and individual responsibility in ensuring its delicate balance are long overdue. It teaches visitors that respect cannot be severed from the conservation process.</p>
+        </div>
+
+        <div class="section" data-section-id="11">
+            <div class="section-header">
+                <span class="section-number">11.</span>
+                <div class="section-content">
+                    <h2 class="section-title">Lessons of the Island Retreat</h2>
+                    <button class="play-section-button" data-section-id="11" aria-label="Play section 11">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5V19L19 12L8 5Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <p class="section-paragraph">The island retreat has lessons besides scenic beauty. It teaches patience in the form of slow living, humility in the form of seeing the vastness of the ocean, and understanding and respect for nature's fine balance. Breaking away from digital existence and reconnecting with natural cycles helps one achieve mental calm and lucidity. Island living's simplicity reminds one to look at what is truly important, proving that oftentimes, less is more in the pursuit of happiness.</p>
+        </div>
+
+        <div class="section" data-section-id="12">
+            <div class="section-header">
+                <span class="section-number">12.</span>
+                <div class="section-content">
+                    <h2 class="section-title">Conclusion: A Cherished Memory</h2>
+                    <button class="play-section-button" data-section-id="12" aria-label="Play section 12">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5V19L19 12L8 5Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <p class="section-paragraph">A visit to Saint Martin Island creates an unforgettable memory. It is not just the visual splendor but the entire experience – the journey, people, natural splendor, and the overwhelming sense of peace – that creates a lasting memory. It is a testament to the beauty of Bangladesh and the imperative to preserve such a place for future generations. The memories here remind one of nature's power to rejuvenate the soul.</p>
+        </div>
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+        const fontSizeToggle = document.getElementById('fontSizeToggle');
+
+        // --- Theme Toggling ---
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            htmlElement.setAttribute('data-theme', currentTheme);
+        } else {
+            htmlElement.setAttribute('data-theme', 'light'); // Default to light
+        }
+
+        themeToggle.addEventListener('click', () => {
+            let theme = htmlElement.getAttribute('data-theme');
+            if (theme === 'light') {
+                htmlElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                htmlElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // --- Font Size Adjustment ---
+        let currentFontSizeMultiplier = 1; // 1 = base font size
+
+        fontSizeToggle.addEventListener('click', () => {
+            currentFontSizeMultiplier += 0.1; // Increase by 0.1
+            if (currentFontSizeMultiplier > 1.2) { // Reset if it goes too large
+                currentFontSizeMultiplier = 0.9; // Start from slightly smaller
+            }
+
+            // Apply to body and specific elements that use 'em' unit
+            document.body.style.fontSize = `${currentFontSizeMultiplier}em`;
+        });
+
+        // --- Text-to-Speech Logic ---
+        const voiceSelect = document.getElementById('voiceSelect');
+        const rateInput = document.getElementById('rate');
+        const rateValueSpan = document.getElementById('rateValue');
+        const pitchInput = document.getElementById('pitch');
+        const pitchValueSpan = document.getElementById('pitchValue');
+        const volumeInput = document.getElementById('volume');
+        const volumeValueSpan = document.getElementById('volumeValue');
+        const genderRadios = document.querySelectorAll('input[name="gender"]');
+        const speakAllButton = document.getElementById('speakAllButton');
+        const stopAllButton = document.getElementById('stopAllButton');
+        const playSectionButtons = document.querySelectorAll('.play-section-button');
+        const allParagraphs = document.querySelectorAll('.section-paragraph'); // All <p> tags
+        const allSectionTitles = document.querySelectorAll('.section-title'); // All <h2> tags
+
+        let currentUtterance = null;
+        let allVoices = [];
+        let speakingQueue = []; // For "Speak Entire Article"
+        let currentSpeakingIndex = -1; // Index for current element being spoken in queue
+
+        // --- Voice Management ---
+        function populateVoiceList() {
+            allVoices = speechSynthesis.getVoices();
+            filterAndPopulateVoices();
+        }
+
+        function filterAndPopulateVoices() {
+            const selectedGender = document.querySelector('input[name="gender"]:checked').value;
+            voiceSelect.innerHTML = '';
+
+            let filtered = allVoices.filter(voice => {
+                const nameLower = voice.name.toLowerCase();
+                const langLower = voice.lang.toLowerCase();
+
+                if (selectedGender === 'male') {
+                    // Heuristic for male voices
+                    return (nameLower.includes('male') || nameLower.includes('david') || nameLower.includes('mark') || nameLower.includes('john') || nameLower.includes('paul') || nameLower.includes('daniel') || nameLower.includes('en-us-standard-c') || nameLower.includes('en-gb-standard-b'));
+                } else if (selectedGender === 'female') {
+                    // Heuristic for female voices
+                    return (nameLower.includes('female') || nameLower.includes('zira') || nameLower.includes('helena') || nameLower.includes('eva') || nameLower.includes('sophie') || nameLower.includes('hazel') || nameLower.includes('en-us-standard-d') || nameLower.includes('en-gb-standard-a'));
+                }
+                return true; // 'all' gender
+            });
+
+            if (filtered.length === 0 && selectedGender !== 'all') {
+                console.warn(`No ${selectedGender} voices found. Showing all available voices as a fallback.`);
+                filtered = allVoices; // Fallback to all voices
+            }
+            
+            // Prioritize English voices, then others
+            filtered.sort((a, b) => {
+                const aIsEnglish = a.lang.startsWith('en');
+                const bIsEnglish = b.lang.startsWith('en');
+                if (aIsEnglish && !bIsEnglish) return -1;
+                if (!aIsEnglish && bIsEnglish) return 1;
+                return a.name.localeCompare(b.name); // Then sort alphabetically by name
+            });
+
+
+            filtered.forEach(voice => {
+                const option = document.createElement('option');
+                option.textContent = `${voice.name} (${voice.lang})`;
+                if (voice.default) {
+                    option.textContent += ' -- DEFAULT';
+                }
+                option.setAttribute('data-name', voice.name);
+                voiceSelect.appendChild(option);
+            });
+
+            if (voiceSelect.options.length > 0) {
+                // Try to select a default English voice if available
+                const defaultEnglishVoice = filtered.find(voice => voice.default && voice.lang.startsWith('en')) ||
+                                             filtered.find(voice => voice.lang.startsWith('en')) ||
+                                             filtered[0]; // Fallback to first available
+                
+                voiceSelect.value = defaultEnglishVoice.getAttribute('data-name');
+                if (voiceSelect.value === undefined) { // If value attribute not set, find by text content
+                    for (let i = 0; i < voiceSelect.options.length; i++) {
+                        if (voiceSelect.options[i].getAttribute('data-name') === defaultEnglishVoice.name) {
+                            voiceSelect.selectedIndex = i;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Event listener for when voices are loaded
+        if (speechSynthesis.onvoiceschanged !== undefined) {
+            speechSynthesis.onvoiceschanged = populateVoiceList;
+        } else {
+            // Fallback for browsers that don't fire onvoiceschanged immediately
+            setTimeout(populateVoiceList, 500);
+        }
+        populateVoiceList(); // Initial call
+
+
+        // --- Speech Utility Functions ---
+        function setSpeechParameters(utterance) {
+            const selectedVoiceName = voiceSelect.selectedOptions[0]?.getAttribute('data-name');
+            if (selectedVoiceName) {
+                utterance.voice = allVoices.find(voice => voice.name === selectedVoiceName);
+            }
+            utterance.rate = parseFloat(rateInput.value);
+            utterance.pitch = parseFloat(pitchInput.value);
+            utterance.volume = parseFloat(volumeInput.value);
+        }
+
+        function enableSpeechButtons() {
+            speakAllButton.disabled = false;
+            stopAllButton.disabled = true;
+            playSectionButtons.forEach(btn => btn.disabled = false);
+        }
+
+        function disableSpeechButtons() {
+            speakAllButton.disabled = true;
+            stopAllButton.disabled = false;
+            playSectionButtons.forEach(btn => btn.disabled = true);
+        }
+
+        function removeHighlight() {
+            document.querySelectorAll('.highlighted-paragraph').forEach(p => {
+                p.classList.remove('highlighted-paragraph');
+            });
+            document.querySelectorAll('.highlighted-title').forEach(h => {
+                h.classList.remove('highlighted-title');
+            });
+        }
+
+        function speakText(textToSpeak, elementToHighlight = null, onEndCallback = null) {
+            speechSynthesis.cancel(); // Stop any current speech
+            removeHighlight(); // Clear previous highlight
+
+            currentUtterance = new SpeechSynthesisUtterance(textToSpeak);
+            setSpeechParameters(currentUtterance);
+
+            currentUtterance.onstart = () => {
+                disableSpeechButtons();
+                if (elementToHighlight) {
+                    elementToHighlight.classList.add('highlighted-paragraph');
+                    // Scroll to the element being read
+                    elementToHighlight.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            };
+
+            currentUtterance.onend = () => {
+                if (elementToHighlight) {
+                    elementToHighlight.classList.remove('highlighted-paragraph');
+                }
+                if (onEndCallback) {
+                    onEndCallback();
+                } else {
+                    enableSpeechButtons();
+                }
+            };
+
+            currentUtterance.onerror = (event) => {
+                console.error('Speech error:', event.error);
+                alert(`Speech error: ${event.error}. Please try another voice or check your browser settings.`);
+                enableSpeechButtons();
+                removeHighlight();
+            };
+
+            speechSynthesis.speak(currentUtterance);
+        }
+
+        // --- Play Specific Section ---
+        playSectionButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                const sectionId = event.currentTarget.dataset.sectionId;
+                const targetSection = document.querySelector(`.section[data-section-id="${sectionId}"]`);
+                if (!targetSection) return;
+
+                const sectionTitle = targetSection.querySelector('.section-title');
+                const sectionParagraphs = targetSection.querySelectorAll('.section-paragraph');
+
+                // Build text to speak for the section
+                let textContent = sectionTitle ? sectionTitle.textContent + '. ' : '';
+                sectionParagraphs.forEach(p => {
+                    textContent += p.textContent + ' ';
+                });
+
+                // Clear previous queue if speaking a single section
+                speakingQueue = [];
+                currentSpeakingIndex = -1;
+
+                speakText(textContent, targetSection.querySelector('.section-paragraph') || sectionTitle); // Highlight the first visible part
+            });
+        });
+
+        // --- Speak Entire Article ---
+        speakAllButton.addEventListener('click', () => {
+            speakingQueue = [];
+            currentSpeakingIndex = -1;
+
+            document.querySelectorAll('.section').forEach(section => {
+                const titleElement = section.querySelector('.section-title');
+                if (titleElement) {
+                    speakingQueue.push({ text: titleElement.textContent, element: titleElement });
+                }
+                section.querySelectorAll('.section-paragraph').forEach(p => {
+                    speakingQueue.push({ text: p.textContent, element: p });
+                });
+            });
+
+            if (speakingQueue.length > 0) {
+                processSpeakingQueue();
+            } else {
+                alert('No text found to speak in the article.');
+            }
+        });
+
+        function processSpeakingQueue() {
+            removeHighlight(); // Clear any previous highlight
+            if (currentSpeakingIndex < speakingQueue.length - 1) {
+                currentSpeakingIndex++;
+                const item = speakingQueue[currentSpeakingIndex];
+                
+                let actualElementToHighlight = item.element;
+                // If it's a title, highlight the actual title element
+                if (item.element.classList.contains('section-title')) {
+                    actualElementToHighlight = item.element;
+                    actualElementToHighlight.classList.add('highlighted-title');
+                } else {
+                    // For paragraphs, highlight the paragraph itself
+                    actualElementToHighlight = item.element;
+                    actualElementToHighlight.classList.add('highlighted-paragraph');
+                }
+
+                // Ensure the element is visible
+                actualElementToHighlight.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                currentUtterance = new SpeechSynthesisUtterance(item.text);
+                setSpeechParameters(currentUtterance);
+
+                currentUtterance.onstart = () => {
+                    disableSpeechButtons();
+                };
+
+                currentUtterance.onend = () => {
+                    // Remove highlight from the element that just finished speaking
+                    if (actualElementToHighlight) {
+                         actualElementToHighlight.classList.remove('highlighted-paragraph');
+                         actualElementToHighlight.classList.remove('highlighted-title');
+                    }
+                    processSpeakingQueue(); // Speak the next item
+                };
+
+                currentUtterance.onerror = (event) => {
+                    console.error('Speech error:', event.error);
+                    alert(`Speech error: ${event.error}. Please try another voice or check your browser settings.`);
+                    enableSpeechButtons();
+                    removeHighlight();
+                    speakingQueue = []; // Clear queue on error
+                    currentSpeakingIndex = -1;
+                };
+
+                speechSynthesis.speak(currentUtterance);
+            } else {
+                // Queue finished
+                enableSpeechButtons();
+                removeHighlight();
+                speakingQueue = [];
+                currentSpeakingIndex = -1;
+            }
+        }
+
+
+        // --- Stop All Speech ---
+        stopAllButton.addEventListener('click', () => {
+            speechSynthesis.cancel();
+            enableSpeechButtons();
+            removeHighlight();
+            speakingQueue = []; // Clear queue if manually stopped
+            currentSpeakingIndex = -1;
+        });
+
+        // --- Update Range Value Displays ---
+        rateInput.addEventListener('input', () => {
+            rateValueSpan.textContent = parseFloat(rateInput.value).toFixed(1);
+        });
+        pitchInput.addEventListener('input', () => {
+            pitchValueSpan.textContent = parseFloat(pitchInput.value).toFixed(1);
+        });
+        volumeInput.addEventListener('input', () => {
+            volumeValueSpan.textContent = parseFloat(volumeInput.value).toFixed(1);
+        });
+
+        // --- Event listener for gender radio button changes ---
+        genderRadios.forEach(radio => {
+            radio.addEventListener('change', filterAndPopulateVoices);
+        });
+
+        // --- Initial State and Display Updates ---
+        enableSpeechButtons(); // Set initial button states
+        rateValueSpan.textContent = parseFloat(rateInput.value).toFixed(1);
+        pitchValueSpan.textContent = parseFloat(pitchInput.value).toFixed(1);
+        volumeValueSpan.textContent = parseFloat(volumeInput.value).toFixed(1);
+    </script>
+</body>
+</html>
