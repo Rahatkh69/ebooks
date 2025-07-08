@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voice</title>
+    <title>Voice War Manual</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
             --text-color: #ffffff; /* Pure white text */
             --accent-color: #cccccc; /* Light grey for accents and buttons */
             --border-color: #444444; /* Medium grey for borders */
-            --success-color: #ffffff; /* Green for success, slightly desaturated */
+            --success-color: #00cc00; /* Green for success, slightly desaturated */
             --button-hover-bg: #ffffff; /* White for button hover background */
             --button-hover-text: #000000; /* Black for button hover text */
         }
@@ -207,6 +207,82 @@
             display: none;
         }
 
+        /* Throughout the Day Section Specific Styles */
+        #throughout-day-section {
+            margin-top: 3rem;
+            text-align: left;
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
+        }
+
+        #throughout-day-section h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .throughout-day-exercise {
+            background-color: var(--primary-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .throughout-day-exercise .exercise-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-top: 0; /* Override default margin */
+        }
+
+        .throughout-day-exercise .exercise-description {
+            font-size: 0.95rem;
+            color: var(--accent-color);
+            margin-top: 0.5rem;
+        }
+
+        /* New styles for Variations */
+        .exercise-details p {
+            margin-bottom: 0.5rem;
+        }
+
+        .exercise-details strong {
+            color: var(--text-color);
+        }
+
+        .variations-container {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px dashed var(--border-color);
+        }
+
+        .variations-container h4 {
+            font-size: 1rem;
+            color: var(--text-color);
+            margin-bottom: 0.8rem;
+        }
+
+        .variation-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+        }
+
+        .variation-option input[type="radio"] {
+            margin-right: 0.5rem;
+            accent-color: var(--accent-color); /* Style radio button */
+        }
+
+        .variation-option label {
+            font-size: 0.95rem;
+            color: var(--accent-color);
+            cursor: pointer;
+        }
+
         /* Responsive adjustments */
         @media (max-width: 600px) {
             body {
@@ -267,13 +343,21 @@
         <section id="session-selection">
             <h2>Choose Your Session Time</h2>
             <div>
-                <button class="btn" data-session="Morning">Morning</button>
-                <button class="btn" data-session="Night">Night</button>
+                <button class="btn" data-session="morning">Morning</button>
+                <button class="btn" data-session="night">Night</button>
             </div>
             <div id="start-container" class="hidden">
                 <p id="session-choice-text" style="margin-top: 1.5rem; color: var(--accent-color);"></p>
                 <button class="btn start-btn" id="start-session-btn">Start Session</button>
             </div>
+
+            <!-- New section for Throughout the Day exercises -->
+            <section id="throughout-day-section">
+                <h2>⏱️ THROUGHOUT THE DAY: Modular Hits</h2>
+                <div id="throughout-day-exercises-container">
+                    <!-- Throughout the Day exercises will be loaded here by JavaScript -->
+                </div>
+            </section>
         </section>
 
         <main id="exercise-view" class="hidden">
@@ -309,45 +393,202 @@
         const prevExerciseBtn = document.getElementById('prev-exercise-btn');
         const nextExerciseBtn = document.getElementById('next-exercise-btn');
         const exercisesLeftDisplay = document.getElementById('exercises-left');
+        const throughoutDayExercisesContainer = document.getElementById('throughout-day-exercises-container');
 
-        // Define the list of exercises
-        const exercises = [
-            // Zone 1: Power Source Control
-            { zone: "💀 ZONE 1: Power Source Control", title: "▸ Diaphragm Lock", desc: "Breathe in, hold, hiss out through teeth slowly. Repeat until core shakes. Do this daily." },
-            { zone: "💀 ZONE 1: Power Source Control", title: "▸ Cord Sealer", desc: "Hum “nnnnnn” tightly — if you feel buzz in face = right. If air leaks from nose/mouth = wrong." },
-            { zone: "💀 ZONE 1: Power Source Control", title: "▸ Buzz Pull Drill", desc: "Hum while dragging the pitch slowly down → then up. Feel vibration shift chest → throat → nose." },
-            { zone: "💀 ZONE 1: Power Source Control", title: "▸ Silent Growl Hold", desc: "Growl as quietly as possible. If vocal cords feel sealed and tight = good. 15s reps." },
-            { zone: "💀 ZONE 1: Power Source Control", title: "▸ Whisper Projection", desc: "Say “I am watching you.” in a whisper — try to reach wall 10 ft away without forcing breath." },
-            // Zone 2: Dynamic & Explosive Control
-            { zone: "⚔️ ZONE 2: Dynamic & Explosive Control", title: "▸ Emotion Flips (Rapid Mood Drill)", desc: "Say “That’s your choice.” → Calm → Angry → Sarcastic → Seductive → Sad — each 2s apart, no breaks." },
-            { zone: "⚔️ ZONE 2: Dynamic & Explosive Control", title: "▸ Volume Surge", desc: "Say “Enough.” Start whisper → mid → loud → mid → whisper — smoothly. Repeat with 5 phrases." },
-            { zone: "⚔️ ZONE 2: Dynamic & Explosive Control", title: "▸ Punch Word Drill", desc: "Pick a sentence. Emphasize 1 word HARD: “This is MY world.” → “THIS is my world.” → repeat." },
-            { zone: "⚔️ ZONE 2: Dynamic & Explosive Control", title: "▸ Slingshot Speed Drill", desc: "Say “You think you know me” → fast → slow → pause → burst — train tempo whip." },
-            // Zone 3: Resonance & Register Control
-            { zone: "🌀 ZONE 3: Resonance & Register Control", title: "▸ Siren Glide", desc: "Go “ng” like singing “sing” → Slide pitch low → high → low. Repeat 5 times." },
-            { zone: "🌀 ZONE 3: Resonance & Register Control", title: "▸ Register Switch Line", desc: "Say “I am the voice.” → Chest voice → Fry → Head → Whisper — no crack, no air." },
-            { zone: "🌀 ZONE 3: Resonance & Register Control", title: "▸ Overtone Bounce", desc: "Hum high pitch while shaping lips slowly (O → E → U). You’ll feel “echo layers” form. This builds Law 6." },
-            { zone: "🌀 ZONE 3: Resonance & Register Control", title: "▸ Gaze & Tone Sync", desc: "Say “I’m not done yet.” ↳ Look down: say calm. ↳ Look up: say hopeful. ↳ Squint eyes: say threatening. Do 3 rounds." },
-            { zone: "🌀 ZONE 3: Resonance & Register Control", title: "▸ Sonic Identity Carve", desc: "Say “I am Rahat” with your own pattern — pause style, emphasis, energy — every day. Refine into signature." },
-            // Zone 4: Projection, Volume & Clarity
-            { zone: "🔊 ZONE 4: Projection, Volume & Clarity", title: "▸ Room Fill Drill", desc: "Say “You already lost.” — facing wall, then mirror, then corner, then doorway. Hit same volume without shouting." },
-            { zone: "🔊 ZONE 4: Projection, Volume & Clarity", title: "▸ Long-Throw Alphabet", desc: "Say A-Z aiming to throw voice 10ft away clearly — no crack, no mumble, no pressure on throat." },
-            { zone: "🔊 ZONE 4: Projection, Volume & Clarity", title: "▸ Consonant Grenades", desc: "Say “The black blade bit back.” Articulate with bite — tongue and teeth SHARP." },
-            { zone: "🔊 ZONE 4: Projection, Volume & Clarity", title: "▸ Breath Lock Projection", desc: "Breathe deep, hold, then burst: “You. Can’t. Kill. Me.” Each word must launch." },
-            // Zone 5: Stability & Internal Friction
-            { zone: "🧠 ZONE 5: Stability & Internal Friction", title: "▸ Static Hold Sentences", desc: "Say long sentences on single breath with NO wobble. Ex: “If you are still breathing, the fight isn’t over.”" },
-            { zone: "🧠 ZONE 5: Stability & Internal Friction", title: "▸ Emotional Freeze", desc: "Say something intense. Now repeat with exact same face/posture — no emotion leakage. Hold tension." },
-            { zone: "🧠 ZONE 5: Stability & Internal Friction", title: "▸ Ice Voice Drill", desc: "Say “You’ll regret this” ↳ With full body stillness ↳ No air, no twitch ↳ Only voice moves." },
-            // Zone 6: Body + Gaze Integration
-            { zone: "👁️ ZONE 6: Body + Gaze Integration", title: "▸ Eye Drill Sync", desc: "Say “I see what you are.” ↳ Wide eyes = surprise ↳ Narrowed = threat ↳ Closed = reflection. Your tone must match eyes. No mismatch." },
-            { zone: "👁️ ZONE 6: Body + Gaze Integration", title: "▸ Gaze Freeze Drill", desc: "Pick object across room. Lock gaze. Speak line without blinking. Feel tone stay grounded." },
-            { zone: "👁️ ZONE 6: Body + Gaze Integration", title: "▸ Mirror Threat Line", desc: "Look into mirror. Say “Walk away.” Make it real enough that even you hesitate." },
-            // Zone 7: Identity, Style & Adaptation
-            { zone: "🧬 ZONE 7: Identity, Style & Adaptation", title: "▸ Voice Theft Drill", desc: "Pick 1 voice (actor, villain, leader). Imitate 1 line. Then mix it with your tone. Repeat until it’s yours." },
-            { zone: "🧬 ZONE 7: Identity, Style & Adaptation", title: "▸ Signature Stamp Line", desc: "Craft one line you’ll use in every battle. Repeat it 5 times daily with full body locked." },
-            { zone: "🧬 ZONE 7: Identity, Style & Adaptation", title: "▸ Emotion DNA", desc: "Say same line 10 different ways over 10 days. Example: “They’ll remember me.”" }
-        ];
+        // Define the list of exercises, separated by session type
+        const allExercises = {
+            morning: [
+                {
+                    zone: "MORNING SESSION — ENGINE WARM-UP",
+                    title: "Diaphragm Hiss Hold",
+                    laws: "1, 7",
+                    base: "Inhale deep, hiss out slow like a tire leak. Keep abs tight, no wobble.",
+                    reps: "3 sets, 20–30 sec each. Rest 15 sec between.",
+                    purpose: "Trains breath endurance and diaphragm power—like holding a plank for your lungs.",
+                    time: "~4 min",
+                    variations: [
+                        "Box Hiss: 4s in, 4s hold, 4s hiss out, 4s hold.",
+                        "Plank Hiss: Hiss while in elbow plank for extra core tension."
+                    ]
+                },
+                {
+                    zone: "MORNING SESSION — ENGINE WARM-UP",
+                    title: "Cord Sealer Hum",
+                    laws: "2, 5",
+                    base: "Hum “nnnn” (like “in”). Feel buzz in teeth/nose. No air leak from mouth or nose.",
+                    reps: "4 rounds, 12 sec each. Rest 10 sec between.",
+                    purpose: "Strengthens vocal cords to eliminate breathy leaks—like squeezing a grip trainer.",
+                    time: "~3 min",
+                    variations: [
+                        "Lip Buzz: Buzz lips like a motorboat, keep it tight.",
+                        "Straw Hum: Hum into a straw in a glass of water for resistance."
+                    ]
+                },
+                {
+                    zone: "MORNING SESSION — ENGINE WARM-UP",
+                    title: "Vocal Plank Drill",
+                    laws: "1, 2, 14",
+                    base: "Hold pushup plank. Say: “I don’t break.” “I own this.” “I keep going.” One breath per line.",
+                    reps: "3 rounds, 30 sec each. Rest 15 sec.",
+                    purpose: "Builds cord stability under body tension—like deadlifts for voice.",
+                    time: "~4 min",
+                    variations: [
+                        "Side Plank: Do it in side plank for core challenge.",
+                        "Wall Sit Talk: Say lines while in wall sit."
+                    ]
+                },
+                {
+                    zone: "MORNING SESSION — ENGINE WARM-UP",
+                    title: "Siren Glide",
+                    laws: "4, 6",
+                    base: "Say “ng” (like “sing”). Slide pitch low to high to low, smooth, no cracks.",
+                    reps: "5 reps, ~10 sec each.",
+                    purpose: "Trains vocal flexibility and range—like stretching before sprints.",
+                    time: "~3 min",
+                    variations: [
+                        "Staccato Notes: Hit 5 quick notes up/down instead of gliding.",
+                        "Fry Siren: Start in vocal fry, slide to chest voice."
+                    ]
+                },
+                {
+                    zone: "MORNING SESSION — ENGINE WARM-UP",
+                    title: "Gaze-Tone Sync",
+                    laws: "11, 16",
+                    base: "Say “I’m not done.” Match tone to eyes: wide (hopeful), squinted (threat), closed (calm).",
+                    reps: "2 rounds, 3 eye-tone switches per round.",
+                    purpose: "Links voice to gaze for presence—like syncing breath with a lift.",
+                    time: "~2–3 min",
+                    variations: [
+                        "Mirror Flip: Say line in mirror, change eyes mid-sentence.",
+                        "Blind Tone: Say with eyes closed, then open, compare tone shift."
+                    ]
+                }
+            ],
+            night: [
+                {
+                    zone: "NIGHT SESSION — WEAPON TESTING",
+                    title: "Buzz Pull Drill",
+                    laws: "4, 5, 6",
+                    base: "Hum, drag pitch from deep to high to low. Feel vibration shift chest to nose.",
+                    reps: "5 reps, 10 sec each. Rest 10 sec.",
+                    purpose: "Builds resonance control—like tempo runs for vocal cords.",
+                    time: "~3 min",
+                    variations: [
+                        "Volume Slide: Match pitch change with volume (soft to loud).",
+                        "Growl Pull: Start hum in fry, drag to head voice."
+                    ]
+                },
+                {
+                    zone: "NIGHT SESSION — WEAPON TESTING",
+                    title: "Whisper Projection",
+                    laws: "2, 9, 12",
+                    base: "Whisper “I am watching you.” Aim to hit a wall 10ft away, no air push.",
+                    reps: "5 reps, ~10 sec each.",
+                    purpose: "Trains whisper authority—like light-weight, high-rep sets for precision.",
+                    time: "~3 min",
+                    variations: [
+                        "Moving Whisper: Walk while whispering, keep tone steady.",
+                        "Teeth Whisper: Whisper through clenched teeth for extra control."
+                    ]
+                },
+                {
+                    zone: "NIGHT SESSION — WEAPON TESTING",
+                    title: "Register Switch Loop",
+                    laws: "4, 13, 14",
+                    base: "Say “I am the voice.” Cycle: chest → fry → head → whisper → chest. No cracks.",
+                    reps: "3 sets, 5 cycles per set. Rest 15 sec.",
+                    purpose: "Builds vocal agility—like drop sets for range.",
+                    time: "~5 min",
+                    variations: [
+                        "Sprint Loop: Do 3 cycles back-to-back, no rest.",
+                        "Word Slice: Use a 3-word sentence, each word in a different register."
+                    ]
+                },
+                {
+                    zone: "NIGHT SESSION — WEAPON TESTING",
+                    title: "Consonant Burnout",
+                    laws: "12, 15",
+                    base: "Say “The black blade bit back.” Repeat 30 sec nonstop, sharp consonants.",
+                    reps: "3 sets, rest 10 sec between.",
+                    purpose: "Strengthens articulation—like weighted sit-ups for your mouth.",
+                    time: "~3 min",
+                    variations: [
+                        "Hard Sentence: Use “The quick jackal bit the bishop’s neck.”",
+                        "Slow Bite: Say sentence super slow, exaggerate consonants."
+                    ]
+                },
+                {
+                    zone: "NIGHT SESSION — WEAPON TESTING",
+                    title: "Whisper Burpee Drill",
+                    laws: "1, 9, 12",
+                    base: "Do 10 pushups or squats, then whisper “I am still in control.” clearly.",
+                    reps: "3 rounds.",
+                    purpose: "Trains voice under physical fatigue—like HIIT for vocal cords.",
+                    time: "~4–5 min",
+                    variations: [
+                        "Squat Whisper: Do squats instead of pushups, same whisper line.",
+                        "Plank Whisper: Whisper from plank position for extra tension."
+                    ]
+                }
+            ],
+            throughoutDay: [
+                {
+                    zone: "THROUGHOUT THE DAY — MICRO HITS",
+                    title: "Hiss Timer",
+                    laws: "1, 7",
+                    base: "Hiss as long as possible on one breath. Track time.",
+                    reps: "3 sets, rest 10 sec.",
+                    purpose: "Builds breath capacity—like holding a max deadlift.",
+                    time: "~2–3 min",
+                    variations: [
+                        "Pulse Hiss: Short 3s hisses, 10 in a row.",
+                        "Resistance Hiss: Push against a wall while hissing."
+                    ]
+                },
+                {
+                    zone: "THROUGHOUT THE DAY — MICRO HITS",
+                    title: "Whisper Shadow Drill",
+                    laws: "2, 9, 15",
+                    base: "Whisper any sentence (e.g., “You can’t stop me.”) with no breath leak, aim for clarity.",
+                    reps: "5 lines, ~30 sec total.",
+                    purpose: "Sharpens whisper control—like shadowboxing for voice.",
+                    time: "~3 min",
+                    variations: [
+                        "Emotion Whisper: Whisper with 3 emotions (calm, threat, sad).",
+                        "Finger Flame: Whisper without moving air in front of lips."
+                    ]
+                },
+                {
+                    zone: "THROUGHOUT THE DAY — MICRO HITS",
+                    title: "Register Pulse Set",
+                    laws: "4, 13",
+                    base: "Say “You already lost.” in chest, whisper, fry.",
+                    reps: "3 sets, 3 pulses each.",
+                    purpose: "Keeps vocal range active—like quick stretches between lifts.",
+                    time: "~3 min",
+                    variations: [
+                        "Head Pulse: Add head voice to the cycle.",
+                        "Reverse Pulse: Start in fry, end in chest."
+                    ]
+                },
+                {
+                    zone: "THROUGHOUT THE DAY — MICRO HITS",
+                    title: "Identity Stamp",
+                    laws: "17, 14",
+                    base: "Say “I am Rahat. I don’t speak—I strike.” in your unique style.",
+                    reps: "3 reps (soft, mid, cold).",
+                    purpose: "Locks in your vocal identity—like posing after a lift.",
+                    time: "~2–3 min",
+                    variations: [
+                        "Pause Tic: Add a hard pause after “Rahat.”",
+                        "Threat Stamp: Say final word with icy threat."
+                    ]
+                }
+            ]
+        };
 
+        let currentSessionType = null; // Stores 'morning' or 'night'
+        let currentExercises = []; // The array of exercises for the currently selected session
         let currentExerciseIndex = 0; // Tracks the current exercise being displayed
         let stopwatchInterval; // Stores the interval ID for the stopwatch
         let stopwatchSeconds = 0; // Tracks the elapsed time in seconds
@@ -394,36 +635,88 @@
         }
 
         /**
-         * Updates the display showing how many exercises are left.
+         * Updates the display showing how many exercises are left in the current session.
          */
         function updateExercisesLeft() {
-            const exercisesRemaining = exercises.length - (currentExerciseIndex + 1);
+            const exercisesRemaining = currentExercises.length - (currentExerciseIndex + 1);
             exercisesLeftDisplay.textContent = `${exercisesRemaining} exercises left`;
         }
         
         /**
-         * Displays the exercise at the given index.
+         * Displays the exercise at the given index from the currentExercises array.
          * @param {number} index - The index of the exercise to display.
          */
         function displayExercise(index) {
-            const exercise = exercises[index];
+            const exercise = currentExercises[index];
             if (!exercise) {
                 console.error("Exercise not found at index:", index);
                 return;
             }
+
+            let variationsHtml = '';
+            if (exercise.variations && exercise.variations.length > 0) {
+                variationsHtml = `
+                    <div class="variations-container">
+                        <h4>Variations (pick one):</h4>
+                        ${exercise.variations.map((variation, i) => `
+                            <div class="variation-option">
+                                <input type="radio" id="variation-${index}-${i}" name="variation-${index}" value="${variation}" ${i === 0 ? 'checked' : ''}>
+                                <label for="variation-${index}-${i}">${variation}</label>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            }
+
             currentExerciseContainer.innerHTML = `
                 <div class="zone">
                     <h2 class="zone-title">${exercise.zone}</h2>
-                    <div class="exercise">
+                    <div class="exercise-details">
                         <p class="exercise-title">${exercise.title}</p>
-                        <p class="exercise-description">${exercise.desc}</p>
+                        <p><strong>Laws:</strong> ${exercise.laws}</p>
+                        <p><strong>Base:</strong> ${exercise.base}</p>
+                        <p><strong>Reps:</strong> ${exercise.reps}</p>
+                        <p><strong>Purpose:</strong> ${exercise.purpose}</p>
+                        <p><strong>Time:</strong> ${exercise.time}</p>
+                        ${variationsHtml}
                     </div>
                 </div>
             `;
             // Disable/enable navigation buttons based on current index
             prevExerciseBtn.disabled = index === 0;
-            nextExerciseBtn.disabled = index === exercises.length - 1;
+            nextExerciseBtn.disabled = index === currentExercises.length - 1;
             updateExercisesLeft();
+        }
+
+        /**
+         * Renders the "Throughout the Day" exercises into their dedicated container.
+         */
+        function renderThroughoutDayExercises() {
+            throughoutDayExercisesContainer.innerHTML = ''; // Clear previous content
+            allExercises.throughoutDay.forEach(exercise => {
+                const exerciseDiv = document.createElement('div');
+                exerciseDiv.classList.add('throughout-day-exercise');
+                exerciseDiv.innerHTML = `
+                    <p class="exercise-title">${exercise.title}</p>
+                    <p class="exercise-description">
+                        <strong>Laws:</strong> ${exercise.laws}<br>
+                        <strong>Base:</strong> ${exercise.base}<br>
+                        <strong>Reps:</strong> ${exercise.reps}<br>
+                        <strong>Purpose:</strong> ${exercise.purpose}<br>
+                        <strong>Time:</strong> ${exercise.time}
+                    </p>
+                    <div class="variations-container">
+                        <h4>Variations (pick one):</h4>
+                        ${exercise.variations.map((variation, i) => `
+                            <div class="variation-option">
+                                <input type="radio" id="td-variation-${exercise.title.replace(/\s/g, '')}-${i}" name="td-variation-${exercise.title.replace(/\s/g, '')}" value="${variation}" ${i === 0 ? 'checked' : ''}>
+                                <label for="td-variation-${exercise.title.replace(/\s/g, '')}-${i}">${variation}</label>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                throughoutDayExercisesContainer.appendChild(exerciseDiv);
+            });
         }
 
         // Event Listeners
@@ -431,8 +724,11 @@
         // Event listener for session selection buttons (Morning/Night)
         document.querySelectorAll('.btn[data-session]').forEach(button => {
             button.addEventListener('click', (e) => {
+                currentSessionType = e.target.dataset.session; // Store the selected session type
+                currentExercises = allExercises[currentSessionType]; // Set the active exercise array
+
                 // Update text to show selected session
-                sessionChoiceText.textContent = `You have selected the ${e.target.dataset.session} session.`;
+                sessionChoiceText.textContent = `You have selected the ${currentSessionType.charAt(0).toUpperCase() + currentSessionType.slice(1)} session.`;
                 // Show the "Start Session" button container
                 startContainer.classList.remove('hidden');
             });
@@ -440,10 +736,14 @@
 
         // Event listener for the "Start Session" button
         startSessionBtn.addEventListener('click', () => {
+            if (!currentSessionType) {
+                console.error("No session type selected.");
+                return;
+            }
             // Hide session selection and show exercise view
             sessionSelection.classList.add('hidden');
             exerciseView.classList.remove('hidden');
-            currentExerciseIndex = 0; // Start from the first exercise
+            currentExerciseIndex = 0; // Start from the first exercise of the selected session
             displayExercise(currentExerciseIndex); // Display the first exercise
             resetStopwatch(); // Reset stopwatch before starting
             startStopwatch(); // Start the stopwatch
@@ -456,12 +756,14 @@
             sessionSelection.classList.remove('hidden');
             startContainer.classList.add('hidden'); // Hide start button when going back
             stopStopwatch(); // Stop the stopwatch
+            currentSessionType = null; // Clear selected session type
+            currentExercises = []; // Clear current exercises
         });
 
         // Event listener for the "Next" exercise button
         nextExerciseBtn.addEventListener('click', () => {
             // Move to the next exercise if not at the end of the list
-            if (currentExerciseIndex < exercises.length - 1) {
+            if (currentExerciseIndex < currentExercises.length - 1) {
                 currentExerciseIndex++;
                 displayExercise(currentExerciseIndex);
             }
@@ -476,8 +778,8 @@
             }
         });
 
-        // Initialize the display when the page loads (optional, but good for consistency)
-        // displayExercise(currentExerciseIndex); // This would display the first exercise on load if not hidden initially
+        // Initial rendering of "Throughout the Day" exercises when the page loads
+        document.addEventListener('DOMContentLoaded', renderThroughoutDayExercises);
     </script>
 </body>
 </html>
