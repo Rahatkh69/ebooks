@@ -3,837 +3,481 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voice Launch Sprint: Week 1</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">    <style>
+    <title>Voice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Variables for Black & White Theme */
+        :root {
+            --bg-color: #000000; /* Pure black background */
+            --primary-color: #1a1a1a; /* Dark grey for sections */
+            --text-color: #ffffff; /* Pure white text */
+            --accent-color: #cccccc; /* Light grey for accents and buttons */
+            --border-color: #444444; /* Medium grey for borders */
+            --success-color: #ffffff; /* Green for success, slightly desaturated */
+            --button-hover-bg: #ffffff; /* White for button hover background */
+            --button-hover-text: #000000; /* Black for button hover text */
+        }
+
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #fff;
-            color: #000;
-            line-height: 1.6;
-            margin: 20px;
-            padding: 0;
-        }
-        *::-webkit-scrollbar{
-            opacity: 0;
-            width: 0px;
-        }
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 15px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
-        }
-        h1, h2, h3, h4 {
-            font-weight: 700;
-            color: #000;
-        }
-        h1 {
-            font-size: 1.5em; /* Slightly smaller for main header */
-            text-align: left; /* Aligned to left */
-            margin-bottom: 25px;
-            color: #000;
-        }
-        h2 {
-            font-size: 1.3em;
-            border-bottom: 1px solid #333;
-            padding-bottom: 8px;
-            margin-top: 30px;
-            color: #000;
-            text-align: left; /* Ensure H2 is left-aligned */
-        }
-        h3 {
-            font-size: 1.2em;
-            margin-top: 25px;
-            color: #000;
-            text-align: left; /* Ensure H3 is left-aligned */
-        }
-        h4 {
-            font-size: 1em;
-            margin-top: 18px;
-            color: #000;
-            text-align: left; /* Ensure H4 is left-aligned */
-        }
-        p, ul, li {
-            font-size: 0.9em;
-            text-align: left; /* Align all paragraphs and list items to left */
-        }
-        .section-header {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            padding: 2rem;
+            text-align: center;
             display: flex;
-            align-items: baseline; /* Changed to baseline for better emoji alignment with text */
-            gap: 5px;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ensure it takes full viewport height */
+        }
 
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%; /* Make container responsive */
+            padding: 1rem; /* Add some padding for smaller screens */
         }
-        .section-header h2, .section-header h4 { /* Target both h2 and h4 within section-header */
-            margin-top: 0; /* Reset margin-top to prevent misalignment */
-            margin-bottom: 0; /* Reset margin-bottom to prevent misalignment */
-            border-bottom: none; /* Ensure no border for these specific headings */
-            padding-bottom: 0; /* Ensure no padding for these specific headings */
-        }
-        .icon-emoji {
-            font-size: 1.2em;
-            /* Adjust vertical alignment if needed, e.g., vertical-align: middle; or margin-bottom */
-            line-height: 1; /* Helps with vertical alignment of emoji */
-        }
-        .phase {
-            background-color: #fcfcfc;
-            /* Removed border-left: 4px solid #000; */ /* Removed black margin */
-            padding: 8px;
-            margin-bottom: 25px;
-            border-radius: 5px;
-        }
-        .phase h3 {
-            color: #000;
-            margin-top: 0;
-        }
-        .drill-stack {
-            padding: 12px;
-            background-color: #ffffff;
-            border: 1px solid #eee;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-        .drill-stack h4 {
-            color: #000;
-            margin-top: 0;
-        }
-        .law {
-            margin-bottom: 25px;
-            padding: 12px;
-            background-color: #ffffff;
-            border: 1px solid #eee;
-            border-radius: 5px;
-        }
-        .law h3 {
-            color: #000;
-            border-bottom: 1px dashed #bbb;
-            padding-bottom: 4px;
-            margin-bottom: 12px;
-        }
-        .law p strong {
-            color: #000;
-        }
-        .exercises {
-            margin-top: 12px;
-            border-top: 1px dashed #eee;
-            padding-top: 12px;
-        }
-        .exercises h4 {
-            margin-bottom: 8px;
-        }
-        .exercises ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        .exercises ul li {
-            margin-bottom: 8px;
-            padding-left: 18px;
-            position: relative;
-        }
-        .exercises ul li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            font-size: 18px;
-            line-height: 1;
-        }
-        .critical-checks, .pitfalls, .mastery-cues {
-            margin-top: 12px;
-            padding: 12px;
-            background-color: #f8f8f8;
-            border: 1px solid #eee;
-            border-radius: 5px;
-        }
-        .critical-checks h4, .pitfalls h4, .mastery-cues h4 {
-            color: #000;
-            margin-top: 0;
-        }
-        .mission-objective {
-            background-color: #fafbff;
-            border: 1px solid #a5a5a5;
-            padding: 14px;
-            margin-top: 40px;
-            border-radius: 8px;
-            text-align: left; /* Aligned to left */
-        }
-        .mission-objective h2 {
-            color: #000;
-            font-size: 1em;
-            border-bottom: none;
-            margin-top: 0;
-        }
-        .mission-objective p {
-            font-size: 0.8em;
-            margin-bottom: 8px;
-        }
-        .mission-objective .status {
+
+        /* Header Styles */
+        header h1 {
+            font-size: 3rem;
             font-weight: 700;
-            font-size: 0.8em;
-
-        }
-        .status.pass {
-            color: #000;
-        }
-        .status.fail {
-            color: #000;
-        }
-        .footer-note {
-            text-align: left; /* Aligned to left */
-            margin-top: 40px;
-            font-size: 0.8em;
-            color: #777;
-        }
-        hr {
-            border: 0;
-            height: 1px;
-            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-            margin: 30px 0;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+            color: var(--text-color); /* Ensure header text is white */
         }
 
-        /* Toggle Button Styles */
-        .toggle-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #000;
-            color: #fff;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            z-index: 1000;
+        header p {
+            font-size: 1.1rem;
+            color: var(--accent-color); /* Lighter grey for subtitle */
+            margin-bottom: 2rem;
+        }
+
+        /* Session Selection Styles */
+        #session-selection h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
             font-weight: 600;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease;
+            color: var(--text-color);
         }
 
-        .toggle-button:hover {
-            background-color: #333;
+        /* Button Styles */
+        .btn {
+            font-family: 'Poppins', sans-serif;
+            background: none;
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 0.8rem 2rem;
+            margin: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 5px;
         }
 
-        /* Content visibility classes */
+        .btn:hover {
+            background-color: var(--button-hover-bg);
+            color: var(--button-hover-text);
+            box-shadow: 0 0 15px var(--accent-color);
+        }
+
+        .btn.start-btn {
+            border-color: var(--success-color);
+            color: var(--success-color);
+        }
+
+        .btn.start-btn:hover {
+            background-color: var(--success-color);
+            color: var(--button-hover-text);
+            box-shadow: 0 0 15px var(--success-color);
+        }
+        
+        .btn:disabled {
+            border-color: var(--border-color);
+            color: var(--border-color);
+            cursor: not-allowed;
+            opacity: 0.6; /* Slightly dim disabled buttons */
+        }
+        
+        .btn:disabled:hover {
+            background: none;
+            box-shadow: none;
+        }
+
+        /* Exercise View Styles */
+        #exercise-view {
+            text-align: left;
+            margin-top: 2rem;
+            width: 100%;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            gap: 1rem; /* Space between items */
+        }
+
+        #stopwatch {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+
+        .back-btn {
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--text-color);
+            color: var(--text-color);
+            background: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+        }
+
+        .zone {
+            background-color: var(--primary-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            padding: 2rem;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
+            align-items: flex-start; /* Align text to the left */
+        }
+
+        .zone-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            width: 100%; /* Ensure border spans full width */
+        }
+
+        .exercise-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-top: 1rem; /* Add space above title */
+        }
+
+        .exercise-description {
+            color: var(--accent-color); /* Use accent color for description */
+            margin-top: 0.5rem;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.5rem;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            gap: 1rem; /* Space between items */
+        }
+        
+        #exercises-left {
+            font-size: 1rem;
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+        
         .hidden {
             display: none;
         }
-        li{
-            font-weight: 500;
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 0.6rem 1.5rem;
+                font-size: 1rem;
+                margin: 0.3rem;
+            }
+
+            .zone {
+                padding: 1.5rem;
+            }
+
+            .zone-title {
+                font-size: 1.5rem;
+            }
+
+            .exercise-title {
+                font-size: 1.1rem;
+            }
+
+            .top-bar, .nav-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-buttons {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                justify-content: center;
+            }
+            .nav-buttons .btn {
+                flex: 1;
+            }
         }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <h1>🎯 WEEK 1: GOD VOICE LAUNCH SPRINT (JULY 2–JULY 8)</h1>
-        <p style="text-align: left; font-size: 0.9em;"><strong>Target:</strong> Break into the top 5% of vocal control globally.</p>
-        <p style="text-align: left; font-size: 0.9em;"><strong>Method:</strong> Build the weapon, not the performance. Zero need to speak outside drills.</p>
+        <header>
+            <h1>🔥 Voice Aura 🔥</h1>
+            <p>Whatever the day takes</p>
+        </header>
 
-        <hr>
-
-        <div class="phase">
-            <div class="section-header">
-                <span class="icon-emoji">🔥</span><h2>PHASE 1: "Steel the Instrument" (July 2–JULY 4)</h2>
+        <section id="session-selection">
+            <h2>Choose Your Session Time</h2>
+            <div>
+                <button class="btn" data-session="Morning">Morning</button>
+                <button class="btn" data-session="Night">Night</button>
             </div>
-            <p>We attack the four non-negotiables: <strong>Breath. Cord Seal. Chest Resonance. Resonance Placement.</strong></p>
-            <p>These are your lungs, strings, amplifier, and equalizer.</p>
-
-            <div class="drill-stack">
-                <div class="section-header">
-                    <span class="icon-emoji">⚙️</span><h4>Daily Drill Stack (Morning + Evening)</h4>
-                </div>
+            <div id="start-container" class="hidden">
+                <p id="session-choice-text" style="margin-top: 1.5rem; color: var(--accent-color);"></p>
+                <button class="btn start-btn" id="start-session-btn">Start Session</button>
             </div>
+        </section>
 
-            <div class="law">
-                <h3>🌬️ Law 1: DOMINATE BREATH OR BE DOMINATED</h3>
-                <p><strong>Motto:</strong> Control the breath, control the voice. Lose the breath, lose the war.</p>
-                <h4 class="theory-section">Core Mechanics:</h4>
-                <ul class="theory-section">
-                    <li><strong>Diaphragmatic Surge:</strong> Breathe from your belly, not your chest. Your hand placed below your navel should rise first.</li>
-                    <li><strong>Silent Inhale Rule:</strong> Avoid gasping or making noise. Inhale like a sniper loading a bullet.</li>
-                    <li><strong>Pressure Control:</strong> Exhale slowly and steadily, like balancing a feather, with a hiss.</li>
-                    <li><strong>Breath Geometry:</strong> Inhale should expand your belly, then ribs, then back – a radial expansion, not vertical.</li>
-                    <li><strong>No Shoulder Movement:</strong> If your shoulders rise, your dominance drops.</li>
-                </ul>
-                <h4>Why Non-Negotiable:</h4>
-                <ul>
-                    <li>Deep voices consume more air; weak breath results in a dead tone.</li>
-                    <li>Poor exhalation can muddy bass frequencies.</li>
-                    <li>Bad breathing leads to throat tension under pressure, making you sound nervous.</li>
-                    <li>Inability to finish long phrases due to lack of air destroys authority.</li>
-                    <li>Low volumes fading out indicate a breath collapse.</li>
-                </ul>
-                <div class="pitfalls theory-section">
-                    <h4>How to Spot Weakness:</h4>
-                    <ul>
-                        <li><strong>Sentence Cuts:</strong> Running out of air mid-thought.</li>
-                        <li><strong>Shoulder Betrayal:</strong> Shoulders twitching during inhale, indicating chest breathing.</li>
-                        <li><strong>Volume Crash:</strong> Voice fading at the end of sentences.</li>
-                        <li><strong>Short Exhales:</strong> Inability to hiss for 10 seconds due to an untrained diaphragm.</li>
-                    </ul>
-                </div>
-                <div class="mastery-cues theory-section">
-                    <h4>Mastery Cues:</h4>
-                    <ul>
-                        <li>Silent, deep, circular inhale that expands the belly, sides, and back.</li>
-                        <li>Smooth 12–15 second "SSSS" hiss with zero shake.</li>
-                        <li>Upright posture, frozen shoulders, and lifted chest.</li>
-                        <li>Ability to read a long paragraph without gasping.</li>
-                    </ul>
-                </div>
-                <div class="exercises drill-section">
-                    <h4>Drill: SNIPER BREATH ENGINE</h4>
-                    <p><strong>Goal:</strong> Turn your diaphragm into a steel spring for unstoppable vocal power.</p>
-                    <h5>Exercise 1: Box Breath + Hiss (Foundation)</h5>
-                    <ul>
-                        <li><strong>Steps:</strong></li>
-                        <li>Pattern: Inhale (4s) → Hold (4s) → Exhale (8s "SSSS") → Hold (4s).</li>
-                        <li>Sets: 4 rounds, 2x/day (morning + night).</li>
-                        <li>Week 1: Master 8s hiss.</li>
-                        <li>Week 2: Reach 12s hiss with a 1kg book on your belly (as a feedback tool).</li>
-                        <li>Week 3: Speak “This is my control” on exhale.</li>
-                    </ul>
-                    <h5>Exercise 2: Long Paragraph Reading (Track Gasps)</h5>
-                    <ul>
-                        <li><strong>Steps:</strong> Read a long paragraph aloud, consciously tracking any gasps for air.</li>
-                    </ul>
-                </div>
-                <div class="critical-checks drill-section">
-                    <h4>Critical Checks:</h4>
-                    <ul>
-                        <li>❌ Hiss wavers? Cut time back and reset.</li>
-                        <li>✅ Book stays level? Good.</li>
-                        <li>🧠 Elite: Speak + hiss combo with no pressure loss.</li>
-                    </ul>
-                </div>
-                <div class="pitfalls drill-section">
-                    <h4>Pitfalls and Sabotage:</h4>
-                    <ul>
-                        <li>Breathing from the chest, causing visible shoulder movement.</li>
-                        <li>Gasping for air between phrases, creating urgency or nervousness.</li>
-                        <li>Shallow inhales that limit vocal sustain and power.</li>
-                        <li>Holding breath or tensing throat muscles instead of relying on diaphragmatic support.</li>
-                        <li>Focusing only on loud projection, neglecting quiet, controlled exhalation.</li>
-                    </ul>
-                </div>
-                <p class="drill-section"><strong>RULE: If you cannot read one long paragraph without gasping, repeat day.</strong></p>
+        <main id="exercise-view" class="hidden">
+            <div class="top-bar">
+                <button class="back-btn" id="back-btn">← Back</button>
+                <div id="stopwatch">00:00:00</div>
             </div>
 
-            <div class="law">
-                <h3>🔒 Law 2: SEAL THE CHAMBER – CORD CONNECTION</h3>
-                <p><strong>Motto:</strong> If your cords don’t seal, your bass bleeds out. Powerless. Whispery. Forgettable.</p>
-                <h4 class="theory-section">Core Mechanics:</h4>
-                <ul class="theory-section">
-                    <li><strong>Vocal Fold Closure:</strong> Vocal cords press together like airtight elevator doors, preventing air leaks.</li>
-                    <li><strong>Cord Pressure, Not Throat:</strong> Power should come from breath and cord seal, not throat squeezing.</li>
-                    <li><strong>False Cord Silence:</strong> Avoid yelling or screaming with false cords, as they muddy the sound.</li>
-                    <li><strong>Edge Test:</strong> A soft hum at the vocal "edge" must be clean and steady.</li>
-                    <li><strong>Leak Check:</strong> If your soft speech sounds airy, your cords aren't closing fully.</li>
-                    <li><strong>Cord Balance:</strong> Cords should be laser-sealed, not too tight (strained) or too loose (breathy).</li>
-                </ul>
-                <h4>Why Non-Negotiable:</h4>
-                <ul>
-                    <li>Weak closure results in a whispery tone and no depth.</li>
-                    <li>Forced deepness without a proper seal breaks under pressure.</li>
-                    <li>Poor cord control leads to overthinking delivery and a lack of trust in your voice.</li>
-                    <li>Weak cords lead to pushing harder, tightening the throat, and killing resonance.</li>
-                </ul>
-                <div class="pitfalls theory-section">
-                    <h4>How to Spot Weakness:</h4>
-                    <ul>
-                        <li><strong>Airiness:</strong> Quiet voice consistently breathy.</li>
-                        <li><strong>Volume Drop:</strong> Voice fades at the end of sentences.</li>
-                        <li><strong>Misheard:</strong> People frequently say "can't hear you" despite loud speaking.</li>
-                        <li><strong>Interruptions:</strong> Others cut you off, indicating a lack of vocal grip.</li>
-                    </ul>
-                </div>
-                <div class="mastery-cues theory-section">
-                    <h4>Mastery Cues:</h4>
-                    <ul>
-                        <li>Stable, buzzy hum on a lip trill, indicating sealed cords.</li>
-                        <li>Calm, focused voice at low volume, demonstrating control.</li>
-                        <li>No throat pain after prolonged speaking, indicating correct technique.</li>
-                    </ul>
-                </div>
-                <div class="exercises drill-section">
-                    <h4>Drill: EDGE LOCK & VOLUME CHOKE</h4>
-                    <p><strong>Goal:</strong> Teach cords to seal on command while staying relaxed.</p>
-                    <h5>Exercise 1: Humming Edge</h5>
-                    <ul>
-                        <li><strong>Steps:</strong></li>
-                        <li>Close your mouth and hum softly like a bee, feeling vibration in your lips and nose.</li>
-                        <li>Ensure the hum is buzzy, not airy.</li>
-                        <li>Mental Cue: “Laser seal, feather breath.”</li>
-                        <li>Sets: 5 rounds, 30 seconds each.</li>
-                    </ul>
-                    <h5>Exercise 2: Whisper Kill</h5>
-                    <ul>
-                        <li><strong>Steps:</strong></li>
-                        <li>Speak a line in full voice, then whisper it, then speak it again.</li>
-                        <li>❗The third round must NOT become airy. Track the difference.</li>
-                        <li>Reps: 3 rounds, 2x/day.</li>
-                    </ul>
-                </div>
-                <div class="critical-checks drill-section">
-                    <h4>Critical Checks:</h4>
-                    <ul>
-                        <li>❌ Neck muscles flex? You’re using throat force.</li>
-                        <li>❌ Buzz fades? Closure lost.</li>
-                        <li>✅ Clean hum and low-volume clarity? Seal working.</li>
-                    </ul>
-                </div>
-                <div class="pitfalls drill-section">
-                    <h4>Pitfalls and Sabotage:</h4>
-                    <ul>
-                        <li>Voice sounding consistently airy or 'breathy' even when trying to project.</li>
-                        <li>Experiencing a 'crack' or sudden break in the voice when shifting pitch or volume.</li>
-                        <li>Throat feeling strained or tight after speaking for a short period.</li>
-                        <li>Difficulty producing a clear, consistent vocal fry without discomfort.</li>
-                        <li>A weak or unstable tone, particularly at lower volumes.</li>
-                    </ul>
-                </div>
+            <div id="current-exercise-container">
+                <!-- Exercise details will be loaded here by JavaScript -->
             </div>
 
-            <div class="law">
-                <h3>💪 Law 3: CHEST RESONANCE – THE IRON AMPLIFIER</h3>
-                <p><strong>Motto:</strong> Your chest is not a cage. It’s a cathedral of sound. Lock it open or die muffled.</p>
-                <h4 class="theory-section">Core Mechanics:</h4>
-                <ul class="theory-section">
-                    <li><strong>Ribcage Expansion:</strong> Sternum lifted, like a soldier at attention.</li>
-                    <li><strong>Spine Alignment:</strong> Neck straight, chin neutral—no jutting forward.</li>
-                    <li><strong>No Collapse Rule:</strong> Slouching equals sound strangulation.</li>
-                    <li><strong>Chest Openness:</strong> Ribcage wide, shoulders back for maximum resonance.</li>
-                    <li><strong>Throat Freedom:</strong> No tension in the larynx—sound flows from the torso.</li>
-                </ul>
-                <h4>Why Non-Negotiable:</h4>
-                <ul>
-                    <li>A closed chest chokes low frequencies, which are your biggest weapon.</li>
-                    <li>Poor posture overworks throat muscles, leading to fatigue.</li>
-                    <li>Hunched speakers sound unsure, even with deep voices.</li>
-                </ul>
-                <div class="pitfalls theory-section">
-                    <h4>How to Spot Weakness:</h4>
-                    <ul>
-                        <li><strong>Recording Test:</strong> Voice sounds smaller than it feels.</li>
-                        <li><strong>Wall Test:</strong> Stand against a wall (heels, butt, shoulders, head touching). If you can't slide your hand behind your lower back, you're slouched.</li>
-                        <li><strong>Fatigue Check:</strong> Throat hurts after a 10-minute speech.</li>
-                    </ul>
-                </div>
-                <div class="mastery-cues theory-section">
-                    <h4>Mastery Cues:</h4>
-                    <ul>
-                        <li>Voice feels “free”—no throat tightness.</li>
-                        <li>Tone darker, richer—like speaking from a wooden barrel.</li>
-                        <li>No “tired voice” after long sessions.</li>
-                    </ul>
-                </div>
-                <div class="exercises drill-section">
-                    <h4>Drill: POSTURE LOCK & RESONANCE BOOT CAMP</h4>
-                    <p><strong>Goal:</strong> Turn torso into a resonance tank for effortless depth.</p>
-                    <h5>Exercise 1: Wall of Power</h5>
-                    <ul>
-                        <li><strong>Steps:</strong></li>
-                        <li>Stand against a wall (heels, butt, shoulders, head touching).</li>
-                        <li>Place one hand on your belly and one on your chest. Inhale: Only your belly hand should move. Your chest stays still.</li>
-                        <li>Hold for 10 seconds, then exhale slowly.</li>
-                        <li>Reps: 5x, 2x/day.</li>
-                    </ul>
-                    <h5>Exercise 2: Chest Knock</h5>
-                    <ul>
-                        <li><strong>Steps:</strong></li>
-                        <li>Stand tall and lightly knock your sternum with your fist.</li>
-                        <li>Speak “uhhh” while knocking, feeling the vibrations increase.</li>
-                        <li>Goal: Maximize chest rumble.</li>
-                        <li>Reps: 3x, 1x/day.</li>
-                    </ul>
-                </div>
-                <div class="critical-checks drill-section">
-                    <h4>Critical Checks:</h4>
-                    <ul>
-                        <li>❌ Shoulders rise? Reset.</li>
-                        <li>✅ Voice deeper against the wall?</li>
-                        <li>🧠 Elite: Project without throat strain.</li>
-                    </ul>
-                </div>
-                <div class="pitfalls drill-section">
-                    <h4>Pitfalls and Sabotage:</h4>
-                    <ul>
-                        <li>Slouching or hunching forward, especially when fatigued.</li>
-                        <li>Shoulders rounding inwards, constricting the ribcage.</li>
-                        <li>Forcing the chest out unnaturally, leading to back strain.</li>
-                        <li>Neglecting spine alignment, causing vocal tension.</li>
-                        <li>Feeling a 'disconnect' between breath support and vocal output.</li>
-                    </ul>
+            <div class="nav-container">
+                <div id="exercises-left"></div>
+                <div class="nav-buttons">
+                    <button class="btn" id="prev-exercise-btn">Previous</button>
+                    <button class="btn" id="next-exercise-btn">Next</button>
                 </div>
             </div>
-
-            <div class="law">
-                <h3>🎚️ Law 5: RESONANCE ENGINEERING – FREQUENCY DOMINATION</h3>
-                <p><strong>Motto:</strong> Your voice isn’t one note. It’s an equalizer. Tune it or stay flat.</p>
-                <h4 class="theory-section">Core Mechanics:</h4>
-                <ul class="theory-section">
-                    <li><strong>Chest Resonance:</strong> Vibrations in the sternum (100-300Hz) for dark authority.</li>
-                    <li><strong>Mouth Resonance:</strong> Oral cavity (500-2000Hz) for clarity.</li>
-                    <li><strong>Nasal Resonance:</strong> Sinus mask (3000Hz+) for piercing emphasis.</li>
-                    <li><strong>Resonance Shift:</strong> Ability to move sound placement on command.</li>
-                    <li><strong>No Throat Trap:</strong> Avoid larynx vibrations—sounds weak, feels strained.</li>
-                    <li><strong>Dynamic Balance:</strong> Blend all three for a 3D voice.</li>
-                </ul>
-                <h4>Why Non-Negotiable:</h4>
-                <ul>
-                    <li>Deep voices need mouth/nasal resonance to avoid mumbling.</li>
-                    <li>Monotone resonance leads to listener fatigue.</li>
-                    <li>Nasal resonance adds urgency, chest adds gravitas, and mouth adds logic for emotional precision.</li>
-                </ul>
-                <div class="pitfalls theory-section">
-                    <h4>How to Spot Weakness:</h4>
-                    <ul>
-                        <li><strong>Humming Test:</strong> Hum “mm-hmm”—if you don't feel vibrations in your chest, mouth, and nose, you’re flat.</li>
-                        <li><strong>Recording Check:</strong> A 30-second rant sounds muffled, indicating locked resonance.</li>
-                        <li><strong>Listener Feedback:</strong> People ask “What?” despite your volume, indicating frequency targeting is off.</li>
-                    </ul>
-                </div>
-                <div class="mastery-cues theory-section">
-                    <h4>Mastery Cues:</h4>
-                    <ul>
-                        <li>Ability to shift resonance mid-sentence (e.g., “I’m [chest] READY [nasal]”).</li>
-                        <li>No throat strain after a 10-minute speech.</li>
-                        <li>Voice feels “3D”—listeners lean in.</li>
-                    </ul>
-                </div>
-                <div class="exercises drill-section">
-                    <h4>Drill: RESONANCE ROULETTE</h4>
-                    <p><strong>Goal:</strong> Master frequency placement like a sound engineer.</p>
-                    <h5>Exercise 1: Triad Humming</h5>
-                    <ul>
-                        <li><strong>Steps:</strong></li>
-                        <li>Hum “mm” (chest, sternum vibrates) → “ng” (nose, sinuses buzz) → “ah” (mouth, lips tingle).</li>
-                        <li>Cycle each for 10 seconds, no breaks.</li>
-                        <li>Mental Cue: “Chest is thunder, nose is lightning, mouth is storm.”</li>
-                        <li>Sets: 5 rounds, 2x/day.</li>
-                    </ul>
-                    <h5>Exercise 2: Resonance Tag</h5>
-                    <ul>
-                        <li><strong>Steps:</strong></li>
-                        <li>Say “This is my voice” in:</li>
-                        <li>Chest only (bear growl).</li>
-                        <li>Mouth only (news anchor crisp).</li>
-                        <li>Nasal only (car alarm sharp).</li>
-                        <li>Reps: 10 cycles, 1x/day.</li>
-                    </ul>
-                </div>
-                <div class="critical-checks drill-section">
-                    <h4>Critical Checks:</h4>
-                    <ul>
-                        <li>❌ Throat tight? Reset to diaphragmatic breath (Law 1).</li>
-                        <li>❌ Hums airy? Check cord closure (Law 2).</li>
-                        <li>✅ Vibrations hit all three zones? Resonance unlocked.</li>
-                    </ul>
-                </div>
-                <div class="pitfalls drill-section">
-                    <h4>Pitfalls and Sabotage:</h4>
-                    <ul>
-                        <li>Voice sounding flat or one-dimensional, lacking depth or brightness.</li>
-                        <li>Throat tension or strain when attempting to shift resonance.</li>
-                        <li>Mumbling or lack of clarity, especially at lower frequencies.</li>
-                        <li>Overly nasal or 'whiny' tone due to incorrect nasal resonance usage.</li>
-                        <li>Inability to feel vibrations in different areas (chest, mouth, nose) when directed.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <hr>
-
-        <div class="phase">
-            <div class="section-header">
-                <span class="icon-emoji">🔥</span><h2>PHASE 2: "Emotion Morph Engine" (JULY 5–JULY 8)</h2>
-            </div>
-            <p>Now that the instrument is clean—you add fire and flavor.</p>
-            <p>We move into Law 4, Law 10, Law 11:<strong>Register Control, Vocal Morphing, Emotional Framing.</strong></p>
-
-            <div class="drill-stack">
-                <div class="section-header">
-                    <span class="icon-emoji">⚙️</span><h4>Daily Drill Stack (Morning + Evening)</h4>
-                </div>
-            </div>
-
-            <div class="law">
-                <h3>🎭 Law 4: REGISTER EXPANSION – VOCAL SHAPESHIFTING</h3>
-                <p><strong>Motto:</strong> One voice is a tool. Six voices are an arsenal.</p>
-                <h4 class="theory-section">Core Mechanics:</h4>
-                <ul class="theory-section">
-                    <li><strong>Chest Voice:</strong> Default power register (100Hz foundation).</li>
-                    <li><strong>Head Voice:</strong> Lighter, higher tone for contrast.</li>
-                    <li><strong>Mix Voice:</strong> Chest + head blend for balanced authority.</li>
-                    <li><strong>Falsetto:</strong> Ultra-high, effortless float for vulnerability.</li>
-                    <li><strong>Fry:</strong> Crackling sub-bass growl for intensity.</li>
-                    <li><strong>Whistle:</strong> Piercing highs—rare, deadly if mastered.</li>
-                </ul>
-                <h4>Why Non-Negotiable:</h4>
-                <ul>
-                    <li>Each register impacts different listener emotions.</li>
-                    <li>Prevents monotony in deep voices by providing contrast.</li>
-                    <li>Register shifts create a surprise factor that hooks attention.</li>
-                </ul>
-                <div class="pitfalls theory-section">
-                    <h4>How to Spot Weakness:</h4>
-                    <ul>
-                        <li><strong>Chest Trap:</strong> Inability to access head voice.</li>
-                        <li><strong>Fake Fry:</strong> Fry sounds forced or causes throat burning.</li>
-                        <li><strong>No Whistle:</strong> Missing high registers, indicating an incomplete vocal range.</li>
-                    </ul>
-                </div>
-                <div class="mastery-cues theory-section">
-                    <h4>Mastery Cues:</h4>
-                    <ul>
-                        <li>Seamless register transitions.</li>
-                        <li>No cracks when shifting.</li>
-                        <li>Each register sounds natural, not strained.</li>
-                    </ul>
-                </div>
-                <div class="exercises drill-section">
-                    <h4>Drill: REGISTER ROTATION</h4>
-                    <p><strong>Goal:</strong> Own all 6 voices—no gaps, no fear.</p>
-                    <h5>Exercise 1: Siren Scale</h5>
-                    <ul>
-                        <li><strong>Steps:</strong></li>
-                        <li>Start at your lowest note (chest) → slide to your highest (whistle) → then back down.</li>
-                        <li>Reps: 5x, 1x/day.</li>
-                    </ul>
-                    <h5>Exercise 2: Emotional Shift</h5>
-                    <ul>
-                        <li><strong>Steps:</strong></li>
-                        <li>Say “I know” in:</li>
-                        <li>Chest (commanding).</li>
-                        <li>Head (curious).</li>
-                        <li>Fry (threatening).</li>
-                        <li>Reps: 10x, 1x/day.</li>
-                    </ul>
-                </div>
-                <div class="critical-checks drill-section">
-                    <h4>Critical Checks:</h4>
-                    <ul>
-                        <li>❌ Voice breaks? Slow down.</li>
-                        <li>✅ All registers accessible on demand?</li>
-                        <li>🧠 Elite: Shift mid-word (“I [chest] KNOW [fry]”).</li>
-                    </ul>
-                </div>
-                <div class="pitfalls drill-section">
-                    <h4>Pitfalls and Sabotage:</h4>
-                    <ul>
-                        <li>Voice cracking or breaking during register transitions.</li>
-                        <li>Forcing high notes with throat tension instead of proper head voice engagement.</li>
-                        <li>Producing a strained or painful vocal fry.</li>
-                        <li>Inability to smoothly shift between registers mid-sentence or mid-word.</li>
-                        <li>Overuse of one register (e.g., constantly in chest voice), leading to vocal monotony.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="law">
-                <h3>🌀 Law 10: MORPHING – VOCAL SHAPESHIFTING</h3>
-                <p><strong>Motto:</strong> Change your voice mid-word. Break their reality.</p>
-                <h4 class="theory-section">Core Mechanics:</h4>
-                <ul class="theory-section">
-                    <li><strong>Emotional Whiplash:</strong> Shift from calm to furious in one syllable.</li>
-                    <li><strong>Register Fluidity:</strong> Seamless transitions like Chest → fry → falsetto in three words.</li>
-                    <li><strong>Tone Pivot:</strong> Alter emotional color without changing words.</li>
-                    <li><strong>Breath Anchor:</strong> Morphing relies on diaphragmatic control (Law 1).</li>
-                    <li><strong>Resonance Support:</strong> Shifts need precise frequency placement (Law 5).</li>
-                </ul>
-                <h4>Why Non-Negotiable:</h4>
-                <ul>
-                    <li>Emotional shifts hypnotize listeners through cognitive dissonance.</li>
-                    <li>Morphing makes narratives visceral, enhancing storytelling power.</li>
-                    <li>Captivates attention by making your voice unpredictable.</li>
-                </ul>
-                <div class="pitfalls theory-section">
-                    <h4>How to Spot Weakness:</h4>
-                    <ul>
-                        <li><strong>Single Emotion:</strong> Saying “I love you” in three emotions but sounding the same.</li>
-                        <li><strong>Register Break:</strong> Voice cracks when shifting from chest to falsetto, indicating a lack of fluidity.</li>
-                        <li><strong>Listener Boredom:</strong> Audience disengages because you're not morphing.</li>
-                    </ul>
-                </div>
-                <div class="mastery-cues theory-section">
-                    <h4>Mastery Cues:</h4>
-                    <ul>
-                        <li>Mid-word emotion shifts that stun listeners.</li>
-                        <li>Seamless register changes.</li>
-                        <li>Listeners mirroring your emotional shifts.</li>
-                    </ul>
-                </div>
-                <div class="exercises drill-section">
-                    <h4>Drill: SCHIZO DRILL</h4>
-                    <p><strong>Goal:</strong> Become a vocal chameleon.</p>
-                    <h5>Exercise 1: Emotional Whiplash</h5>
-                    <ul>
-                        <li><strong>Steps:</strong></li>
-                        <li>Say “That’s interesting” as:</li>
-                        <li>Curious → Angry → Seductive.</li>
-                        <li>Goal: Each distinct, no bleed.</li>
-                        <li>Reps: 10x, 1x/day.</li>
-                    </ul>
-                    <h5>Exercise 2: Register Flick</h5>
-                    <ul>
-                        <li><strong>Steps:</strong></li>
-                        <li>Say “I am here” in chest → fry → head.</li>
-                        <li>Goal: No cracks, instant shifts.</li>
-                        <li>Reps: 10x, 1x/day.</li>
-                    </ul>
-                </div>
-                <div class="critical-checks drill-section">
-                    <h4>Critical Checks:</h4>
-                    <ul>
-                        <li>❌ Emotion sounds fake? Slow down, feel it.</li>
-                        <li>❌ Register breaks? Revisit Law 4.</li>
-                        <li>✅ Shifts feel like flipping a switch? Morphing locked.</li>
-                    </ul>
-                </div>
-                <div class="pitfalls drill-section">
-                    <h4>Pitfalls and Sabotage:</h4>
-                    <ul>
-                        <li>Emotional shifts sounding forced or inauthentic.</li>
-                        <li>Voice cracking or losing control during rapid register changes.</li>
-                        <li>Inability to alter tone or emotional color without changing pitch or volume significantly.</li>
-                        <li>Listeners perceiving your voice as 'two-faced' rather than dynamic.</li>
-                        <li>Overthinking transitions, leading to hesitant or unnatural delivery.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="law">
-                <h3>🗣️ Law 11: EMOTIONAL FRAMING – TONE HIJACKING</h3>
-                <p><strong>Motto:</strong> Same words. Different meaning. Total control.</p>
-                <h4 class="theory-section">Core Mechanics:</h4>
-                <ul class="theory-section">
-                    <li><strong>Tone Overrides Words:</strong> “Good job” can convey praise, sarcasm, or threat based on tone.</li>
-                    <li><strong>Micro-Inflection:</strong> A 10Hz pitch drop can signal dominance, while a 20Hz rise indicates curiosity.</li>
-                    <li><strong>Emotional Anchor:</strong> Tone sets the listener’s limbic (emotional) response.</li>
-                    <li><strong>Resonance Support:</strong> Use chest/nasal resonance for effective tone shifts (Law 5).</li>
-                    <li><strong>Dynamic Backup:</strong> Volume and pitch changes enhance framing (Law 9).</li>
-                </ul>
-                <h4>Why Non-Negotiable:</h4>
-                <ul>
-                    <li>Tone influences emotions before words reach logic.</li>
-                    <li>Framing enhances your persuasive power.</li>
-                    <li>Prevents misinterpretation; the wrong tone conveys the wrong message.</li>
-                </ul>
-                <div class="pitfalls theory-section">
-                    <h4>How to Spot Weakness:</h4>
-                    <ul>
-                        <li><strong>Tone Monotony:</strong> Saying “I’m fine” in happy, angry, and scared tones, but they all sound the same.</li>
-                        <li><strong>Listener Misread:</strong> People frequently misjudge your intent.</li>
-                        <li><strong>Recording Check:</strong> Your tone doesn’t match the intended emotion, making it sound flat.</li>
-                    </ul>
-                </div>
-                <div class="mastery-cues theory-section">
-                    <h4>Mastery Cues:</h4>
-                    <ul>
-                        <li>“Good job” shifts seamlessly from praise to threat.</li>
-                        <li>Listeners feel your intended emotion.</li>
-                        <li>No throat strain on tone changes.</li>
-                    </ul>
-                </div>
-                <div class="exercises drill-section">
-                    <h4>Drill: CIA INTERROGATOR</h4>
-                    <p><strong>Goal:</strong> Make tone rewrite reality.</p>
-                    <h5>Exercise 1: Tone Flip</h5>
-                    <ul>
-                        <li><strong>Steps:</strong></li>
-                        <li>Say “mm-hmm” as:</li>
-                        <li>Agreement.</li>
-                        <li>Disbelief.</li>
-                        <li>Threat.</li>
-                        <li>Goal: Each tone rewrites the listener’s perception.</li>
-                        <li>Reps: 10x, 1x/day.</li>
-                    </ul>
-                    <h5>Exercise 2: Emotional Anchor</h5>
-                    <ul>
-                        <li><strong>Steps:</strong></li>
-                        <li>Say “I understand” in 5 different emotions (e.g., empathy, sarcasm, anger).</li>
-                        <li>Goal: Listeners feel the emotion, not just the words.</li>
-                        <li>Reps: 5x, 1x/day.</li>
-                    </ul>
-                </div>
-                <div class="critical-checks drill-section">
-                    <h4>Critical Checks:</h4>
-                    <ul>
-                        <li>❌ Tone feels forced? Revisit morphing (Law 10).</li>
-                        <li>❌ Listeners confused? Sharpen micro-inflections.</li>
-                        <li>✅ Tone shifts alter the listener’s reality? Framing locked.</li>
-                    </ul>
-                </div>
-                <div class="pitfalls drill-section">
-                    <h4>Pitfalls and Sabotage:</h4>
-                    <ul>
-                        <li>Tone being inconsistent with the words being spoken.</li>
-                        <li>Difficulty in intentionally shifting the emotional 'color' of your voice.</li>
-                        <li>Listeners misinterpreting your intent or feeling confused by your tone.</li>
-                        <li>Voice sounding flat or emotionally neutral when aiming for impact.</li>
-                        <li>Over-exaggerating tone, leading to an artificial or theatrical sound.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <hr>
-
-        <div class="strategic-edge">
-            <div class="section-header">
-                <span class="icon-emoji">🧠</span><h2>STRATEGIC EDGE:</h2>
-            </div>
-            <ul>
-                <li>Don’t talk in real life unless it’s deliberate. You’re in <strong>Voice Monk Mode.</strong></li>
-                <li>Record every night for comparison. Look for: no cracks, no gasps, no fake tones.</li>
-                <li>Posture Check every 30 mins. One slouch = resonance death.</li>
-            </ul>
-        </div>
-
-        <hr>
-
-        <div class="mission-objective">
-            <div class="section-header">
-                <span class="icon-emoji">🏁</span><h2>WEEK 1 MISSION OBJECTIVE:</h2>
-            </div>
-            <p>🔊 Read your own Foreword (from your Voice Laws doc) in one take.</p>
-            <p class="status pass">✅ <strong>Deep, controlled, emotion-layered.</strong></p>
-            <p class="status fail">❌ <strong>One gasp, one tone slip = reset.</strong></p>
-        </div>
-
-        <p class="footer-note">All rights reserved. For personal training use only.</p>
-    </div>
-
-    <div class="toggle-button" id="toggleButton">
-        Show Drills
+        </main>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const toggleButton = document.getElementById('toggleButton');
-            const theorySections = document.querySelectorAll('.theory-section');
-            const drillSections = document.querySelectorAll('.drill-section');
-            let showDrills = false; // Initial state: show theory, hide drills
+        // Get references to DOM elements
+        const sessionSelection = document.getElementById('session-selection');
+        const exerciseView = document.getElementById('exercise-view');
+        const startContainer = document.getElementById('start-container');
+        const sessionChoiceText = document.getElementById('session-choice-text');
+        const startSessionBtn = document.getElementById('start-session-btn');
+        const backBtn = document.getElementById('back-btn');
+        const stopwatchDisplay = document.getElementById('stopwatch');
+        const currentExerciseContainer = document.getElementById('current-exercise-container');
+        const prevExerciseBtn = document.getElementById('prev-exercise-btn');
+        const nextExerciseBtn = document.getElementById('next-exercise-btn');
+        const exercisesLeftDisplay = document.getElementById('exercises-left');
 
-            function updateVisibility() {
-                theorySections.forEach(section => {
-                    section.classList.toggle('hidden', showDrills);
-                });
-                drillSections.forEach(section => {
-                    section.classList.toggle('hidden', !showDrills);
-                });
+        // Define the list of exercises
+        const exercises = [
+            // Zone 1: Power Source Control
+            { zone: "💀 ZONE 1: Power Source Control", title: "▸ Diaphragm Lock", desc: "Breathe in, hold, hiss out through teeth slowly. Repeat until core shakes. Do this daily." },
+            { zone: "💀 ZONE 1: Power Source Control", title: "▸ Cord Sealer", desc: "Hum “nnnnnn” tightly — if you feel buzz in face = right. If air leaks from nose/mouth = wrong." },
+            { zone: "💀 ZONE 1: Power Source Control", title: "▸ Buzz Pull Drill", desc: "Hum while dragging the pitch slowly down → then up. Feel vibration shift chest → throat → nose." },
+            { zone: "💀 ZONE 1: Power Source Control", title: "▸ Silent Growl Hold", desc: "Growl as quietly as possible. If vocal cords feel sealed and tight = good. 15s reps." },
+            { zone: "💀 ZONE 1: Power Source Control", title: "▸ Whisper Projection", desc: "Say “I am watching you.” in a whisper — try to reach wall 10 ft away without forcing breath." },
+            // Zone 2: Dynamic & Explosive Control
+            { zone: "⚔️ ZONE 2: Dynamic & Explosive Control", title: "▸ Emotion Flips (Rapid Mood Drill)", desc: "Say “That’s your choice.” → Calm → Angry → Sarcastic → Seductive → Sad — each 2s apart, no breaks." },
+            { zone: "⚔️ ZONE 2: Dynamic & Explosive Control", title: "▸ Volume Surge", desc: "Say “Enough.” Start whisper → mid → loud → mid → whisper — smoothly. Repeat with 5 phrases." },
+            { zone: "⚔️ ZONE 2: Dynamic & Explosive Control", title: "▸ Punch Word Drill", desc: "Pick a sentence. Emphasize 1 word HARD: “This is MY world.” → “THIS is my world.” → repeat." },
+            { zone: "⚔️ ZONE 2: Dynamic & Explosive Control", title: "▸ Slingshot Speed Drill", desc: "Say “You think you know me” → fast → slow → pause → burst — train tempo whip." },
+            // Zone 3: Resonance & Register Control
+            { zone: "🌀 ZONE 3: Resonance & Register Control", title: "▸ Siren Glide", desc: "Go “ng” like singing “sing” → Slide pitch low → high → low. Repeat 5 times." },
+            { zone: "🌀 ZONE 3: Resonance & Register Control", title: "▸ Register Switch Line", desc: "Say “I am the voice.” → Chest voice → Fry → Head → Whisper — no crack, no air." },
+            { zone: "🌀 ZONE 3: Resonance & Register Control", title: "▸ Overtone Bounce", desc: "Hum high pitch while shaping lips slowly (O → E → U). You’ll feel “echo layers” form. This builds Law 6." },
+            { zone: "🌀 ZONE 3: Resonance & Register Control", title: "▸ Gaze & Tone Sync", desc: "Say “I’m not done yet.” ↳ Look down: say calm. ↳ Look up: say hopeful. ↳ Squint eyes: say threatening. Do 3 rounds." },
+            { zone: "🌀 ZONE 3: Resonance & Register Control", title: "▸ Sonic Identity Carve", desc: "Say “I am Rahat” with your own pattern — pause style, emphasis, energy — every day. Refine into signature." },
+            // Zone 4: Projection, Volume & Clarity
+            { zone: "🔊 ZONE 4: Projection, Volume & Clarity", title: "▸ Room Fill Drill", desc: "Say “You already lost.” — facing wall, then mirror, then corner, then doorway. Hit same volume without shouting." },
+            { zone: "🔊 ZONE 4: Projection, Volume & Clarity", title: "▸ Long-Throw Alphabet", desc: "Say A-Z aiming to throw voice 10ft away clearly — no crack, no mumble, no pressure on throat." },
+            { zone: "🔊 ZONE 4: Projection, Volume & Clarity", title: "▸ Consonant Grenades", desc: "Say “The black blade bit back.” Articulate with bite — tongue and teeth SHARP." },
+            { zone: "🔊 ZONE 4: Projection, Volume & Clarity", title: "▸ Breath Lock Projection", desc: "Breathe deep, hold, then burst: “You. Can’t. Kill. Me.” Each word must launch." },
+            // Zone 5: Stability & Internal Friction
+            { zone: "🧠 ZONE 5: Stability & Internal Friction", title: "▸ Static Hold Sentences", desc: "Say long sentences on single breath with NO wobble. Ex: “If you are still breathing, the fight isn’t over.”" },
+            { zone: "🧠 ZONE 5: Stability & Internal Friction", title: "▸ Emotional Freeze", desc: "Say something intense. Now repeat with exact same face/posture — no emotion leakage. Hold tension." },
+            { zone: "🧠 ZONE 5: Stability & Internal Friction", title: "▸ Ice Voice Drill", desc: "Say “You’ll regret this” ↳ With full body stillness ↳ No air, no twitch ↳ Only voice moves." },
+            // Zone 6: Body + Gaze Integration
+            { zone: "👁️ ZONE 6: Body + Gaze Integration", title: "▸ Eye Drill Sync", desc: "Say “I see what you are.” ↳ Wide eyes = surprise ↳ Narrowed = threat ↳ Closed = reflection. Your tone must match eyes. No mismatch." },
+            { zone: "👁️ ZONE 6: Body + Gaze Integration", title: "▸ Gaze Freeze Drill", desc: "Pick object across room. Lock gaze. Speak line without blinking. Feel tone stay grounded." },
+            { zone: "👁️ ZONE 6: Body + Gaze Integration", title: "▸ Mirror Threat Line", desc: "Look into mirror. Say “Walk away.” Make it real enough that even you hesitate." },
+            // Zone 7: Identity, Style & Adaptation
+            { zone: "🧬 ZONE 7: Identity, Style & Adaptation", title: "▸ Voice Theft Drill", desc: "Pick 1 voice (actor, villain, leader). Imitate 1 line. Then mix it with your tone. Repeat until it’s yours." },
+            { zone: "🧬 ZONE 7: Identity, Style & Adaptation", title: "▸ Signature Stamp Line", desc: "Craft one line you’ll use in every battle. Repeat it 5 times daily with full body locked." },
+            { zone: "🧬 ZONE 7: Identity, Style & Adaptation", title: "▸ Emotion DNA", desc: "Say same line 10 different ways over 10 days. Example: “They’ll remember me.”" }
+        ];
 
-                toggleButton.textContent = showDrills ? 'Show Theory' : 'Show Drills';
+        let currentExerciseIndex = 0; // Tracks the current exercise being displayed
+        let stopwatchInterval; // Stores the interval ID for the stopwatch
+        let stopwatchSeconds = 0; // Tracks the elapsed time in seconds
+
+        /**
+         * Formats seconds into HH:MM:SS string.
+         * @param {number} sec - The total seconds to format.
+         * @returns {string} Formatted time string.
+         */
+        function formatTime(sec) {
+            const hours = Math.floor(sec / 3600);
+            const minutes = Math.floor((sec % 3600) / 60);
+            const seconds = sec % 60;
+            // Pad with leading zeros if necessary
+            return [hours, minutes, seconds].map(v => v < 10 ? "0" + v : v).join(":");
+        }
+
+        /**
+         * Starts the stopwatch timer.
+         */
+        function startStopwatch() {
+            // Clear any existing interval to prevent multiple timers running
+            if (stopwatchInterval) clearInterval(stopwatchInterval);
+            stopwatchInterval = setInterval(() => {
+                stopwatchSeconds++;
+                stopwatchDisplay.textContent = formatTime(stopwatchSeconds);
+            }, 1000); // Update every second
+        }
+
+        /**
+         * Stops the stopwatch timer.
+         */
+        function stopStopwatch() {
+            clearInterval(stopwatchInterval);
+        }
+
+        /**
+         * Resets the stopwatch to 00:00:00 and stops it.
+         */
+        function resetStopwatch() {
+            stopStopwatch();
+            stopwatchSeconds = 0;
+            stopwatchDisplay.textContent = formatTime(0);
+        }
+
+        /**
+         * Updates the display showing how many exercises are left.
+         */
+        function updateExercisesLeft() {
+            const exercisesRemaining = exercises.length - (currentExerciseIndex + 1);
+            exercisesLeftDisplay.textContent = `${exercisesRemaining} exercises left`;
+        }
+        
+        /**
+         * Displays the exercise at the given index.
+         * @param {number} index - The index of the exercise to display.
+         */
+        function displayExercise(index) {
+            const exercise = exercises[index];
+            if (!exercise) {
+                console.error("Exercise not found at index:", index);
+                return;
             }
+            currentExerciseContainer.innerHTML = `
+                <div class="zone">
+                    <h2 class="zone-title">${exercise.zone}</h2>
+                    <div class="exercise">
+                        <p class="exercise-title">${exercise.title}</p>
+                        <p class="exercise-description">${exercise.desc}</p>
+                    </div>
+                </div>
+            `;
+            // Disable/enable navigation buttons based on current index
+            prevExerciseBtn.disabled = index === 0;
+            nextExerciseBtn.disabled = index === exercises.length - 1;
+            updateExercisesLeft();
+        }
 
-            // Set initial visibility
-            updateVisibility();
+        // Event Listeners
 
-            toggleButton.addEventListener('click', function() {
-                showDrills = !showDrills;
-                updateVisibility();
+        // Event listener for session selection buttons (Morning/Night)
+        document.querySelectorAll('.btn[data-session]').forEach(button => {
+            button.addEventListener('click', (e) => {
+                // Update text to show selected session
+                sessionChoiceText.textContent = `You have selected the ${e.target.dataset.session} session.`;
+                // Show the "Start Session" button container
+                startContainer.classList.remove('hidden');
             });
         });
+
+        // Event listener for the "Start Session" button
+        startSessionBtn.addEventListener('click', () => {
+            // Hide session selection and show exercise view
+            sessionSelection.classList.add('hidden');
+            exerciseView.classList.remove('hidden');
+            currentExerciseIndex = 0; // Start from the first exercise
+            displayExercise(currentExerciseIndex); // Display the first exercise
+            resetStopwatch(); // Reset stopwatch before starting
+            startStopwatch(); // Start the stopwatch
+        });
+
+        // Event listener for the "Back" button in exercise view
+        backBtn.addEventListener('click', () => {
+            // Hide exercise view and show session selection
+            exerciseView.classList.add('hidden');
+            sessionSelection.classList.remove('hidden');
+            startContainer.classList.add('hidden'); // Hide start button when going back
+            stopStopwatch(); // Stop the stopwatch
+        });
+
+        // Event listener for the "Next" exercise button
+        nextExerciseBtn.addEventListener('click', () => {
+            // Move to the next exercise if not at the end of the list
+            if (currentExerciseIndex < exercises.length - 1) {
+                currentExerciseIndex++;
+                displayExercise(currentExerciseIndex);
+            }
+        });
+
+        // Event listener for the "Previous" exercise button
+        prevExerciseBtn.addEventListener('click', () => {
+            // Move to the previous exercise if not at the beginning of the list
+            if (currentExerciseIndex > 0) {
+                currentExerciseIndex--;
+                displayExercise(currentExerciseIndex);
+            }
+        });
+
+        // Initialize the display when the page loads (optional, but good for consistency)
+        // displayExercise(currentExerciseIndex); // This would display the first exercise on load if not hidden initially
     </script>
 </body>
 </html>
