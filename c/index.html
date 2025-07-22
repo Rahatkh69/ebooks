@@ -424,211 +424,211 @@
     <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js" type="module"></script>
     <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-storage.js" type="module"></script>
 
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-        import { getDatabase, ref, set, push, onChildAdded } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
-        import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-storage.js";
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+import { getDatabase, ref, set, push, onChildAdded } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-storage.js";
 
-        // IMPORTANT: For a production app, secure your Firebase config and use Security Rules & App Check.
-        const firebaseConfig = {
-            apiKey: "AIzaSyDQRkRwwdoWdQtumKSqciwJUSFILayasCU",
-            authDomain: "rahatkh6969.firebaseapp.com",
-            databaseURL: "https://rahatkh6969-default-rtdb.firebaseio.com",
-            projectId: "rahatkh6969",
-            storageBucket: "rahatkh6969.appspot.com",
-            messagingSenderId: "70507241803",
-            appId: "1:70507241803:web:02a5c126fe66e27be7c8ce",
-            measurementId: "G-B9BPK5V0LH"
-        };
+// IMPORTANT: For a production app, secure your Firebase config and use Security Rules & App Check.
+const firebaseConfig = {
+    apiKey: "AIzaSyDQRkRwwdoWdQtumKSqciwJUSFILayasCU",
+    authDomain: "rahatkh6969.firebaseapp.com",
+    databaseURL: "https://rahatkh6969-default-rtdb.firebaseio.com",
+    projectId: "rahatkh6969",
+    storageBucket: "rahatkh6969.appspot.com",
+    messagingSenderId: "70507241803",
+    appId: "1:70507241803:web:02a5c126fe66e27be7c8ce",
+    measurementId: "G-B9BPK5V0LH"
+};
 
-        const app = initializeApp(firebaseConfig);
-        const database = getDatabase(app);
-        const storage = getStorage(app);
-        let username = "";
-        let currentMessageIndex = -1;
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+const storage = getStorage(app);
+let username = "";
+let currentMessageIndex = -1; // This variable will no longer be strictly needed for line-by-line scrolling but kept as it might be used elsewhere.
 
-        function saveMessage(path, data) {
-            push(ref(database, path), data);
+function saveMessage(path, data) {
+    push(ref(database, path), data);
+}
+
+function escapeHTML(str) {
+    const p = document.createElement("p");
+    p.textContent = str;
+    return p.innerHTML;
+}
+
+function parseLinks(text) {
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    return text.replace(urlRegex, (url) => {
+        const favicon = `<img src="https://s2.googleusercontent.com/s2/favicons?domain=${url}" alt="favicon" class="link-thumbnail">`;
+        return `<a href="${url}" target="_blank" rel="noopener noreferrer">${favicon} ${url}</a>`;
+    });
+}
+
+function formatFileSize(bytes) {
+    if (bytes === 0) return '0 Bytes';
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+}
+
+function displayMessages() {
+    const chatBox = document.getElementById("chatBox");
+    onChildAdded(ref(database, "chats"), (snapshot) => {
+        const data = snapshot.val();
+        const messageDiv = document.createElement("div");
+        messageDiv.classList.add("message");
+
+        const userSpan = document.createElement("span");
+        userSpan.classList.add("username");
+        userSpan.textContent = data.username;
+
+        const contentSpan = document.createElement("div");
+        contentSpan.classList.add("message-content");
+
+        let contentToCopy = "";
+
+        if (data.type === "text") {
+            contentSpan.innerHTML = parseLinks(escapeHTML(data.content).replace(/\n/g, '<br>'));
+            contentToCopy = data.content;
+        } else if (data.type === "image") {
+            let img = document.createElement("img");
+            img.src = data.content;
+            img.onclick = () => openImageModal(data.content);
+            contentSpan.appendChild(img);
+            contentToCopy = data.content;
+        } else if (data.type === "file") {
+            const file = data.fileInfo;
+            contentSpan.innerHTML = `
+                <a href="${file.downloadURL}" target="_blank" download="${file.name}">
+                    <div class="file-message-container">
+                        <i class="fa-solid fa-file-arrow-down file-icon"></i>
+                        <div class="file-details">
+                            <span class="file-name">${escapeHTML(file.name)}</span>
+                            <span class="file-size">${formatFileSize(file.size)}</span>
+                        </div>
+                    </div>
+                </a>
+            `;
+            contentToCopy = file.downloadURL;
         }
 
-        function escapeHTML(str) {
-            const p = document.createElement("p");
-            p.textContent = str;
-            return p.innerHTML;
-        }
-
-        function parseLinks(text) {
-            const urlRegex = /(https?:\/\/[^\s]+)/g;
-            return text.replace(urlRegex, (url) => {
-                const favicon = `<img src="https://s2.googleusercontent.com/s2/favicons?domain=${url}" alt="favicon" class="link-thumbnail">`;
-                return `<a href="${url}" target="_blank" rel="noopener noreferrer">${favicon} ${url}</a>`;
-            });
-        }
-
-        function formatFileSize(bytes) {
-            if (bytes === 0) return '0 Bytes';
-            const k = 1024;
-            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-            const i = Math.floor(Math.log(bytes) / Math.log(k));
-            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-        }
-
-        function displayMessages() {
-            const chatBox = document.getElementById("chatBox");
-            onChildAdded(ref(database, "chats"), (snapshot) => {
-                const data = snapshot.val();
-                const messageDiv = document.createElement("div");
-                messageDiv.classList.add("message");
-
-                const userSpan = document.createElement("span");
-                userSpan.classList.add("username");
-                userSpan.textContent = data.username;
-
-                const contentSpan = document.createElement("div");
-                contentSpan.classList.add("message-content");
-
-                let contentToCopy = "";
-
-                if (data.type === "text") {
-                    contentSpan.innerHTML = parseLinks(escapeHTML(data.content).replace(/\n/g, '<br>'));
-                    contentToCopy = data.content;
-                } else if (data.type === "image") {
-                    let img = document.createElement("img");
-                    img.src = data.content;
-                    img.onclick = () => openImageModal(data.content);
-                    contentSpan.appendChild(img);
-                    contentToCopy = data.content;
-                } else if (data.type === "file") {
-                    const file = data.fileInfo;
-                    contentSpan.innerHTML = `
-                        <a href="${file.downloadURL}" target="_blank" download="${file.name}">
-                            <div class="file-message-container">
-                                <i class="fa-solid fa-file-arrow-down file-icon"></i>
-                                <div class="file-details">
-                                    <span class="file-name">${escapeHTML(file.name)}</span>
-                                    <span class="file-size">${formatFileSize(file.size)}</span>
-                                </div>
-                            </div>
-                        </a>
-                    `;
-                    contentToCopy = file.downloadURL;
-                }
-
-                const actionsDiv = document.createElement('div');
-                actionsDiv.className = 'message-actions';
-                const copyBtn = document.createElement('i');
-                copyBtn.className = 'fa-solid fa-copy';
-                copyBtn.title = 'Copy';
-                copyBtn.onclick = (e) => {
-                    e.stopPropagation();
-                    navigator.clipboard.writeText(contentToCopy).then(() => {
-                        copyBtn.className = 'fa-solid fa-check';
-                        setTimeout(() => { copyBtn.className = 'fa-solid fa-copy'; }, 1500);
-                    }).catch(err => console.error('Failed to copy: ', err));
-                };
-
-                actionsDiv.appendChild(copyBtn);
-                messageDiv.append(userSpan, contentSpan, actionsDiv);
-                chatBox.appendChild(messageDiv);
-
-                chatBox.scrollTop = chatBox.scrollHeight;
-                currentMessageIndex = -1;
-            });
-        }
-
-        window.login = function () {
-            const usernameInput = document.getElementById("usernameInput").value.trim();
-            if (usernameInput) {
-                username = usernameInput;
-                set(ref(database, "users/" + username), { username: username, loggedIn: true });
-                document.getElementById("loginScreen").style.display = "none";
-                document.getElementById("chatContainer").style.display = "block";
-                displayMessages();
-            } else { alert("Please enter a valid username."); }
+        const actionsDiv = document.createElement('div');
+        actionsDiv.className = 'message-actions';
+        const copyBtn = document.createElement('i');
+        copyBtn.className = 'fa-solid fa-copy';
+        copyBtn.title = 'Copy';
+        copyBtn.onclick = (e) => {
+            e.stopPropagation();
+            navigator.clipboard.writeText(contentToCopy).then(() => {
+                copyBtn.className = 'fa-solid fa-check';
+                setTimeout(() => { copyBtn.className = 'fa-solid fa-copy'; }, 1500);
+            }).catch(err => console.error('Failed to copy: ', err));
         };
 
-        window.sendTextMessage = function () {
-            const textInput = document.getElementById("textInput");
-            const content = textInput.value.trim();
-            if (content) {
-                saveMessage("chats", { type: "text", content: content, username: username, timestamp: new Date().toISOString() });
-                textInput.value = "";
-                textInput.style.height = 'auto';
-            }
-        };
+        actionsDiv.appendChild(copyBtn);
+        messageDiv.append(userSpan, contentSpan, actionsDiv);
+        chatBox.appendChild(messageDiv);
 
-        window.sendImageMessage = function () {
-            const file = document.getElementById("imageInput").files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = (e) => saveMessage("chats", { type: "image", content: e.target.result, username: username, timestamp: new Date().toISOString() });
-                reader.readAsDataURL(file);
-            }
-        };
+        chatBox.scrollTop = chatBox.scrollHeight;
+        currentMessageIndex = -1;
+    });
+}
 
-        window.sendFileMessage = function () {
-            const fileInput = document.getElementById("fileInput");
-            const file = fileInput.files[0];
-            if (!file) return;
+window.login = function () {
+    const usernameInput = document.getElementById("usernameInput").value.trim();
+    if (usernameInput) {
+        username = usernameInput;
+        set(ref(database, "users/" + username), { username: username, loggedIn: true });
+        document.getElementById("loginScreen").style.display = "none";
+        document.getElementById("chatContainer").style.display = "block";
+        displayMessages();
+    } else { alert("Please enter a valid username."); }
+};
 
-            const fileIcon = document.getElementById('fileIcon');
-            fileIcon.className = 'fa-solid fa-spinner fa-spin'; // Show loading indicator
+window.sendTextMessage = function () {
+    const textInput = document.getElementById("textInput");
+    const content = textInput.value.trim();
+    if (content) {
+        saveMessage("chats", { type: "text", content: content, username: username, timestamp: new Date().toISOString() });
+        textInput.value = "";
+        textInput.style.height = 'auto';
+    }
+};
 
-            const fileRef = storageRef(storage, `chat-files/${Date.now()}-${file.name}`);
+window.sendImageMessage = function () {
+    const file = document.getElementById("imageInput").files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => saveMessage("chats", { type: "image", content: e.target.result, username: username, timestamp: new Date().toISOString() });
+        reader.readAsDataURL(file);
+    }
+};
 
-            uploadBytes(fileRef, file).then(snapshot => {
-                getDownloadURL(snapshot.ref).then(url => {
-                    const message = {
-                        type: "file",
-                        username: username,
-                        timestamp: new Date().toISOString(),
-                        fileInfo: { name: file.name, size: file.size, type: file.type, downloadURL: url }
-                    };
-                    saveMessage("chats", message);
-                    fileIcon.className = 'fa-solid fa-paperclip'; // Reset icon
-                    fileInput.value = ""; // Clear input
-                });
-            }).catch(error => {
-                console.error("Upload failed:", error);
-                alert("Sorry, the file upload failed.");
-                fileIcon.className = 'fa-solid fa-paperclip'; // Reset icon on error
-            });
-        };
+window.sendFileMessage = function () {
+    const fileInput = document.getElementById("fileInput");
+    const file = fileInput.files[0];
+    if (!file) return;
 
-        window.openImageModal = function (src) {
-            document.getElementById("imageModal").style.display = "block";
-            document.getElementById("modalImage").src = src;
-            const downloadBtn = document.getElementById("downloadBtn");
-            downloadBtn.href = src;
-            downloadBtn.setAttribute("download", `image_${new Date().getTime()}.png`);
-        };
+    const fileIcon = document.getElementById('fileIcon');
+    fileIcon.className = 'fa-solid fa-spinner fa-spin'; // Show loading indicator
 
-        document.getElementById("closeModal").onclick = () => { document.getElementById("imageModal").style.display = "none"; };
+    const fileRef = storageRef(storage, `chat-files/${Date.now()}-${file.name}`);
 
-        // --- Event Listeners ---
-        document.getElementById("usernameInput").addEventListener("keydown", (e) => { if (e.key === "Enter") login(); });
-        const textInput = document.getElementById("textInput");
-        textInput.addEventListener("keydown", (e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); sendTextMessage(); } });
-        textInput.addEventListener('input', () => { textInput.style.height = 'auto'; textInput.style.height = (textInput.scrollHeight) + 'px'; });
-
-        document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape") document.getElementById("imageModal").style.display = "none";
-            const chatBox = document.getElementById("chatBox");
-            if (document.activeElement !== textInput && (e.key === "ArrowUp" || e.key === "ArrowDown")) {
-                e.preventDefault();
-                const messages = chatBox.querySelectorAll('.message');
-                if (!messages.length) return;
-                if (currentMessageIndex !== -1 && messages[currentMessageIndex]) { messages[currentMessageIndex].classList.remove('selected-message'); }
-                if (e.key === "ArrowUp") { currentMessageIndex = (currentMessageIndex > 0) ? currentMessageIndex - 1 : 0; }
-                else { currentMessageIndex = (currentMessageIndex < messages.length - 1) ? currentMessageIndex + 1 : messages.length - 1; }
-                const selectedMessage = messages[currentMessageIndex];
-                if (selectedMessage) {
-                    selectedMessage.classList.add('selected-message');
-                    selectedMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                }
-            }
+    uploadBytes(fileRef, file).then(snapshot => {
+        getDownloadURL(snapshot.ref).then(url => {
+            const message = {
+                type: "file",
+                username: username,
+                timestamp: new Date().toISOString(),
+                fileInfo: { name: file.name, size: file.size, type: file.type, downloadURL: url }
+            };
+            saveMessage("chats", message);
+            fileIcon.className = 'fa-solid fa-paperclip'; // Reset icon
+            fileInput.value = ""; // Clear input
         });
-    </script>
+    }).catch(error => {
+        console.error("Upload failed:", error);
+        alert("Sorry, the file upload failed.");
+        fileIcon.className = 'fa-solid fa-paperclip'; // Reset icon on error
+    });
+};
+
+window.openImageModal = function (src) {
+    document.getElementById("imageModal").style.display = "block";
+    document.getElementById("modalImage").src = src;
+    const downloadBtn = document.getElementById("downloadBtn");
+    downloadBtn.href = src;
+    downloadBtn.setAttribute("download", `image_${new Date().getTime()}.png`);
+};
+
+document.getElementById("closeModal").onclick = () => { document.getElementById("imageModal").style.display = "none"; };
+
+// --- Event Listeners ---
+document.getElementById("usernameInput").addEventListener("keydown", (e) => { if (e.key === "Enter") login(); });
+const textInput = document.getElementById("textInput");
+textInput.addEventListener("keydown", (e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); sendTextMessage(); } });
+textInput.addEventListener('input', () => { textInput.style.height = 'auto'; textInput.style.height = (textInput.scrollHeight) + 'px'; });
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") document.getElementById("imageModal").style.display = "none";
+    const chatBox = document.getElementById("chatBox");
+
+    // Only handle arrow keys if the text input is not focused
+    if (document.activeElement !== textInput && (e.key === "ArrowUp" || e.key === "ArrowDown")) {
+        e.preventDefault(); // Prevent default browser scrolling
+
+        const scrollAmount = 20; // Adjust this value to control scroll speed (in pixels)
+
+        if (e.key === "ArrowUp") {
+            chatBox.scrollBy({ top: -scrollAmount, behavior: 'smooth' });
+        } else if (e.key === "ArrowDown") {
+            chatBox.scrollBy({ top: scrollAmount, behavior: 'smooth' });
+        }
+    }
+});
+</script>
 </body>
 
 </html>
