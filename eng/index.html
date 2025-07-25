@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Study Reader</title>
+    <link rel="preload" href="data.json" as="fetch" crossorigin="anonymous"> <!-- Changed as="script" to as="fetch" for JSON -->
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* CSS styles embedded directly in the HTML */
+        body {
+            background-color: #000; /* Black background */
+            color: #FFF; /* White text */
+            font-family: 'Atkinson Hyperlegible', sans-serif; /* Custom readable font */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align content to the top */
+            min-height: 100vh;
+            box-sizing: border-box;
+            line-height: 1.6; /* Good line spacing for readability */
+            overflow: hidden; /* Prevent scrollbar during preloader */
+        }
+*::-webkit-scrollbar{
+display:none;
+}
+        /* Preloader Styles */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000; /* Black background for preloader */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; /* Ensure it's on top */
+            color: #FFF;
+            transition: opacity 0.5s ease-out; /* Smooth fade out */
+        }
+
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid #FFF;
+            border-radius: 50%;
+            width: 20px; /* 20px spinner */
+            height: 20px; /* 20px spinner */
+            animation: spin 1s linear infinite;
+            margin-bottom: 15px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        #preloader-text {
+            font-size: 1.2em;
+            margin-top: 10px;
+            text-align: center; /* Center the text and number */
+        }
+
+        #preloader-count {
+            display: block; /* Make the count appear on a new line */
+            font-size: 1.2em; /* Slightly smaller for emphasis */
+            font-weight: bold;
+            margin-top: 5px; /* Some space above the number */
+        }
+
+        /* Main Content Container */
+        .container {
+            width: 70vw; /* Invisible container to hold around 70% in width */
+            max-width: 900px; /* Max width to prevent overly long lines on very wide screens */
+            padding: 20px;
+            text-align: center; /* Center initial title and buttons */
+            position: relative; /* Needed for absolute positioning of the popup */
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.5s ease-in; /* Smooth fade in */
+        }
+
+        h1 {
+            font-size: 2.5em; /* Large heading for readability */
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2em; /* Large heading for paragraph titles */
+            margin-bottom: 20px;
+            text-align: left; /* Align paragraph title left */
+            border-bottom: 1px solid #333; /* Subtle separator */
+            padding-bottom: 10px;
+            display: flex; /* Use flexbox for title and word count */
+            align-items: baseline;
+            justify-content: space-between; /* Space out title and word count */
+        }
+
+        #word-count-display {
+            font-size: 0.6em; /* Smaller font for word count */
+            color: #aaa; /* Lighter color for word count */
+            margin-left: 10px;
+        }
+
+        p {
+            font-size: 1.6em; /* Default font size for the main paragraph text (medium) */
+            text-align: left; /* Align paragraph content left for easier reading */
+            margin-bottom: 30px;
+        }
+
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid for buttons */
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        button {
+            background-color: #333; /* Darker gray for buttons */
+            color: #FFF;
+            border: 2px solid #555; /* Slightly lighter border for subtle definition */
+            padding: 18px 25px;
+            font-size: 1.4em; /* Large font size for buttons */
+            cursor: pointer;
+            border-radius: 8px; /* Slightly rounded corners */
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+            text-align: center;
+        }
+
+        button:hover:not(:disabled) {
+            background-color: #555; /* Lighter gray on hover */
+            border-color: #FFF;
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between; /* Space out prev and next buttons */
+            margin-top: 30px;
+        }
+
+        .nav-buttons button {
+            padding: 15px; /* Adjust padding for circular buttons */
+            font-size: 1.2em;
+            background-color: #FFF; /* White color for nav buttons */
+            color: #000; /* Black text/icon color for contrast */
+            border: 2px solid #FFF; /* White border */
+            border-radius: 50%; /* Make buttons round */
+            width: 50px; /* Set a fixed width for circular buttons */
+            height: 50px; /* Set a fixed height for circular buttons */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+        }
+
+        .nav-buttons button:hover:not(:disabled) {
+            background-color: #eee; /* Slightly darker white on hover */
+            border-color: #eee;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .font-size-selector {
+            margin-bottom: 20px;
+            text-align: left;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            justify-content: flex-start;
+            font-size: 1.1em;
+        }
+
+        .font-size-selector label {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .font-size-selector input[type="radio"] {
+            transform: scale(1.2); /* Make radio buttons slightly larger */
+            margin-right: 5px;
+        }
+
+        /* Styles for hoverable words */
+        .hoverable-word {
+            cursor: help; /* Indicate hoverable */
+            border-bottom: 1px dotted rgba(255, 255, 255, 0.5); /* Subtle underline */
+            transition: border-color 0.2s ease;
+            white-space: nowrap; /* Prevent word from breaking */
+        }
+
+        .hoverable-word:hover {
+            border-bottom-color: #FFF; /* Stronger underline on hover */
+        }
+
+        /* Styles for the dictionary popup */
+        .dictionary-popup {
+            position: absolute;
+            background-color: #222; /* Dark background for popup */
+            color: #FFF;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            z-index: 1000; /* Ensure it's above other content */
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+            pointer-events: none; /* Allow clicks to pass through when hidden */
+            text-align: left;
+            max-width: 300px; /* Limit popup width */
+            border: 1px solid #444; /* Subtle border */
+        }
+
+        .dictionary-popup h4 {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #7FFFD4; /* Light teal for word */
+            margin-bottom: 10px;
+            text-transform: capitalize;
+            border-bottom: 1px solid #444;
+            padding-bottom: 5px;
+        }
+
+        .dictionary-popup h5 {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #ADD8E6; /* Light blue for sections */
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .dictionary-popup ul {
+            list-style-type: none; /* No bullets for popup lists */
+            padding-left: 0;
+            margin-bottom: 10px;
+        }
+
+        .dictionary-popup li {
+            margin-bottom: 3px;
+            font-size: 0.95em;
+            color: #DDD;
+        }
+
+        .dictionary-popup .meaning-type {
+            font-weight: bold;
+            color: #FFD700; /* Gold for meaning type */
+            margin-right: 5px;
+        }
+
+        .dictionary-popup .example-sentence {
+            font-style: italic;
+            color: #B0C4DE; /* Light steel blue for examples */
+            font-size: 0.9em;
+        }
+
+        .dictionary-popup .related-words span {
+            display: inline-block;
+            background-color: #333;
+            color: #98FB98; /* Pale green for related words */
+            padding: 3px 8px;
+            border-radius: 5px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            font-size: 0.85em;
+        }
+
+        .dictionary-popup .no-details {
+            font-style: italic;
+            color: #AAA;
+            font-size: 0.9em;
+        }
+
+        /* Styles for the blur overlay */
+        .blur-overlay {
+            position: fixed; /* Fixed to cover the entire viewport */
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+            backdrop-filter: blur(5px); /* Apply blur effect */
+            -webkit-backdrop-filter: blur(5px); /* For Safari support */
+            z-index: 999; /* Below popup, above content */
+            transition: opacity 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            display: none; /* Initially hidden */
+        }
+
+        .blur-overlay.active {
+            opacity: 1;
+            visibility: visible;
+            display: block; /* Show when active */
+        }
+
+        /* Ensure popup and active word are above the blur overlay */
+        .dictionary-popup {
+            z-index: 1000; /* Higher than blur-overlay */
+        }
+
+        .hoverable-word.highlighted {
+            position: relative; /* To make z-index work */
+            z-index: 1001; /* Even higher than popup, so it's not blurred */
+            color: #7FFFD4; /* Example: change color for highlighted word */
+            border-bottom-color: #7FFFD4;
+        }
+
+        /* Toggle switch specific styles */
+        .toggle-switch-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            text-align: left;
+            justify-content: flex-start;
+            font-size: 1.1em;
+        }
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 40px; /* Reduced width to 40px */
+            height: 24px; /* From previous adjustment */
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #FFF; /* Full white background */
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px; /* From previous adjustment */
+            width: 16px; /* From previous adjustment */
+            left: 4px;
+            bottom: 4px;
+            background-color: black; /* Black circle */
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #FFF; /* Keep white when checked */
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #FFF;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(16px); /* Adjusted translation for 40px width */
+            -ms-transform: translateX(16px);
+            transform: translateX(16px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader HTML -->
+    <div id="preloader">
+        <div class="spinner"></div>
+        <div id="preloader-text">Loading Dictionary Words <span id="preloader-count">0</span></div>
+    </div>
+
+    <div class="container">
+        <div class="button-grid" id="button-grid"> <!-- Added ID to button-grid -->
+            <button onclick="showParagraph(1)">Load-Shedding</button>
+            <button onclick="showParagraph(2)">Street Accident</button>
+            <button onclick="showParagraph(3)">National Flag</button>
+            <button onclick="showParagraph(4)">Book Fair</button>
+            <button onclick="showParagraph(5)">Good Teacher</button>
+            <button onclick="showParagraph(6)">Tea Stall</button>
+            <button onclick="showParagraph(7)">Water Pollution</button>
+            <button onclick="showParagraph(8)">Mobile Phone</button>
+        </div>
+
+        <div id="paragraph-display" class="hidden">
+            <div class="font-size-selector">
+                <span>Font Size:</span>
+                <label><input type="radio" name="font-size" value="small" onchange="setFontSize(this.value)"> Small</label>
+                <label><input type="radio" name="font-size" value="medium" onchange="setFontSize(this.value)" checked> Medium</label>
+                <label><input type="radio" name="font-size" value="big" onchange="setFontSize(this.value)"> Big</label>
+            </div>
+
+            <div class="toggle-switch-container">
+                <span>Word Details:</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="wordDetailsToggle" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <h2 id="paragraph-title"></h2>
+            <p id="paragraph-content"></p>
+            <div class="nav-buttons">
+                <button id="prev-button" onclick="showPrevParagraph()"><i class="fas fa-arrow-left"></i></button>
+                <button id="next-button" onclick="showNextParagraph()"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <div id="dictionaryPopup" class="dictionary-popup hidden"></div>
+        <div id="blurOverlay" class="blur-overlay hidden"></div>
+    </div>
+
+    <script>
+        // JavaScript for handling paragraph display and features
+        const paragraphs = {
+            1: {
+                title: "Load-Shedding",
+                content: "Load-shedding, the deliberate and systematic shutdown of electrical power, is a pervasive national issue that frequently plunges daily life into a state of paralysis. This frustrating reality stems from a chronic and fundamental imbalance: a nation’s surging demand for energy consistently outstripping its generation and distribution capabilities. The consequences of this shortfall are not merely inconvenient; they are profoundly detrimental to the nation’s progress. During these hours of darkness, the rhythm of the country falters. Industrial machinery grinds to a halt, crippling production and leading to significant economic losses, while small businesses that cannot afford expensive generators are forced to close. In hospitals, it poses a direct threat to human life, jeopardizing critical life-support systems. For students, it represents a formidable barrier to academic success in the digital age. They are cut off from online resources and virtual classes, often forced to resort to the dim, flickering light of candles, which is both inefficient and strenuous. Mitigating this challenge requires a comprehensive, multi-pronged strategy. Beyond constructing more conventional power plants, it is imperative that we invest heavily in diversifying our energy portfolio with renewable sources like solar and wind power. Simultaneously, we must undertake a massive upgrade of our aging grid infrastructure to reduce transmission loss and implement ‘smart grid’ technology. Fostering a nationwide culture of energy conservation through public awareness is equally crucial. Ultimately, achieving a stable and uninterrupted power supply is an absolute prerequisite for ensuring our nation’s economic prosperity, educational advancement, and overall quality of life."
+            },
+            2: {
+                title: "A Street Accident",
+                content: "The mundane tranquility of an ordinary afternoon was shattered in an instant by the deafening screech of tires and a sickening, metallic crunch that echoed through the street. I was a horrified witness to a harrowing accident that unfolded at a bustling intersection near my school. A recklessly speeding public bus, attempting a dangerous overtake, swerved erratically and collided violently with a three-wheeler, sending it tumbling across the pavement like a broken toy. Chaos immediately erupted as pedestrians screamed and rushed towards the mangled vehicle. The harrowing scene that followed is etched into my memory: the driver lay motionless, while a passenger cried out in pain, his plea for help piercing the air as a crowd gathered in a mixture of shock, morbid curiosity, and genuine concern. While some stood frozen or captured the tragedy on their phones, a few brave individuals organized themselves with remarkable efficiency, carefully extricating the victims and flagging down a vehicle to transport them to the nearest hospital. This tragic event serves as a stark and visceral reminder of the deadly consequences of irresponsible driving and systemic failures in road safety. To prevent such needless loss of life, we need more than just intermittent awareness campaigns; we require the unwavering, stringent enforcement of traffic laws, the modernization of our road infrastructure with better-designed junctions and pedestrian crossings, and a fundamental shift in our collective mindset to prioritize human life over the urgency of a few saved minutes."
+            },
+            3: {
+                title: "Our National Flag",
+                content: "More than a mere piece of cloth, the national flag of Bangladesh is the living emblem of our identity, a potent symbol of our hard-won sovereignty and the revolutionary spirit that birthed our nation. It is a simple yet profoundly moving design: a vibrant rectangle of bottle green, which cradles a crimson disc slightly offset towards the hoist. The symbolism of its colours narrates the epic story of our nation's soul. The lush, verdant green signifies the stunning natural beauty of our deltaic landscape, while also representing the eternal youth, vitality, and indomitable spirit of our people. At its heart, the red circle stands as a solemn and powerful tribute to the sun of independence, a fiery disc rising from the river of blood shed by millions of martyrs during the monumental Liberation War of 1971. This flag is not just ceremoniously hoisted atop government buildings or on national holidays like Independence Day and Victory Day; it flutters in the unified hands of roaring crowds at international sporting events and is draped respectfully over the coffins of our national heroes. It is the silent witness to our history and our most cherished aspirations, a constant, powerful reminder of the price of our freedom and the unifying beacon that guides our collective journey towards a just and prosperous future."
+            },
+            4: {
+                title: "A Book Fair You Have Visited",
+                content: "A book fair is not merely a marketplace for literature, but a vibrant cultural phenomenon, a dynamic convergence where the profound worlds of authors and eager readers joyfully collide. I recently had the immense privilege of immersing myself in the iconic Ekushey Boi Mela, a cornerstone of Bangladeshi culture held annually on the historic grounds of the Bangla Academy. The atmosphere was absolutely electric, pulsating with the energy of thousands of bibliophiles navigating a labyrinth of meticulously arranged stalls, each a veritable treasure trove overflowing with literary works from countless esteemed publishers. The air itself seemed to hum with the intellectual conversation of literary enthusiasts, the soft rustling of countless turning pages, and the palpable excitement of discovering new narratives and profound insights. I spent several enchanting hours exploring, my eyes feasting on a diverse array of genres, from timeless classics to cutting-edge contemporary science fiction, before finally selecting a poignant collection of poetry and a captivating historical novel that promised to transport me through time. Such an event transcends the simple act of commerce; it is a profound cultural pilgrimage that ignites the imagination, fosters the crucial habit of reading in an increasingly digital age, and powerfully reaffirms the enduring, timeless value of the written word as a cornerstone of our society and intellectual heritage. It is a testament to the collective hunger for knowledge and stories that binds us all."
+            },
+            5: {
+                title: "A Good Teacher",
+                content: "A good teacher is far more than a mere dispenser of academic knowledge; they are, in essence, the visionary architects of a nation's future, meticulously sculpting the minds, characters, and aspirations of the next generation. Beyond possessing a profound and comprehensive mastery of their subject matter, their most defining and impactful quality lies in their unparalleled ability to ignite a lifelong, unquenchable passion for learning within the hearts of their students. With remarkable patience, boundless creativity, and an unwavering dedication, they possess the unique gift of transforming even the most intricate and complex concepts into engaging, accessible, and deeply memorable lessons, ensuring that no student is ever left behind in their intellectual journey. More critically, their profound influence extends far beyond the confines of the prescribed curriculum; they serve as invaluable mentors who meticulously instill crucial moral values such as unwavering integrity, relentless perseverance, profound empathy, and an unyielding sense of social responsibility. By consistently cultivating a supportive, inclusive, and profoundly inspiring classroom environment, an exceptional teacher evolves into a trusted confidant and a guiding light who illuminates the intricate pathways of knowledge, effectively dispelling the pervasive darkness of ignorance, and powerfully empowering students to unequivocally believe in their own boundless potential. Their true and lasting legacy is ultimately measured not in the sterile metrics of grades or test scores, but in the confident, critically thinking, perpetually curious, and socially responsible citizens they meticulously help to shape, who in turn contribute meaningfully to society."
+            },
+            6: {
+                title: "A Tea Stall",
+                content: "In the bustling landscape of Bangladesh, the humble tea stall, or 'tong,' stands as an unassuming yet indispensable social institution, serving as the unofficial parliament and vibrant heart of every neighborhood. It is far more than a simple shop; it is a microcosm of society itself. The air within and around it is thick with a unique sensory blend: the fragrant steam of brewing strong black tea, the sizzle of shingaras and dal puris frying in hot oil, the incessant clinking of glass on saucer, and the ceaseless hum of conversation. Here, a diverse cross-section of humanity converges. University students debate philosophy over a half-cup of tea, day laborers seek a moment of respite and affordable refreshment, office workers catch up on the day's news, and elderly gentlemen leisurely discuss everything from local gossip to the nuances of international politics. The stall's owner, often a familiar figure known affectionately as 'chacha' (uncle), acts as the central node of this social network—a confidant, a news aggregator, and a silent observer of the community's pulse. These stalls are the epicenters of grassroots democracy, where public opinion is shaped and vital information is exchanged in spirited, unfiltered debates. Functioning as a critical micro-enterprise, the tea stall not only provides a livelihood for its owner but also plays a vital role in the social fabric, offering a democratic space where people from all walks of life can connect, deliberate, and simply coexist. It is a testament to the fact that the most profound community connections are often forged in the simplest of settings."
+            },
+            7: {
+                title: "Water Pollution",
+                content: "Water, the very elixir of life that constitutes the majority of our planet and our bodies, is facing an unprecedented crisis of contamination. Water pollution, the introduction of harmful substances into bodies of water like rivers, lakes, and oceans, is degrading this essential resource at an alarming rate, posing a grave threat to both ecological stability and public health. The sources of this contamination are manifold and relentless. Industrial facilities discharge a toxic cocktail of untreated effluents containing heavy metals like mercury and lead, while agricultural runoff carries pesticides and chemical fertilizers into our waterways, triggering algal blooms that deplete oxygen and create vast 'dead zones.' Furthermore, the pervasive and irresponsible disposal of single-use plastics and untreated domestic sewage introduces a deluge of non-biodegradable waste and dangerous pathogens into the water systems that millions rely on. The consequences of this negligence are catastrophic. Aquatic ecosystems collapse, fish populations perish, and entire food chains are poisoned. For human populations, particularly in developing areas, the impact is immediate and devastating, leading to widespread outbreaks of waterborne diseases such as cholera, typhoid, and dysentery. Combating this crisis demands a robust, multi-level response. Governments must strictly enforce environmental laws and invest heavily in modern water and effluent treatment plants (ETPs). Industries must be held accountable for their waste, and communities must be mobilized through mass-awareness campaigns to embrace sustainable practices like waste segregation and the reduction of plastic consumption. We have a profound custodial duty to protect this finite resource, for in poisoning our water, we are ultimately poisoning ourselves."
+            },
+            8: {
+                title: "Mobile Phone",
+                content: "The mobile phone has evolved from a luxury communication device into the ubiquitous emblem of the 21st century, a powerful handheld computer that has fundamentally reshaped the fabric of modern society. Its transformative impact is undeniable. As a portable gateway to the world's collective knowledge, it has democratized information, offering unprecedented access to education, news, and vital services. Economically, it has become a catalyst for empowerment, enabling vast ecosystems of mobile banking, like bKash and Nagad in Bangladesh, and facilitating e-commerce that allows small entrepreneurs to reach global markets. Socially, it bridges geographical distances, connecting families and friends across continents with an ease that was once unimaginable. However, this revolutionary tool casts a long and complex shadow. The very connectivity it offers can spiral into digital addiction, leading to an erosion of genuine, face-to-face social interaction and fostering a culture of constant distraction. The platform's open nature has made it a fertile ground for the rapid spread of dangerous misinformation and 'fake news,' while also creating new avenues for insidious threats like cyberbullying and invasions of privacy. The challenge, therefore, lies not in rejecting this technology but in mastering it. The path forward requires cultivating 'digital citizenship'—a conscious and mindful approach to our online lives. This involves teaching users, especially the young, to critically evaluate information, set healthy boundaries for screen time, and prioritize real-world engagement. The mobile phone is a tool of immense power; its ultimate contribution to humanity will be determined not by its features, but by the wisdom and discipline with which we choose to use it."
+            }
+        };
+
+        let currentParagraphIndex = -1; // Index in orderedParagraphIds
+        const orderedParagraphIds = Object.keys(paragraphs).map(Number).sort((a, b) => a - b);
+        let currentFontSize = 'medium'; // Default font size
+
+        let dictionaryData = {}; // To store the dictionary data from data.json
+        const dictionaryPopup = document.getElementById('dictionaryPopup');
+        const blurOverlay = document.getElementById('blurOverlay'); // Get blur overlay element
+        let popupHideTimeout; // To manage popup visibility for hover
+        let popupShowTimeout; // To manage popup show delay for hover
+        let isPopupPinned = false; // New state to track if popup is pinned by click
+        let activeHoverWord = null; // To keep track of the word currently being hovered (either hovered or pinned)
+        let pinnedWordElement = null; // To keep track of the element that is currently pinned
+        let wordDetailsEnabled = true; // New state for the toggle button
+
+        // Preloader elements
+        const preloader = document.getElementById('preloader');
+        const preloaderText = document.getElementById('preloader-text');
+        const preloaderCountElement = document.getElementById('preloader-count'); // Get the specific count element
+        const mainContainer = document.querySelector('.container');
+        const buttonGrid = document.getElementById('button-grid'); // Get the button grid element
+        const paragraphDisplay = document.getElementById('paragraph-display'); // Get the paragraph display element
+
+
+        // Function to load the dictionary data from data.json with preloader
+        async function loadDictionary() {
+            preloader.style.opacity = '1'; // Ensure preloader is visible
+            preloader.style.display = 'flex'; // Ensure preloader is displayed
+            preloaderCountElement.innerText = '0'; // Initial count
+
+            try {
+                const response = await fetch('data.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                dictionaryData = await response.json();
+                console.log('Dictionary data loaded successfully.');
+
+                const totalDictionaryWords = Object.keys(dictionaryData).length;
+                let currentCount = 0;
+                // Calculate increment to make the count animation smooth over a short period
+                const animationDuration = 1000; // 1 second for the counting animation
+                const updateInterval = 10; // Milliseconds per update
+                const increments = animationDuration / updateInterval;
+                const incrementAmount = Math.max(1, Math.floor(totalDictionaryWords / increments));
+
+
+                const counterInterval = setInterval(() => {
+                    currentCount += incrementAmount;
+                    if (currentCount >= totalDictionaryWords) {
+                        currentCount = totalDictionaryWords;
+                        clearInterval(counterInterval);
+                        // Stay on max number for 1.2 seconds
+                        setTimeout(() => {
+                            preloader.style.opacity = '0'; // Start fade out
+                            mainContainer.style.opacity = '1'; // Start fade in for main content
+                            document.body.style.overflow = 'auto'; // Re-enable scrolling
+                            mainContainer.style.pointerEvents = 'auto'; // Re-enable interactions
+
+                            // Ensure the button grid is visible and paragraph display is hidden
+                            buttonGrid.classList.remove('hidden');
+                            paragraphDisplay.classList.add('hidden');
+
+                            // Hide preloader completely after transition
+                            preloader.addEventListener('transitionend', () => {
+                                preloader.style.display = 'none';
+                            }, { once: true }); // Ensure listener is removed after one use
+                        }, 1200); // 1.2 seconds delay
+                    }
+                    preloaderCountElement.innerText = currentCount; // Update only the count span
+                }, updateInterval);
+
+
+            } catch (error) {
+                console.error('Error loading dictionary data:', error);
+                preloaderText.innerHTML = 'Error loading dictionary. Please refresh.'; // Use innerHTML for error
+                if (preloaderCountElement) {
+                    preloaderCountElement.style.display = 'none'; // Hide count on error
+                }
+                // Keep preloader visible on error or provide a retry option
+            }
+        }
+
+        function getWordCount(text) {
+            if (!text) return 0;
+            const words = text.split(/\s+/).filter(word => word.length > 0);
+            return words.length;
+        }
+
+        // Function to process paragraph content and make words hoverable
+        function processParagraphContent(content) {
+            // Regex to split by spaces and common punctuation, keeping punctuation with words
+            const wordsAndPunctuation = content.match(/(\b\w+\b|[.,!?;:()"]|\s+)/g);
+            if (!wordsAndPunctuation) return content;
+
+            let processedHtml = '';
+            wordsAndPunctuation.forEach(part => {
+                const cleanedWord = part.replace(/[^a-zA-Z]/g, '').toUpperCase(); // Remove non-alpha chars for lookup
+
+                if (cleanedWord && dictionaryData[cleanedWord]) {
+                    // Wrap the original part (with its punctuation) in a span
+                    processedHtml += `<span class="hoverable-word" data-word="${cleanedWord}">${part}</span>`;
+                } else {
+                    processedHtml += part; // Add as is if not a dictionary word
+                }
+            });
+            return processedHtml;
+        }
+
+        function showParagraph(id) {
+            const paragraphData = paragraphs[id];
+            if (paragraphData) {
+                currentParagraphIndex = orderedParagraphIds.indexOf(id); // Update current index
+
+                const paragraphTitleElement = document.getElementById('paragraph-title');
+                paragraphTitleElement.innerHTML = `${paragraphData.title} <span id="word-count-display"></span>`; // Add span for word count
+
+                // Process content for hoverable words
+                const processedContent = processParagraphContent(paragraphData.content);
+                document.getElementById('paragraph-content').innerHTML = processedContent; // Use innerHTML
+
+                buttonGrid.classList.add('hidden'); // Hide the button grid
+                paragraphDisplay.classList.remove('hidden'); // Show the paragraph display
+
+                // Update word count display
+                const wordCount = getWordCount(paragraphData.content);
+                document.getElementById('word-count-display').innerText = `(${wordCount} words)`;
+
+                // Apply current font size
+                applyFontSize();
+
+                // Enable/disable nav buttons
+                updateNavButtons();
+
+                // Clear any active highlights or pins when a new paragraph is loaded
+                resetActiveState();
+            }
+        }
+
+        function showNextParagraph() {
+            if (currentParagraphIndex < orderedParagraphIds.length - 1) {
+                showParagraph(orderedParagraphIds[currentParagraphIndex + 1]);
+            }
+        }
+
+        function showPrevParagraph() {
+            if (currentParagraphIndex > 0) {
+                showParagraph(orderedParagraphIds[currentParagraphIndex - 1]);
+            }
+        }
+
+        function updateNavButtons() {
+            const prevBtn = document.getElementById('prev-button');
+            const nextBtn = document.getElementById('next-button');
+
+            if (prevBtn) prevBtn.disabled = (currentParagraphIndex <= 0);
+            if (nextBtn) nextBtn.disabled = (currentParagraphIndex >= orderedParagraphIds.length - 1);
+        }
+
+        // Function to show the home screen (button grid)
+        function showHome() {
+            paragraphDisplay.classList.add('hidden'); // Hide paragraph display
+            buttonGrid.classList.remove('hidden'); // Show button grid
+            resetActiveState(); // Clear any active popups/highlights
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (event) => {
+            // Only navigate if a paragraph is being displayed (not on the main button grid)
+            if (paragraphDisplay.classList.contains('hidden')) {
+                return;
+            }
+            if (event.key === 'ArrowRight') {
+                showNextParagraph();
+            } else if (event.key === 'ArrowLeft') {
+                showPrevParagraph();
+            }
+        });
+
+        function applyFontSize() {
+            const paragraphElement = document.getElementById('paragraph-content');
+            if (paragraphElement) {
+                switch (currentFontSize) {
+                    case 'small':
+                        paragraphElement.style.fontSize = '1.2em';
+                        break;
+                    case 'medium':
+                        paragraphElement.style.fontSize = '1.6em'; // Original size
+                        break;
+                    case 'big':
+                        paragraphElement.style.fontSize = '2.0em';
+                        break;
+                }
+            }
+        }
+
+        function setFontSize(size) {
+            currentFontSize = size;
+            applyFontSize();
+        }
+
+        // Resets the state of any highlighted or pinned word
+        function resetActiveState() {
+            clearTimeout(popupShowTimeout);
+            clearTimeout(popupHideTimeout);
+
+            if (activeHoverWord) {
+                activeHoverWord.classList.remove('highlighted');
+                activeHoverWord = null;
+            }
+            if (pinnedWordElement) {
+                pinnedWordElement.classList.remove('highlighted');
+                pinnedWordElement = null;
+            }
+            isPopupPinned = false;
+            dictionaryPopup.classList.add('hidden');
+            dictionaryPopup.style.opacity = '0';
+            dictionaryPopup.style.visibility = 'hidden';
+            dictionaryPopup.style.pointerEvents = 'none';
+            blurOverlay.classList.remove('active');
+            blurOverlay.classList.add('hidden');
+        }
+
+        // --- Dictionary Popup Logic ---
+
+        function displayDictionaryPopup(targetElement) {
+            if (!wordDetailsEnabled) { // Check if word details are enabled
+                return;
+            }
+
+            const word = targetElement.dataset.word;
+            const wordDetails = dictionaryData[word];
+
+            if (wordDetails) {
+                let popupContent = `<h4>${word}</h4>`;
+
+                // Meanings
+                if (wordDetails.MEANINGS && wordDetails.MEANINGS.length > 0) {
+                    popupContent += `<h5>Meanings:</h5><ul>`;
+                    wordDetails.MEANINGS.forEach(meaning => {
+                        const [type, definition, categories, examples] = meaning;
+                        popupContent += `<li><span class="meaning-type">${type}</span>: ${definition}`;
+                        if (examples && examples.length > 0) {
+                            popupContent += `<span class="example-sentence"> (e.g., ${examples.join('; ')})</span>`;
+                        }
+                        popupContent += `</li>`;
+                    });
+                    popupContent += `</ul>`;
+                } else {
+                    popupContent += `<p class="no-details">No meanings found.</p>`;
+                }
+
+                // Synonyms
+                if (wordDetails.SYNONYMS && wordDetails.SYNONYMS.length > 0) {
+                    popupContent += `<h5>Synonyms:</h5><div class="related-words">`;
+                    wordDetails.SYNONYMS.forEach(synonym => {
+                        popupContent += `<span>${synonym}</span>`;
+                    });
+                    popupContent += `</div>`;
+                } else {
+                    popupContent += `<p class="no-details">No synonyms found.</p>`;
+                }
+
+                // Antonyms
+                if (wordDetails.ANTONYMS && wordDetails.ANTONYMS.length > 0) {
+                    popupContent += `<h5>Antonyms:</h5><div class="related-words">`;
+                    wordDetails.ANTONYMS.forEach(antonym => {
+                        popupContent += `<span>${antonym}</span>`;
+                    });
+                    popupContent += `</div>`;
+                } else {
+                    popupContent += `<p class="no-details">No antonyms found.</p>`;
+                }
+
+                dictionaryPopup.innerHTML = popupContent;
+
+                // Position the popup
+                const targetRect = targetElement.getBoundingClientRect();
+                const containerRect = document.querySelector('.container').getBoundingClientRect();
+
+                // Calculate position relative to the container
+                let popupLeft = targetRect.left - containerRect.left + (targetRect.width / 2);
+                let popupTop = targetRect.top - containerRect.top;
+
+                // Temporarily show to get its dimensions
+                dictionaryPopup.style.visibility = 'hidden';
+                dictionaryPopup.style.opacity = '0';
+                dictionaryPopup.classList.remove('hidden'); // Make it display block for measurement
+
+                const popupRect = dictionaryPopup.getBoundingClientRect();
+
+                // Adjust top to be above the word
+                popupTop -= popupRect.height + 10; // 10px padding above the word
+
+                // Center horizontally relative to the word
+                popupLeft -= popupRect.width / 2;
+
+                // Ensure popup stays within viewport (horizontal)
+                if (popupLeft < 0) {
+                    popupLeft = 0;
+                } else if (popupLeft + popupRect.width > containerRect.width) {
+                    popupLeft = containerRect.width - popupRect.width;
+                }
+
+                // Ensure popup stays within viewport (vertical - if it goes too high, place below)
+                if (popupTop < 0) {
+                    popupTop = targetRect.bottom - containerRect.top + 10; // Place below if not enough space above
+                }
+
+                dictionaryPopup.style.left = `${popupLeft}px`;
+                dictionaryPopup.style.top = `${popupTop}px`;
+                dictionaryPopup.style.visibility = 'visible';
+                dictionaryPopup.style.opacity = '1';
+                dictionaryPopup.style.pointerEvents = 'auto'; // Enable pointer events when visible
+
+            } else {
+                // If word not found, ensure popup is hidden
+                hideDictionaryPopup();
+            }
+        }
+
+        // This function only hides the popup and blur, does NOT manage highlight
+        function hideDictionaryPopup() {
+            clearTimeout(popupHideTimeout);
+            dictionaryPopup.style.opacity = '0';
+            dictionaryPopup.style.visibility = 'hidden';
+            dictionaryPopup.classList.add('hidden');
+            dictionaryPopup.style.pointerEvents = 'none';
+
+            blurOverlay.classList.remove('active');
+            blurOverlay.classList.add('hidden');
+        }
+
+        function handleMouseOver(event) {
+            if (!wordDetailsEnabled) { // If word details are disabled, do nothing on hover
+                return;
+            }
+
+            clearTimeout(popupHideTimeout);
+            clearTimeout(popupShowTimeout);
+
+            const target = event.target;
+            if (target.classList.contains('hoverable-word')) {
+                // If a different word is currently highlighted (either from previous hover or pinned)
+                // and it's not the word we're currently hovering over, remove its highlight.
+                if (activeHoverWord && activeHoverWord !== target) {
+                    activeHoverWord.classList.remove('highlighted');
+                }
+                if (pinnedWordElement && pinnedWordElement !== target) {
+                    pinnedWordElement.classList.remove('highlighted');
+                }
+
+                activeHoverWord = target; // Set the current hovered word
+
+                // If the hovered word is NOT the pinned word, add highlight for hover
+                // If it IS the pinned word, it should already be highlighted via pin logic
+                if (!isPopupPinned || (isPopupPinned && pinnedWordElement !== target)) {
+                    activeHoverWord.classList.add('highlighted');
+                }
+
+                if (!isPopupPinned || pinnedWordElement === target) { // Only show popup if not pinned, or if hovering the currently pinned word
+                    popupShowTimeout = setTimeout(() => {
+                        if (activeHoverWord === target) { // Only show if still hovering the same word
+                            displayDictionaryPopup(target);
+                        }
+                    }, 200); // 0.2 second delay
+                }
+            } else if (!target.classList.contains('hoverable-word') && !dictionaryPopup.contains(target) && !isPopupPinned) {
+                // If moving off a word and not over the popup, and not pinned, hide it
+                hideDictionaryPopup();
+            }
+        }
+
+        function handleMouseOut(event) {
+            if (!wordDetailsEnabled) { // If word details are disabled, do nothing on mouse out
+                resetActiveState(); // Ensure popup is hidden if toggle is unchecked
+                return;
+            }
+
+            clearTimeout(popupShowTimeout);
+
+            const target = event.target;
+
+            // If the mouse is leaving a hoverable word
+            if (target.classList.contains('hoverable-word')) {
+                // If the word is NOT the pinned word, remove its highlight immediately
+                if (target !== pinnedWordElement) {
+                    target.classList.remove('highlighted');
+                }
+                // If the mouse is leaving the active hover word and it's not the pinned word
+                if (activeHoverWord === target && activeHoverWord !== pinnedWordElement) {
+                    activeHoverWord = null; // Clear active hover word only if it's not pinned
+                }
+            }
+
+            // If the popup is pinned, we do NOT hide it or its blur
+            if (isPopupPinned) {
+                return;
+            }
+
+            // If mouse leaves the popup itself (and it's not pinned)
+            // or leaves the document/container and nothing is pinned
+            popupHideTimeout = setTimeout(() => {
+                // Check again in case state changed during timeout
+                if (!isPopupPinned) {
+                    hideDictionaryPopup();
+                }
+            }, 100); // Small delay
+        }
+
+        function handleClickOnWord(event) {
+            if (!wordDetailsEnabled) { // If word details are disabled, do nothing on click
+                return;
+            }
+
+            const target = event.target;
+
+            if (target.classList.contains('hoverable-word')) {
+                event.stopPropagation(); // Prevent global click from firing
+
+                // Case 1: Clicked word is already pinned
+                if (isPopupPinned && pinnedWordElement === target) {
+                    resetActiveState(); // Unpin, remove highlight, hide popup, hide blur
+                }
+                // Case 2: Clicked word is different from the currently pinned word, or nothing is pinned
+                else {
+                    // Clear any existing active state (prev pinned or hovered word)
+                    resetActiveState();
+
+                    // Set the new pinned state
+                    isPopupPinned = true;
+                    pinnedWordElement = target; // Store the element that is now pinned
+                    activeHoverWord = target; // The pinned word is also the active (highlighted) word
+
+                    pinnedWordElement.classList.add('highlighted'); // Highlight the pinned word
+                    displayDictionaryPopup(target); // Display popup for the pinned word
+                    blurOverlay.classList.add('active'); // Show blur
+                    blurOverlay.classList.remove('hidden');
+                }
+            }
+        }
+
+        // Event delegation for mouseover/mouseout on the paragraph content
+        const paragraphContentElement = document.getElementById('paragraph-content');
+        paragraphContentElement.addEventListener('mouseover', handleMouseOver);
+        paragraphContentElement.addEventListener('mouseout', handleMouseOut);
+        paragraphContentElement.addEventListener('click', handleClickOnWord); // Add click listener for words
+
+        // Keep popup visible if mouse moves over it (only if not pinned)
+        dictionaryPopup.addEventListener('mouseover', () => {
+            if (!isPopupPinned && wordDetailsEnabled) { // Only clear hide timeout if popup isn't pinned and enabled
+                clearTimeout(popupHideTimeout);
+            }
+        });
+        dictionaryPopup.addEventListener('mouseout', (event) => {
+            if (!isPopupPinned && wordDetailsEnabled) { // Only process mouseout if popup isn't pinned and enabled
+                // If mouse leaves popup to go to another hoverable word, don't hide immediately
+                if (event.relatedTarget && event.relatedTarget.classList.contains('hoverable-word')) {
+                    return;
+                }
+                // Otherwise, initiate hide with a delay
+                popupHideTimeout = setTimeout(() => {
+                    if (!isPopupPinned && wordDetailsEnabled) { // Double check before hiding
+                        hideDictionaryPopup();
+                    }
+                }, 100);
+            }
+        });
+
+
+        // Global click listener for clicks outside popup and words
+        document.addEventListener('click', (event) => {
+            const target = event.target;
+
+            // If the popup is pinned, and the click is NOT inside the popup, AND not on the pinned word
+            if (isPopupPinned && !dictionaryPopup.contains(target) && (!pinnedWordElement || !pinnedWordElement.contains(target))) {
+                resetActiveState(); // Unpin, remove highlight, hide popup, hide blur
+            }
+        });
+
+        // Toggle button logic
+        const wordDetailsToggle = document.getElementById('wordDetailsToggle');
+        wordDetailsToggle.addEventListener('change', () => {
+            wordDetailsEnabled = wordDetailsToggle.checked;
+            if (!wordDetailsEnabled) {
+                // If disabled, ensure any active popup/highlight is cleared
+                resetActiveState();
+            }
+            // Optionally, you might want to adjust the cursor for hoverable words
+            // if you have a lot of them, but the current CSS handles this implicitly
+            // by only applying .hoverable-word if it's a dictionary word.
+            // However, the `cursor: help` will still show. You might want to remove it
+            // if word details are disabled.
+            document.querySelectorAll('.hoverable-word').forEach(wordElement => {
+                if (wordDetailsEnabled) {
+                    wordElement.style.cursor = 'help';
+                    wordElement.style.borderBottomStyle = 'dotted';
+                } else {
+                    wordElement.style.cursor = 'default';
+                    wordElement.style.borderBottomStyle = 'none';
+                    wordElement.classList.remove('highlighted'); // Remove any lingering highlights
+                }
+            });
+        });
+
+
+        // Ensure the blur overlay is hidden initially
+        document.addEventListener('DOMContentLoaded', () => {
+            blurOverlay.classList.add('hidden');
+            // Set initial state of the toggle
+            wordDetailsToggle.checked = wordDetailsEnabled;
+            // Initially hide the main container until preloader finishes
+            mainContainer.style.opacity = '0';
+            mainContainer.style.pointerEvents = 'none'; // Disable interactions until loaded
+        });
+
+        // Load dictionary data and initial paragraph when the page loads
+        window.onload = () => {
+            loadDictionary();
+        };
+    </script>
+</body>
+</html>
