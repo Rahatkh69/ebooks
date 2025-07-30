@@ -328,116 +328,116 @@ body {
         </div>
     </div>
 
+<script>
+    
+    
+    
+    document.addEventListener('DOMContentLoaded', () => {
+    const preloader = document.getElementById('preloader');
 
-        <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const preloader = document.getElementById('preloader');
+    // Function to fetch JSON data
+    async function fetchJsonData(url) {
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status} from ${url}`);
+            }
+            return await response.json();
+        } catch (error) {
+            console.error(`Error fetching data from ${url}:`, error);
+            return { laws: [] }; // Return empty array on error to prevent breaking the app
+        }
+    }
 
-            // Function to fetch JSON data
-            async function fetchJsonData(url) {
-                try {
-                    const response = await fetch(url);
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status} from ${url}`);
+    // Combine fetching both JSON files
+    async function loadAllLaws() {
+        const [dataJson, extraJson] = await Promise.all([
+            fetchJsonData('data.json'),
+            fetchJsonData('extra.json')
+        ]);
+
+        // Ensure 'laws' property exists and is an array in both responses
+        const laws1 = Array.isArray(dataJson.laws) ? dataJson.laws : [];
+        const laws2 = Array.isArray(extraJson.laws) ? extraJson.laws : [];
+
+        return [...laws1, ...laws2]; // Combine the laws arrays
+    }
+
+    // Main logic after loading all laws
+    loadAllLaws().then(combinedLaws => {
+        let currentLawIndex = 0;
+        let filteredLaws = combinedLaws; // Keep track of currently filtered laws for navigation
+
+        // Hide preloader after data is loaded
+        preloader.classList.add('hidden');
+
+        // Calculate category counts based on combined data
+        const categoryCounts = combinedLaws.reduce((acc, law) => {
+            acc[law.category] = (acc[law.category] || 0) + 1;
+            return acc;
+        }, {});
+        categoryCounts['all'] = combinedLaws.length;
+
+        // Update filter button text with counts
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            const category = btn.dataset.category;
+            const count = categoryCounts[category] || 0;
+            const baseText = category.charAt(0).toUpperCase() + category.slice(1); // Capitalize
+            btn.textContent = `${baseText} (${count})`; // Format as "Category (Count)"
+        });
+
+        // Render laws
+        function renderLaws(lawsToRender) {
+            const grid = document.getElementById('lawsGrid');
+            grid.innerHTML = '';
+            lawsToRender.forEach((law, index) => {
+                const card = document.createElement('div');
+                card.className = 'law-card';
+                card.dataset.category = law.category;
+                card.dataset.index = index;
+                card.innerHTML = `
+<div class="domain-card" data-id="${law.lawNumber}" data-category="${law.category}">
+    <div class="domain-header">
+        <div class="domain-id">${law.lawNumber}</div>
+        <div class="domain-name">${law.lawTitle}</div>
+    </div>
+    <div class="domain-content">
+        <div class="domain-category">${law.category}</div>
+    </div>
+</div>
+                `;
+                card.addEventListener('click', () => {
+                    const clickedLawGlobalIndex = combinedLaws.findIndex(
+                        l => l.lawNumber === law.lawNumber && l.lawTitle === law.lawTitle
+                    );
+                    if (clickedLawGlobalIndex !== -1) {
+                        currentLawIndex = clickedLawGlobalIndex;
+                        openModal(combinedLaws[currentLawIndex]);
+                        window.history.pushState({ modal: true, lawIndex: currentLawIndex }, document.title);
                     }
-                    return await response.json();
-                } catch (error) {
-                    console.error(`Error fetching data from ${url}:`, error);
-                    return { laws: [] }; // Return empty array on error to prevent breaking the app
-                }
-            }
-
-            // Combine fetching both JSON files
-            async function loadAllLaws() {
-                const [dataJson, extraJson] = await Promise.all([
-                    fetchJsonData('data.json'),
-                    fetchJsonData('extra.json')
-                ]);
-
-                // Ensure 'laws' property exists and is an array in both responses
-                const laws1 = Array.isArray(dataJson.laws) ? dataJson.laws : [];
-                const laws2 = Array.isArray(extraJson.laws) ? extraJson.laws : [];
-
-                return [...laws1, ...laws2]; // Combine the laws arrays
-            }
-
-            // Main logic after loading all laws
-            loadAllLaws().then(combinedLaws => {
-                let currentLawIndex = 0;
-                let filteredLaws = combinedLaws; // Keep track of currently filtered laws for navigation
-
-                // Hide preloader after data is loaded
-                preloader.classList.add('hidden');
-
-                // Calculate category counts based on combined data
-                const categoryCounts = combinedLaws.reduce((acc, law) => {
-                    acc[law.category] = (acc[law.category] || 0) + 1;
-                    return acc;
-                }, {});
-                categoryCounts['all'] = combinedLaws.length;
-
-                // Update filter button text with counts
-                document.querySelectorAll('.filter-btn').forEach(btn => {
-                    const category = btn.dataset.category;
-                    const count = categoryCounts[category] || 0;
-                    const baseText = category.charAt(0).toUpperCase() + category.slice(1); // Capitalize
-                    btn.textContent = `${baseText} (${count})`; // Format as "Category (Count)"
                 });
+                grid.appendChild(card);
+            });
+        }
 
-                // Render laws
-                function renderLaws(lawsToRender) {
-                    const grid = document.getElementById('lawsGrid');
-                    grid.innerHTML = '';
-                    lawsToRender.forEach((law, index) => {
-                        const card = document.createElement('div');
-                        card.className = 'law-card';
-                        card.dataset.category = law.category;
-                        // Store the index within the *current filtered list* for navigation
-                        card.dataset.index = index;
-                        card.innerHTML = `
-<div class="domain-card" data-id="1" data-category="Physical">
-            <div class="domain-header">
-                <div class="domain-id">${law.lawNumber}</div>
-                <div class="domain-name">${law.lawTitle}</div>
-            </div>
-            <div class="domain-content">
-                <div class="domain-category">${law.category}</div>
-            </div>
-        </div>
-                        `;
-                        card.addEventListener('click', () => {
-                            // Find the index of the clicked law in the *full combinedLaws array*
-                            // This is crucial for correct prev/next navigation across all laws
-                            const clickedLawGlobalIndex = combinedLaws.findIndex(
-                                l => l.number === law.number && l.title === law.title
-                            );
-                            if (clickedLawGlobalIndex !== -1) {
-                                currentLawIndex = clickedLawGlobalIndex;
-                                openModal(combinedLaws[currentLawIndex]);
-                                window.history.pushState({ modal: true, lawIndex: currentLawIndex }, document.title);
-                            }
-                        });
-                        grid.appendChild(card);
-                    });
-                }
+        // Open modal
+        function openModal(law) {
+            const modal = document.getElementById('lawModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalContent = document.getElementById('modalContent');
+            const prevLawBtn = document.getElementById('prevLaw');
+            const nextLawBtn = document.getElementById('nextLaw');
 
-                // Open modal
-                function openModal(law) {
-                    const modal = document.getElementById('lawModal');
-                    const modalTitle = document.getElementById('modalTitle');
-                    const modalContent = document.getElementById('modalContent');
-                    const prevLawBtn = document.getElementById('prevLaw');
-                    const nextLawBtn = document.getElementById('nextLaw');
-
-  // Set title and content
-            modalContent.innerHTML = `<div class="modal-section">
+            // Set title and content
+            modalContent.innerHTML = `
+<div class="modal-section">
     ${law.lawNumber && law.lawTitle ? `<h2>Law ${law.lawNumber}: ${law.lawTitle}</h2>` : ''}
     ${law.category ? `<p><strong>Category:</strong> ${law.category}</p>` : ''}
     ${law.introduction ? `
         <p><strong>Introduction:</strong></p>
         <ul class="modal-list">
             <li><p>EN: ${law.introduction.english || 'N/A'}</p></li>
-            <li><p><div class="bn">BN: ${law.introduction.bangla || 'N/A'}</div><p></li>
+            <li><p><div class="bn">BN: ${law.introduction.bangla || 'N/A'}</div></p></li>
         </ul>
     ` : ''}
     ${law.whyThisLawApplies ? `
@@ -473,7 +473,7 @@ body {
     ` : ''}
     ${law.howToMaster ? `
         <p><strong>${law.howToMaster.title || 'How to Master'}:</strong></p>
-        <p>${law.howToMaster.description || 'Follow these points bellow'}</p>
+        <p>${law.howToMaster.description || 'Follow these points below'}</p>
         ${law.howToMaster.points && law.howToMaster.points.length > 0 ? `
             <ul class="modal-list">
                 ${law.howToMaster.points.map(point => `<li>${point}</li>`).join('')}
@@ -514,101 +514,99 @@ body {
         <p><strong>Your Edge:</strong> ${law.greeneWarningAndYourEdge.edge || 'N/A'}</p>
     ` : ''}
     ${law.finalChallenge ? `
-        <p><strong>Final Challenge:</strong> ${law.finalChallenge}</p>
+        <p><strong>Final Challenge:</strong></p>
+        <p>${law.finalChallenge}</p>
     ` : ''}
-</div>`;
+</div>
+            `;
 
-                    // Disable/enable navigation buttons based on current law index
-                    prevLawBtn.classList.toggle('disabled', currentLawIndex === 0);
-                    nextLawBtn.classList.toggle('disabled', currentLawIndex === combinedLaws.length - 1);
+            // Disable/enable navigation buttons based on current law index
+            prevLawBtn.classList.toggle('disabled', currentLawIndex === 0);
+            nextLawBtn.classList.toggle('disabled', currentLawIndex === combinedLaws.length - 1);
 
-                    document.body.classList.add('modal-open');
-                    modal.style.display = 'flex';
+            document.body.classList.add('modal-open');
+            modal.style.display = 'flex';
+        }
+
+        // Close modal
+        function closeModal() {
+            const modal = document.getElementById('lawModal');
+            modal.style.display = 'none';
+            document.body.classList.remove('modal-open');
+        }
+
+        document.querySelector('.close-btn').addEventListener('click', closeModal);
+
+        // Navigation for previous and next laws
+        document.getElementById('prevLaw').addEventListener('click', () => {
+            if (currentLawIndex > 0) {
+                currentLawIndex--;
+                openModal(combinedLaws[currentLawIndex]);
+                window.history.replaceState({ modal: true, lawIndex: currentLawIndex }, document.title);
+            }
+        });
+
+        document.getElementById('nextLaw').addEventListener('click', () => {
+            if (currentLawIndex < combinedLaws.length - 1) {
+                currentLawIndex++;
+                openModal(combinedLaws[currentLawIndex]);
+                window.history.replaceState({ modal: true, lawIndex: currentLawIndex }, document.title);
+            }
+        });
+
+        // Keyboard controls
+        document.addEventListener('keydown', (e) => {
+            if (document.getElementById('lawModal').style.display === 'flex') {
+                if (e.key === 'ArrowLeft' && currentLawIndex > 0) {
+                    currentLawIndex--;
+                    openModal(combinedLaws[currentLawIndex]);
+                    window.history.replaceState({ modal: true, lawIndex: currentLawIndex }, document.title);
+                } else if (e.key === 'ArrowRight' && currentLawIndex < combinedLaws.length - 1) {
+                    currentLawIndex++;
+                    openModal(combinedLaws[currentLawIndex]);
+                    window.history.replaceState({ modal: true, lawIndex: currentLawIndex }, document.title);
+                } else if (e.key === 'Escape') {
+                    closeModal();
+                    window.history.back(); // Go back in history to close modal state
                 }
+            }
+        });
 
-                // Close modal
-                function closeModal() {
-                    const modal = document.getElementById('lawModal');
-                    modal.style.display = 'none';
-                    document.body.classList.remove('modal-open');
-                }
+        // Handle browser back/forward button for modal state
+        window.addEventListener('popstate', (event) => {
+            const modal = document.getElementById('lawModal');
+            if (event.state && event.state.modal) {
+                currentLawIndex = event.state.lawIndex;
+                openModal(combinedLaws[currentLawIndex]);
+            } else if (modal.style.display === 'flex') {
+                closeModal();
+            }
+        });
 
-                document.querySelector('.close-btn').addEventListener('click', closeModal);
-
-                // Navigation for previous and next laws
-                document.getElementById('prevLaw').addEventListener('click', () => {
-                    if (currentLawIndex > 0) {
-                        currentLawIndex--;
-                        openModal(combinedLaws[currentLawIndex]);
-                        window.history.replaceState({ modal: true, lawIndex: currentLawIndex }, document.title);
-                    }
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('active');
                 });
+                btn.classList.add('active');
 
-                document.getElementById('nextLaw').addEventListener('click', () => {
-                    if (currentLawIndex < combinedLaws.length - 1) {
-                        currentLawIndex++;
-                        openModal(combinedLaws[currentLawIndex]);
-                        window.history.replaceState({ modal: true, lawIndex: currentLawIndex }, document.title);
-                    }
-                });
-
-                // Keyboard controls
-                document.addEventListener('keydown', (e) => {
-                    if (document.getElementById('lawModal').style.display === 'flex') {
-                        if (e.key === 'ArrowLeft' && currentLawIndex > 0) {
-                            currentLawIndex--;
-                            openModal(combinedLaws[currentLawIndex]);
-                            window.history.replaceState({ modal: true, lawIndex: currentLawIndex }, document.title);
-                        } else if (e.key === 'ArrowRight' && currentLawIndex < combinedLaws.length - 1) {
-                            currentLawIndex++;
-                            openModal(combinedLaws[currentLawIndex]);
-                            window.history.replaceState({ modal: true, lawIndex: currentLawIndex }, document.title);
-                        } else if (e.key === 'Escape') {
-                            closeModal();
-                            window.history.back(); // Go back in history to close modal state
-                        }
-                    }
-                });
-
-                // Handle browser back/forward button for modal state
-                window.addEventListener('popstate', (event) => {
-                    const modal = document.getElementById('lawModal');
-                    if (event.state && event.state.modal) {
-                        // If navigating back to a modal state, reopen it
-                        currentLawIndex = event.state.lawIndex;
-                        openModal(combinedLaws[currentLawIndex]);
-                    } else if (modal.style.display === 'flex') {
-                        // If navigating back from a modal state, close it
-                        closeModal();
-                    }
-                });
-
-
-                // Filter functionality
-                document.querySelectorAll('.filter-btn').forEach(btn => {
-                    btn.addEventListener('click', () => {
-                        document.querySelectorAll('.filter-btn').forEach(b => {
-                            b.classList.remove('active');
-                        });
-                        btn.classList.add('active');
-
-                        const category = btn.dataset.category;
-                        filteredLaws = category === 'all'
-                            ? combinedLaws
-                            : combinedLaws.filter(law => law.category === category);
-                        renderLaws(filteredLaws);
-                    });
-                });
-
-                // Initial render of all combined laws
-                renderLaws(combinedLaws);
-            }).catch(error => {
-                console.error('Failed to load all laws:', error);
-                preloader.classList.add('hidden'); // Ensure preloader hides even on error
-                // Display a user-friendly error message if needed
-                document.getElementById('lawsGrid').innerHTML = '<p class="text-center text-red-500 text-lg">Failed to load laws. Please try again later.</p>';
+                const category = btn.dataset.category;
+                filteredLaws = category === 'all'
+                    ? combinedLaws
+                    : combinedLaws.filter(law => law.category === category);
+                renderLaws(filteredLaws);
             });
         });
-        </script>
+
+        // Initial render of all combined laws
+        renderLaws(combinedLaws);
+    }).catch(error => {
+        console.error('Failed to load all laws:', error);
+        preloader.classList.add('hidden'); // Ensure preloader hides even on error
+        document.getElementById('lawsGrid').innerHTML = '<p class="text-center text-red-500 text-lg">Failed to load laws. Please try again later.</p>';
+    });
+});
+</script>
 </body>
 </html>
