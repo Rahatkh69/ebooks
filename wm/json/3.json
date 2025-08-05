@@ -1,0 +1,4505 @@
+{
+  "id": "wordset3",
+  "words": [
+    {
+      "wordset_id": 3,
+      "id": 1001,
+      "word": "actively",
+      "frequency": 29,
+      "definition": "In an active manner; by a conscious effort.",
+      "bangla": "সক্রিয়ভাবে",
+      "example": "He is actively looking for a new job."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1002,
+      "word": "effects",
+      "frequency": 29,
+      "definition": "A change which is a result or consequence of an action or other cause.",
+      "bangla": "প্রভাব, ফলাফল",
+      "example": "The medicine had some side effects."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1003,
+      "word": "plans",
+      "frequency": 29,
+      "definition": "A detailed proposal for doing or achieving something.",
+      "bangla": "পরিকল্পনা",
+      "example": "They have big plans for the weekend."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1004,
+      "word": "moving",
+      "frequency": 29,
+      "definition": "Changing or capable of changing position.",
+      "bangla": "চলন্ত",
+      "example": "The moving car was a blur."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1005,
+      "word": "realizing",
+      "frequency": 29,
+      "definition": "To become fully aware of something as a fact; to understand.",
+      "bangla": "উপলব্ধি করা, বুঝতে পারা",
+      "example": "I'm just realizing how much work this will be."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1006,
+      "word": "alive",
+      "frequency": 29,
+      "definition": "Living, not dead.",
+      "bangla": "জীবিত",
+      "example": "He was glad to be alive after the accident."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1007,
+      "word": "ideal",
+      "frequency": 29,
+      "definition": "Exactly right for a particular purpose, situation, or person; perfect.",
+      "bangla": "আদর্শ",
+      "example": "This is the ideal location for a picnic."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1008,
+      "word": "direct",
+      "frequency": 29,
+      "definition": "Extending or moving from one place to another without changing direction or stopping.",
+      "bangla": "সরাসরি",
+      "example": "The direct flight saved us a lot of time."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1009,
+      "word": "land",
+      "frequency": 29,
+      "definition": "The part of the earth's surface that is not covered by water.",
+      "bangla": "জমি, ভূখণ্ড",
+      "example": "They bought a small piece of land to build a house."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1010,
+      "word": "favor",
+      "frequency": 29,
+      "definition": "An act of kindness beyond what is due or usual.",
+      "bangla": "অনুকূল্য",
+      "example": "Could you do me a favor and close the door?"
+    },
+    {
+      "wordset_id": 3,
+      "id": 1011,
+      "word": "sudden",
+      "frequency": 29,
+      "definition": "Happening or done quickly and unexpectedly.",
+      "bangla": "আকস্মিক",
+      "example": "There was a sudden change in the weather."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1012,
+      "word": "attention",
+      "frequency": 29,
+      "definition": "The action of taking notice of someone or something.",
+      "bangla": "মনোযোগ",
+      "example": "The child was seeking his parents' attention."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1013,
+      "word": "matter",
+      "frequency": 29,
+      "definition": "A subject or situation under consideration.",
+      "bangla": "বিষয়, ব্যাপার",
+      "example": "This is a serious matter."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1014,
+      "word": "return",
+      "frequency": 29,
+      "definition": "To come or go back to a place or person.",
+      "bangla": "ফিরে আসা",
+      "example": "She will return home tomorrow."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1015,
+      "word": "purpose",
+      "frequency": 29,
+      "definition": "The reason for which something is done or created.",
+      "bangla": "উদ্দেশ্য",
+      "example": "The purpose of the meeting is to make a decision."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1016,
+      "word": "effort",
+      "frequency": 29,
+      "definition": "A vigorous or determined attempt.",
+      "bangla": "প্রচেষ্টা",
+      "example": "She put a lot of effort into her studies."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1017,
+      "word": "pressure",
+      "frequency": 29,
+      "definition": "The use of persuasion or intimidation to make someone do something.",
+      "bangla": "চাপ",
+      "example": "He felt a lot of pressure to succeed."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1018,
+      "word": "avoid",
+      "frequency": 29,
+      "definition": "To keep away from or stop oneself from doing something.",
+      "bangla": "এড়িয়ে চলা, পরিহার করা",
+      "example": "She tried to avoid the main road during rush hour."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1019,
+      "word": "deal",
+      "frequency": 29,
+      "definition": "An agreement entered into by two or more parties for their mutual benefit.",
+      "bangla": "চুক্তি, লেনদেন",
+      "example": "They made a deal to work together on the project."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1020,
+      "word": "provide",
+      "frequency": 29,
+      "definition": "To make available for use; supply.",
+      "bangla": "সরবরাহ করা",
+      "example": "The hotel provides free breakfast to all its guests."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1021,
+      "word": "impact",
+      "frequency": 29,
+      "definition": "The action of one object coming forcibly into contact with another.",
+      "bangla": "প্রভাব, সংঘর্ষ",
+      "example": "The new law will have a big impact on the economy."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1022,
+      "word": "source",
+      "frequency": 29,
+      "definition": "A place, person, or thing from which something originates or can be obtained.",
+      "bangla": "উৎস",
+      "example": "The newspaper refused to reveal its source."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1023,
+      "word": "approach",
+      "frequency": 29,
+      "definition": "To come near or nearer to something or someone.",
+      "bangla": "নিকটবর্তী হওয়া, অগ্রসর হওয়া",
+      "example": "The students approached the teacher with their questions."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1024,
+      "word": "major",
+      "frequency": 29,
+      "definition": "Important, serious, or significant.",
+      "bangla": "গুরুত্বপূর্ণ, প্রধান",
+      "example": "This is a major problem that needs to be solved."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1025,
+      "word": "simply",
+      "frequency": 29,
+      "definition": "In a simple manner; without complexity.",
+      "bangla": "সাধারণভাবে",
+      "example": "I simply don't understand the instructions."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1026,
+      "word": "eventually",
+      "frequency": 29,
+      "definition": "In the end, especially after a long delay, dispute, or series of problems.",
+      "bangla": "অবশেষে",
+      "example": "Eventually, the rain stopped and we were able to leave."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1027,
+      "word": "finally",
+      "frequency": 29,
+      "definition": "After a long time; at the end.",
+      "bangla": "অবশেষে",
+      "example": "Finally, we reached the top of the mountain."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1028,
+      "word": "individual",
+      "frequency": 29,
+      "definition": "A single human being as distinct from a group.",
+      "bangla": "ব্যক্তিগত",
+      "example": "Each individual has a role to play in the team."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1029,
+      "word": "current",
+      "frequency": 29,
+      "definition": "Belonging to the present time; happening or being used or done now.",
+      "bangla": "বর্তমান",
+      "example": "The current situation is very difficult."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1030,
+      "word": "especially",
+      "frequency": 29,
+      "definition": "To a great extent; more than usual or more than others.",
+      "bangla": "বিশেষ করে",
+      "example": "She loves all desserts, especially chocolate cake."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1031,
+      "word": "despite",
+      "frequency": 29,
+      "definition": "Without being affected by; in spite of.",
+      "bangla": "সত্ত্বেও",
+      "example": "Despite the rain, they went for a walk."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1032,
+      "word": "clearly",
+      "frequency": 29,
+      "definition": "In a clear manner; without obscurity.",
+      "bangla": "স্পষ্টভাবে",
+      "example": "She spoke so clearly that everyone understood her."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1033,
+      "word": "involved",
+      "frequency": 29,
+      "definition": "Connected or concerned with someone or something.",
+      "bangla": "জড়িত",
+      "example": "He was deeply involved in the project."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1034,
+      "word": "together",
+      "frequency": 29,
+      "definition": "With or in proximity to another person or people.",
+      "bangla": "একসাথে",
+      "example": "We went to the store together."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1035,
+      "word": "challenge",
+      "frequency": 29,
+      "definition": "A call to take part in a contest or competition.",
+      "bangla": "চ্যালেঞ্জ, প্রতিদ্বন্দ্বিতা",
+      "example": "She accepted the challenge of learning a new language."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1036,
+      "word": "already",
+      "frequency": 29,
+      "definition": "By now or by the time in question.",
+      "bangla": "ইতিমধ্যে",
+      "example": "I have already finished my homework."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1037,
+      "word": "common",
+      "frequency": 29,
+      "definition": "Occurring, found, or done often; prevalent.",
+      "bangla": "সাধারণ",
+      "example": "It's a common mistake that many people make."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1038,
+      "word": "rather",
+      "frequency": 29,
+      "definition": "To a certain extent; somewhat.",
+      "bangla": "বরং",
+      "example": "He would rather stay home than go out."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1039,
+      "word": "either",
+      "frequency": 29,
+      "definition": "Used before two or more alternatives linked by 'or' to indicate that the alternatives are possibilities.",
+      "bangla": "হয় এটি, অথবা অন্যটি",
+      "example": "You can have either tea or coffee."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1040,
+      "word": "expect",
+      "frequency": 29,
+      "definition": "To regard as likely to happen.",
+      "bangla": "প্রত্যাশা করা",
+      "example": "We expect to see him soon."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1041,
+      "word": "certain",
+      "frequency": 29,
+      "definition": "Known for sure; established as a fact.",
+      "bangla": "নিশ্চিত",
+      "example": "It's certain that the sun will rise tomorrow."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1042,
+      "word": "sense",
+      "frequency": 29,
+      "definition": "A faculty by which the body perceives an external stimulus.",
+      "bangla": "অনুভব, জ্ঞান",
+      "example": "I have a sense of something being wrong."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1043,
+      "word": "future",
+      "frequency": 29,
+      "definition": "The time yet to come.",
+      "bangla": "ভবিষ্যত",
+      "example": "He is planning for his future."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1044,
+      "word": "feeling",
+      "frequency": 29,
+      "definition": "An emotional state or reaction.",
+      "bangla": "অনুভূতি",
+      "example": "I had a feeling that something was going to happen."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1045,
+      "word": "past",
+      "frequency": 29,
+      "definition": "The time that has gone by.",
+      "bangla": "অতীত",
+      "example": "He thought about his past mistakes."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1046,
+      "word": "mind",
+      "frequency": 29,
+      "definition": "The element of a person that enables them to be aware of the world and their experiences.",
+      "bangla": "মন",
+      "example": "He has a brilliant mind."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1047,
+      "word": "heart",
+      "frequency": 29,
+      "definition": "A hollow muscular organ that pumps blood throughout the body.",
+      "bangla": "হৃদয়",
+      "example": "His heart was beating fast from excitement."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1048,
+      "word": "control",
+      "frequency": 29,
+      "definition": "The power to influence or direct people's behavior or the course of events.",
+      "bangla": "নিয়ন্ত্রণ",
+      "example": "The pilot was in control of the plane."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1049,
+      "word": "effort",
+      "frequency": 29,
+      "definition": "A vigorous or determined attempt.",
+      "bangla": "প্রচেষ্টা",
+      "example": "He put a lot of effort into finishing the project on time."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1050,
+      "word": "cause",
+      "frequency": 29,
+      "definition": "A person or thing that gives rise to an action, phenomenon, or condition.",
+      "bangla": "কারণ",
+      "example": "The cause of the fire is unknown."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1051,
+      "word": "believe",
+      "frequency": 29,
+      "definition": "To accept something as true.",
+      "bangla": "বিশ্বাস করা",
+      "example": "I believe in his honesty."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1052,
+      "word": "point",
+      "frequency": 29,
+      "definition": "The sharp or tapering end of something.",
+      "bangla": "বিন্দু, বিষয়",
+      "example": "He made a valid point during the discussion."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1053,
+      "word": "force",
+      "frequency": 29,
+      "definition": "Strength or power as applied to physical action or movement.",
+      "bangla": "বল, শক্তি",
+      "example": "He used great force to open the door."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1054,
+      "word": "strong",
+      "frequency": 29,
+      "definition": "Having the power to move heavy weights or perform other physically demanding tasks.",
+      "bangla": "শক্তিশালী",
+      "example": "He has a strong will to succeed."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1055,
+      "word": "power",
+      "frequency": 29,
+      "definition": "The ability to do something or act in a particular way.",
+      "bangla": "ক্ষমতা",
+      "example": "The president has a lot of power."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1056,
+      "word": "hold",
+      "frequency": 29,
+      "definition": "To grasp, carry, or support with one's hands.",
+      "bangla": "ধরা",
+      "example": "She can hold her breath for a long time."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1057,
+      "word": "bring",
+      "frequency": 29,
+      "definition": "To take or go with to a place.",
+      "bangla": "আনা",
+      "example": "Please bring me a glass of water."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1058,
+      "word": "care",
+      "frequency": 29,
+      "definition": "The provision of what is necessary for the health, welfare, maintenance, and protection of someone or something.",
+      "bangla": "যত্ন, মনোযোগ",
+      "example": "She takes great care of her pets."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1059,
+      "word": "fear",
+      "frequency": 29,
+      "definition": "An unpleasant emotion caused by the threat of danger, pain, or harm.",
+      "bangla": "ভয়",
+      "example": "He has a fear of heights."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1060,
+      "word": "hope",
+      "frequency": 29,
+      "definition": "A feeling of expectation and desire for a certain thing to happen.",
+      "bangla": "আশা",
+      "example": "He has high hopes for his future."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1061,
+      "word": "light",
+      "frequency": 29,
+      "definition": "The natural agent that stimulates sight and makes things visible.",
+      "bangla": "আলো",
+      "example": "The sun gives off a lot of light."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1062,
+      "word": "dark",
+      "frequency": 29,
+      "definition": "With little or no light.",
+      "bangla": "অন্ধকার",
+      "example": "The room was completely dark."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1063,
+      "word": "story",
+      "frequency": 29,
+      "definition": "An account of imaginary or real people and events told for entertainment.",
+      "bangla": "গল্প",
+      "example": "He told us a fascinating story."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1064,
+      "word": "begin",
+      "frequency": 29,
+      "definition": "To start doing something; to start to happen.",
+      "bangla": "শুরু করা",
+      "example": "Let's begin the meeting now."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1065,
+      "word": "end",
+      "frequency": 29,
+      "definition": "The final part of something, especially a period of time, an activity, or a story.",
+      "bangla": "শেষ",
+      "example": "This is the end of the movie."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1066,
+      "word": "follow",
+      "frequency": 29,
+      "definition": "To go or come after a person or thing.",
+      "bangla": "অনুসরণ করা",
+      "example": "Please follow me to the office."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1067,
+      "word": "lead",
+      "frequency": 29,
+      "definition": "To guide or direct a person or group.",
+      "bangla": "নেতৃত্ব দেওয়া",
+      "example": "She will lead the team to victory."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1068,
+      "word": "move",
+      "frequency": 29,
+      "definition": "To change position.",
+      "bangla": "সরানো",
+      "example": "He was told to move his car."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1069,
+      "word": "turn",
+      "frequency": 29,
+      "definition": "To move in a circular direction wholly or partly around an axis or point.",
+      "bangla": "ঘোরা",
+      "example": "Turn the page to see the next chapter."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1070,
+      "word": "change",
+      "frequency": 29,
+      "definition": "To make or become different.",
+      "bangla": "পরিবর্তন",
+      "example": "The seasons change from one to another."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1071,
+      "word": "show",
+      "frequency": 29,
+      "definition": "To allow or cause to be visible.",
+      "bangla": "দেখানো",
+      "example": "He will show us his new car."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1072,
+      "word": "tell",
+      "frequency": 29,
+      "definition": "To communicate information, a story, or a fact to someone.",
+      "bangla": "বলা",
+      "example": "Tell me a story about your childhood."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1073,
+      "word": "speak",
+      "frequency": 29,
+      "definition": "To say something in order to convey information, an opinion, or a feeling.",
+      "bangla": "কথা বলা",
+      "example": "He speaks three languages fluently."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1074,
+      "word": "hear",
+      "frequency": 29,
+      "definition": "To perceive with the ear the sound made by someone or something.",
+      "bangla": "শোনা",
+      "example": "Did you hear that loud noise?"
+    },
+    {
+      "wordset_id": 3,
+      "id": 1075,
+      "word": "listen",
+      "frequency": 29,
+      "definition": "To give one's attention to a sound.",
+      "bangla": "মন দিয়ে শোনা",
+      "example": "I listen to music every morning."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1076,
+      "word": "learn",
+      "frequency": 29,
+      "definition": "To gain or acquire knowledge of or skill in something.",
+      "bangla": "শেখা",
+      "example": "She wants to learn how to play the piano."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1077,
+      "word": "teach",
+      "frequency": 29,
+      "definition": "To impart knowledge or instruct someone on how to do something.",
+      "bangla": "শেখানো",
+      "example": "He teaches English at the university."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1078,
+      "word": "read",
+      "frequency": 29,
+      "definition": "To look at and comprehend the meaning of something written or printed.",
+      "bangla": "পড়া",
+      "example": "I love to read books."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1079,
+      "word": "write",
+      "frequency": 29,
+      "definition": "To mark letters, words, or other symbols on a surface.",
+      "bangla": "লেখা",
+      "example": "He will write a letter to his parents."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1080,
+      "word": "send",
+      "frequency": 29,
+      "definition": "To cause to go or be taken to a particular destination.",
+      "bangla": "পাঠানো",
+      "example": "She will send an email to her friend."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1081,
+      "word": "receive",
+      "frequency": 29,
+      "definition": "To be given, presented with, or paid.",
+      "bangla": "গ্রহণ করা, পাওয়া",
+      "example": "I received a gift from my grandmother."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1082,
+      "word": "wait",
+      "frequency": 29,
+      "definition": "To stay where one is or delay action until a particular time or until something else happens.",
+      "bangla": "অপেক্ষা করা",
+      "example": "We had to wait for the bus in the rain."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1083,
+      "word": "live",
+      "frequency": 29,
+      "definition": "To be alive; to have life.",
+      "bangla": "বেঁচে থাকা",
+      "example": "He lived a long and happy life."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1084,
+      "word": "die",
+      "frequency": 29,
+      "definition": "To stop living.",
+      "bangla": "মারা যাওয়া",
+      "example": "The old tree died last winter."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1085,
+      "word": "hope",
+      "frequency": 29,
+      "definition": "To want something to happen or to be true.",
+      "bangla": "আশা করা",
+      "example": "I hope you have a great day."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1086,
+      "word": "dream",
+      "frequency": 29,
+      "definition": "A series of thoughts, images, and sensations occurring in a person's mind during sleep.",
+      "bangla": "স্বপ্ন",
+      "example": "He had a strange dream last night."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1087,
+      "word": "smile",
+      "frequency": 29,
+      "definition": "To form one's features into a pleased, kind, or amused expression.",
+      "bangla": "হাসি",
+      "example": "She gave him a warm smile."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1088,
+      "word": "laugh",
+      "frequency": 29,
+      "definition": "To make a spontaneous sound or gesture expressing amusement or scorn.",
+      "bangla": "হাসা",
+      "example": "He began to laugh at the joke."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1089,
+      "word": "cry",
+      "frequency": 29,
+      "definition": "To shed tears, especially as an expression of distress, pain, or sorrow.",
+      "bangla": "কাঁদা",
+      "example": "The baby started to cry loudly."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1090,
+      "word": "love",
+      "frequency": 29,
+      "definition": "An intense feeling of deep affection.",
+      "bangla": "ভালোবাসা",
+      "example": "I love spending time with my family."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1091,
+      "word": "hate",
+      "frequency": 29,
+      "definition": "To feel intense dislike for someone or something.",
+      "bangla": "ঘৃণা করা",
+      "example": "She hates doing the dishes."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1092,
+      "word": "friend",
+      "frequency": 29,
+      "definition": "A person with whom one has a bond of mutual affection.",
+      "bangla": "বন্ধু",
+      "example": "I went to the movies with a friend."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1093,
+      "word": "enemy",
+      "frequency": 29,
+      "definition": "A person who is actively opposed or hostile to someone or something.",
+      "bangla": "শত্রু",
+      "example": "He made a lot of enemies during his time in office."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1094,
+      "word": "family",
+      "frequency": 29,
+      "definition": "A group consisting of parents and children living together in a household.",
+      "bangla": "পরিবার",
+      "example": "I'm going to visit my family this weekend."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1095,
+      "word": "home",
+      "frequency": 29,
+      "definition": "The place where one lives permanently, especially as a member of a family or household.",
+      "bangla": "বাড়ি",
+      "example": "I can't wait to go home after a long day."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1096,
+      "word": "world",
+      "frequency": 29,
+      "definition": "The earth, together with all of its countries and peoples.",
+      "bangla": "পৃথিবী",
+      "example": "He has traveled all over the world."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1097,
+      "word": "country",
+      "frequency": 29,
+      "definition": "A nation with its own government, occupying a particular territory.",
+      "bangla": "দেশ",
+      "example": "She loves to visit new countries."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1098,
+      "word": "city",
+      "frequency": 29,
+      "definition": "A large town.",
+      "bangla": "শহর",
+      "example": "New York City is a very busy place."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1099,
+      "word": "street",
+      "frequency": 29,
+      "definition": "A public road in a city, town, or village.",
+      "bangla": "রাস্তা",
+      "example": "The children were playing in the street."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1100,
+      "word": "house",
+      "frequency": 29,
+      "definition": "A building for human habitation.",
+      "bangla": "বাড়ি",
+      "example": "They are building a new house."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1101,
+      "word": "room",
+      "frequency": 29,
+      "definition": "A part or division of a building enclosed by walls, floor, and ceiling.",
+      "bangla": "ঘর",
+      "example": "The living room is very spacious."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1102,
+      "word": "door",
+      "frequency": 29,
+      "definition": "A hinged, sliding, or revolving barrier at the entrance to a building, room, or vehicle.",
+      "bangla": "দরজা",
+      "example": "Please close the door behind you."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1103,
+      "word": "window",
+      "frequency": 29,
+      "definition": "An opening in the wall or roof of a building or vehicle that is fitted with glass or other transparent material in a frame to admit light or air and allow people to see out.",
+      "bangla": "জানালা",
+      "example": "He looked out the window at the snow."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1104,
+      "word": "table",
+      "frequency": 29,
+      "definition": "A piece of furniture with a flat top and one or more legs.",
+      "bangla": "টেবিল",
+      "example": "The family gathered around the dinner table."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1105,
+      "word": "chair",
+      "frequency": 29,
+      "definition": "A separate seat for one person, typically with a back and four legs.",
+      "bangla": "চেয়ার",
+      "example": "Please take a seat in that chair."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1106,
+      "word": "bed",
+      "frequency": 29,
+      "definition": "A piece of furniture for sleeping or resting on.",
+      "bangla": "বিছানা",
+      "example": "He was so tired that he went straight to bed."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1107,
+      "word": "book",
+      "frequency": 29,
+      "definition": "A written or printed work consisting of pages glued or sewn together along one side and bound in covers.",
+      "bangla": "বই",
+      "example": "I'm reading a really good book."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1108,
+      "word": "paper",
+      "frequency": 29,
+      "definition": "Material manufactured in thin sheets from the pulp of wood or other fibrous substances.",
+      "bangla": "কাগজ",
+      "example": "She wrote a letter on a piece of paper."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1109,
+      "word": "pen",
+      "frequency": 29,
+      "definition": "An instrument for writing or drawing with ink.",
+      "bangla": "কলম",
+      "example": "I need a pen to sign this form."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1110,
+      "word": "pencil",
+      "frequency": 29,
+      "definition": "An instrument for writing or drawing, consisting of a thin stick of graphite or a similar substance enclosed in a long, thin piece of wood or other material.",
+      "bangla": "পেন্সিল",
+      "example": "The child drew a picture with a pencil."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1111,
+      "word": "computer",
+      "frequency": 29,
+      "definition": "An electronic device for storing and processing data.",
+      "bangla": "কম্পিউটার",
+      "example": "I use my computer to do my homework."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1112,
+      "word": "phone",
+      "frequency": 29,
+      "definition": "A device used for transmitting sounds over a distance.",
+      "bangla": "ফোন",
+      "example": "My phone rang in the middle of the night."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1113,
+      "word": "television",
+      "frequency": 29,
+      "definition": "An electronic device with a screen for viewing programs.",
+      "bangla": "টেলিভিশন",
+      "example": "We watched the news on television."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1114,
+      "word": "radio",
+      "frequency": 29,
+      "definition": "The transmission and reception of electromagnetic waves carrying sound or other signals.",
+      "bangla": "রেডিও",
+      "example": "I listen to the radio on my way to work."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1115,
+      "word": "music",
+      "frequency": 29,
+      "definition": "Vocal or instrumental sounds combined in such a way as to produce beauty of form, harmony, and expression of emotion.",
+      "bangla": "সঙ্গীত",
+      "example": "I love listening to music."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1116,
+      "word": "song",
+      "frequency": 29,
+      "definition": "A short poem or other set of words set to music or meant to be sung.",
+      "bangla": "গান",
+      "example": "She sang a beautiful song."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1117,
+      "word": "movie",
+      "frequency": 29,
+      "definition": "A story or event recorded by a camera as a set of moving images and shown in a theater or on television.",
+      "bangla": "চলচ্চিত্র",
+      "example": "Let's go see a movie tonight."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1118,
+      "word": "food",
+      "frequency": 29,
+      "definition": "Any nutritious substance that people or animals eat or drink or that plants absorb in order to maintain life and growth.",
+      "bangla": "খাবার",
+      "example": "I need to buy some food for dinner."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1119,
+      "word": "water",
+      "frequency": 29,
+      "definition": "A colorless, transparent, odorless liquid that forms the seas, lakes, rivers, and rain and is the basis of the fluids of living organisms.",
+      "bangla": "জল",
+      "example": "I'm thirsty, can I have some water?"
+    },
+    {
+      "wordset_id": 3,
+      "id": 1120,
+      "word": "drink",
+      "frequency": 29,
+      "definition": "A liquid that can be swallowed.",
+      "bangla": "পানীয়",
+      "example": "I would like a cold drink."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1121,
+      "word": "eat",
+      "frequency": 29,
+      "definition": "To put food into the mouth and chew and swallow it.",
+      "bangla": "খাওয়া",
+      "example": "Let's eat dinner together."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1122,
+      "word": "sleep",
+      "frequency": 29,
+      "definition": "A condition of body and mind such as that which typically occurs every night, in which the nervous system is inactive, the eyes are closed, the postural muscles relaxed, and consciousness is practically suspended.",
+      "bangla": "ঘুম",
+      "example": "I need to get more sleep."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1123,
+      "word": "work",
+      "frequency": 29,
+      "definition": "Activity involving mental or physical effort done in order to achieve a purpose or result.",
+      "bangla": "কাজ",
+      "example": "He has a lot of work to do."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1124,
+      "word": "study",
+      "frequency": 29,
+      "definition": "The devotion of time and attention to acquiring knowledge on an academic subject.",
+      "bangla": "অধ্যয়ন",
+      "example": "She studies hard for her exams."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1125,
+      "word": "play",
+      "frequency": 29,
+      "definition": "To engage in activity for enjoyment and recreation rather than a serious or practical purpose.",
+      "bangla": "খেলা",
+      "example": "The children went outside to play."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1126,
+      "word": "run",
+      "frequency": 29,
+      "definition": "To move at a speed faster than a walk, never having both feet on the ground at the same time.",
+      "bangla": "দৌড়ানো",
+      "example": "He can run very fast."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1127,
+      "word": "walk",
+      "frequency": 29,
+      "definition": "To move at a regular pace by lifting and setting down each foot in turn.",
+      "bangla": "হাঁটা",
+      "example": "They went for a walk in the park."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1128,
+      "word": "jump",
+      "frequency": 29,
+      "definition": "To push oneself off a surface into the air by using one's legs and feet.",
+      "bangla": "লাফানো",
+      "example": "The cat jumped onto the table."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1129,
+      "word": "fly",
+      "frequency": 29,
+      "definition": "To move through the air with wings.",
+      "bangla": "ওড়া",
+      "example": "The bird can fly very high."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1130,
+      "word": "swim",
+      "frequency": 29,
+      "definition": "To propel the body through water by means of limb movements.",
+      "bangla": "সাঁতার কাটা",
+      "example": "She learned to swim at a young age."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1131,
+      "word": "dance",
+      "frequency": 29,
+      "definition": "To move rhythmically to music, typically following a set sequence of steps.",
+      "bangla": "নাচ",
+      "example": "They love to dance at parties."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1132,
+      "word": "sing",
+      "frequency": 29,
+      "definition": "To make musical sounds with the voice.",
+      "bangla": "গান করা",
+      "example": "He can sing very well."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1133,
+      "word": "talk",
+      "frequency": 29,
+      "definition": "To speak in order to give information or express ideas or feelings.",
+      "bangla": "কথা বলা",
+      "example": "They talked for hours on the phone."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1134,
+      "word": "listen",
+      "frequency": 29,
+      "definition": "To give one's attention to a sound.",
+      "bangla": "মন দিয়ে শোনা",
+      "example": "Please listen carefully to the instructions."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1135,
+      "word": "look",
+      "frequency": 29,
+      "definition": "To direct one's gaze toward someone or something or in a specified direction.",
+      "bangla": "দেখা",
+      "example": "Look at the beautiful sunset."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1136,
+      "word": "see",
+      "frequency": 29,
+      "definition": "To perceive with the eyes; discern visually.",
+      "bangla": "দেখা",
+      "example": "Can you see the moon?"
+    },
+    {
+      "wordset_id": 3,
+      "id": 1137,
+      "word": "watch",
+      "frequency": 29,
+      "definition": "To look at or observe attentively over a period of time.",
+      "bangla": "দেখা, পর্যবেক্ষণ করা",
+      "example": "We watched a movie last night."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1138,
+      "word": "feel",
+      "frequency": 29,
+      "definition": "To experience an emotion or sensation.",
+      "bangla": "অনুভব করা",
+      "example": "I feel happy today."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1139,
+      "word": "taste",
+      "frequency": 29,
+      "definition": "The sensation of flavor perceived in the mouth and throat on contact with a substance.",
+      "bangla": "স্বাদ",
+      "example": "This soup has a delicious taste."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1140,
+      "word": "smell",
+      "frequency": 29,
+      "definition": "The faculty or quality of perceiving odors or scents.",
+      "bangla": "গন্ধ",
+      "example": "I love the smell of freshly baked bread."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1141,
+      "word": "touch",
+      "frequency": 29,
+      "definition": "To come into contact with.",
+      "bangla": "স্পর্শ করা",
+      "example": "Don't touch the wet paint."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1142,
+      "word": "love",
+      "frequency": 29,
+      "definition": "An intense feeling of deep affection.",
+      "bangla": "ভালোবাসা",
+      "example": "He has a deep love for his children."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1143,
+      "word": "hate",
+      "frequency": 29,
+      "definition": "To feel intense dislike for someone or something.",
+      "bangla": "ঘৃণা",
+      "example": "He has a hate for all things messy."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1144,
+      "word": "happy",
+      "frequency": 29,
+      "definition": "Feeling or showing pleasure or contentment.",
+      "bangla": "সুখী",
+      "example": "She was so happy to see her friend."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1145,
+      "word": "sad",
+      "frequency": 29,
+      "definition": "Feeling or showing sorrow; unhappy.",
+      "bangla": "দুঃখিত",
+      "example": "I felt sad when my dog ran away."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1146,
+      "word": "angry",
+      "frequency": 29,
+      "definition": "Having a strong feeling of annoyance, displeasure, or hostility.",
+      "bangla": "রাগান্বিত",
+      "example": "He was angry about the bad service."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1147,
+      "word": "scared",
+      "frequency": 29,
+      "definition": "Frightened; fearful.",
+      "bangla": "ভয়",
+      "example": "The loud noise made the children scared."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1148,
+      "word": "excited",
+      "frequency": 29,
+      "definition": "Very enthusiastic and eager.",
+      "bangla": "উত্তেজিত",
+      "example": "She was excited about her upcoming trip."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1149,
+      "word": "calm",
+      "frequency": 29,
+      "definition": "Not feeling or showing excitement, anger, or other strong emotions.",
+      "bangla": "শান্ত",
+      "example": "He remained calm during the emergency."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1150,
+      "word": "peaceful",
+      "frequency": 29,
+      "definition": "Free from disturbance; tranquil.",
+      "bangla": "শান্তিপূর্ণ",
+      "example": "The peaceful scenery made her feel relaxed."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1151,
+      "word": "quiet",
+      "frequency": 29,
+      "definition": "Making little or no noise.",
+      "bangla": "নীরব",
+      "example": "Please be quiet in the library."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1152,
+      "word": "loud",
+      "frequency": 29,
+      "definition": "Producing or capable of producing much noise.",
+      "bangla": "উচ্চ",
+      "example": "The music was too loud."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1153,
+      "word": "bright",
+      "frequency": 29,
+      "definition": "Giving out or reflecting a lot of light.",
+      "bangla": "উজ্জ্বল",
+      "example": "The sun was very bright today."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1154,
+      "word": "dark",
+      "frequency": 29,
+      "definition": "With little or no light.",
+      "bangla": "অন্ধকার",
+      "example": "The room was very dark."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1155,
+      "word": "color",
+      "frequency": 29,
+      "definition": "The property possessed by an object of producing different sensations on the eye as a result of the way it reflects or emits light.",
+      "bangla": "রং",
+      "example": "I like the color blue."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1156,
+      "word": "shape",
+      "frequency": 29,
+      "definition": "The external form or appearance characteristic of someone or something.",
+      "bangla": "আকৃতি",
+      "example": "The cloud was in the shape of a dog."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1157,
+      "word": "size",
+      "frequency": 29,
+      "definition": "The extent of something; a thing's dimensions.",
+      "bangla": "আকার",
+      "example": "What size shoes do you wear?"
+    },
+    {
+      "wordset_id": 3,
+      "id": 1158,
+      "word": "weight",
+      "frequency": 29,
+      "definition": "A body's relative mass or the quantity of matter contained by it.",
+      "bangla": "ওজন",
+      "example": "The box was heavy in weight."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1159,
+      "word": "temperature",
+      "frequency": 29,
+      "definition": "The degree or intensity of heat present in a substance or object.",
+      "bangla": "তাপমাত্রা",
+      "example": "The temperature dropped suddenly."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1160,
+      "word": "cold",
+      "frequency": 29,
+      "definition": "Of or at a low or relatively low temperature.",
+      "bangla": "ঠান্ডা",
+      "example": "It's a cold day outside."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1161,
+      "word": "hot",
+      "frequency": 29,
+      "definition": "Having a high degree of heat or a high temperature.",
+      "bangla": "গরম",
+      "example": "Be careful, the plate is hot."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1162,
+      "word": "dry",
+      "frequency": 29,
+      "definition": "Free from moisture or liquid; not wet or moist.",
+      "bangla": "শুকনো",
+      "example": "I need to dry my hair."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1163,
+      "word": "wet",
+      "frequency": 29,
+      "definition": "Covered or saturated with water or another liquid.",
+      "bangla": "ভিজা",
+      "example": "The clothes were still wet from the rain."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1164,
+      "word": "soft",
+      "frequency": 29,
+      "definition": "Easy to mold, cut, compress, or fold; not hard or firm.",
+      "bangla": "নরম",
+      "example": "The pillow was very soft and comfortable."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1165,
+      "word": "hard",
+      "frequency": 29,
+      "definition": "Solid, firm, and resistant to pressure; not easily broken, bent, or pierced.",
+      "bangla": "কঠিন",
+      "example": "The rock was very hard."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1166,
+      "word": "smooth",
+      "frequency": 29,
+      "definition": "Free from lumps or bumps; having an even and regular surface or consistency.",
+      "bangla": "মসৃণ",
+      "example": "The road was smooth and easy to drive on."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1167,
+      "word": "rough",
+      "frequency": 29,
+      "definition": "Having an uneven or irregular surface; not smooth or flat.",
+      "bangla": "অসম, রুক্ষ",
+      "example": "The wall had a rough texture."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1168,
+      "word": "good",
+      "frequency": 29,
+      "definition": "To be desired or approved of.",
+      "bangla": "ভাল",
+      "example": "He is a good person."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1169,
+      "word": "bad",
+      "frequency": 29,
+      "definition": "Of poor quality or a low standard.",
+      "bangla": "খারাপ",
+      "example": "That was a bad idea."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1170,
+      "word": "right",
+      "frequency": 29,
+      "definition": "Morally good, justified, or acceptable.",
+      "bangla": "সঠিক",
+      "example": "You made the right decision."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1171,
+      "word": "wrong",
+      "frequency": 29,
+      "definition": "Incorrect or mistaken.",
+      "bangla": "ভুল",
+      "example": "The answer you gave was wrong."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1172,
+      "word": "true",
+      "frequency": 29,
+      "definition": "In accordance with fact or reality.",
+      "bangla": "সত্য",
+      "example": "His story was completely true."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1173,
+      "word": "false",
+      "frequency": 29,
+      "definition": "Not according with truth or fact; incorrect.",
+      "bangla": "মিথ্যা",
+      "example": "The statement was false."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1174,
+      "word": "new",
+      "frequency": 29,
+      "definition": "Not existing before; made, introduced, or discovered recently or for the first time.",
+      "bangla": "নতুন",
+      "example": "I bought a new car."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1175,
+      "word": "old",
+      "frequency": 29,
+      "definition": "Having lived for a long time; no longer young.",
+      "bangla": "পুরনো",
+      "example": "My grandfather is very old."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1176,
+      "word": "young",
+      "frequency": 29,
+      "definition": "Having lived or existed for only a short time.",
+      "bangla": "তরুণ",
+      "example": "He is a very young boy."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1177,
+      "word": "big",
+      "frequency": 29,
+      "definition": "Of considerable size or extent.",
+      "bangla": "বড়",
+      "example": "He lives in a big house."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1178,
+      "word": "small",
+      "frequency": 29,
+      "definition": "Of a size that is less than normal or usual.",
+      "bangla": "ছোট",
+      "example": "She has a small garden."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1179,
+      "word": "long",
+      "frequency": 29,
+      "definition": "Measuring a great distance from end to end.",
+      "bangla": "লম্বা",
+      "example": "The road is very long."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1180,
+      "word": "short",
+      "frequency": 29,
+      "definition": "Measuring a small distance from end to end.",
+      "bangla": "খাটো",
+      "example": "He has short hair."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1181,
+      "word": "high",
+      "frequency": 29,
+      "definition": "Of great vertical extent.",
+      "bangla": "উচ্চ",
+      "example": "The building is very high."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1182,
+      "word": "low",
+      "frequency": 29,
+      "definition": "Of a little height or short distance from the ground.",
+      "bangla": "নীচ",
+      "example": "The fence is very low."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1183,
+      "word": "fast",
+      "frequency": 29,
+      "definition": "Moving or capable of moving at high speed.",
+      "bangla": "দ্রুত",
+      "example": "He drives a fast car."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1184,
+      "word": "slow",
+      "frequency": 29,
+      "definition": "Moving or operating at a low speed.",
+      "bangla": "ধীর",
+      "example": "The snail is a very slow animal."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1185,
+      "word": "easy",
+      "frequency": 29,
+      "definition": "Achieved without great effort.",
+      "bangla": "সহজ",
+      "example": "The test was very easy."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1186,
+      "word": "difficult",
+      "frequency": 29,
+      "definition": "Needing much effort and skill to do or understand.",
+      "bangla": "কঠিন",
+      "example": "This is a difficult puzzle to solve."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1187,
+      "word": "full",
+      "frequency": 29,
+      "definition": "Containing or holding as much or as many as possible; having no empty space.",
+      "bangla": "ভরা",
+      "example": "The glass is full of water."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1188,
+      "word": "empty",
+      "frequency": 29,
+      "definition": "Containing nothing; not filled or occupied.",
+      "bangla": "খালি",
+      "example": "The box was empty."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1189,
+      "word": "light",
+      "frequency": 29,
+      "definition": "Of little weight.",
+      "bangla": "হালকা",
+      "example": "The box was surprisingly light."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1190,
+      "word": "heavy",
+      "frequency": 29,
+      "definition": "Of great weight.",
+      "bangla": "ভারী",
+      "example": "The suitcase was too heavy to carry."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1191,
+      "word": "clean",
+      "frequency": 29,
+      "definition": "Free from dirt, marks, or stains.",
+      "bangla": "পরিষ্কার",
+      "example": "The room was very clean."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1192,
+      "word": "dirty",
+      "frequency": 29,
+      "definition": "Covered or marked with an unclean substance.",
+      "bangla": "নোংরা",
+      "example": "His clothes were dirty after playing outside."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1193,
+      "word": "loud",
+      "frequency": 29,
+      "definition": "Producing or capable of producing much noise.",
+      "bangla": "উচ্চ",
+      "example": "The music was too loud."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1194,
+      "word": "quiet",
+      "frequency": 29,
+      "definition": "Making little or no noise.",
+      "bangla": "নীরব",
+      "example": "The library is a quiet place."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1195,
+      "word": "rich",
+      "frequency": 29,
+      "definition": "Having a great deal of money or assets.",
+      "bangla": "ধনী",
+      "example": "He became rich after winning the lottery."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1196,
+      "word": "poor",
+      "frequency": 29,
+      "definition": "Lacking sufficient money to live at a standard considered comfortable or normal in a society.",
+      "bangla": "গরীব",
+      "example": "He was too poor to buy new clothes."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1197,
+      "word": "hot",
+      "frequency": 29,
+      "definition": "Having a high degree of heat or a high temperature.",
+      "bangla": "গরম",
+      "example": "The tea is too hot to drink."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1198,
+      "word": "cold",
+      "frequency": 29,
+      "definition": "Of or at a low or relatively low temperature.",
+      "bangla": "ঠান্ডা",
+      "example": "It's cold outside, so wear a jacket."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1199,
+      "word": "sweet",
+      "frequency": 29,
+      "definition": "Having the pleasant taste characteristic of sugar or honey; not salty, sour, or bitter.",
+      "bangla": "মিষ্টি",
+      "example": "This candy is very sweet."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1200,
+      "word": "bitter",
+      "frequency": 29,
+      "definition": "Having a sharp, pungent taste or smell; not sweet.",
+      "bangla": "তিক্ত",
+      "example": "The medicine had a bitter taste."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1201,
+      "word": "happy",
+      "frequency": 29,
+      "definition": "Feeling or showing pleasure or contentment.",
+      "bangla": "সুখী",
+      "example": "They were happy with the results."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1202,
+      "word": "sad",
+      "frequency": 29,
+      "definition": "Feeling or showing sorrow; unhappy.",
+      "bangla": "দুঃখিত",
+      "example": "She felt sad after the movie ended."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1203,
+      "word": "beautiful",
+      "frequency": 29,
+      "definition": "Pleasing the senses or mind aesthetically.",
+      "bangla": "সুন্দর",
+      "example": "The sunset was a beautiful sight."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1204,
+      "word": "ugly",
+      "frequency": 29,
+      "definition": "Unpleasant or repulsive, especially in appearance.",
+      "bangla": "কুশ্রী",
+      "example": "The monster in the story was very ugly."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1205,
+      "word": "brave",
+      "frequency": 29,
+      "definition": "Ready to face and endure danger or pain; showing courage.",
+      "bangla": "সাহসী",
+      "example": "The brave knight fought the dragon."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1206,
+      "word": "cowardly",
+      "frequency": 29,
+      "definition": "Lacking courage.",
+      "bangla": "ভিতু",
+      "example": "The cowardly soldier ran away from the battle."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1207,
+      "word": "smart",
+      "frequency": 29,
+      "definition": "Having or showing a quick-witted intelligence.",
+      "bangla": "বুদ্ধিমান",
+      "example": "She is a very smart student."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1208,
+      "word": "stupid",
+      "frequency": 29,
+      "definition": "Having or showing a great lack of intelligence or common sense.",
+      "bangla": "নির্বোধ",
+      "example": "That was a stupid thing to say."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1209,
+      "word": "kind",
+      "frequency": 29,
+      "definition": "Having or showing a friendly, generous, and considerate nature.",
+      "bangla": "দয়ালু",
+      "example": "He is a very kind person."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1210,
+      "word": "cruel",
+      "frequency": 29,
+      "definition": "Willfully causing pain or suffering to others, or feeling no concern about it.",
+      "bangla": "নিষ্ঠুর",
+      "example": "It was a cruel thing to do."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1211,
+      "word": "honest",
+      "frequency": 29,
+      "definition": "Free of deceit and untruthfulness; sincere.",
+      "bangla": "সৎ",
+      "example": "He is an honest man and would never lie."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1212,
+      "word": "dishonest",
+      "frequency": 29,
+      "definition": "Behaving or prone to behave in an untrustworthy or fraudulent way.",
+      "bangla": "অসৎ",
+      "example": "It's dishonest to cheat on a test."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1213,
+      "word": "polite",
+      "frequency": 29,
+      "definition": "Having or showing behavior that is respectful and considerate of other people.",
+      "bangla": "ভদ্র",
+      "example": "He was very polite to the guests."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1214,
+      "word": "rude",
+      "frequency": 29,
+      "definition": "Impolite; having or showing a lack of respect for other people.",
+      "bangla": "অসভ্য",
+      "example": "It was rude of him to interrupt."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1215,
+      "word": "generous",
+      "frequency": 29,
+      "definition": "Showing a readiness to give more of something, especially money, than is necessary or expected.",
+      "bangla": "উদার",
+      "example": "He was generous with his time and money."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1216,
+      "word": "selfish",
+      "frequency": 29,
+      "definition": "(Of a person, action, or motive) lacking consideration for others; concerned chiefly with one's own personal profit or pleasure.",
+      "bangla": "স্বার্থপর",
+      "example": "It was selfish of her to eat all the cake."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1217,
+      "word": "patient",
+      "frequency": 29,
+      "definition": "Able to accept or tolerate delays, problems, or suffering without becoming annoyed or anxious.",
+      "bangla": "ধৈর্যশীল",
+      "example": "You have to be patient when learning a new skill."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1218,
+      "word": "impatient",
+      "frequency": 29,
+      "definition": "Having or showing a tendency to be quickly irritated or provoked.",
+      "bangla": "অধৈর্য",
+      "example": "She grew impatient waiting for the bus."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1219,
+      "word": "strong",
+      "frequency": 29,
+      "definition": "Having the power to move heavy weights or perform other physically demanding tasks.",
+      "bangla": "শক্তিশালী",
+      "example": "He has a strong grip."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1220,
+      "word": "weak",
+      "frequency": 29,
+      "definition": "Lacking the power to perform physically demanding tasks; having little physical strength.",
+      "bangla": "দুর্বল",
+      "example": "She felt weak after being sick."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1221,
+      "word": "easy",
+      "frequency": 29,
+      "definition": "Achieved without great effort; presenting few difficulties.",
+      "bangla": "সহজ",
+      "example": "This task is very easy."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1222,
+      "word": "difficult",
+      "frequency": 29,
+      "definition": "Needing much effort and skill to do or understand.",
+      "bangla": "কঠিন",
+      "example": "The exam was very difficult."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1223,
+      "word": "long",
+      "frequency": 29,
+      "definition": "Measuring a great distance from end to end.",
+      "bangla": "দীর্ঘ",
+      "example": "The journey was long and tiring."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1224,
+      "word": "short",
+      "frequency": 29,
+      "definition": "Measuring a small distance from end to end.",
+      "bangla": "খাটো",
+      "example": "He has short hair."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1225,
+      "word": "tall",
+      "frequency": 29,
+      "definition": "Of great or more than average height.",
+      "bangla": "লম্বা",
+      "example": "He is a tall man."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1226,
+      "word": "short",
+      "frequency": 29,
+      "definition": "Of a small or less than average height.",
+      "bangla": "খাটো",
+      "example": "She is a short woman."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1227,
+      "word": "big",
+      "frequency": 29,
+      "definition": "Of considerable size or extent.",
+      "bangla": "বড়",
+      "example": "The elephant is a big animal."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1228,
+      "word": "small",
+      "frequency": 29,
+      "definition": "Of a size that is less than normal or usual.",
+      "bangla": "ছোট",
+      "example": "The mouse is a small animal."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1229,
+      "word": "fat",
+      "frequency": 29,
+      "definition": "Having a large amount of excess flesh.",
+      "bangla": "মোটা",
+      "example": "He became fat from eating too much junk food."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1230,
+      "word": "thin",
+      "frequency": 29,
+      "definition": "Having little or no flesh; lean.",
+      "bangla": "পাতলা, চিকন",
+      "example": "She is very thin."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1231,
+      "word": "young",
+      "frequency": 29,
+      "definition": "Having lived or existed for only a short time.",
+      "bangla": "তরুণ",
+      "example": "The young boy was very curious."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1232,
+      "word": "old",
+      "frequency": 29,
+      "definition": "Having lived for a long time; no longer young.",
+      "bangla": "বৃদ্ধ, পুরনো",
+      "example": "The old woman sat on the bench."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1233,
+      "word": "new",
+      "frequency": 29,
+      "definition": "Not existing before; made, introduced, or discovered recently or for the first time.",
+      "bangla": "নতুন",
+      "example": "This is a new book."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1234,
+      "word": "old",
+      "frequency": 29,
+      "definition": "Having existed for a long time.",
+      "bangla": "পুরনো",
+      "example": "This is an old house."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1235,
+      "word": "fast",
+      "frequency": 29,
+      "definition": "Moving or capable of moving at high speed.",
+      "bangla": "দ্রুত",
+      "example": "A cheetah is a fast runner."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1236,
+      "word": "slow",
+      "frequency": 29,
+      "definition": "Moving or operating at a low speed.",
+      "bangla": "ধীর",
+      "example": "The turtle is a slow animal."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1237,
+      "word": "early",
+      "frequency": 29,
+      "definition": "Happening or done before the usual or expected time.",
+      "bangla": "সকাল, তাড়াতাড়ি",
+      "example": "She woke up early this morning."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1238,
+      "word": "late",
+      "frequency": 29,
+      "definition": "Done or happening after the expected, proper, or usual time.",
+      "bangla": "দেরী",
+      "example": "He arrived late for the meeting."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1239,
+      "word": "full",
+      "frequency": 29,
+      "definition": "Containing or holding as much or as many as possible.",
+      "bangla": "ভরা",
+      "example": "The basket is full of fruit."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1240,
+      "word": "empty",
+      "frequency": 29,
+      "definition": "Containing nothing.",
+      "bangla": "খালি",
+      "example": "The bottle is empty."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1241,
+      "word": "same",
+      "frequency": 29,
+      "definition": "Identical; not different.",
+      "bangla": "একই",
+      "example": "They are wearing the same clothes."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1242,
+      "word": "different",
+      "frequency": 29,
+      "definition": "Not the same as another or each other; unlike in nature, form, or quality.",
+      "bangla": "ভিন্ন",
+      "example": "They have different opinions."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1243,
+      "word": "right",
+      "frequency": 29,
+      "definition": "On, toward, or relating to the side of a human body or of a thing which is to the east when the person or thing is facing north.",
+      "bangla": "ডান",
+      "example": "Turn right at the next corner."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1244,
+      "word": "left",
+      "frequency": 29,
+      "definition": "On, toward, or relating to the side of a human body or of a thing which is to the west when the person or thing is facing north.",
+      "bangla": "বাম",
+      "example": "He writes with his left hand."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1245,
+      "word": "up",
+      "frequency": 29,
+      "definition": "Toward a higher place or position.",
+      "bangla": "উপরে",
+      "example": "Look up at the sky."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1246,
+      "word": "down",
+      "frequency": 29,
+      "definition": "Toward or in a lower place, position, or level.",
+      "bangla": "নিচে",
+      "example": "He sat down on the chair."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1247,
+      "word": "in",
+      "frequency": 29,
+      "definition": "Expressing the situation of something that is or appears to be enclosed or surrounded by something else.",
+      "bangla": "মধ্যে",
+      "example": "The book is in the bag."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1248,
+      "word": "out",
+      "frequency": 29,
+      "definition": "Moving or appearing to move away from a particular place.",
+      "bangla": "বাহিরে",
+      "example": "He walked out of the room."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1249,
+      "word": "on",
+      "frequency": 29,
+      "definition": "Physically in contact with and supported by (a surface).",
+      "bangla": "উপরে",
+      "example": "The book is on the table."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1250,
+      "word": "off",
+      "frequency": 29,
+      "definition": "Away from the place in question.",
+      "bangla": "থেকে দূরে",
+      "example": "He took his jacket off."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1251,
+      "word": "over",
+      "frequency": 29,
+      "definition": "Extending directly upward from.",
+      "bangla": "উপরে",
+      "example": "The plane flew over the city."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1252,
+      "word": "under",
+      "frequency": 29,
+      "definition": "Extending or situated directly below.",
+      "bangla": "নিচে",
+      "example": "The cat is under the table."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1253,
+      "word": "with",
+      "frequency": 29,
+      "definition": "Accompanied by (another person or thing).",
+      "bangla": "সঙ্গে",
+      "example": "He came with his brother."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1254,
+      "word": "without",
+      "frequency": 29,
+      "definition": "Not having or accompanied by; lacking.",
+      "bangla": "ছাড়া",
+      "example": "She left without saying goodbye."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1255,
+      "word": "for",
+      "frequency": 29,
+      "definition": "In support of or in favor of.",
+      "bangla": "জন্য",
+      "example": "This gift is for you."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1256,
+      "word": "against",
+      "frequency": 29,
+      "definition": "In opposition to.",
+      "bangla": "বিরুদ্ধে",
+      "example": "He is against the proposal."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1257,
+      "word": "from",
+      "frequency": 29,
+      "definition": "Indicating the point of time or place at which something starts.",
+      "bangla": "থেকে",
+      "example": "He is from the United States."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1258,
+      "word": "to",
+      "frequency": 29,
+      "definition": "Expressing motion in the direction of (a place).",
+      "bangla": "প্রতি, দিকে",
+      "example": "I am going to the store."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1259,
+      "word": "by",
+      "frequency": 29,
+      "definition": "Indicating the person or thing that performs the action of a verb.",
+      "bangla": "দ্বারা",
+      "example": "The book was written by a famous author."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1260,
+      "word": "at",
+      "frequency": 29,
+      "definition": "Expressing position in time or space.",
+      "bangla": "এ",
+      "example": "I will meet you at the station."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1261,
+      "word": "after",
+      "frequency": 29,
+      "definition": "In the time following (an event or another period of time).",
+      "bangla": "পরে",
+      "example": "He arrived after the movie started."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1262,
+      "word": "before",
+      "frequency": 29,
+      "definition": "During the period of time preceding (a particular event or time).",
+      "bangla": "পূর্বে",
+      "example": "He arrived before the movie started."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1263,
+      "word": "during",
+      "frequency": 29,
+      "definition": "Throughout the duration of.",
+      "bangla": "সময়কালে",
+      "example": "He slept during the entire movie."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1264,
+      "word": "since",
+      "frequency": 29,
+      "definition": "In the period of time after a specified time or event.",
+      "bangla": "থেকে",
+      "example": "I have been waiting since noon."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1265,
+      "word": "while",
+      "frequency": 29,
+      "definition": "During the time that.",
+      "bangla": "যখন",
+      "example": "I will call you while I'm at the store."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1266,
+      "word": "as",
+      "frequency": 29,
+      "definition": "Used to indicate that something happens during the time when something else is taking place.",
+      "bangla": "যেমন",
+      "example": "As I walked, I sang a song."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1267,
+      "word": "because",
+      "frequency": 29,
+      "definition": "For the reason that.",
+      "bangla": "কারণ",
+      "example": "I was late because of the traffic."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1268,
+      "word": "so",
+      "frequency": 29,
+      "definition": "To such a great extent.",
+      "bangla": "তাই",
+      "example": "He was so tired that he fell asleep."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1269,
+      "word": "and",
+      "frequency": 29,
+      "definition": "Used to connect words, phrases, or clauses that are to be taken jointly.",
+      "bangla": "এবং",
+      "example": "I like coffee and tea."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1270,
+      "word": "but",
+      "frequency": 29,
+      "definition": "Used to introduce a statement that contrasts with something that has been said previously.",
+      "bangla": "কিন্তু",
+      "example": "He is smart, but he is lazy."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1271,
+      "word": "or",
+      "frequency": 29,
+      "definition": "Used to link alternatives.",
+      "bangla": "অথবা",
+      "example": "You can have an apple or a banana."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1272,
+      "word": "if",
+      "frequency": 29,
+      "definition": "On the condition or supposition that.",
+      "bangla": "যদি",
+      "example": "If you study hard, you will pass the exam."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1273,
+      "word": "then",
+      "frequency": 29,
+      "definition": "At that time; at the time in question.",
+      "bangla": "তখন",
+      "example": "First, we'll eat, and then we'll go for a walk."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1274,
+      "word": "than",
+      "frequency": 29,
+      "definition": "Introducing the second element in a comparison.",
+      "bangla": "চেয়ে",
+      "example": "He is taller than his brother."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1275,
+      "word": "how",
+      "frequency": 29,
+      "definition": "In what way or by what means.",
+      "bangla": "কেমন",
+      "example": "How did you do that?"
+    },
+    {
+      "wordset_id": 3,
+      "id": 1276,
+      "word": "why",
+      "frequency": 29,
+      "definition": "For what reason or purpose.",
+      "bangla": "কেন",
+      "example": "Why are you so sad?"
+    },
+    {
+      "wordset_id": 3,
+      "id": 1277,
+      "word": "what",
+      "frequency": 29,
+      "definition": "Asking for information about something.",
+      "bangla": "কি",
+      "example": "What is your name?"
+    },
+    {
+      "wordset_id": 3,
+      "id": 1278,
+      "word": "who",
+      "frequency": 29,
+      "definition": "Asking what or which person or people.",
+      "bangla": "কে",
+      "example": "Who is coming to the party?"
+    },
+    {
+      "wordset_id": 3,
+      "id": 1279,
+      "word": "where",
+      "frequency": 29,
+      "definition": "In or to what place or position.",
+      "bangla": "কোথায়",
+      "example": "Where are you going?"
+    },
+    {
+      "wordset_id": 3,
+      "id": 1280,
+      "word": "when",
+      "frequency": 29,
+      "definition": "At what time.",
+      "bangla": "কখন",
+      "example": "When will you be home?"
+    },
+    {
+      "wordset_id": 3,
+      "id": 1281,
+      "word": "which",
+      "frequency": 29,
+      "definition": "Asking for information specifying one or more people or things from a definite set.",
+      "bangla": "কোনটি",
+      "example": "Which color do you prefer?"
+    },
+    {
+      "wordset_id": 3,
+      "id": 1282,
+      "word": "whose",
+      "frequency": 29,
+      "definition": "Belonging to or associated with which person.",
+      "bangla": "কার",
+      "example": "Whose book is this?"
+    },
+    {
+      "wordset_id": 3,
+      "id": 1283,
+      "word": "whom",
+      "frequency": 29,
+      "definition": "Used instead of 'who' as the object of a verb or preposition.",
+      "bangla": "কাকে",
+      "example": "To whom it may concern."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1284,
+      "word": "is",
+      "frequency": 29,
+      "definition": "Third person singular present of 'be'.",
+      "bangla": "হয়",
+      "example": "He is a doctor."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1285,
+      "word": "was",
+      "frequency": 29,
+      "definition": "First or third person singular past of 'be'.",
+      "bangla": "ছিল",
+      "example": "It was a beautiful day."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1286,
+      "word": "are",
+      "frequency": 29,
+      "definition": "Second person singular present and first, second, third person plural present of 'be'.",
+      "bangla": "হয়",
+      "example": "They are my friends."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1287,
+      "word": "were",
+      "frequency": 29,
+      "definition": "Second person singular past and first, second, third person plural past of 'be'.",
+      "bangla": "ছিল",
+      "example": "We were at the party last night."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1288,
+      "word": "have",
+      "frequency": 29,
+      "definition": "To possess, own, or hold.",
+      "bangla": "আছে",
+      "example": "I have a new car."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1289,
+      "word": "has",
+      "frequency": 29,
+      "definition": "Third person singular present of 'have'.",
+      "bangla": "আছে",
+      "example": "He has a lot of money."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1290,
+      "word": "had",
+      "frequency": 29,
+      "definition": "Past and past participle of 'have'.",
+      "bangla": "ছিল",
+      "example": "We had a great time."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1291,
+      "word": "do",
+      "frequency": 29,
+      "definition": "To perform an action, duty, or function.",
+      "bangla": "করা",
+      "example": "I need to do my homework."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1292,
+      "word": "does",
+      "frequency": 29,
+      "definition": "Third person singular present of 'do'.",
+      "bangla": "করে",
+      "example": "He does his best."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1293,
+      "word": "did",
+      "frequency": 29,
+      "definition": "Past of 'do'.",
+      "bangla": "করেছিল",
+      "example": "I did my homework yesterday."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1294,
+      "word": "will",
+      "frequency": 29,
+      "definition": "Used to express the future tense.",
+      "bangla": "করবে",
+      "example": "I will go to the store."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1295,
+      "word": "would",
+      "frequency": 29,
+      "definition": "Used to express the conditional or future in the past.",
+      "bangla": "করতো",
+      "example": "I would like to help."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1296,
+      "word": "can",
+      "frequency": 29,
+      "definition": "To be able to; to have the ability to.",
+      "bangla": "পারবে",
+      "example": "I can swim."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1297,
+      "word": "could",
+      "frequency": 29,
+      "definition": "Past of 'can'.",
+      "bangla": "পারতো",
+      "example": "I could see the stars from my window."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1298,
+      "word": "may",
+      "frequency": 29,
+      "definition": "Used to express possibility or permission.",
+      "bangla": "পারে",
+      "example": "You may go now."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1299,
+      "word": "might",
+      "frequency": 29,
+      "definition": "Used to express possibility or suggestion.",
+      "bangla": "হতে পারে",
+      "example": "It might rain later."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1300,
+      "word": "must",
+      "frequency": 29,
+      "definition": "Used to express necessity or obligation.",
+      "bangla": "অবশ্যই",
+      "example": "You must be very tired."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1301,
+      "word": "should",
+      "frequency": 29,
+      "definition": "Used to indicate obligation, duty, or correctness.",
+      "bangla": "উচিত",
+      "example": "You should be more careful."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1302,
+      "word": "would",
+      "frequency": 29,
+      "definition": "Used to express a past habit or routine.",
+      "bangla": "করতো",
+      "example": "We would often go for a walk after dinner."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1303,
+      "word": "need",
+      "frequency": 29,
+      "definition": "To require something because it is essential or very important.",
+      "bangla": "প্রয়োজন",
+      "example": "I need some help with this."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1304,
+      "word": "want",
+      "frequency": 29,
+      "definition": "To have a desire to possess or do something.",
+      "bangla": "চাওয়া",
+      "example": "I want to go home."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1305,
+      "word": "like",
+      "frequency": 29,
+      "definition": "To find something or someone pleasant or satisfactory.",
+      "bangla": "পছন্দ করা",
+      "example": "I like to eat ice cream."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1306,
+      "word": "love",
+      "frequency": 29,
+      "definition": "An intense feeling of deep affection.",
+      "bangla": "ভালোবাসা",
+      "example": "I love my family."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1307,
+      "word": "hate",
+      "frequency": 29,
+      "definition": "To feel intense dislike for something or someone.",
+      "bangla": "ঘৃণা করা",
+      "example": "I hate being late."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1308,
+      "word": "know",
+      "frequency": 29,
+      "definition": "To be aware of through observation, inquiry, or information.",
+      "bangla": "জানা",
+      "example": "I know the answer to the question."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1309,
+      "word": "think",
+      "frequency": 29,
+      "definition": "To have a particular opinion, belief, or idea.",
+      "bangla": "চিন্তা করা",
+      "example": "I think this is a great idea."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1310,
+      "word": "feel",
+      "frequency": 29,
+      "definition": "To experience an emotion or sensation.",
+      "bangla": "অনুভব করা",
+      "example": "I feel tired."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1311,
+      "word": "see",
+      "frequency": 29,
+      "definition": "To perceive with the eyes; discern visually.",
+      "bangla": "দেখা",
+      "example": "I can see the moon."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1312,
+      "word": "hear",
+      "frequency": 29,
+      "definition": "To perceive with the ear the sound made by someone or something.",
+      "bangla": "শোনা",
+      "example": "I can't hear you very well."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1313,
+      "word": "tell",
+      "frequency": 29,
+      "definition": "To communicate information, a story, or a fact to someone.",
+      "bangla": "বলা",
+      "example": "Tell me what happened."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1314,
+      "word": "say",
+      "frequency": 29,
+      "definition": "To utter words to convey information, an opinion, or a feeling.",
+      "bangla": "বলা",
+      "example": "What did you say?"
+    },
+    {
+      "wordset_id": 3,
+      "id": 1315,
+      "word": "ask",
+      "frequency": 29,
+      "definition": "To say something in order to obtain an answer or some information.",
+      "bangla": "জিজ্ঞাসা করা",
+      "example": "I need to ask a question."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1316,
+      "word": "answer",
+      "frequency": 29,
+      "definition": "A thing that is said, written, or done as a reaction to a question, statement, or situation.",
+      "bangla": "উত্তর",
+      "example": "He gave me the correct answer."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1317,
+      "word": "go",
+      "frequency": 29,
+      "definition": "To move from one place to another.",
+      "bangla": "যাওয়া",
+      "example": "I want to go home."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1318,
+      "word": "come",
+      "frequency": 29,
+      "definition": "To move or travel toward or into a place thought of as near or familiar to the speaker.",
+      "bangla": "আসা",
+      "example": "Come here, please."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1319,
+      "word": "get",
+      "frequency": 29,
+      "definition": "To obtain, acquire, or receive something.",
+      "bangla": "পাওয়া",
+      "example": "I need to get a new phone."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1320,
+      "word": "give",
+      "frequency": 29,
+      "definition": "To freely transfer the possession of something to someone.",
+      "bangla": "দেওয়া",
+      "example": "Please give me a pen."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1321,
+      "word": "take",
+      "frequency": 29,
+      "definition": "To lay hold of something with one's hands; to get possession of.",
+      "bangla": "নেওয়া",
+      "example": "Please take a seat."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1322,
+      "word": "make",
+      "frequency": 29,
+      "definition": "To form something by putting parts together or combining substances.",
+      "bangla": "তৈরি করা",
+      "example": "I will make a cake for the party."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1323,
+      "word": "do",
+      "frequency": 29,
+      "definition": "To perform an action, duty, or function.",
+      "bangla": "করা",
+      "example": "What are you doing?"
+    },
+    {
+      "wordset_id": 3,
+      "id": 1324,
+      "word": "try",
+      "frequency": 29,
+      "definition": "To attempt to do something.",
+      "bangla": "চেষ্টা করা",
+      "example": "I will try my best."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1325,
+      "word": "use",
+      "frequency": 29,
+      "definition": "To take, hold, or deploy as a means of accomplishing a purpose or achieving a result.",
+      "bangla": "ব্যবহার করা",
+      "example": "I use my computer for work."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1326,
+      "word": "find",
+      "frequency": 29,
+      "definition": "To discover or perceive something by chance or unexpectedly.",
+      "bangla": "খুঁজে পাওয়া",
+      "example": "I need to find my keys."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1327,
+      "word": "keep",
+      "frequency": 29,
+      "definition": "To have or retain possession of.",
+      "bangla": "রাখা",
+      "example": "Keep the change."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1328,
+      "word": "let",
+      "frequency": 29,
+      "definition": "To allow or permit.",
+      "bangla": "অনুমতি দেওয়া",
+      "example": "Let me go."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1329,
+      "word": "put",
+      "frequency": 29,
+      "definition": "To move something to a specific location.",
+      "bangla": "রাখা",
+      "example": "Put the book on the table."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1330,
+      "word": "set",
+      "frequency": 29,
+      "definition": "To put, lay, or stand something in a specified place or position.",
+      "bangla": "স্থাপন করা",
+      "example": "I set the table for dinner."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1331,
+      "word": "begin",
+      "frequency": 29,
+      "definition": "To start doing something; to start to happen.",
+      "bangla": "শুরু করা",
+      "example": "Let's begin the game."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1332,
+      "word": "start",
+      "frequency": 29,
+      "definition": "To begin or be put into action, operation, or a state of existence.",
+      "bangla": "শুরু করা",
+      "example": "The race will start in five minutes."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1333,
+      "word": "stop",
+      "frequency": 29,
+      "definition": "To cease to happen or to do something.",
+      "bangla": "থামা",
+      "example": "The car stopped at the red light."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1334,
+      "word": "finish",
+      "frequency": 29,
+      "definition": "To bring a task or activity to an end; complete.",
+      "bangla": "শেষ করা",
+      "example": "I need to finish my homework."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1335,
+      "word": "close",
+      "frequency": 29,
+      "definition": "To move a door or window so that it is no longer open.",
+      "bangla": "বন্ধ করা",
+      "example": "Please close the window."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1336,
+      "word": "open",
+      "frequency": 29,
+      "definition": "To move a door or window so that it is no longer closed.",
+      "bangla": "খোলা",
+      "example": "Can you open the door for me?"
+    },
+    {
+      "wordset_id": 3,
+      "id": 1337,
+      "word": "pull",
+      "frequency": 29,
+      "definition": "To exert force on (someone or something) so as to cause movement toward oneself.",
+      "bangla": "টানা",
+      "example": "He had to pull the door open."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1338,
+      "word": "push",
+      "frequency": 29,
+      "definition": "To exert force on (someone or something) in order to move them away from oneself.",
+      "bangla": "ধাক্কা দেওয়া",
+      "example": "He had to push the car to start it."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1339,
+      "word": "hit",
+      "frequency": 29,
+      "definition": "To strike or touch with a blow.",
+      "bangla": "আঘাত করা",
+      "example": "He hit the ball with the bat."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1340,
+      "word": "kick",
+      "frequency": 29,
+      "definition": "To strike, propel, or operate with the foot.",
+      "bangla": "লাথি মারা",
+      "example": "He will kick the ball into the goal."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1341,
+      "word": "throw",
+      "frequency": 29,
+      "definition": "To propel something with force through the air.",
+      "bangla": "ছুড়ে মারা",
+      "example": "He will throw the ball to me."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1342,
+      "word": "catch",
+      "frequency": 29,
+      "definition": "To intercept and hold something which has been thrown, dropped, or is falling.",
+      "bangla": "ধরা",
+      "example": "He will try to catch the ball."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1343,
+      "word": "drive",
+      "frequency": 29,
+      "definition": "To operate and control the direction and speed of a motor vehicle.",
+      "bangla": "গাড়ি চালানো",
+      "example": "I will drive you to the airport."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1344,
+      "word": "ride",
+      "frequency": 29,
+      "definition": "To sit on and control the movement of (a horse, bicycle, or motorcycle).",
+      "bangla": "চড়া",
+      "example": "She loves to ride her horse."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1345,
+      "word": "fly",
+      "frequency": 29,
+      "definition": "To move through the air with wings.",
+      "bangla": "ওড়া",
+      "example": "The bird flew away."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1346,
+      "word": "swim",
+      "frequency": 29,
+      "definition": "To propel the body through water by means of limb movements.",
+      "bangla": "সাঁতার কাটা",
+      "example": "He can swim in the ocean."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1347,
+      "word": "eat",
+      "frequency": 29,
+      "definition": "To put food into the mouth and chew and swallow it.",
+      "bangla": "খাওয়া",
+      "example": "I will eat dinner now."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1348,
+      "word": "drink",
+      "frequency": 29,
+      "definition": "To swallow liquid.",
+      "bangla": "পান করা",
+      "example": "He drank a glass of milk."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1349,
+      "word": "read",
+      "frequency": 29,
+      "definition": "To look at and comprehend the meaning of something written or printed.",
+      "bangla": "পড়া",
+      "example": "She read the book in one day."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1350,
+      "word": "write",
+      "frequency": 29,
+      "definition": "To mark letters, words, or other symbols on a surface.",
+      "bangla": "লেখা",
+      "example": "He wrote a letter to his friend."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1351,
+      "word": "listen",
+      "frequency": 29,
+      "definition": "To give one's attention to a sound.",
+      "bangla": "শোনা",
+      "example": "She listens to music every day."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1352,
+      "word": "watch",
+      "frequency": 29,
+      "definition": "To look at or observe attentively over a period of time.",
+      "bangla": "দেখা",
+      "example": "I love to watch movies."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1353,
+      "word": "dream",
+      "frequency": 29,
+      "definition": "To experience a series of thoughts, images, and sensations during sleep.",
+      "bangla": "স্বপ্ন দেখা",
+      "example": "I dreamt of flying last night."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1354,
+      "word": "sleep",
+      "frequency": 29,
+      "definition": "To be in a state of rest in which the eyes are closed and consciousness is suspended.",
+      "bangla": "ঘুমানো",
+      "example": "I need to get more sleep."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1355,
+      "word": "wake",
+      "frequency": 29,
+      "definition": "To emerge or cause to emerge from a state of sleep.",
+      "bangla": "জেগে ওঠা",
+      "example": "I wake up at 7 a.m. every day."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1356,
+      "word": "open",
+      "frequency": 29,
+      "definition": "To move a door or window so that it is no longer closed.",
+      "bangla": "খোলা",
+      "example": "Can you open the box?"
+    },
+    {
+      "wordset_id": 3,
+      "id": 1357,
+      "word": "close",
+      "frequency": 29,
+      "definition": "To move a door or window so that it is no longer open.",
+      "bangla": "বন্ধ করা",
+      "example": "Please close the door."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1358,
+      "word": "give",
+      "frequency": 29,
+      "definition": "To freely transfer the possession of something to someone.",
+      "bangla": "দেওয়া",
+      "example": "Give me the book."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1359,
+      "word": "receive",
+      "frequency": 29,
+      "definition": "To be given, presented with, or paid.",
+      "bangla": "পাওয়া",
+      "example": "I received a letter yesterday."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1360,
+      "word": "send",
+      "frequency": 29,
+      "definition": "To cause to go or be taken to a particular destination.",
+      "bangla": "পাঠানো",
+      "example": "I will send you a text message."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1361,
+      "word": "take",
+      "frequency": 29,
+      "definition": "To lay hold of something with one's hands; to get possession of.",
+      "bangla": "নেওয়া",
+      "example": "Take my hand."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1362,
+      "word": "bring",
+      "frequency": 29,
+      "definition": "To take or go with to a place.",
+      "bangla": "আনা",
+      "example": "Bring me a cup of coffee."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1363,
+      "word": "put",
+      "frequency": 29,
+      "definition": "To move something to a specific location.",
+      "bangla": "রাখা",
+      "example": "Put the keys on the table."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1364,
+      "word": "pull",
+      "frequency": 29,
+      "definition": "To exert force on (someone or something) so as to cause movement toward oneself.",
+      "bangla": "টানা",
+      "example": "He had to pull the rope."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1365,
+      "word": "push",
+      "frequency": 29,
+      "definition": "To exert force on (someone or something) in order to move them away from oneself.",
+      "bangla": "ধাক্কা দেওয়া",
+      "example": "Push the door to open it."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1366,
+      "word": "sit",
+      "frequency": 29,
+      "definition": "To adopt a position in which one's weight is supported by one's buttocks rather than one's feet.",
+      "bangla": "বসা",
+      "example": "Please sit down."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1367,
+      "word": "stand",
+      "frequency": 29,
+      "definition": "To be in an upright position on one's feet.",
+      "bangla": "দাঁড়ানো",
+      "example": "He stood up when she entered the room."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1368,
+      "word": "lie",
+      "frequency": 29,
+      "definition": "To be in a horizontal position on a surface.",
+      "bangla": "শোয়া",
+      "example": "He likes to lie down and read a book."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1369,
+      "word": "walk",
+      "frequency": 29,
+      "definition": "To move at a regular pace by lifting and setting down each foot in turn.",
+      "bangla": "হাঁটা",
+      "example": "They walked to the park."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1370,
+      "word": "run",
+      "frequency": 29,
+      "definition": "To move at a speed faster than a walk.",
+      "bangla": "দৌড়ানো",
+      "example": "He runs every morning."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1371,
+      "word": "jump",
+      "frequency": 29,
+      "definition": "To push oneself off a surface into the air by using one's legs and feet.",
+      "bangla": "লাফানো",
+      "example": "The dog jumped over the fence."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1372,
+      "word": "fly",
+      "frequency": 29,
+      "definition": "To move through the air with wings.",
+      "bangla": "ওড়া",
+      "example": "The birds fly south for the winter."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1373,
+      "word": "swim",
+      "frequency": 29,
+      "definition": "To propel the body through water by means of limb movements.",
+      "bangla": "সাঁতার কাটা",
+      "example": "I swim every day."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1374,
+      "word": "dance",
+      "frequency": 29,
+      "definition": "To move rhythmically to music.",
+      "bangla": "নাচ",
+      "example": "They danced all night long."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1375,
+      "word": "sing",
+      "frequency": 29,
+      "definition": "To make musical sounds with the voice.",
+      "bangla": "গান করা",
+      "example": "She loves to sing in the shower."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1376,
+      "word": "play",
+      "frequency": 29,
+      "definition": "To engage in activity for enjoyment and recreation.",
+      "bangla": "খেলা",
+      "example": "The children are playing outside."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1377,
+      "word": "work",
+      "frequency": 29,
+      "definition": "To be engaged in physical or mental activity in order to achieve a purpose or result.",
+      "bangla": "কাজ করা",
+      "example": "I have to work late tonight."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1378,
+      "word": "study",
+      "frequency": 29,
+      "definition": "To devote time and attention to acquiring knowledge.",
+      "bangla": "অধ্যয়ন করা",
+      "example": "He studies for his exams every night."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1379,
+      "word": "read",
+      "frequency": 29,
+      "definition": "To look at and comprehend the meaning of something written or printed.",
+      "bangla": "পড়া",
+      "example": "I am reading a novel."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1380,
+      "word": "write",
+      "frequency": 29,
+      "definition": "To mark letters, words, or other symbols on a surface.",
+      "bangla": "লেখা",
+      "example": "She is writing a letter."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1381,
+      "word": "speak",
+      "frequency": 29,
+      "definition": "To say something in order to convey information, an opinion, or a feeling.",
+      "bangla": "কথা বলা",
+      "example": "He can speak French."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1382,
+      "word": "talk",
+      "frequency": 29,
+      "definition": "To speak in order to give information or express ideas or feelings.",
+      "bangla": "কথা বলা",
+      "example": "They talked about their vacation."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1383,
+      "word": "listen",
+      "frequency": 29,
+      "definition": "To give one's attention to a sound.",
+      "bangla": "শোনা",
+      "example": "Listen to the birds singing."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1384,
+      "word": "hear",
+      "frequency": 29,
+      "definition": "To perceive with the ear the sound made by someone or something.",
+      "bangla": "শোনা",
+      "example": "I can hear the music from outside."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1385,
+      "word": "see",
+      "frequency": 29,
+      "definition": "To perceive with the eyes; discern visually.",
+      "bangla": "দেখা",
+      "example": "I see you."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1386,
+      "word": "look",
+      "frequency": 29,
+      "definition": "To direct one's gaze toward someone or something or in a specified direction.",
+      "bangla": "দেখা",
+      "example": "Look at the picture."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1387,
+      "word": "watch",
+      "frequency": 29,
+      "definition": "To look at or observe attentively over a period of time.",
+      "bangla": "দেখা, পর্যবেক্ষণ করা",
+      "example": "I am watching a movie."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1388,
+      "word": "feel",
+      "frequency": 29,
+      "definition": "To experience an emotion or sensation.",
+      "bangla": "অনুভব করা",
+      "example": "I feel the warmth of the sun."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1389,
+      "word": "think",
+      "frequency": 29,
+      "definition": "To have a particular opinion, belief, or idea.",
+      "bangla": "চিন্তা করা",
+      "example": "I think it will be a good day."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1390,
+      "word": "know",
+      "frequency": 29,
+      "definition": "To be aware of through observation, inquiry, or information.",
+      "bangla": "জানা",
+      "example": "I know the secret."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1391,
+      "word": "believe",
+      "frequency": 29,
+      "definition": "To accept something as true.",
+      "bangla": "বিশ্বাস করা",
+      "example": "I believe in you."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1392,
+      "word": "hope",
+      "frequency": 29,
+      "definition": "To want something to happen or to be true.",
+      "bangla": "আশা করা",
+      "example": "I hope you feel better soon."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1393,
+      "word": "dream",
+      "frequency": 29,
+      "definition": "To experience a series of thoughts, images, and sensations during sleep.",
+      "bangla": "স্বপ্ন দেখা",
+      "example": "I dream about my future."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1394,
+      "word": "love",
+      "frequency": 29,
+      "definition": "An intense feeling of deep affection.",
+      "bangla": "ভালোবাসা",
+      "example": "I love my partner."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1395,
+      "word": "hate",
+      "frequency": 29,
+      "definition": "To feel intense dislike for someone or something.",
+      "bangla": "ঘৃণা করা",
+      "example": "I hate traffic jams."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1396,
+      "word": "like",
+      "frequency": 29,
+      "definition": "To find something or someone pleasant or satisfactory.",
+      "bangla": "পছন্দ করা",
+      "example": "I like this song."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1397,
+      "word": "want",
+      "frequency": 29,
+      "definition": "To have a desire to possess or do something.",
+      "bangla": "চাওয়া",
+      "example": "I want a new car."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1398,
+      "word": "need",
+      "frequency": 29,
+      "definition": "To require something because it is essential or very important.",
+      "bangla": "প্রয়োজন",
+      "example": "I need to go to the doctor."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1399,
+      "word": "have",
+      "frequency": 29,
+      "definition": "To possess, own, or hold.",
+      "bangla": "আছে",
+      "example": "I have a lot of friends."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1400,
+      "word": "be",
+      "frequency": 29,
+      "definition": "To exist or live.",
+      "bangla": "হওয়া",
+      "example": "To be or not to be."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1401,
+      "word": "get",
+      "frequency": 29,
+      "definition": "To obtain, acquire, or receive something.",
+      "bangla": "পাওয়া",
+      "example": "I need to get a new pair of shoes."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1402,
+      "word": "go",
+      "frequency": 29,
+      "definition": "To move from one place to another.",
+      "bangla": "যাওয়া",
+      "example": "Let's go for a walk."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1403,
+      "word": "come",
+      "frequency": 29,
+      "definition": "To move or travel toward or into a place.",
+      "bangla": "আসা",
+      "example": "Come over to my house."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1404,
+      "word": "make",
+      "frequency": 29,
+      "definition": "To form something by putting parts together or combining substances.",
+      "bangla": "তৈরি করা",
+      "example": "I will make a list of things to do."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1405,
+      "word": "do",
+      "frequency": 29,
+      "definition": "To perform an action, duty, or function.",
+      "bangla": "করা",
+      "example": "What did you do today?"
+    },
+    {
+      "wordset_id": 3,
+      "id": 1406,
+      "word": "take",
+      "frequency": 29,
+      "definition": "To lay hold of something with one's hands; to get possession of.",
+      "bangla": "নেওয়া",
+      "example": "I will take a picture."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1407,
+      "word": "give",
+      "frequency": 29,
+      "definition": "To freely transfer the possession of something to someone.",
+      "bangla": "দেওয়া",
+      "example": "Can you give me a hand?"
+    },
+    {
+      "wordset_id": 3,
+      "id": 1408,
+      "word": "put",
+      "frequency": 29,
+      "definition": "To move something to a specific location.",
+      "bangla": "রাখা",
+      "example": "Put the box on the shelf."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1409,
+      "word": "keep",
+      "frequency": 29,
+      "definition": "To have or retain possession of.",
+      "bangla": "রাখা",
+      "example": "Keep a close eye on the children."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1410,
+      "word": "let",
+      "frequency": 29,
+      "definition": "To allow or permit.",
+      "bangla": "অনুমতি দেওয়া",
+      "example": "Let me know if you need anything."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1411,
+      "word": "show",
+      "frequency": 29,
+      "definition": "To allow or cause to be visible.",
+      "bangla": "দেখা, প্রদর্শন করা",
+      "example": "Show me your new shoes."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1412,
+      "word": "tell",
+      "frequency": 29,
+      "definition": "To communicate information, a story, or a fact to someone.",
+      "bangla": "বলা",
+      "example": "She told me a secret."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1413,
+      "word": "say",
+      "frequency": 29,
+      "definition": "To utter words to convey information, an opinion, or a feeling.",
+      "bangla": "বলা",
+      "example": "He said he was tired."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1414,
+      "word": "ask",
+      "frequency": 29,
+      "definition": "To say something in order to obtain an answer or some information.",
+      "bangla": "জিজ্ঞাসা করা",
+      "example": "I will ask the teacher a question."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1415,
+      "word": "work",
+      "frequency": 29,
+      "definition": "To be engaged in physical or mental activity in order to achieve a purpose or result.",
+      "bangla": "কাজ করা",
+      "example": "He works at a bank."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1416,
+      "word": "play",
+      "frequency": 29,
+      "definition": "To engage in activity for enjoyment and recreation.",
+      "bangla": "খেলা",
+      "example": "Let's play a game."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1417,
+      "word": "live",
+      "frequency": 29,
+      "definition": "To have life; to be alive.",
+      "bangla": "বাস করা",
+      "example": "I live in a small town."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1418,
+      "word": "die",
+      "frequency": 29,
+      "definition": "To stop living.",
+      "bangla": "মারা যাওয়া",
+      "example": "The plant will die if you don't water it."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1419,
+      "word": "run",
+      "frequency": 29,
+      "definition": "To move at a speed faster than a walk.",
+      "bangla": "দৌড়ানো",
+      "example": "The dog ran after the ball."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1420,
+      "word": "walk",
+      "frequency": 29,
+      "definition": "To move at a regular pace by lifting and setting down each foot in turn.",
+      "bangla": "হাঁটা",
+      "example": "I walked to the store."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1421,
+      "word": "jump",
+      "frequency": 29,
+      "definition": "To push oneself off a surface into the air by using one's legs and feet.",
+      "bangla": "লাফানো",
+      "example": "He jumped with joy."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1422,
+      "word": "fly",
+      "frequency": 29,
+      "definition": "To move through the air with wings.",
+      "bangla": "উড়া",
+      "example": "The plane is flying to London."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1423,
+      "word": "swim",
+      "frequency": 29,
+      "definition": "To propel the body through water by means of limb movements.",
+      "bangla": "সাঁতার কাটা",
+      "example": "He learned to swim in the lake."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1424,
+      "word": "dance",
+      "frequency": 29,
+      "definition": "To move rhythmically to music.",
+      "bangla": "নাচ করা",
+      "example": "They dance at the club every Friday."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1425,
+      "word": "sing",
+      "frequency": 29,
+      "definition": "To make musical sounds with the voice.",
+      "bangla": "গান করা",
+      "example": "She sings in the choir."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1426,
+      "word": "talk",
+      "frequency": 29,
+      "definition": "To speak in order to give information or express ideas or feelings.",
+      "bangla": "কথা বলা",
+      "example": "He talks a lot about his hobbies."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1427,
+      "word": "listen",
+      "frequency": 29,
+      "definition": "To give one's attention to a sound.",
+      "bangla": "শোনা",
+      "example": "Listen to the radio."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1428,
+      "word": "look",
+      "frequency": 29,
+      "definition": "To direct one's gaze toward someone or something or in a specified direction.",
+      "bangla": "দেখা",
+      "example": "Look at that beautiful bird."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1429,
+      "word": "see",
+      "frequency": 29,
+      "definition": "To perceive with the eyes; discern visually.",
+      "bangla": "দেখা",
+      "example": "Did you see the movie?"
+    },
+    {
+      "wordset_id": 3,
+      "id": 1430,
+      "word": "watch",
+      "frequency": 29,
+      "definition": "To look at or observe attentively over a period of time.",
+      "bangla": "দেখা, পর্যবেক্ষণ করা",
+      "example": "I'm watching the news."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1431,
+      "word": "read",
+      "frequency": 29,
+      "definition": "To look at and comprehend the meaning of something written or printed.",
+      "bangla": "পড়া",
+      "example": "He reads a lot of magazines."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1432,
+      "word": "write",
+      "frequency": 29,
+      "definition": "To mark letters, words, or other symbols on a surface.",
+      "bangla": "লেখা",
+      "example": "Please write down your name."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1433,
+      "word": "open",
+      "frequency": 29,
+      "definition": "To move a door or window so that it is no longer closed.",
+      "bangla": "খোলা",
+      "example": "Open the book to page 10."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1434,
+      "word": "close",
+      "frequency": 29,
+      "definition": "To move a door or window so that it is no longer open.",
+      "bangla": "বন্ধ করা",
+      "example": "Close the window, it's cold."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1435,
+      "word": "put",
+      "frequency": 29,
+      "definition": "To move something to a specific location.",
+      "bangla": "রাখা",
+      "example": "Put your phone away."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1436,
+      "word": "take",
+      "frequency": 29,
+      "definition": "To lay hold of something with one's hands; to get possession of.",
+      "bangla": "নেওয়া",
+      "example": "Take a deep breath."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1437,
+      "word": "bring",
+      "frequency": 29,
+      "definition": "To take or go with to a place.",
+      "bangla": "আনা",
+      "example": "Bring your books with you."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1438,
+      "word": "give",
+      "frequency": 29,
+      "definition": "To freely transfer the possession of something to someone.",
+      "bangla": "দেওয়া",
+      "example": "He gives a lot of money to charity."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1439,
+      "word": "receive",
+      "frequency": 29,
+      "definition": "To be given, presented with, or paid.",
+      "bangla": "পাওয়া",
+      "example": "She receives many compliments."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1440,
+      "word": "send",
+      "frequency": 29,
+      "definition": "To cause to go or be taken to a particular destination.",
+      "bangla": "পাঠানো",
+      "example": "I will send a postcard from my vacation."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1441,
+      "word": "get",
+      "frequency": 29,
+      "definition": "To obtain, acquire, or receive something.",
+      "bangla": "পাওয়া",
+      "example": "I need to get a haircut."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1442,
+      "word": "go",
+      "frequency": 29,
+      "definition": "To move from one place to another.",
+      "bangla": "যাওয়া",
+      "example": "I need to go to the bank."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1443,
+      "word": "come",
+      "frequency": 29,
+      "definition": "To move or travel toward or into a place.",
+      "bangla": "আসা",
+      "example": "Come inside, it's cold."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1444,
+      "word": "make",
+      "frequency": 29,
+      "definition": "To form something by putting parts together or combining substances.",
+      "bangla": "তৈরি করা",
+      "example": "She makes her own clothes."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1445,
+      "word": "do",
+      "frequency": 29,
+      "definition": "To perform an action, duty, or function.",
+      "bangla": "করা",
+      "example": "I have a lot of work to do."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1446,
+      "word": "try",
+      "frequency": 29,
+      "definition": "To attempt to do something.",
+      "bangla": "চেষ্টা করা",
+      "example": "Try to open the jar."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1447,
+      "word": "use",
+      "frequency": 29,
+      "definition": "To take, hold, or deploy as a means of accomplishing a purpose or achieving a result.",
+      "bangla": "ব্যবহার করা",
+      "example": "You should use a fork to eat."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1448,
+      "word": "find",
+      "frequency": 29,
+      "definition": "To discover or perceive something by chance or unexpectedly.",
+      "bangla": "খুঁজে পাওয়া",
+      "example": "I need to find my glasses."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1449,
+      "word": "keep",
+      "frequency": 29,
+      "definition": "To have or retain possession of.",
+      "bangla": "রাখা",
+      "example": "Keep your promises."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1450,
+      "word": "let",
+      "frequency": 29,
+      "definition": "To allow or permit.",
+      "bangla": "অনুমতি দেওয়া",
+      "example": "Let the dog out."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1451,
+      "word": "turn",
+      "frequency": 29,
+      "definition": "To move in a circular direction wholly or partly around an axis or point.",
+      "bangla": "ঘোরা",
+      "example": "Turn the wheel to the left."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1452,
+      "word": "change",
+      "frequency": 29,
+      "definition": "To make or become different.",
+      "bangla": "পরিবর্তন করা",
+      "example": "The weather changes every day."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1453,
+      "word": "move",
+      "frequency": 29,
+      "definition": "To change position.",
+      "bangla": "সরানো",
+      "example": "Move the chair to the other side of the room."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1454,
+      "word": "lead",
+      "frequency": 29,
+      "definition": "To guide or direct a person or group.",
+      "bangla": "নেতৃত্ব দেওয়া",
+      "example": "He will lead the team to victory."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1455,
+      "word": "follow",
+      "frequency": 29,
+      "definition": "To go or come after a person or thing.",
+      "bangla": "অনুসরণ করা",
+      "example": "Please follow the instructions."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1456,
+      "word": "begin",
+      "frequency": 29,
+      "definition": "To start doing something; to start to happen.",
+      "bangla": "শুরু করা",
+      "example": "The movie will begin in five minutes."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1457,
+      "word": "end",
+      "frequency": 29,
+      "definition": "To bring a task or activity to an end; complete.",
+      "bangla": "শেষ করা",
+      "example": "The concert will end at 10 p.m."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1458,
+      "word": "start",
+      "frequency": 29,
+      "definition": "To begin or be put into action, operation, or a state of existence.",
+      "bangla": "শুরু করা",
+      "example": "The game is about to start."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1459,
+      "word": "stop",
+      "frequency": 29,
+      "definition": "To cease to happen or to do something.",
+      "bangla": "থামা",
+      "example": "Stop talking and listen."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1460,
+      "word": "turn",
+      "frequency": 29,
+      "definition": "To move in a circular direction wholly or partly around an axis or point.",
+      "bangla": "ঘোরা",
+      "example": "Turn the light on."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1461,
+      "word": "change",
+      "frequency": 29,
+      "definition": "To make or become different.",
+      "bangla": "পরিবর্তন করা",
+      "example": "You need to change your clothes."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1462,
+      "word": "show",
+      "frequency": 29,
+      "definition": "To allow or cause to be visible.",
+      "bangla": "দেখা, প্রদর্শন করা",
+      "example": "Show me your progress."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1463,
+      "word": "tell",
+      "frequency": 29,
+      "definition": "To communicate information, a story, or a fact to someone.",
+      "bangla": "বলা",
+      "example": "I need to tell you something important."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1464,
+      "word": "say",
+      "frequency": 29,
+      "definition": "To utter words to convey information, an opinion, or a feeling.",
+      "bangla": "বলা",
+      "example": "He said goodbye."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1465,
+      "word": "ask",
+      "frequency": 29,
+      "definition": "To say something in order to obtain an answer or some information.",
+      "bangla": "জিজ্ঞাসা করা",
+      "example": "Can I ask a question?"
+    },
+    {
+      "wordset_id": 3,
+      "id": 1466,
+      "word": "answer",
+      "frequency": 29,
+      "definition": "A thing that is said, written, or done as a reaction to a question, statement, or situation.",
+      "bangla": "উত্তর",
+      "example": "I don't know the answer."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1467,
+      "word": "work",
+      "frequency": 29,
+      "definition": "To be engaged in physical or mental activity in order to achieve a purpose or result.",
+      "bangla": "কাজ করা",
+      "example": "I work from nine to five."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1468,
+      "word": "play",
+      "frequency": 29,
+      "definition": "To engage in activity for enjoyment and recreation.",
+      "bangla": "খেলা",
+      "example": "He loves to play football."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1469,
+      "word": "live",
+      "frequency": 29,
+      "definition": "To have life; to be alive.",
+      "bangla": "বাস করা",
+      "example": "Where do you live?"
+    },
+    {
+      "wordset_id": 3,
+      "id": 1470,
+      "word": "die",
+      "frequency": 29,
+      "definition": "To stop living.",
+      "bangla": "মারা যাওয়া",
+      "example": "The flowers will die without water."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1471,
+      "word": "run",
+      "frequency": 29,
+      "definition": "To move at a speed faster than a walk.",
+      "bangla": "দৌড়ানো",
+      "example": "The children are running in the park."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1472,
+      "word": "walk",
+      "frequency": 29,
+      "definition": "To move at a regular pace by lifting and setting down each foot in turn.",
+      "bangla": "হাঁটা",
+      "example": "We can walk to the beach."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1473,
+      "word": "jump",
+      "frequency": 29,
+      "definition": "To push oneself off a surface into the air by using one's legs and feet.",
+      "bangla": "লাফানো",
+      "example": "He jumped over the puddle."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1474,
+      "word": "fly",
+      "frequency": 29,
+      "definition": "To move through the air with wings.",
+      "bangla": "ওড়া",
+      "example": "The eagle is flying high in the sky."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1475,
+      "word": "swim",
+      "frequency": 29,
+      "definition": "To propel the body through water by means of limb movements.",
+      "bangla": "সাঁতার কাটা",
+      "example": "She can swim across the pool."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1476,
+      "word": "dance",
+      "frequency": 29,
+      "definition": "To move rhythmically to music.",
+      "bangla": "নাচ করা",
+      "example": "They were dancing to the music."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1477,
+      "word": "sing",
+      "frequency": 29,
+      "definition": "To make musical sounds with the voice.",
+      "bangla": "গান করা",
+      "example": "The children are singing a song."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1478,
+      "word": "talk",
+      "frequency": 29,
+      "definition": "To speak in order to give information or express ideas or feelings.",
+      "bangla": "কথা বলা",
+      "example": "He talks a lot."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1479,
+      "word": "listen",
+      "frequency": 29,
+      "definition": "To give one's attention to a sound.",
+      "bangla": "শোনা",
+      "example": "I'm listening to the news."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1480,
+      "word": "look",
+      "frequency": 29,
+      "definition": "To direct one's gaze toward someone or something or in a specified direction.",
+      "bangla": "দেখা",
+      "example": "He looked at the map to find his way."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1481,
+      "word": "see",
+      "frequency": 29,
+      "definition": "To perceive with the eyes; discern visually.",
+      "bangla": "দেখা",
+      "example": "I can see the stars tonight."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1482,
+      "word": "watch",
+      "frequency": 29,
+      "definition": "To look at or observe attentively over a period of time.",
+      "bangla": "দেখা, পর্যবেক্ষণ করা",
+      "example": "Let's watch the game on TV."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1483,
+      "word": "read",
+      "frequency": 29,
+      "definition": "To look at and comprehend the meaning of something written or printed.",
+      "bangla": "পড়া",
+      "example": "She is reading a magazine."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1484,
+      "word": "write",
+      "frequency": 29,
+      "definition": "To mark letters, words, or other symbols on a surface.",
+      "bangla": "লেখা",
+      "example": "I need to write an essay."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1485,
+      "word": "speak",
+      "frequency": 29,
+      "definition": "To say something in order to convey information, an opinion, or a feeling.",
+      "bangla": "কথা বলা",
+      "example": "Please speak louder."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1486,
+      "word": "listen",
+      "frequency": 29,
+      "definition": "To give one's attention to a sound.",
+      "bangla": "শোনা",
+      "example": "He listened to the teacher carefully."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1487,
+      "word": "look",
+      "frequency": 29,
+      "definition": "To direct one's gaze toward someone or something or in a specified direction.",
+      "bangla": "দেখা",
+      "example": "He looked around the room."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1488,
+      "word": "get",
+      "frequency": 19,
+      "definition": "To obtain, acquire, or receive something.",
+      "bangla": "পাওয়া",
+      "example": "I need to get a new phone."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1489,
+      "word": "blow",
+      "frequency": 19,
+      "definition": "To move with the current of air.",
+      "bangla": "ফুঁ দেওয়া",
+      "example": "The wind will blow the leaves off the trees."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1490,
+      "word": "streets",
+      "frequency": 19,
+      "definition": "Public roads in a city, town, or village.",
+      "bangla": "রাস্তা",
+      "example": "Children were playing on the streets."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1491,
+      "word": "suffered",
+      "frequency": 19,
+      "definition": "Experienced or subjected to something bad or unpleasant.",
+      "bangla": "ভোগা",
+      "example": "He suffered a lot of pain after the accident."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1492,
+      "word": "motivated",
+      "frequency": 19,
+      "definition": "Provided with a motive; inspired.",
+      "bangla": "অনুপ্রাণিত",
+      "example": "He was motivated to study harder after seeing his grades."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1493,
+      "word": "entertain",
+      "frequency": 19,
+      "definition": "To provide with amusement or enjoyment.",
+      "bangla": "বিনোদন দেওয়া",
+      "example": "The clown entertained the children at the party."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1494,
+      "word": "split",
+      "frequency": 19,
+      "definition": "To break or cause to break into two or more parts.",
+      "bangla": "বিভক্ত করা",
+      "example": "He split the log in half with an axe."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1495,
+      "word": "considering",
+      "frequency": 19,
+      "definition": "To take into account when making a decision.",
+      "bangla": "বিবেচনা করে",
+      "example": "Considering the weather, we should stay home."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1496,
+      "word": "represents",
+      "frequency": 19,
+      "definition": "To be a symbol of or stand for.",
+      "bangla": "প্রতিনিধিত্ব করে",
+      "example": "The symbol 'x' represents an unknown number."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1497,
+      "word": "challenges",
+      "frequency": 19,
+      "definition": "Tasks or situations that test one's abilities.",
+      "bangla": "চ্যালেঞ্জ",
+      "example": "He faced many challenges on his journey."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1498,
+      "word": "gotten",
+      "frequency": 19,
+      "definition": "Past participle of 'get'.",
+      "bangla": "পেয়েছে",
+      "example": "I've gotten tired of waiting."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1499,
+      "word": "distant",
+      "frequency": 19,
+      "definition": "Far away in space or time.",
+      "bangla": "দূরবর্তী",
+      "example": "He could see a distant light."
+    },
+    {
+      "wordset_id": 3,
+      "id": 1500,
+      "word": "plays",
+      "frequency": 19,
+      "definition": "Engages in an activity for enjoyment and recreation.",
+      "bangla": "খেলা",
+      "example": "He plays the guitar very well."
+    }
+  ]
+}

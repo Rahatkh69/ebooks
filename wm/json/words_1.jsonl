@@ -1,0 +1,500 @@
+    {"id": 1, "word": "the", "frequency": 13928, "definition": "Used to refer to a specific or known thing", "bangla": "দ্য", "example": "The sun rises in the east."}
+{"id": 2, "word": "to", "frequency": 9357, "definition": "Indicating direction, purpose, or recipient", "bangla": "প্রতি", "example": "She walked to the park."}
+{"id": 3, "word": "and", "frequency": 9080, "definition": "Used to connect words or clauses", "bangla": "এবং", "example": "I like tea and coffee."}
+{"id": 4, "word": "of", "frequency": 7953, "definition": "Indicating possession, origin, or association", "bangla": "এর", "example": "The book of poems is on the table."}
+{"id": 5, "word": "in", "frequency": 5417, "definition": "Indicating location, time, or inclusion", "bangla": "মধ্যে", "example": "He lives in Dhaka."}
+{"id": 6, "word": "a", "frequency": 5009, "definition": "Used to refer to a non-specific thing", "bangla": "একটি", "example": "She bought a new phone."}
+{"id": 7, "word": "you", "frequency": 3126, "definition": "Referring to the person or people being addressed", "bangla": "তুমি", "example": "Can you help me?"}
+{"id": 8, "word": "we", "frequency": 3051, "definition": "Referring to the speaker and others", "bangla": "আমরা", "example": "We are going to the market."}
+{"id": 9, "word": "that", "frequency": 2963, "definition": "Used to identify a specific thing or person", "bangla": "যে", "example": "That house is old."}
+{"id": 10, "word": "they", "frequency": 2779, "definition": "Referring to multiple people or things", "bangla": "তারা", "example": "They arrived late."}
+{"id": 11, "word": "he", "frequency": 2737, "definition": "Referring to a male person", "bangla": "সে (পুরুষ)", "example": "He is reading a book."}
+{"id": 12, "word": "it", "frequency": 2365, "definition": "Referring to a thing or situation", "bangla": "এটি", "example": "It is raining outside."}
+{"id": 13, "word": "this", "frequency": 2344, "definition": "Referring to a specific thing near the speaker", "bangla": "এই", "example": "This pen is mine."}
+{"id": 14, "word": "as", "frequency": 2332, "definition": "Used to compare or indicate function", "bangla": "যেমন", "example": "She works as a teacher."}
+{"id": 15, "word": "is", "frequency": 2216, "definition": "Third person singular of the verb 'to be'", "bangla": "আছে", "example": "The sky is blue."}
+{"id": 16, "word": "with", "frequency": 2128, "definition": "Indicating association or means", "bangla": "সঙ্গে", "example": "She went with her friend."}
+{"id": 17, "word": "for", "frequency": 2075, "definition": "Indicating purpose, benefit, or duration", "bangla": "জন্য", "example": "This gift is for you."}
+{"id": 18, "word": "their", "frequency": 1984, "definition": "Possessive form of they", "bangla": "তাদের", "example": "Their house is big."}
+{"id": 19, "word": "are", "frequency": 1960, "definition": "Plural form of the verb 'to be'", "bangla": "আছে (বহুবচন)", "example": "They are happy."}
+{"id": 20, "word": "was", "frequency": 1922, "definition": "Past tense of the verb 'to be' (singular)", "bangla": "ছিল", "example": "He was at home yesterday."}
+{"id": 21, "word": "or", "frequency": 1854, "definition": "Used to present alternatives", "bangla": "অথবা", "example": "Do you want tea or coffee?"}
+{"id": 22, "word": "his", "frequency": 1808, "definition": "Possessive form of he", "bangla": "তার (পুরুষ)", "example": "His car is new."}
+{"id": 23, "word": "had", "frequency": 1676, "definition": "Past tense of the verb 'to have'", "bangla": "ছিল", "example": "She had a great time."}
+{"id": 24, "word": "on", "frequency": 1619, "definition": "Indicating position or topic", "bangla": "উপর", "example": "The book is on the table."}
+{"id": 25, "word": "our", "frequency": 1502, "definition": "Possessive form of we", "bangla": "আমাদের", "example": "Our team won the match."}
+{"id": 26, "word": "but", "frequency": 1490, "definition": "Used to introduce a contrast", "bangla": "কিন্তু", "example": "I tried, but I failed."}
+{"id": 27, "word": "people", "frequency": 1392, "definition": "Human beings in general or a group", "bangla": "মানুষ", "example": "People gathered in the park."}
+{"id": 28, "word": "will", "frequency": 1386, "definition": "Expressing future action or intention", "bangla": "ইচ্ছা", "example": "I will call you later."}
+{"id": 29, "word": "be", "frequency": 1338, "definition": "To exist or occur", "bangla": "হওয়া", "example": "Let it be."}
+{"id": 30, "word": "not", "frequency": 1333, "definition": "Used to form a negative", "bangla": "না", "example": "I am not tired."}
+{"id": 31, "word": "her", "frequency": 1332, "definition": "Objective or possessive form of she", "bangla": "তার (নারী)", "example": "I gave her a book."}
+{"id": 32, "word": "your", "frequency": 1304, "definition": "Possessive form of you", "bangla": "তোমার", "example": "Is this your bag?"}
+{"id": 33, "word": "have", "frequency": 1274, "definition": "To possess or experience", "bangla": "আছে", "example": "They have two cats."}
+{"id": 34, "word": "more", "frequency": 1208, "definition": "A greater amount or extent", "bangla": "আরও", "example": "I need more time."}
+{"id": 35, "word": "she", "frequency": 1203, "definition": "Referring to a female person", "bangla": "সে (নারী)", "example": "She is a doctor."}
+{"id": 36, "word": "can", "frequency": 1135, "definition": "To be able to", "bangla": "পারা", "example": "I can swim."}
+{"id": 37, "word": "from", "frequency": 1097, "definition": "Indicating origin or separation", "bangla": "থেকে", "example": "He is from India."}
+{"id": 38, "word": "them", "frequency": 1075, "definition": "Objective form of they", "bangla": "তাদেরকে", "example": "I saw them yesterday."}
+{"id": 39, "word": "at", "frequency": 1069, "definition": "Indicating location or time", "bangla": "এ", "example": "Meet me at the station."}
+{"id": 40, "word": "by", "frequency": 1042, "definition": "Indicating means or proximity", "bangla": "দ্বারা", "example": "The book was written by her."}
+{"id": 41, "word": "what", "frequency": 1006, "definition": "Used to ask about something", "bangla": "কী", "example": "What is your name?"}
+{"id": 42, "word": "would", "frequency": 1002, "definition": "Expressing conditional or future action", "bangla": "হবে", "example": "I would go if I could."}
+{"id": 43, "word": "all", "frequency": 972, "definition": "The whole or every part", "bangla": "সব", "example": "All students passed."}
+{"id": 44, "word": "if", "frequency": 867, "definition": "Introducing a conditional clause", "bangla": "যদি", "example": "If it rains, stay home."}
+{"id": 45, "word": "who", "frequency": 864, "definition": "Used to identify a person", "bangla": "কে", "example": "Who is at the door?"}
+{"id": 46, "word": "him", "frequency": 788, "definition": "Objective form of he", "bangla": "তাকে (পুরুষ)", "example": "I called him yesterday."}
+{"id": 47, "word": "an", "frequency": 778, "definition": "Used to refer to a non-specific thing before a vowel", "bangla": "একটি", "example": "She ate an apple."}
+{"id": 48, "word": "so", "frequency": 774, "definition": "To such an extent or therefore", "bangla": "তাই", "example": "It was so cold."}
+{"id": 49, "word": "some", "frequency": 772, "definition": "An unspecified amount or number", "bangla": "কিছু", "example": "I have some money."}
+{"id": 50, "word": "us", "frequency": 757, "definition": "Objective form of we", "bangla": "আমাদেরকে", "example": "She helped us."}
+{"id": 51, "word": "could", "frequency": 726, "definition": "Past or conditional form of can", "bangla": "পারত", "example": "I could run faster then."}
+{"id": 52, "word": "such", "frequency": 668, "definition": "Of a particular kind", "bangla": "এমন", "example": "It was such a nice day."}
+{"id": 53, "word": "were", "frequency": 629, "definition": "Past tense of the verb 'to be' (plural)", "bangla": "ছিল (বহুবচন)", "example": "They were here."}
+{"id": 54, "word": "feel", "frequency": 621, "definition": "To experience an emotion or sensation", "bangla": "অনুভব করা", "example": "I feel happy today."}
+{"id": 55, "word": "when", "frequency": 612, "definition": "At what time or under what condition", "bangla": "কখন", "example": "When did you arrive?"}
+{"id": 56, "word": "one", "frequency": 598, "definition": "Referring to a single thing or person", "bangla": "এক", "example": "I have one book."}
+{"id": 57, "word": "into", "frequency": 597, "definition": "Indicating movement or transformation", "bangla": "মধ্যে", "example": "She walked into the room."}
+{"id": 58, "word": "up", "frequency": 580, "definition": "Toward a higher position or level", "bangla": "উপরে", "example": "He climbed up the hill."}
+{"id": 59, "word": "see", "frequency": 564, "definition": "To perceive with the eyes", "bangla": "দেখা", "example": "I can see the stars."}
+{"id": 60, "word": "life", "frequency": 564, "definition": "The condition of living or existence", "bangla": "জীবন", "example": "Life is beautiful."}
+{"id": 61, "word": "do", "frequency": 530, "definition": "To perform an action", "bangla": "করা", "example": "What do you do?"}
+{"id": 62, "word": "out", "frequency": 506, "definition": "Away from or outside", "bangla": "বাইরে", "example": "She went out to play."}
+{"id": 63, "word": "others", "frequency": 505, "definition": "Other people or things", "bangla": "অন্যরা", "example": "Help others in need."}
+{"id": 64, "word": "about", "frequency": 491, "definition": "Concerning or approximately", "bangla": "সম্পর্কে", "example": "Tell me about your day."}
+{"id": 65, "word": "these", "frequency": 486, "definition": "Plural of this, referring to specific things", "bangla": "এগুলো", "example": "These flowers are pretty."}
+{"id": 66, "word": "way", "frequency": 485, "definition": "A method or path", "bangla": "পথ", "example": "This is the way to success."}
+{"id": 67, "word": "own", "frequency": 478, "definition": "Belonging to oneself", "bangla": "নিজের", "example": "She has her own car."}
+{"id": 68, "word": "how", "frequency": 477, "definition": "In what manner or to what extent", "bangla": "কীভাবে", "example": "How do you cook this?"}
+{"id": 69, "word": "other", "frequency": 464, "definition": "Different or additional", "bangla": "অন্য", "example": "Try the other door."}
+{"id": 70, "word": "which", "frequency": 458, "definition": "Used to specify one or more from a group", "bangla": "যেটা", "example": "Which book do you want?"}
+{"id": 71, "word": "must", "frequency": 448, "definition": "Expressing necessity or obligation", "bangla": "অবশ্যই", "example": "You must finish your work."}
+{"id": 72, "word": "most", "frequency": 433, "definition": "The greatest amount or degree", "bangla": "সবচেয়ে", "example": "She is the most talented."}
+{"id": 73, "word": "any", "frequency": 430, "definition": "One, some, or all without specification", "bangla": "যেকোনো", "example": "Do you have any questions?"}
+{"id": 74, "word": "make", "frequency": 426, "definition": "To create or produce", "bangla": "তৈরি করা", "example": "She will make a cake."}
+{"id": 75, "word": "time", "frequency": 420, "definition": "A period or moment", "bangla": "সময়", "example": "Time passes quickly."}
+{"id": 76, "word": "something", "frequency": 419, "definition": "An unspecified thing", "bangla": "কিছু", "example": "I forgot something important."}
+{"id": 77, "word": "become", "frequency": 417, "definition": "To grow or develop into", "bangla": "হওয়া", "example": "She will become a doctor."}
+{"id": 78, "word": "only", "frequency": 408, "definition": "Solely or exclusively", "bangla": "শুধুমাত্র", "example": "This is for members only."}
+{"id": 79, "word": "even", "frequency": 402, "definition": "To emphasize something surprising", "bangla": "এমনকি", "example": "Even she was surprised."}
+{"id": 80, "word": "much", "frequency": 396, "definition": "A large amount or extent", "bangla": "অনেক", "example": "I don’t have much time."}
+{"id": 81, "word": "now", "frequency": 395, "definition": "At the present time", "bangla": "এখন", "example": "Let’s go now."}
+{"id": 82, "word": "new", "frequency": 393, "definition": "Recently made or discovered", "bangla": "নতুন", "example": "I bought a new phone."}
+{"id": 83, "word": "power", "frequency": 389, "definition": "Ability to control or influence", "bangla": "ক্ষমতা", "example": "He has great power."}
+{"id": 84, "word": "than", "frequency": 388, "definition": "Used in comparisons", "bangla": "থেকে", "example": "She is taller than him."}
+{"id": 85, "word": "there", "frequency": 385, "definition": "In or at that place", "bangla": "সেখানে", "example": "The book is there."}
+{"id": 86, "word": "group", "frequency": 380, "definition": "A number of people or things together", "bangla": "দল", "example": "They formed a group."}
+{"id": 87, "word": "work", "frequency": 378, "definition": "Activity involving effort to achieve a result", "bangla": "কাজ", "example": "She loves her work."}
+{"id": 88, "word": "like", "frequency": 376, "definition": "To enjoy or find similar", "bangla": "পছন্দ করা", "example": "I like to read."}
+{"id": 89, "word": "through", "frequency": 372, "definition": "Moving from one side to another", "bangla": "মাধ্যমে", "example": "We walked through the forest."}
+{"id": 90, "word": "often", "frequency": 370, "definition": "Frequently or many times", "bangla": "প্রায়ই", "example": "I often visit my grandparents."}
+{"id": 91, "word": "get", "frequency": 364, "definition": "To obtain or receive", "bangla": "পাওয়া", "example": "Can you get me a coffee?"}
+{"id": 92, "word": "attention", "frequency": 364, "definition": "Notice or focus of the mind", "bangla": "মনোযোগ", "example": "Pay attention to the teacher."}
+{"id": 93, "word": "no", "frequency": 359, "definition": "Used to express refusal or negation", "bangla": "না", "example": "No, I don’t want to go."}
+{"id": 94, "word": "self", "frequency": 350, "definition": "A person's essential being that distinguishes them from others, especially considered as the object of introspection or reflexive action", "bangla": "স্বয়ং", "example": "you'll soon be feeling your old self again"}
+{"id": 95, "word": "those", "frequency": 339, "definition": "Plural of that, referring to specific things", "bangla": "ঐগুলো", "example": "Those books are mine."}
+{"id": 96, "word": "want", "frequency": 323, "definition": "To desire or wish for", "bangla": "চাওয়া", "example": "I want to travel."}
+{"id": 97, "word": "too", "frequency": 323, "definition": "Also or excessively", "bangla": "খুব", "example": "It’s too hot today."}
+{"id": 98, "word": "over", "frequency": 314, "definition": "Above or across", "bangla": "উপরে", "example": "The plane flew over the city."}
+{"id": 99, "word": "also", "frequency": 307, "definition": "In addition", "bangla": "এছাড়াও", "example": "She is a teacher and also a writer."}
+{"id": 100, "word": "need", "frequency": 305, "definition": "To require or want something", "bangla": "প্রয়োজন", "example": "I need a new phone."}
+{"id": 101, "word": "many", "frequency": 295, "definition": "A large number of", "bangla": "অনেক", "example": "Many people attended the event."}
+{"id": 102, "word": "years", "frequency": 285, "definition": "Plural of year, a period of 12 months", "bangla": "বছর", "example": "She lived there for years."}
+{"id": 103, "word": "never", "frequency": 284, "definition": "At no time", "bangla": "কখনো না", "example": "I have never been to Paris."}
+{"id": 104, "word": "yourself", "frequency": 276, "definition": "Reflexive form of you", "bangla": "নিজেকে", "example": "Take care of yourself."}
+{"id": 105, "word": "world", "frequency": 274, "definition": "The earth or human society", "bangla": "বিশ্ব", "example": "The world is vast."}
+{"id": 106, "word": "sense", "frequency": 272, "definition": "A feeling or perception", "bangla": "অনুভূতি", "example": "I have a sense of calm."}
+{"id": 107, "word": "its", "frequency": 272, "definition": "Possessive form of it", "bangla": "এটার", "example": "The dog wagged its tail."}
+{"id": 108, "word": "great", "frequency": 271, "definition": "Very good or large", "bangla": "মহান", "example": "She did a great job."}
+{"id": 109, "word": "come", "frequency": 268, "definition": "To move toward or arrive", "bangla": "আসা", "example": "Come to my house."}
+{"id": 110, "word": "being", "frequency": 265, "definition": "Existence or a living entity", "bangla": "হওয়া", "example": "Being kind is important."}
+{"id": 111, "word": "human", "frequency": 262, "definition": "Relating to people", "bangla": "মানুষ", "example": "Human rights are vital."}
+{"id": 112, "word": "look", "frequency": 262, "definition": "To direct the eyes or appear", "bangla": "দেখা", "example": "Look at the stars."}
+{"id": 113, "word": "has", "frequency": 262, "definition": "Third person singular of have", "bangla": "আছে", "example": "He has a car."}
+{"id": 114, "word": "nature", "frequency": 259, "definition": "The natural world or character", "bangla": "প্রকৃতি", "example": "I love nature."}
+{"id": 115, "word": "first", "frequency": 259, "definition": "Coming before all others", "bangla": "প্রথম", "example": "She was the first to arrive."}
+{"id": 116, "word": "take", "frequency": 259, "definition": "To seize or accept", "bangla": "নেওয়া", "example": "Take this book."}
+{"id": 117, "word": "always", "frequency": 257, "definition": "At all times", "bangla": "সবসময়", "example": "She is always happy."}
+{"id": 118, "word": "might", "frequency": 245, "definition": "Possibility or power", "bangla": "হতে পারে", "example": "It might rain later."}
+{"id": 119, "word": "himself", "frequency": 243, "definition": "Reflexive form of he", "bangla": "নিজেকে (পুরুষ)", "example": "He hurt himself."}
+{"id": 120, "word": "been", "frequency": 242, "definition": "Past participle of be", "bangla": "হয়েছে", "example": "I have been busy."}
+{"id": 121, "word": "ourselves", "frequency": 237, "definition": "Reflexive form of we", "bangla": "আমাদের নিজেদের", "example": "We did it ourselves."}
+{"id": 122, "word": "because", "frequency": 237, "definition": "For the reason that", "bangla": "কারণ", "example": "I stayed because it rained."}
+{"id": 123, "word": "then", "frequency": 234, "definition": "At that time or next", "bangla": "তখন", "example": "Then we left."}
+{"id": 124, "word": "very", "frequency": 233, "definition": "To a high degree", "bangla": "খুব", "example": "She is very kind."}
+{"id": 125, "word": "control", "frequency": 233, "definition": "To manage or direct", "bangla": "নিয়ন্ত্রণ", "example": "He controls the project."}
+{"id": 126, "word": "feeling", "frequency": 232, "definition": "An emotion or sensation", "bangla": "অনুভূতি", "example": "I have a good feeling."}
+{"id": 127, "word": "within", "frequency": 229, "definition": "Inside or during", "bangla": "মধ্যে", "example": "Finish it within an hour."}
+{"id": 128, "word": "themselves", "frequency": 221, "definition": "Reflexive form of they", "bangla": "নিজেদের", "example": "They taught themselves."}
+{"id": 129, "word": "find", "frequency": 221, "definition": "To discover or locate", "bangla": "খুঁজে পাওয়া", "example": "I can’t find my keys."}
+{"id": 130, "word": "man", "frequency": 218, "definition": "An adult male person", "bangla": "মানুষ (পুরুষ)", "example": "The man helped me."}
+{"id": 131, "word": "person", "frequency": 217, "definition": "An individual human", "bangla": "ব্যক্তি", "example": "She is a kind person."}
+{"id": 132, "word": "father", "frequency": 214, "definition": "A male parent", "bangla": "বাবা", "example": "My father is at work."}
+{"id": 133, "word": "envy", "frequency": 210, "definition": "Feeling of discontent due to another's advantages", "bangla": "ঈর্ষা", "example": "She felt envy at his success."}
+{"id": 134, "word": "go", "frequency": 210, "definition": "To move or travel", "bangla": "যাওয়া", "example": "Let’s go to the park."}
+{"id": 135, "word": "well", "frequency": 209, "definition": "In a good or satisfactory way", "bangla": "ভালো", "example": "She sings well."}
+{"id": 136, "word": "did", "frequency": 209, "definition": "Past tense of do", "bangla": "করেছিল", "example": "I did my homework."}
+{"id": 137, "word": "made", "frequency": 208, "definition": "Past tense of make", "bangla": "তৈরি করা", "example": "He made a chair."}
+{"id": 138, "word": "mind", "frequency": 207, "definition": "The faculty of thought or consciousness", "bangla": "মন", "example": "She changed her mind."}
+{"id": 139, "word": "emotions", "frequency": 205, "definition": "Strong feelings", "bangla": "আবেগ", "example": "Her emotions were intense."}
+{"id": 140, "word": "same", "frequency": 205, "definition": "Identical or similar", "bangla": "একই", "example": "We have the same idea."}
+{"id": 141, "word": "try", "frequency": 202, "definition": "To attempt or test", "bangla": "চেষ্টা করা", "example": "Try to be punctual."}
+{"id": 142, "word": "down", "frequency": 201, "definition": "Toward a lower position", "bangla": "নিচে", "example": "She sat down."}
+{"id": 143, "word": "past", "frequency": 201, "definition": "Gone by in time", "bangla": "অতীত", "example": "The past is gone."}
+{"id": 144, "word": "after", "frequency": 201, "definition": "Following in time or place", "bangla": "পরে", "example": "Come after lunch."}
+{"id": 145, "word": "back", "frequency": 200, "definition": "To or toward the rear", "bangla": "পিছনে", "example": "Go back home."}
+{"id": 146, "word": "quite", "frequency": 199, "definition": "To a certain extent or completely", "bangla": "বেশ", "example": "It’s quite cold."}
+{"id": 147, "word": "king", "frequency": 199, "definition": "A male ruler of a country", "bangla": "রাজা", "example": "The king ruled wisely."}
+{"id": 148, "word": "tend", "frequency": 194, "definition": "To be inclined or likely", "bangla": "প্রবণতা", "example": "I tend to agree."}
+{"id": 149, "word": "felt", "frequency": 194, "definition": "Past tense of feel", "bangla": "অনুভব করা", "example": "She felt happy."}
+{"id": 150, "word": "love", "frequency": 193, "definition": "Deep affection or passion", "bangla": "ভালোবাসা", "example": "I love my family."}
+{"id": 151, "word": "experience", "frequency": 193, "definition": "Knowledge or skill gained through involvement", "bangla": "অভিজ্ঞতা", "example": "She has great experience."}
+{"id": 152, "word": "ideas", "frequency": 192, "definition": "Thoughts or concepts", "bangla": "ধারণা", "example": "He shared his ideas."}
+{"id": 153, "word": "things", "frequency": 191, "definition": "Objects or matters", "bangla": "জিনিস", "example": "I forgot my things."}
+{"id": 154, "word": "certain", "frequency": 191, "definition": "Sure or specific", "bangla": "নির্দিষ্ট", "example": "I’m certain of it."}
+{"id": 155, "word": "without", "frequency": 188, "definition": "Not having or lacking", "bangla": "ছাড়া", "example": "She left without a word."}
+{"id": 156, "word": "around", "frequency": 188, "definition": "In a circle or nearby", "bangla": "চারপাশে", "example": "Look around you."}
+{"id": 157, "word": "behavior", "frequency": 186, "definition": "The way one acts", "bangla": "আচরণ", "example": "His behavior was polite."}
+{"id": 158, "word": "think", "frequency": 185, "definition": "To consider or believe", "bangla": "চিন্তা করা", "example": "What do you think?"}
+{"id": 159, "word": "before", "frequency": 182, "definition": "Earlier in time or in front of", "bangla": "আগে", "example": "Come before noon."}
+{"id": 160, "word": "almost", "frequency": 182, "definition": "Nearly or not quite", "bangla": "প্রায়", "example": "It’s almost time."}
+{"id": 161, "word": "energy", "frequency": 181, "definition": "Power or vigor", "bangla": "শক্তি", "example": "She has a lot of energy."}
+{"id": 162, "word": "part", "frequency": 179, "definition": "A piece or segment", "bangla": "অংশ", "example": "This is part of the plan."}
+{"id": 163, "word": "seem", "frequency": 177, "definition": "To appear or give the impression", "bangla": "মনে হওয়া", "example": "You seem tired."}
+{"id": 164, "word": "once", "frequency": 177, "definition": "One time or formerly", "bangla": "একবার", "example": "I met her once."}
+{"id": 165, "word": "social", "frequency": 176, "definition": "Relating to society or interaction", "bangla": "সামাজিক", "example": "It was a social event."}
+{"id": 166, "word": "good", "frequency": 174, "definition": "Of high quality or morally right", "bangla": "ভালো", "example": "She is a good person."}
+{"id": 167, "word": "character", "frequency": 173, "definition": "A person’s moral qualities or a role", "bangla": "চরিত্র", "example": "He has strong character."}
+{"id": 168, "word": "mary", "frequency": 173, "definition": "A female name", "bangla": "মেরি", "example": "Mary is my friend."}
+{"id": 169, "word": "death", "frequency": 171, "definition": "The end of life", "bangla": "মৃত্যু", "example": "Death is inevitable."}
+{"id": 170, "word": "making", "frequency": 171, "definition": "The process of creating", "bangla": "তৈরি করা", "example": "She is making dinner."}
+{"id": 171, "word": "thinking", "frequency": 171, "definition": "The process of considering", "bangla": "চিন্তা", "example": "I’m thinking about you."}
+{"id": 172, "word": "spirit", "frequency": 170, "definition": "The non-physical part of a person or enthusiasm", "bangla": "আত্মা", "example": "Her spirit is strong."}
+{"id": 173, "word": "seemed", "frequency": 170, "definition": "Past tense of seem", "bangla": "মনে হয়েছিল", "example": "It seemed impossible."}
+{"id": 174, "word": "give", "frequency": 168, "definition": "To present or deliver", "bangla": "দেওয়া", "example": "Give me the pen."}
+{"id": 175, "word": "help", "frequency": 167, "definition": "To assist or aid", "bangla": "সাহায্য", "example": "Can you help me?"}
+{"id": 176, "word": "deep", "frequency": 167, "definition": "Extending far down or profound", "bangla": "গভীর", "example": "The lake is deep."}
+{"id": 177, "word": "different", "frequency": 167, "definition": "Not the same", "bangla": "ভিন্ন", "example": "We have different tastes."}
+{"id": 178, "word": "men", "frequency": 167, "definition": "Plural of man, adult males", "bangla": "পুরুষ", "example": "The men worked hard."}
+{"id": 179, "word": "form", "frequency": 166, "definition": "Shape or structure", "bangla": "ফর্ম", "example": "The form of the building is unique."}
+{"id": 180, "word": "few", "frequency": 164, "definition": "A small number of", "bangla": "কয়েক", "example": "I have a few friends."}
+{"id": 181, "word": "keep", "frequency": 163, "definition": "To retain or maintain", "bangla": "রাখা", "example": "Keep the change."}
+{"id": 182, "word": "side", "frequency": 162, "definition": "A position or aspect", "bangla": "পাশ", "example": "Stand by my side."}
+{"id": 183, "word": "types", "frequency": 159, "definition": "Categories or kinds", "bangla": "প্রকার", "example": "There are many types of fish."}
+{"id": 184, "word": "just", "frequency": 159, "definition": "Exactly or morally right", "bangla": "শুধু", "example": "It’s just a game."}
+{"id": 185, "word": "better", "frequency": 158, "definition": "More desirable or improved", "bangla": "উত্তম", "example": "This is a better option."}
+{"id": 186, "word": "effect", "frequency": 158, "definition": "A result or influence", "bangla": "প্রভাব", "example": "The effect was surprising."}
+{"id": 187, "word": "possible", "frequency": 158, "definition": "Able to happen or be done", "bangla": "সম্ভব", "example": "Is it possible to finish today?"}
+{"id": 188, "word": "finally", "frequency": 157, "definition": "At last or in conclusion", "bangla": "অবশেষে", "example": "She finally arrived."}
+{"id": 189, "word": "day", "frequency": 157, "definition": "A 24-hour period", "bangla": "দিন", "example": "It’s a sunny day."}
+{"id": 190, "word": "toward", "frequency": 155, "definition": "In the direction of", "bangla": "দিকে", "example": "He walked toward the school."}
+{"id": 191, "word": "instead", "frequency": 155, "definition": "As an alternative", "bangla": "পরিবর্তে", "example": "Take this instead."}
+{"id": 192, "word": "hard", "frequency": 153, "definition": "Difficult or solid", "bangla": "কঠিন", "example": "The test was hard."}
+{"id": 193, "word": "came", "frequency": 151, "definition": "Past tense of come", "bangla": "এসেছিল", "example": "She came home late."}
+{"id": 194, "word": "cannot", "frequency": 151, "definition": "Unable to", "bangla": "পারে না", "example": "I cannot attend."}
+{"id": 195, "word": "less", "frequency": 151, "definition": "A smaller amount", "bangla": "কম", "example": "I have less time now."}
+{"id": 196, "word": "may", "frequency": 151, "definition": "Expressing possibility or permission", "bangla": "হতে পারে", "example": "You may leave now."}
+{"id": 197, "word": "rather", "frequency": 150, "definition": "Preferably or to some extent", "bangla": "বরং", "example": "I’d rather stay home."}
+{"id": 198, "word": "became", "frequency": 150, "definition": "Past tense of become", "bangla": "হয়ে গেল", "example": "She became a teacher."}
+{"id": 199, "word": "attitude", "frequency": 149, "definition": "A way of thinking or behaving", "bangla": "মনোভাব", "example": "Her attitude is positive."}
+{"id": 200, "word": "comes", "frequency": 149, "definition": "Third person singular of come", "bangla": "আসে", "example": "He comes every day."}
+{"id": 201, "word": "suddenly", "frequency": 147, "definition": "Quickly and unexpectedly", "bangla": "হঠাৎ", "example": "It started raining suddenly."}
+{"id": 202, "word": "early", "frequency": 147, "definition": "Before the expected time", "bangla": "আগে", "example": "She arrived early."}
+{"id": 203, "word": "best", "frequency": 147, "definition": "The most excellent", "bangla": "সেরা", "example": "This is the best book."}
+{"id": 204, "word": "began", "frequency": 147, "definition": "Past tense of begin", "bangla": "শুরু হয়েছিল", "example": "The show began at 7."}
+{"id": 205, "word": "another", "frequency": 146, "definition": "One more or different", "bangla": "আরেকটি", "example": "I need another pen."}
+{"id": 206, "word": "should", "frequency": 146, "definition": "Expressing obligation or expectation", "bangla": "উচিত", "example": "You should study."}
+{"id": 207, "word": "against", "frequency": 145, "definition": "In opposition to", "bangla": "বিরুদ্ধে", "example": "He voted against the plan."}
+{"id": 208, "word": "desire", "frequency": 144, "definition": "A strong wish", "bangla": "ইচ্ছা", "example": "Her desire is to travel."}
+{"id": 209, "word": "know", "frequency": 144, "definition": "To be aware or informed", "bangla": "জানা", "example": "I know the answer."}
+{"id": 210, "word": "reality", "frequency": 144, "definition": "The state of things as they exist", "bangla": "বাস্তবতা", "example": "Reality can be harsh."}
+{"id": 211, "word": "perhaps", "frequency": 144, "definition": "Possibly or maybe", "bangla": "সম্ভবত", "example": "Perhaps she will come."}
+{"id": 212, "word": "young", "frequency": 141, "definition": "Having lived for a short time", "bangla": "তরুণ", "example": "The young boy ran fast."}
+{"id": 213, "word": "aware", "frequency": 140, "definition": "Having knowledge or perception", "bangla": "সচেতন", "example": "She is aware of the issue."}
+{"id": 214, "word": "two", "frequency": 139, "definition": "The number 2", "bangla": "দুই", "example": "I have two cats."}
+{"id": 215, "word": "signs", "frequency": 139, "definition": "Indications or symbols", "bangla": "চিহ্ন", "example": "The signs point to danger."}
+{"id": 216, "word": "long", "frequency": 138, "definition": "Extending for a great distance or time", "bangla": "দীর্ঘ", "example": "It’s a long journey."}
+{"id": 217, "word": "however", "frequency": 136, "definition": "Nevertheless or in whatever way", "bangla": "যাইহোক", "example": "It’s expensive; however, it’s worth it."}
+{"id": 218, "word": "say", "frequency": 135, "definition": "To express in words", "bangla": "বলা", "example": "What did you say?"}
+{"id": 219, "word": "position", "frequency": 135, "definition": "A place or role", "bangla": "অবস্থান", "example": "She holds a high position."}
+{"id": 220, "word": "women", "frequency": 134, "definition": "Plural of woman, adult females", "bangla": "নারী", "example": "Women attended the meeting."}
+{"id": 221, "word": "let", "frequency": 133, "definition": "To allow or permit", "bangla": "দেওয়া", "example": "Let me help you."}
+{"id": 222, "word": "leaders", "frequency": 133, "definition": "People who guide or direct", "bangla": "নেতা", "example": "Leaders inspire others."}
+{"id": 223, "word": "success", "frequency": 132, "definition": "Achievement of a goal", "bangla": "সাফল্য", "example": "Her success was celebrated."}
+{"id": 224, "word": "woman", "frequency": 132, "definition": "An adult female person", "bangla": "নারী", "example": "The woman smiled warmly."}
+{"id": 225, "word": "imagine", "frequency": 132, "definition": "To form a mental image", "bangla": "কল্পনা করা", "example": "Imagine a better future."}
+{"id": 226, "word": "money", "frequency": 132, "definition": "Currency used for transactions", "bangla": "টাকা", "example": "I need more money."}
+{"id": 227, "word": "rockefeller", "frequency": 132, "definition": "Referring to the prominent American industrialist family", "bangla": "রকফেলার", "example": "Rockefeller built a vast empire."}
+{"id": 228, "word": "moment", "frequency": 131, "definition": "A brief period of time", "bangla": "মুহূর্ত", "example": "It was a perfect moment."}
+{"id": 229, "word": "moments", "frequency": 130, "definition": "Plural of moment, brief periods", "bangla": "মুহূর্তগুলো", "example": "Cherish these moments."}
+{"id": 230, "word": "mother", "frequency": 129, "definition": "A female parent", "bangla": "মা", "example": "My mother is kind."}
+{"id": 231, "word": "high", "frequency": 129, "definition": "Elevated or intense", "bangla": "উচ্চ", "example": "The mountain is high."}
+{"id": 232, "word": "fact", "frequency": 129, "definition": "Something known to be true", "bangla": "সত্য", "example": "It’s a fact that she won."}
+{"id": 233, "word": "really", "frequency": 129, "definition": "In reality or truly", "bangla": "সত্যিই", "example": "I’m really tired."}
+{"id": 234, "word": "public", "frequency": 129, "definition": "Relating to people in general", "bangla": "সর্বজনীন", "example": "It’s a public holiday."}
+{"id": 235, "word": "family", "frequency": 128, "definition": "A group of related people", "bangla": "পরিবার", "example": "My family is large."}
+{"id": 236, "word": "every", "frequency": 127, "definition": "Each one of a group", "bangla": "প্রতিটি", "example": "Every student passed."}
+{"id": 237, "word": "play", "frequency": 127, "definition": "To engage in activity for enjoyment", "bangla": "খেলা", "example": "Kids love to play."}
+{"id": 238, "word": "create", "frequency": 127, "definition": "To bring into existence", "bangla": "সৃষ্টি করা", "example": "She will create art."}
+{"id": 239, "word": "authority", "frequency": 126, "definition": "Power to command or control", "bangla": "কর্তৃত্ব", "example": "He has authority here."}
+{"id": 240, "word": "particular", "frequency": 126, "definition": "Specific or distinct", "bangla": "নির্দিষ্ট", "example": "I need a particular book."}
+{"id": 241, "word": "everything", "frequency": 126, "definition": "All things", "bangla": "সবকিছু", "example": "Everything is ready."}
+{"id": 242, "word": "aggressive", "frequency": 125, "definition": "Hostile or forceful", "bangla": "আক্রমণাত্মক", "example": "His tone was aggressive."}
+{"id": 243, "word": "where", "frequency": 125, "definition": "In or to what place", "bangla": "কোথায়", "example": "Where is my phone?"}
+{"id": 244, "word": "feelings", "frequency": 125, "definition": "Plural of feeling, emotions", "bangla": "অনুভূতি", "example": "Her feelings were hurt."}
+{"id": 245, "word": "simply", "frequency": 125, "definition": "In a straightforward way", "bangla": "সহজভাবে", "example": "Explain it simply."}
+{"id": 246, "word": "enough", "frequency": 125, "definition": "As much as needed", "bangla": "যথেষ্ট", "example": "I have enough food."}
+{"id": 247, "word": "ever", "frequency": 125, "definition": "At any time", "bangla": "কখনো", "example": "Have you ever traveled?"}
+{"id": 248, "word": "continually", "frequency": 124, "definition": "Repeatedly or without interruption", "bangla": "অবিরাম", "example": "She works continually."}
+{"id": 249, "word": "later", "frequency": 124, "definition": "At a subsequent time", "bangla": "পরে", "example": "See you later."}
+{"id": 250, "word": "present", "frequency": 124, "definition": "Current or a gift", "bangla": "বর্তমান", "example": "She gave me a present."}
+{"id": 251, "word": "wanted", "frequency": 123, "definition": "Past tense of want", "bangla": "চেয়েছিল", "example": "He wanted to leave."}
+{"id": 252, "word": "someone", "frequency": 123, "definition": "An unspecified person", "bangla": "কেউ", "example": "Someone called you."}
+{"id": 253, "word": "generation", "frequency": 122, "definition": "A group born around the same time", "bangla": "প্রজন্ম", "example": "This generation is tech-savvy."}
+{"id": 254, "word": "understand", "frequency": 121, "definition": "To comprehend or grasp", "bangla": "বোঝা", "example": "I understand the lesson."}
+{"id": 255, "word": "ways", "frequency": 121, "definition": "Plural of way, methods", "bangla": "পথ", "example": "There are many ways to learn."}
+{"id": 256, "word": "greater", "frequency": 121, "definition": "More significant or larger", "bangla": "বৃহত্তর", "example": "The greater good matters."}
+{"id": 257, "word": "war", "frequency": 118, "definition": "A state of armed conflict", "bangla": "যুদ্ধ", "example": "The war ended in peace."}
+{"id": 258, "word": "negative", "frequency": 118, "definition": "Expressing denial or unfavorable", "bangla": "নেতিবাচক", "example": "He has a negative attitude."}
+{"id": 259, "word": "deeply", "frequency": 118, "definition": "Intensely or profoundly", "bangla": "গভীরভাবে", "example": "She was deeply moved."}
+{"id": 260, "word": "quickly", "frequency": 117, "definition": "At a fast speed", "bangla": "দ্রুত", "example": "Run quickly to the store."}
+{"id": 261, "word": "important", "frequency": 117, "definition": "Of great significance", "bangla": "গুরুত্বপূর্ণ", "example": "This is an important decision."}
+{"id": 262, "word": "purpose", "frequency": 116, "definition": "The reason for which something is done", "bangla": "উদ্দেশ্য", "example": "Her purpose was clear."}
+{"id": 263, "word": "itself", "frequency": 116, "definition": "Reflexive form of it", "bangla": "নিজেই", "example": "The problem solved itself."}
+{"id": 264, "word": "little", "frequency": 116, "definition": "Small in size or amount", "bangla": "ছোট", "example": "I have a little money."}
+{"id": 265, "word": "between", "frequency": 116, "definition": "In the space separating two things", "bangla": "মাঝে", "example": "Choose between the two."}
+{"id": 266, "word": "opposite", "frequency": 116, "definition": "Contrary or facing", "bangla": "বিপরীত", "example": "The opposite side is open."}
+{"id": 267, "word": "role", "frequency": 115, "definition": "A function or part played", "bangla": "ভূমিকা", "example": "Her role was crucial."}
+{"id": 268, "word": "notice", "frequency": 115, "definition": "To observe or a written announcement", "bangla": "লক্ষ্য করা", "example": "Did you notice the sign?"}
+{"id": 269, "word": "under", "frequency": 114, "definition": "Beneath or below", "bangla": "নিচে", "example": "The cat is under the table."}
+{"id": 270, "word": "end", "frequency": 114, "definition": "The final part or conclusion", "bangla": "শেষ", "example": "The movie’s end was sad."}
+{"id": 271, "word": "relationship", "frequency": 112, "definition": "A connection between people", "bangla": "সম্পর্ক", "example": "Their relationship is strong."}
+{"id": 272, "word": "trying", "frequency": 112, "definition": "Making an effort", "bangla": "চেষ্টা করছে", "example": "She is trying to learn."}
+{"id": 273, "word": "powerful", "frequency": 112, "definition": "Having great power or influence", "bangla": "শক্তিশালী", "example": "He is a powerful leader."}
+{"id": 274, "word": "children", "frequency": 112, "definition": "Plural of child, young people", "bangla": "শিশু", "example": "Children played in the park."}
+{"id": 275, "word": "soon", "frequency": 112, "definition": "In a short time", "bangla": "শীঘ্রই", "example": "She’ll arrive soon."}
+{"id": 276, "word": "several", "frequency": 111, "definition": "More than two but not many", "bangla": "কয়েকটি", "example": "I have several books."}
+{"id": 277, "word": "positive", "frequency": 110, "definition": "Favorable or affirming", "bangla": "ইতিবাচক", "example": "Her response was positive."}
+{"id": 278, "word": "face", "frequency": 110, "definition": "The front of the head or to confront", "bangla": "মুখ", "example": "She has a smiling face."}
+{"id": 279, "word": "far", "frequency": 109, "definition": "At a great distance", "bangla": "দূরে", "example": "The village is far away."}
+{"id": 280, "word": "influence", "frequency": 108, "definition": "The power to affect others", "bangla": "প্রভাব", "example": "Her words had influence."}
+{"id": 281, "word": "leader", "frequency": 108, "definition": "A person who guides", "bangla": "নেতা", "example": "He is a great leader."}
+{"id": 282, "word": "kind", "frequency": 108, "definition": "A type or having a gentle nature", "bangla": "দয়ালু", "example": "She is kind to all."}
+{"id": 283, "word": "learn", "frequency": 108, "definition": "To gain knowledge or skill", "bangla": "শেখা", "example": "I want to learn coding."}
+{"id": 284, "word": "company", "frequency": 108, "definition": "A business or companionship", "bangla": "কোম্পানি", "example": "She works for a company."}
+{"id": 285, "word": "away", "frequency": 106, "definition": "At a distance or gone", "bangla": "দূরে", "example": "He walked away."}
+{"id": 286, "word": "following", "frequency": 106, "definition": "Coming next or adhering to", "bangla": "অনুসরণ", "example": "The following day was sunny."}
+{"id": 287, "word": "parents", "frequency": 106, "definition": "Mother and father", "bangla": "বাবা-মা", "example": "My parents are supportive."}
+{"id": 288, "word": "type", "frequency": 105, "definition": "A category or kind", "bangla": "প্রকার", "example": "What type of food is this?"}
+{"id": 289, "word": "use", "frequency": 105, "definition": "To employ or utilize", "bangla": "ব্যবহার", "example": "Use this pen."}
+{"id": 290, "word": "begin", "frequency": 105, "definition": "To start something", "bangla": "শুরু করা", "example": "Let’s begin the meeting."}
+{"id": 291, "word": "completely", "frequency": 104, "definition": "Totally or fully", "bangla": "সম্পূর্ণভাবে", "example": "I completely agree."}
+{"id": 292, "word": "thought", "frequency": 104, "definition": "The process of thinking or an idea", "bangla": "চিন্তা", "example": "I had a great thought."}
+{"id": 293, "word": "each", "frequency": 104, "definition": "Every one of two or more", "bangla": "প্রত্যেক", "example": "Each student got a prize."}
+{"id": 294, "word": "anything", "frequency": 104, "definition": "Any thing or matter", "bangla": "কিছু", "example": "I don’t know anything."}
+{"id": 295, "word": "business", "frequency": 104, "definition": "Commercial activity or enterprise", "bangla": "ব্যবসা", "example": "He runs a business."}
+{"id": 296, "word": "off", "frequency": 102, "definition": "Away from or not on", "bangla": "বন্ধ", "example": "Turn off the light."}
+{"id": 297, "word": "able", "frequency": 102, "definition": "Having the capability", "bangla": "সক্ষম", "example": "She is able to drive."}
+{"id": 298, "word": "makes", "frequency": 102, "definition": "Third person singular of make", "bangla": "তৈরি করে", "example": "He makes furniture."}
+{"id": 299, "word": "shadow", "frequency": 101, "definition": "A dark shape or hidden influence", "bangla": "ছায়া", "example": "The tree cast a shadow."}
+{"id": 300, "word": "process", "frequency": 101, "definition": "A series of actions", "bangla": "প্রক্রিয়া", "example": "The process was smooth."}
+{"id": 301, "word": "actions", "frequency": 100, "definition": "Things done or performed", "bangla": "ক্রিয়া", "example": "His actions were brave."}
+{"id": 302, "word": "doing", "frequency": 100, "definition": "The act of performing", "bangla": "করছে", "example": "What are you doing?"}
+{"id": 303, "word": "turn", "frequency": 100, "definition": "To change direction or rotate", "bangla": "ঘোরা", "example": "Turn left at the corner."}
+{"id": 304, "word": "qualities", "frequency": 100, "definition": "Attributes or characteristics", "bangla": "গুণ", "example": "She has great qualities."}
+{"id": 305, "word": "change", "frequency": 99, "definition": "To make or become different", "bangla": "পরিবর্তন", "example": "I need to change my plan."}
+{"id": 306, "word": "having", "frequency": 99, "definition": "Possessing or experiencing", "bangla": "আছে", "example": "Having fun is important."}
+{"id": 307, "word": "among", "frequency": 98, "definition": "In the middle of or surrounded by", "bangla": "মধ্যে", "example": "She stood among friends."}
+{"id": 308, "word": "point", "frequency": 98, "definition": "A specific moment or idea", "bangla": "বিন্দু", "example": "You made a good point."}
+{"id": 309, "word": "force", "frequency": 98, "definition": "Strength or power", "bangla": "বল", "example": "The force of the wind was strong."}
+{"id": 310, "word": "nixon", "frequency": 98, "definition": "Referring to Richard Nixon, former U.S. president", "bangla": "নিক্সন", "example": "Nixon was a controversial leader."}
+{"id": 311, "word": "humans", "frequency": 97, "definition": "Plural of human, people", "bangla": "মানুষ", "example": "Humans are creative."}
+{"id": 312, "word": "action", "frequency": 97, "definition": "Something done or performed", "bangla": "ক্রিয়া", "example": "Her action was quick."}
+{"id": 313, "word": "put", "frequency": 97, "definition": "To place or set", "bangla": "রাখা", "example": "Put the book on the shelf."}
+{"id": 314, "word": "level", "frequency": 96, "definition": "A position or stage", "bangla": "স্তর", "example": "She reached a new level."}
+{"id": 315, "word": "months", "frequency": 96, "definition": "Plural of month, periods of time", "bangla": "মাস", "example": "It took months to finish."}
+{"id": 316, "word": "various", "frequency": 96, "definition": "Different or diverse", "bangla": "বিভিন্ন", "example": "We tried various methods."}
+{"id": 317, "word": "lives", "frequency": 95, "definition": "Plural of life, existences", "bangla": "জীবন", "example": "Their lives are happy."}
+{"id": 318, "word": "particularly", "frequency": 95, "definition": "Especially or specifically", "bangla": "বিশেষভাবে", "example": "I’m particularly fond of music."}
+{"id": 319, "word": "friends", "frequency": 94, "definition": "People with whom one has a bond", "bangla": "বন্ধু", "example": "My friends are supportive."}
+{"id": 320, "word": "times", "frequency": 94, "definition": "Plural of time, occasions", "bangla": "সময়", "example": "I’ve seen it many times."}
+{"id": 321, "word": "upon", "frequency": 94, "definition": "On or immediately after", "bangla": "উপর", "example": "It depends upon you."}
+{"id": 322, "word": "generally", "frequency": 94, "definition": "Usually or in most cases", "bangla": "সাধারণত", "example": "She generally arrives early."}
+{"id": 323, "word": "instance", "frequency": 94, "definition": "An example or occurrence", "bangla": "উদাহরণ", "example": "This is a good instance."}
+{"id": 324, "word": "anger", "frequency": 94, "definition": "A strong feeling of displeasure", "bangla": "রাগ", "example": "His anger was evident."}
+{"id": 325, "word": "although", "frequency": 94, "definition": "In spite of the fact that", "bangla": "যদিও", "example": "Although tired, she worked."}
+{"id": 326, "word": "real", "frequency": 94, "definition": "Actually existing or true", "bangla": "বাস্তব", "example": "Is this real gold?"}
+{"id": 327, "word": "older", "frequency": 94, "definition": "More advanced in age", "bangla": "বয়স্ক", "example": "My older sister is wise."}
+{"id": 328, "word": "culture", "frequency": 93, "definition": "The beliefs and customs of a group", "bangla": "সংস্কৃতি", "example": "Bengali culture is vibrant."}
+{"id": 329, "word": "body", "frequency": 93, "definition": "The physical structure of a person", "bangla": "শরীর", "example": "Her body is healthy."}
+{"id": 330, "word": "means", "frequency": 93, "definition": "Method or resources", "bangla": "উপায়", "example": "We have the means to succeed."}
+{"id": 331, "word": "career", "frequency": 93, "definition": "A profession or occupation", "bangla": "ক্যারিয়ার", "example": "Her career is thriving."}
+{"id": 332, "word": "age", "frequency": 93, "definition": "The length of time lived", "bangla": "বয়স", "example": "What is your age?"}
+{"id": 333, "word": "why", "frequency": 92, "definition": "For what reason", "bangla": "কেন", "example": "Why are you late?"}
+{"id": 334, "word": "old", "frequency": 92, "definition": "Having lived for a long time", "bangla": "পুরানো", "example": "The old house stood tall."}
+{"id": 335, "word": "johnson", "frequency": 92, "definition": "A common surname", "bangla": "জনসন", "example": "Johnson wrote the book."}
+{"id": 336, "word": "general", "frequency": 91, "definition": "Widespread or a military rank", "bangla": "সাধারণ", "example": "It’s a general trend."}
+{"id": 337, "word": "second", "frequency": 90, "definition": "Next after the first", "bangla": "দ্বিতীয়", "example": "She came in second place."}
+{"id": 338, "word": "superior", "frequency": 90, "definition": "Higher in rank or quality", "bangla": "উচ্চতর", "example": "Her work is superior."}
+{"id": 339, "word": "naturally", "frequency": 90, "definition": "In a natural way", "bangla": "স্বাভাবিকভাবে", "example": "She sings naturally."}
+{"id": 340, "word": "history", "frequency": 90, "definition": "The study of past events", "bangla": "ইতিহাস", "example": "History teaches us lessons."}
+{"id": 341, "word": "lost", "frequency": 90, "definition": "Unable to find or no longer possessed", "bangla": "হারিয়ে গেছে", "example": "I lost my keys."}
+{"id": 342, "word": "realize", "frequency": 89, "definition": "To become aware or understand", "bangla": "উপলব্ধি করা", "example": "I didn’t realize the time."}
+{"id": 343, "word": "nothing", "frequency": 89, "definition": "Not anything", "bangla": "কিছুই না", "example": "There’s nothing to worry about."}
+{"id": 344, "word": "large", "frequency": 89, "definition": "Big in size or amount", "bangla": "বড়", "example": "It’s a large house."}
+{"id": 345, "word": "oil", "frequency": 89, "definition": "A liquid used for fuel or lubrication", "bangla": "তেল", "example": "Oil prices are rising."}
+{"id": 346, "word": "jane", "frequency": 89, "definition": "A female name", "bangla": "জেন", "example": "Jane is my colleague."}
+{"id": 347, "word": "emotional", "frequency": 88, "definition": "Relating to feelings", "bangla": "আবেগপ্রবণ", "example": "She is very emotional."}
+{"id": 348, "word": "voice", "frequency": 88, "definition": "Sound produced by speaking", "bangla": "কণ্ঠ", "example": "Her voice is sweet."}
+{"id": 349, "word": "bring", "frequency": 88, "definition": "To carry or lead to a place", "bangla": "আনা", "example": "Bring your book."}
+{"id": 350, "word": "project", "frequency": 88, "definition": "A planned task or undertaking", "bangla": "প্রকল্প", "example": "The project was a success."}
+{"id": 351, "word": "live", "frequency": 88, "definition": "To be alive or reside", "bangla": "বাঁচা", "example": "I live in the city."}
+{"id": 352, "word": "childhood", "frequency": 88, "definition": "The period of being a child", "bangla": "শৈশব", "example": "Her childhood was happy."}
+{"id": 353, "word": "looking", "frequency": 88, "definition": "The act of directing the eyes", "bangla": "দেখছে", "example": "She is looking at the sky."}
+{"id": 354, "word": "job", "frequency": 88, "definition": "A paid position of employment", "bangla": "চাকরি", "example": "He got a new job."}
+{"id": 355, "word": "empathy", "frequency": 87, "definition": "Understanding another’s feelings", "bangla": "সহানুভূতি", "example": "She showed empathy to her friend."}
+{"id": 356, "word": "set", "frequency": 87, "definition": "To put in a specific position", "bangla": "সেট করা", "example": "Set the table for dinner."}
+{"id": 357, "word": "slowly", "frequency": 87, "definition": "At a slow pace", "bangla": "ধীরে", "example": "Walk slowly on the ice."}
+{"id": 358, "word": "fear", "frequency": 87, "definition": "An unpleasant emotion caused by danger", "bangla": "ভয়", "example": "Fear gripped her heart."}
+{"id": 359, "word": "strategy", "frequency": 87, "definition": "A plan to achieve a goal", "bangla": "কৌশল", "example": "Their strategy worked well."}
+{"id": 360, "word": "decided", "frequency": 87, "definition": "Past tense of decide", "bangla": "সিদ্ধান্ত নিয়েছে", "example": "She decided to stay."}
+{"id": 361, "word": "everyone", "frequency": 87, "definition": "All people", "bangla": "সবাই", "example": "Everyone was happy."}
+{"id": 362, "word": "future", "frequency": 87, "definition": "Time yet to come", "bangla": "ভবিষ্যৎ", "example": "The future looks bright."}
+{"id": 363, "word": "opinion", "frequency": 86, "definition": "A belief or judgment", "bangla": "মতামত", "example": "What’s your opinion?"}
+{"id": 364, "word": "strong", "frequency": 86, "definition": "Having great power or intensity", "bangla": "শক্তিশালী", "example": "He is strong and fit."}
+{"id": 365, "word": "values", "frequency": 86, "definition": "Principles or standards", "bangla": "মূল্যবোধ", "example": "Her values guide her actions."}
+{"id": 366, "word": "eisner", "frequency": 86, "definition": "Referring to Michael Eisner, former Disney CEO", "bangla": "আইজনার", "example": "Eisner led Disney’s growth."}
+{"id": 367, "word": "behind", "frequency": 85, "definition": "At the back of or supporting", "bangla": "পিছনে", "example": "She stood behind him."}
+{"id": 368, "word": "longer", "frequency": 85, "definition": "For a greater duration", "bangla": "দীর্ঘতর", "example": "I can’t wait any longer."}
+{"id": 369, "word": "pay", "frequency": 85, "definition": "To give money for goods or services", "bangla": "পরিশোধ", "example": "Pay the bill now."}
+{"id": 370, "word": "natural", "frequency": 85, "definition": "Existing in nature or normal", "bangla": "প্রাকৃতিক", "example": "Her beauty is natural."}
+{"id": 371, "word": "french", "frequency": 85, "definition": "Relating to France or its language", "bangla": "ফরাসি", "example": "She speaks French fluently."}
+{"id": 372, "word": "members", "frequency": 85, "definition": "People belonging to a group", "bangla": "সদস্য", "example": "Members voted today."}
+{"id": 373, "word": "simple", "frequency": 84, "definition": "Easy or plain", "bangla": "সরল", "example": "It’s a simple task."}
+{"id": 374, "word": "getting", "frequency": 84, "definition": "The act of obtaining", "bangla": "পাচ্ছে", "example": "I’m getting tired."}
+{"id": 375, "word": "don", "frequency": 84, "definition": "Contraction of do not", "bangla": "করো না", "example": "I don’t like it."}
+{"id": 376, "word": "powers", "frequency": 84, "definition": "Plural of power, abilities or authorities", "bangla": "ক্ষমতা", "example": "Leaders have great powers."}
+{"id": 377, "word": "order", "frequency": 84, "definition": "A command or arrangement", "bangla": "আদেশ", "example": "Follow the order."}
+{"id": 378, "word": "queen", "frequency": 84, "definition": "A female ruler or wife of a king", "bangla": "রানী", "example": "The queen addressed the nation."}
+{"id": 379, "word": "ability", "frequency": 83, "definition": "The capacity to do something", "bangla": "ক্ষমতা", "example": "She has great ability."}
+{"id": 380, "word": "words", "frequency": 83, "definition": "Units of language", "bangla": "শব্দ", "example": "Choose your words carefully."}
+{"id": 381, "word": "direction", "frequency": 83, "definition": "The course or path taken", "bangla": "দিক", "example": "Go in that direction."}
+{"id": 382, "word": "open", "frequency": 83, "definition": "Not closed or accessible", "bangla": "খোলা", "example": "The door is open."}
+{"id": 383, "word": "cause", "frequency": 82, "definition": "A reason or motive", "bangla": "কারণ", "example": "What’s the cause of this?"}
+{"id": 384, "word": "found", "frequency": 82, "definition": "Past tense of find or to establish", "bangla": "পাওয়া গেছে", "example": "I found my keys."}
+{"id": 385, "word": "while", "frequency": 81, "definition": "During the time that", "bangla": "যখন", "example": "Wait while I finish."}
+{"id": 386, "word": "skills", "frequency": 80, "definition": "Abilities acquired through practice", "bangla": "দক্ষতা", "example": "Her skills are impressive."}
+{"id": 387, "word": "pattern", "frequency": 80, "definition": "A repeated design or behavior", "bangla": "প্যাটার্ন", "example": "I noticed a pattern in her work."}
+{"id": 388, "word": "last", "frequency": 80, "definition": "Final or most recent", "bangla": "শেষ", "example": "This is the last chance."}
+{"id": 389, "word": "right", "frequency": 80, "definition": "Correct or a direction", "bangla": "ঠিক", "example": "You are right."}
+{"id": 390, "word": "year", "frequency": 80, "definition": "A period of 12 months", "bangla": "বছর", "example": "Last year was tough."}
+{"id": 391, "word": "political", "frequency": 80, "definition": "Relating to government or politics", "bangla": "রাজনৈতিক", "example": "It’s a political issue."}
+{"id": 392, "word": "clear", "frequency": 79, "definition": "Easy to understand or transparent", "bangla": "পরিষ্কার", "example": "Her explanation was clear."}
+{"id": 393, "word": "insecurities", "frequency": 79, "definition": "Feelings of self-doubt", "bangla": "অনিরাপত্তা", "example": "She overcame her insecurities."}
+{"id": 394, "word": "saw", "frequency": 79, "definition": "Past tense of see", "bangla": "দেখেছিল", "example": "I saw a movie yesterday."}
+{"id": 395, "word": "herself", "frequency": 79, "definition": "Reflexive form of she", "bangla": "নিজেকে (নারী)", "example": "She taught herself coding."}
+{"id": 396, "word": "elizabeth", "frequency": 79, "definition": "A female name", "bangla": "এলিজাবেথ", "example": "Elizabeth is a queen."}
+{"id": 397, "word": "presence", "frequency": 78, "definition": "The state of being present", "bangla": "উপস্থিতি", "example": "Her presence was calming."}
+{"id": 398, "word": "said", "frequency": 78, "definition": "Past tense of say", "bangla": "বলেছিল", "example": "She said she was tired."}
+{"id": 399, "word": "going", "frequency": 78, "definition": "The act of moving or proceeding", "bangla": "যাচ্ছে", "example": "I’m going to the store."}
+{"id": 400, "word": "law", "frequency": 77, "definition": "A system of rules", "bangla": "আইন", "example": "The law protects citizens."}
+{"id": 401, "word": "masculine", "frequency": 77, "definition": "Relating to men or male qualities", "bangla": "পুংলিঙ্গ", "example": "His style is masculine."}
+{"id": 402, "word": "inevitably", "frequency": 77, "definition": "Unavoidably or certainly", "bangla": "অনিবার্যভাবে", "example": "Change comes inevitably."}
+{"id": 403, "word": "show", "frequency": 77, "definition": "To display or demonstrate", "bangla": "দেখানো", "example": "Show me your work."}
+{"id": 404, "word": "focus", "frequency": 77, "definition": "To concentrate or center attention", "bangla": "মনোযোগ", "example": "Focus on your studies."}
+{"id": 405, "word": "fall", "frequency": 76, "definition": "To drop or descend", "bangla": "পড়া", "example": "Leaves fall in autumn."}
+{"id": 406, "word": "lead", "frequency": 76, "definition": "To guide or direct", "bangla": "নেতৃত্ব দেওয়া", "example": "She will lead the team."}
+{"id": 407, "word": "minds", "frequency": 76, "definition": "Plural of mind, faculties of thought", "bangla": "মন", "example": "Their minds were sharp."}
+{"id": 408, "word": "believe", "frequency": 76, "definition": "To accept as true", "bangla": "বিশ্বাস করা", "example": "I believe in you."}
+{"id": 409, "word": "went", "frequency": 76, "definition": "Past tense of go", "bangla": "গিয়েছিল", "example": "He went to school."}
+{"id": 410, "word": "move", "frequency": 76, "definition": "To change position or place", "bangla": "সরানো", "example": "Move the chair here."}
+{"id": 411, "word": "else", "frequency": 76, "definition": "Other or different", "bangla": "অন্য", "example": "What else do you need?"}
+{"id": 412, "word": "feminine", "frequency": 75, "definition": "Relating to women or female qualities", "bangla": "নারীসুলভ", "example": "Her dress is feminine."}
+{"id": 413, "word": "stories", "frequency": 75, "definition": "Plural of story, narratives", "bangla": "গল্প", "example": "I love reading stories."}
+{"id": 414, "word": "actually", "frequency": 75, "definition": "In fact or really", "bangla": "আসলে", "example": "It’s actually quite easy."}
+{"id": 415, "word": "problem", "frequency": 75, "definition": "A difficulty or issue", "bangla": "সমস্যা", "example": "We solved the problem."}
+{"id": 416, "word": "revolution", "frequency": 75, "definition": "A dramatic change or uprising", "bangla": "বিপ্লব", "example": "The revolution changed history."}
+{"id": 417, "word": "inner", "frequency": 74, "definition": "Internal or emotional", "bangla": "অভ্যন্তরীণ", "example": "Her inner strength shone."}
+{"id": 418, "word": "language", "frequency": 74, "definition": "A system of communication", "bangla": "ভাষা", "example": "English is a global language."}
+{"id": 419, "word": "beyond", "frequency": 74, "definition": "Outside or further than", "bangla": "পরে", "example": "It’s beyond my control."}
+{"id": 420, "word": "done", "frequency": 74, "definition": "Past participle of do", "bangla": "করা হয়েছে", "example": "The work is done."}
+{"id": 421, "word": "style", "frequency": 74, "definition": "A manner or fashion", "bangla": "শৈলী", "example": "Her style is unique."}
+{"id": 422, "word": "knew", "frequency": 74, "definition": "Past tense of know", "bangla": "জানত", "example": "She knew the answer."}
+{"id": 423, "word": "patterns", "frequency": 73, "definition": "A discernible regularity or arrangement that repeats in a predictable way", "bangla": " প্যাটার্ন", "example": "to make a split mould a wooden pattern has to be made first"}
+{"id": 424, "word": "deal", "frequency": 73, "definition": "An agreement or to handle", "bangla": "চুক্তি", "example": "We made a deal."}
+{"id": 425, "word": "three", "frequency": 73, "definition": "The number 3", "bangla": "তিন", "example": "I have three books."}
+{"id": 426, "word": "lack", "frequency": 73, "definition": "Absence or shortage", "bangla": "অভাব", "example": "There’s a lack of water."}
+{"id": 427, "word": "value", "frequency": 73, "definition": "Worth or importance", "bangla": "মূল্য", "example": "This has great value."}
+{"id": 428, "word": "difficult", "frequency": 73, "definition": "Hard to do or understand", "bangla": "কঠিন", "example": "The exam was difficult."}
+{"id": 429, "word": "personal", "frequency": 72, "definition": "Relating to an individual", "bangla": "ব্যক্তিগত", "example": "It’s a personal matter."}
+{"id": 430, "word": "expect", "frequency": 72, "definition": "To anticipate or look forward to", "bangla": "আশা করা", "example": "I expect good results."}
+{"id": 431, "word": "gave", "frequency": 72, "definition": "Past tense of give", "bangla": "দিয়েছিল", "example": "She gave me a gift."}
+{"id": 432, "word": "follow", "frequency": 72, "definition": "To go after or obey", "bangla": "অনুসরণ করা", "example": "Follow the rules."}
+{"id": 433, "word": "story", "frequency": 71, "definition": "A narrative or tale", "bangla": "গল্প", "example": "She told a story."}
+{"id": 434, "word": "taken", "frequency": 71, "definition": "Past participle of take", "bangla": "নেওয়া হয়েছে", "example": "The photo was taken."}
+{"id": 435, "word": "events", "frequency": 71, "definition": "Occurrences or happenings", "bangla": "ঘটনা", "example": "The events were exciting."}
+{"id": 436, "word": "choose", "frequency": 71, "definition": "To select or pick", "bangla": "বাছাই করা", "example": "Choose your favorite color."}
+{"id": 437, "word": "decision", "frequency": 71, "definition": "A conclusion or choice", "bangla": "সিদ্ধান্ত", "example": "Her decision was final."}
+{"id": 438, "word": "taking", "frequency": 71, "definition": "The act of seizing or accepting", "bangla": "নিচ্ছে", "example": "She’s taking a break."}
+{"id": 439, "word": "worked", "frequency": 71, "definition": "Past tense of work", "bangla": "কাজ করেছিল", "example": "He worked all day."}
+{"id": 440, "word": "america", "frequency": 71, "definition": "Referring to the United States", "bangla": "আমেরিকা", "example": "America is diverse."}
+{"id": 441, "word": "likely", "frequency": 70, "definition": "Probably or expected", "bangla": "সম্ভবত", "example": "It’s likely to rain."}
+{"id": 442, "word": "small", "frequency": 70, "definition": "Little in size or amount", "bangla": "ছোট", "example": "It’s a small house."}
+{"id": 443, "word": "whole", "frequency": 70, "definition": "Entire or complete", "bangla": "সম্পূর্ণ", "example": "I ate the whole cake."}
+{"id": 444, "word": "popular", "frequency": 70, "definition": "Widely liked or accepted", "bangla": "জনপ্রিয়", "example": "She is a popular singer."}
+{"id": 445, "word": "freedom", "frequency": 70, "definition": "The state of being free", "bangla": "স্বাধীনতা", "example": "Freedom is precious."}
+{"id": 446, "word": "grow", "frequency": 70, "definition": "To increase or develop", "bangla": "বাড়া", "example": "Plants grow fast."}
+{"id": 447, "word": "true", "frequency": 70, "definition": "In accordance with fact", "bangla": "সত্য", "example": "Her story is true."}
+{"id": 448, "word": "art", "frequency": 69, "definition": "Creative expression or skill", "bangla": "শিল্প", "example": "Her art is beautiful."}
+{"id": 449, "word": "image", "frequency": 69, "definition": "A visual representation", "bangla": "চিত্র", "example": "The image was clear."}
+{"id": 450, "word": "big", "frequency": 69, "definition": "Large in size or importance", "bangla": "বড়", "example": "It’s a big decision."}
+{"id": 451, "word": "stand", "frequency": 69, "definition": "To be upright or resist", "bangla": "দাঁড়ানো", "example": "Stand up straight."}
+{"id": 452, "word": "matter", "frequency": 69, "definition": "Physical substance or an issue", "bangla": "বিষয়", "example": "It doesn’t matter."}
+{"id": 453, "word": "nation", "frequency": 69, "definition": "A large group of people or country", "bangla": "জাতি", "example": "The nation celebrated."}
+{"id": 454, "word": "tendency", "frequency": 69, "definition": "An inclination toward a behavior", "bangla": "প্রবণতা", "example": "He has a tendency to be late."}
+{"id": 455, "word": "hand", "frequency": 68, "definition": "The part of the body or assistance", "bangla": "হাত", "example": "Give me a hand."}
+{"id": 456, "word": "basic", "frequency": 68, "definition": "Fundamental or essential", "bangla": "মৌলিক", "example": "It’s a basic need."}
+{"id": 457, "word": "states", "frequency": 68, "definition": "Regions or conditions", "bangla": "রাষ্ট্র", "example": "The United States is large."}
+{"id": 458, "word": "dreams", "frequency": 68, "definition": "Imaginations during sleep or aspirations", "bangla": "স্বপ্ন", "example": "Her dreams came true."}
+{"id": 459, "word": "share", "frequency": 68, "definition": "To divide or distribute", "bangla": "ভাগ করা", "example": "Share your food."}
+{"id": 460, "word": "close", "frequency": 68, "definition": "Near or to shut", "bangla": "কাছাকাছি", "example": "The shop is close by."}
+{"id": 461, "word": "hold", "frequency": 67, "definition": "To grasp or contain", "bangla": "ধরা", "example": "Hold the rope tightly."}
+{"id": 462, "word": "individuals", "frequency": 67, "definition": "Single persons or entities", "bangla": "ব্যক্তি", "example": "Individuals have rights."}
+{"id": 463, "word": "desires", "frequency": 67, "definition": "Plural of desire, strong wishes", "bangla": "ইচ্ছা", "example": "Her desires were clear."}
+{"id": 464, "word": "environment", "frequency": 67, "definition": "Surroundings or conditions", "bangla": "পরিবেশ", "example": "Protect the environment."}
+{"id": 465, "word": "movement", "frequency": 67, "definition": "An act of moving or a campaign", "bangla": "আন্দোলন", "example": "The movement gained support."}
+{"id": 466, "word": "others", "frequency": 67, "definition": "Other people or things", "bangla": "অন্যরা", "example": "Help others in need."}
+{"id": 467, "word": "based", "frequency": 67, "definition": "Founded or grounded on", "bangla": "ভিত্তিক", "example": "It’s based on facts."}
+{"id": 468, "word": "changes", "frequency": 66, "definition": "Plural of change, alterations", "bangla": "পরিবর্তন", "example": "The changes were positive."}
+{"id": 469, "word": "development", "frequency": 66, "definition": "Growth or improvement", "bangla": "উন্নয়ন", "example": "The city’s development is rapid."}
+{"id": 470, "word": "both", "frequency": 66, "definition": "Referring to two things", "bangla": "উভয়", "example": "Both are correct."}
+{"id": 471, "word": "plan", "frequency": 66, "definition": "A detailed proposal", "bangla": "পরিকল্পনা", "example": "We made a plan."}
+{"id": 472, "word": "consciousness", "frequency": 66, "definition": "Awareness or mental state", "bangla": "চেতনা", "example": "Her consciousness was sharp."}
+{"id": 473, "word": "run", "frequency": 66, "definition": "To move quickly or manage", "bangla": "দৌড়ানো", "example": "Run to the store."}
+{"id": 474, "word": "terms", "frequency": 66, "definition": "Conditions or expressions", "bangla": "শর্ত", "example": "Agree to the terms."}
+{"id": 475, "word": "build", "frequency": 65, "definition": "To construct or develop", "bangla": "নির্মাণ করা", "example": "They will build a house."}
+{"id": 476, "word": "involved", "frequency": 65, "definition": "Participating or included", "bangla": "জড়িত", "example": "She was involved in the project."}
+{"id": 477, "word": "fearful", "frequency": 65, "definition": "Feeling afraid or anxious", "bangla": "ভীত", "example": "He was fearful of failure."}
+{"id": 478, "word": "knowledge", "frequency": 65, "definition": "Information or understanding", "bangla": "জ্ঞান", "example": "Knowledge is power."}
+{"id": 479, "word": "unique", "frequency": 65, "definition": "Being the only one of its kind", "bangla": "অনন্য", "example": "Her style is unique."}
+{"id": 480, "word": "greatest", "frequency": 65, "definition": "Most outstanding or largest", "bangla": "সর্বশ্রেষ্ঠ", "example": "He is the greatest artist."}
+{"id": 481, "word": "leave", "frequency": 64, "definition": "To go away or abandon", "bangla": "চলে যাওয়া", "example": "Don’t leave me alone."}
+{"id": 482, "word": "team", "frequency": 64, "definition": "A group working together", "bangla": "দল", "example": "The team won the game."}
+{"id": 483, "word": "others", "frequency": 64, "definition": "Other people or things", "bangla": "অন্যরা", "example": "Respect others’ opinions."}
+{"id": 484, "word": "place", "frequency": 64, "definition": "A location or position", "bangla": "জায়গা", "example": "This is a nice place."}
+{"id": 485, "word": "problems", "frequency": 64, "definition": "Plural of problem, difficulties", "bangla": "সমস্যা", "example": "We face many problems."}
+{"id": 486, "word": "act", "frequency": 64, "definition": "To perform or behave", "bangla": "কাজ করা", "example": "Act quickly in emergencies."}
+{"id": 487, "word": "eyes", "frequency": 64, "definition": "Organs of sight", "bangla": "চোখ", "example": "Her eyes are bright."}
+{"id": 488, "word": "approach", "frequency": 63, "definition": "A way of dealing or coming near", "bangla": "পন্থা", "example": "Her approach was effective."}
+{"id": 489, "word": "effort", "frequency": 63, "definition": "A vigorous attempt", "bangla": "প্রচেষ্টা", "example": "Her effort was rewarded."}
+{"id": 490, "word": "growth", "frequency": 63, "definition": "The process of growing", "bangla": "বৃদ্ধি", "example": "The plant’s growth is fast."}
+{"id": 491, "word": "outside", "frequency": 63, "definition": "Beyond or not inside", "bangla": "বাইরে", "example": "Play outside today."}
+{"id": 492, "word": "whether", "frequency": 63, "definition": "Indicating a choice or doubt", "bangla": "কিনা", "example": "I wonder whether she’ll come."}
+{"id": 493, "word": "modern", "frequency": 63, "definition": "Relating to the present time", "bangla": "আধুনিক", "example": "It’s a modern design."}
+{"id": 494, "word": "developed", "frequency": 63, "definition": "Advanced or improved", "bangla": "উন্নত", "example": "The city is developed."}
+{"id": 495, "word": "home", "frequency": 63, "definition": "A place of residence", "bangla": "বাড়ি", "example": "I’m going home."}
+{"id": 496, "word": "choice", "frequency": 63, "definition": "The act of choosing", "bangla": "পছন্দ", "example": "It’s your choice."}
+{"id": 497, "word": "music", "frequency": 63, "definition": "Art of sound in time", "bangla": "সঙ্গীত", "example": "I love classical music."}
+{"id": 498, "word": "takes", "frequency": 63, "definition": "Third person singular of take", "bangla": "নেয়", "example": "She takes her time."}
+{"id": 499, "word": "easily", "frequency": 62, "definition": "Without difficulty", "bangla": "সহজে", "example": "She learns easily."}
+{"id": 500, "word": "desire", "frequency": 62, "definition": "A strong wish", "bangla": "ইচ্ছা", "example": "His desire is to succeed."}

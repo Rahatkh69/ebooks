@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Learning App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --subtle-text-color: #555555;
+            --example-bg: #f0f0f0;
+            --nav-btn-bg: #ffffff;
+            --nav-btn-text: #000000;
+            --progress-bg: #ffffff;
+            --progress-text: #000000;
+            --start-card-bg: #ffffff;
+            /* NEW: Skeleton loader color */
+            --skeleton-color: #e2e8f0;
+        }
+
+        .dark-mode {
+            --bg-color: #000000;
+            --text-color: #ffffff;
+            --subtle-text-color: #e7e7e7;
+            --example-bg: #181818;
+            --nav-btn-bg: #222222;
+            --nav-btn-text: #ffffff;
+            --progress-bg: #222222;
+            --progress-text: #ffffff;
+            --start-card-bg: #000000;
+            /* NEW: Skeleton loader color for dark mode */
+            --skeleton-color: #333333;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.4s ease, color 0.4s ease;
+            overflow: hidden;
+            display: flex;
+            font-weight: 500;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        button input{
+            outline: none;
+        }
+        .bangla-font {
+            font-family: 'Hind Siliguri', sans-serif;
+            font-weight: 600;
+        }
+
+        .full-screen-content {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 4rem;
+            position: relative;
+        }
+        
+        /* Other styles ... */
+        .start-card { background-color: var(--start-card-bg); transition: background-color 0.4s ease, color 0.4s ease; }
+        .start-button { background-color: var(--text-color); color: var(--bg-color); transition: background-color 0.4s ease, color 0.4s ease; }
+        .dark-mode .start-button { background-color: var(--text-color); color: var(--bg-color); }
+        .subtle-shadow { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+        .dark-mode .subtle-shadow { box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1), 0 2px 4px -1px rgba(255, 255, 255, 0.06); }
+        .highlight { background-color: var(--text-color); color: var(--bg-color); padding: 0 2px; border-radius: 3px; }
+        .search-input { background-color: var(--example-bg); color: var(--text-color); border: 2px solid var(--subtle-text-color); }
+        .search-input::placeholder { color: var(--subtle-text-color); }
+        .font-button.active-font-button { background-color: #4f46e5; color: white; border-color: #4f46e5; }
+        
+        /* NEW: Utility to hide scrollbars */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        
+        /* NEW: Animation for staggered results */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-item {
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="start-screen" class="p-6 md:p-8 start-card shadow-2xl rounded-2xl w-11/12 lg:w-4/5 max-w-6xl transition-colors duration-300 max-h-[90vh] overflow-hidden">
+        <div class="grid md:grid-cols-2 md:gap-12">
+            <div class="flex flex-col h-full">
+                <h1 class="text-4xl font-extrabold mb-4 text-center md:text-left">Word Learner</h1>
+                <p class="text-lg mb-4 text-center md:text-left" style="color: var(--subtle-text-color);">Search all lists...</p>
+                <div id="global-search-container" class="w-full">
+                    <div class="relative">
+                        <input type="text" id="global-search-input" placeholder="Type a word..." class="w-full px-4 py-3 rounded-full search-input focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all">
+                        <i class="fas fa-search absolute right-4 top-1/2 -translate-y-1/2" style="color: var(--subtle-text-color);"></i>
+                    </div>
+                    <p id="global-search-count" class="text-sm mt-3 mb-1 h-5" style="color: var(--subtle-text-color);"></p>
+                    <div id="global-search-results" class="hide-scrollbar text-left space-y-2 overflow-y-auto" style="height: calc(90vh - 250px); min-height: 300px;">
+                        </div>
+                </div>
+            </div>
+            <div class="flex flex-col mt-8 md:mt-0" style="max-height: calc(90vh - 80px);">
+                <h2 class="text-2xl font-bold mb-2 text-center" style="color: var(--subtle-text-color);">Or select a list</h2>
+                <p id="total-word-count" class="text-center text-sm mb-4" style="color: var(--subtle-text-color);">Loading total words...</p>
+                <div class="overflow-y-auto hide-scrollbar pr-2 flex-grow">
+                    <div id="learning-options" class="flex flex-col space-y-4">
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="main-app" class="hidden full-screen-content">
+
+        <div class="absolute top-8 left-8 right-8 flex justify-between items-center z-20 gap-4">
+            <div id="progress-counter" class="text-lg md:text-xl font-semibold px-4 py-2 rounded-full subtle-shadow flex-shrink-0" style="background-color: var(--progress-bg); color: var(--progress-text);">1 of 500</div>
+            
+            <div id="word-search-container" class="relative w-full max-w-xs md:max-w-sm">
+                <input type="text" id="word-search-input" placeholder="Filter this list..." class="w-full px-4 py-2 rounded-full search-input text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all">
+                <i class="fas fa-search absolute right-3 top-1/2 -translate-y-1/2 text-xs md:text-sm" style="color: var(--subtle-text-color);"></i>
+            </div>
+            
+            <div class="flex space-x-2">
+                <button id="close-app-button" class="p-3 w-12 h-12 rounded-full subtle-shadow transition-colors duration-300 focus:outline-none focus:ring-2" style="background-color: var(--nav-btn-bg); color: var(--nav-btn-text);">
+                    <i class="fas fa-times"></i>
+                </button>
+                <button id="theme-toggle" class="p-3 w-12 h-12 rounded-full subtle-shadow transition-colors duration-300 focus:outline-none focus:ring-2" style="background-color: var(--nav-btn-bg); color: var(--nav-btn-text);">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="settings-button" class="p-3 w-12 h-12 rounded-full subtle-shadow transition-colors duration-300 focus:outline-none focus:ring-2" style="background-color: var(--nav-btn-bg); color: var(--nav-btn-text);">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="word-slide" class="flex flex-col items-center space-y-6 max-w-4xl text-center"></div>
+
+    </div>
+    
+    <div id="alert-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-50 transition-opacity duration-300">
+        <div class="bg-white rounded-xl shadow-2xl p-6 w-full max-w-sm text-center transform transition-all duration-300 scale-95 dark:bg-gray-800 dark:text-gray-100">
+            <h3 class="text-2xl font-bold mb-4" id="alert-title"></h3>
+            <p class="text-gray-600 mb-6 dark:text-gray-400" id="alert-message"></p>
+            <button id="alert-close-button" class="px-6 py-2 bg-indigo-600 text-white rounded-full font-semibold hover:bg-indigo-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">OK</button>
+        </div>
+    </div>
+    
+    <div id="settings-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-50 transition-opacity duration-300">
+        <div class="bg-white rounded-xl shadow-2xl p-6 w-full max-w-sm transform transition-all duration-300 scale-95 dark:bg-gray-800 dark:text-gray-100">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold">Settings</h3>
+                <button id="settings-close-button" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                    <i class="fas fa-times fa-lg"></i>
+                </button>
+            </div>
+            
+            <div class="mb-6">
+                <label class="block text-lg font-semibold text-gray-700 dark:text-gray-300 mb-3">Font Size</label>
+                <div id="font-size-options" class="grid grid-cols-4 gap-2">
+                    <button class="font-button px-3 py-2 text-sm rounded-lg border border-gray-300 dark:border-gray-600 transition-colors" data-size="40">Small</button>
+                    <button class="font-button px-3 py-2 text-sm rounded-lg border border-gray-300 dark:border-gray-600 transition-colors" data-size="55">Medium</button>
+                    <button class="font-button px-3 py-2 text-sm rounded-lg border border-gray-300 dark:border-gray-600 transition-colors" data-size="70">Large</button>
+                    <button class="font-button px-3 py-2 text-sm rounded-lg border border-gray-300 dark:border-gray-600 transition-colors" data-size="85">Largest</button>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <button id="settings-save-button" class="px-6 py-2 bg-indigo-600 text-white rounded-full font-semibold hover:bg-indigo-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">Save & Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Element references...
+            const startScreen = document.getElementById('start-screen');
+            const mainApp = document.getElementById('main-app');
+            const learningOptions = document.getElementById('learning-options');
+            const wordSlide = document.getElementById('word-slide');
+            const progressCounter = document.getElementById('progress-counter');
+            const themeToggle = document.getElementById('theme-toggle');
+            const closeAppButton = document.getElementById('close-app-button');
+            const settingsButton = document.getElementById('settings-button');
+            const settingsModal = document.getElementById('settings-modal');
+            const settingsCloseButton = document.getElementById('settings-close-button');
+            const settingsSaveButton = document.getElementById('settings-save-button');
+            const fontSizeOptions = document.getElementById('font-size-options');
+            const wordSearchInput = document.getElementById('word-search-input');
+            const globalSearchInput = document.getElementById('global-search-input');
+            const globalSearchResults = document.getElementById('global-search-results');
+            const globalSearchCount = document.getElementById('global-search-count');
+            const totalWordCountEl = document.getElementById('total-word-count');
+
+            // State variables...
+            let words = [];
+            let currentIndex = 0;
+            // NEW: State for in-app filtering
+            let isFiltered = false;
+            let filteredWords = [];
+            let filteredIndex = 0;
+
+            let allWordsCache = null;
+            let debounceTimer;
+            let selectedFontSize = localStorage.getItem('fontSize') || '70';
+            const TOTAL_LISTS = 29;
+
+            // --- Core App Logic & Navigation ---
+            function goToHomeScreen() {
+                mainApp.classList.add('hidden');
+                startScreen.classList.remove('hidden');
+                words = [];
+                currentIndex = 0;
+                wordSearchInput.value = '';
+                isFiltered = false; // Reset filter state
+            }
+
+            // NEW: Overhauled navigation to handle filtered state
+            function showNextWord() {
+                if (isFiltered) {
+                    if (filteredIndex < filteredWords.length - 1) {
+                        filteredIndex++;
+                        showCurrentWord();
+                    }
+                } else {
+                    if (currentIndex < words.length - 1) {
+                        currentIndex++;
+                        showCurrentWord();
+                    }
+                }
+            }
+
+            function showPrevWord() {
+                if (isFiltered) {
+                    if (filteredIndex > 0) {
+                        filteredIndex--;
+                        showCurrentWord();
+                    }
+                } else {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                        showCurrentWord();
+                    }
+                }
+            }
+
+            function showCurrentWord() {
+                let currentWordData;
+                if (isFiltered) {
+                    if (filteredWords.length === 0) {
+                        wordSlide.innerHTML = `<p class="text-2xl" style="color: var(--subtle-text-color);">No words match your filter.</p>`;
+                        updateProgressCounter();
+                        return;
+                    }
+                    currentWordData = filteredWords[filteredIndex];
+                } else {
+                    currentWordData = words[currentIndex];
+                }
+                
+                if (currentWordData) {
+                    const searchTerm = wordSearchInput.value.trim();
+                    renderWord(currentWordData, searchTerm);
+                }
+                updateProgressCounter();
+            }
+            
+            function updateProgressCounter() {
+                if (isFiltered) {
+                    progressCounter.textContent = filteredWords.length > 0 ? `${filteredIndex + 1} of ${filteredWords.length}` : '0 of 0';
+                } else {
+                    progressCounter.textContent = words.length > 0 ? `${currentIndex + 1} of ${words.length}` : '...';
+                }
+            }
+            
+            // --- In-App Search Filter ---
+            wordSearchInput.addEventListener('input', () => {
+                const searchTerm = wordSearchInput.value.trim().toLowerCase();
+                if (searchTerm) {
+                    isFiltered = true;
+                    filteredWords = words.filter(w => w.word.toLowerCase().includes(searchTerm));
+                    filteredIndex = 0;
+                } else {
+                    isFiltered = false;
+                    filteredWords = [];
+                }
+                showCurrentWord();
+            });
+
+            // --- Global Search: Skeleton, Staggered Load, Count ---
+            const showSkeletonUI = () => {
+                globalSearchCount.textContent = '';
+                let skeletonHTML = '';
+                for (let i = 0; i < 5; i++) {
+                    skeletonHTML += `
+                        <div class="p-3 rounded-lg animate-pulse">
+                            <div class="h-5 w-3/4 rounded" style="background-color: var(--skeleton-color);"></div>
+                            <div class="h-4 w-full mt-2 rounded" style="background-color: var(--skeleton-color);"></div>
+                        </div>
+                    `;
+                }
+                globalSearchResults.innerHTML = skeletonHTML;
+            }
+
+            const renderStaggeredResults = (results, searchTerm) => {
+                globalSearchResults.innerHTML = ''; // Clear skeletons
+                if (results.length === 0) {
+                    globalSearchCount.textContent = 'No words found.';
+                    return;
+                }
+                
+                globalSearchCount.textContent = `${results.length} word${results.length === 1 ? '' : 's'} found.`;
+                const regex = new RegExp(`(${searchTerm})`, 'gi');
+                
+                results.forEach((word, index) => {
+                    const item = document.createElement('div');
+                    item.className = 'global-result-item p-3 rounded-lg cursor-pointer hover:bg-indigo-100 dark:hover:bg-indigo-900 opacity-0';
+                    item.style.animation = `fadeIn 0.3s ease ${index * 0.05}s forwards`;
+                    item.dataset.word = word.word;
+                    item.dataset.source = word.sourceFile;
+                    item.innerHTML = `
+                        <div class="font-bold text-lg">
+                            ${word.word.replace(regex, `<span class="highlight">$1</span>`)}
+                            <span class="text-xs font-normal px-2 py-1 rounded-full ml-2" style="background-color: var(--subtle-text-color); color: var(--bg-color);">${word.listName}</span>
+                        </div>
+                        <p class="text-sm" style="color: var(--subtle-text-color);">${word.definition}</p>`;
+                    item.addEventListener('click', () => {
+                        startLearning(item.dataset.source, item.dataset.word);
+                    });
+                    globalSearchResults.appendChild(item);
+                });
+            }
+
+            const performGlobalSearch = async () => {
+                const searchTerm = globalSearchInput.value.trim().toLowerCase();
+                const allWords = await getAllWords();
+                const foundWords = allWords.filter(w => w.word.toLowerCase().includes(searchTerm));
+                renderStaggeredResults(foundWords, searchTerm);
+            }
+
+            globalSearchInput.addEventListener('input', () => {
+                clearTimeout(debounceTimer);
+                const searchTerm = globalSearchInput.value.trim();
+
+                if (searchTerm.length < 2) {
+                    globalSearchResults.innerHTML = '';
+                    globalSearchCount.textContent = '';
+                    return;
+                }
+                showSkeletonUI(); // Instant feedback
+                debounceTimer = setTimeout(performGlobalSearch, 350); // Debounce the actual search
+            });
+            
+            // --- Theming, Settings, and other helpers (mostly unchanged) ---
+            themeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const isDarkMode = document.body.classList.contains('dark-mode');
+                themeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+                localStorage.setItem('darkMode', isDarkMode);
+            });
+            if (localStorage.getItem('darkMode') === 'true') {
+                document.body.classList.add('dark-mode');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+            // Font size settings...
+            const applyFontSize = (size) => {
+                const wordElement = document.getElementById('word-text');
+                if (wordElement) wordElement.style.fontSize = `${size}px`;
+            };
+            const updateActiveFontButton = (size) => {
+                fontSizeOptions.querySelectorAll('.font-button').forEach(btn => {
+                    btn.classList.toggle('active-font-button', btn.dataset.size === size);
+                });
+            };
+            settingsButton.addEventListener('click', () => {
+                selectedFontSize = localStorage.getItem('fontSize') || '70';
+                updateActiveFontButton(selectedFontSize);
+                settingsModal.classList.remove('hidden');
+            });
+            const closeSettingsModal = () => {
+                applyFontSize(localStorage.getItem('fontSize') || '70');
+                settingsModal.classList.add('hidden');
+            };
+            settingsCloseButton.addEventListener('click', closeSettingsModal);
+            fontSizeOptions.addEventListener('click', (e) => {
+                const button = e.target.closest('.font-button');
+                if (button) {
+                    selectedFontSize = button.dataset.size;
+                    updateActiveFontButton(selectedFontSize);
+                    applyFontSize(selectedFontSize);
+                }
+            });
+            settingsSaveButton.addEventListener('click', () => {
+                localStorage.setItem('fontSize', selectedFontSize);
+                settingsModal.classList.add('hidden');
+            });
+            const loadAndApplyFontSize = () => {
+                applyFontSize(localStorage.getItem('fontSize') || '70');
+            };
+
+            // Fetching and Initialization logic...
+            async function fetchWords(jsonPath) {
+                try {
+                    const response = await fetch(`./json/${jsonPath}`);
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    const data = await response.json();
+                    return data.words;
+                } catch (error) {
+                    console.error('Could not fetch the word list:', error);
+                    alert('Error', `Could not load ${jsonPath}. Please check the file path and try again.`);
+                    goToHomeScreen();
+                    return [];
+                }
+            }
+            async function getAllWords() {
+                if (allWordsCache) return allWordsCache;
+                const files = Array.from({ length: TOTAL_LISTS }, (_, i) => `${i + 1}.json`);
+                try {
+                    const promises = files.map(file => fetch(`./json/${file}`).then(res => res.json()));
+                    const results = await Promise.all(promises);
+                    let combinedWords = [];
+                    results.forEach((data, index) => {
+                        const sourceFile = files[index];
+                        const listName = `List ${index + 1}`;
+                        data.words.forEach(word => {
+                            combinedWords.push({ ...word, sourceFile, listName });
+                        });
+                    });
+                    allWordsCache = combinedWords;
+                    return allWordsCache;
+                } catch (error) { console.error("Failed to load all word lists for global search:", error); return []; }
+            }
+            function renderWord(wordData, searchTerm = '') {
+                let displayWord = wordData.word;
+                if (searchTerm) {
+                    const regex = new RegExp(`(${searchTerm})`, 'gi');
+                    displayWord = displayWord.replace(regex, `<span class="highlight">$1</span>`);
+                }
+                const currentFontSize = localStorage.getItem('fontSize') || '70';
+                wordSlide.innerHTML = `
+                    <span class="text-lg md:text-xl" style="color: var(--subtle-text-color);">${wordData.frequency}</span>
+                    <div class="flex flex-col items-center space-y-4">
+                        <h2 id="word-text" class="font-extrabold mb-2" style="font-size: ${currentFontSize}px; color: var(--text-color);">${displayWord}</h2>
+                    </div>
+                    <div class="text-center mt-8 space-y-2">
+                        <p class="text-xl md:text-2xl">${wordData.definition}</p>
+                        <p class="bangla-font text-2xl md:text-3xl" style="color: var(--subtle-text-color);">${wordData.bangla}</p>
+                    </div>
+                    <div class="mt-12 p-6 rounded-lg w-full max-w-2xl subtle-shadow transition-colors duration-300" style="background-color: var(--example-bg);">
+                        <p class="text-base md:text-lg">${wordData.example}</p>
+                    </div>`;
+            }
+
+            async function startLearning(jsonPath, wordToFind = null) {
+                startScreen.classList.add('hidden');
+                mainApp.classList.remove('hidden');
+                words = await fetchWords(jsonPath);
+                if (words.length > 0) {
+                    currentIndex = wordToFind ? words.findIndex(w => w.word.toLowerCase() === wordToFind.toLowerCase()) : 0;
+                    if (currentIndex === -1) currentIndex = 0;
+                    loadAndApplyFontSize();
+                    showCurrentWord();
+                }
+            }
+            
+            // Event listeners for closing, keyboard, and swiping...
+            closeAppButton.addEventListener('click', goToHomeScreen);
+            document.addEventListener('keydown', (e) => {
+                if (mainApp.classList.contains('hidden')) return;
+                if (document.activeElement.tagName === 'INPUT') return;
+                if (e.key === 'ArrowRight') showNextWord();
+                else if (e.key === 'ArrowLeft') showPrevWord();
+                else if (e.key === 'Escape') goToHomeScreen();
+            });
+            let touchStartX = 0;
+            mainApp.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+            mainApp.addEventListener('touchend', (e) => {
+                const touchEndX = e.changedTouches[0].clientX;
+                if (touchEndX - touchStartX > 50) showPrevWord();
+                else if (touchStartX - touchEndX > 50) showNextWord();
+            }, { passive: true });
+
+            learningOptions.addEventListener('click', (e) => {
+                const button = e.target.closest('button');
+                if (button) startLearning(button.dataset.json);
+            });
+            
+            // Initial Load
+            function populateLearningOptions() {
+                for (let i = 1; i <= TOTAL_LISTS; i++) {
+                    const button = document.createElement('button');
+                    button.className = "start-button px-8 py-4 font-bold rounded-full shadow-lg hover:brightness-125 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-gray-500 focus:ring-opacity-50";
+                    button.dataset.json = `${i}.json`;
+                    button.innerHTML = `<i class="fas fa-play"></i> Start Learning ${i}`;
+                    learningOptions.appendChild(button);
+                }
+            }
+
+            async function updateTotalWordCount() {
+                const allWords = await getAllWords();
+                if (allWords && allWords.length > 0) {
+                    totalWordCountEl.textContent = `Total words available: ${allWords.length}`;
+                } else {
+                    totalWordCountEl.textContent = 'Could not load word count.';
+                }
+            }
+
+            populateLearningOptions();
+            updateTotalWordCount();
+            loadAndApplyFontSize();
+        });
+    </script>
+</body>
+</html>
