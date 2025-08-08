@@ -3,528 +3,1339 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word Learning App</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Dictionary App</title>
+    
+    <!-- Font imports -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap">
+        <link rel="preload" href="data.json" as="fetch" type="application/json" crossorigin="anonymous">
+    
+    <link rel="preload" href="path/to/your/styles.css" as="style">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Firebase -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.22.2/firebase-app-compat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.22.2/firebase-firestore-compat.min.js"></script>
+    
     <style>
+        *{
+            font-family: 'Poppins', sans-serif;
+        }
         :root {
-            --bg-color: #ffffff;
-            --text-color: #000000;
-            --subtle-text-color: #555555;
-            --example-bg: #f0f0f0;
-            --nav-btn-bg: #ffffff;
-            --nav-btn-text: #000000;
-            --progress-bg: #ffffff;
-            --progress-text: #000000;
-            --start-card-bg: #ffffff;
-            /* NEW: Skeleton loader color */
-            --skeleton-color: #e2e8f0;
+            --bg-primary: #000000;
+            --bg-secondary: #0a0a0a;
+            --bg-card: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --border-color: #333333;
+            --accent-green: #00ff88;
+            --accent-red: #ff4444;
+            --accent-green-dark: #00cc6a;
+            --accent-red-dark: #ff6666;
+            --font-poppins: 'Poppins', sans-serif;
+            --font-hind: 'Hind Siliguri', sans-serif;
+            --font-roboto: 'Roboto Mono', monospace;
+            --highlight-color: #ffc107; /* Golden color for highlighting */
         }
 
-        .dark-mode {
-            --bg-color: #000000;
-            --text-color: #ffffff;
-            --subtle-text-color: #e7e7e7;
-            --example-bg: #181818;
-            --nav-btn-bg: #222222;
-            --nav-btn-text: #ffffff;
-            --progress-bg: #222222;
-            --progress-text: #ffffff;
-            --start-card-bg: #000000;
-            /* NEW: Skeleton loader color for dark mode */
-            --skeleton-color: #333333;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            transition: background-color 0.4s ease, color 0.4s ease;
-            overflow: hidden;
-            display: flex;
-            font-weight: 500;
-            align-items: center;
-            justify-content: center;
+            font-family: var(--font-poppins);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
             min-height: 100vh;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        button input{
-            outline: none;
+
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--bg-primary);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            transition: opacity 0.5s ease;
         }
-        .bangla-font {
-            font-family: 'Hind Siliguri', sans-serif;
+
+        .preloader-text {
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            font-family: var(--font-poppins);
+        }
+
+        #preloader-count {
+            font-size: clamp(2rem, 8vw, 3rem);
+            font-weight: 600;
+            color: var(--text-primary);
+            font-family: var(--font-roboto);
+        }
+
+        #app-container {
+            display: none;
+            width: 100%;
+            min-height: 100vh;
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-top: 20px;
+        }
+
+        header h1 {
+            color: var(--text-primary);
+            font-size: clamp(2rem, 6vw, 3rem);
+            font-weight: 700;
+            font-family: var(--font-poppins);
+        }
+
+        #lesson-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            flex-grow: 1;
+        }
+
+        .lesson-tile {
+            background-color: var(--bg-card);
+            padding: 30px 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            user-select: none;
+        }
+        
+        .lesson-tile.continue {
+            background-color: var(--accent-green);
+            color: var(--bg-primary);
+            border-color: var(--accent-green-dark);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+        }
+        .lesson-tile.continue h2,
+        .lesson-tile.continue p,
+        .lesson-tile.continue .progress-text {
+            color: var(--bg-primary);
+        }
+
+        .lesson-tile::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .lesson-tile:hover::before {
+            left: 100%;
+        }
+
+        .lesson-tile:hover {
+            transform: translateY(-5px);
+            background-color: #222222;
+            border-color: #555555;
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+        }
+        .lesson-tile.continue:hover {
+            background-color: var(--accent-green-dark);
+            transform: translateY(-5px);
+        }
+
+        .lesson-tile h2 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+            font-family: var(--font-poppins);
             font-weight: 600;
         }
 
-        .full-screen-content {
-            width: 100vw;
-            height: 100vh;
+        .lesson-tile p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-family: var(--font-roboto);
+            margin-bottom: 15px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-green), var(--accent-green-dark));
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .progress-text {
+            font-size: 0.9rem;
+            color: #888888;
+            font-family: var(--font-roboto);
+        }
+        .lesson-tile.continue .progress-text {
+            color: var(--bg-primary);
+        }
+
+        .hidden {
+            display: none !important;
+        }
+        
+        /* Modals */
+        #word-details-modal, #jump-modal, #message-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1001;
+            backdrop-filter: blur(10px);
+        }
+
+        .modal-content {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            width: 95%;
+            height: 95%;
+            max-width: 800px;
+            max-height: 600px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+        }
+
+        .frequency-display {
+            cursor: pointer;
+            padding: 8px 16px;
+            background: var(--bg-card);
+            border-radius: 20px;
+            font-family: var(--font-roboto);
+            font-weight: 500;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+
+        .frequency-display:hover {
+            background: #222222;
+            border-color: #555555;
+        }
+        
+        .close-btn {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
+            border-radius: 50%;
+            transition: background-color 0.2s;
+        }
+
+        .close-btn:hover {
+            background-color: #333333;
+        }
+
+        .modal-body {
+            flex-grow: 1;
+            padding: 40px 30px;
+            display: flex;
             flex-direction: column;
-            padding: 4rem;
-            position: relative;
+            justify-content: center;
+            text-align: center;
+            overflow-y: auto;
         }
         
-        /* Other styles ... */
-        .start-card { background-color: var(--start-card-bg); transition: background-color 0.4s ease, color 0.4s ease; }
-        .start-button { background-color: var(--text-color); color: var(--bg-color); transition: background-color 0.4s ease, color 0.4s ease; }
-        .dark-mode .start-button { background-color: var(--text-color); color: var(--bg-color); }
-        .subtle-shadow { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
-        .dark-mode .subtle-shadow { box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1), 0 2px 4px -1px rgba(255, 255, 255, 0.06); }
-        .highlight { background-color: var(--text-color); color: var(--bg-color); padding: 0 2px; border-radius: 3px; }
-        .search-input { background-color: var(--example-bg); color: var(--text-color); border: 2px solid var(--subtle-text-color); }
-        .search-input::placeholder { color: var(--subtle-text-color); }
-        .font-button.active-font-button { background-color: #4f46e5; color: white; border-color: #4f46e5; }
+        /* Word display styling */
+        #modal-word {
+            font-size: clamp(2rem, 8vw, 4rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            font-family: var(--font-poppins);
+            line-height: 1;
+        }
+
+        #modal-bangla {
+            font-size: clamp(1.2rem, 5vw, 2rem);
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            font-family: var(--font-hind);
+            font-weight: 500;
+        }
+
+        #modal-definition,
+        #modal-example {
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: left;
+            color: var(--text-primary);
+            font-family: var(--font-poppins);
+        }
+
+        .highlight {
+            color: var(--highlight-color);
+            font-weight: 600;
+        }
+
+        #modal-definition::before {
+            content: "\f02d"; /* book-icon */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: #888888;
+            margin-right: 10px;
+        }
+
+        #modal-example::before {
+            content: "\f10d"; /* quote-left icon */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: #888888;
+            margin-right: 10px;
+        }
+
+        .modal-footer {
+            padding: 20px 30px;
+            border-top: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .word-counter {
+            font-family: var(--font-roboto);
+            font-size: clamp(0.8rem, 2.5vw, 1rem);
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 10px 20px;
+            background: var(--bg-card);
+            border-radius: 25px;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+
+        .word-counter:hover {
+            background: #222222;
+            border-color: #555555;
+        }
+
+        .progress-buttons {
+            display: flex;
+            gap: 15px;
+        }
         
-        /* NEW: Utility to hide scrollbars */
-        .hide-scrollbar::-webkit-scrollbar {
+        .progress-btn, .clear-progress-btn {
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.2s ease;
+            font-weight: bold;
+        }
+
+        .unknown-btn {
+            background: var(--accent-red);
+            color: var(--text-primary);
+        }
+
+        .unknown-btn:hover {
+            background: var(--accent-red-dark);
+            transform: scale(1.1);
+        }
+
+        .unknown-btn.active {
+            background: var(--accent-red-dark);
+            box-shadow: 0 0 20px rgba(255, 68, 68, 0.5);
+        }
+
+        .known-btn {
+            background: var(--accent-green);
+            color: var(--bg-primary);
+        }
+
+        .known-btn:hover {
+            background: var(--accent-green-dark);
+            transform: scale(1.1);
+        }
+
+        .known-btn.active {
+            background: var(--accent-green-dark);
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+        }
+        
+        .next-word-btn {
+            background: var(--text-primary);
+            color: var(--bg-primary);
+        }
+
+        .next-word-btn:hover {
+            background: #cccccc;
+            transform: scale(1.1);
+        }
+        
+        .clear-progress-btn {
+            background: #444444;
+            color: #ffffff;
+            font-size: 1rem;
+            width: auto;
+            border-radius: 8px;
+            padding: 0 15px;
+        }
+        .clear-progress-btn:hover {
+            background: #666666;
+            transform: scale(1.05);
+        }
+
+        /* Jump to word modal */
+        #jump-modal, #confirm-modal {
+            z-index: 1002;
+        }
+        .jump-modal-content {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            min-width: 300px;
+            animation: slideIn 0.3s ease-out;
+        }
+        .confirm-modal-content {
+             background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            min-width: 300px;
+            animation: slideIn 0.3s ease-out;
+        }
+        .confirm-modal-content h3 {
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            font-family: var(--font-poppins);
+        }
+
+        .jump-modal-content h3 {
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            font-family: var(--font-poppins);
+        }
+
+        .jump-input {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            text-align: center;
+            font-family: var(--font-roboto);
+            margin-bottom: 20px;
+        }
+        
+        .jump-input:focus {
+            outline: none;
+            border-color: #555555;
+            background: #222222;
+        }
+
+        .jump-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .jump-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: var(--font-poppins);
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .jump-btn.ok {
+            background: var(--text-primary);
+            color: var(--bg-primary);
+        }
+
+        .jump-btn.ok:hover {
+            background: #cccccc;
+        }
+
+        .jump-btn.cancel {
+            background: #333333;
+            color: var(--text-primary);
+        }
+
+        .jump-btn.cancel:hover {
+            background: #555555;
+        }
+        .confirm-modal-content .confirm-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        .confirm-modal-content .confirm-buttons button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: var(--font-poppins);
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        .confirm-modal-content .confirm-buttons .yes-btn {
+            background: var(--accent-red);
+            color: var(--text-primary);
+        }
+        .confirm-modal-content .confirm-buttons .no-btn {
+            background: #333333;
+            color: var(--text-primary);
+        }
+
+
+        /* Message modal */
+        #message-modal {
+            z-index: 1003;
+        }
+        .message-content {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            min-width: 300px;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        .message-content p {
+            font-family: var(--font-poppins);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .message-content button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: var(--font-poppins);
+            font-weight: 500;
+            background: var(--accent-green);
+            color: var(--bg-primary);
+            transition: all 0.2s ease;
+        }
+
+        .message-content button:hover {
+            background: var(--accent-green-dark);
+        }
+
+        /* Loading indicator */
+        .loading-indicator {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 10px 15px;
+            font-family: var(--font-roboto);
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            z-index: 1003;
             display: none;
         }
-        .hide-scrollbar {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
+
+        .loading-indicator.show {
+            display: block;
+            animation: pulse 1s infinite;
         }
         
-        /* NEW: Animation for staggered results */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
+        .loading-spinner {
+            border: 4px solid var(--border-color);
+            border-top: 4px solid var(--accent-green);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
         }
-        .fade-in-item {
-            animation: fadeIn 0.3s ease-out forwards;
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+
+        /* New styles for the home footer and clear data button */
+        footer {
+            padding: 20px;
+            text-align: center;
+            margin-top: auto; /* Push the footer to the bottom */
+            width: 100%;
+        }
+
+        .clear-data-btn {
+            background-color: var(--accent-red);
+            color: var(--text-primary);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: var(--font-poppins);
+            font-weight: 500;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 15px rgba(255, 68, 68, 0.3);
+        }
+        
+        .clear-data-btn:hover {
+            background-color: var(--accent-red-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 68, 68, 0.4);
+        }
+
+        /* Mobile specific styles */
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+            }
+            #app-container {
+                padding: 15px;
+            }
+            header h1 {
+                font-size: 2.5rem;
+            }
+            #lesson-container {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            .modal-content {
+                width: 100%;
+                height: 100%;
+                max-width: none;
+                max-height: none;
+                border-radius: 0;
+            }
+            .modal-header, .modal-footer {
+                padding: 15px 20px;
+            }
+            .modal-body {
+                padding: 20px;
+            }
+            .progress-buttons {
+                gap: 10px;
+            }
+            .progress-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
+            }
+            .word-counter {
+                padding: 8px 16px;
+            }
+            .frequency-display {
+                padding: 6px 12px;
+            }
         }
     </style>
 </head>
 <body>
-
-    <div id="start-screen" class="p-6 md:p-8 start-card shadow-2xl rounded-2xl w-11/12 lg:w-4/5 max-w-6xl transition-colors duration-300 max-h-[90vh] overflow-hidden">
-        <div class="grid md:grid-cols-2 md:gap-12">
-            <div class="flex flex-col h-full">
-                <h1 class="text-4xl font-extrabold mb-4 text-center md:text-left">Word Learner</h1>
-                <p class="text-lg mb-4 text-center md:text-left" style="color: var(--subtle-text-color);">Search all lists...</p>
-                <div id="global-search-container" class="w-full">
-                    <div class="relative">
-                        <input type="text" id="global-search-input" placeholder="Type a word..." class="w-full px-4 py-3 rounded-full search-input focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all">
-                        <i class="fas fa-search absolute right-4 top-1/2 -translate-y-1/2" style="color: var(--subtle-text-color);"></i>
-                    </div>
-                    <p id="global-search-count" class="text-sm mt-3 mb-1 h-5" style="color: var(--subtle-text-color);"></p>
-                    <div id="global-search-results" class="hide-scrollbar text-left space-y-2 overflow-y-auto" style="height: calc(90vh - 250px); min-height: 300px;">
-                        </div>
-                </div>
-            </div>
-            <div class="flex flex-col mt-8 md:mt-0" style="max-height: calc(90vh - 80px);">
-                <h2 class="text-2xl font-bold mb-2 text-center" style="color: var(--subtle-text-color);">Or select a list</h2>
-                <p id="total-word-count" class="text-center text-sm mb-4" style="color: var(--subtle-text-color);">Loading total words...</p>
-                <div class="overflow-y-auto hide-scrollbar pr-2 flex-grow">
-                    <div id="learning-options" class="flex flex-col space-y-4">
-                        </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div id="main-app" class="hidden full-screen-content">
-
-        <div class="absolute top-8 left-8 right-8 flex justify-between items-center z-20 gap-4">
-            <div id="progress-counter" class="text-lg md:text-xl font-semibold px-4 py-2 rounded-full subtle-shadow flex-shrink-0" style="background-color: var(--progress-bg); color: var(--progress-text);">1 of 500</div>
-            
-            <div id="word-search-container" class="relative w-full max-w-xs md:max-w-sm">
-                <input type="text" id="word-search-input" placeholder="Filter this list..." class="w-full px-4 py-2 rounded-full search-input text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all">
-                <i class="fas fa-search absolute right-3 top-1/2 -translate-y-1/2 text-xs md:text-sm" style="color: var(--subtle-text-color);"></i>
-            </div>
-            
-            <div class="flex space-x-2">
-                <button id="close-app-button" class="p-3 w-12 h-12 rounded-full subtle-shadow transition-colors duration-300 focus:outline-none focus:ring-2" style="background-color: var(--nav-btn-bg); color: var(--nav-btn-text);">
-                    <i class="fas fa-times"></i>
-                </button>
-                <button id="theme-toggle" class="p-3 w-12 h-12 rounded-full subtle-shadow transition-colors duration-300 focus:outline-none focus:ring-2" style="background-color: var(--nav-btn-bg); color: var(--nav-btn-text);">
-                    <i class="fas fa-moon"></i>
-                </button>
-                <button id="settings-button" class="p-3 w-12 h-12 rounded-full subtle-shadow transition-colors duration-300 focus:outline-none focus:ring-2" style="background-color: var(--nav-btn-bg); color: var(--nav-btn-text);">
-                    <i class="fas fa-cog"></i>
-                </button>
-            </div>
-        </div>
-
-        <div id="word-slide" class="flex flex-col items-center space-y-6 max-w-4xl text-center"></div>
-
+    <!-- Preloader -->
+    <div id="preloader">
+        <h1 class="preloader-text">Loading words...</h1>
+        <span id="preloader-count">0</span>
     </div>
     
-    <div id="alert-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-50 transition-opacity duration-300">
-        <div class="bg-white rounded-xl shadow-2xl p-6 w-full max-w-sm text-center transform transition-all duration-300 scale-95 dark:bg-gray-800 dark:text-gray-100">
-            <h3 class="text-2xl font-bold mb-4" id="alert-title"></h3>
-            <p class="text-gray-600 mb-6 dark:text-gray-400" id="alert-message"></p>
-            <button id="alert-close-button" class="px-6 py-2 bg-indigo-600 text-white rounded-full font-semibold hover:bg-indigo-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">OK</button>
+    <!-- Main App Container -->
+    <div id="app-container" class="hidden">
+        <header>
+            <h1>Dictionary App</h1>
+        </header>
+
+        <div id="lesson-container">
+            <!-- Lesson tiles will be generated here -->
         </div>
+
+        <footer>
+            <button id="clear-all-data-btn" class="clear-data-btn">Clear All Data</button>
+        </footer>
     </div>
-    
-    <div id="settings-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-50 transition-opacity duration-300">
-        <div class="bg-white rounded-xl shadow-2xl p-6 w-full max-w-sm transform transition-all duration-300 scale-95 dark:bg-gray-800 dark:text-gray-100">
-            <div class="flex justify-between items-center mb-4">
-                <h3 class="text-2xl font-bold">Settings</h3>
-                <button id="settings-close-button" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
-                    <i class="fas fa-times fa-lg"></i>
-                </button>
+
+    <!-- Word Details Modal -->
+    <div id="word-details-modal" class="hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span id="frequency-display" class="frequency-display"></span>
+                <span id="close-modal" class="close-btn"><i class="fas fa-times"></i></span>
             </div>
-            
-            <div class="mb-6">
-                <label class="block text-lg font-semibold text-gray-700 dark:text-gray-300 mb-3">Font Size</label>
-                <div id="font-size-options" class="grid grid-cols-4 gap-2">
-                    <button class="font-button px-3 py-2 text-sm rounded-lg border border-gray-300 dark:border-gray-600 transition-colors" data-size="40">Small</button>
-                    <button class="font-button px-3 py-2 text-sm rounded-lg border border-gray-300 dark:border-gray-600 transition-colors" data-size="55">Medium</button>
-                    <button class="font-button px-3 py-2 text-sm rounded-lg border border-gray-300 dark:border-gray-600 transition-colors" data-size="70">Large</button>
-                    <button class="font-button px-3 py-2 text-sm rounded-lg border border-gray-300 dark:border-gray-600 transition-colors" data-size="85">Largest</button>
+            <div class="modal-body">
+                <h2 id="modal-word"></h2>
+                <h3 id="modal-bangla"></h3>
+                <p id="modal-definition"></p>
+                <p id="modal-example"></p>
+            </div>
+            <div class="modal-footer">
+                <span id="word-counter" class="word-counter"></span>
+                <div class="progress-buttons">
+                    <button id="unknown-btn" class="progress-btn unknown-btn"><i class="fas fa-question"></i></button>
+                    <button id="known-btn" class="progress-btn known-btn hidden"><i class="fas fa-check"></i></button>
+                    <button id="next-word-btn" class="progress-btn next-word-btn"><i class="fas fa-arrow-right"></i></button>
                 </div>
             </div>
-            
-            <div class="text-center mt-8">
-                <button id="settings-save-button" class="px-6 py-2 bg-indigo-600 text-white rounded-full font-semibold hover:bg-indigo-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">Save & Close</button>
+        </div>
+    </div>
+
+    <!-- Jump to Word Modal -->
+    <div id="jump-modal" class="hidden">
+        <div class="jump-modal-content">
+            <h3>Jump to word</h3>
+            <input type="number" id="jump-input" class="jump-input" placeholder="Enter word number">
+            <div class="jump-buttons">
+                <button id="jump-ok" class="jump-btn ok">OK</button>
+                <button id="jump-cancel" class="jump-btn cancel">Cancel</button>
             </div>
         </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirm-modal" class="hidden">
+        <div class="confirm-modal-content">
+            <h3>Are you sure you want to clear all progress? This action cannot be undone.</h3>
+            <div class="confirm-buttons">
+                <button id="confirm-yes-btn" class="yes-btn">Yes</button>
+                <button id="confirm-no-btn" class="no-btn">No</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Message Modal -->
+    <div id="message-modal" class="hidden">
+        <div class="message-content">
+            <p id="message-text"></p>
+            <button id="message-ok-btn">OK</button>
+        </div>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div id="loading-indicator" class="loading-indicator hidden">
+        <span>Syncing...</span>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Element references...
-            const startScreen = document.getElementById('start-screen');
-            const mainApp = document.getElementById('main-app');
-            const learningOptions = document.getElementById('learning-options');
-            const wordSlide = document.getElementById('word-slide');
-            const progressCounter = document.getElementById('progress-counter');
-            const themeToggle = document.getElementById('theme-toggle');
-            const closeAppButton = document.getElementById('close-app-button');
-            const settingsButton = document.getElementById('settings-button');
-            const settingsModal = document.getElementById('settings-modal');
-            const settingsCloseButton = document.getElementById('settings-close-button');
-            const settingsSaveButton = document.getElementById('settings-save-button');
-            const fontSizeOptions = document.getElementById('font-size-options');
-            const wordSearchInput = document.getElementById('word-search-input');
-            const globalSearchInput = document.getElementById('global-search-input');
-            const globalSearchResults = document.getElementById('global-search-results');
-            const globalSearchCount = document.getElementById('global-search-count');
-            const totalWordCountEl = document.getElementById('total-word-count');
+            const preloader = document.getElementById('preloader');
+            const preloaderCount = document.getElementById('preloader-count');
+            const appContainer = document.getElementById('app-container');
+            const lessonContainer = document.getElementById('lesson-container');
+            const wordDetailsModal = document.getElementById('word-details-modal');
+            const closeModalBtn = document.getElementById('close-modal');
+            const wordCounter = document.getElementById('word-counter');
+            const modalWord = document.getElementById('modal-word');
+            const modalBangla = document.getElementById('modal-bangla');
+            const modalDefinition = document.getElementById('modal-definition');
+            const modalExample = document.getElementById('modal-example');
+            const jumpModal = document.getElementById('jump-modal');
+            const jumpInput = document.getElementById('jump-input');
+            const jumpOkBtn = document.getElementById('jump-ok');
+            const jumpCancelBtn = document.getElementById('jump-cancel');
+            const loadingIndicator = document.getElementById('loading-indicator');
+            const unknownBtn = document.getElementById('unknown-btn');
+            const knownBtn = document.getElementById('known-btn');
+            const nextWordBtn = document.getElementById('next-word-btn');
+            const clearAllDataBtn = document.getElementById('clear-all-data-btn');
+            const confirmModal = document.getElementById('confirm-modal');
+            const confirmYesBtn = document.getElementById('confirm-yes-btn');
+            const confirmNoBtn = document.getElementById('confirm-no-btn');
+            const frequencyDisplay = document.getElementById('frequency-display');
+            const messageModal = document.getElementById('message-modal');
+            const messageText = document.getElementById('message-text');
+            const messageOkBtn = document.getElementById('message-ok-btn');
 
-            // State variables...
-            let words = [];
-            let currentIndex = 0;
-            // NEW: State for in-app filtering
-            let isFiltered = false;
-            let filteredWords = [];
-            let filteredIndex = 0;
+            let allWords = [];
+            let currentLesson = 0;
+            let currentWordIndex = 0;
+            let knownWords = new Set();
+            let unknownWords = new Set();
+            let currentLessonWords = [];
+            let lastLesson = 0;
+            let lastWordIndex = 0;
+            let isFrequencyMode = true;
+            let startY = 0;
+            let startX = 0;
+            let isSwiping = false;
 
-            let allWordsCache = null;
-            let debounceTimer;
-            let selectedFontSize = localStorage.getItem('fontSize') || '70';
-            const TOTAL_LISTS = 29;
+            const WORDS_PER_LESSON = 100;
+            const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+            const firebaseConfig = {
+                apiKey: "AIzaSyAimhK1una261vXi7jZ2TVrzf9-OmU-0XE",
+                authDomain: "dictionary-43809.firebaseapp.com",
+                projectId: "dictionary-43809",
+                storageBucket: "dictionary-43809.firebasestorage.app",
+                messagingSenderId: "455079496140",
+                appId: "1:455079496140:web:ad629c9de32348dad67569",
+                measurementId: "G-EN2L4364DD"
+            };
 
-            // --- Core App Logic & Navigation ---
-            function goToHomeScreen() {
-                mainApp.classList.add('hidden');
-                startScreen.classList.remove('hidden');
-                words = [];
-                currentIndex = 0;
-                wordSearchInput.value = '';
-                isFiltered = false; // Reset filter state
-            }
+            firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
 
-            // NEW: Overhauled navigation to handle filtered state
-            function showNextWord() {
-                if (isFiltered) {
-                    if (filteredIndex < filteredWords.length - 1) {
-                        filteredIndex++;
-                        showCurrentWord();
-                    }
-                } else {
-                    if (currentIndex < words.length - 1) {
-                        currentIndex++;
-                        showCurrentWord();
-                    }
-                }
-            }
+            const showMessageModal = (message) => {
+                messageText.textContent = message;
+                messageModal.classList.remove('hidden');
+            };
 
-            function showPrevWord() {
-                if (isFiltered) {
-                    if (filteredIndex > 0) {
-                        filteredIndex--;
-                        showCurrentWord();
-                    }
-                } else {
-                    if (currentIndex > 0) {
-                        currentIndex--;
-                        showCurrentWord();
-                    }
-                }
-            }
-
-            function showCurrentWord() {
-                let currentWordData;
-                if (isFiltered) {
-                    if (filteredWords.length === 0) {
-                        wordSlide.innerHTML = `<p class="text-2xl" style="color: var(--subtle-text-color);">No words match your filter.</p>`;
-                        updateProgressCounter();
-                        return;
-                    }
-                    currentWordData = filteredWords[filteredIndex];
-                } else {
-                    currentWordData = words[currentIndex];
-                }
-                
-                if (currentWordData) {
-                    const searchTerm = wordSearchInput.value.trim();
-                    renderWord(currentWordData, searchTerm);
-                }
-                updateProgressCounter();
-            }
-            
-            function updateProgressCounter() {
-                if (isFiltered) {
-                    progressCounter.textContent = filteredWords.length > 0 ? `${filteredIndex + 1} of ${filteredWords.length}` : '0 of 0';
-                } else {
-                    progressCounter.textContent = words.length > 0 ? `${currentIndex + 1} of ${words.length}` : '...';
-                }
-            }
-            
-            // --- In-App Search Filter ---
-            wordSearchInput.addEventListener('input', () => {
-                const searchTerm = wordSearchInput.value.trim().toLowerCase();
-                if (searchTerm) {
-                    isFiltered = true;
-                    filteredWords = words.filter(w => w.word.toLowerCase().includes(searchTerm));
-                    filteredIndex = 0;
-                } else {
-                    isFiltered = false;
-                    filteredWords = [];
-                }
-                showCurrentWord();
-            });
-
-            // --- Global Search: Skeleton, Staggered Load, Count ---
-            const showSkeletonUI = () => {
-                globalSearchCount.textContent = '';
-                let skeletonHTML = '';
-                for (let i = 0; i < 5; i++) {
-                    skeletonHTML += `
-                        <div class="p-3 rounded-lg animate-pulse">
-                            <div class="h-5 w-3/4 rounded" style="background-color: var(--skeleton-color);"></div>
-                            <div class="h-4 w-full mt-2 rounded" style="background-color: var(--skeleton-color);"></div>
-                        </div>
-                    `;
-                }
-                globalSearchResults.innerHTML = skeletonHTML;
-            }
-
-            const renderStaggeredResults = (results, searchTerm) => {
-                globalSearchResults.innerHTML = ''; // Clear skeletons
-                if (results.length === 0) {
-                    globalSearchCount.textContent = 'No words found.';
-                    return;
-                }
-                
-                globalSearchCount.textContent = `${results.length} word${results.length === 1 ? '' : 's'} found.`;
-                const regex = new RegExp(`(${searchTerm})`, 'gi');
-                
-                results.forEach((word, index) => {
-                    const item = document.createElement('div');
-                    item.className = 'global-result-item p-3 rounded-lg cursor-pointer hover:bg-indigo-100 dark:hover:bg-indigo-900 opacity-0';
-                    item.style.animation = `fadeIn 0.3s ease ${index * 0.05}s forwards`;
-                    item.dataset.word = word.word;
-                    item.dataset.source = word.sourceFile;
-                    item.innerHTML = `
-                        <div class="font-bold text-lg">
-                            ${word.word.replace(regex, `<span class="highlight">$1</span>`)}
-                            <span class="text-xs font-normal px-2 py-1 rounded-full ml-2" style="background-color: var(--subtle-text-color); color: var(--bg-color);">${word.listName}</span>
-                        </div>
-                        <p class="text-sm" style="color: var(--subtle-text-color);">${word.definition}</p>`;
-                    item.addEventListener('click', () => {
-                        startLearning(item.dataset.source, item.dataset.word);
-                    });
-                    globalSearchResults.appendChild(item);
-                });
-            }
-
-            const performGlobalSearch = async () => {
-                const searchTerm = globalSearchInput.value.trim().toLowerCase();
-                const allWords = await getAllWords();
-                const foundWords = allWords.filter(w => w.word.toLowerCase().includes(searchTerm));
-                renderStaggeredResults(foundWords, searchTerm);
-            }
-
-            globalSearchInput.addEventListener('input', () => {
-                clearTimeout(debounceTimer);
-                const searchTerm = globalSearchInput.value.trim();
-
-                if (searchTerm.length < 2) {
-                    globalSearchResults.innerHTML = '';
-                    globalSearchCount.textContent = '';
-                    return;
-                }
-                showSkeletonUI(); // Instant feedback
-                debounceTimer = setTimeout(performGlobalSearch, 350); // Debounce the actual search
+            messageOkBtn.addEventListener('click', () => {
+                messageModal.classList.add('hidden');
             });
             
-            // --- Theming, Settings, and other helpers (mostly unchanged) ---
-            themeToggle.addEventListener('click', () => {
-                document.body.classList.toggle('dark-mode');
-                const isDarkMode = document.body.classList.contains('dark-mode');
-                themeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-                localStorage.setItem('darkMode', isDarkMode);
-            });
-            if (localStorage.getItem('darkMode') === 'true') {
-                document.body.classList.add('dark-mode');
-                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-            }
-            // Font size settings...
-            const applyFontSize = (size) => {
-                const wordElement = document.getElementById('word-text');
-                if (wordElement) wordElement.style.fontSize = `${size}px`;
-            };
-            const updateActiveFontButton = (size) => {
-                fontSizeOptions.querySelectorAll('.font-button').forEach(btn => {
-                    btn.classList.toggle('active-font-button', btn.dataset.size === size);
-                });
-            };
-            settingsButton.addEventListener('click', () => {
-                selectedFontSize = localStorage.getItem('fontSize') || '70';
-                updateActiveFontButton(selectedFontSize);
-                settingsModal.classList.remove('hidden');
-            });
-            const closeSettingsModal = () => {
-                applyFontSize(localStorage.getItem('fontSize') || '70');
-                settingsModal.classList.add('hidden');
-            };
-            settingsCloseButton.addEventListener('click', closeSettingsModal);
-            fontSizeOptions.addEventListener('click', (e) => {
-                const button = e.target.closest('.font-button');
-                if (button) {
-                    selectedFontSize = button.dataset.size;
-                    updateActiveFontButton(selectedFontSize);
-                    applyFontSize(selectedFontSize);
+            const withExponentialBackoff = async (func, maxRetries = 5, delay = 1000) => {
+                for (let i = 0; i < maxRetries; i++) {
+                    try {
+                        return await func();
+                    } catch (error) {
+                        console.error('API call failed, retrying...', error);
+                        await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, i)));
+                    }
                 }
-            });
-            settingsSaveButton.addEventListener('click', () => {
-                localStorage.setItem('fontSize', selectedFontSize);
-                settingsModal.classList.add('hidden');
-            });
-            const loadAndApplyFontSize = () => {
-                applyFontSize(localStorage.getItem('fontSize') || '70');
+                throw new Error('API call failed after multiple retries.');
             };
+            
+            const showLoadingIndicator = () => loadingIndicator.classList.remove('hidden');
+            const hideLoadingIndicator = () => loadingIndicator.classList.add('hidden');
 
-            // Fetching and Initialization logic...
-            async function fetchWords(jsonPath) {
+            const saveProgress = async () => {
+                showLoadingIndicator();
+                const docRef = db.collection('artifacts').doc(appId).collection('public').doc('data').collection('dictionary').doc('progress');
+                const progressData = {
+                    knownWords: Array.from(knownWords),
+                    unknownWords: Array.from(unknownWords),
+                    lastLesson: lastLesson,
+                    lastWordIndex: lastWordIndex,
+                    lastUpdated: firebase.firestore.FieldValue.serverTimestamp()
+                };
+
                 try {
-                    const response = await fetch(`./json/${jsonPath}`);
-                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                    const data = await response.json();
-                    return data.words;
+                    await withExponentialBackoff(() => docRef.set(progressData, { merge: true }));
+                    console.log("Progress saved to Firestore successfully!");
                 } catch (error) {
-                    console.error('Could not fetch the word list:', error);
-                    alert('Error', `Could not load ${jsonPath}. Please check the file path and try again.`);
-                    goToHomeScreen();
-                    return [];
+                    console.error("Error saving progress:", error);
+                    showMessageModal("Failed to sync progress with Firebase. Please check your connection.");
+                } finally {
+                    hideLoadingIndicator();
                 }
-            }
-            async function getAllWords() {
-                if (allWordsCache) return allWordsCache;
-                const files = Array.from({ length: TOTAL_LISTS }, (_, i) => `${i + 1}.json`);
+            };
+            
+            // Refactored function to clear all data
+            const clearAllData = async () => {
+                showLoadingIndicator();
+                const docRef = db.collection('artifacts').doc(appId).collection('public').doc('data').collection('dictionary').doc('progress');
                 try {
-                    const promises = files.map(file => fetch(`./json/${file}`).then(res => res.json()));
-                    const results = await Promise.all(promises);
-                    let combinedWords = [];
-                    results.forEach((data, index) => {
-                        const sourceFile = files[index];
-                        const listName = `List ${index + 1}`;
-                        data.words.forEach(word => {
-                            combinedWords.push({ ...word, sourceFile, listName });
-                        });
-                    });
-                    allWordsCache = combinedWords;
-                    return allWordsCache;
-                } catch (error) { console.error("Failed to load all word lists for global search:", error); return []; }
-            }
-            function renderWord(wordData, searchTerm = '') {
-                let displayWord = wordData.word;
-                if (searchTerm) {
-                    const regex = new RegExp(`(${searchTerm})`, 'gi');
-                    displayWord = displayWord.replace(regex, `<span class="highlight">$1</span>`);
+                    await withExponentialBackoff(() => docRef.delete());
+                    knownWords.clear();
+                    unknownWords.clear();
+                    lastLesson = 0;
+                    lastWordIndex = 0;
+                    console.log("All progress cleared from Firestore.");
+                } catch (error) {
+                    console.error("Error clearing data:", error);
+                    showMessageModal("Failed to clear all data. Please try again.");
+                } finally {
+                    hideLoadingIndicator();
+                    updateLessonTiles();
+                    wordDetailsModal.classList.add('hidden');
+                    confirmModal.classList.add('hidden');
                 }
-                const currentFontSize = localStorage.getItem('fontSize') || '70';
-                wordSlide.innerHTML = `
-                    <span class="text-lg md:text-xl" style="color: var(--subtle-text-color);">${wordData.frequency}</span>
-                    <div class="flex flex-col items-center space-y-4">
-                        <h2 id="word-text" class="font-extrabold mb-2" style="font-size: ${currentFontSize}px; color: var(--text-color);">${displayWord}</h2>
-                    </div>
-                    <div class="text-center mt-8 space-y-2">
-                        <p class="text-xl md:text-2xl">${wordData.definition}</p>
-                        <p class="bangla-font text-2xl md:text-3xl" style="color: var(--subtle-text-color);">${wordData.bangla}</p>
-                    </div>
-                    <div class="mt-12 p-6 rounded-lg w-full max-w-2xl subtle-shadow transition-colors duration-300" style="background-color: var(--example-bg);">
-                        <p class="text-base md:text-lg">${wordData.example}</p>
-                    </div>`;
-            }
+            };
 
-            async function startLearning(jsonPath, wordToFind = null) {
-                startScreen.classList.add('hidden');
-                mainApp.classList.remove('hidden');
-                words = await fetchWords(jsonPath);
-                if (words.length > 0) {
-                    currentIndex = wordToFind ? words.findIndex(w => w.word.toLowerCase() === wordToFind.toLowerCase()) : 0;
-                    if (currentIndex === -1) currentIndex = 0;
-                    loadAndApplyFontSize();
-                    showCurrentWord();
+            const loadProgress = async () => {
+                showLoadingIndicator();
+                const docRef = db.collection('artifacts').doc(appId).collection('public').doc('data').collection('dictionary').doc('progress');
+                try {
+                    const doc = await withExponentialBackoff(() => docRef.get());
+                    if (doc.exists) {
+                        const data = doc.data();
+                        knownWords = new Set(data.knownWords || []);
+                        unknownWords = new Set(data.unknownWords || []);
+                        lastLesson = data.lastLesson || 0;
+                        lastWordIndex = data.lastWordIndex || 0;
+                        console.log("Progress loaded from Firestore.");
+                    } else {
+                        console.log("No progress found for this app, starting fresh.");
+                    }
+                } catch (error) {
+                    console.error("Error loading progress:", error);
+                    showMessageModal("Failed to load progress from Firebase. Your progress will not be saved.");
+                } finally {
+                    hideLoadingIndicator();
                 }
-            }
+            };
             
-            // Event listeners for closing, keyboard, and swiping...
-            closeAppButton.addEventListener('click', goToHomeScreen);
-            document.addEventListener('keydown', (e) => {
-                if (mainApp.classList.contains('hidden')) return;
-                if (document.activeElement.tagName === 'INPUT') return;
-                if (e.key === 'ArrowRight') showNextWord();
-                else if (e.key === 'ArrowLeft') showPrevWord();
-                else if (e.key === 'Escape') goToHomeScreen();
-            });
-            let touchStartX = 0;
-            mainApp.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
-            mainApp.addEventListener('touchend', (e) => {
-                const touchEndX = e.changedTouches[0].clientX;
-                if (touchEndX - touchStartX > 50) showPrevWord();
-                else if (touchStartX - touchEndX > 50) showNextWord();
-            }, { passive: true });
+            const animateCounter = (duration) => {
+                const start = performance.now();
+                const totalWords = allWords.length;
+                const animate = (time) => {
+                    let progress = time - start;
+                    let percentage = Math.min(progress / duration, 1);
+                    preloaderCount.textContent = Math.floor(percentage * totalWords);
+                    if (percentage < 1) {
+                        requestAnimationFrame(animate);
+                    } else {
+                        setTimeout(() => {
+                            preloader.style.opacity = '0';
+                            setTimeout(() => {
+                                preloader.classList.add('hidden');
+                                appContainer.classList.remove('hidden');
+                            }, 500);
+                        }, 2000);
+                    }
+                };
+                requestAnimationFrame(animate);
+            };
 
-            learningOptions.addEventListener('click', (e) => {
-                const button = e.target.closest('button');
-                if (button) startLearning(button.dataset.json);
-            });
-            
-            // Initial Load
-            function populateLearningOptions() {
-                for (let i = 1; i <= TOTAL_LISTS; i++) {
-                    const button = document.createElement('button');
-                    button.className = "start-button px-8 py-4 font-bold rounded-full shadow-lg hover:brightness-125 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-gray-500 focus:ring-opacity-50";
-                    button.dataset.json = `${i}.json`;
-                    button.innerHTML = `<i class="fas fa-play"></i> Start Learning ${i}`;
-                    learningOptions.appendChild(button);
+            const fetchData = async () => {
+                try {
+                    const response = await fetch('./data.json');
+                    if (!response.ok) {
+                        throw new Error("Could not fetch data.json");
+                    }
+                    allWords = await response.json();
+                } catch (e) {
+                    console.error(e);
+                    showMessageModal("Failed to load word data. Please check the `data.json` file.");
+                    return;
                 }
-            }
 
-            async function updateTotalWordCount() {
-                const allWords = await getAllWords();
-                if (allWords && allWords.length > 0) {
-                    totalWordCountEl.textContent = `Total words available: ${allWords.length}`;
+                animateCounter(2000);
+
+                await loadProgress();
+                updateLessonTiles();
+                
+                jumpInput.placeholder = `Enter word number (1-${allWords.length})`;
+            };
+
+            const getLessonWords = (lessonNumber) => {
+                const start = (lessonNumber - 1) * WORDS_PER_LESSON;
+                const end = start + WORDS_PER_LESSON;
+                const lessonWords = allWords.slice(start, end);
+
+                const unknownInLesson = lessonWords.filter(word => unknownWords.has(word.id));
+                const knownInLesson = lessonWords.filter(word => !unknownWords.has(word.id));
+
+                return [...unknownInLesson, ...knownInLesson];
+            };
+
+            const getLessonProgress = (lessonNumber) => {
+                const lessonWords = allWords.slice((lessonNumber - 1) * WORDS_PER_LESSON, lessonNumber * WORDS_PER_LESSON);
+                const knownInLesson = lessonWords.filter(word => knownWords.has(word.id)).length;
+                return (knownInLesson / WORDS_PER_LESSON) * 100;
+            };
+
+            const findFirstUnknownWord = () => {
+                for (let i = 0; i < allWords.length; i++) {
+                    // Check if the word is not in the knownWords set
+                    if (!knownWords.has(allWords[i].id)) {
+                        return i; // Return the global index
+                    }
+                }
+                return -1; // Return -1 if all words are known
+            };
+
+            const updateLessonTiles = () => {
+                lessonContainer.innerHTML = '';
+                const totalLessons = Math.ceil(allWords.length / WORDS_PER_LESSON);
+                
+                const firstUnknownIndex = findFirstUnknownWord();
+                
+                // Add "Continue Learning" button if there are unknown words
+                if (firstUnknownIndex !== -1) {
+                    const totalKnown = knownWords.size;
+                    const totalWords = allWords.length;
+                    const overallProgress = (totalKnown / totalWords) * 100;
+
+                    const continueTile = document.createElement('div');
+                    continueTile.className = 'lesson-tile continue';
+                    
+                    const firstUnknownWordGlobalIndex = findFirstUnknownWord();
+                    const targetLesson = Math.ceil((firstUnknownWordGlobalIndex + 1) / WORDS_PER_LESSON);
+                    const targetWordIndex = (firstUnknownWordGlobalIndex) % WORDS_PER_LESSON;
+
+                    continueTile.innerHTML = `
+                        <h2>Continue Learning</h2>
+                        <p>First unknown word is in Lesson ${targetLesson}</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: ${overallProgress}%;"></div>
+                        </div>
+                        <span class="progress-text">Overall progress: ${Math.round(overallProgress)}%</span>
+                    `;
+                    continueTile.addEventListener('click', () => openWordModal(targetLesson, targetWordIndex));
+                    lessonContainer.appendChild(continueTile);
+                }
+
+                for (let i = 1; i <= totalLessons; i++) {
+                    const lessonProgress = getLessonProgress(i);
+                    const lessonTile = document.createElement('div');
+                    lessonTile.className = 'lesson-tile';
+                    lessonTile.dataset.lesson = i;
+                    lessonTile.innerHTML = `
+                        <h2>Lesson ${i}</h2>
+                        <p>${(i - 1) * WORDS_PER_LESSON + 1} - ${i * WORDS_PER_LESSON}</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: ${lessonProgress}%;"></div>
+                        </div>
+                        <span class="progress-text">${Math.round(lessonProgress)}% complete</span>
+                    `;
+                    lessonTile.addEventListener('click', () => openWordModal(i, 0));
+                    lessonContainer.appendChild(lessonTile);
+                }
+            };
+
+            const openWordModal = (lessonNum, wordIndex) => {
+                currentLesson = lessonNum;
+                currentWordIndex = wordIndex;
+                currentLessonWords = getLessonWords(lessonNum);
+                wordDetailsModal.classList.remove('hidden');
+                updateModalContent();
+            };
+
+            const updateModalContent = () => {
+                const currentWord = currentLessonWords[currentWordIndex];
+
+                if (!currentWord) {
+                    showMessageModal("You have reached the end of this lesson.");
+                    // Check if we can proceed to the next lesson
+                    const nextLessonExists = getLessonWords(currentLesson + 1).length > 0;
+                    if (nextLessonExists) {
+                        const goNextBtn = document.createElement('button');
+                        goNextBtn.textContent = "Go to next lesson";
+                        goNextBtn.className = "jump-btn ok";
+                        goNextBtn.onclick = () => {
+                            messageModal.classList.add('hidden');
+                            openWordModal(currentLesson + 1, 0);
+                        };
+                        messageModal.querySelector('.message-content').appendChild(goNextBtn);
+                    }
+                    return;
+                }
+
+                modalWord.textContent = currentWord.word;
+                modalBangla.textContent = currentWord.bangla.join(', ');
+                modalDefinition.textContent = currentWord.definition;
+                
+                const highlightedExample = currentWord.example.replace(new RegExp(`\\b(${currentWord.word})\\b`, 'gi'), `<span class="highlight">$1</span>`);
+                modalExample.innerHTML = highlightedExample;
+
+                updateFooter();
+            };
+
+            const updateFooter = () => {
+                const totalWordsInLesson = currentLessonWords.length;
+                wordCounter.textContent = `${currentWordIndex + 1}/${totalWordsInLesson}`;
+
+                const currentWord = currentLessonWords[currentWordIndex];
+                
+                if (isFrequencyMode) {
+                    frequencyDisplay.textContent = currentWord.frequency;
                 } else {
-                    totalWordCountEl.textContent = 'Could not load word count.';
+                    frequencyDisplay.textContent = currentWord.id;
                 }
-            }
 
-            populateLearningOptions();
-            updateTotalWordCount();
-            loadAndApplyFontSize();
+                if (knownWords.has(currentWord.id) || unknownWords.has(currentWord.id)) {
+                    // This word has been marked before, show both buttons
+                    unknownBtn.classList.remove('active');
+                    knownBtn.classList.remove('hidden');
+                    nextWordBtn.classList.add('hidden');
+                    if (knownWords.has(currentWord.id)) {
+                        knownBtn.classList.add('active');
+                        unknownBtn.classList.remove('active');
+                    } else {
+                        unknownBtn.classList.add('active');
+                        knownBtn.classList.remove('active');
+                    }
+                } else {
+                    // This is a new word, only show unknown and next
+                    unknownBtn.classList.remove('active');
+                    knownBtn.classList.add('hidden');
+                    nextWordBtn.classList.remove('hidden');
+                }
+            };
+            
+            // The logic for marking known and unknown is now handled by these two functions
+            const markAsKnown = () => {
+                const currentWord = currentLessonWords[currentWordIndex];
+                knownWords.add(currentWord.id);
+                unknownWords.delete(currentWord.id);
+                nextWord(); 
+                updateFooter();
+                saveProgress();
+                updateLessonTiles();
+            };
+
+            const markAsUnknown = () => {
+                const currentWord = currentLessonWords[currentWordIndex];
+                unknownWords.add(currentWord.id);
+                knownWords.delete(currentWord.id);
+                updateFooter();
+                saveProgress();
+                updateLessonTiles();
+            };
+            
+            const prevWord = () => {
+                if (currentWordIndex > 0) {
+                    currentWordIndex--;
+                    lastLesson = currentLesson;
+                    lastWordIndex = currentWordIndex;
+                    updateModalContent();
+                    saveProgress();
+                } else {
+                    showMessageModal("You are at the beginning of the lesson.");
+                }
+            };
+
+            const nextWord = () => {
+                const currentWord = currentLessonWords[currentWordIndex];
+                if (!knownWords.has(currentWord.id) && !unknownWords.has(currentWord.id)) {
+                    // If a user just clicks next on a new word, we assume they know it
+                    knownWords.add(currentWord.id);
+                }
+
+                if (currentWordIndex < currentLessonWords.length - 1) {
+                    currentWordIndex++;
+                    lastLesson = currentLesson;
+                    lastWordIndex = currentWordIndex;
+                    updateModalContent();
+                    saveProgress();
+                    updateLessonTiles();
+                } else {
+                    showMessageModal("You have reached the end of this lesson.");
+                    // After the last word, we can check for new unknown words
+                    const firstUnknownIndex = findFirstUnknownWord();
+                    if (firstUnknownIndex !== -1) {
+                        const firstUnknownLesson = Math.ceil((firstUnknownIndex + 1) / WORDS_PER_LESSON);
+                        const firstUnknownWordIndex = (firstUnknownIndex) % WORDS_PER_LESSON;
+                        const goNextBtn = document.createElement('button');
+                        goNextBtn.textContent = `Go to next unknown word (Lesson ${firstUnknownLesson})`;
+                        goNextBtn.className = "jump-btn ok";
+                        goNextBtn.onclick = () => {
+                            messageModal.classList.add('hidden');
+                            openWordModal(firstUnknownLesson, firstUnknownWordIndex);
+                        };
+                        messageModal.querySelector('.message-content').appendChild(goNextBtn);
+                    }
+                }
+            };
+
+            // Event Listeners
+            closeModalBtn.addEventListener('click', () => {
+                wordDetailsModal.classList.add('hidden');
+            });
+            
+            wordCounter.addEventListener('click', () => {
+                jumpModal.classList.remove('hidden');
+            });
+
+            // New event listener for the clear all data button on the home page
+            clearAllDataBtn.addEventListener('click', () => {
+                confirmModal.classList.remove('hidden');
+            });
+
+            confirmYesBtn.addEventListener('click', () => {
+                clearAllData();
+            });
+
+            confirmNoBtn.addEventListener('click', () => {
+                confirmModal.classList.add('hidden');
+            });
+
+            jumpOkBtn.addEventListener('click', () => {
+                const targetWordId = parseInt(jumpInput.value);
+                if (targetWordId > 0 && targetWordId <= allWords.length) {
+                    const targetLesson = Math.ceil(targetWordId / WORDS_PER_LESSON);
+                    const targetWordIndex = (targetWordId - 1) % WORDS_PER_LESSON;
+                    openWordModal(targetLesson, targetWordIndex);
+                    jumpModal.classList.add('hidden');
+                } else {
+                    showMessageModal(`Please enter a number between 1 and ${allWords.length}.`);
+                }
+            });
+
+            jumpCancelBtn.addEventListener('click', () => {
+                jumpModal.classList.add('hidden');
+            });
+
+            unknownBtn.addEventListener('click', markAsUnknown);
+            knownBtn.addEventListener('click', markAsKnown);
+            nextWordBtn.addEventListener('click', nextWord);
+
+            frequencyDisplay.addEventListener('click', () => {
+                isFrequencyMode = !isFrequencyMode;
+                updateFooter();
+            });
+
+            // Keyboard controls
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    wordDetailsModal.classList.add('hidden');
+                    jumpModal.classList.add('hidden');
+                    messageModal.classList.add('hidden');
+                    confirmModal.classList.add('hidden');
+                }
+                
+                if (!wordDetailsModal.classList.contains('hidden')) {
+                    if (e.key === 'ArrowLeft') {
+                        prevWord();
+                    } else if (e.key === 'ArrowRight') {
+                        nextWord();
+                    } else if (e.key === '?' || e.key === '/') {
+                        // Toggle unknown state
+                        if (knownBtn.classList.contains('hidden')) {
+                            markAsUnknown(); // Mark a new word as unknown
+                        } else {
+                            // If it's already marked, toggle it.
+                            if (knownWords.has(currentLessonWords[currentWordIndex].id)) {
+                                markAsUnknown();
+                            } else {
+                                markAsKnown();
+                            }
+                        }
+                    } else if ((e.key === 'Enter' || e.key === ' ') && !knownBtn.classList.contains('hidden')) {
+                        markAsKnown();
+                    } else if (e.key === 'Enter' || e.key === ' ') {
+                        nextWord();
+                    }
+                }
+            });
+
+            // Swipe controls for mobile
+            wordDetailsModal.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                startY = e.touches[0].clientY;
+                isSwiping = true;
+            });
+            
+            wordDetailsModal.addEventListener('touchend', (e) => {
+                if (!isSwiping) return;
+                isSwiping = false;
+
+                const endX = e.changedTouches[0].clientX;
+                const endY = e.changedTouches[0].clientY;
+                const deltaX = endX - startX;
+                const deltaY = endY - startY;
+
+                const minSwipeDistance = 50;
+
+                if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > minSwipeDistance) {
+                    if (deltaX > 0) {
+                        prevWord();
+                    } else {
+                        nextWord();
+                    }
+                }
+            });
+            
+            wordDetailsModal.addEventListener('click', (e) => {
+                if (e.target === wordDetailsModal) {
+                    wordDetailsModal.classList.add('hidden');
+                }
+            });
+
+            jumpModal.addEventListener('click', (e) => {
+                if (e.target === jumpModal) {
+                    jumpModal.classList.add('hidden');
+                }
+            });
+            
+            confirmModal.addEventListener('click', (e) => {
+                if (e.target === confirmModal) {
+                    confirmModal.classList.add('hidden');
+                }
+            });
+            
+            setInterval(async () => {
+                if (knownWords.size > 0 || unknownWords.size > 0) {
+                    await saveProgress();
+                }
+            }, 30000); // Save every 30 seconds
+            
+            fetchData();
         });
     </script>
 </body>
