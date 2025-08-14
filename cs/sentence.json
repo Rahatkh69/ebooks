@@ -1,0 +1,1820 @@
+{
+  "sentences": [
+    {
+      "original": "I was very glad.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "I was not at all sad.",
+          "why": "This is a negative transformation using the antonym of 'glad', which is 'sad'. The phrase 'not at all' is used to emphasize the negation and match the intensity of 'very'."
+        },
+        {
+          "answer": "I was not unpleased.",
+          "why": "This is a double negative transformation. The word 'glad' is negated with the prefix 'un-' to become 'unpleased', and then the sentence is made negative with 'not'. The double negative 'not unpleased' effectively conveys the positive meaning of being 'glad'."
+        }
+      ]
+    },
+    {
+      "original": "We are grateful to the freedom fighters.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "We are not ungrateful to the freedom fighters.",
+          "why": "This is a negative transformation using a double negative. 'Grateful' is replaced with its antonym 'ungrateful', and 'not' is added to the sentence. This structure retains the original affirmative meaning."
+        }
+      ]
+    },
+    {
+      "original": "At first glance, the questions may seem difficult.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "At first glance, the questions may not seem easy.",
+          "why": "This is a negative transformation where 'difficult' is replaced with its antonym 'easy', and 'not' is added. The sentence becomes negative while the original meaning is preserved."
+        }
+      ]
+    },
+    {
+      "original": "They give us both knowledge and pleasure.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "They give us not only knowledge but also pleasure.",
+          "why": "The affirmative correlative conjunction 'both... and...' is transformed into the negative correlative conjunction 'not only... but also...', which maintains the inclusive meaning in a negative structure."
+        }
+      ]
+    },
+    {
+      "original": "A simple man is not unhappy.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "A simple man is happy.",
+          "why": "This is a Negative to Affirmative transformation. The double negative 'not unhappy' is removed, and the antonym 'happy' is used to express the original affirmative meaning."
+        }
+      ]
+    },
+    {
+      "original": "My friend is always punctual.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "My friend is never late.",
+          "why": "The affirmative adverb 'always' is replaced with its opposite 'never', and the adjective 'punctual' is replaced with its antonym 'late'. This creates a negative sentence that maintains the original meaning."
+        }
+      ]
+    },
+    {
+      "original": "We should obey our teachers.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "We should not disobey our teachers.",
+          "why": "The verb 'obey' is replaced with its antonym 'disobey', and 'not' is added. This is a standard method for changing an assertive sentence to a negative one without altering the meaning."
+        }
+      ]
+    },
+    {
+      "original": "It contains high calories.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "It does not contain low calories.",
+          "why": "The adjective 'high' is replaced with its antonym 'low', and the negative auxiliary verb 'does not' is added to preserve the original meaning in a negative form."
+        }
+      ]
+    },
+    {
+      "original": "It is available in the month of Jaistha.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "It is not unavailable in the month of Jaistha.",
+          "why": "This transformation uses a double negative. The adjective 'available' is replaced with its antonym 'unavailable', and 'not' is added to preserve the original affirmative meaning."
+        }
+      ]
+    },
+    {
+      "original": "Her parents liked her very much.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "Her parents did not dislike her at all.",
+          "why": "The verb 'liked' is replaced with its antonym 'dislike', and the auxiliary 'did not' is added. The phrase 'at all' is used to intensify the negative statement, matching the intensity of the original 'very much'."
+        }
+      ]
+    },
+    {
+      "original": "Everybody appreciates this quality.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "Nobody dislikes this quality.",
+          "why": "The subject 'Everybody' is replaced with its opposite 'Nobody', and the verb 'appreciates' is replaced with its antonym 'dislikes'. This makes the sentence negative while keeping the original meaning."
+        }
+      ]
+    },
+    {
+      "original": "Our exam system should be moderated.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "Our exam system should not be unmoderated.",
+          "why": "This uses a double negative. The adjective 'moderated' is replaced with its antonym 'unmoderated', and 'not' is added. This transformation retains the original meaning by negating the opposite."
+        }
+      ]
+    },
+    {
+      "original": "I am sure that man is the maker of his own fortune.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "I am not unsure that man is the maker of his own fortune.",
+          "why": "The adjective 'sure' is replaced with its antonym 'unsure', and 'not' is added to create a double negative. This common transformation preserves the original affirmative meaning."
+        }
+      ]
+    },
+    {
+      "original": "Our life is only a sum-total of hours, days and years.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "Our life is nothing but a sum-total of hours, days and years.",
+          "why": "The affirmative adverb 'only' is replaced with the negative phrase 'nothing but'. This transformation is used to maintain the same exclusive meaning in a negative form."
+        }
+      ]
+    },
+    {
+      "original": "The government is sincere in removing this crime.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "The government is not insincere in removing this crime.",
+          "why": "The adjective 'sincere' is replaced with its antonym 'insincere', and the negative 'not' is added. This double negative structure maintains the original affirmative meaning."
+        }
+      ]
+    },
+    {
+      "original": "The electricity lights both the streets and the houses.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "The electricity not only lights the streets but also the houses.",
+          "why": "The 'both... and...' structure is transformed into the 'not only... but also...' structure. This change conveys the same inclusive meaning but in a negative sentence structure."
+        }
+      ]
+    },
+    {
+      "original": "Internet is as important as computer.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "Internet is not less important than computer.",
+          "why": "The affirmative comparative 'as... as' is transformed into a negative comparative 'not less... than'. This transformation preserves the meaning of equal importance between the two subjects."
+        }
+      ]
+    },
+    {
+      "original": "He did not misuse this wealth.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "He made proper use of this wealth.",
+          "why": "This is a Negative to Affirmative transformation. The negative verb phrase 'did not misuse' is replaced with the affirmative phrase 'made proper use of' to convey the same meaning."
+        }
+      ]
+    },
+    {
+      "original": "He was very kind to the poor.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "He was not at all unkind to the poor.",
+          "why": "The adjective 'kind' is replaced with its antonym 'unkind', and 'not at all' is added. This double negative maintains the original meaning and emphasizes the degree of kindness."
+        }
+      ]
+    },
+    {
+      "original": "He was the second of his father's five sons.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "He was not the first or third of his father's five sons.",
+          "why": "This is a negative transformation that uses negation to indirectly state the original fact. By saying what he wasn't, the sentence implies what he was, preserving the original meaning."
+        },
+        {
+          "answer": "He was not the first of his father's five sons.",
+          "why": "This is a partial but grammatically correct negative transformation. It accurately negates the possibility of him being the first son, which is consistent with the original statement that he was the second."
+        }
+      ]
+    },
+    {
+      "original": "A life with an assignment is an actual life.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "A life without an assignment is not an actual life.",
+          "why": "The preposition 'with' is replaced with its opposite 'without', and 'not' is added to make the sentence negative. This transformation preserves the original meaning by negating the inverse condition."
+        }
+      ]
+    },
+    {
+      "original": "Most people like simplicity.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "Most people do not dislike simplicity.",
+          "why": "The verb 'like' is replaced with its antonym 'dislike', and the negative auxiliary verb 'do not' is added. This creates a negative sentence that retains the original meaning."
+        }
+      ]
+    },
+    {
+      "original": "Reading books is a noble habit.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "Reading books is not a bad habit.",
+          "why": "The adjective 'noble' is replaced with its antonym 'bad', and 'not' is added. This double negative transformation preserves the original meaning."
+        }
+      ]
+    },
+    {
+      "original": "We all should avoid the killers of mankind.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "We all should not embrace the killers of mankind.",
+          "why": "The verb 'avoid' is replaced with its antonym 'embrace', and 'not' is added. This is a standard method to transform an assertive sentence to a negative one while keeping the meaning."
+        }
+      ]
+    },
+    {
+      "original": "It persuades a man to do everything just.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "It does not persuade a man to do anything unjust.",
+          "why": "The verb 'persuades' is changed to the negative 'does not persuade', and the adjective 'just' is replaced with its antonym 'unjust'. This creates a negative statement with the same meaning."
+        }
+      ]
+    },
+    {
+      "original": "So, we should be patriots.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "So, we should not be unpatriotic.",
+          "why": "The noun 'patriots' is replaced with the negative adjective 'unpatriotic', and the negative modal verb 'not' is added. This double negative transformation preserves the original meaning."
+        }
+      ]
+    },
+    {
+      "original": "Facebook is a common social network.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "Facebook is not an uncommon social network.",
+          "why": "The adjective 'common' is replaced with its antonym 'uncommon', and 'not' is added to create a double negative. This transformation keeps the original meaning."
+        }
+      ]
+    },
+    {
+      "original": "Haji Mohammad Mohsin was a kind man.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "Haji Mohammad Mohsin was not an unkind man.",
+          "why": "The adjective 'kind' is replaced with its antonym 'unkind', and 'not' is added to form a double negative. This preserves the original meaning."
+        }
+      ]
+    },
+    {
+      "original": "He did not marry.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "He remained unmarried.",
+          "why": "This is a Negative to Affirmative transformation. The negative verb phrase 'did not marry' is replaced by the affirmative phrase 'remained unmarried', which expresses the same state."
+        }
+      ]
+    },
+    {
+      "original": "People do not love a corrupted man.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "People hate a corrupted man.",
+          "why": "This is a Negative to Affirmative transformation. The negative phrase 'do not love' is replaced with its direct antonym 'hate' to create an affirmative sentence with the same meaning."
+        }
+      ]
+    },
+    {
+      "original": "Everybody avoids a corrupted man.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "Nobody befriends a corrupted man.",
+          "why": "The subject 'Everybody' is replaced with its opposite 'Nobody', and the verb 'avoids' is replaced with its antonym 'befriends'. This creates a negative sentence that means the same thing."
+        }
+      ]
+    },
+    {
+      "original": "Its functions are smooth and rapid.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "Its functions are not rough and slow.",
+          "why": "The adjectives 'smooth' and 'rapid' are replaced by their antonyms 'rough' and 'slow', and 'not' is added to make the sentence negative while keeping the original meaning."
+        }
+      ]
+    },
+    {
+      "original": "E-commerce has become a popular platform for both buyers and sellers.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "E-commerce has not become an unpopular platform for both buyers and sellers.",
+          "why": "The adjective 'popular' is replaced with its antonym 'unpopular', and 'not' is added to form a double negative. This transformation maintains the original affirmative meaning."
+        }
+      ]
+    },
+    {
+      "original": "Taimur was a great conqueror of the world.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "Taimur was not a weak conqueror of the world.",
+          "why": "The adjective 'great' is replaced with its antonym 'weak', and 'not' is added. This negative sentence preserves the original meaning."
+        }
+      ]
+    },
+    {
+      "original": "She was very kind to the needy and the ill-fated.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "She was not at all unkind to the needy and the ill-fated.",
+          "why": "The adjective 'kind' is replaced with its antonym 'unkind', and 'not at all' is added. The double negative maintains the original meaning and emphasizes the degree of kindness."
+        }
+      ]
+    },
+    {
+      "original": "It dazzles our eyes and soothes our heart.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "It does not fail to dazzle our eyes and soothe our heart.",
+          "why": "The affirmative verbs 'dazzles' and 'soothes' are replaced with the negative phrase 'does not fail to'. This transformation preserves the original meaning by negating the failure to perform the action."
+        }
+      ]
+    },
+    {
+      "original": "In fact, a moonlit night is very pleasant.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "In fact, a moonlit night is not at all unpleasant.",
+          "why": "The adjective 'pleasant' is replaced with its antonym 'unpleasant', and 'not at all' is added. This double negative transformation retains the original meaning and intensity."
+        }
+      ]
+    },
+    {
+      "original": "A student should not write irrelevant answers.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "A student should write relevant answers.",
+          "why": "This is a Negative to Affirmative transformation. The negative phrase 'should not write irrelevant' is changed to the affirmative 'should write relevant', as 'irrelevant' is the antonym of 'relevant'."
+        }
+      ]
+    },
+    {
+      "original": "By following the process, every student can achieve a good result in an examination.",
+      "type": "Assertive to Negative",
+      "answers": [
+        {
+          "answer": "Without following the process, no student can achieve a good result in an examination.",
+          "why": "The affirmative prepositional phrase 'By following' is replaced by its negative opposite 'Without following', and the subject 'every student' is replaced with the negative 'no student'. These two negative elements combine to convey the same meaning as the original sentence."
+        }
+      ]
+    },
+    {
+      "original": "It is not a small sea beach.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "It is a large sea beach.",
+          "why": "This is a Negative to Affirmative transformation. The double negative 'not small' is removed and replaced with the affirmative antonym 'large'."
+        }
+      ]
+    },
+    {
+      "original": "Their contribution will never be forgotten.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "Their contribution will always be remembered.",
+          "why": "The negative adverb 'never' is replaced with its opposite 'always', and the verb 'forgotten' is replaced with its antonym 'remembered'. This creates an affirmative sentence with the same meaning."
+        }
+      ]
+    },
+    {
+      "original": "So, it is better than not answering at all.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "So, answering is better than nothing.",
+          "why": "This is a Negative to Affirmative transformation. The negative clause 'not answering at all' is replaced with the affirmative pronoun 'nothing', preserving the meaning of the original sentence more accurately than the other option."
+        },
+        {
+          "answer": "So, answering is better than not answering at all.",
+          "why": "This transformation is flawed, as the answer is nearly identical to the original sentence and does not properly convert the negative element to an affirmative one."
+        }
+      ]
+    },
+    {
+      "original": "Nothing but books can remove the darkness of ignorance.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "Only books can remove the darkness of ignorance.",
+          "why": "The negative phrase 'nothing but' is replaced with the affirmative adverb 'only'. This is a standard rule for this type of transformation, as both phrases convey a meaning of exclusivity."
+        }
+      ]
+    },
+    {
+      "original": "One day he could not but go to a market.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "One day he had to go to a market.",
+          "why": "The negative phrase 'could not but' is replaced with the affirmative phrase 'had to'. Both phrases express a sense of compulsion or necessity."
+        }
+      ]
+    },
+    {
+      "original": "The market was far from his house.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "The market was not near his house.",
+          "why": "This is an incorrect transformation. The original sentence is already affirmative, and the answer provided is a negative sentence. A correct affirmative transformation would be to keep the original sentence as it is or rephrase it without changing its meaning or type."
+        }
+      ]
+    },
+    {
+      "original": "This habit is rarely disliked.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "This habit is almost always liked.",
+          "why": "The negative adverb 'rarely' is replaced with the affirmative phrase 'almost always', and the verb 'disliked' is replaced with its antonym 'liked'. This is a correct transformation that preserves the original meaning."
+        }
+      ]
+    },
+    {
+      "original": "No other thing is as interesting as reading books.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "Reading books is the most interesting thing.",
+          "why": "This is a transformation from a negative comparative sentence to an affirmative superlative sentence. The phrase 'No other thing is as interesting as...' implies that 'reading books' is the most interesting of all things."
+        }
+      ]
+    },
+    {
+      "original": "He leaves no stone unturned to teach them morality.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "He tries every possible means to teach them morality.",
+          "why": "The idiomatic negative phrase 'leaves no stone unturned' is replaced with the affirmative phrase 'tries every possible means'. Both phrases convey the meaning of putting forth maximum effort."
+        }
+      ]
+    },
+    {
+      "original": "He cannot remain sitting idle in the class.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "He must be active in the class.",
+          "why": "The negative phrase 'cannot remain sitting idle' is replaced by the affirmative modal verb 'must' and the affirmative antonym 'active'. This transformation captures the meaning of necessity."
+        }
+      ]
+    },
+    {
+      "original": "The later could not climb up a tree.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "The later was unable to climb up a tree.",
+          "why": "The negative modal verb phrase 'could not' is replaced by the affirmative phrase 'was unable to'. Both phrases have the same meaning of a lack of ability."
+        }
+      ]
+    },
+    {
+      "original": "The readers called for an old edition of his famous book \"The Lyrical Ballads\" in 1800.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "The readers did not fail to call for an old edition of his famous book \"The Lyrical Ballads\" in 1800.",
+          "why": "This is an incorrect transformation. The original sentence is already affirmative, and the provided answer is a negative sentence. The transformation type is flawed."
+        }
+      ]
+    },
+    {
+      "original": "Industry is the key to success.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "There is no alternative to industry for success.",
+          "why": "This is an incorrect transformation. The original sentence is already affirmative, and the provided answer is a negative sentence. The transformation type is flawed."
+        }
+      ]
+    },
+    {
+      "original": "No other man is as happy as a successful man.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "A successful man is the happiest man.",
+          "why": "The negative comparative structure 'No other man is as happy as...' is transformed into the affirmative superlative 'the happiest man'. This is a standard transformation."
+        }
+      ]
+    },
+    {
+      "original": "Freedom fighters' contribution is not less than any other thing.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "Freedom fighters' contribution is more than any other thing.",
+          "why": "The negative comparative phrase 'not less than' is replaced with the affirmative 'more than'. This transformation preserves the original meaning of a greater contribution."
+        }
+      ]
+    },
+    {
+      "original": "Their courage was powerful.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "Their courage was not weak.",
+          "why": "This is an incorrect transformation. The original sentence is already affirmative, and the provided answer is a negative sentence. The transformation type is flawed."
+        }
+      ]
+    },
+    {
+      "original": "We cannot help reading newspaper daily.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "We must read newspaper daily.",
+          "why": "The negative phrase 'cannot help' is replaced with the affirmative modal verb 'must'. Both phrases convey a strong sense of necessity or inevitability."
+        }
+      ]
+    },
+    {
+      "original": "Isn't it called the people's parliament.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "It is called the people's parliament.",
+          "why": "This is an Interrogative to Affirmative transformation. The negative interrogative question 'Isn't it called...' is changed to a positive, declarative statement 'It is called...'."
+        }
+      ]
+    },
+    {
+      "original": "She was not one of the most stupid girls in the school.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "She was one of the cleverest girls in the school.",
+          "why": "The negative superlative 'not one of the most stupid' is transformed into the affirmative superlative 'one of the cleverest'. This preserves the meaning by using the opposite superlative."
+        }
+      ]
+    },
+    {
+      "original": "We cannot but take care of our health.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "We must take care of our health.",
+          "why": "The negative phrase 'cannot but' is replaced with the affirmative modal verb 'must'. Both phrases express a sense of necessity or a lack of other options."
+        }
+      ]
+    },
+    {
+      "original": "It is not as costly as mango.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "Mango is costlier than it.",
+          "why": "This is a transformation from a negative comparative sentence to an affirmative comparative sentence. The negative statement 'not as costly as' implies that mango is more expensive, which is stated directly in the new affirmative sentence."
+        }
+      ]
+    },
+    {
+      "original": "It is not the least corrosive problem of the modern world.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "It is one of the most corrosive problems of the modern world.",
+          "why": "The negative superlative 'not the least' is transformed into the affirmative superlative 'one of the most'. This change preserves the meaning by using the opposite extreme."
+        }
+      ]
+    },
+    {
+      "original": "It is not a simple invention of modern science.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "It is a complex invention of modern science.",
+          "why": "The double negative 'not a simple' is replaced with the affirmative antonym 'a complex'. This transformation is a direct change from a negative statement to its affirmative equivalent."
+        }
+      ]
+    },
+    {
+      "original": "He did not marry.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "He remained unmarried.",
+          "why": "The negative verb phrase 'did not marry' is replaced with the affirmative state 'remained unmarried'. This transformation effectively conveys the same meaning."
+        }
+      ]
+    },
+    {
+      "original": "Our life is nothing but the some total of hours, days and years.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "Our life is only the some total of hours, days and years.",
+          "why": "The negative phrase 'nothing but' is replaced by the affirmative 'only'. Both phrases convey the same sense of exclusivity."
+        }
+      ]
+    },
+    {
+      "original": "All men must die.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "No man can escape death.",
+          "why": "This is an incorrect transformation. The original sentence is affirmative, and the provided answer is a negative sentence. The transformation type is flawed."
+        }
+      ]
+    },
+    {
+      "original": "Computer is a blessing on earth.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "Computer is not a curse on earth.",
+          "why": "This is an incorrect transformation. The original sentence is affirmative, and the provided answer is a negative sentence. The transformation type is flawed."
+        }
+      ]
+    },
+    {
+      "original": "We cannot but depend on it.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "We must depend on it.",
+          "why": "The negative phrase 'cannot but' is replaced with the affirmative modal verb 'must'. Both phrases express a sense of compulsion or necessity."
+        }
+      ]
+    },
+    {
+      "original": "No one can deny its necessity.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "Everyone must admit its necessity.",
+          "why": "The negative phrase 'No one can deny' is replaced with the affirmative 'Everyone must admit'. The verbs 'deny' and 'admit' are antonyms, and this transformation preserves the original meaning."
+        }
+      ]
+    },
+    {
+      "original": "No other man is as hated as a corrupted man.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "A corrupted man is the most hated man.",
+          "why": "The negative comparative structure 'No other man is as hated as...' is transformed into the affirmative superlative 'the most hated man'. This accurately captures the meaning of the original sentence."
+        }
+      ]
+    },
+    {
+      "original": "There is no student without smart phone.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "Every student has a smart phone.",
+          "why": "The double negative phrase 'no student without' is transformed into the affirmative statement 'Every student has'. This is a concise and direct way to convey the original meaning."
+        }
+      ]
+    },
+    {
+      "original": "Nothing is as disastrous as terrorism.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "Terrorism is the most disastrous thing.",
+          "why": "The negative comparative phrase 'Nothing is as disastrous as...' is transformed into the affirmative superlative 'the most disastrous thing'. This accurately reflects the meaning of the original sentence."
+        }
+      ]
+    },
+    {
+      "original": "A terrorist is hated by people.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "People do not love a terrorist.",
+          "why": "This is an incorrect transformation. The original sentence is already affirmative. The provided answer is a negative sentence. The transformation type is flawed."
+        }
+      ]
+    },
+    {
+      "original": "They should be brought to book.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "They should not go unpunished.",
+          "why": "This is an incorrect transformation. The original sentence is already affirmative. The provided answer is a negative sentence. The transformation type is flawed."
+        }
+      ]
+    },
+    {
+      "original": "Initially the questions may seem difficult.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "Initially the questions may not seem easy.",
+          "why": "This is an incorrect transformation. The original sentence is already affirmative, and the provided answer is a negative sentence. The transformation type is flawed."
+        }
+      ]
+    },
+    {
+      "original": "She is not an ignoble person in the world.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "She is a noble person in the world.",
+          "why": "The double negative 'not an ignoble' is removed and replaced with the affirmative 'a noble'. This directly converts the negative statement to its affirmative equivalent."
+        }
+      ]
+    },
+    {
+      "original": "A moonlit night is not dull to the nature lovers.",
+      "type": "Negative to Affirmative",
+      "answers": [
+        {
+          "answer": "A moonlit night is interesting to the nature lovers.",
+          "why": "The double negative 'not dull' is replaced with the affirmative antonym 'interesting'. This transformation preserves the original meaning."
+        }
+      ]
+    },
+    {
+      "original": "I accepted the invitation.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Didn't I accept the invitation?",
+          "why": "For an affirmative sentence in the simple past tense, the interrogative form is created using the auxiliary 'did not' (contracted to 'didn't') followed by the subject and the base form of the verb."
+        }
+      ]
+    },
+    {
+      "original": "It is one of the most beautiful sea beaches in the world.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Isn't it one of the most beautiful sea beaches in the world?",
+          "why": "For an affirmative sentence with the verb 'is', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't') to form a negative question."
+        }
+      ]
+    },
+    {
+      "original": "We got our independence for their sacrifice.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Didn't we get our independence for their sacrifice?",
+          "why": "For an affirmative sentence in the simple past tense with the verb 'got', the interrogative form is created using 'didn't' followed by the subject and the base form of the verb."
+        }
+      ]
+    },
+    {
+      "original": "An examinee should not waste time by doing it.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Should an examinee waste time by doing it?",
+          "why": "For a negative assertive sentence with the modal verb 'should not', the interrogative form is created by moving 'should' to the front and removing 'not'."
+        }
+      ]
+    },
+    {
+      "original": "The books of great writers contain noble thoughts and great ideas.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Don't the books of great writers contain noble thoughts and great ideas?",
+          "why": "For an affirmative sentence in the simple present tense with the verb 'contain', the interrogative form is created using the auxiliary 'do not' (contracted to 'don't') followed by the subject and the base form of the verb."
+        }
+      ]
+    },
+    {
+      "original": "Books are the greatest friends.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Aren't books the greatest friends?",
+          "why": "For an affirmative sentence with the verb 'are', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "There was an old man in a village.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Wasn't there an old man in a village?",
+          "why": "For an affirmative sentence with 'was', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "We should read more and more books.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Shouldn't we read more and more books?",
+          "why": "For an affirmative sentence with the modal verb 'should', the interrogative form is created by moving 'should' to the front and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "He is older than I.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Isn't he older than I?",
+          "why": "For an affirmative sentence with the verb 'is', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "They were talking about their love for each other.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Weren't they talking about their love for each other?",
+          "why": "For an affirmative sentence with the verb 'were', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "The bear smelt his ears, nose and face.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Didn't the bear smell his ears, nose and face?",
+          "why": "For an affirmative sentence in the simple past tense with the verb 'smelt', the interrogative form is created using 'didn't' followed by the subject and the base form of the verb ('smell')."
+        }
+      ]
+    },
+    {
+      "original": "He was only 13 years old when his father died.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Wasn't he only 13 years old when his father died?",
+          "why": "For an affirmative sentence with the verb 'was', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "He received important education at school.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Didn't he receive important education at school?",
+          "why": "For an affirmative sentence in the simple past tense with the verb 'received', the interrogative form is created using 'didn't' followed by the subject and the base form of the verb ('receive')."
+        }
+      ]
+    },
+    {
+      "original": "One can't be successful without it.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Can one be successful without it?",
+          "why": "For a negative assertive sentence with the modal verb 'can't', the interrogative form is created by moving 'can' to the front and removing 'not'."
+        }
+      ]
+    },
+    {
+      "original": "It is one of the best qualities.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Isn't it one of the best qualities?",
+          "why": "For an affirmative sentence with the verb 'is', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "A freedom fighter is the greatest son of the soil.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Isn't a freedom fighter the greatest son of the soil?",
+          "why": "For an affirmative sentence with the verb 'is', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "Their contribution will never be forgotten.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Will their contribution ever be forgotten?",
+          "why": "For a sentence with the negative adverb 'never', the interrogative form is created by moving the auxiliary verb 'Will' to the front and replacing 'never' with the affirmative adverb 'ever'."
+        }
+      ]
+    },
+    {
+      "original": "It reflects the whole world like a mirror.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Doesn't it reflect the whole world like a mirror?",
+          "why": "For an affirmative sentence in the simple present tense with the verb 'reflects', the interrogative form is created using the auxiliary 'does not' (contracted to 'doesn't') followed by the subject and the base form of the verb ('reflect')."
+        }
+      ]
+    },
+    {
+      "original": "We are helped in many ways by it.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Aren't we helped in many ways by it?",
+          "why": "For an affirmative sentence in the passive voice with the verb 'are', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "He accepted the invitation.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Didn't he accept the invitation?",
+          "why": "For an affirmative sentence in the simple past tense with the verb 'accepted', the interrogative form is created using 'didn't' followed by the subject and the base form of the verb ('accept')."
+        }
+      ]
+    },
+    {
+      "original": "Terrorism is one of the most corrosive problems of the modern world.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Isn't terrorism one of the most corrosive problems of the modern world?",
+          "why": "For an affirmative sentence with the verb 'is', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "Wasting time is as harmful as committing suicide.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Isn't wasting time as harmful as committing suicide?",
+          "why": "For an affirmative sentence with the verb 'is', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "Youth is the most valuable season of life.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Isn't youth the most valuable season of life?",
+          "why": "For an affirmative sentence with the verb 'is', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "Copying in the exams is one of the greatest social crime.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Isn't copying in the exams one of the greatest social crimes?",
+          "why": "For an affirmative sentence with the verb 'is', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "Copying in the exam cannot bring any benefit.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Can copying in the exam bring any benefit?",
+          "why": "For a negative assertive sentence with the modal verb 'cannot', the interrogative form is created by moving 'can' to the front and removing 'not'."
+        }
+      ]
+    },
+    {
+      "original": "The student is known to me.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Isn't the student known to me?",
+          "why": "For an affirmative sentence in the passive voice with the verb 'is', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "Everybody knows it as our national fruit.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Doesn't everybody know it as our national fruit?",
+          "why": "For an affirmative sentence in the simple present tense with the verb 'knows', the interrogative form is created using the auxiliary 'does not' (contracted to 'doesn't') followed by the subject and the base form of the verb ('know')."
+        }
+      ]
+    },
+    {
+      "original": "She passed her time in reading and writing.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Didn't she pass her time in reading and writing?",
+          "why": "For an affirmative sentence in the simple past tense with the verb 'passed', the interrogative form is created using 'didn't' followed by the subject and the base form of the verb ('pass')."
+        }
+      ]
+    },
+    {
+      "original": "She never told a lie.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Did she ever tell a lie?",
+          "why": "For a negative sentence with the adverb 'never', the interrogative form is created by moving the auxiliary verb 'did' to the front and replacing 'never' with the affirmative adverb 'ever'."
+        }
+      ]
+    },
+    {
+      "original": "People of all ages enjoy this game.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Don't people of all ages enjoy this game?",
+          "why": "For an affirmative sentence in the simple present tense with the verb 'enjoy', the interrogative form is created using the auxiliary 'do not' (contracted to 'don't') followed by the subject and the base form of the verb."
+        }
+      ]
+    },
+    {
+      "original": "He can succeed in life.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Can't he succeed in life?",
+          "why": "For an affirmative sentence with the modal verb 'can', the interrogative form is created by moving 'can' to the front and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "Everybody should know that malnutrition causes weakness.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Shouldn't everybody know that malnutrition causes weakness?",
+          "why": "For an affirmative sentence with the modal verb 'should', the interrogative form is created by moving 'should' to the front and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "Terrorism is more disastrous than anything.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Isn't terrorism more disastrous than anything?",
+          "why": "For an affirmative sentence with the verb 'is', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "Nobody wants his children to be terrorist in future.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Who wants his children to be terrorist in future?",
+          "why": "For an assertive sentence with the subject 'nobody', the interrogative form is created by replacing 'nobody' with 'who' and using a positive verb form."
+        }
+      ]
+    },
+    {
+      "original": "Books are good friends.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Aren't books good friends?",
+          "why": "For an affirmative sentence with the verb 'are', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "To make a civilized society, there is no alternative to reading books.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Is there any alternative to reading books to make a civilized society?",
+          "why": "For a negative assertive sentence beginning with 'there is no', the interrogative form is created by replacing 'no' with 'any' and moving 'Is' to the front."
+        }
+      ]
+    },
+    {
+      "original": "They are the lovers of surface.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Aren't they the lovers of surface?",
+          "why": "For an affirmative sentence with the verb 'are', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "Computer is one of the most important inventions of modern science.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Isn't computer one of the most important inventions of modern science?",
+          "why": "For an affirmative sentence with the verb 'is', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "He inherited a vast property from his father and sister.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Didn't he inherit a vast property from his father and sister?",
+          "why": "For an affirmative sentence in the simple past tense with the verb 'inherited', the interrogative form is created using 'didn't' followed by the subject and the base form of the verb ('inherit')."
+        }
+      ]
+    },
+    {
+      "original": "He is a friend of humanity.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Isn't he a friend of humanity?",
+          "why": "For an affirmative sentence with the verb 'is', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "To kill time is to commit suicide.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Isn't to kill time to commit suicide?",
+          "why": "For an affirmative sentence with the verb 'is', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "Man is the best creation of God.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Isn't man the best creation of God?",
+          "why": "For an affirmative sentence with the verb 'is', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "Our life is not measured by months or years.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Is our life measured by months or years?",
+          "why": "For a negative assertive sentence, the interrogative form is created by inverting the subject and verb and removing 'not'."
+        }
+      ]
+    },
+    {
+      "original": "It matters little if a man lives many years or not.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Does it matter much if a man lives many years or not?",
+          "why": "The negative adverb 'little' is replaced by the affirmative 'much', and the sentence is made interrogative by adding the auxiliary verb 'Does' at the beginning."
+        }
+      ]
+    },
+    {
+      "original": "Computers are now-a-days being used in almost every sphere of life.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Aren't computers now-a-days being used in almost every sphere of life?",
+          "why": "For an affirmative sentence with the verb 'are', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "Patriotism is a noble virtue.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Isn't patriotism a noble virtue?",
+          "why": "For an affirmative sentence with the verb 'is', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "He is respected by all.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Isn't he respected by all?",
+          "why": "For an affirmative sentence in the passive voice with the verb 'is', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "It is being used all over the world.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Isn't it being used all over the world?",
+          "why": "For an affirmative sentence with the verb 'is', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "Everybody uses it.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Doesn't everybody use it?",
+          "why": "For an affirmative sentence in the simple present tense with the verb 'uses', the interrogative form is created using the auxiliary 'does not' (contracted to 'doesn't') followed by the subject and the base form of the verb ('use')."
+        }
+      ]
+    },
+    {
+      "original": "At present, it is increasing alarmingly.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Isn't it increasing alarmingly at present?",
+          "why": "For an affirmative sentence with the verb 'is', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "It is one of the most corrosive problems of the modern world.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Isn't it one of the most corrosive problems of the modern world?",
+          "why": "For an affirmative sentence with the verb 'is', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "He never thought of his own happiness.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Did he ever think of his own happiness?",
+          "why": "For a negative sentence with the adverb 'never', the interrogative form is created by moving the auxiliary verb 'did' to the front and replacing 'never' with the affirmative adverb 'ever'."
+        }
+      ]
+    },
+    {
+      "original": "Nobody respects him.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Who respects him?",
+          "why": "For an assertive sentence with the subject 'nobody', the interrogative form is created by replacing 'nobody' with 'who' and keeping the verb in its affirmative form."
+        }
+      ]
+    },
+    {
+      "original": "Internet is a computer-based networking system.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Isn't Internet a computer-based networking system?",
+          "why": "For an affirmative sentence with the verb 'is', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "By using student can visit all the renowned libraries of the world without going there.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Can't a student visit all the renowned libraries of the world without going there by using it?",
+          "why": "For an affirmative sentence with the modal verb 'can', the interrogative form is created by moving 'can' to the front and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "The woman became sympathetic to see Taimur.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Didn't the woman become sympathetic to see Taimur?",
+          "why": "For an affirmative sentence in the simple past tense with the verb 'became', the interrogative form is created using 'didn't' followed by the subject and the base form of the verb ('become')."
+        }
+      ]
+    },
+    {
+      "original": "Mother Teresa is an icon to many people.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Isn't Mother Teresa an icon to many people?",
+          "why": "For an affirmative sentence with the verb 'is', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "People of all ages enjoy a moonlit night.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Don't people of all ages enjoy a moonlit night?",
+          "why": "For an affirmative sentence in the simple present tense with the verb 'enjoy', the interrogative form is created using the auxiliary 'do not' (contracted to 'don't') followed by the subject and the base form of the verb."
+        }
+      ]
+    },
+    {
+      "original": "Everybody likes a moonlit night.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Doesn't everybody like a moonlit night?",
+          "why": "For an affirmative sentence in the simple present tense with the verb 'likes', the interrogative form is created using the auxiliary 'does not' (contracted to 'doesn't') followed by the subject and the base form of the verb ('like')."
+        }
+      ]
+    },
+    {
+      "original": "Corruption is one of the worst evils.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Isn't corruption one of the worst evils?",
+          "why": "For an affirmative sentence with the verb 'is', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "Nobody respects him.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Who respects him?",
+          "why": "For an assertive sentence with the subject 'nobody', the interrogative form is created by replacing 'nobody' with 'who' and keeping the verb in its affirmative form."
+        }
+      ]
+    },
+    {
+      "original": "Strategy is the most important thing to play this game well.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Isn't strategy the most important thing to play this game well?",
+          "why": "For an affirmative sentence with the verb 'is', the interrogative form is created by inverting the subject and verb and adding 'not' (contracted to 'n't')."
+        }
+      ]
+    },
+    {
+      "original": "There is no doubt about it.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Is there any doubt about it?",
+          "why": "For a negative assertive sentence beginning with 'there is no', the interrogative form is created by replacing 'no' with 'any' and moving 'Is' to the front."
+        }
+      ]
+    },
+    {
+      "original": "He is never late to school.",
+      "type": "Assertive to Interrogative",
+      "answers": [
+        {
+          "answer": "Is he ever late to school?",
+          "why": "For a negative sentence with the adverb 'never', the interrogative form is created by moving the auxiliary verb 'Is' to the front and replacing 'never' with the affirmative adverb 'ever'."
+        }
+      ]
+    },
+    {
+      "original": "There are some other metals looking like gold.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "There are some other metals that look like gold.",
+          "why": "This is a Simple to Complex transformation. The original sentence, with its participle phrase 'looking like gold', is a simple sentence. The answer correctly transforms this into a complex sentence by using a relative clause 'that look like gold'."
+        }
+      ]
+    },
+    {
+      "original": "Those who do not read books keep themselves aloof from the realm of knowledge.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "They do not read books and so they keep themselves aloof from the realm of knowledge.",
+          "why": "This is a Complex to Compound transformation. The original complex sentence with a relative clause is broken into two independent clauses joined by the coordinating conjunctions 'and so'."
+        }
+      ]
+    },
+    {
+      "original": "Though we have strict law, we are still affected by this evil.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "We have strict law, but we are still affected by this evil.",
+          "why": "This is a Complex to Compound transformation. The original complex sentence with the subordinating conjunction 'Though' is changed to a compound sentence using the coordinating conjunction 'but' to show contrast."
+        }
+      ]
+    },
+    {
+      "original": "Though there are laws to punish the terrorists, they are not properly applied.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "There are laws to punish the terrorists, but they are not properly applied.",
+          "why": "This is a Complex to Compound transformation. The complex sentence starting with 'Though' is changed to a compound sentence using the coordinating conjunction 'but' to join two contrasting independent clauses."
+        }
+      ]
+    },
+    {
+      "original": "She believes that charity is a great virtue.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "She believes in charity and she knows it is a great virtue.",
+          "why": "This is a Complex to Compound transformation. The complex sentence with the noun clause 'that charity is a great virtue' is transformed into a compound sentence with two independent clauses joined by 'and'."
+        }
+      ]
+    },
+    {
+      "original": "Though the moon gives us light, it does not have the light of its own.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "The moon gives us light, but it does not have the light of its own.",
+          "why": "This is a Complex to Compound transformation. The complex sentence starting with 'Though' is changed to a compound sentence using the coordinating conjunction 'but' to connect two independent clauses with contrasting ideas."
+        }
+      ]
+    },
+    {
+      "original": "Since the question of my passing the examination is settled, I shall read no more.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "The question of my passing the examination is settled, so I shall read no more.",
+          "why": "This is a Complex to Compound transformation. The complex sentence with the subordinate clause of reason starting with 'Since' is changed to a compound sentence using the coordinating conjunction 'so' to show the cause and effect."
+        }
+      ]
+    },
+    {
+      "original": "I am so tired that I cannot move.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "I am very tired and so I cannot move.",
+          "why": "This is a Complex to Compound transformation. The complex sentence with the 'so... that' structure is changed to a compound sentence using the coordinating conjunctions 'and so' to link the cause and effect."
+        }
+      ]
+    },
+    {
+      "original": "When he was a student, he was poor.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "He was a student and he was poor.",
+          "why": "This is a Complex to Compound transformation. The complex sentence with the adverbial clause of time 'When he was a student' is changed to a compound sentence by joining the two independent clauses with 'and'."
+        }
+      ]
+    },
+    {
+      "original": "When I was going home, I saw a snake.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "I was going home and saw a snake.",
+          "why": "This is a Complex to Compound transformation. The complex sentence with the adverbial clause of time starting with 'When' is changed to a compound sentence by joining the two independent clauses with 'and'."
+        }
+      ]
+    },
+    {
+      "original": "He is so weak that he cannot walk.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "He is very weak and so he cannot walk.",
+          "why": "This is a Complex to Compound transformation. The complex sentence with the 'so... that' structure is changed to a compound sentence using the coordinating conjunctions 'and so' to show cause and effect."
+        }
+      ]
+    },
+    {
+      "original": "I know that he is a liar.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "I know him to be a liar.",
+          "why": "This is a Complex to Simple transformation. The complex sentence with the noun clause 'that he is a liar' is condensed into a simple sentence using the infinitive phrase 'to be a liar'. The transformation type is flawed in the original prompt, but the answer correctly demonstrates a Complex to Simple conversion."
+        }
+      ]
+    },
+    {
+      "original": "He is too weak to walk.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "He is so weak that he cannot walk.",
+          "why": "This is a Simple to Complex transformation. The simple sentence with the 'too... to' structure is changed to a complex sentence using the 'so... that' structure, which expresses the same idea of cause and effect."
+        }
+      ]
+    },
+    {
+      "original": "He worked hard to get a good score.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "He worked hard so that he could get a good score.",
+          "why": "This is a Simple to Complex transformation. The simple sentence with the infinitive phrase 'to get a good score' is expanded into a complex sentence using a subordinate clause of purpose introduced by 'so that'."
+        }
+      ]
+    },
+    {
+      "original": "We should read more books to acquire knowledge.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "We should read more books so that we can acquire knowledge.",
+          "why": "This is a Simple to Complex transformation. The simple sentence with the infinitive phrase 'to acquire knowledge' is expanded into a complex sentence using a subordinate clause of purpose introduced by 'so that'."
+        }
+      ]
+    },
+    {
+      "original": "She is so beautiful that everybody loves her.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "She is a beautiful girl and everybody loves her.",
+          "why": "This is a Complex to Compound transformation. The complex sentence with the 'so... that' structure is changed to a compound sentence by breaking it into two independent clauses joined by 'and'."
+        }
+      ]
+    },
+    {
+      "original": "He is so poor that he cannot buy a shirt.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "He is very poor, so he cannot buy a shirt.",
+          "why": "This is a Complex to Compound transformation. The complex sentence with the 'so... that' structure is changed to a compound sentence using the coordinating conjunction 'so'."
+        }
+      ]
+    },
+    {
+      "original": "Do or die.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "If you do not do, you will die.",
+          "why": "This is a Compound to Complex transformation. The compound imperative sentence is converted to a complex conditional sentence using the subordinating conjunction 'If'."
+        },
+        {
+          "answer": "Unless you do, you will die.",
+          "why": "This is another valid Compound to Complex transformation. The subordinating conjunction 'Unless' conveys the same conditional meaning as 'If you do not'."
+        }
+      ]
+    },
+    {
+      "original": "He is a man of few words.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "He is a man who speaks a few words.",
+          "why": "This is a Simple to Complex transformation. The simple sentence with the adjectival phrase 'of few words' is expanded into a complex sentence with a relative clause 'who speaks a few words'."
+        }
+      ]
+    },
+    {
+      "original": "Our life is not measured by months or years.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "It is not measured by months, or it is not measured by years.",
+          "why": "This is a Simple to Compound transformation. The original simple sentence is broken into two independent clauses joined by the coordinating conjunction 'or'."
+        }
+      ]
+    },
+    {
+      "original": "He will not come without being asked.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "He will not come if he is not asked.",
+          "why": "This is a Simple to Complex transformation. The simple sentence with the prepositional phrase 'without being asked' is converted into a complex sentence with a conditional subordinate clause starting with 'if he is not asked'."
+        }
+      ]
+    },
+    {
+      "original": "He confessed his guilt.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "He confessed that he was guilty.",
+          "why": "This is a Simple to Complex transformation. The simple sentence with the noun phrase 'his guilt' is expanded into a complex sentence with a noun clause 'that he was guilty'."
+        }
+      ]
+    },
+    {
+      "original": "As soon as he saw me, he ran away.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "He saw me and he ran away immediately.",
+          "why": "This is a Complex to Compound transformation. The complex sentence with the adverbial clause of time 'As soon as he saw me' is transformed into a compound sentence with two independent clauses joined by 'and'."
+        }
+      ]
+    },
+    {
+      "original": "In spite of being poor, he is honest.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "Though he is poor, he is honest.",
+          "why": "This is a Simple to Complex transformation. The simple sentence with the prepositional phrase 'in spite of being poor' is converted into a complex sentence with a subordinate clause of concession beginning with 'Though'."
+        }
+      ]
+    },
+    {
+      "original": "The man being ill, could not attend the meeting.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "As the man was ill, he could not attend the meeting.",
+          "why": "This is a Simple to Complex transformation. The simple sentence with the absolute phrase 'The man being ill' is expanded into a complex sentence with an adverbial clause of reason introduced by 'As'."
+        }
+      ]
+    },
+    {
+      "original": "We are proud of our country.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "We are proud that our country is our own.",
+          "why": "This is a Simple to Complex transformation. The simple sentence with the adjectival phrase 'proud of our country' is expanded into a complex sentence with a noun clause 'that our country is our own'."
+        }
+      ]
+    },
+    {
+      "original": "He is a good player, but he is a weak student.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "Though he is a good player, he is a weak student.",
+          "why": "This is a Compound to Complex transformation. The compound sentence with the coordinating conjunction 'but' is changed to a complex sentence with a subordinate clause of concession beginning with 'Though'."
+        }
+      ]
+    },
+    {
+      "original": "He speaks clearly so that we can understand him.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "He speaks clearly and we can understand him.",
+          "why": "This is a Complex to Compound transformation. The complex sentence with the subordinate clause of purpose 'so that we can understand him' is simplified into a compound sentence by joining the two clauses with 'and'."
+        }
+      ]
+    },
+    {
+      "original": "We respect him for his honesty.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "We respect him because he is honest.",
+          "why": "This is a Simple to Complex transformation. The simple sentence with the prepositional phrase of reason 'for his honesty' is expanded into a complex sentence with an adverbial clause of reason introduced by 'because'."
+        }
+      ]
+    },
+    {
+      "original": "They went to the market to buy some vegetables.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "They went to the market so that they could buy some vegetables.",
+          "why": "This is a Simple to Complex transformation. The simple sentence with the infinitive phrase of purpose 'to buy some vegetables' is expanded into a complex sentence with a subordinate clause of purpose introduced by 'so that'."
+        }
+      ]
+    },
+    {
+      "original": "This is the boy who got the first prize.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "This is the boy and he got the first prize.",
+          "why": "This is a Complex to Compound transformation. The complex sentence with the relative clause 'who got the first prize' is converted into a compound sentence by separating the two ideas into independent clauses joined by 'and'."
+        }
+      ]
+    },
+    {
+      "original": "He could not succeed for his negligence.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "He could not succeed because he was negligent.",
+          "why": "This is a Simple to Complex transformation. The simple sentence with the prepositional phrase of reason 'for his negligence' is expanded into a complex sentence with an adverbial clause of reason introduced by 'because'."
+        }
+      ]
+    },
+    {
+      "original": "He confessed his crime.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "He confessed that he was criminal.",
+          "why": "This is a Simple to Complex transformation. The simple sentence with the noun phrase 'his crime' is expanded into a complex sentence with a noun clause 'that he was criminal'."
+        }
+      ]
+    },
+    {
+      "original": "Everyone knows his honesty.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "Everyone knows that he is honest.",
+          "why": "This is a Simple to Complex transformation. The simple sentence with the noun phrase 'his honesty' is expanded into a complex sentence with a noun clause 'that he is honest'."
+        }
+      ]
+    },
+    {
+      "original": "I could not go to college on account of my illness.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "I could not go to college because I was ill.",
+          "why": "This is a Simple to Complex transformation. The simple sentence with the prepositional phrase of reason 'on account of my illness' is expanded into a complex sentence with an adverbial clause of reason introduced by 'because'."
+        }
+      ]
+    },
+    {
+      "original": "They went to the stadium to enjoy the match.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "They went to the stadium so that they could enjoy the match.",
+          "why": "This is a Simple to Complex transformation. The simple sentence with the infinitive phrase of purpose 'to enjoy the match' is expanded into a complex sentence with a subordinate clause of purpose introduced by 'so that'."
+        }
+      ]
+    },
+    {
+      "original": "The sun having set, we returned home.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "When the sun had set, we returned home.",
+          "why": "This is a Simple to Complex transformation. The simple sentence with the absolute phrase 'The sun having set' is converted into a complex sentence with an adverbial clause of time beginning with 'When'."
+        }
+      ]
+    },
+    {
+      "original": "He is so intelligent that he can solve the problem.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "He is very intelligent and so he can solve the problem.",
+          "why": "This is a Complex to Compound transformation. The complex sentence with the 'so... that' structure is changed to a compound sentence using the coordinating conjunctions 'and so' to link the cause and effect."
+        }
+      ]
+    },
+    {
+      "original": "As she was ill, she could not attend the meeting.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "She was ill and so she could not attend the meeting.",
+          "why": "This is a Complex to Compound transformation. The complex sentence with the adverbial clause of reason starting with 'As' is converted into a compound sentence using the coordinating conjunctions 'and so'."
+        }
+      ]
+    },
+    {
+      "original": "He is both a good writer and a good singer.",
+      "type": "Compound to Complex",
+      "answers": [
+        {
+          "answer": "He is not only a good writer but also a good singer.",
+          "why": "This is a transformation from a compound to a complex structure. The compound correlative conjunction 'both... and...' is changed to the negative correlative conjunction 'not only... but also...', which maintains the inclusive meaning while creating a more complex structure."
+        }
+      ]
+    }
+  ]
+}
