@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">                
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;0,400;0,500;0,600;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="preload" href="data.json" as="fetch" type="application/json" crossorigin="anonymous">
+    
+    <link rel="preload" href="path/to/your/styles.css" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.22.2/firebase-app-compat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.22.2/firebase-firestore-compat.min.js"></script>
+    <style>
+        *{
+            font-family: 'Poppins', sans-serif;
+        }
+        :root {
+            --bg-primary: #000000;
+            --bg-secondary: #0a0a0a;
+            --bg-card: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --border-color: #333333;
+            --accent-green: #00ff88;
+            --accent-red: #ff4444;
+            --accent-green-dark: #00cc6a;
+            --accent-red-dark: #ff6666;
+            --font-poppins: 'Poppins', sans-serif;
+            --font-hind: 'Hind Siliguri', sans-serif;
+            --highlight-color: #ffc107; /* Golden color for highlighting */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-poppins);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--bg-primary);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            transition: opacity 0.5s ease;
+        }
+
+        .preloader-text {
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            font-family: var(--font-poppins);
+        }
+
+        #preloader-count {
+            font-size: medium;
+            font-weight: 600;
+            color: var(--text-primary);
+            font-family: var(--font-poppins);
+        }
+
+        #app-container {
+            display: none;
+            width: 100%;
+            min-height: 100vh;
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-top: 20px;
+        }
+
+        header h1 {
+            color: var(--text-primary);
+            font-size: clamp(2rem, 6vw, 3rem);
+            font-weight: 700;
+            font-family: var(--font-poppins);
+        }
+
+        #lesson-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            flex-grow: 1;
+        }
+
+        .lesson-tile {
+            background-color: var(--bg-card);
+            padding: 30px 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            user-select: none;
+        }
+        
+        .lesson-tile.continue {
+            background-color: var(--accent-green);
+            color: var(--bg-primary);
+            border-color: var(--accent-green-dark);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+        }
+        .lesson-tile.continue h2,
+        .lesson-tile.continue p,
+        .lesson-tile.continue .progress-text {
+            color: var(--bg-primary);
+        }
+
+        .lesson-tile::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .lesson-tile:hover::before {
+            left: 100%;
+        }
+
+        .lesson-tile:hover {
+            transform: translateY(-5px);
+            background-color: #222222;
+            border-color: #555555;
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+        }
+        .lesson-tile.continue:hover {
+            background-color: var(--accent-green-dark);
+            transform: translateY(-5px);
+        }
+
+        .lesson-tile h2 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+            font-family: var(--font-poppins);
+            font-weight: 600;
+        }
+
+        .lesson-tile p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-family: var(--font-poppins);
+            margin-bottom: 15px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-green), var(--accent-green-dark));
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .progress-text {
+            font-size: 0.9rem;
+            color: #888888;
+            font-family: var(--font-poppins);
+        }
+        .lesson-tile.continue .progress-text {
+            color: var(--bg-primary);
+        }
+
+        .hidden {
+            display: none !important;
+        }
+        
+        /* Modals */
+        #word-details-modal, #jump-modal, #message-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1001;
+            backdrop-filter: blur(10px);
+        }
+
+        .modal-content {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            width: 95%;
+            height: 95%;
+            max-width: 800px;
+            max-height: 600px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+        }
+
+        .frequency-display {
+            cursor: pointer;
+            padding: 8px 16px;
+            background: var(--bg-card);
+            border-radius: 20px;
+            font-family: var(--font-poppins);
+            font-weight: 500;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+
+        .frequency-display:hover {
+            background: #222222;
+            border-color: #555555;
+        }
+        
+        .close-btn {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background-color 0.2s;
+        }
+
+        .close-btn:hover {
+            background-color: #333333;
+        }
+
+        .modal-body {
+            flex-grow: 1;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            overflow-y: auto;
+        }
+        
+        /* Word display styling */
+        #modal-word {
+            font-size: clamp(2rem, 8vw, 4rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            font-family: var(--font-poppins);
+            line-height: 1;
+        }
+
+        #modal-bangla {
+            font-size: clamp(1.2rem, 5vw, 2rem);
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            font-family: var(--font-hind);
+            font-weight: 500;
+        }
+
+        #modal-definition,
+        #modal-example {
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: left;
+            color: var(--text-primary);
+            font-family: var(--font-poppins);
+        }
+
+        .highlight {
+            color: var(--highlight-color);
+            font-weight: 600;
+        }
+
+        #modal-definition::before {
+            content: "\f02d"; /* book-icon */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: #888888;
+            margin-right: 10px;
+        }
+
+        #modal-example::before {
+            content: "\f10d"; /* quote-left icon */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: #888888;
+            margin-right: 10px;
+        }
+
+        .modal-footer {
+            padding: 20px 30px;
+            border-top: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .word-counter {
+            font-family: var(--font-poppins);
+            font-size: clamp(0.8rem, 2.5vw, 1rem);
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 10px 20px;
+            background: var(--bg-card);
+            border-radius: 25px;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+
+        .word-counter:hover {
+            background: #222222;
+            border-color: #555555;
+        }
+
+        .progress-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .progress-btn, .clear-progress-btn {
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.2s ease;
+            font-weight: bold;
+        }
+
+        .unknown-btn {
+            background: var(--accent-red);
+            color: var(--text-primary);
+        }
+
+        .unknown-btn:hover {
+            background: var(--accent-red-dark);
+            transform: scale(1.1);
+        }
+
+        .unknown-btn.active {
+            background: var(--accent-red-dark);
+            box-shadow: 0 0 20px rgba(255, 68, 68, 0.5);
+        }
+
+        .known-btn {
+            background: var(--accent-green);
+            color: var(--bg-primary);
+        }
+
+        .known-btn:hover {
+            background: var(--accent-green-dark);
+            transform: scale(1.1);
+        }
+
+        .known-btn.active {
+            background: var(--accent-green-dark);
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+        }
+        
+        .next-word-btn {
+            background: var(--text-primary);
+            color: var(--bg-primary);
+        }
+
+        .next-word-btn:hover {
+            background: #cccccc;
+            transform: scale(1.1);
+        }
+        
+        .clear-progress-btn {
+            background: #444444;
+            color: #ffffff;
+            font-size: 1rem;
+            width: auto;
+            border-radius: 8px;
+            padding: 0 15px;
+        }
+        .clear-progress-btn:hover {
+            background: #666666;
+            transform: scale(1.05);
+        }
+
+        /* Jump to word modal */
+        #jump-modal, #confirm-modal {
+            z-index: 1002;
+        }
+        .jump-modal-content {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            min-width: 300px;
+            animation: slideIn 0.3s ease-out;
+        }
+        .confirm-modal-content {
+             background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            min-width: 300px;
+            animation: slideIn 0.3s ease-out;
+        }
+        .confirm-modal-content h3 {
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            font-family: var(--font-poppins);
+        }
+
+        .jump-modal-content h3 {
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            font-family: var(--font-poppins);
+        }
+
+        .jump-input {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            text-align: center;
+            font-family: var(--font-poppins);
+            margin-bottom: 20px;
+        }
+        
+        .jump-input:focus {
+            outline: none;
+            border-color: #555555;
+            background: #222222;
+        }
+
+        .jump-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .jump-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: var(--font-poppins);
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .jump-btn.ok {
+            background: var(--text-primary);
+            color: var(--bg-primary);
+        }
+
+        .jump-btn.ok:hover {
+            background: #cccccc;
+        }
+
+        .jump-btn.cancel {
+            background: #333333;
+            color: var(--text-primary);
+        }
+
+        .jump-btn.cancel:hover {
+            background: #555555;
+        }
+        .confirm-modal-content .confirm-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        .confirm-modal-content .confirm-buttons button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: var(--font-poppins);
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        .confirm-modal-content .confirm-buttons .yes-btn {
+            background: var(--accent-red);
+            color: var(--text-primary);
+        }
+        .confirm-modal-content .confirm-buttons .no-btn {
+            background: #333333;
+            color: var(--text-primary);
+        }
+
+
+        /* Message modal */
+        #message-modal {
+            z-index: 1003;
+        }
+        .message-content {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            min-width: 300px;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        .message-content p {
+            font-family: var(--font-poppins);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .message-content button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: var(--font-poppins);
+            font-weight: 500;
+            background: var(--accent-green);
+            color: var(--bg-primary);
+            transition: all 0.2s ease;
+        }
+
+        .message-content button:hover {
+            background: var(--accent-green-dark);
+        }
+
+        /* Loading indicator */
+        .loading-indicator {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 10px 15px;
+            font-family: var(--font-poppins);
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            z-index: 1003;
+            display: none;
+        }
+
+        .loading-indicator.show {
+            display: block;
+            animation: pulse 1s infinite;
+        }
+        
+        .loading-spinner {
+            border: 4px solid var(--border-color);
+            border-top: 4px solid var(--accent-green);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+
+        /* New styles for the home footer and clear data button */
+        footer {
+            padding: 20px;
+            text-align: center;
+            margin-top: auto; /* Push the footer to the bottom */
+            width: 100%;
+        }
+
+        .clear-data-btn {
+            background-color: var(--accent-red);
+            color: var(--text-primary);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: var(--font-poppins);
+            font-weight: 500;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 15px rgba(255, 68, 68, 0.3);
+        }
+        
+        .clear-data-btn:hover {
+            background-color: var(--accent-red-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 68, 68, 0.4);
+        }
+
+        /* Mobile specific styles */
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+            }
+            #app-container {
+                padding: 15px;
+            }
+            header h1 {
+                font-size: 2.5rem;
+            }
+            #lesson-container {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            .modal-content {
+                width: 100%;
+                height: 100%;
+                max-width: none;
+                max-height: none;
+                border-radius: 0;
+            }
+            .modal-header, .modal-footer {
+                padding: 15px 20px;
+            }
+            .modal-body {
+                padding: 20px;
+            }
+            .progress-buttons {
+                gap: 10px;
+            }
+            .progress-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
+            }
+            .word-counter {
+                padding: 8px 16px;
+            }
+            .frequency-display {
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <h1 class="preloader-text">Loading words...</h1>
+        <span id="preloader-count">0</span>
+    </div>
+    
+    <!-- Main App Container -->
+    <div id="app-container" class="hidden">
+        <header>
+            <h1>Dictionary App</h1>
+        </header>
+
+        <div id="lesson-container">
+            <!-- Lesson tiles will be generated here -->
+        </div>
+
+        <footer>
+            <button id="clear-all-data-btn" class="clear-data-btn">Clear All Data</button>
+        </footer>
+    </div>
+
+    <!-- Word Details Modal -->
+    <div id="word-details-modal" class="hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span id="frequency-display" class="frequency-display"></span>
+                <span id="close-modal" class="close-btn"><i class="fas fa-times"></i></span>
+            </div>
+            <div class="modal-body">
+                <h2 id="modal-word"></h2>
+                <h3 id="modal-bangla"></h3>
+                <p id="modal-definition"></p>
+                <p id="modal-example"></p>
+            </div>
+            <div class="modal-footer">
+                <span id="word-counter" class="word-counter"></span>
+                <div class="progress-buttons">
+                    <button id="unknown-btn" class="progress-btn unknown-btn"><i class="fas fa-question"></i></button>
+                    <button id="known-btn" class="progress-btn known-btn hidden"><i class="fas fa-check"></i></button>
+                    <button id="next-word-btn" class="progress-btn next-word-btn"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jump to Word Modal -->
+    <div id="jump-modal" class="hidden">
+        <div class="jump-modal-content">
+            <h3>Jump to word</h3>
+            <input type="number" id="jump-input" class="jump-input" placeholder="Enter word number">
+            <div class="jump-buttons">
+                <button id="jump-ok" class="jump-btn ok">OK</button>
+                <button id="jump-cancel" class="jump-btn cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirm-modal" class="hidden">
+        <div class="confirm-modal-content">
+            <h3>Are you sure you want to clear all progress? This action cannot be undone.</h3>
+            <div class="confirm-buttons">
+                <button id="confirm-yes-btn" class="yes-btn">Yes</button>
+                <button id="confirm-no-btn" class="no-btn">No</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Message Modal -->
+    <div id="message-modal" class="hidden">
+        <div class="message-content">
+            <p id="message-text"></p>
+            <button id="message-ok-btn">OK</button>
+        </div>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div id="loading-indicator" class="loading-indicator hidden">
+        <span>Syncing...</span>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const preloader = document.getElementById('preloader');
+            const preloaderCount = document.getElementById('preloader-count');
+            const appContainer = document.getElementById('app-container');
+            const lessonContainer = document.getElementById('lesson-container');
+            const wordDetailsModal = document.getElementById('word-details-modal');
+            const closeModalBtn = document.getElementById('close-modal');
+            const wordCounter = document.getElementById('word-counter');
+            const modalWord = document.getElementById('modal-word');
+            const modalBangla = document.getElementById('modal-bangla');
+            const modalDefinition = document.getElementById('modal-definition');
+            const modalExample = document.getElementById('modal-example');
+            const jumpModal = document.getElementById('jump-modal');
+            const jumpInput = document.getElementById('jump-input');
+            const jumpOkBtn = document.getElementById('jump-ok');
+            const jumpCancelBtn = document.getElementById('jump-cancel');
+            const loadingIndicator = document.getElementById('loading-indicator');
+            const unknownBtn = document.getElementById('unknown-btn');
+            const knownBtn = document.getElementById('known-btn');
+            const nextWordBtn = document.getElementById('next-word-btn');
+            const clearAllDataBtn = document.getElementById('clear-all-data-btn');
+            const confirmModal = document.getElementById('confirm-modal');
+            const confirmYesBtn = document.getElementById('confirm-yes-btn');
+            const confirmNoBtn = document.getElementById('confirm-no-btn');
+            const frequencyDisplay = document.getElementById('frequency-display');
+            const messageModal = document.getElementById('message-modal');
+            const messageText = document.getElementById('message-text');
+            const messageOkBtn = document.getElementById('message-ok-btn');
+
+            let allWords = [];
+            let currentLesson = 0;
+            let currentWordIndex = 0;
+            let knownWords = new Set();
+            let unknownWords = new Set();
+            let currentLessonWords = [];
+            let lastLesson = 0;
+            let lastWordIndex = 0;
+            let isFrequencyMode = true;
+            let startY = 0;
+            let startX = 0;
+            let isSwiping = false;
+
+            const WORDS_PER_LESSON = 100;
+            const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+            const firebaseConfig = {
+                apiKey: "AIzaSyAimhK1una261vXi7jZ2TVrzf9-OmU-0XE",
+                authDomain: "dictionary-43809.firebaseapp.com",
+                projectId: "dictionary-43809",
+                storageBucket: "dictionary-43809.firebasestorage.app",
+                messagingSenderId: "455079496140",
+                appId: "1:455079496140:web:ad629c9de32348dad67569",
+                measurementId: "G-EN2L4364DD"
+            };
+
+            firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+
+            const showMessageModal = (message) => {
+                messageText.textContent = message;
+                messageModal.classList.remove('hidden');
+            };
+
+            messageOkBtn.addEventListener('click', () => {
+                messageModal.classList.add('hidden');
+            });
+            
+            const withExponentialBackoff = async (func, maxRetries = 5, delay = 1000) => {
+                for (let i = 0; i < maxRetries; i++) {
+                    try {
+                        return await func();
+                    } catch (error) {
+                        console.error('API call failed, retrying...', error);
+                        await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, i)));
+                    }
+                }
+                throw new Error('API call failed after multiple retries.');
+            };
+            
+            const showLoadingIndicator = () => loadingIndicator.classList.remove('hidden');
+            const hideLoadingIndicator = () => loadingIndicator.classList.add('hidden');
+
+            const saveProgress = async () => {
+                showLoadingIndicator();
+                const docRef = db.collection('artifacts').doc(appId).collection('public').doc('data').collection('dictionary').doc('progress');
+                const progressData = {
+                    knownWords: Array.from(knownWords),
+                    unknownWords: Array.from(unknownWords),
+                    lastLesson: lastLesson,
+                    lastWordIndex: lastWordIndex,
+                    lastUpdated: firebase.firestore.FieldValue.serverTimestamp()
+                };
+
+                try {
+                    await withExponentialBackoff(() => docRef.set(progressData, { merge: true }));
+                    console.log("Progress saved to Firestore successfully!");
+                } catch (error) {
+                    console.error("Error saving progress:", error);
+                    showMessageModal("Failed to sync progress with Firebase. Please check your connection.");
+                } finally {
+                    hideLoadingIndicator();
+                }
+            };
+            
+            // Refactored function to clear all data
+            const clearAllData = async () => {
+                showLoadingIndicator();
+                const docRef = db.collection('artifacts').doc(appId).collection('public').doc('data').collection('dictionary').doc('progress');
+                try {
+                    await withExponentialBackoff(() => docRef.delete());
+                    knownWords.clear();
+                    unknownWords.clear();
+                    lastLesson = 0;
+                    lastWordIndex = 0;
+                    console.log("All progress cleared from Firestore.");
+                } catch (error) {
+                    console.error("Error clearing data:", error);
+                    showMessageModal("Failed to clear all data. Please try again.");
+                } finally {
+                    hideLoadingIndicator();
+                    updateLessonTiles();
+                    wordDetailsModal.classList.add('hidden');
+                    confirmModal.classList.add('hidden');
+                }
+            };
+
+            const loadProgress = async () => {
+                showLoadingIndicator();
+                const docRef = db.collection('artifacts').doc(appId).collection('public').doc('data').collection('dictionary').doc('progress');
+                try {
+                    const doc = await withExponentialBackoff(() => docRef.get());
+                    if (doc.exists) {
+                        const data = doc.data();
+                        knownWords = new Set(data.knownWords || []);
+                        unknownWords = new Set(data.unknownWords || []);
+                        lastLesson = data.lastLesson || 0;
+                        lastWordIndex = data.lastWordIndex || 0;
+                        console.log("Progress loaded from Firestore.");
+                    } else {
+                        console.log("No progress found for this app, starting fresh.");
+                    }
+                } catch (error) {
+                    console.error("Error loading progress:", error);
+                    showMessageModal("Failed to load progress from Firebase. Your progress will not be saved.");
+                } finally {
+                    hideLoadingIndicator();
+                }
+            };
+            
+            const animateCounter = (duration) => {
+                const start = performance.now();
+                const totalWords = allWords.length;
+                const animate = (time) => {
+                    let progress = time - start;
+                    let percentage = Math.min(progress / duration, 1);
+                    preloaderCount.textContent = Math.floor(percentage * totalWords);
+                    if (percentage < 1) {
+                        requestAnimationFrame(animate);
+                    } else {
+                        setTimeout(() => {
+                            preloader.style.opacity = '0';
+                            setTimeout(() => {
+                                preloader.classList.add('hidden');
+                                appContainer.classList.remove('hidden');
+                            }, 500);
+                        }, 2000);
+                    }
+                };
+                requestAnimationFrame(animate);
+            };
+
+            const fetchData = async () => {
+                try {
+                    const response = await fetch('./data.json');
+                    if (!response.ok) {
+                        throw new Error("Could not fetch data.json");
+                    }
+                    allWords = await response.json();
+                } catch (e) {
+                    console.error(e);
+                    showMessageModal("Failed to load word data. Please check the `data.json` file.");
+                    return;
+                }
+
+                animateCounter(2000);
+
+                await loadProgress();
+                updateLessonTiles();
+                
+                jumpInput.placeholder = `Enter word number (1-${allWords.length})`;
+            };
+
+            const getLessonWords = (lessonNumber) => {
+                const start = (lessonNumber - 1) * WORDS_PER_LESSON;
+                const end = start + WORDS_PER_LESSON;
+                const lessonWords = allWords.slice(start, end);
+
+                const unknownInLesson = lessonWords.filter(word => unknownWords.has(word.id));
+                const knownInLesson = lessonWords.filter(word => !unknownWords.has(word.id));
+
+                return [...unknownInLesson, ...knownInLesson];
+            };
+
+            const getLessonProgress = (lessonNumber) => {
+                const lessonWords = allWords.slice((lessonNumber - 1) * WORDS_PER_LESSON, lessonNumber * WORDS_PER_LESSON);
+                const knownInLesson = lessonWords.filter(word => knownWords.has(word.id)).length;
+                return (knownInLesson / WORDS_PER_LESSON) * 100;
+            };
+
+            const findFirstUnknownWord = () => {
+                for (let i = 0; i < allWords.length; i++) {
+                    // Check if the word is not in the knownWords set
+                    if (!knownWords.has(allWords[i].id)) {
+                        return i; // Return the global index
+                    }
+                }
+                return -1; // Return -1 if all words are known
+            };
+
+            const updateLessonTiles = () => {
+                lessonContainer.innerHTML = '';
+                const totalLessons = Math.ceil(allWords.length / WORDS_PER_LESSON);
+                
+                const firstUnknownIndex = findFirstUnknownWord();
+                
+                // Add "Continue Learning" button if there are unknown words
+                if (firstUnknownIndex !== -1) {
+                    const totalKnown = knownWords.size;
+                    const totalWords = allWords.length;
+                    const overallProgress = (totalKnown / totalWords) * 100;
+
+                    const continueTile = document.createElement('div');
+                    continueTile.className = 'lesson-tile continue';
+                    
+                    const firstUnknownWordGlobalIndex = findFirstUnknownWord();
+                    const targetLesson = Math.ceil((firstUnknownWordGlobalIndex + 1) / WORDS_PER_LESSON);
+                    const targetWordIndex = (firstUnknownWordGlobalIndex) % WORDS_PER_LESSON;
+
+                    continueTile.innerHTML = `
+                        <h2>Continue Learning</h2>
+                        <p>First unknown word is in Lesson ${targetLesson}</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: ${overallProgress}%;"></div>
+                        </div>
+                        <span class="progress-text">Overall progress: ${Math.round(overallProgress)}%</span>
+                    `;
+                    continueTile.addEventListener('click', () => openWordModal(targetLesson, targetWordIndex));
+                    lessonContainer.appendChild(continueTile);
+                }
+
+                for (let i = 1; i <= totalLessons; i++) {
+                    const lessonProgress = getLessonProgress(i);
+                    const lessonTile = document.createElement('div');
+                    lessonTile.className = 'lesson-tile';
+                    lessonTile.dataset.lesson = i;
+                    lessonTile.innerHTML = `
+                        <h2>Lesson ${i}</h2>
+                        <p>${(i - 1) * WORDS_PER_LESSON + 1} - ${i * WORDS_PER_LESSON}</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: ${lessonProgress}%;"></div>
+                        </div>
+                        <span class="progress-text">${Math.round(lessonProgress)}% complete</span>
+                    `;
+                    lessonTile.addEventListener('click', () => openWordModal(i, 0));
+                    lessonContainer.appendChild(lessonTile);
+                }
+            };
+
+            const openWordModal = (lessonNum, wordIndex) => {
+                currentLesson = lessonNum;
+                currentWordIndex = wordIndex;
+                currentLessonWords = getLessonWords(lessonNum);
+                wordDetailsModal.classList.remove('hidden');
+                updateModalContent();
+            };
+
+            const updateModalContent = () => {
+                const currentWord = currentLessonWords[currentWordIndex];
+
+                if (!currentWord) {
+                    showMessageModal("You have reached the end of this lesson.");
+                    // Check if we can proceed to the next lesson
+                    const nextLessonExists = getLessonWords(currentLesson + 1).length > 0;
+                    if (nextLessonExists) {
+                        const goNextBtn = document.createElement('button');
+                        goNextBtn.textContent = "Go to next lesson";
+                        goNextBtn.className = "jump-btn ok";
+                        goNextBtn.onclick = () => {
+                            messageModal.classList.add('hidden');
+                            openWordModal(currentLesson + 1, 0);
+                        };
+                        messageModal.querySelector('.message-content').appendChild(goNextBtn);
+                    }
+                    return;
+                }
+
+                modalWord.textContent = currentWord.word;
+                modalBangla.textContent = currentWord.bangla.join(', ');
+                modalDefinition.textContent = currentWord.definition;
+                
+                const highlightedExample = currentWord.example.replace(new RegExp(`\\b(${currentWord.word})\\b`, 'gi'), `<span class="highlight">$1</span>`);
+                modalExample.innerHTML = highlightedExample;
+
+                updateFooter();
+            };
+
+            const updateFooter = () => {
+                const totalWordsInLesson = currentLessonWords.length;
+                wordCounter.textContent = `${currentWordIndex + 1}/${totalWordsInLesson}`;
+
+                const currentWord = currentLessonWords[currentWordIndex];
+                
+                if (isFrequencyMode) {
+                    frequencyDisplay.textContent = currentWord.frequency;
+                } else {
+                    frequencyDisplay.textContent = currentWord.id;
+                }
+
+                if (knownWords.has(currentWord.id) || unknownWords.has(currentWord.id)) {
+                    // This word has been marked before, show both buttons
+                    unknownBtn.classList.remove('active');
+                    knownBtn.classList.remove('hidden');
+                    nextWordBtn.classList.add('hidden');
+                    if (knownWords.has(currentWord.id)) {
+                        knownBtn.classList.add('active');
+                        unknownBtn.classList.remove('active');
+                    } else {
+                        unknownBtn.classList.add('active');
+                        knownBtn.classList.remove('active');
+                    }
+                } else {
+                    // This is a new word, only show unknown and next
+                    unknownBtn.classList.remove('active');
+                    knownBtn.classList.add('hidden');
+                    nextWordBtn.classList.remove('hidden');
+                }
+            };
+            
+            // The logic for marking known and unknown is now handled by these two functions
+            const markAsKnown = () => {
+                const currentWord = currentLessonWords[currentWordIndex];
+                knownWords.add(currentWord.id);
+                unknownWords.delete(currentWord.id);
+                nextWord(); 
+                updateFooter();
+                saveProgress();
+                updateLessonTiles();
+            };
+
+            const markAsUnknown = () => {
+                const currentWord = currentLessonWords[currentWordIndex];
+                unknownWords.add(currentWord.id);
+                knownWords.delete(currentWord.id);
+                updateFooter();
+                saveProgress();
+                updateLessonTiles();
+            };
+            
+            const prevWord = () => {
+                if (currentWordIndex > 0) {
+                    currentWordIndex--;
+                    lastLesson = currentLesson;
+                    lastWordIndex = currentWordIndex;
+                    updateModalContent();
+                    saveProgress();
+                } else {
+                    showMessageModal("You are at the beginning of the lesson.");
+                }
+            };
+
+            const nextWord = () => {
+                const currentWord = currentLessonWords[currentWordIndex];
+                if (!knownWords.has(currentWord.id) && !unknownWords.has(currentWord.id)) {
+                    // If a user just clicks next on a new word, we assume they know it
+                    knownWords.add(currentWord.id);
+                }
+
+                if (currentWordIndex < currentLessonWords.length - 1) {
+                    currentWordIndex++;
+                    lastLesson = currentLesson;
+                    lastWordIndex = currentWordIndex;
+                    updateModalContent();
+                    saveProgress();
+                    updateLessonTiles();
+                } else {
+                    showMessageModal("You have reached the end of this lesson.");
+                    // After the last word, we can check for new unknown words
+                    const firstUnknownIndex = findFirstUnknownWord();
+                    if (firstUnknownIndex !== -1) {
+                        const firstUnknownLesson = Math.ceil((firstUnknownIndex + 1) / WORDS_PER_LESSON);
+                        const firstUnknownWordIndex = (firstUnknownIndex) % WORDS_PER_LESSON;
+                        const goNextBtn = document.createElement('button');
+                        goNextBtn.textContent = `Go to next unknown word (Lesson ${firstUnknownLesson})`;
+                        goNextBtn.className = "jump-btn ok";
+                        goNextBtn.onclick = () => {
+                            messageModal.classList.add('hidden');
+                            openWordModal(firstUnknownLesson, firstUnknownWordIndex);
+                        };
+                        messageModal.querySelector('.message-content').appendChild(goNextBtn);
+                    }
+                }
+            };
+
+            // Event Listeners
+            closeModalBtn.addEventListener('click', () => {
+                wordDetailsModal.classList.add('hidden');
+            });
+            
+            wordCounter.addEventListener('click', () => {
+                jumpModal.classList.remove('hidden');
+            });
+
+            // New event listener for the clear all data button on the home page
+            clearAllDataBtn.addEventListener('click', () => {
+                confirmModal.classList.remove('hidden');
+            });
+
+            confirmYesBtn.addEventListener('click', () => {
+                clearAllData();
+            });
+
+            confirmNoBtn.addEventListener('click', () => {
+                confirmModal.classList.add('hidden');
+            });
+
+            jumpOkBtn.addEventListener('click', () => {
+                const targetWordId = parseInt(jumpInput.value);
+                if (targetWordId > 0 && targetWordId <= allWords.length) {
+                    const targetLesson = Math.ceil(targetWordId / WORDS_PER_LESSON);
+                    const targetWordIndex = (targetWordId - 1) % WORDS_PER_LESSON;
+                    openWordModal(targetLesson, targetWordIndex);
+                    jumpModal.classList.add('hidden');
+                } else {
+                    showMessageModal(`Please enter a number between 1 and ${allWords.length}.`);
+                }
+            });
+
+            jumpCancelBtn.addEventListener('click', () => {
+                jumpModal.classList.add('hidden');
+            });
+
+            unknownBtn.addEventListener('click', markAsUnknown);
+            knownBtn.addEventListener('click', markAsKnown);
+            nextWordBtn.addEventListener('click', nextWord);
+
+            frequencyDisplay.addEventListener('click', () => {
+                isFrequencyMode = !isFrequencyMode;
+                updateFooter();
+            });
+
+            // Keyboard controls
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    wordDetailsModal.classList.add('hidden');
+                    jumpModal.classList.add('hidden');
+                    messageModal.classList.add('hidden');
+                    confirmModal.classList.add('hidden');
+                }
+                
+                if (!wordDetailsModal.classList.contains('hidden')) {
+                    if (e.key === 'ArrowLeft') {
+                        prevWord();
+                    } else if (e.key === 'ArrowRight') {
+                        nextWord();
+                    } else if (e.key === '?' || e.key === '/') {
+                        // Toggle unknown state
+                        if (knownBtn.classList.contains('hidden')) {
+                            markAsUnknown(); // Mark a new word as unknown
+                        } else {
+                            // If it's already marked, toggle it.
+                            if (knownWords.has(currentLessonWords[currentWordIndex].id)) {
+                                markAsUnknown();
+                            } else {
+                                markAsKnown();
+                            }
+                        }
+                    } else if ((e.key === 'Enter' || e.key === ' ') && !knownBtn.classList.contains('hidden')) {
+                        markAsKnown();
+                    } else if (e.key === 'Enter' || e.key === ' ') {
+                        nextWord();
+                    }
+                }
+            });
+
+            // Swipe controls for mobile
+            wordDetailsModal.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                startY = e.touches[0].clientY;
+                isSwiping = true;
+            });
+            
+            wordDetailsModal.addEventListener('touchend', (e) => {
+                if (!isSwiping) return;
+                isSwiping = false;
+
+                const endX = e.changedTouches[0].clientX;
+                const endY = e.changedTouches[0].clientY;
+                const deltaX = endX - startX;
+                const deltaY = endY - startY;
+
+                const minSwipeDistance = 50;
+
+                if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > minSwipeDistance) {
+                    if (deltaX > 0) {
+                        prevWord();
+                    } else {
+                        nextWord();
+                    }
+                }
+            });
+            
+            wordDetailsModal.addEventListener('click', (e) => {
+                if (e.target === wordDetailsModal) {
+                    wordDetailsModal.classList.add('hidden');
+                }
+            });
+
+            jumpModal.addEventListener('click', (e) => {
+                if (e.target === jumpModal) {
+                    jumpModal.classList.add('hidden');
+                }
+            });
+            
+            confirmModal.addEventListener('click', (e) => {
+                if (e.target === confirmModal) {
+                    confirmModal.classList.add('hidden');
+                }
+            });
+            
+            setInterval(async () => {
+                if (knownWords.size > 0 || unknownWords.size > 0) {
+                    await saveProgress();
+                }
+            }, 30000); // Save every 30 seconds
+            
+            fetchData();
+        });
+    </script>
+</body>
+</html>

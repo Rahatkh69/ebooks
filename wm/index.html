@@ -1,1339 +1,1146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dictionary App</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">                
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;0,400;0,500;0,600;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <link rel="preload" href="data.json" as="fetch" type="application/json" crossorigin="anonymous">
-    
-    <link rel="preload" href="path/to/your/styles.css" as="style">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.22.2/firebase-app-compat.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.22.2/firebase-firestore-compat.min.js"></script>
-    <style>
-        *{
-            font-family: 'Poppins', sans-serif;
-        }
-        :root {
-            --bg-primary: #000000;
-            --bg-secondary: #0a0a0a;
-            --bg-card: #1a1a1a;
-            --text-primary: #ffffff;
-            --text-secondary: #cccccc;
-            --border-color: #333333;
-            --accent-green: #00ff88;
-            --accent-red: #ff4444;
-            --accent-green-dark: #00cc6a;
-            --accent-red-dark: #ff6666;
-            --font-poppins: 'Poppins', sans-serif;
-            --font-hind: 'Hind Siliguri', sans-serif;
-            --highlight-color: #ffc107; /* Golden color for highlighting */
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dictionary</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js"></script>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      const preloader = document.getElementById("preloader");
+      const preloaderCount = document.getElementById("preloader-count");
+      const preloaderStatus = document.getElementById("preloader-status");
+      const appContainer = document.getElementById("app-container");
+      const lessonContainer = document.getElementById("lesson-container");
+      const wordDetailsModal = document.getElementById("word-details-modal");
+      const closeModalBtn = document.getElementById("close-modal");
+      const booklinesToggleBtn = document.getElementById("booklines-toggle");
+      const wordCounter = document.getElementById("word-counter");
+      const modalWord = document.getElementById("modal-word");
+      const modalBangla = document.getElementById("modal-bangla");
+      const modalDefinition = document.getElementById("modal-definition");
+      const modalExample = document.getElementById("modal-example");
+      const modalBooklines = document.getElementById("modal-booklines");
+      const newBtn = document.getElementById("new-btn");
+      const readBtn = document.getElementById("read-btn");
+      const nextWordBtn = document.getElementById("next-word-btn");
+      const clearAllDataBtn = document.getElementById("clear-all-data-btn");
+      const confirmModal = document.getElementById("confirm-modal");
+      const confirmYesBtn = document.getElementById("confirm-yes-btn");
+      const confirmNoBtn = document.getElementById("confirm-no-btn");
+      const frequencyDisplay = document.getElementById("frequency-display");
+      const messageModal = document.getElementById("message-modal");
+      const messageText = document.getElementById("message-text");
+      const messageOkBtn = document.getElementById("message-ok-btn");
+      const globalSearch = document.getElementById("global-search");
+      const searchClear = document.getElementById("search-clear");
+      const searchResults = document.getElementById("search-results");
+      const paginationContainer = document.getElementById("pagination-container");
+      const paginationContainerBottom = document.getElementById("pagination-container-bottom");
+      const prevPageBtn = document.getElementById("prev-page");
+      const nextPageBtn = document.getElementById("next-page");
+      const prevPageBtnBottom = document.getElementById("prev-page-bottom");
+      const nextPageBtnBottom = document.getElementById("next-page-bottom");
+      const pageInfo = document.getElementById("page-info");
+      const pageInfoBottom = document.getElementById("page-info-bottom");
 
-        body {
-            font-family: var(--font-poppins);
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            min-height: 100vh;
-            overflow-x: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+      let allWords = [];
+      let allBooklines = [];
+      let currentLesson = 0;
+      let currentWordIndex = 0;
+      let currentPage = 1;
+      const WORDS_PER_LESSON = 100;
+      const LESSONS_PER_PAGE = 15;
 
-        #preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: var(--bg-primary);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            transition: opacity 0.5s ease;
-        }
+      const wordProgressCache = new Map();
+      const lessonDataCache = new Map();
+      const lessonListeners = new Map();
 
-        .preloader-text {
-            font-size: clamp(1.5rem, 5vw, 2.5rem);
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: var(--text-primary);
-            font-family: var(--font-poppins);
-        }
+      let currentLessonWords = [];
+      let isFrequencyMode = true;
+      let showBooklines = true; // NEW: Booklines visibility state
+      let startY = 0;
+      let startX = 0;
+      let isSwiping = false;
+      let isFirebaseReady = false;
+      let firstUnreadWordId = 1;
 
-        #preloader-count {
-            font-size: medium;
-            font-weight: 600;
-            color: var(--text-primary);
-            font-family: var(--font-poppins);
-        }
+      const appId = typeof window.__app_id !== "undefined" ? window.__app_id : "default-app-id";
+      const firebaseLib = window.firebase;
+      let database = null;
 
-        #app-container {
-            display: none;
-            width: 100%;
-            min-height: 100vh;
-            padding: 20px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
+      const log = (m) => {};
+      const logErr = (m, e) => console.error(m, e || "");
+
+      let dbInstance = null;
+      
+      // Initialize IndexedDB
+      const initIndexedDB = () => {
+        return new Promise((resolve, reject) => {
+          const request = indexedDB.open('DictionaryDB', 1);
+          
+          request.onerror = () => reject(request.error);
+          request.onsuccess = () => {
+            dbInstance = request.result;
+            resolve(dbInstance);
+          };
+          
+          request.onupgradeneeded = (e) => {
+            const db = e.target.result;
+            
+            // Create object stores if they don't exist
+            if (!db.objectStoreNames.contains('dictionary_data')) {
+              db.createObjectStore('dictionary_data', { keyPath: 'key' });
+            }
+          };
+        });
+      };
+
+      const saveDataToIndexedDB = async (key, data) => {
+        try {
+          if (!dbInstance) await initIndexedDB();
+          
+          const transaction = dbInstance.transaction(['dictionary_data'], 'readwrite');
+          const store = transaction.objectStore('dictionary_data');
+          
+          await new Promise((resolve, reject) => {
+            const request = store.put({ key: key, data: data, timestamp: Date.now() });
+            request.onsuccess = () => resolve();
+            request.onerror = () => reject(request.error);
+          });
+          
+          return true;
+        } catch (e) {
+          console.error('Failed to save to IndexedDB:', e);
+          return false;
+        }
+      };
+
+      const loadDataFromIndexedDB = async (key) => {
+        try {
+          if (!dbInstance) await initIndexedDB();
+          
+          const transaction = dbInstance.transaction(['dictionary_data'], 'readonly');
+          const store = transaction.objectStore('dictionary_data');
+          
+          return new Promise((resolve, reject) => {
+            const request = store.get(key);
+            request.onsuccess = () => {
+              const result = request.result;
+              resolve(result ? result.data : null);
+            };
+            request.onerror = () => reject(request.error);
+          });
+        } catch (e) {
+          console.error('Failed to load from IndexedDB:', e);
+          return null;
+        }
+      };
+
+      const updateProgressBar = (current, total, message) => {
+        const percentage = Math.round((current / total) * 100);
+        if (message.includes('cache') || message.includes('loaded')) {
+          preloaderCount.textContent = allWords ? allWords.length : 0;
+        } else {
+          preloaderCount.textContent = percentage;
+        }
+        setStatus(message);
+      };
+
+      const showMessageModal = (message, autoCloseMs = 0) => {
+        messageText.textContent = message;
+        messageModal.classList.remove("hidden");
+        updateScrollLock();
+        if (autoCloseMs > 0) {
+          setTimeout(() => {
+            messageModal.classList.add("hidden");
+            updateScrollLock();
+          }, autoCloseMs);
+        }
+      };
+
+      const setStatus = (text, isError = false) => {
+        preloaderStatus.textContent = text;
+        preloaderStatus.className = isError ? "preloader-status error" : "preloader-status";
+      };
+
+      const updateScrollLock = () => {
+        const anyOpen = !wordDetailsModal.classList.contains("hidden") ||
+                        !confirmModal.classList.contains("hidden") ||
+                        !messageModal.classList.contains("hidden");
+        document.body.classList.toggle("modal-open", anyOpen);
+      };
+
+      const processWordsInChunks = async (words, booklines) => {
+        const CHUNK_SIZE = 100; // Reduced chunk size for smoother updates
+        const processedWords = [];
+        
+        for (let i = 0; i < words.length; i += CHUNK_SIZE) {
+          const chunk = words.slice(i, i + CHUNK_SIZE);
+          const processedChunk = chunk.map(word => {
+            const matchingBookline = booklines.find(b => b.id === word.id);
+            return {
+              ...word,
+              booklines: matchingBookline ? matchingBookline.booklines : [
+                "No booklines available for this word.",
+                "Please check the booklines data file.",
+                "Default placeholder text."
+              ]
+            };
+          });
+          
+          processedWords.push(...processedChunk);
+          
+          // Update progress more frequently for smoother animation
+          const progress = Math.min(i + CHUNK_SIZE, words.length);
+          updateProgressBar(progress, words.length, `Processing words... ${progress}/${words.length}`);
+          
+          // Yield control to prevent browser freezing
+          await new Promise(resolve => setTimeout(resolve, 1));
         }
         
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-            padding-top: 20px;
-        }
+        return processedWords;
+      };
 
-        header h1 {
-            color: var(--text-primary);
-            font-size: clamp(2rem, 6vw, 3rem);
-            font-weight: 700;
-            font-family: var(--font-poppins);
-        }
+      const loadDatabasesWithProgress = async () => {
+        try {
+          setStatus("Checking cached data...");
+          
+          const cachedWords = await loadDataFromIndexedDB('dictionary_words');
+          const cachedBooklines = await loadDataFromIndexedDB('dictionary_booklines');
+          const cacheVersion = await loadDataFromIndexedDB('dictionary_cache_version');
+          const currentVersion = '1.0';
+          
+          if (cachedWords && cachedBooklines && cacheVersion === currentVersion && 
+              Array.isArray(cachedWords) && Array.isArray(cachedBooklines) && 
+              cachedWords.length > 0 && cachedBooklines.length > 0) {
+            setStatus("Loading from cache...");
+            allWords = cachedWords;
+            allBooklines = cachedBooklines;
+            
+            allWords = await processWordsInChunks(allWords, allBooklines);
+            
+            // Trigger smooth final animation after cache loading
+            setStatus("Loading...");
+            animateCounterSmooth(2000); // 2 second smooth animation
+            return true;
+          }
 
-        #lesson-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            max-width: 1400px;
-            margin: 0 auto;
-            width: 100%;
-            flex-grow: 1;
-        }
+          setStatus("Downloading database files...");
+          
+          let loadedCount = 0;
+          const totalFiles = 2;
 
-        .lesson-tile {
-            background-color: var(--bg-card);
-            padding: 30px 20px;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            user-select: none;
+          updateProgressBar(loadedCount, totalFiles, "Downloading words database...");
+          const wordsResponse = await fetch('./data.json');
+          if (!wordsResponse.ok) throw new Error('Failed to load words data');
+          allWords = await wordsResponse.json();
+          loadedCount++;
+          updateProgressBar(loadedCount, totalFiles, "Words database loaded");
+
+          updateProgressBar(loadedCount, totalFiles, "Downloading booklines database...");
+          const booklinesResponse = await fetch('./booklines/b.json');
+          if (!booklinesResponse.ok) throw new Error('Failed to load booklines data');
+          allBooklines = await booklinesResponse.json();
+          loadedCount++;
+          updateProgressBar(loadedCount, totalFiles, "Booklines database loaded");
+
+          setStatus("Processing word data...");
+          allWords = await processWordsInChunks(allWords, allBooklines);
+
+          setStatus("Caching data to IndexedDB...");
+          const wordsCached = await saveDataToIndexedDB('dictionary_words', allWords);
+          const booklinesCached = await saveDataToIndexedDB('dictionary_booklines', allBooklines);
+          const versionCached = await saveDataToIndexedDB('dictionary_cache_version', currentVersion);
+          
+          // Trigger smooth final animation after all processing
+          setStatus("Loading...");
+          animateCounterSmooth(2000); // 2 second smooth animation
+          return true;
+        } catch (error) {
+          setStatus("Failed to load database files", true);
+          console.error('Database loading error:', error);
+          setTimeout(() => {
+            hideLoadingScreen();
+          }, 2000);
+          return false;
+        }
+      };
+
+      const hideLoadingScreen = () => {
+        preloader.style.opacity = "0";
+        setTimeout(() => {
+          preloader.classList.add("hidden");
+          appContainer.classList.remove("hidden");
+        }, 300);
+      };
+
+      const toggleBooklines = () => {
+        showBooklines = !showBooklines;
+        updateBooklinesToggle();
+        updateModalContent();
+      };
+
+      const updateBooklinesToggle = () => {
+        const icon = booklinesToggleBtn.querySelector('i');
+        const text = booklinesToggleBtn.querySelector('.toggle-text');
+        
+        if (showBooklines) {
+          icon.className = 'fas fa-eye';
+          text.textContent = 'Hide Context';
+          booklinesToggleBtn.classList.add('active');
+        } else {
+          icon.className = 'fas fa-eye-slash';
+          text.textContent = 'Show Context';
+          booklinesToggleBtn.classList.remove('active');
+        }
+      };
+
+      const highlightWordInBooklines = (text, targetWord) => {
+        if (!targetWord || !text) return text;
+        const regex = new RegExp(`\\b(${targetWord.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})\\b`, "gi");
+        return text.replace(regex, '<span style="background: rgba(0, 255, 136, 0.3); color: #00ff88; padding: 1px 3px; border-radius: 3px; font-weight: 600;">$1</span>');
+      };
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyAimhK1una261vXi7jZ2TVrzf9-OmU-0XE",
+        authDomain: "dictionary-43809.firebaseapp.com",
+        databaseURL: "https://dictionary-43809-default-rtdb.asia-southeast1.firebasedatabase.app/",
+        projectId: "dictionary-43809",
+        storageBucket: "dictionary-43809.firebasestorage.app",
+        messagingSenderId: "455079496140",
+        appId: "1:455079496140:web:ad629c9de32348dad67569",
+        measurementId: "G-EN2L4364DD",
+      };
+
+      const initializeFirebase = async () => {
+        setStatus("Connecting...");
+        try {
+          if (!firebaseLib.apps.length) firebaseLib.initializeApp(firebaseConfig);
+          database = firebaseLib.database();
+          await database.ref(".info/serverTimeOffset").once("value");
+          isFirebaseReady = true;
+          setStatus("Connected");
+        } catch (e) {
+          isFirebaseReady = false;
+          database = null;
+          setStatus("Offline", true);
+          logErr("Firebase init error", e);
+        }
+      };
+
+      const getLessonNumber = (wordId) => Math.ceil(wordId / WORDS_PER_LESSON);
+      const getWordStatus = (wordId) => wordProgressCache.get(wordId) || "ur";
+
+      const setWordStatus = (wordId, status) => {
+        if (status === "ur") {
+          wordProgressCache.delete(wordId);
+        } else {
+          wordProgressCache.set(wordId, status);
+        }
+        const lessonNum = getLessonNumber(wordId);
+        if (!lessonDataCache.has(lessonNum)) {
+          lessonDataCache.set(lessonNum, { read: new Set(), new: new Set() });
+        }
+        const lessonData = lessonDataCache.get(lessonNum);
+        lessonData.read.delete(wordId);
+        lessonData.new.delete(wordId);
+        if (status === "r") lessonData.read.add(wordId);
+        if (status === "n") lessonData.new.add(wordId);
+      };
+
+      const findFirstUnreadWord = () => {
+        for (let wordId = 1; wordId <= allWords.length; wordId++) {
+          if (!wordProgressCache.has(wordId)) return wordId;
+        }
+        return null;
+      };
+
+      const updateContinueSystem = () => {
+        firstUnreadWordId = findFirstUnreadWord();
+      };
+
+      const setupLessonListener = (lessonNum) => {
+        if (lessonListeners.has(lessonNum)) return;
+        const lessonRef = database.ref(`apps/${appId}/L${lessonNum}`);
+        const listener = lessonRef.on("value", (snapshot) => {
+          const lessonData = snapshot.val();
+          const startWordId = (lessonNum - 1) * WORDS_PER_LESSON + 1;
+          const endWordId = Math.min(lessonNum * WORDS_PER_LESSON, allWords.length);
+          for (let wordId = startWordId; wordId <= endWordId; wordId++) setWordStatus(wordId, "ur");
+          if (lessonData) {
+            if (lessonData.r) Object.keys(lessonData.r).forEach((id) => setWordStatus(parseInt(id), "r"));
+            if (lessonData.n) Object.keys(lessonData.n).forEach((id) => setWordStatus(parseInt(id), "n"));
+          }
+          updateContinueSystem();
+          updateLessonTiles();
+          if (!wordDetailsModal.classList.contains("hidden")) updateModalContent();
+        });
+        lessonListeners.set(lessonNum, { ref: lessonRef, listener });
+      };
+
+      const loadLessonData = async (lessonNum) => {
+        if (!database || !isFirebaseReady) return;
+        try {
+          const lessonRef = database.ref(`apps/${appId}/L${lessonNum}`);
+          const snapshot = await lessonRef.once("value");
+          const lessonData = snapshot.val();
+          if (lessonData) {
+            if (lessonData.r) Object.keys(lessonData.r).forEach((id) => setWordStatus(parseInt(id), "r"));
+            if (lessonData.n) Object.keys(lessonData.n).forEach((id) => setWordStatus(parseInt(id), "n"));
+            setupLessonListener(lessonNum);
+          }
+        } catch (e) {
+          logErr("Lesson load error", e);
+        }
+      };
+
+      const loadAllProgressData = async () => {
+        if (!database || !isFirebaseReady) return;
+        try {
+          const appsRef = database.ref(`apps/${appId}`);
+          const snapshot = await appsRef.once("value");
+          const appData = snapshot.val();
+          if (appData) {
+            const totalLessons = Math.ceil(allWords.length / WORDS_PER_LESSON);
+            for (let lessonNum = 1; lessonNum <= totalLessons; lessonNum++) {
+              if (appData[`L${lessonNum}`]) await loadLessonData(lessonNum);
+            }
+          }
+          updateContinueSystem();
+        } catch (e) {
+          logErr("Progress load error", e);
+        }
+      };
+
+      const saveWordProgress = async (wordId, status) => {
+        if (!database || !isFirebaseReady) return;
+        const lessonNum = getLessonNumber(wordId);
+        const updates = {};
+        updates[`apps/${appId}/L${lessonNum}/r/${wordId}`] = null;
+        updates[`apps/${appId}/L${lessonNum}/n/${wordId}`] = null;
+        if (status === "r") updates[`apps/${appId}/L${lessonNum}/r/${wordId}`] = true;
+        if (status === "n") updates[`apps/${appId}/L${lessonNum}/n/${wordId}`] = true;
+        await database.ref().update(updates);
+        if (!lessonListeners.has(lessonNum)) setupLessonListener(lessonNum);
+      };
+
+      const progressQueue = [];
+      let queueProcessing = false;
+
+      const enqueueProgress = (wordId, status) => {
+        progressQueue.push({ wordId, status, attempts: 0 });
+        processQueue();
+      };
+
+      const processQueue = async () => {
+        if (queueProcessing || !isFirebaseReady || progressQueue.length === 0) return;
+        queueProcessing = true;
+        const item = progressQueue[0];
+        try {
+          await saveWordProgress(item.wordId, item.status);
+          progressQueue.shift();
+        } catch (e) {
+          item.attempts++;
+          if (item.attempts > 5) {
+            progressQueue.shift();
+            logErr("Write drop", e);
+          } else {
+            const wait = Math.min(2000, 100 * Math.pow(2, item.attempts));
+            await new Promise((r) => setTimeout(r, wait));
+          }
+        } finally {
+          queueProcessing = false;
+          setTimeout(processQueue, 50);
+        }
+      };
+
+      const resetDatabase = async () => {
+        if (!database || !isFirebaseReady) return;
+        try {
+          lessonListeners.forEach(({ ref, listener }) => ref.off("value", listener));
+          lessonListeners.clear();
+          await database.ref(`apps/${appId}`).remove();
+          wordProgressCache.clear();
+          lessonDataCache.clear();
+          firstUnreadWordId = 1;
+          showMessageModal("All progress cleared!", 1200);
+        } catch (e) {
+          logErr("Reset error", e);
+          showMessageModal("Failed to reset. Try again.");
+        } finally {
+          updateLessonTiles();
+        }
+      };
+
+      const clearAllData = async () => {
+        await resetDatabase();
+        wordDetailsModal.classList.add("hidden");
+        confirmModal.classList.add("hidden");
+        updateScrollLock();
+      };
+
+      const animateCounterSmooth = (duration) => {
+        const start = performance.now();
+        const totalWords = allWords ? allWords.length : 0;
+        
+        // Reset counter to 0 for smooth animation
+        preloaderCount.textContent = '0';
+        
+        const animate = (time) => {
+          const progress = time - start;
+          const percentage = Math.min(progress / duration, 1);
+          const currentCount = Math.floor(percentage * totalWords);
+          
+          preloaderCount.textContent = currentCount;
+          
+          if (percentage < 1) {
+            requestAnimationFrame(animate);
+          } else {
+            preloaderCount.textContent = totalWords;
+            // Hide loading screen after animation completes
+            setTimeout(() => {
+              hideLoadingScreen();
+            }, 300);
+          }
+        };
+        
+        requestAnimationFrame(animate);
+      };
+
+      const initSpiralPreloader = () => {
+        const N = 200, SIZE = 160, DOT_RADIUS = 1.5, MARGIN = 2, DURATION = 3;
+        const GOLDEN_ANGLE = Math.PI * (3 - Math.sqrt(5));
+        const CENTER = SIZE / 2;
+        const MAX_RADIUS = CENTER - MARGIN - DOT_RADIUS;
+        const svgNS = "http://www.w3.org/2000/svg";
+        const svg = document.createElementNS(svgNS, "svg");
+        svg.setAttribute("width", SIZE);
+        svg.setAttribute("height", SIZE);
+        svg.setAttribute("viewBox", `0 0 ${SIZE} ${SIZE}`);
+        document.getElementById("spiral").appendChild(svg);
+        for (let i = 0; i < N; i++) {
+          const idx = i + 0.5, frac = idx / N;
+          const r = Math.sqrt(frac) * MAX_RADIUS;
+          const theta = idx * GOLDEN_ANGLE;
+          const x = CENTER + r * Math.cos(theta);
+          const y = CENTER + r * Math.sin(theta);
+          const c = document.createElementNS(svgNS, "circle");
+          c.setAttribute("cx", x); c.setAttribute("cy", y); c.setAttribute("r", DOT_RADIUS);
+          svg.appendChild(c);
+          const animR = document.createElementNS(svgNS, "animate");
+          animR.setAttribute("attributeName", "r");
+          animR.setAttribute("values", `${DOT_RADIUS * 0.5};${DOT_RADIUS * 1.5};${DOT_RADIUS * 0.5}`);
+          animR.setAttribute("dur", `${DURATION}s`);
+          animR.setAttribute("begin", `${frac * DURATION}s`);
+          animR.setAttribute("repeatCount", "indefinite");
+          animR.setAttribute("calcMode", "spline");
+          animR.setAttribute("keySplines", "0.4 0 0.6 1;0.4 0 0.6 1");
+          c.appendChild(animR);
+          const animO = document.createElementNS(svgNS, "animate");
+          animO.setAttribute("attributeName", "opacity");
+          animO.setAttribute("values", "0.3;1;0.3");
+          animO.setAttribute("dur", `${DURATION}s`);
+          animO.setAttribute("begin", `${frac * DURATION}s`);
+          animO.setAttribute("repeatCount", "indefinite");
+          animO.setAttribute("calcMode", "spline");
+          animO.setAttribute("keySplines", "0.4 0 0.6 1;0.4 0 0.6 1");
+          c.appendChild(animO);
+        }
+      };
+
+      const fetchData = async () => {
+        const success = await loadDatabasesWithProgress();
+        if (!success) {
+          setStatus("Using sample data");
+          showMessageModal("Failed to load database files. Using sample set.", 1200);
+          
+          allWords = Array.from({length: 500}, (_, i) => ({
+            id: i + 1,
+            word: `word${i + 1}`,
+            frequency: 1000 - i,
+            definition: `Definition for word ${i + 1}`,
+            bangla: [`বাংলা${i + 1}`],
+            example: `This is an example for word${i + 1}.`,
+            booklines: [
+              "No booklines available for this word.",
+              "Please check the booklines data file.",
+              "Default placeholder text."
+            ]
+          }));
         }
         
-        .lesson-tile.continue {
-            background-color: var(--accent-green);
-            color: var(--bg-primary);
-            border-color: var(--accent-green-dark);
-            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
-        }
-        .lesson-tile.continue h2,
-        .lesson-tile.continue p,
-        .lesson-tile.continue .progress-text {
-            color: var(--bg-primary);
-        }
+        initSpiralPreloader();
+        await initializeFirebase();
+        if (isFirebaseReady) await loadAllProgressData();
+        updateLessonTiles();
+      };
 
-        .lesson-tile::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-            transition: left 0.5s;
-        }
-
-        .lesson-tile:hover::before {
-            left: 100%;
-        }
-
-        .lesson-tile:hover {
-            transform: translateY(-5px);
-            background-color: #222222;
-            border-color: #555555;
-            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
-        }
-        .lesson-tile.continue:hover {
-            background-color: var(--accent-green-dark);
-            transform: translateY(-5px);
-        }
-
-        .lesson-tile h2 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-            color: var(--text-primary);
-            font-family: var(--font-poppins);
-            font-weight: 600;
-        }
-
-        .lesson-tile p {
-            font-size: 1rem;
-            color: var(--text-secondary);
-            font-family: var(--font-poppins);
-            margin-bottom: 15px;
-        }
-
-        .progress-bar {
-            width: 100%;
-            height: 8px;
-            background-color: var(--border-color);
-            border-radius: 4px;
-            overflow: hidden;
-            margin-bottom: 10px;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, var(--accent-green), var(--accent-green-dark));
-            border-radius: 4px;
-            transition: width 0.3s ease;
-        }
-
-        .progress-text {
-            font-size: 0.9rem;
-            color: #888888;
-            font-family: var(--font-poppins);
-        }
-        .lesson-tile.continue .progress-text {
-            color: var(--bg-primary);
-        }
-
-        .hidden {
-            display: none !important;
+      let searchTimeout = null;
+      const performSearch = (query) => {
+        if (!query.trim()) {
+          searchResults.classList.add("hidden");
+          searchClear.classList.add("hidden");
+          return;
         }
         
-        /* Modals */
-        #word-details-modal, #jump-modal, #message-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.95);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1001;
-            backdrop-filter: blur(10px);
-        }
-
-        .modal-content {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            width: 95%;
-            height: 95%;
-            max-width: 800px;
-            max-height: 600px;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            overflow: hidden;
-            animation: slideIn 0.3s ease-out;
-        }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9) translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1) translateY(0);
-            }
-        }
-
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 30px;
-            border-bottom: 1px solid var(--border-color);
-            background: var(--bg-secondary);
-        }
-
-        .frequency-display {
-            cursor: pointer;
-            padding: 8px 16px;
-            background: var(--bg-card);
-            border-radius: 20px;
-            font-family: var(--font-poppins);
-            font-weight: 500;
-            border: 1px solid var(--border-color);
-            transition: all 0.2s ease;
-            user-select: none;
-        }
-
-        .frequency-display:hover {
-            background: #222222;
-            border-color: #555555;
+        if (!allWords || !Array.isArray(allWords)) {
+          searchResults.innerHTML = `<div class="search-no-results">Data not loaded yet. Please wait...</div>`;
+          searchResults.classList.remove("hidden");
+          return;
         }
         
-        .close-btn {
-            font-size: 1.5rem;
-            color: var(--text-primary);
-            cursor: pointer;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            transition: background-color 0.2s;
+        searchClear.classList.remove("hidden");
+        const results = allWords
+          .filter((w) => {
+            if (!w || !w.word || typeof w.word !== 'string') return false;
+            const searchQuery = query.toLowerCase();
+            return w.word.toLowerCase().includes(searchQuery);
+          })
+          .slice(0, 10);
+        displaySearchResults(results, query);
+      };
+
+      const highlightMatch = (text, query) => {
+        if (!query.trim()) return text;
+        const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`, "gi");
+        return text.replace(regex, '<mark style="background: rgba(255, 193, 7, 0.3); color: var(--accent-yellow); padding: 1px 2px; border-radius: 2px;">$1</mark>');
+      };
+
+      const displaySearchResults = (results, query) => {
+        if (results.length === 0) {
+          searchResults.innerHTML = `<div class="search-no-results">No words found for "${query}"</div>`;
+        } else {
+          searchResults.innerHTML = results.map((w) => {
+            const status = getWordStatus(w.id);
+            const text = status === "r" ? "Read" : status === "n" ? "New" : "Unread";
+            const cls = status === "r" ? "read" : status === "n" ? "new" : "unread";
+            return `
+              <div class="search-result-item" data-word-id="${w.id}">
+                <span class="search-word-id">#${w.id}</span>
+                <span class="search-word-name">${highlightMatch(w.word, query)}</span>
+                <span class="search-word-status ${cls}">${text}</span>
+              </div>
+            `;
+          }).join("");
+        }
+        searchResults.classList.remove("hidden");
+      };
+
+      const jumpToWord = (wordId) => {
+        const targetLesson = Math.ceil(wordId / WORDS_PER_LESSON);
+        const lessonWords = getLessonWords(targetLesson);
+        const idx = lessonWords.findIndex((w) => w.id === wordId);
+        if (idx !== -1) {
+          openWordModal(targetLesson, idx);
+          globalSearch.value = "";
+          searchResults.classList.add("hidden");
+          searchClear.classList.add("hidden");
+        }
+      };
+
+      const showSlideInput = () => {
+        const slideInput = document.createElement('input');
+        slideInput.type = 'number';
+        slideInput.className = 'slide-input';
+        slideInput.placeholder = '';
+        slideInput.min = '1';
+        slideInput.max = allWords.length.toString();
+        slideInput.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter') {
+            const wordNumber = parseInt(slideInput.value);
+            if (wordNumber >= 1 && wordNumber <= allWords.length) {
+              jumpToWord(wordNumber);
+              slideInput.remove();
+            } else {
+              showMessageModal(`Please enter a number between 1 and ${allWords.length}`, 2000);
+            }
+          } else if (e.key === 'Escape') {
+            slideInput.remove();
+          }
+        });
+        slideInput.addEventListener('blur', () => {
+          setTimeout(() => slideInput.remove(), 100);
+        });
+        document.body.appendChild(slideInput);
+        slideInput.focus();
+      };
+
+      globalSearch.addEventListener("input", (e) => {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => performSearch(e.target.value), 200);
+      });
+
+      globalSearch.addEventListener("blur", () => {
+        setTimeout(() => searchResults.classList.add("hidden"), 200);
+      });
+
+      searchClear.addEventListener("click", () => {
+        globalSearch.value = "";
+        searchResults.classList.add("hidden");
+        searchClear.classList.add("hidden");
+        globalSearch.focus();
+      });
+
+      searchResults.addEventListener("click", (e) => {
+        const resultItem = e.target.closest(".search-result-item");
+        if (resultItem) jumpToWord(Number.parseInt(resultItem.dataset.wordId));
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key === "k") {
+          e.preventDefault();
+          globalSearch.focus();
+          globalSearch.select();
+        }
+        if (e.key === "Escape") {
+          wordDetailsModal.classList.add("hidden");
+          messageModal.classList.add("hidden");
+          confirmModal.classList.add("hidden");
+          updateScrollLock();
+        }
+        if (!wordDetailsModal.classList.contains("hidden")) {
+          if (["ArrowLeft", "ArrowRight", "n", "N", " ", "Enter", "b", "B"].includes(e.key)) e.preventDefault();
+          if (e.key === "ArrowLeft") prevWord();
+          else if (e.key === "ArrowRight") nextWord();
+          else if (e.key === "n" || e.key === "N" || e.key === " ") {
+            if (getWordStatus(currentLessonWords[currentWordIndex].id) !== "n") markAsNew();
+          } else if (e.key === "Enter") {
+            if (getWordStatus(currentLessonWords[currentWordIndex].id) === "n") markAsRead();
+            else nextWord();
+          } else if (e.key === "b" || e.key === "B") {
+            toggleBooklines();
+          }
+        }
+      });
+
+      const getLessonWords = (lessonNumber) => {
+        const start = (lessonNumber - 1) * WORDS_PER_LESSON;
+        const end = Math.min(start + WORDS_PER_LESSON, allWords.length);
+        const lessonWords = allWords.slice(start, end);
+        const newWords = lessonWords.filter((w) => getWordStatus(w.id) === "n");
+        const otherWords = lessonWords.filter((w) => getWordStatus(w.id) !== "n");
+        return [...newWords, ...otherWords];
+      };
+
+      const getLessonProgress = (lessonNumber) => {
+        const start = (lessonNumber - 1) * WORDS_PER_LESSON;
+        const end = Math.min(start + WORDS_PER_LESSON, allWords.length);
+        const lessonWords = allWords.slice(start, end);
+        const readInLesson = lessonWords.filter((w) => getWordStatus(w.id) === "r").length;
+        const newInLesson = lessonWords.filter((w) => getWordStatus(w.id) === "n").length;
+        const totalWords = lessonWords.length;
+        
+        const readPercentage = totalWords > 0 ? Math.max(0, (readInLesson / totalWords) * 100) : 0;
+        const newPercentage = totalWords > 0 ? Math.max(0, (newInLesson / totalWords) * 100) : 0;
+        
+        return {
+          readPercentage: Math.min(100, readPercentage),
+          newPercentage: Math.min(100, newPercentage),
+          newCount: newInLesson,
+          readCount: readInLesson,
+          totalWords: totalWords
+        };
+      };
+
+      const updatePagination = () => {
+        const totalLessons = Math.ceil(allWords.length / WORDS_PER_LESSON);
+        const totalPages = Math.ceil(totalLessons / LESSONS_PER_PAGE);
+        
+        [pageInfo, pageInfoBottom].forEach(el => {
+          el.textContent = `Page ${currentPage} of ${totalPages}`;
+        });
+        
+        [prevPageBtn, prevPageBtnBottom].forEach(btn => {
+          btn.disabled = currentPage === 1;
+        });
+        
+        [nextPageBtn, nextPageBtnBottom].forEach(btn => {
+          btn.disabled = currentPage === totalPages;
+        });
+      };
+
+      const updateLessonTiles = () => {
+        const totalLessons = Math.ceil(allWords.length / WORDS_PER_LESSON);
+        
+        updatePagination();
+        
+        lessonContainer.innerHTML = "";
+        
+        updateContinueSystem();
+        if (firstUnreadWordId && currentPage === 1) {
+          const continueTile = document.createElement("div");
+          continueTile.className = "lesson-tile continue";
+          const targetLesson = Math.ceil(firstUnreadWordId / WORDS_PER_LESSON);
+          continueTile.innerHTML = `
+            <i class="fas fa-play"></i>
+            <h2>Continue Learning</h2>
+            <p>Resume from Word ${firstUnreadWordId}</p>
+          `;
+          continueTile.addEventListener("click", () => {
+            const targetWordIndex = (firstUnreadWordId - 1) % WORDS_PER_LESSON;
+            openWordModal(targetLesson, targetWordIndex);
+          });
+          lessonContainer.appendChild(continueTile);
         }
 
-        .close-btn:hover {
-            background-color: #333333;
-        }
+        const startLesson = (currentPage - 1) * LESSONS_PER_PAGE + 1;
+        const endLesson = Math.min(startLesson + LESSONS_PER_PAGE - 1, totalLessons);
 
-        .modal-body {
-            flex-grow: 1;
-            padding: 40px 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            overflow-y: auto;
+        for (let i = startLesson; i <= endLesson; i++) {
+          const progressData = getLessonProgress(i);
+          const lessonTile = document.createElement("div");
+          lessonTile.className = "lesson-tile";
+          lessonTile.dataset.lesson = i;
+
+          const readW = Math.max(0, Math.min(100, progressData.readPercentage));
+          const newW = Math.max(0, Math.min(100, progressData.newPercentage));
+
+          const rangeStart = (i - 1) * WORDS_PER_LESSON + 1;
+          const rangeEnd = Math.min(i * WORDS_PER_LESSON, allWords.length);
+
+          lessonTile.innerHTML = `
+            <h2><i class="fas fa-graduation-cap"></i> Lesson ${i}</h2>
+            <p>Words ${rangeStart} - ${rangeEnd}</p>
+            <div class="progress-bar">
+              <div class="progress-fill-green" style="width: ${readW}%"></div>
+              <div class="progress-fill-yellow" style="width: ${newW}%; left: ${readW}%"></div>
+              <div class="progress-percentage">${Math.round(readW)}%</div>
+            </div>
+            <div class="progress-text">
+              <i class="fas fa-check-circle"></i> ${progressData.readCount} read • 
+              <i class="fas fa-star"></i> ${progressData.newCount} new
+            </div>
+          `;
+          lessonTile.addEventListener("click", () => openWordModal(i, 0));
+          lessonContainer.appendChild(lessonTile);
+        }
+      };
+
+      const changePage = (direction) => {
+        const totalLessons = Math.ceil(allWords.length / WORDS_PER_LESSON);
+        const totalPages = Math.ceil(totalLessons / LESSONS_PER_PAGE);
+        
+        if (direction === 'prev' && currentPage > 1) {
+          currentPage--;
+          updateLessonTiles();
+        } else if (direction === 'next' && currentPage < totalPages) {
+          currentPage++;
+          updateLessonTiles();
+        }
+      };
+
+      prevPageBtn.addEventListener("click", () => changePage('prev'));
+      nextPageBtn.addEventListener("click", () => changePage('next'));
+      prevPageBtnBottom.addEventListener("click", () => changePage('prev'));
+      nextPageBtnBottom.addEventListener("click", () => changePage('next'));
+
+      const openWordModal = (lessonNum, wordIndex) => {
+        currentLesson = lessonNum;
+        currentWordIndex = wordIndex;
+        currentLessonWords = getLessonWords(lessonNum);
+        wordDetailsModal.classList.remove("hidden");
+        updateScrollLock();
+        updateBooklinesToggle();
+        updateModalContent();
+        closeModalBtn.focus();
+      };
+
+      const returnToHome = () => {
+        wordDetailsModal.classList.add("hidden");
+        updateScrollLock();
+      };
+
+      const updateModalContent = () => {
+        const currentWord = currentLessonWords[currentWordIndex];
+        if (!currentWord) {
+          returnToHome();
+          return;
+        }
+        modalWord.textContent = currentWord.word;
+        modalBangla.textContent = currentWord.bangla.join(", ");
+        modalDefinition.textContent = currentWord.definition || "";
+        const highlightedExample = (currentWord.example || "").replace(
+          new RegExp(`\\b(${currentWord.word})\\b`, "gi"),
+          `<span class="highlight">$1</span>`
+        );
+        modalExample.innerHTML = highlightedExample;
+        
+        if (showBooklines) {
+          modalBooklines.classList.remove('hidden');
+          if (currentWord.booklines && currentWord.booklines.length > 0) {
+            modalBooklines.innerHTML = currentWord.booklines.map((line, index) => 
+              `<div class="bookline-item">
+                <div class="bookline-number">${index + 1}</div>
+                <div class="bookline-text">${highlightWordInBooklines(line, currentWord.word)}</div>
+              </div>`
+            ).join('');
+          } else {
+            modalBooklines.innerHTML = `
+              <div class="bookline-item">
+                <div class="bookline-number">1</div>
+                <div class="bookline-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+              </div>
+              <div class="bookline-item">
+                <div class="bookline-number">2</div>
+                <div class="bookline-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+              </div>
+              <div class="bookline-item">
+                <div class="bookline-number">3</div>
+                <div class="bookline-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.</div>
+              </div>
+            `;
+          }
+        } else {
+          modalBooklines.classList.add('hidden');
         }
         
-        /* Word display styling */
-        #modal-word {
-            font-size: clamp(2rem, 8vw, 4rem);
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 20px;
-            font-family: var(--font-poppins);
-            line-height: 1;
+        updateFooter();
+      };
+
+      const updateFooter = () => {
+        const currentWord = currentLessonWords[currentWordIndex];
+        const lessonStartIndex = (currentLesson - 1) * WORDS_PER_LESSON;
+        const originalPosition = currentWord.id - lessonStartIndex;
+        const lessonEndId = Math.min(currentLesson * WORDS_PER_LESSON, allWords.length);
+        const lessonStartId = lessonStartIndex + 1;
+
+        wordCounter.textContent = `${originalPosition}/${lessonEndId - lessonStartId + 1}`;
+        frequencyDisplay.textContent = isFrequencyMode ? currentWord.frequency : currentWord.id;
+
+        if (getWordStatus(currentWord.id) === "n") {
+          newBtn.classList.add("hidden");
+          readBtn.classList.remove("hidden");
+          nextWordBtn.classList.add("hidden");
+        } else {
+          newBtn.classList.remove("hidden");
+          readBtn.classList.add("hidden");
+          nextWordBtn.classList.remove("hidden");
+        }
+      };
+
+      const markAsNew = async () => {
+        const currentWord = currentLessonWords[currentWordIndex];
+        setWordStatus(currentWord.id, "n");
+        enqueueProgress(currentWord.id, "n");
+        currentLessonWords = getLessonWords(currentLesson);
+        currentWordIndex = currentLessonWords.findIndex((w) => w.id === currentWord.id);
+        updateContinueSystem();
+        updateModalContent();
+        updateLessonTiles();
+      };
+
+      const markAsRead = async () => {
+        const currentWord = currentLessonWords[currentWordIndex];
+        setWordStatus(currentWord.id, "r");
+        enqueueProgress(currentWord.id, "r");
+        currentLessonWords = getLessonWords(currentLesson);
+        updateContinueSystem();
+        updateModalContent();
+        updateLessonTiles();
+        nextWord();
+      };
+
+      const prevWord = async () => {
+        if (currentWordIndex > 0) {
+          const currentWord = currentLessonWords[currentWordIndex];
+          if (getWordStatus(currentWord.id) === "ur") {
+            setWordStatus(currentWord.id, "r");
+            enqueueProgress(currentWord.id, "r");
+            updateContinueSystem();
+            updateLessonTiles();
+          }
+          currentWordIndex--;
+          updateModalContent();
+        }
+      };
+
+      const nextWord = async () => {
+        const currentWord = currentLessonWords[currentWordIndex];
+
+        if (getWordStatus(currentWord.id) === "ur") {
+          setWordStatus(currentWord.id, "r");
+          enqueueProgress(currentWord.id, "r");
+          updateContinueSystem();
+          updateLessonTiles();
         }
 
-        #modal-bangla {
-            font-size: clamp(1.2rem, 5vw, 2rem);
-            color: var(--text-secondary);
-            margin-bottom: 30px;
-            font-family: var(--font-hind);
-            font-weight: 500;
+        if (currentWordIndex < currentLessonWords.length - 1) {
+          currentWordIndex++;
+          updateModalContent();
         }
+      };
 
-        #modal-definition,
-        #modal-example {
-            font-size: clamp(1rem, 3vw, 1.2rem);
-            line-height: 1.6;
-            margin-bottom: 20px;
-            text-align: left;
-            color: var(--text-primary);
-            font-family: var(--font-poppins);
-        }
+      closeModalBtn.addEventListener("click", returnToHome);
+      
+      booklinesToggleBtn.addEventListener("click", toggleBooklines);
+      
+      wordCounter.addEventListener("click", showSlideInput);
 
-        .highlight {
-            color: var(--highlight-color);
-            font-weight: 600;
-        }
+      clearAllDataBtn.addEventListener("click", () => {
+        confirmModal.classList.remove("hidden");
+        updateScrollLock();
+      });
 
-        #modal-definition::before {
-            content: "\f02d"; /* book-icon */
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            color: #888888;
-            margin-right: 10px;
-        }
+      confirmYesBtn.addEventListener("click", clearAllData);
+      confirmNoBtn.addEventListener("click", () => {
+        confirmModal.classList.add("hidden");
+        updateScrollLock();
+      });
 
-        #modal-example::before {
-            content: "\f10d"; /* quote-left icon */
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            color: #888888;
-            margin-right: 10px;
-        }
+      newBtn.addEventListener("click", markAsNew);
+      readBtn.addEventListener("click", markAsRead);
+      nextWordBtn.addEventListener("click", nextWord);
 
-        .modal-footer {
-            padding: 20px 30px;
-            border-top: 1px solid var(--border-color);
-            background: var(--bg-secondary);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
+      frequencyDisplay.addEventListener("click", () => {
+        isFrequencyMode = !isFrequencyMode;
+        updateFooter();
+      });
 
-        .word-counter {
-            font-family: var(--font-poppins);
-            font-size: clamp(0.8rem, 2.5vw, 1rem);
-            color: var(--text-secondary);
-            cursor: pointer;
-            padding: 10px 20px;
-            background: var(--bg-card);
-            border-radius: 25px;
-            border: 1px solid var(--border-color);
-            transition: all 0.2s ease;
-            user-select: none;
-        }
+      const blockScroll = (e) => e.preventDefault();
+      [wordDetailsModal, messageModal, confirmModal].forEach((el) => {
+        el.addEventListener("click", (e) => {
+          if (e.target === el) {
+            el.classList.add("hidden");
+            updateScrollLock();
+          }
+        });
+      });
 
-        .word-counter:hover {
-            background: #222222;
-            border-color: #555555;
-        }
+      wordDetailsModal.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        isSwiping = true;
+      });
 
-        .progress-buttons {
-            display: flex;
-            gap: 15px;
+      wordDetailsModal.addEventListener("touchend", (e) => {
+        if (!isSwiping) return;
+        isSwiping = false;
+        const endX = e.changedTouches[0].clientX;
+        const endY = e.changedTouches[0].clientY;
+        const deltaX = endX - startX;
+        const deltaY = endY - startY;
+        const minSwipeDistance = 50;
+        if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > minSwipeDistance) {
+          if (deltaX > 0) prevWord();
+          else nextWord();
         }
-        
-        .progress-btn, .clear-progress-btn {
-            width: 50px;
-            height: 50px;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            transition: all 0.2s ease;
-            font-weight: bold;
-        }
+      });
 
-        .unknown-btn {
-            background: var(--accent-red);
-            color: var(--text-primary);
-        }
+      messageOkBtn.addEventListener("click", () => {
+        messageModal.classList.add("hidden");
+        updateScrollLock();
+      });
 
-        .unknown-btn:hover {
-            background: var(--accent-red-dark);
-            transform: scale(1.1);
-        }
+      window.addEventListener("beforeunload", () => {
+        lessonListeners.forEach(({ ref, listener }) => ref.off("value", listener));
+        lessonListeners.clear();
+      });
 
-        .unknown-btn.active {
-            background: var(--accent-red-dark);
-            box-shadow: 0 0 20px rgba(255, 68, 68, 0.5);
-        }
-
-        .known-btn {
-            background: var(--accent-green);
-            color: var(--bg-primary);
-        }
-
-        .known-btn:hover {
-            background: var(--accent-green-dark);
-            transform: scale(1.1);
-        }
-
-        .known-btn.active {
-            background: var(--accent-green-dark);
-            box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
-        }
-        
-        .next-word-btn {
-            background: var(--text-primary);
-            color: var(--bg-primary);
-        }
-
-        .next-word-btn:hover {
-            background: #cccccc;
-            transform: scale(1.1);
-        }
-        
-        .clear-progress-btn {
-            background: #444444;
-            color: #ffffff;
-            font-size: 1rem;
-            width: auto;
-            border-radius: 8px;
-            padding: 0 15px;
-        }
-        .clear-progress-btn:hover {
-            background: #666666;
-            transform: scale(1.05);
-        }
-
-        /* Jump to word modal */
-        #jump-modal, #confirm-modal {
-            z-index: 1002;
-        }
-        .jump-modal-content {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            min-width: 300px;
-            animation: slideIn 0.3s ease-out;
-        }
-        .confirm-modal-content {
-             background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            min-width: 300px;
-            animation: slideIn 0.3s ease-out;
-        }
-        .confirm-modal-content h3 {
-            margin-bottom: 20px;
-            color: var(--text-primary);
-            font-family: var(--font-poppins);
-        }
-
-        .jump-modal-content h3 {
-            margin-bottom: 20px;
-            color: var(--text-primary);
-            font-family: var(--font-poppins);
-        }
-
-        .jump-input {
-            width: 100%;
-            padding: 15px;
-            font-size: 1.2rem;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            color: var(--text-primary);
-            text-align: center;
-            font-family: var(--font-poppins);
-            margin-bottom: 20px;
-        }
-        
-        .jump-input:focus {
-            outline: none;
-            border-color: #555555;
-            background: #222222;
-        }
-
-        .jump-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-        }
-
-        .jump-btn {
-            padding: 12px 24px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-family: var(--font-poppins);
-            font-weight: 500;
-            transition: all 0.2s ease;
-        }
-
-        .jump-btn.ok {
-            background: var(--text-primary);
-            color: var(--bg-primary);
-        }
-
-        .jump-btn.ok:hover {
-            background: #cccccc;
-        }
-
-        .jump-btn.cancel {
-            background: #333333;
-            color: var(--text-primary);
-        }
-
-        .jump-btn.cancel:hover {
-            background: #555555;
-        }
-        .confirm-modal-content .confirm-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-        }
-        .confirm-modal-content .confirm-buttons button {
-            padding: 12px 24px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-family: var(--font-poppins);
-            font-weight: 500;
-            transition: all 0.2s ease;
-        }
-        .confirm-modal-content .confirm-buttons .yes-btn {
-            background: var(--accent-red);
-            color: var(--text-primary);
-        }
-        .confirm-modal-content .confirm-buttons .no-btn {
-            background: #333333;
-            color: var(--text-primary);
-        }
-
-
-        /* Message modal */
-        #message-modal {
-            z-index: 1003;
-        }
-        .message-content {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            min-width: 300px;
-            animation: slideIn 0.3s ease-out;
-        }
-
-        .message-content p {
-            font-family: var(--font-poppins);
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-        }
-
-        .message-content button {
-            padding: 12px 24px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-family: var(--font-poppins);
-            font-weight: 500;
-            background: var(--accent-green);
-            color: var(--bg-primary);
-            transition: all 0.2s ease;
-        }
-
-        .message-content button:hover {
-            background: var(--accent-green-dark);
-        }
-
-        /* Loading indicator */
-        .loading-indicator {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 10px 15px;
-            font-family: var(--font-poppins);
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            z-index: 1003;
-            display: none;
-        }
-
-        .loading-indicator.show {
-            display: block;
-            animation: pulse 1s infinite;
-        }
-        
-        .loading-spinner {
-            border: 4px solid var(--border-color);
-            border-top: 4px solid var(--accent-green);
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            animation: spin 1s linear infinite;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 0.7; }
-            50% { opacity: 1; }
-        }
-
-        /* New styles for the home footer and clear data button */
-        footer {
-            padding: 20px;
-            text-align: center;
-            margin-top: auto; /* Push the footer to the bottom */
-            width: 100%;
-        }
-
-        .clear-data-btn {
-            background-color: var(--accent-red);
-            color: var(--text-primary);
-            border: none;
-            padding: 12px 24px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-family: var(--font-poppins);
-            font-weight: 500;
-            transition: all 0.2s ease;
-            box-shadow: 0 4px 15px rgba(255, 68, 68, 0.3);
-        }
-        
-        .clear-data-btn:hover {
-            background-color: var(--accent-red-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 68, 68, 0.4);
-        }
-
-        /* Mobile specific styles */
-        @media (max-width: 768px) {
-            body {
-                padding: 0;
-            }
-            #app-container {
-                padding: 15px;
-            }
-            header h1 {
-                font-size: 2.5rem;
-            }
-            #lesson-container {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            .modal-content {
-                width: 100%;
-                height: 100%;
-                max-width: none;
-                max-height: none;
-                border-radius: 0;
-            }
-            .modal-header, .modal-footer {
-                padding: 15px 20px;
-            }
-            .modal-body {
-                padding: 20px;
-            }
-            .progress-buttons {
-                gap: 10px;
-            }
-            .progress-btn {
-                width: 45px;
-                height: 45px;
-                font-size: 1.1rem;
-            }
-            .word-counter {
-                padding: 8px 16px;
-            }
-            .frequency-display {
-                padding: 6px 12px;
-            }
-        }
-    </style>
+      fetchData();
+    });
+  </script>
 </head>
 <body>
-    <!-- Preloader -->
-    <div id="preloader">
-        <h1 class="preloader-text">Loading words...</h1>
-        <span id="preloader-count">0</span>
-    </div>
-    
-    <!-- Main App Container -->
-    <div id="app-container" class="hidden">
-        <header>
-            <h1>Dictionary App</h1>
-        </header>
+  <div id="preloader">
+    <div id="p-c"><i class="fas fa-book"></i> Dictionary</div>
+    <div id="preloader-status" class="preloader-status">Starting…</div>
+    <div id="preloader-count">0</div>
+    <div id="spiral"></div>
+  </div>
 
-        <div id="lesson-container">
-            <!-- Lesson tiles will be generated here -->
+  <div id="app-container" class="hidden">
+    <header>
+      <h1><i class="fas fa-book-open"></i> Dictionary</h1>
+      <div class="search-container">
+        <div class="search-wrapper">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" id="global-search" class="search-input" placeholder="Search words..." autocomplete="off">
+          <button id="search-clear" class="search-clear hidden"><i class="fas fa-times"></i></button>
         </div>
+        <div id="search-results" class="search-results hidden"></div>
+      </div>
+    </header>
 
-        <footer>
-            <button id="clear-all-data-btn" class="clear-data-btn">Clear All Data</button>
-        </footer>
+    <div id="pagination-container" class="pagination-container">
+      <button id="prev-page" class="pagination-btn"><i class="fas fa-chevron-left"></i></button>
+      <span id="page-info" class="page-info">Page 1 of 1</span>
+      <button id="next-page" class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
     </div>
 
-    <!-- Word Details Modal -->
-    <div id="word-details-modal" class="hidden">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span id="frequency-display" class="frequency-display"></span>
-                <span id="close-modal" class="close-btn"><i class="fas fa-times"></i></span>
-            </div>
-            <div class="modal-body">
-                <h2 id="modal-word"></h2>
-                <h3 id="modal-bangla"></h3>
-                <p id="modal-definition"></p>
-                <p id="modal-example"></p>
-            </div>
-            <div class="modal-footer">
-                <span id="word-counter" class="word-counter"></span>
-                <div class="progress-buttons">
-                    <button id="unknown-btn" class="progress-btn unknown-btn"><i class="fas fa-question"></i></button>
-                    <button id="known-btn" class="progress-btn known-btn hidden"><i class="fas fa-check"></i></button>
-                    <button id="next-word-btn" class="progress-btn next-word-btn"><i class="fas fa-arrow-right"></i></button>
-                </div>
-            </div>
+    <main id="lesson-container"></main>
+
+    <div id="pagination-container-bottom" class="pagination-container">
+      <button id="prev-page-bottom" class="pagination-btn"><i class="fas fa-chevron-left"></i></button>
+      <span id="page-info-bottom" class="page-info">Page 1 of 1</span>
+      <button id="next-page-bottom" class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <footer>
+      <button id="clear-all-data-btn" class="clear-data-btn">
+        <i class="fas fa-trash-alt"></i> Clear All Data
+      </button>
+    </footer>
+  </div>
+
+  <div id="word-details-modal" class="hidden modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div id="frequency-display" class="frequency-display"></div>
+        <div class="header-controls">
+          <button id="booklines-toggle" class="booklines-toggle active">
+            <i class="fas fa-eye"></i>
+            <span class="toggle-text">Hide Context</span>
+          </button>
+          <span id="close-modal" class="close-btn"><i class="fas fa-times"></i></span>
         </div>
-    </div>
-
-    <!-- Jump to Word Modal -->
-    <div id="jump-modal" class="hidden">
-        <div class="jump-modal-content">
-            <h3>Jump to word</h3>
-            <input type="number" id="jump-input" class="jump-input" placeholder="Enter word number">
-            <div class="jump-buttons">
-                <button id="jump-ok" class="jump-btn ok">OK</button>
-                <button id="jump-cancel" class="jump-btn cancel">Cancel</button>
-            </div>
+      </div>
+      <div class="modal-body">
+        <div class="word-section">
+          <div id="modal-word"></div>
+          <div id="modal-bangla"></div>
         </div>
-    </div>
-
-    <!-- Confirmation Modal -->
-    <div id="confirm-modal" class="hidden">
-        <div class="confirm-modal-content">
-            <h3>Are you sure you want to clear all progress? This action cannot be undone.</h3>
-            <div class="confirm-buttons">
-                <button id="confirm-yes-btn" class="yes-btn">Yes</button>
-                <button id="confirm-no-btn" class="no-btn">No</button>
-            </div>
+        <div class="content-section">
+          <div id="modal-definition"></div>
+          <div id="modal-example"></div>
+          <div id="modal-booklines" class="modal-booklines"></div>
         </div>
-    </div>
-
-    <!-- Custom Message Modal -->
-    <div id="message-modal" class="hidden">
-        <div class="message-content">
-            <p id="message-text"></p>
-            <button id="message-ok-btn">OK</button>
+      </div>
+      <div class="modal-footer">
+        <div id="word-counter" class="word-counter">
+          <i class="fas fa-list-ol"></i> <span></span>
         </div>
+        <div class="progress-buttons">
+          <button id="new-btn" class="progress-btn new-btn"><i class="fas fa-star"></i></button>
+          <button id="read-btn" class="progress-btn read-btn hidden"><i class="fas fa-check"></i></button>
+          <button id="next-word-btn" class="progress-btn next-word-btn"><i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <!-- Loading Indicator -->
-    <div id="loading-indicator" class="loading-indicator hidden">
-        <span>Syncing...</span>
+  <div id="confirm-modal" class="hidden modal-overlay">
+    <div class="confirm-modal-content">
+      <h3><i class="fas fa-exclamation-triangle"></i> Clear all progress?</h3>
+      <div class="confirm-buttons">
+        <button id="confirm-yes-btn" class="yes-btn">Yes</button>
+        <button id="confirm-no-btn" class="no-btn">No</button>
+      </div>
     </div>
+  </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const preloader = document.getElementById('preloader');
-            const preloaderCount = document.getElementById('preloader-count');
-            const appContainer = document.getElementById('app-container');
-            const lessonContainer = document.getElementById('lesson-container');
-            const wordDetailsModal = document.getElementById('word-details-modal');
-            const closeModalBtn = document.getElementById('close-modal');
-            const wordCounter = document.getElementById('word-counter');
-            const modalWord = document.getElementById('modal-word');
-            const modalBangla = document.getElementById('modal-bangla');
-            const modalDefinition = document.getElementById('modal-definition');
-            const modalExample = document.getElementById('modal-example');
-            const jumpModal = document.getElementById('jump-modal');
-            const jumpInput = document.getElementById('jump-input');
-            const jumpOkBtn = document.getElementById('jump-ok');
-            const jumpCancelBtn = document.getElementById('jump-cancel');
-            const loadingIndicator = document.getElementById('loading-indicator');
-            const unknownBtn = document.getElementById('unknown-btn');
-            const knownBtn = document.getElementById('known-btn');
-            const nextWordBtn = document.getElementById('next-word-btn');
-            const clearAllDataBtn = document.getElementById('clear-all-data-btn');
-            const confirmModal = document.getElementById('confirm-modal');
-            const confirmYesBtn = document.getElementById('confirm-yes-btn');
-            const confirmNoBtn = document.getElementById('confirm-no-btn');
-            const frequencyDisplay = document.getElementById('frequency-display');
-            const messageModal = document.getElementById('message-modal');
-            const messageText = document.getElementById('message-text');
-            const messageOkBtn = document.getElementById('message-ok-btn');
-
-            let allWords = [];
-            let currentLesson = 0;
-            let currentWordIndex = 0;
-            let knownWords = new Set();
-            let unknownWords = new Set();
-            let currentLessonWords = [];
-            let lastLesson = 0;
-            let lastWordIndex = 0;
-            let isFrequencyMode = true;
-            let startY = 0;
-            let startX = 0;
-            let isSwiping = false;
-
-            const WORDS_PER_LESSON = 100;
-            const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
-            const firebaseConfig = {
-                apiKey: "AIzaSyAimhK1una261vXi7jZ2TVrzf9-OmU-0XE",
-                authDomain: "dictionary-43809.firebaseapp.com",
-                projectId: "dictionary-43809",
-                storageBucket: "dictionary-43809.firebasestorage.app",
-                messagingSenderId: "455079496140",
-                appId: "1:455079496140:web:ad629c9de32348dad67569",
-                measurementId: "G-EN2L4364DD"
-            };
-
-            firebase.initializeApp(firebaseConfig);
-            const db = firebase.firestore();
-
-            const showMessageModal = (message) => {
-                messageText.textContent = message;
-                messageModal.classList.remove('hidden');
-            };
-
-            messageOkBtn.addEventListener('click', () => {
-                messageModal.classList.add('hidden');
-            });
-            
-            const withExponentialBackoff = async (func, maxRetries = 5, delay = 1000) => {
-                for (let i = 0; i < maxRetries; i++) {
-                    try {
-                        return await func();
-                    } catch (error) {
-                        console.error('API call failed, retrying...', error);
-                        await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, i)));
-                    }
-                }
-                throw new Error('API call failed after multiple retries.');
-            };
-            
-            const showLoadingIndicator = () => loadingIndicator.classList.remove('hidden');
-            const hideLoadingIndicator = () => loadingIndicator.classList.add('hidden');
-
-            const saveProgress = async () => {
-                showLoadingIndicator();
-                const docRef = db.collection('artifacts').doc(appId).collection('public').doc('data').collection('dictionary').doc('progress');
-                const progressData = {
-                    knownWords: Array.from(knownWords),
-                    unknownWords: Array.from(unknownWords),
-                    lastLesson: lastLesson,
-                    lastWordIndex: lastWordIndex,
-                    lastUpdated: firebase.firestore.FieldValue.serverTimestamp()
-                };
-
-                try {
-                    await withExponentialBackoff(() => docRef.set(progressData, { merge: true }));
-                    console.log("Progress saved to Firestore successfully!");
-                } catch (error) {
-                    console.error("Error saving progress:", error);
-                    showMessageModal("Failed to sync progress with Firebase. Please check your connection.");
-                } finally {
-                    hideLoadingIndicator();
-                }
-            };
-            
-            // Refactored function to clear all data
-            const clearAllData = async () => {
-                showLoadingIndicator();
-                const docRef = db.collection('artifacts').doc(appId).collection('public').doc('data').collection('dictionary').doc('progress');
-                try {
-                    await withExponentialBackoff(() => docRef.delete());
-                    knownWords.clear();
-                    unknownWords.clear();
-                    lastLesson = 0;
-                    lastWordIndex = 0;
-                    console.log("All progress cleared from Firestore.");
-                } catch (error) {
-                    console.error("Error clearing data:", error);
-                    showMessageModal("Failed to clear all data. Please try again.");
-                } finally {
-                    hideLoadingIndicator();
-                    updateLessonTiles();
-                    wordDetailsModal.classList.add('hidden');
-                    confirmModal.classList.add('hidden');
-                }
-            };
-
-            const loadProgress = async () => {
-                showLoadingIndicator();
-                const docRef = db.collection('artifacts').doc(appId).collection('public').doc('data').collection('dictionary').doc('progress');
-                try {
-                    const doc = await withExponentialBackoff(() => docRef.get());
-                    if (doc.exists) {
-                        const data = doc.data();
-                        knownWords = new Set(data.knownWords || []);
-                        unknownWords = new Set(data.unknownWords || []);
-                        lastLesson = data.lastLesson || 0;
-                        lastWordIndex = data.lastWordIndex || 0;
-                        console.log("Progress loaded from Firestore.");
-                    } else {
-                        console.log("No progress found for this app, starting fresh.");
-                    }
-                } catch (error) {
-                    console.error("Error loading progress:", error);
-                    showMessageModal("Failed to load progress from Firebase. Your progress will not be saved.");
-                } finally {
-                    hideLoadingIndicator();
-                }
-            };
-            
-            const animateCounter = (duration) => {
-                const start = performance.now();
-                const totalWords = allWords.length;
-                const animate = (time) => {
-                    let progress = time - start;
-                    let percentage = Math.min(progress / duration, 1);
-                    preloaderCount.textContent = Math.floor(percentage * totalWords);
-                    if (percentage < 1) {
-                        requestAnimationFrame(animate);
-                    } else {
-                        setTimeout(() => {
-                            preloader.style.opacity = '0';
-                            setTimeout(() => {
-                                preloader.classList.add('hidden');
-                                appContainer.classList.remove('hidden');
-                            }, 500);
-                        }, 2000);
-                    }
-                };
-                requestAnimationFrame(animate);
-            };
-
-            const fetchData = async () => {
-                try {
-                    const response = await fetch('./data.json');
-                    if (!response.ok) {
-                        throw new Error("Could not fetch data.json");
-                    }
-                    allWords = await response.json();
-                } catch (e) {
-                    console.error(e);
-                    showMessageModal("Failed to load word data. Please check the `data.json` file.");
-                    return;
-                }
-
-                animateCounter(2000);
-
-                await loadProgress();
-                updateLessonTiles();
-                
-                jumpInput.placeholder = `Enter word number (1-${allWords.length})`;
-            };
-
-            const getLessonWords = (lessonNumber) => {
-                const start = (lessonNumber - 1) * WORDS_PER_LESSON;
-                const end = start + WORDS_PER_LESSON;
-                const lessonWords = allWords.slice(start, end);
-
-                const unknownInLesson = lessonWords.filter(word => unknownWords.has(word.id));
-                const knownInLesson = lessonWords.filter(word => !unknownWords.has(word.id));
-
-                return [...unknownInLesson, ...knownInLesson];
-            };
-
-            const getLessonProgress = (lessonNumber) => {
-                const lessonWords = allWords.slice((lessonNumber - 1) * WORDS_PER_LESSON, lessonNumber * WORDS_PER_LESSON);
-                const knownInLesson = lessonWords.filter(word => knownWords.has(word.id)).length;
-                return (knownInLesson / WORDS_PER_LESSON) * 100;
-            };
-
-            const findFirstUnknownWord = () => {
-                for (let i = 0; i < allWords.length; i++) {
-                    // Check if the word is not in the knownWords set
-                    if (!knownWords.has(allWords[i].id)) {
-                        return i; // Return the global index
-                    }
-                }
-                return -1; // Return -1 if all words are known
-            };
-
-            const updateLessonTiles = () => {
-                lessonContainer.innerHTML = '';
-                const totalLessons = Math.ceil(allWords.length / WORDS_PER_LESSON);
-                
-                const firstUnknownIndex = findFirstUnknownWord();
-                
-                // Add "Continue Learning" button if there are unknown words
-                if (firstUnknownIndex !== -1) {
-                    const totalKnown = knownWords.size;
-                    const totalWords = allWords.length;
-                    const overallProgress = (totalKnown / totalWords) * 100;
-
-                    const continueTile = document.createElement('div');
-                    continueTile.className = 'lesson-tile continue';
-                    
-                    const firstUnknownWordGlobalIndex = findFirstUnknownWord();
-                    const targetLesson = Math.ceil((firstUnknownWordGlobalIndex + 1) / WORDS_PER_LESSON);
-                    const targetWordIndex = (firstUnknownWordGlobalIndex) % WORDS_PER_LESSON;
-
-                    continueTile.innerHTML = `
-                        <h2>Continue Learning</h2>
-                        <p>First unknown word is in Lesson ${targetLesson}</p>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: ${overallProgress}%;"></div>
-                        </div>
-                        <span class="progress-text">Overall progress: ${Math.round(overallProgress)}%</span>
-                    `;
-                    continueTile.addEventListener('click', () => openWordModal(targetLesson, targetWordIndex));
-                    lessonContainer.appendChild(continueTile);
-                }
-
-                for (let i = 1; i <= totalLessons; i++) {
-                    const lessonProgress = getLessonProgress(i);
-                    const lessonTile = document.createElement('div');
-                    lessonTile.className = 'lesson-tile';
-                    lessonTile.dataset.lesson = i;
-                    lessonTile.innerHTML = `
-                        <h2>Lesson ${i}</h2>
-                        <p>${(i - 1) * WORDS_PER_LESSON + 1} - ${i * WORDS_PER_LESSON}</p>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: ${lessonProgress}%;"></div>
-                        </div>
-                        <span class="progress-text">${Math.round(lessonProgress)}% complete</span>
-                    `;
-                    lessonTile.addEventListener('click', () => openWordModal(i, 0));
-                    lessonContainer.appendChild(lessonTile);
-                }
-            };
-
-            const openWordModal = (lessonNum, wordIndex) => {
-                currentLesson = lessonNum;
-                currentWordIndex = wordIndex;
-                currentLessonWords = getLessonWords(lessonNum);
-                wordDetailsModal.classList.remove('hidden');
-                updateModalContent();
-            };
-
-            const updateModalContent = () => {
-                const currentWord = currentLessonWords[currentWordIndex];
-
-                if (!currentWord) {
-                    showMessageModal("You have reached the end of this lesson.");
-                    // Check if we can proceed to the next lesson
-                    const nextLessonExists = getLessonWords(currentLesson + 1).length > 0;
-                    if (nextLessonExists) {
-                        const goNextBtn = document.createElement('button');
-                        goNextBtn.textContent = "Go to next lesson";
-                        goNextBtn.className = "jump-btn ok";
-                        goNextBtn.onclick = () => {
-                            messageModal.classList.add('hidden');
-                            openWordModal(currentLesson + 1, 0);
-                        };
-                        messageModal.querySelector('.message-content').appendChild(goNextBtn);
-                    }
-                    return;
-                }
-
-                modalWord.textContent = currentWord.word;
-                modalBangla.textContent = currentWord.bangla.join(', ');
-                modalDefinition.textContent = currentWord.definition;
-                
-                const highlightedExample = currentWord.example.replace(new RegExp(`\\b(${currentWord.word})\\b`, 'gi'), `<span class="highlight">$1</span>`);
-                modalExample.innerHTML = highlightedExample;
-
-                updateFooter();
-            };
-
-            const updateFooter = () => {
-                const totalWordsInLesson = currentLessonWords.length;
-                wordCounter.textContent = `${currentWordIndex + 1}/${totalWordsInLesson}`;
-
-                const currentWord = currentLessonWords[currentWordIndex];
-                
-                if (isFrequencyMode) {
-                    frequencyDisplay.textContent = currentWord.frequency;
-                } else {
-                    frequencyDisplay.textContent = currentWord.id;
-                }
-
-                if (knownWords.has(currentWord.id) || unknownWords.has(currentWord.id)) {
-                    // This word has been marked before, show both buttons
-                    unknownBtn.classList.remove('active');
-                    knownBtn.classList.remove('hidden');
-                    nextWordBtn.classList.add('hidden');
-                    if (knownWords.has(currentWord.id)) {
-                        knownBtn.classList.add('active');
-                        unknownBtn.classList.remove('active');
-                    } else {
-                        unknownBtn.classList.add('active');
-                        knownBtn.classList.remove('active');
-                    }
-                } else {
-                    // This is a new word, only show unknown and next
-                    unknownBtn.classList.remove('active');
-                    knownBtn.classList.add('hidden');
-                    nextWordBtn.classList.remove('hidden');
-                }
-            };
-            
-            // The logic for marking known and unknown is now handled by these two functions
-            const markAsKnown = () => {
-                const currentWord = currentLessonWords[currentWordIndex];
-                knownWords.add(currentWord.id);
-                unknownWords.delete(currentWord.id);
-                nextWord(); 
-                updateFooter();
-                saveProgress();
-                updateLessonTiles();
-            };
-
-            const markAsUnknown = () => {
-                const currentWord = currentLessonWords[currentWordIndex];
-                unknownWords.add(currentWord.id);
-                knownWords.delete(currentWord.id);
-                updateFooter();
-                saveProgress();
-                updateLessonTiles();
-            };
-            
-            const prevWord = () => {
-                if (currentWordIndex > 0) {
-                    currentWordIndex--;
-                    lastLesson = currentLesson;
-                    lastWordIndex = currentWordIndex;
-                    updateModalContent();
-                    saveProgress();
-                } else {
-                    showMessageModal("You are at the beginning of the lesson.");
-                }
-            };
-
-            const nextWord = () => {
-                const currentWord = currentLessonWords[currentWordIndex];
-                if (!knownWords.has(currentWord.id) && !unknownWords.has(currentWord.id)) {
-                    // If a user just clicks next on a new word, we assume they know it
-                    knownWords.add(currentWord.id);
-                }
-
-                if (currentWordIndex < currentLessonWords.length - 1) {
-                    currentWordIndex++;
-                    lastLesson = currentLesson;
-                    lastWordIndex = currentWordIndex;
-                    updateModalContent();
-                    saveProgress();
-                    updateLessonTiles();
-                } else {
-                    showMessageModal("You have reached the end of this lesson.");
-                    // After the last word, we can check for new unknown words
-                    const firstUnknownIndex = findFirstUnknownWord();
-                    if (firstUnknownIndex !== -1) {
-                        const firstUnknownLesson = Math.ceil((firstUnknownIndex + 1) / WORDS_PER_LESSON);
-                        const firstUnknownWordIndex = (firstUnknownIndex) % WORDS_PER_LESSON;
-                        const goNextBtn = document.createElement('button');
-                        goNextBtn.textContent = `Go to next unknown word (Lesson ${firstUnknownLesson})`;
-                        goNextBtn.className = "jump-btn ok";
-                        goNextBtn.onclick = () => {
-                            messageModal.classList.add('hidden');
-                            openWordModal(firstUnknownLesson, firstUnknownWordIndex);
-                        };
-                        messageModal.querySelector('.message-content').appendChild(goNextBtn);
-                    }
-                }
-            };
-
-            // Event Listeners
-            closeModalBtn.addEventListener('click', () => {
-                wordDetailsModal.classList.add('hidden');
-            });
-            
-            wordCounter.addEventListener('click', () => {
-                jumpModal.classList.remove('hidden');
-            });
-
-            // New event listener for the clear all data button on the home page
-            clearAllDataBtn.addEventListener('click', () => {
-                confirmModal.classList.remove('hidden');
-            });
-
-            confirmYesBtn.addEventListener('click', () => {
-                clearAllData();
-            });
-
-            confirmNoBtn.addEventListener('click', () => {
-                confirmModal.classList.add('hidden');
-            });
-
-            jumpOkBtn.addEventListener('click', () => {
-                const targetWordId = parseInt(jumpInput.value);
-                if (targetWordId > 0 && targetWordId <= allWords.length) {
-                    const targetLesson = Math.ceil(targetWordId / WORDS_PER_LESSON);
-                    const targetWordIndex = (targetWordId - 1) % WORDS_PER_LESSON;
-                    openWordModal(targetLesson, targetWordIndex);
-                    jumpModal.classList.add('hidden');
-                } else {
-                    showMessageModal(`Please enter a number between 1 and ${allWords.length}.`);
-                }
-            });
-
-            jumpCancelBtn.addEventListener('click', () => {
-                jumpModal.classList.add('hidden');
-            });
-
-            unknownBtn.addEventListener('click', markAsUnknown);
-            knownBtn.addEventListener('click', markAsKnown);
-            nextWordBtn.addEventListener('click', nextWord);
-
-            frequencyDisplay.addEventListener('click', () => {
-                isFrequencyMode = !isFrequencyMode;
-                updateFooter();
-            });
-
-            // Keyboard controls
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape') {
-                    wordDetailsModal.classList.add('hidden');
-                    jumpModal.classList.add('hidden');
-                    messageModal.classList.add('hidden');
-                    confirmModal.classList.add('hidden');
-                }
-                
-                if (!wordDetailsModal.classList.contains('hidden')) {
-                    if (e.key === 'ArrowLeft') {
-                        prevWord();
-                    } else if (e.key === 'ArrowRight') {
-                        nextWord();
-                    } else if (e.key === '?' || e.key === '/') {
-                        // Toggle unknown state
-                        if (knownBtn.classList.contains('hidden')) {
-                            markAsUnknown(); // Mark a new word as unknown
-                        } else {
-                            // If it's already marked, toggle it.
-                            if (knownWords.has(currentLessonWords[currentWordIndex].id)) {
-                                markAsUnknown();
-                            } else {
-                                markAsKnown();
-                            }
-                        }
-                    } else if ((e.key === 'Enter' || e.key === ' ') && !knownBtn.classList.contains('hidden')) {
-                        markAsKnown();
-                    } else if (e.key === 'Enter' || e.key === ' ') {
-                        nextWord();
-                    }
-                }
-            });
-
-            // Swipe controls for mobile
-            wordDetailsModal.addEventListener('touchstart', (e) => {
-                startX = e.touches[0].clientX;
-                startY = e.touches[0].clientY;
-                isSwiping = true;
-            });
-            
-            wordDetailsModal.addEventListener('touchend', (e) => {
-                if (!isSwiping) return;
-                isSwiping = false;
-
-                const endX = e.changedTouches[0].clientX;
-                const endY = e.changedTouches[0].clientY;
-                const deltaX = endX - startX;
-                const deltaY = endY - startY;
-
-                const minSwipeDistance = 50;
-
-                if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > minSwipeDistance) {
-                    if (deltaX > 0) {
-                        prevWord();
-                    } else {
-                        nextWord();
-                    }
-                }
-            });
-            
-            wordDetailsModal.addEventListener('click', (e) => {
-                if (e.target === wordDetailsModal) {
-                    wordDetailsModal.classList.add('hidden');
-                }
-            });
-
-            jumpModal.addEventListener('click', (e) => {
-                if (e.target === jumpModal) {
-                    jumpModal.classList.add('hidden');
-                }
-            });
-            
-            confirmModal.addEventListener('click', (e) => {
-                if (e.target === confirmModal) {
-                    confirmModal.classList.add('hidden');
-                }
-            });
-            
-            setInterval(async () => {
-                if (knownWords.size > 0 || unknownWords.size > 0) {
-                    await saveProgress();
-                }
-            }, 30000); // Save every 30 seconds
-            
-            fetchData();
-        });
-    </script>
+  <div id="message-modal" class="hidden modal-overlay">
+    <div class="message-content">
+      <p id="message-text"></p>
+      <button id="message-ok-btn">OK</button>
+    </div>
+  </div>
 </body>
 </html>

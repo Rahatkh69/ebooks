@@ -3,783 +3,1119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voice War Manual</title>
+    <title>z-z-z</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* CSS Variables for Black & White Theme */
-        :root {
-            --bg-color: #000000; /* Pure black background */
-            --primary-color: #1a1a1a; /* Dark grey for sections */
-            --text-color: #ffffff; /* Pure white text */
-            --accent-color: #cccccc; /* Light grey for accents and buttons */
-            --border-color: #444444; /* Medium grey for borders */
-            --success-color: #00cc00; /* Green for success, slightly desaturated */
-            --button-hover-bg: #ffffff; /* White for button hover background */
-            --button-hover-text: #000000; /* Black for button hover text */
-        }
+<link rel="icon" type="image/x-icon" href="f.svg">    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        /* Global Styles */
+    <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.7;
-            padding: 2rem;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh; /* Ensure it takes full viewport height */
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            width: 100%; /* Make container responsive */
-            padding: 1rem; /* Add some padding for smaller screens */
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 50%, #faf5ff 100%);
+            min-height: 100vh;
+            color: #374151;
         }
 
         /* Header Styles */
-        header h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            letter-spacing: 1px;
-            color: var(--text-color); /* Ensure header text is white */
+        .header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 50;
         }
 
-        header p {
-            font-size: 1.1rem;
-            color: var(--accent-color); /* Lighter grey for subtitle */
-            margin-bottom: 2rem;
-        }
-
-        /* Session Selection Styles */
-        #session-selection h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-            color: var(--text-color);
-        }
-
-        /* Button Styles */
-        .btn {
-            font-family: 'Poppins', sans-serif;
-            background: none;
-            border: 2px solid var(--accent-color);
-            color: var(--accent-color);
-            padding: 0.8rem 2rem;
-            margin: 0.5rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border-radius: 5px;
-        }
-
-        .btn:hover {
-            background-color: var(--button-hover-bg);
-            color: var(--button-hover-text);
-            box-shadow: 0 0 15px var(--accent-color);
-        }
-
-        .btn.start-btn {
-            border-color: var(--success-color);
-            color: var(--success-color);
-        }
-
-        .btn.start-btn:hover {
-            background-color: var(--success-color);
-            color: var(--button-hover-text);
-            box-shadow: 0 0 15px var(--success-color);
-        }
-        
-        .btn:disabled {
-            border-color: var(--border-color);
-            color: var(--border-color);
-            cursor: not-allowed;
-            opacity: 0.6; /* Slightly dim disabled buttons */
-        }
-        
-        .btn:disabled:hover {
-            background: none;
-            box-shadow: none;
-        }
-
-        /* Exercise View Styles */
-        #exercise-view {
-            text-align: left;
-            margin-top: 2rem;
-            width: 100%;
-        }
-
-        .top-bar {
+        .header-content {
+            max-width: 1152px;
+            margin: 0 auto;
+            padding: 1rem;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            margin-bottom: 2rem;
-            flex-wrap: wrap; /* Allow wrapping on smaller screens */
-            gap: 1rem; /* Space between items */
+            justify-content: space-between;
         }
 
-        #stopwatch {
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: var(--accent-color);
-        }
-
-        .back-btn {
-            font-size: 1rem;
-            font-weight: 600;
-            padding: 0.5rem 1rem;
-            border: 1px solid var(--text-color);
-            color: var(--text-color);
-            background: none;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-
-        .back-btn:hover {
-            background-color: var(--text-color);
-            color: var(--bg-color);
-        }
-
-        .zone {
-            background-color: var(--primary-color);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            padding: 2rem;
-            min-height: 250px;
+        .header-left {
             display: flex;
-            flex-direction: column;
-            justify-content: center; /* Center content vertically */
-            align-items: flex-start; /* Align text to the left */
+            align-items: center;
+            gap: 0.75rem;
         }
 
-        .zone-title {
-            font-size: 1.8rem;
+        .logo {
+            padding: 0.5rem;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border-radius: 0.75rem;
+            color: white;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .header-title {
+            font-size: 1.5rem;
             font-weight: 700;
-            color: var(--accent-color);
-            margin-bottom: 1rem;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 0.5rem;
-            width: 100%; /* Ensure border spans full width */
+            background: linear-gradient(135deg, #2563eb, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .exercise-title {
-            font-size: 1.2rem;
+        .header-subtitle {
+            font-size: 0.875rem;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .progress-section {
+            text-align: right;
+        }
+
+        .progress-label {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-bottom: 0.25rem;
+            font-weight: 500;
+        }
+
+        .progress-container {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .progress-bar {
+            width: 96px;
+            height: 8px;
+            background: #e5e7eb;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            transition: width 0.3s ease;
+            width: 0%;
+        }
+
+        .progress-text {
+            font-size: 0.875rem;
             font-weight: 600;
-            color: var(--text-color);
-            margin-top: 1rem; /* Add space above title */
+        }
+
+        /* Main Layout */
+        .main-container {
+            max-width: 1152px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 1024px) {
+            .grid {
+                grid-template-columns: 1fr 2fr;
+            }
+        }
+
+        /* Card Styles */
+        .card {
+            background: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e7eb;
+        }
+
+        .card-header {
+            padding: 1.5rem 1.5rem 0;
+        }
+
+        .card-title {
+            font-size: 1.125rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        /* Section Navigation */
+        .sections-card {
+            position: sticky;
+            top: 6rem;
+        }
+
+        .section-button {
+            width: 100%;
+            text-align: left;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 2px solid #e5e7eb;
+            background: white;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-button:hover {
+            border-color: #d1d5db;
+        }
+
+        .section-button.active {
+            border-color: #3b82f6;
+            background: #eff6ff;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .badge {
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.375rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .badge-default {
+            background: #3b82f6;
+            color: white;
+        }
+
+        .badge-secondary {
+            background: #f3f4f6;
+            color: #6b7280;
+        }
+
+        .section-progress {
+            font-size: 0.75rem;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .section-title {
+            font-weight: 700;
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .section-description {
+            font-size: 0.75rem;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        /* Current Exercise */
+        .current-exercise {
+            border: 2px solid #bfdbfe;
+        }
+
+        .exercise-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .exercise-info h2 {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
         }
 
         .exercise-description {
-            color: var(--accent-color); /* Use accent color for description */
-            margin-top: 0.5rem;
+            color: #6b7280;
+            font-size: 0.875rem;
+            font-weight: 500;
         }
 
-        .nav-container {
+        .complete-button {
+            padding: 0.5rem;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            width: 40px;
+            height: 40px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            margin-top: 1.5rem;
-            flex-wrap: wrap; /* Allow wrapping on smaller screens */
-            gap: 1rem; /* Space between items */
-        }
-        
-        #exercises-left {
-            font-size: 1rem;
-            color: var(--accent-color);
-            font-weight: 600;
-        }
-        
-        .hidden {
-            display: none;
+            justify-content: center;
+            font-size: 1.25rem;
         }
 
-        /* Throughout the Day Section Specific Styles */
-        #throughout-day-section {
-            margin-top: 3rem;
-            text-align: left;
-            border-top: 1px solid var(--border-color);
-            padding-top: 2rem;
+        .complete-button.completed {
+            background: #dcfce7;
+            color: #16a34a;
         }
 
-        #throughout-day-section h2 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--accent-color);
-            margin-bottom: 1.5rem;
+        .complete-button:not(.completed) {
+            background: #f3f4f6;
+            color: #9ca3af;
+        }
+
+        .complete-button:hover:not(.completed) {
+            background: #e5e7eb;
+        }
+
+        /* Timer */
+        .timer-section {
             text-align: center;
+            margin: 1.5rem 0;
         }
 
-        .throughout-day-exercise {
-            background-color: var(--primary-color);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1.5rem;
+        .timer-display {
+            font-size: 2.5rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: #2563eb;
             margin-bottom: 1rem;
         }
 
-        .throughout-day-exercise .exercise-title {
-            font-size: 1.1rem;
+        .timer-controls {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            border: none;
+            cursor: pointer;
             font-weight: 600;
-            color: var(--text-color);
-            margin-top: 0; /* Override default margin */
-        }
-
-        .throughout-day-exercise .exercise-description {
-            font-size: 0.95rem;
-            color: var(--accent-color);
-            margin-top: 0.5rem;
-        }
-
-        /* New styles for Variations */
-        .exercise-details p {
-            margin-bottom: 0.5rem;
-        }
-
-        .exercise-details strong {
-            color: var(--text-color);
-        }
-
-        .variations-container {
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px dashed var(--border-color);
-        }
-
-        .variations-container h4 {
-            font-size: 1rem;
-            color: var(--text-color);
-            margin-bottom: 0.8rem;
-        }
-
-        .variation-option {
             display: flex;
             align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+            font-size: 0.875rem;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            background: #1d4ed8;
+        }
+
+        .btn-outline {
+            background: white;
+            color: #374151;
+            border: 1px solid #d1d5db;
+        }
+
+        .btn-outline:hover {
+            background: #f9fafb;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Instructions Grid */
+        .instructions-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        @media (min-width: 768px) {
+            .instructions-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .instruction-section h4 {
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: #111827;
+        }
+
+        .instruction-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .instruction-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.50rem;
             margin-bottom: 0.5rem;
+        }
+
+        .instruction-number {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #dbeafe;
+            color: #2563eb;
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 0.125rem;
+        }
+
+        .check-icon {
+            width: 20px;
+            height: 20px;
+            color: #10b981;
+            flex-shrink: 0;
+            margin-top: 0.125rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .instruction-text {
+            font-size: 0.875rem;
+            color: #374151;
+            font-weight: 500;
+        }
+
+        /* Why This Works */
+        .why-section {
+            background: #faf5ff;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .why-title {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #7c3aed;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .why-text {
+            font-size: 0.875rem;
+            color: #6b46c1;
+            font-weight: 500;
+        }
+
+        /* Exercise Navigation */
+        .exercise-nav {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 1rem;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        /* Exercise List */
+        .exercise-list {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .exercise-item {
+            text-align: left;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #e5e7eb;
+            background: white;
             cursor: pointer;
+            transition: all 0.2s;
+            width: 100%;
         }
 
-        .variation-option input[type="radio"] {
-            margin-right: 0.5rem;
-            accent-color: var(--accent-color); /* Style radio button */
+        .exercise-item:hover {
+            border-color: #d1d5db;
         }
 
-        .variation-option label {
-            font-size: 0.95rem;
-            color: var(--accent-color);
-            cursor: pointer;
+        .exercise-item.active {
+            border-color: #3b82f6;
+            background: #eff6ff;
         }
 
-        /* Responsive adjustments */
-        @media (max-width: 600px) {
-            body {
-                padding: 1rem;
-            }
+        .exercise-item-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-            header h1 {
-                font-size: 2.5rem;
-            }
+        .exercise-item-left {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
 
-            header p {
-                font-size: 1rem;
-            }
+        .exercise-number {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
 
-            .btn {
-                padding: 0.6rem 1.5rem;
-                font-size: 1rem;
-                margin: 0.3rem;
-            }
+        .exercise-number.completed {
+            background: #dcfce7;
+            color: #16a34a;
+        }
 
-            .zone {
-                padding: 1.5rem;
-            }
+        .exercise-number.active {
+            background: #dbeafe;
+            color: #2563eb;
+        }
 
-            .zone-title {
-                font-size: 1.5rem;
-            }
+        .exercise-number:not(.completed):not(.active) {
+            background: #f3f4f6;
+            color: #6b7280;
+        }
 
-            .exercise-title {
-                font-size: 1.1rem;
-            }
+        .exercise-details h4 {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
 
-            .top-bar, .nav-container {
-                flex-direction: column;
-                align-items: center;
-            }
+        .exercise-details p {
+            font-size: 0.875rem;
+            color: #6b7280;
+            font-weight: 500;
+        }
 
-            .nav-buttons {
-                display: flex;
-                flex-direction: row;
-                width: 100%;
-                justify-content: center;
+        .badge-outline {
+            background: white;
+            color: #6b7280;
+            border: 1px solid #d1d5db;
+        }
+
+        /* Tips Section */
+        .tips-card {
+            background: linear-gradient(135deg, #f0fdf4, #eff6ff);
+            border-color: #bbf7d0;
+        }
+
+        .tips-title {
+            color: #166534;
+        }
+
+        .tips-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .tips-grid {
+                grid-template-columns: repeat(3, 1fr);
             }
-            .nav-buttons .btn {
-                flex: 1;
-            }
+        }
+
+        .tip-item {
+            background: rgba(255, 255, 255, 0.6);
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .tip-label {
+            font-weight: 700;
+        }
+
+        .tip-green { color: #166534; }
+        .tip-blue { color: #1d4ed8; }
+        .tip-purple { color: #7c3aed; }
+
+        /* Icons */
+        .icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .icon-sm {
+            width: 16px;
+            height: 16px;
         }
     </style>
 </head>
 <body>
+    <header class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <div class="logo">
+                    <i class="fas fa-microphone"></i>
+                </div>
+                <div>
+                    <h1 class="header-title">Buzzing Bee</h1>
+                    <p class="header-subtitle">Vocal Workout</p>
+                </div>
+            </div>
+            <div class="progress-section">
+                <div class="progress-label">Session Progress</div>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="sessionProgress"></div>
+                    </div>
+                    <span class="progress-text" id="progressText">0/12</span>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <div class="container">
-        <header>
-            <h1>🔥 Voice Aura 🔥</h1>
-            <p>Whatever the day takes</p>
-        </header>
-
-        <section id="session-selection">
-            <h2>Choose Your Session Time</h2>
+    <div class="main-container">
+        <div class="grid">
             <div>
-                <button class="btn" data-session="morning">Morning</button>
-                <button class="btn" data-session="night">Night</button>
-            </div>
-            <div id="start-container" class="hidden">
-                <p id="session-choice-text" style="margin-top: 1.5rem; color: var(--accent-color);"></p>
-                <button class="btn start-btn" id="start-session-btn">Start Session</button>
-            </div>
-
-            <!-- New section for Throughout the Day exercises -->
-            <section id="throughout-day-section">
-                <h2>⏱️ THROUGHOUT THE DAY: Modular Hits</h2>
-                <div id="throughout-day-exercises-container">
-                    <!-- Throughout the Day exercises will be loaded here by JavaScript -->
-                </div>
-            </section>
-        </section>
-
-        <main id="exercise-view" class="hidden">
-            <div class="top-bar">
-                <button class="back-btn" id="back-btn">← Back</button>
-                <div id="stopwatch">00:00:00</div>
-            </div>
-
-            <div id="current-exercise-container">
-                <!-- Exercise details will be loaded here by JavaScript -->
-            </div>
-
-            <div class="nav-container">
-                <div id="exercises-left"></div>
-                <div class="nav-buttons">
-                    <button class="btn" id="prev-exercise-btn">Previous</button>
-                    <button class="btn" id="next-exercise-btn">Next</button>
+                <div class="card sections-card">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <i class="fas fa-clock"></i> Training Sections
+                        </h2>
+                    </div>
+                    <div class="card-content">
+                        <div id="sectionsList"></div>
+                    </div>
                 </div>
             </div>
-        </main>
+
+            <div>
+                <div class="card current-exercise" id="currentExerciseCard">
+                    <div class="card-header">
+                        <div class="exercise-header">
+                            <div class="exercise-info">
+                                <h2>
+                                    <i class="fas fa-volume-up"></i> <span id="exerciseName">Straw ZZZ/VVV</span>
+                                </h2>
+                                <p class="exercise-description" id="exerciseDescription">Vocal cord vibration with water resistance</p>
+                            </div>
+                            <button class="complete-button" id="completeButton">
+                                <i class="fas fa-check"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="timer-section">
+                            <div class="timer-display" id="timerDisplay">2:57</div>
+                            <div class="timer-controls">
+                                <button class="btn btn-primary" id="startBtn">
+                                    <i class="fas fa-play"></i> Start
+                                </button>
+                                <button class="btn btn-outline" id="pauseBtn" disabled>
+                                    <i class="fas fa-pause"></i> Pause
+                                </button>
+                                <button class="btn btn-outline" id="resetBtn">
+                                    <i class="fas fa-redo-alt"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="instructions-grid">
+                            <div class="instruction-section">
+                                <h4><i class="fa fa-question-circle" aria-hidden="true" style="color: #000000; margin-right: 5px;"></i> How to do it:</h4>
+                                <ul class="instruction-list" id="instructionsList">
+                                    </ul>
+                            </div>
+                            <div class="instruction-section">
+                                <h4><i class="fas fa-check-circle" style="color: #10b981; margin-right: 5px;" ></i> Check:</h4>
+                                <ul class="instruction-list" id="checkPointsList">
+                                    </ul>
+                            </div>
+                        </div>
+
+                        <div class="why-section">
+                            <h4 class="why-title">
+                                <i class="fas fa-bullseye"></i> Why this works:
+                            </h4>
+                            <p class="why-text" id="whyText">Forces cords to vibrate efficiently</p>
+                        </div>
+
+                        <div class="exercise-nav">
+                            <button class="btn btn-outline" id="prevBtn">Previous Exercise</button>
+                            <button class="btn btn-primary" id="nextBtn">Next Exercise</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: 1.5rem;">
+                    <div class="card-header">
+                        <h2 class="card-title" id="sectionTitle">WARM-UP Exercises</h2>
+                        <p class="exercise-description" id="sectionDescription">Gentle preparation exercises to activate your vocal cords</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="exercise-list" id="exerciseList">
+                            </div>
+                    </div>
+                </div>
+
+                <div class="card tips-card" style="margin-top: 1.5rem;">
+                    <div class="card-header">
+                        <h2 class="card-title tips-title"><i class="fas fa-lightbulb"></i> Final Tips</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="tips-grid">
+                            <div class="tip-item">
+                                <strong class="tip-label tip-green">Daily:</strong> Record 1 drill to track progress.
+                            </div>
+                            <div class="tip-item">
+                                <strong class="tip-label tip-blue">Stuck?</strong> Reduce intensity (no pain).
+                            </div>
+                            <div class="tip-item">
+                                <strong class="tip-label tip-purple">3 weeks:</strong> Expect clearer, louder, fatigue-proof voice.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
-        // Get references to DOM elements
-        const sessionSelection = document.getElementById('session-selection');
-        const exerciseView = document.getElementById('exercise-view');
-        const startContainer = document.getElementById('start-container');
-        const sessionChoiceText = document.getElementById('session-choice-text');
-        const startSessionBtn = document.getElementById('start-session-btn');
-        const backBtn = document.getElementById('back-btn');
-        const stopwatchDisplay = document.getElementById('stopwatch');
-        const currentExerciseContainer = document.getElementById('current-exercise-container');
-        const prevExerciseBtn = document.getElementById('prev-exercise-btn');
-        const nextExerciseBtn = document.getElementById('next-exercise-btn');
-        const exercisesLeftDisplay = document.getElementById('exercises-left');
-        const throughoutDayExercisesContainer = document.getElementById('throughout-day-exercises-container');
+        // Voice Training Data
+        const sections = [
+            {
+                id: "warmup",
+                title: "WARM-UP",
+                timeRange: "0:00-10:00",
+                description: "Gentle preparation exercises to activate your vocal cords",
+                exercises: [
+                    {
+                        id: "straw-zzz",
+                        name: "Straw ZZZ/VVV",
+                        duration: 180,
+                        description: "Vocal cord vibration with water resistance",
+                        instructions: [
+                            "Put a straw in water (half-submerged)",
+                            'Lightly bite straw, hum "ZZZ" (like an angry bee) or "VVV" (vibrating lips)',
+                        ],
+                        checkPoints: ["Bubbles should flow smoothly (no sputtering)", "If air leaks, sound stops—adjust bite pressure"],
+                        why: "Forces cords to vibrate efficiently",
+                    },
+                    {
+                        id: "lip-trills",
+                        name: "Lip Trills",
+                        duration: 120,
+                        description: "Relaxation exercise for lips and jaw",
+                        instructions: ['Blow air through closed lips (like a horse "brrr")'],
+                        checkPoints: ["Lips must flap freely (no tension)", "If stuck, press cheeks gently to loosen"],
+                        why: "Relaxes lips/jaw for clear speech",
+                    },
+                    {
+                        id: "darth-vader",
+                        name: 'Darth Vader "UH"',
+                        duration: 300,
+                        description: "Deep chest voice engagement",
+                        instructions: ['Inhale deep, exhale a low "UUUHHH" (like a demon growl)'],
+                        checkPoints: ["Feel vibration in chest (place hand there)", "No throat pain—just deep rumble"],
+                        why: "Engages chest voice (thick cords)",
+                    },
+                ],
+            },
+            {
+                id: "power",
+                title: "CORD + BREATH POWER",
+                timeRange: "10:00-30:00",
+                description: "Build vocal strength and breath support",
+                exercises: [
+                    {
+                        id: "kick-cold-cut",
+                        name: 'Sharp "KICK-COLD-CUT"',
+                        duration: 300,
+                        description: "Vocal cord closure training",
+                        instructions: [
+                            "Bark these words like a drill sergeant:",
+                            '"KICK!" (sharp "K")',
+                            '"COLD!" (explosive "C")',
+                            '"CUT!" (snappy "T")',
+                        ],
+                        checkPoints: ['Feel a "click" in your throat on K/C—that\'s cord closure', "No breathiness—sound should pop"],
+                        why: "Trains cords to slam shut",
+                    },
+                    {
+                        id: "belly-punch",
+                        name: 'Belly Punch "HOOM"',
+                        duration: 180,
+                        description: "Diaphragm support testing",
+                        instructions: ['Have someone gently push your stomach while you say "HOOM!" (like a foghorn)'],
+                        checkPoints: [
+                            "Voice should stay strong during push",
+                            "If voice wobbles, you're chest-breathing (fix: push belly out)",
+                        ],
+                        why: "Tests diaphragm support",
+                    },
+                    {
+                        id: "wall-hum",
+                        name: "Wall Hum Challenge",
+                        duration: 150,
+                        description: "Voice projection without strain",
+                        instructions: ['Stand 6 inches from a wall, hum "MMM" loudly'],
+                        checkPoints: ["Wall should feel vibrations (not just hear)", "No throat strain—sound comes from nose/mouth"],
+                        why: "Projects voice without yelling",
+                    },
+                ],
+            },
+            {
+                id: "articulation",
+                title: "ARTICULATION + SPEECH",
+                timeRange: "30:00-50:00",
+                description: "Sharpen clarity and speech precision",
+                exercises: [
+                    {
+                        id: "tongue-presses",
+                        name: "Tongue Presses",
+                        duration: 120,
+                        description: "Tongue strengthening exercise",
+                        instructions: ["Press tongue hard against teeth (hold 5 sec, 10 reps)"],
+                        checkPoints: ["Tongue should tire (like a workout)"],
+                        why: "Strengthens tongue for clear consonants",
+                    },
+                    {
+                        id: "king-kong",
+                        name: 'King Kong "OH" Roar',
+                        duration: 300,
+                        description: "Resonance control training",
+                        instructions: [
+                            'Roar "OHHH" deep/loud (like gorilla)',
+                            "Tap chest → feel vibration? Now tap nose → shift sound there",
+                        ],
+                        checkPoints: ["Chest roar = power. Nose roar = clarity"],
+                        why: "Trains resonance control",
+                    },
+                    {
+                        id: "tongue-twisters",
+                        name: "Tongue Twisters",
+                        duration: 300,
+                        description: "Articulation sharpening",
+                        instructions: ['Say fast: "Red lorry, yellow lorry" 10x'],
+                        checkPoints: ["No stumbling? Speed up"],
+                        why: "Sharpens articulation",
+                    },
+                    {
+                        id: "shadow-rap",
+                        name: "Shadow Rap/Podcast",
+                        duration: 600,
+                        description: "Real-world application practice",
+                        instructions: ["Play a clip, repeat immediately (match tone/speed)"],
+                        checkPoints: ["Record yourself—compare to original"],
+                        why: "Applies drills to real speech",
+                    },
+                ],
+            },
+            {
+                id: "cooldown",
+                title: "COOLDOWN",
+                timeRange: "50:00-60:00",
+                description: "Gentle recovery and muscle memory reinforcement",
+                exercises: [
+                    {
+                        id: "whisper-counting",
+                        name: "Whisper Counting",
+                        duration: 300,
+                        description: "Vocal cord control refinement",
+                        instructions: ["Whisper numbers 1-20 crisply (no breathiness)"],
+                        checkPoints: ["If voice cracks, you're whispering wrong (use vocal fry)"],
+                        why: "Trains cord control",
+                    },
+                    {
+                        id: "silent-shapes",
+                        name: "Silent Mouth Shapes",
+                        duration: 300,
+                        description: "Muscle memory reinforcement",
+                        instructions: ["Exaggerate mouth movements without sound (A-E-I-O-U)"],
+                        checkPoints: ["Mirror: See clear lip/tongue positions"],
+                        why: "Locks in muscle memory",
+                    },
+                ],
+            },
+        ];
 
-        // Define the list of exercises, separated by session type
-        const allExercises = {
-            morning: [
-                {
-                    zone: "MORNING SESSION — ENGINE WARM-UP",
-                    title: "Diaphragm Hiss Hold",
-                    laws: "1, 7",
-                    base: "Inhale deep, hiss out slow like a tire leak. Keep abs tight, no wobble.",
-                    reps: "3 sets, 20–30 sec each. Rest 15 sec between.",
-                    purpose: "Trains breath endurance and diaphragm power—like holding a plank for your lungs.",
-                    time: "~4 min",
-                    variations: [
-                        "Box Hiss: 4s in, 4s hold, 4s hiss out, 4s hold.",
-                        "Plank Hiss: Hiss while in elbow plank for extra core tension."
-                    ]
-                },
-                {
-                    zone: "MORNING SESSION — ENGINE WARM-UP",
-                    title: "Cord Sealer Hum",
-                    laws: "2, 5",
-                    base: "Hum “nnnn” (like “in”). Feel buzz in teeth/nose. No air leak from mouth or nose.",
-                    reps: "4 rounds, 12 sec each. Rest 10 sec between.",
-                    purpose: "Strengthens vocal cords to eliminate breathy leaks—like squeezing a grip trainer.",
-                    time: "~3 min",
-                    variations: [
-                        "Lip Buzz: Buzz lips like a motorboat, keep it tight.",
-                        "Straw Hum: Hum into a straw in a glass of water for resistance."
-                    ]
-                },
-                {
-                    zone: "MORNING SESSION — ENGINE WARM-UP",
-                    title: "Vocal Plank Drill",
-                    laws: "1, 2, 14",
-                    base: "Hold pushup plank. Say: “I don’t break.” “I own this.” “I keep going.” One breath per line.",
-                    reps: "3 rounds, 30 sec each. Rest 15 sec.",
-                    purpose: "Builds cord stability under body tension—like deadlifts for voice.",
-                    time: "~4 min",
-                    variations: [
-                        "Side Plank: Do it in side plank for core challenge.",
-                        "Wall Sit Talk: Say lines while in wall sit."
-                    ]
-                },
-                {
-                    zone: "MORNING SESSION — ENGINE WARM-UP",
-                    title: "Siren Glide",
-                    laws: "4, 6",
-                    base: "Say “ng” (like “sing”). Slide pitch low to high to low, smooth, no cracks.",
-                    reps: "5 reps, ~10 sec each.",
-                    purpose: "Trains vocal flexibility and range—like stretching before sprints.",
-                    time: "~3 min",
-                    variations: [
-                        "Staccato Notes: Hit 5 quick notes up/down instead of gliding.",
-                        "Fry Siren: Start in vocal fry, slide to chest voice."
-                    ]
-                },
-                {
-                    zone: "MORNING SESSION — ENGINE WARM-UP",
-                    title: "Gaze-Tone Sync",
-                    laws: "11, 16",
-                    base: "Say “I’m not done.” Match tone to eyes: wide (hopeful), squinted (threat), closed (calm).",
-                    reps: "2 rounds, 3 eye-tone switches per round.",
-                    purpose: "Links voice to gaze for presence—like syncing breath with a lift.",
-                    time: "~2–3 min",
-                    variations: [
-                        "Mirror Flip: Say line in mirror, change eyes mid-sentence.",
-                        "Blind Tone: Say with eyes closed, then open, compare tone shift."
-                    ]
+        // App State
+        let currentSection = 0;
+        let currentExercise = 0;
+        let timeLeft = 0;
+        let isRunning = false;
+        let completedExercises = new Set();
+        let timerInterval = null;
+
+        // DOM Elements
+        const timerDisplay = document.getElementById('timerDisplay');
+        const startBtn = document.getElementById('startBtn');
+        const pauseBtn = document.getElementById('pauseBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const completeButton = document.getElementById('completeButton');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const exerciseName = document.getElementById('exerciseName');
+        const exerciseDescription = document.getElementById('exerciseDescription');
+        const instructionsList = document.getElementById('instructionsList');
+        const checkPointsList = document.getElementById('checkPointsList');
+        const whyText = document.getElementById('whyText');
+        const sectionTitle = document.getElementById('sectionTitle');
+        const sectionDescription = document.getElementById('sectionDescription');
+        const sessionProgress = document.getElementById('sessionProgress');
+        const progressText = document.getElementById('progressText');
+
+        // Utility Functions
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            return `${mins}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        function getTotalExercises() {
+            return sections.reduce((acc, section) => acc + section.exercises.length, 0);
+        }
+
+        function updateProgress() {
+            const total = getTotalExercises();
+            const completed = completedExercises.size;
+            const percentage = (completed / total) * 100;
+            
+            sessionProgress.style.width = `${percentage}%`;
+            progressText.textContent = `${completed}/${total}`;
+        }
+
+        function updateTimer() {
+            if (isRunning && timeLeft > 0) {
+                timeLeft--;
+                timerDisplay.textContent = formatTime(timeLeft);
+                
+                if (timeLeft === 0) {
+                    isRunning = false;
+                    startBtn.disabled = false;
+                    pauseBtn.disabled = true;
+                    
+                    // Auto-complete exercise
+                    const exercise = sections[currentSection].exercises[currentExercise];
+                    completedExercises.add(exercise.id);
+                    updateUI();
                 }
-            ],
-            night: [
-                {
-                    zone: "NIGHT SESSION — WEAPON TESTING",
-                    title: "Buzz Pull Drill",
-                    laws: "4, 5, 6",
-                    base: "Hum, drag pitch from deep to high to low. Feel vibration shift chest to nose.",
-                    reps: "5 reps, 10 sec each. Rest 10 sec.",
-                    purpose: "Builds resonance control—like tempo runs for vocal cords.",
-                    time: "~3 min",
-                    variations: [
-                        "Volume Slide: Match pitch change with volume (soft to loud).",
-                        "Growl Pull: Start hum in fry, drag to head voice."
-                    ]
-                },
-                {
-                    zone: "NIGHT SESSION — WEAPON TESTING",
-                    title: "Whisper Projection",
-                    laws: "2, 9, 12",
-                    base: "Whisper “I am watching you.” Aim to hit a wall 10ft away, no air push.",
-                    reps: "5 reps, ~10 sec each.",
-                    purpose: "Trains whisper authority—like light-weight, high-rep sets for precision.",
-                    time: "~3 min",
-                    variations: [
-                        "Moving Whisper: Walk while whispering, keep tone steady.",
-                        "Teeth Whisper: Whisper through clenched teeth for extra control."
-                    ]
-                },
-                {
-                    zone: "NIGHT SESSION — WEAPON TESTING",
-                    title: "Register Switch Loop",
-                    laws: "4, 13, 14",
-                    base: "Say “I am the voice.” Cycle: chest → fry → head → whisper → chest. No cracks.",
-                    reps: "3 sets, 5 cycles per set. Rest 15 sec.",
-                    purpose: "Builds vocal agility—like drop sets for range.",
-                    time: "~5 min",
-                    variations: [
-                        "Sprint Loop: Do 3 cycles back-to-back, no rest.",
-                        "Word Slice: Use a 3-word sentence, each word in a different register."
-                    ]
-                },
-                {
-                    zone: "NIGHT SESSION — WEAPON TESTING",
-                    title: "Consonant Burnout",
-                    laws: "12, 15",
-                    base: "Say “The black blade bit back.” Repeat 30 sec nonstop, sharp consonants.",
-                    reps: "3 sets, rest 10 sec between.",
-                    purpose: "Strengthens articulation—like weighted sit-ups for your mouth.",
-                    time: "~3 min",
-                    variations: [
-                        "Hard Sentence: Use “The quick jackal bit the bishop’s neck.”",
-                        "Slow Bite: Say sentence super slow, exaggerate consonants."
-                    ]
-                },
-                {
-                    zone: "NIGHT SESSION — WEAPON TESTING",
-                    title: "Whisper Burpee Drill",
-                    laws: "1, 9, 12",
-                    base: "Do 10 pushups or squats, then whisper “I am still in control.” clearly.",
-                    reps: "3 rounds.",
-                    purpose: "Trains voice under physical fatigue—like HIIT for vocal cords.",
-                    time: "~4–5 min",
-                    variations: [
-                        "Squat Whisper: Do squats instead of pushups, same whisper line.",
-                        "Plank Whisper: Whisper from plank position for extra tension."
-                    ]
-                }
-            ],
-            throughoutDay: [
-                {
-                    zone: "THROUGHOUT THE DAY — MICRO HITS",
-                    title: "Hiss Timer",
-                    laws: "1, 7",
-                    base: "Hiss as long as possible on one breath. Track time.",
-                    reps: "3 sets, rest 10 sec.",
-                    purpose: "Builds breath capacity—like holding a max deadlift.",
-                    time: "~2–3 min",
-                    variations: [
-                        "Pulse Hiss: Short 3s hisses, 10 in a row.",
-                        "Resistance Hiss: Push against a wall while hissing."
-                    ]
-                },
-                {
-                    zone: "THROUGHOUT THE DAY — MICRO HITS",
-                    title: "Whisper Shadow Drill",
-                    laws: "2, 9, 15",
-                    base: "Whisper any sentence (e.g., “You can’t stop me.”) with no breath leak, aim for clarity.",
-                    reps: "5 lines, ~30 sec total.",
-                    purpose: "Sharpens whisper control—like shadowboxing for voice.",
-                    time: "~3 min",
-                    variations: [
-                        "Emotion Whisper: Whisper with 3 emotions (calm, threat, sad).",
-                        "Finger Flame: Whisper without moving air in front of lips."
-                    ]
-                },
-                {
-                    zone: "THROUGHOUT THE DAY — MICRO HITS",
-                    title: "Register Pulse Set",
-                    laws: "4, 13",
-                    base: "Say “You already lost.” in chest, whisper, fry.",
-                    reps: "3 sets, 3 pulses each.",
-                    purpose: "Keeps vocal range active—like quick stretches between lifts.",
-                    time: "~3 min",
-                    variations: [
-                        "Head Pulse: Add head voice to the cycle.",
-                        "Reverse Pulse: Start in fry, end in chest."
-                    ]
-                },
-                {
-                    zone: "THROUGHOUT THE DAY — MICRO HITS",
-                    title: "Identity Stamp",
-                    laws: "17, 14",
-                    base: "Say “I am Rahat. I don’t speak—I strike.” in your unique style.",
-                    reps: "3 reps (soft, mid, cold).",
-                    purpose: "Locks in your vocal identity—like posing after a lift.",
-                    time: "~2–3 min",
-                    variations: [
-                        "Pause Tic: Add a hard pause after “Rahat.”",
-                        "Threat Stamp: Say final word with icy threat."
-                    ]
-                }
-            ]
-        };
-
-        let currentSessionType = null; // Stores 'morning' or 'night'
-        let currentExercises = []; // The array of exercises for the currently selected session
-        let currentExerciseIndex = 0; // Tracks the current exercise being displayed
-        let stopwatchInterval; // Stores the interval ID for the stopwatch
-        let stopwatchSeconds = 0; // Tracks the elapsed time in seconds
-
-        /**
-         * Formats seconds into HH:MM:SS string.
-         * @param {number} sec - The total seconds to format.
-         * @returns {string} Formatted time string.
-         */
-        function formatTime(sec) {
-            const hours = Math.floor(sec / 3600);
-            const minutes = Math.floor((sec % 3600) / 60);
-            const seconds = sec % 60;
-            // Pad with leading zeros if necessary
-            return [hours, minutes, seconds].map(v => v < 10 ? "0" + v : v).join(":");
-        }
-
-        /**
-         * Starts the stopwatch timer.
-         */
-        function startStopwatch() {
-            // Clear any existing interval to prevent multiple timers running
-            if (stopwatchInterval) clearInterval(stopwatchInterval);
-            stopwatchInterval = setInterval(() => {
-                stopwatchSeconds++;
-                stopwatchDisplay.textContent = formatTime(stopwatchSeconds);
-            }, 1000); // Update every second
-        }
-
-        /**
-         * Stops the stopwatch timer.
-         */
-        function stopStopwatch() {
-            clearInterval(stopwatchInterval);
-        }
-
-        /**
-         * Resets the stopwatch to 00:00:00 and stops it.
-         */
-        function resetStopwatch() {
-            stopStopwatch();
-            stopwatchSeconds = 0;
-            stopwatchDisplay.textContent = formatTime(0);
-        }
-
-        /**
-         * Updates the display showing how many exercises are left in the current session.
-         */
-        function updateExercisesLeft() {
-            const exercisesRemaining = currentExercises.length - (currentExerciseIndex + 1);
-            exercisesLeftDisplay.textContent = `${exercisesRemaining} exercises left`;
-        }
-        
-        /**
-         * Displays the exercise at the given index from the currentExercises array.
-         * @param {number} index - The index of the exercise to display.
-         */
-        function displayExercise(index) {
-            const exercise = currentExercises[index];
-            if (!exercise) {
-                console.error("Exercise not found at index:", index);
-                return;
             }
-
-            let variationsHtml = '';
-            if (exercise.variations && exercise.variations.length > 0) {
-                variationsHtml = `
-                    <div class="variations-container">
-                        <h4>Variations (pick one):</h4>
-                        ${exercise.variations.map((variation, i) => `
-                            <div class="variation-option">
-                                <input type="radio" id="variation-${index}-${i}" name="variation-${index}" value="${variation}" ${i === 0 ? 'checked' : ''}>
-                                <label for="variation-${index}-${i}">${variation}</label>
-                            </div>
-                        `).join('')}
-                    </div>
-                `;
-            }
-
-            currentExerciseContainer.innerHTML = `
-                <div class="zone">
-                    <h2 class="zone-title">${exercise.zone}</h2>
-                    <div class="exercise-details">
-                        <p class="exercise-title">${exercise.title}</p>
-                        <p><strong>Laws:</strong> ${exercise.laws}</p>
-                        <p><strong>Base:</strong> ${exercise.base}</p>
-                        <p><strong>Reps:</strong> ${exercise.reps}</p>
-                        <p><strong>Purpose:</strong> ${exercise.purpose}</p>
-                        <p><strong>Time:</strong> ${exercise.time}</p>
-                        ${variationsHtml}
-                    </div>
-                </div>
-            `;
-            // Disable/enable navigation buttons based on current index
-            prevExerciseBtn.disabled = index === 0;
-            nextExerciseBtn.disabled = index === currentExercises.length - 1;
-            updateExercisesLeft();
         }
 
-        /**
-         * Renders the "Throughout the Day" exercises into their dedicated container.
-         */
-        function renderThroughoutDayExercises() {
-            throughoutDayExercisesContainer.innerHTML = ''; // Clear previous content
-            allExercises.throughoutDay.forEach(exercise => {
-                const exerciseDiv = document.createElement('div');
-                exerciseDiv.classList.add('throughout-day-exercise');
-                exerciseDiv.innerHTML = `
-                    <p class="exercise-title">${exercise.title}</p>
-                    <p class="exercise-description">
-                        <strong>Laws:</strong> ${exercise.laws}<br>
-                        <strong>Base:</strong> ${exercise.base}<br>
-                        <strong>Reps:</strong> ${exercise.reps}<br>
-                        <strong>Purpose:</strong> ${exercise.purpose}<br>
-                        <strong>Time:</strong> ${exercise.time}
-                    </p>
-                    <div class="variations-container">
-                        <h4>Variations (pick one):</h4>
-                        ${exercise.variations.map((variation, i) => `
-                            <div class="variation-option">
-                                <input type="radio" id="td-variation-${exercise.title.replace(/\s/g, '')}-${i}" name="td-variation-${exercise.title.replace(/\s/g, '')}" value="${variation}" ${i === 0 ? 'checked' : ''}>
-                                <label for="td-variation-${exercise.title.replace(/\s/g, '')}-${i}">${variation}</label>
-                            </div>
-                        `).join('')}
+        function startTimer() {
+            const exercise = sections[currentSection].exercises[currentExercise];
+            if(timeLeft === 0) timeLeft = exercise.duration; // Start from full duration if reset
+            isRunning = true;
+            startBtn.disabled = true;
+            pauseBtn.disabled = false;
+            
+            timerInterval = setInterval(updateTimer, 1000);
+        }
+
+        function pauseTimer() {
+            isRunning = false;
+            startBtn.disabled = false;
+            pauseBtn.disabled = true;
+            clearInterval(timerInterval);
+        }
+
+        function resetTimer() {
+            isRunning = false;
+            timeLeft = 0;
+            startBtn.disabled = false;
+            pauseBtn.disabled = true;
+            clearInterval(timerInterval);
+            
+            const exercise = sections[currentSection].exercises[currentExercise];
+            timerDisplay.textContent = formatTime(exercise.duration);
+        }
+
+        function toggleComplete() {
+            const exercise = sections[currentSection].exercises[currentExercise];
+            
+            if (completedExercises.has(exercise.id)) {
+                completedExercises.delete(exercise.id);
+            } else {
+                completedExercises.add(exercise.id);
+            }
+            
+            updateUI();
+        }
+
+        function navigateToSection(sectionIndex) {
+            currentSection = sectionIndex;
+            currentExercise = 0;
+            resetTimer();
+            updateUI();
+        }
+
+        function navigateToExercise(exerciseIndex) {
+            currentExercise = exerciseIndex;
+            resetTimer();
+            updateUI();
+        }
+
+        function navigatePrevious() {
+            if (currentExercise > 0) {
+                currentExercise--;
+            } else if (currentSection > 0) {
+                currentSection--;
+                currentExercise = sections[currentSection].exercises.length - 1;
+            }
+            resetTimer();
+            updateUI();
+        }
+
+        function navigateNext() {
+            if (currentExercise < sections[currentSection].exercises.length - 1) {
+                currentExercise++;
+            } else if (currentSection < sections.length - 1) {
+                currentSection++;
+                currentExercise = 0;
+            }
+            resetTimer();
+            updateUI();
+        }
+
+        function renderSections() {
+            const sectionsList = document.getElementById('sectionsList');
+            sectionsList.innerHTML = '';
+            
+            sections.forEach((section, index) => {
+                const completedCount = section.exercises.filter(ex => completedExercises.has(ex.id)).length;
+                const totalCount = section.exercises.length;
+                
+                const button = document.createElement('button');
+                button.className = `section-button ${index === currentSection ? 'active' : ''}`;
+                button.onclick = () => navigateToSection(index);
+                
+                button.innerHTML = `
+                    <div class="section-header">
+                        <span class="badge ${index === currentSection ? 'badge-default' : 'badge-secondary'}">${section.timeRange}</span>
+                        <div class="section-progress">${completedCount}/${totalCount}</div>
                     </div>
+                    <h3 class="section-title">${section.title}</h3>
+                    <p class="section-description">${section.description}</p>
                 `;
-                throughoutDayExercisesContainer.appendChild(exerciseDiv);
+                
+                sectionsList.appendChild(button);
             });
+        }
+
+        function renderExerciseList() {
+            const exerciseList = document.getElementById('exerciseList');
+            const currentSectionData = sections[currentSection];
+            
+            exerciseList.innerHTML = '';
+            
+            currentSectionData.exercises.forEach((exercise, index) => {
+                const button = document.createElement('button');
+                button.className = `exercise-item ${index === currentExercise ? 'active' : ''}`;
+                button.onclick = () => navigateToExercise(index);
+                
+                const isCompleted = completedExercises.has(exercise.id);
+                const numberClass = isCompleted ? 'completed' : (index === currentExercise ? 'active' : '');
+                const numberContent = isCompleted ? '<i class="fas fa-check"></i>' : (index + 1);
+                
+                button.innerHTML = `
+                    <div class="exercise-item-content">
+                        <div class="exercise-item-left">
+                            <div class="exercise-number ${numberClass}">${numberContent}</div>
+                            <div class="exercise-details">
+                                <h4>${exercise.name}</h4>
+                                <p>${exercise.description}</p>
+                            </div>
+                        </div>
+                        <span class="badge badge-outline">${formatTime(exercise.duration)}</span>
+                    </div>
+                `;
+                
+                exerciseList.appendChild(button);
+            });
+        }
+
+        function updateCurrentExercise() {
+            const exercise = sections[currentSection].exercises[currentExercise];
+            const isCompleted = completedExercises.has(exercise.id);
+            
+            exerciseName.textContent = exercise.name;
+            exerciseDescription.textContent = exercise.description;
+            whyText.textContent = exercise.why;
+            
+            // Update complete button
+            completeButton.className = `complete-button ${isCompleted ? 'completed' : ''}`;
+            
+            // Update instructions
+            instructionsList.innerHTML = '';
+            exercise.instructions.forEach((instruction, index) => {
+                const li = document.createElement('li');
+                li.className = 'instruction-item';
+                li.innerHTML = `
+                    <div class="instruction-number">${index + 1}</div>
+                    <span class="instruction-text">${instruction}</span>
+                `;
+                instructionsList.appendChild(li);
+            });
+            
+            // Update check points
+            checkPointsList.innerHTML = '';
+            exercise.checkPoints.forEach(point => {
+                const li = document.createElement('li');
+                li.className = 'instruction-item';
+                li.innerHTML = `
+                    <div class="check-icon"><i class="fas fa-check"></i></div>
+                    <span class="instruction-text">${point}</span>
+                `;
+                checkPointsList.appendChild(li);
+            });
+            
+            // Update timer display
+            if (!isRunning && timeLeft === 0) {
+                timerDisplay.textContent = formatTime(exercise.duration);
+            }
+            
+            // Update navigation buttons
+            prevBtn.disabled = currentSection === 0 && currentExercise === 0;
+            nextBtn.disabled = currentSection === sections.length - 1 && 
+                              currentExercise === sections[currentSection].exercises.length - 1;
+        }
+
+        function updateSectionInfo() {
+            const section = sections[currentSection];
+            sectionTitle.textContent = `${section.title} Exercises`;
+            sectionDescription.textContent = section.description;
+        }
+
+        function updateUI() {
+            renderSections();
+            renderExerciseList();
+            updateCurrentExercise();
+            updateSectionInfo();
+            updateProgress();
         }
 
         // Event Listeners
+        startBtn.addEventListener('click', startTimer);
+        pauseBtn.addEventListener('click', pauseTimer);
+        resetBtn.addEventListener('click', resetTimer);
+        completeButton.addEventListener('click', toggleComplete);
+        prevBtn.addEventListener('click', navigatePrevious);
+        nextBtn.addEventListener('click', navigateNext);
 
-        // Event listener for session selection buttons (Morning/Night)
-        document.querySelectorAll('.btn[data-session]').forEach(button => {
-            button.addEventListener('click', (e) => {
-                currentSessionType = e.target.dataset.session; // Store the selected session type
-                currentExercises = allExercises[currentSessionType]; // Set the active exercise array
-
-                // Update text to show selected session
-                sessionChoiceText.textContent = `You have selected the ${currentSessionType.charAt(0).toUpperCase() + currentSessionType.slice(1)} session.`;
-                // Show the "Start Session" button container
-                startContainer.classList.remove('hidden');
-            });
-        });
-
-        // Event listener for the "Start Session" button
-        startSessionBtn.addEventListener('click', () => {
-            if (!currentSessionType) {
-                console.error("No session type selected.");
-                return;
-            }
-            // Hide session selection and show exercise view
-            sessionSelection.classList.add('hidden');
-            exerciseView.classList.remove('hidden');
-            currentExerciseIndex = 0; // Start from the first exercise of the selected session
-            displayExercise(currentExerciseIndex); // Display the first exercise
-            resetStopwatch(); // Reset stopwatch before starting
-            startStopwatch(); // Start the stopwatch
-        });
-
-        // Event listener for the "Back" button in exercise view
-        backBtn.addEventListener('click', () => {
-            // Hide exercise view and show session selection
-            exerciseView.classList.add('hidden');
-            sessionSelection.classList.remove('hidden');
-            startContainer.classList.add('hidden'); // Hide start button when going back
-            stopStopwatch(); // Stop the stopwatch
-            currentSessionType = null; // Clear selected session type
-            currentExercises = []; // Clear current exercises
-        });
-
-        // Event listener for the "Next" exercise button
-        nextExerciseBtn.addEventListener('click', () => {
-            // Move to the next exercise if not at the end of the list
-            if (currentExerciseIndex < currentExercises.length - 1) {
-                currentExerciseIndex++;
-                displayExercise(currentExerciseIndex);
-            }
-        });
-
-        // Event listener for the "Previous" exercise button
-        prevExerciseBtn.addEventListener('click', () => {
-            // Move to the previous exercise if not at the beginning of the list
-            if (currentExerciseIndex > 0) {
-                currentExerciseIndex--;
-                displayExercise(currentExerciseIndex);
-            }
-        });
-
-        // Initial rendering of "Throughout the Day" exercises when the page loads
-        document.addEventListener('DOMContentLoaded', renderThroughoutDayExercises);
+        // Initialize App
+        updateUI();
     </script>
 </body>
 </html>
